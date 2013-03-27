@@ -38,7 +38,7 @@ class DiffEntry:
 	def __init__(self):
 		self.fileNameA = ""
 		self.fileNameB = ""
-		self.diffType = ""
+		self.diffType = "text"
 		self.fileMode = "updated"
 		self.hunkList = []
 
@@ -143,21 +143,20 @@ class CommitEntry:
 				elif(re.match("\+\+\+ b/", currentLine)):
 					currentDiff.fileNameB = currentLine.split("+++ b/")[1].rstrip("\n")
 
-				#New hunk section in diff
-				elif(re.match("@@ ", currentLine)):
-					currentDiff.diffType = "text"
-					currentHunk = DiffHunk()
-					currentDiff.hunkList.append(currentHunk);
+			#New hunk section in diff
+			if(re.match("@@ ", currentLine)):
+				currentHunk = DiffHunk()
+				currentDiff.hunkList.append(currentHunk);
 
-					preDiffLines = currentLine.split(" ")[1].split(",");
-					postDiffLines = currentLine.split(" ")[2].split(",");
+				preDiffLines = currentLine.split(" ")[1].split(",");
+				postDiffLines = currentLine.split(" ")[2].split(",");
 
-					currentHunk.startRemoveLines = int(preDiffLines[0][1:])
-					currentHunk.startAddLines = int(postDiffLines[0][1:])
-					if (len(preDiffLines) > 1): currentHunk.numRemoveLines = int(preDiffLines[1])  
-					if (len(postDiffLines) > 1): currentHunk.numAddLines = int(postDiffLines[1])	
+				currentHunk.startRemoveLines = int(preDiffLines[0][1:])
+				currentHunk.startAddLines = int(postDiffLines[0][1:])
+				if (len(preDiffLines) > 1): currentHunk.numRemoveLines = int(preDiffLines[1])  
+				if (len(postDiffLines) > 1): currentHunk.numAddLines = int(postDiffLines[1])	
 
-					inDiffHeader = False	
+				inDiffHeader = False	
 
 			#Currently in a hunk
 			else:
