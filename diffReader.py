@@ -9,7 +9,7 @@ import re
 path = "/Users/mystfit/Code/Python/Gitdive_Prototypes"
 logCmd = ['git', 'log', '--pretty=format:"GD_commit//%H || GD_commitAuthor//%cn || GD_date//%cd || GD_message//%b"'];
 #logCmd = ['git', 'log', '--pretty=oneline'];
-diffCmd = ["git", "log", "-p", '--pretty=format:"GD_commit//%H || GD_commitAuthor//%cn || GD_date//%cd || GD_message//%b"']
+diffCmd = ["git", "log", "-p", "--reverse", '--pretty=format:"GD_commit//%H || GD_commitAuthor//%cn || GD_date//%cd || GD_message//%b"']
 
 globalRemoves = 0
 globalAdds = 0
