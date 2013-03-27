@@ -165,14 +165,14 @@ commitList = []
 diffFile  = open('diffFile.log', 'w')
 
 diffCmd = ["git", "diff", parsedLogs[len(parsedLogs)-2].hash, parsedLogs[len(parsedLogs)-1].hash ]
-	diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
-	
-	commit = CommitEntry(parsedLogs[i].hash, parsedLogs[i].author, parsedLogs[i].date, parsedLogs[i].message)
-	commit.addAndParseDiff(diffStream.stdout.readlines())
-	
-	diffFile.write(commit.serializeCommit())
+diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
 
-	commitList.append(commit)
+commit = CommitEntry(parsedLogs[i].hash, parsedLogs[i].author, parsedLogs[i].date, parsedLogs[i].message)
+commit.addAndParseDiff(diffStream.stdout.readlines())
+
+diffFile.write(commit.serializeCommit())
+
+commitList.append(commit)
 
 # for i in range(len(log)):
 # 	truncLog = log[i][1:]
