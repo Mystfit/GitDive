@@ -177,7 +177,7 @@ def parseDiffLog(diffFile):
 
 	diffBlock = []
 
-	for i in range(len(diffFile)):
+	for line in range(len(diffFile)):
 		currLn = diffFile[i]
 
 		# Check for a new commit log entry 
@@ -220,7 +220,7 @@ diffFile  = open('diffFile.log', 'w')
 
 diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
 
-parsedDiffLog = parseDiffLog(diffStream.stdout.readlines())
+parsedDiffLog = parseDiffLog(diffStream.stdout.read())
 
 for i in range(len(parsedDiffLog)):
 	diffFile.write(parsedDiffLog[i].serializeCommit())
