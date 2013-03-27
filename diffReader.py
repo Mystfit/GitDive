@@ -177,7 +177,7 @@ def parseDiffLog(diffFile):
 
 	diffBlock = []
 
-	for line in range(len(diffFile)):
+	for i in range(len(diffFile)):
 		currLn = diffFile[i]
 
 		# Check for a new commit log entry 
