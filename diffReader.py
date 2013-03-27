@@ -21,7 +21,7 @@ globalAdds = 0
 
 class LogEntry:
 	def __init__(self,entry):
-		logVars = entry.rstrip('\n').split(" || ");
+		logVars = entry[1:].rstrip('\n').split(" || ");
 		
 		if(len(logVars) < 2):
 			self.hash = ""
