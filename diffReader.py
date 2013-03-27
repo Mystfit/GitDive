@@ -177,28 +177,23 @@ def parseDiffLog(diffStream):
 
 	diffBlock = []
 
-	while True:
-		line = iter(diffStream.readline, ''):
+	for line in iter(diffStream.readline, ''):
+		# Check for a new commit log entry 
+		if(re.match('"GD_commit', line)):
 
-		if line != '':
-			# Check for a new commit log entry 
-			if(re.match('"GD_commit', line)):
+			log = LogEntry(line)
 
-				log = LogEntry(line)
+			if(commit):
+				commit.addAndParseDiff(diffBlock)
+				commitList.append(commit)
+				diffBlock = []
 
-				if(commit):
-					commit.addAndParseDiff(diffBlock)
-					commitList.append(commit)
-					diffBlock = []
+			#Parse commit information before setting up new commit obj
+			commit = CommitEntry(log.commitHash, log.author, log.date, log.message)
 
-				#Parse commit information before setting up new commit obj
-				commit = CommitEntry(log.commitHash, log.author, log.date, log.message)
-
-			else:
-				diffBlock.append(line)
 		else:
-			break
-
+			diffBlock.append(line)
+			
 	return commitList
 
 
