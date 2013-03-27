@@ -164,7 +164,6 @@ parsedLogs = []
 commitList = []
 diffFile  = open('diffFile.log', 'w')
 
-
 diffCmd = ["git", "diff", parsedLogs[len(parsedLogs)-2].hash, parsedLogs[len(parsedLogs)-1].hash ]
 	diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
 	
