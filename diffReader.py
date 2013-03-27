@@ -75,15 +75,15 @@ class CommitEntry:
 		hunkString = ""
 
 		for i in range(len(self.diffList[0])):
-			hunkString += "/=== Diff Start ===\\\n"
+			hunkString += "  /=== Diff Start ===\\\n"
 			diff = self.diffList[0][i]
 
 			for j in range(len(diff.hunkList)):
-				hunkString += "/--- Hunk Start ---\\\n"
+				hunkString += "    /--- Hunk Start ---\\\n"
 				for k in range(len(diff.hunkList[j].hunkData)):
 					hunkString += diff.hunkList[j].hunkData[k]
-				hunkString += "\\--- Hunk Finish ---/\n"
-			hunkString += "\\=== Diff Finish ===/\n\n"
+				hunkString += "    \\--- Hunk Finish ---/\n"
+			hunkString += "  \\=== Diff Finish ===/\n\n"
 
 
 		return hunkString + "\n"
