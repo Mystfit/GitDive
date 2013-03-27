@@ -12,6 +12,8 @@ diffCmd = ["git", "log", "-p", "--reverse", '--pretty=format:"GD_commit|-%H||GD_
 globalRemoves = 0
 globalAdds = 0
 
+
+
 #-----------------------
 # Classes
 #-----------------------
