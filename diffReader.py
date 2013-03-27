@@ -49,8 +49,8 @@ class DiffHunk:
 		self.hunkData = []
 
 class CommitEntry:
-	def __init__(self, commit, author, date, message):
-		self.commit = commit
+	def __init__(self, commitHash, author, date, message):
+		self.commitHash = commitHash
 		self.author = author
 		self.date = date
 		self.message = message
@@ -62,10 +62,11 @@ class CommitEntry:
 
 	def serializeCommit(self):
 		commitText = "***=== Commit Start ===***\n"
-		commitText += "== Author: " + commit.author + "\n"
-		commitText += "== Date: " + commit.date + "\n"
-		commitText += "== Message: " + commit.message + "\n\n"
-		commitText += commit.serializeDiffs()
+		commitText += "== Commit hash: " + self.commitHash + "\n"
+		commitText += "== Author: " + self.author + "\n"
+		commitText += "== Date: " + self.date + "\n"
+		commitText += "== Message: " + self.message + "\n\n"
+		commitText += self.serializeDiffs()
 		commitText += "***=== Commit Finish ===***\n\n\n"
 		return commitText
 
