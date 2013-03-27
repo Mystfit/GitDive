@@ -110,8 +110,6 @@ class CommitEntry:
 				# Create new file diff
 				currentDiff = DiffEntry()
 				parsedDiff.append(currentDiff)
-				# fileName = "/" + currentLine.split("diff --git")[1].split(" b/")[0].split(" a/")[1]
-				currentDiff.fileName = "Filename"
 
 			if(inDiffHeader):
 				#Diff index
@@ -130,7 +128,7 @@ class CommitEntry:
 
 				#File A name
 				elif(re.match("--- a/", currentLine)):
-					pass
+					currentDiff.fileName = "Filename"
 
 				#File B name
 				elif(re.match("\+\+\+ b/", currentLine)):
