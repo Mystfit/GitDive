@@ -9,7 +9,7 @@ import re
 path = "/Users/mystfit/Code/Python/Gitdive_Prototypes"
 logCmd = ['git', 'log', '--pretty=format:"GD_commit//%H || GD_commitAuthor//%cn || GD_date//%cd || GD_message//%b"'];
 #logCmd = ['git', 'log', '--pretty=oneline'];
-diffCmd = ["git", "log", "-p", "--reverse", '--pretty=format:"GD_commit--%H || GD_commitAuthor--%cn || GD_date--%cd || GD_message--%b"']
+diffCmd = ["git", "log", "-p", "--reverse", '--pretty=format:"GD_commit//%H || GD_commitAuthor//%cn || GD_date//%cd || GD_message//%b"']
 
 globalRemoves = 0
 globalAdds = 0
@@ -29,10 +29,10 @@ class LogEntry:
 			self.date = ""
 			self.message = ""
 		else:
-			self.commitHash = logVars[0].split("--")[1]
-			self.author = logVars[1].split("--")[1]
-			self.date = logVars[2].split("--")[1]
-			self.message = logVars[3].split("--")[1]
+			self.commitHash = logVars[0].split("//")[1]
+			self.author = logVars[1].split("//")[1]
+			self.date = logVars[2].split("//")[1]
+			self.message = logVars[3].split("//")[1]
 
 class DiffEntry:
 	def __init__(self):
