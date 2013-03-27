@@ -203,6 +203,10 @@ diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subproce
 
 parsedDiffLog = parseDiffLog(diffStream.stdout.readLines())
 
+for i in range(len(parsedDiffLog)):
+	diffFile.write(parsedDiffLog[i].serializeCommit())
+
+
 
 # for i in range(len(log)):
 # 	truncLog = log[i][1:]
@@ -219,7 +223,6 @@ parsedDiffLog = parseDiffLog(diffStream.stdout.readLines())
 # 	commit = CommitEntry(parsedLogs[i].hash, parsedLogs[i].author, parsedLogs[i].date, parsedLogs[i].message)
 # 	commit.addAndParseDiff(diffStream.stdout.readlines())
 	
-# 	diffFile.write(commit.serializeCommit())
 
 # 	commitList.append(commit)
 
