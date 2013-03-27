@@ -45,7 +45,7 @@ class DiffEntry:
 	def getFilename(self):
 		if(self.fileNameB != "/dev/null"):
 			return self.fileNameB	
-		elif(self.fileNameA != "/dev/null")
+		elif(self.fileNameA != "/dev/null"):
 			return self.fileNameA
 		
 
