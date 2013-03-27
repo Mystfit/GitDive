@@ -6,7 +6,7 @@ import re
 # Defines
 #-----------------------
 
-path = "/Users/mystfit/Sonoromancer"
+path = "/Users/mystfit/Code/Repos/TestGit"
 logCmd = ['git', 'log', '--pretty=format:"GD_commit//%H || GD_commitAuthor//%cn || GD_date//%cd || GD_message//%b"'];
 #logCmd = ['git', 'log', '--pretty=oneline'];
 diffCmd = ["git", "log", "-p", '--pretty=format:"GD_commit//%H || GD_commitAuthor//%cn || GD_date//%cd || GD_message//%b"']
