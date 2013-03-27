@@ -201,7 +201,7 @@ diffFile  = open('diffFile.log', 'w')
 
 diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
 
-parsedDiffLog = parseDiffLog(diffStream.stdout.readLines())
+parsedDiffLog = parseDiffLog(diffStream.stdout.readlines())
 
 for i in range(len(parsedDiffLog)):
 	diffFile.write(parsedDiffLog[i].serializeCommit())
