@@ -178,12 +178,11 @@ def parseDiffLog(diffFile):
 	diffBlock = []
 
 	for line in diffFile:
-		currLn = diffFile[line]
 
 		# Check for a new commit log entry 
-		if(re.match('"GD_commit', currLn)):
+		if(re.match('"GD_commit', line)):
 
-			log = LogEntry(currLn)
+			log = LogEntry(line)
 
 			if(commit):
 				commit.addAndParseDiff(diffBlock)
@@ -194,7 +193,7 @@ def parseDiffLog(diffFile):
 			commit = CommitEntry(log.commitHash, log.author, log.date, log.message)
 
 		else:
-			diffBlock.append(currLn)
+			diffBlock.append(line)
 
 	return commitList
 
