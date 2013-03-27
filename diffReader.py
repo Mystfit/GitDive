@@ -177,25 +177,27 @@ def parseDiffLog(diffFile):
 
 	diffBlock = []
 
-	for line in diffFile:
+	while True:
+		line = iter(diffFile.readline, ''):
 
-		print line
+		if line != '':
+			# Check for a new commit log entry 
+			if(re.match('"GD_commit', line)):
 
-		# Check for a new commit log entry 
-		if(re.match('"GD_commit', line)):
+				log = LogEntry(line)
 
-			log = LogEntry(line)
+				if(commit):
+					commit.addAndParseDiff(diffBlock)
+					commitList.append(commit)
+					diffBlock = []
 
-			if(commit):
-				commit.addAndParseDiff(diffBlock)
-				commitList.append(commit)
-				diffBlock = []
+				#Parse commit information before setting up new commit obj
+				commit = CommitEntry(log.commitHash, log.author, log.date, log.message)
 
-			#Parse commit information before setting up new commit obj
-			commit = CommitEntry(log.commitHash, log.author, log.date, log.message)
-
+			else:
+				diffBlock.append(line)
 		else:
-			diffBlock.append(line)
+			break
 
 	return commitList
 
@@ -221,7 +223,7 @@ diffFile  = open('diffFile.log', 'w')
 
 diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
 
-parsedDiffLog = parseDiffLog(diffStream.stdout.read())
+parsedDiffLog = parseDiffLog(diffStream.stdout)
 
 for i in range(len(parsedDiffLog)):
 	diffFile.write(parsedDiffLog[i].serializeCommit())
