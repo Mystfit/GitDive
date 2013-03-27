@@ -6,4 +6,4 @@ source ./gitMood.log
 
 
 git add .
-git commit -m "Gitdive_autolog"
+git commit -m "Gitdive_autolog | MOOD:$(MOOD) | COFFEE:$(COFFEE) | LOCATION:$(LOCATION)"
