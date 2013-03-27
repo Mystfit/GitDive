@@ -84,8 +84,9 @@ class CommitEntry:
 		hunkString = ""
 
 		for i in range(len(self.diffList[0])):
-			hunkString += "/=== Diff Start  ===\\\n"
 			diff = self.diffList[0][i]
+			hunkString += "/=== Diff Start: " + diff.getFilename() "  ===\\\n"
+
 
 			for j in range(len(diff.hunkList)):
 				hunkString += "/--- Hunk Start  ---\\\n"
