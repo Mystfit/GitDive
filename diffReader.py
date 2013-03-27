@@ -177,7 +177,7 @@ def parseDiffLog(diffFile):
 
 	diffBlock = []
 
-	print diffFile[1]
+	print diffFile[2]
 
 	for i in range(len(diffFile)):
 		currLn = diffFile[i]
