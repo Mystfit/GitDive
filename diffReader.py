@@ -148,7 +148,42 @@ class CommitEntry:
 						globalAdds += 1
 		
 		return parsedDiff
-	
+
+
+def parseDiffLog(diffFile):
+	currLn = ""
+	commit = None
+	commitList = []
+	log = None
+
+	diffBlock = []
+
+	for i in range(len(diffFile)):
+		currLn = diffFile[i]
+
+		# Check for a new commit log entry 
+		if(re.match('GD_commit//', currLn)):
+
+			log = LogEntry(currLn)
+
+			if(commit):
+				commit.addAndParseDiff(diffBlock)
+				commitList.append(commit)
+				diffBlock = []
+
+			#Parse commit information before setting up new commit obj
+			commit = CommitEntry(log.commit, log.author, log.date, log.message)
+
+		else:
+			currDiffBlock.append(currLn)
+
+	return commitList
+
+
+
+
+
+
 
 
 
@@ -164,15 +199,10 @@ parsedLogs = []
 commitList = []
 diffFile  = open('diffFile.log', 'w')
 
-diffCmd = ["git", "diff", parsedLogs[len(parsedLogs)-2].hash, parsedLogs[len(parsedLogs)-1].hash ]
 diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
 
-commit = CommitEntry(parsedLogs[i].hash, parsedLogs[i].author, parsedLogs[i].date, parsedLogs[i].message)
-commit.addAndParseDiff(diffStream.stdout.readlines())
+parseDiffLog(diffStream.stdout.readLines())
 
-diffFile.write(commit.serializeCommit())
-
-commitList.append(commit)
 
 # for i in range(len(log)):
 # 	truncLog = log[i][1:]
