@@ -174,7 +174,7 @@ def parseDiffLog(diffFile):
 				diffBlock = []
 
 			#Parse commit information before setting up new commit obj
-			commit = CommitEntry(log.commit, log.author, log.date, log.message)
+			commit = CommitEntry(log.hash, log.author, log.date, log.message)
 
 		else:
 			diffBlock.append(currLn)
