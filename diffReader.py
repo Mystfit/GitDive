@@ -24,12 +24,12 @@ class LogEntry:
 		logVars = entry[1:].rstrip('\n').split(" || ");
 		
 		if(len(logVars) < 2):
-			self.hash = ""
+			self.commitHash = ""
 			self.author = ""
 			self.date = ""
 			self.message = ""
 		else:
-			self.hash = logVars[0].split("//")[1]
+			self.commitHash = logVars[0].split("//")[1]
 			self.author = logVars[1].split("//")[1]
 			self.date = logVars[2].split("//")[1]
 			self.message = logVars[3].split("//")[1]
@@ -174,7 +174,7 @@ def parseDiffLog(diffFile):
 				diffBlock = []
 
 			#Parse commit information before setting up new commit obj
-			commit = CommitEntry(log.hash, log.author, log.date, log.message)
+			commit = CommitEntry(log.commitHash, log.author, log.date, log.message)
 
 		else:
 			diffBlock.append(currLn)
