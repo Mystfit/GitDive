@@ -169,7 +169,7 @@ class CommitEntry:
 		return parsedDiff
 
 
-def parseDiffLog(diffFile):
+def parseDiffLog(diffStream):
 	currLn = ""
 	commit = None
 	commitList = []
@@ -178,7 +178,7 @@ def parseDiffLog(diffFile):
 	diffBlock = []
 
 	while True:
-		line = iter(diffFile.readline, ''):
+		line = iter(diffStream.readline, ''):
 
 		if line != '':
 			# Check for a new commit log entry 
