@@ -96,47 +96,61 @@ class CommitEntry:
 		parsedDiff = []
 		currentDiff = None
 		currentHunk = None
+		inDiffHeader = False
 
 		for i in range(len(diff)):
 			currentLine = diff[i];
 
 			#If the line starts with 'diff', then we make a new diff object and save off the current
 			if re.match('diff', currentLine):
+
+				#Set line context to header so we can expect diff metadata
+				inDiffHeader = True
+
 				# Create new file diff
 				currentDiff = DiffEntry()
 				parsedDiff.append(currentDiff)
 				# fileName = "/" + currentLine.split("diff --git")[1].split(" b/")[0].split(" a/")[1]
 				currentDiff.fileName = "Filename"
 
-			#Diff index
-			elif(re.match("index ", currentLine)):
-				pass
+			if(inDiffHeader):
+				#Diff index
+				elif(re.match("index ", currentLine)):
+					pass
 
-			#Binary file diff information
-			elif(re.match("Binary files  ", currentLine)):
-				currentDiff.diffType = "binary"
+				elif(re.match("new file mode", currentLine))
+					pass
 
-			#File A name
-			elif(re.match("--- a/", currentLine)):
-				pass
+				elif(re.match("deleted file mode", currentLine))
+					pass
 
-			#File B name
-			elif(re.match("\+\+\+ b/", currentLine)):
-				pass
+				#Binary file diff information
+				elif(re.match("Binary files", currentLine)):
+					currentDiff.diffType = "binary"
 
-			#New hunk section in diff
-			elif(re.match("@@ ", currentLine)):
-				currentDiff.diffType = "text"
-				currentHunk = DiffHunk()
-				currentDiff.hunkList.append(currentHunk);
+				#File A name
+				elif(re.match("--- a/", currentLine)):
+					pass
 
-				preDiffLines = currentLine.split(" ")[1].split(",");
-				postDiffLines = currentLine.split(" ")[2].split(",");
+				#File B name
+				elif(re.match("\+\+\+ b/", currentLine)):
+					pass
 
-				currentHunk.startRemoveLines = int(preDiffLines[0][1:])
-				currentHunk.startAddLines = int(postDiffLines[0][1:])
-				if (len(preDiffLines) > 1): currentHunk.numRemoveLines = int(preDiffLines[1])  
-				if (len(postDiffLines) > 1): currentHunk.numAddLines = int(postDiffLines[1])		
+				#New hunk section in diff
+				elif(re.match("@@ ", currentLine)):
+					currentDiff.diffType = "text"
+					currentHunk = DiffHunk()
+					currentDiff.hunkList.append(currentHunk);
+
+					preDiffLines = currentLine.split(" ")[1].split(",");
+					postDiffLines = currentLine.split(" ")[2].split(",");
+
+					currentHunk.startRemoveLines = int(preDiffLines[0][1:])
+					currentHunk.startAddLines = int(postDiffLines[0][1:])
+					if (len(preDiffLines) > 1): currentHunk.numRemoveLines = int(preDiffLines[1])  
+					if (len(postDiffLines) > 1): currentHunk.numAddLines = int(postDiffLines[1])	
+
+					inDiffHeader = False	
 
 			#Currently in a hunk
 			else:
