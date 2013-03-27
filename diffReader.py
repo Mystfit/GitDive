@@ -115,7 +115,7 @@ class CommitEntry:
 
 			if(inDiffHeader):
 				#Diff index
-				elif(re.match("index ", currentLine)):
+				if(re.match("index ", currentLine)):
 					pass
 
 				elif(re.match("new file mode", currentLine))
