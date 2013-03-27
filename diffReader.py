@@ -13,7 +13,6 @@ globalRemoves = 0
 globalAdds = 0
 
 
-
 #-----------------------
 # Classes
 #-----------------------
