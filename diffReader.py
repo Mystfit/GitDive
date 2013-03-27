@@ -171,10 +171,9 @@ class CommitEntry:
 
 def parseDiffLog(diffStream):
 	currLn = ""
+	log = None
 	commit = None
 	commitList = []
-	log = None
-
 	diffBlock = []
 
 	for line in iter(diffStream.readline, ''):
