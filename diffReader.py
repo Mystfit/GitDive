@@ -160,7 +160,7 @@ class CommitEntry:
 
 			#Currently in a hunk
 			else:
-				if(currentHunk):
+				if(currentHunk && !inDiffHeader):
 					currentHunk.hunkData.append(currentLine)
 
 					if(currentLine[:1] == "-"):
