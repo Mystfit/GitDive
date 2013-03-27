@@ -160,14 +160,13 @@ class CommitEntry:
 
 			#Currently in a hunk
 			else:
-				if(not inDiffHeader):
-					if(currentHunk):
-						currentHunk.hunkData.append(currentLine)
+				if(currentHunk and not inDiffHeader):
+					currentHunk.hunkData.append(currentLine)
 
-						if(currentLine[:1] == "-"):
-							globalRemoves += 1
-						if(currentLine[:1] == "+"):
-							globalAdds += 1
+					if(currentLine[:1] == "-"):
+						globalRemoves += 1
+					if(currentLine[:1] == "+"):
+						globalAdds += 1
 		
 		return parsedDiff
 
