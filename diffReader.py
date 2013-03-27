@@ -137,11 +137,11 @@ class CommitEntry:
 
 				#File A name
 				elif(re.match("--- a/", currentLine)):
-					currentDiff.fileNameA = currentLine.split("--- a/")[1]
+					currentDiff.fileNameA = currentLine.split("--- a/")[1].rstrip("\n")
 
 				#File B name
 				elif(re.match("\+\+\+ b/", currentLine)):
-					currentDiff.fileNameB = currentLine.split("+++ b/")[1]
+					currentDiff.fileNameB = currentLine.split("+++ b/")[1].rstrip("\n")
 
 				#New hunk section in diff
 				elif(re.match("@@ ", currentLine)):
