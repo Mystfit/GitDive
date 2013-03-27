@@ -158,10 +158,10 @@ def parseDiffLog(diffFile):
 
 	diffBlock = []
 
-	print len(diffFile)
-
 	for i in range(len(diffFile)):
 		currLn = diffFile[i]
+
+		print currLn
 
 		# Check for a new commit log entry 
 		if(re.match('GD_commit//', currLn)):
