@@ -207,7 +207,6 @@ for i in range(len(parsedDiffLog)):
 	diffFile.write(parsedDiffLog[i].serializeCommit())
 
 
-
 # for i in range(len(log)):
 # 	truncLog = log[i][1:]
 # 	if(truncLog == ""): continue
