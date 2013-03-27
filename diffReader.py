@@ -47,8 +47,6 @@ class DiffEntry:
 			return self.fileNameB	
 		elif(self.fileNameA != "/dev/null")
 			return self.fileNameA
-		else:
-			return None
 		
 
 class DiffHunk:
