@@ -116,10 +116,10 @@ class CommitEntry:
 				if(re.match("index ", currentLine)):
 					pass
 
-				elif(re.match("new file mode", currentLine))
+				elif(re.match("new file mode", currentLine)):
 					pass
 
-				elif(re.match("deleted file mode", currentLine))
+				elif(re.match("deleted file mode", currentLine)):
 					pass
 
 				#Binary file diff information
