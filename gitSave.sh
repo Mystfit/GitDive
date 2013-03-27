@@ -1,6 +1,5 @@
 #!/bin/bash
 
-pwd
 TIMESTAMP=$(date +%m%d%y%H%M%S)
 
 git add .
