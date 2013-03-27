@@ -9,7 +9,7 @@ import re
 path = "/Users/mystfit/Sonoromancer"
 logCmd = ['git', 'log', '--pretty=format:"GD_commit//%H || GD_commitAuthor//%cn || GD_date//%cd || GD_message//%b"'];
 #logCmd = ['git', 'log', '--pretty=oneline'];
-diffCmd = ["git", "diff", "--stat"]
+diffCmd = ["git", "log", "-p", '--pretty=format:"GD_commit//%H || GD_commitAuthor//%cn || GD_date//%cd || GD_message//%b"']
 
 globalRemoves = 0
 globalAdds = 0
@@ -157,23 +157,15 @@ class CommitEntry:
 # Program start
 #-----------------------
 
-logStream = subprocess.Popen(logCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
+# logStream = subprocess.Popen(logCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
+# log = logStream.stdout.read().replace('\n\"\n', '\n').split("\n")
 
-log = logStream.stdout.read().replace('\n\"\n', '\n').split("\n")
 parsedLogs = []
 commitList = []
 diffFile  = open('diffFile.log', 'w')
 
-for i in range(len(log)):
-	truncLog = log[i][1:]
-	if(truncLog == ""): continue
 
-	parsedLogs.append(LogEntry(truncLog))
-
-	# Don't do a diff on the first commit, nothing to compare against!
-	if(i == 0): continue
-
-	diffCmd = ["git", "diff", parsedLogs[len(parsedLogs)-2].hash, parsedLogs[len(parsedLogs)-1].hash ]
+diffCmd = ["git", "diff", parsedLogs[len(parsedLogs)-2].hash, parsedLogs[len(parsedLogs)-1].hash ]
 	diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
 	
 	commit = CommitEntry(parsedLogs[i].hash, parsedLogs[i].author, parsedLogs[i].date, parsedLogs[i].message)
@@ -182,6 +174,25 @@ for i in range(len(log)):
 	diffFile.write(commit.serializeCommit())
 
 	commitList.append(commit)
+
+# for i in range(len(log)):
+# 	truncLog = log[i][1:]
+# 	if(truncLog == ""): continue
+
+# 	parsedLogs.append(LogEntry(truncLog))
+
+# 	# Don't do a diff on the first commit, nothing to compare against!
+# 	if(i == 0): continue
+
+# 	diffCmd = ["git", "diff", parsedLogs[len(parsedLogs)-2].hash, parsedLogs[len(parsedLogs)-1].hash ]
+# 	diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
+	
+# 	commit = CommitEntry(parsedLogs[i].hash, parsedLogs[i].author, parsedLogs[i].date, parsedLogs[i].message)
+# 	commit.addAndParseDiff(diffStream.stdout.readlines())
+	
+# 	diffFile.write(commit.serializeCommit())
+
+# 	commitList.append(commit)
 
 print str(globalAdds) + " lines added"
 print str(globalRemoves) + " lines removed"
