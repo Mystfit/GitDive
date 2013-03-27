@@ -178,6 +178,7 @@ def parseDiffLog(diffStream):
 	diffBlock = []
 
 	for line in iter(diffStream.readline, ''):
+		
 		# Check for a new commit log entry 
 		if(re.match('"GD_commit', line)):
 
@@ -193,7 +194,7 @@ def parseDiffLog(diffStream):
 
 		else:
 			diffBlock.append(line)
-			
+
 	return commitList
 
 
