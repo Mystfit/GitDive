@@ -179,6 +179,8 @@ def parseDiffLog(diffFile):
 
 	for line in diffFile:
 
+		print line
+
 		# Check for a new commit log entry 
 		if(re.match('"GD_commit', line)):
 
