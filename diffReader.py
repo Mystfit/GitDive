@@ -167,6 +167,7 @@ def parseDiffLog(diffFile):
 			log = LogEntry(currLn)
 
 			if(commit):
+				print diffBlock
 				commit.addAndParseDiff(diffBlock)
 				commitList.append(commit)
 				diffBlock = []
