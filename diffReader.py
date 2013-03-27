@@ -36,9 +36,20 @@ class LogEntry:
 
 class DiffEntry:
 	def __init__(self):
-		self.fileName = ""
+		self.fileNameA = ""
+		self.fileNameB = ""
 		self.diffType = ""
+		self.fileMode = "updated"
 		self.hunkList = []
+
+	def getFilename(self):
+		if(self.fileNameB != "/dev/null"):
+			return self.fileNameB	
+		elif(self.fileNameA != "/dev/null")
+			return self.fileNameA
+		else:
+			return None
+		
 
 class DiffHunk:
 	def __init__(self):
@@ -117,10 +128,10 @@ class CommitEntry:
 					pass
 
 				elif(re.match("new file mode", currentLine)):
-					pass
+					currentDiff.fileMode = "added"
 
 				elif(re.match("deleted file mode", currentLine)):
-					pass
+					currentDiff.fileMode = "deleted"
 
 				#Binary file diff information
 				elif(re.match("Binary files", currentLine)):
@@ -128,11 +139,11 @@ class CommitEntry:
 
 				#File A name
 				elif(re.match("--- a/", currentLine)):
-					currentDiff.fileName = "Filename"
+					currentDiff.fileNameA = currentLine.split("--- a/")[1]
 
 				#File B name
 				elif(re.match("\+\+\+ b/", currentLine)):
-					pass
+					currentDiff.fileNameB = currentLine.split("\+\+\+ b/")[1]
 
 				#New hunk section in diff
 				elif(re.match("@@ ", currentLine)):
