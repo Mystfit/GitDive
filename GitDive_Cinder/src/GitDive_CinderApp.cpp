@@ -1,17 +1,4 @@
-#include "cinder/app/AppBasic.h"
-#include "cinder/gl/gl.h"
-
-using namespace ci;
-using namespace ci::app;
-using namespace std;
-
-class GitDive_CinderApp : public AppBasic {
-  public:
-	void setup();
-	void mouseDown( MouseEvent event );	
-	void update();
-	void draw();
-};
+#include "GitDive_CinderApp.h"
 
 void GitDive_CinderApp::setup()
 {
