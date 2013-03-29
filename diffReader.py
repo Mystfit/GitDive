@@ -1,5 +1,4 @@
 import subprocess
-import pickle
 import re
 
 #-----------------------
