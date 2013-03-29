@@ -4,7 +4,7 @@
 
 void GitDive_CinderApp::setup()
 {
-    Utils::getCmdOutput("ls -a");
+    Utils::getCmdOutput("echo 'hello\nline test\nanotherline' >> test.txt; cat test.txt");
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
