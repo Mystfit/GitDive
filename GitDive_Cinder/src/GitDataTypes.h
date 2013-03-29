@@ -17,7 +17,7 @@ using namespace std;
 
 class DiffHunk {
 public:
-    DIffHunk();
+    DiffHunk();
     string startRemoveLines;
     string numRemoveLines;
     string startAddLines;
