@@ -206,6 +206,7 @@ def parseDiffLog(diffStream):
 
 commitList = []
 diffFile  = open('diffFile.log', 'w')
+diffFile.write("Git Commit Log for Repository: " + path + "\n---------------------------------------------------\n\n");
 
 diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
 
