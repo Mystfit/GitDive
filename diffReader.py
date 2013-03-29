@@ -185,6 +185,7 @@ def parseDiffLog(diffStream):
 			log = LogEntry(line)
 
 			if(commit):
+				#Parse last commit added
 				commit.addAndParseDiff(diffBlock)
 				commitList.append(commit)
 				diffBlock = []
