@@ -14,7 +14,10 @@
 
 class GitLogParser {
 public:
+    //Parses entire git log into commit objects
     static vector<Commit> parseLog(vector<string> diffLog);
+    
+    //Parses individual commit datablock into diffs
     vector<Diff> parseCommit(vector<string> diffBlock);
 
 };
