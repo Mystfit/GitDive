@@ -32,7 +32,7 @@ public:
 
         //cout << &pstream;
         string cmdResult = "";
-        string line
+        string line;
         
         while(in){
             getline(in, line);
