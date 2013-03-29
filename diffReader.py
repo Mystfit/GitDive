@@ -198,14 +198,6 @@ def parseDiffLog(diffStream):
 	return commitList
 
 
-
-
-
-
-
-
-
-
 #-----------------------
 # Program start
 #-----------------------
