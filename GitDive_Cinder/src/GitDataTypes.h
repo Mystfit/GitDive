@@ -14,11 +14,15 @@
 #endif /* defined(__GitDive_Cinder__GitDataTypes__) */
 
 
-class Commit {
+struct Commit {
     
 };
 
-class Diff {
+struct Diff {
     
 };
+
+struct DiffHunk {
+    
+}
 
