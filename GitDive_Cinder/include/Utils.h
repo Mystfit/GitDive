@@ -14,7 +14,7 @@
 #include <boost/iostreams/device/file_descriptor.hpp>
 
 
-
+using namespace boost::iostreams;
 using namespace std;
 
 class Utils {
