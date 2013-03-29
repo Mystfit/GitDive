@@ -40,7 +40,7 @@ private:
 
 class Commit {
 public:
-    Commit(string _commit, string date, string author = "", string message = "");
+    Commit(string _commit, string _date, string _author = "", string _message = "");
     string commitHash;
     string author;
     string date;
