@@ -28,11 +28,12 @@ public:
 class Diff {
 public:
     Diff();
+    string diffType; //  "default: text";
+    string fileMode; // "default: updated";
 private:
     string m_fileNameA;
     string m_fileNameB;
-    string m_diffType; //  "default: text";
-    string m_fileMode; // "default: updated";
+    
     vector<DiffHunk> m_hunkList;
 };
 
