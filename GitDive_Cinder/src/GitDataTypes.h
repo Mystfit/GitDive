@@ -16,7 +16,7 @@
 
 using namespace std;
 
-struct DiffHunk {
+class DiffHunk {
     string startRemoveLines;
     string numRemoveLines;
     string startAddLines;
@@ -24,7 +24,7 @@ struct DiffHunk {
     vector<string> hunkData;
 };
 
-struct Diff {
+class Diff {
     string fileNameA;
     string fileNameB;
     string diffType; //  "default: text";
