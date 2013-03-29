@@ -21,10 +21,10 @@ struct DiffHunk {
 };
 
 struct Diff {
-    string fileNameA = "";
-    string fileNameB = "";
-    string diffType = "text";
-    string fileMode = "updated";
+    string fileNameA;
+    string fileNameB;
+    string diffType; //  "text";
+    string fileMode; // "updated";
     string hunkList;
 };
 
