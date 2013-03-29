@@ -35,6 +35,7 @@ public:
         string s;
         p2 >> s;
         p2.close();
+        
 
 //        char buffer[2048];
 //        char *line_p = fgets(buffer, sizeof(buffer), cmdStream);        
