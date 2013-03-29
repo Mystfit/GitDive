@@ -11,4 +11,9 @@
 
 #include <iostream>
 
+class GitLogParser {
+public:
+    
+};
+
 #endif /* defined(__GitDive_Cinder__GitLogParser__) */
