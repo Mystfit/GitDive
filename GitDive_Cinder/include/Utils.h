@@ -27,7 +27,7 @@ public:
 
         if (!cmdStream) return "Command failed";
 
-        char buffer[1024];
+        char buffer[2048];
         char *line_p = fgets(buffer, sizeof(buffer), cmdStream);
         
         pclose(cmdStream);
