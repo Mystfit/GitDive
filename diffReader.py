@@ -90,8 +90,8 @@ class CommitEntry:
 				hunkString += "||/--- Code hunk begins\n"
 				for k in range(len(diff.hunkList[j].hunkData)):
 					hunkString += "|| " + diff.hunkList[j].hunkData[k]
-				hunkString += "\\||--- Code hunk ends\n"
-			hunkString += "\\|=== Diff Finish\n\n"
+				hunkString += "||\\--- Code hunk ends\n"
+			hunkString += "|\\=== Diff Finish\n\n"
 
 
 		return hunkString + "\n"
