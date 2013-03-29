@@ -29,7 +29,7 @@ public:
         m_numRemoveLines = numLines;
     }
     
-    void addLine()
+    void addLine(string line){ m_hunkData.push_back(line); };
     
 private:
     string m_startRemoveLines;
