@@ -29,7 +29,7 @@ public:
         boost_stream stream(fileno(cmdStream));
         stream.set_auto_close(false);
         
-        std::string cmdOutput;
+        string cmdOutput;
         while(getline(stream, cmdOutput)){
         
         return cmdOutput;
