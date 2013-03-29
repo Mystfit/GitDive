@@ -18,5 +18,5 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 
 vector<Diff> GitLogParser::parseCommit(vector<string> diffBLock)
 {
-    
+    vector<Diff> 
 }
