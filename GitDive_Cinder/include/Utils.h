@@ -31,8 +31,6 @@ public:
         
         std::string cmdOutput;
         while(getline(stream, cmdOutput)){
-            
-        }
         
         return cmdOutput;
     }
