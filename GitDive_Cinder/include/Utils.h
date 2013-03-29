@@ -10,7 +10,7 @@
 #define __GitDive_Cinder__Utils__
 
 #include <iostream>
-#include <boost/iostreams/stream.h>
+#include <boost/iostreams/stream>
 
 using namespace std;
 
