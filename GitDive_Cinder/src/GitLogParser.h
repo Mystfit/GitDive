@@ -15,7 +15,7 @@
 class GitLogParser {
 public:
     static vector<Commit> parseLog(vector<string> diffLog);
-    vector<Diff> parseCommit(vector<string> diffBLock)
+    vector<Diff> parseCommit(vector<string> diffBlock);
 
 };
 
