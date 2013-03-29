@@ -14,4 +14,8 @@
 #endif /* defined(__GitDive_Cinder__GitDataTypes__) */
 
 
-class COmmit
+class Log
+class Commit {
+    
+};
+
