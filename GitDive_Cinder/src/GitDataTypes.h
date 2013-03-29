@@ -25,6 +25,7 @@ class DiffHunk {
 };
 
 class Diff {
+public:
     string fileNameA;
     string fileNameB;
     string diffType; //  "default: text";
@@ -32,7 +33,7 @@ class Diff {
     string hunkList;
 };
 
-struct Commit {
+class Commit {
     string commitHash;
     string author;
     string date;
