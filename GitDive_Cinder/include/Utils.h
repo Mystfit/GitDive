@@ -32,6 +32,8 @@ public:
 
         //cout << &pstream;
         string cmdResult;
+        
+        while(
         getline(in, cmdResult);
 
         pclose(cmdStream);
