@@ -15,7 +15,11 @@
 
 
 struct Commit {
-    
+    string commitHash = commitHash
+    string author = author
+    string date = date
+    string message = message
+    string diffList = []
 };
 
 struct Diff {
