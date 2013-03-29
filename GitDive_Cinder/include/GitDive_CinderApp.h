@@ -26,6 +26,9 @@ public:
 	void mouseDown( MouseEvent event );
 	void update();
 	void draw();
+    
+    string repoPath;
+    string gitCmd;
 };
 
 #endif
