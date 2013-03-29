@@ -4,7 +4,7 @@
 
 void GitDive_CinderApp::setup()
 {
-    console() << Utils::getCmdOutput("ls -a") << endl;
+    Utils::getCmdOutput("ls -a");
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
