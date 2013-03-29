@@ -32,7 +32,6 @@ public:
         string cmdOutput;
         while(getline(stream, cmdOutput))
         
-        
         return cmdOutput;
     }
 };
