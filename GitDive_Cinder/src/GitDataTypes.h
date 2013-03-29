@@ -32,7 +32,7 @@ public:
     string fileNameB;
     string diffType; //  "default: text";
     string fileMode; // "default: updated";
-    vector<string> hunkList;
+    vector<DiffHunk> hunkList;
 };
 
 class Commit {
