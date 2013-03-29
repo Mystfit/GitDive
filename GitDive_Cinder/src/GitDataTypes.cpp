@@ -12,3 +12,11 @@
 Commit::Commit(string commit, string date, string author, string message){
     
 }
+
+Diff::Diff(){
+    
+}
+
+Commit::Commit(string commit, string date, string author, string message){
+    
+}
