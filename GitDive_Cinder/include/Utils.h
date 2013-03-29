@@ -20,17 +20,11 @@ using namespace boost::iostreams;
 
 class Utils {
 public:
-    
-    typedef boost::iostreams::stream<boost::iostreams::file_descriptor_source> boost_stream;
-    
-    
-    
     static string getCmdOutput()
     {
         FILE *cmdStream = popen("pwd", "r");
 
         if (!cmdStream) return "Command failed";
-        
         
        
         file_descriptor_source d(fileno(cmdStream), close_handle);
