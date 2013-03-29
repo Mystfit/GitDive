@@ -5,8 +5,9 @@
 void GitDive_CinderApp::setup()
 {
     string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
+    string gitCmd = "git log --reverse --pretty=format:\"GD_commit|-%H||GD_commitAuthor|-%cn||GD_date|-%cd||GD_message|-%B\"";
     
-    console() << Utils::getCmdOutput("echo 'hello\nline test\nanotherline' >> test.txt; cat test.txt") << endl;
+    console() << Utils::getCmdOutput(repopath + " && " + gitCmd) << endl;
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
