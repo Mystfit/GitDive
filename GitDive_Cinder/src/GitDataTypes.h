@@ -25,15 +25,7 @@ public:
     vector<string> hunkData;
 };
 
-class Diff {
-public:
-    Diff();
-    string fileNameA;
-    string fileNameB;
-    string diffType; //  "default: text";
-    string fileMode; // "default: updated";
-    vector<DiffHunk> hunkList;
-};
+
 
 class Commit {
 public:
@@ -43,6 +35,16 @@ public:
     string date;
     string message;
     vector<Diff> diffList;
+};
+
+class Diff {
+public:
+    Diff();
+    string fileNameA;
+    string fileNameB;
+    string diffType; //  "default: text";
+    string fileMode; // "default: updated";
+    vector<DiffHunk> hunkList;
 };
 
 
