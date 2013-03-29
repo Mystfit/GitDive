@@ -4,7 +4,8 @@
 
 void GitDive_CinderApp::setup()
 {
-    string repoPath = 
+    string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
+    
     console() << Utils::getCmdOutput("echo 'hello\nline test\nanotherline' >> test.txt; cat test.txt") << endl;
 }
 
