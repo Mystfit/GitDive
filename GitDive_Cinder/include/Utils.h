@@ -30,7 +30,9 @@ public:
         stream.set_auto_close(false);
         
         std::string cmdOutput;
-        while(getline(stream, cmdOutput))
+        while(getline(stream, cmdOutput)){
+            
+        }
         
         return cmdOutput;
     }
