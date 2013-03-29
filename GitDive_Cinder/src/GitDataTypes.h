@@ -12,7 +12,6 @@
 #include <iostream>
 #include <vector>
 
-#endif /* defined(__GitDive_Cinder__GitDataTypes__) */
 
 using namespace std;
 
@@ -44,6 +43,11 @@ public:
     string message;
     vector<Diff> diffList;
 };
+
+
+
+#endif /* defined(__GitDive_Cinder__GitDataTypes__) */
+s
 
 
 
