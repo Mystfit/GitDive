@@ -18,11 +18,14 @@ using namespace std;
 class DiffHunk {
 public:
     DiffHunk();
-    string startRemoveLines;
-    string numRemoveLines;
-    string startAddLines;
-    string numAddLines;
+        
+    void setPre
 private:
+    string m_startRemoveLines;
+    string m_numRemoveLines;
+    string m_startAddLines;
+    string m_numAddLines;
+
     vector<string> m_hunkData;
 };
 
