@@ -19,22 +19,19 @@ using namespace std;
 
 class Utils {
 public:
-    static string getCmdOutput()
+    static string getCmdOutput(string command)
     {
-        FILE *cmdStream = popen("ls -a", "r");
+        FILE *cmdStream = popen(command, "r");
 
         if (!cmdStream) return "Command failed";
-        
        
         io::file_descriptor_source d(fileno(cmdStream), io::close_handle);
         
         io::stream_buffer<io::file_descriptor_source> pstream(d);
-        cout << &pstream;
+        //cout << &pstream;
         pclose(cmdStream);
-        
-        string cmdResult = "End";
-             
-        return cmdResult;
+                     
+        return pstream;
     }
 };
 
