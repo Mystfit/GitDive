@@ -42,7 +42,7 @@ public:
         
         pclose(cmdStream);
         
-        return line_p;
+        return s;
     }
 };
 
