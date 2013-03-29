@@ -47,7 +47,7 @@ public:
 
 
 #endif /* defined(__GitDive_Cinder__GitDataTypes__) */
-s
+
 
 
 
