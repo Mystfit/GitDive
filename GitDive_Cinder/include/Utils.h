@@ -23,7 +23,6 @@ public:
     {
         FILE *cmdStream = popen(command, "r");
         
-        pop
 
         if (!cmdStream) return "Command failed";
         
