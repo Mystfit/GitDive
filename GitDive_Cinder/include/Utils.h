@@ -34,7 +34,7 @@ public:
         string cmdResult;
         
         while(in){
-            cout << getline(in, cmdResult);
+            getline(in, cmdResult);
         }
 
         pclose(cmdStream);
