@@ -23,7 +23,7 @@ public:
     
     static string getCmdOutput()
     {
-        FILE *cmdStream = popen("ls", "r");
+        FILE *cmdStream = popen("git status", "r");
 
         if (!cmdStream) return "Command failed";
 
