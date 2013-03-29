@@ -23,8 +23,8 @@ struct DiffHunk {
 struct Diff {
     string fileNameA;
     string fileNameB;
-    string diffType; //  "text";
-    string fileMode; // "updated";
+    string diffType; //  "default: text";
+    string fileMode; // "default: updated";
     string hunkList;
 };
 
