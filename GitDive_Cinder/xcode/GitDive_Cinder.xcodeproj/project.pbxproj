@@ -16,6 +16,7 @@
 		00BAE65A0E7ED9C10018A608 /* GitDive_CinderApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* GitDive_CinderApp.cpp */; };
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
 		4A1A6B8117054D940046BE09 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B7F17054D940046BE09 /* Utils.cpp */; };
+		4A1A6BA9170579350046BE09 /* libcinder_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BA8170579350046BE09 /* libcinder_d.a */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -47,6 +48,7 @@
 		4A1A6B8B170575140046BE09 /* libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_iostreams.a; path = ../../../../Cinder/boost/stage/lib/libboost_iostreams.a; sourceTree = "<group>"; };
 		4A1A6B8C170575140046BE09 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../Cinder/boost/stage/lib/libboost_system.a; sourceTree = "<group>"; };
 		4A1A6B8D170575140046BE09 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = ../../../../Cinder/boost/stage/lib/libboost_thread.a; sourceTree = "<group>"; };
+		4A1A6BA8170579350046BE09 /* libcinder_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcinder_d.a; path = ../../../../Cinder/lib/libcinder_d.a; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1A6BA9170579350046BE09 /* libcinder_d.a in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
 				53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */,
@@ -122,6 +125,7 @@
 		29B97314FDCFA39411CA2CEA /* GitDive_Cinder */ = {
 			isa = PBXGroup;
 			children = (
+				4A1A6BA8170579350046BE09 /* libcinder_d.a */,
 				4A1A6B8A170575140046BE09 /* libboost_date_time.a */,
 				4A1A6B8B170575140046BE09 /* libboost_iostreams.a */,
 				4A1A6B8C170575140046BE09 /* libboost_system.a */,
@@ -249,6 +253,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Cinder/boost/stage/lib\"",
+					"\"$(SRCROOT)/../../../../Cinder/lib\"",
 				);
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder_d.a\"";
 				PRODUCT_NAME = GitDive_Cinder;
@@ -274,6 +279,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Cinder/boost/stage/lib\"",
+					"\"$(SRCROOT)/../../../../Cinder/lib\"",
 				);
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
 				PRODUCT_NAME = GitDive_Cinder;
