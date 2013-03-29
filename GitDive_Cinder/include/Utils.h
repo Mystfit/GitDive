@@ -10,6 +10,9 @@
 #define __GitDive_Cinder__Utils__
 
 #include <iostream>
+#include <boost/iostreams/stream.h>
+
+using namespace std;
 
 class Utils {
 public:
