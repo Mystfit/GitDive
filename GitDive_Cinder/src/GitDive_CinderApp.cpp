@@ -10,7 +10,7 @@ void GitDive_CinderApp::setup()
     
     console() << Utils::getCmdOutput(combinedCmd.c_str()) << endl;
     
-    console() << GitLogParser::serializeCommit(Commit("asdasdsa", "asdsadsad");
+    console() << GitLogParser::serializeCommit(Commit("asdasdsa", "asdsadsad") << endl;
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
