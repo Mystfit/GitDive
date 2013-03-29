@@ -32,7 +32,9 @@ public:
         
         boost::iostreams::file_descriptor_source p2(fileno(cmdStream));
         
+        string s;
         
+        p2 >> s;
 
 
 //        char buffer[2048];
