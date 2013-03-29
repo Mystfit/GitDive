@@ -14,8 +14,11 @@
 #endif /* defined(__GitDive_Cinder__GitDataTypes__) */
 
 
-class Log
 class Commit {
+    
+};
+
+class Diff {
     
 };
 
