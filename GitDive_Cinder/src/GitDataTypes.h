@@ -46,7 +46,7 @@ public:
     string date;
     string message;
 private:
-    vector<Diff> diffList;
+    vector<Diff> dm_iffList;
 };
 
 
