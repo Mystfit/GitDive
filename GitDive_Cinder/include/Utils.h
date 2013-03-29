@@ -23,11 +23,12 @@ public:
     
     string getCmdOutput()
     {
-        FILE *myfile;
+        FILE *cmdStream;
         // make sure to popen and it succeeds
         
-        boost_stream stream(fileno(myfile));
-        stream.set_auto_close(false); // https://svn.boost.org/trac/boost/ticket/3517
+        boost_stream stream(fileno(cmdStream));
+        stream.set_auto_close(false);
+        
         std::string cmdOutput;
         while(getline(stream, cmdOutput))
         
