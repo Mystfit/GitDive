@@ -32,7 +32,7 @@ public:
         string cmdOutput;
         while(getline(stream, cmdOutput));
         
-        int pclose(FILE *stream);
+        int pclose(cmdStream);
         
         return cmdOutput;
     }
