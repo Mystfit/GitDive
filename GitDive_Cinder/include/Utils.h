@@ -30,7 +30,9 @@ public:
         if (!cmdStream) return "Command failed";
         
         
-        boost::iostreams::file_descriptor_source p2(fileno(p));
+        boost::iostreams::file_descriptor_source p2(fileno(cmdStream));
+        
+        
 
 
 //        char buffer[2048];
