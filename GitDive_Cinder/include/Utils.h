@@ -32,7 +32,7 @@ public:
 
         //cout << &pstream;
         string cmdResult;
-        getline(&in, cmdResult);
+        getline(in, cmdResult);
 
         pclose(cmdStream);
         
