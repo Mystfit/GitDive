@@ -16,13 +16,6 @@
 		00BAE65A0E7ED9C10018A608 /* GitDive_CinderApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* GitDive_CinderApp.cpp */; };
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
 		4A1A6B8117054D940046BE09 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B7F17054D940046BE09 /* Utils.cpp */; };
-		4A1A6BA9170579350046BE09 /* libcinder_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BA8170579350046BE09 /* libcinder_d.a */; };
-		4A1A6BB01705795E0046BE09 /* libboost_date_time.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAA1705795E0046BE09 /* libboost_date_time.a */; };
-		4A1A6BB11705795E0046BE09 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAB1705795E0046BE09 /* libboost_filesystem.a */; };
-		4A1A6BB21705795E0046BE09 /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAC1705795E0046BE09 /* libboost_iostreams.a */; };
-		4A1A6BB31705795E0046BE09 /* libboost_regex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAD1705795E0046BE09 /* libboost_regex.a */; };
-		4A1A6BB41705795E0046BE09 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAE1705795E0046BE09 /* libboost_system.a */; };
-		4A1A6BB51705795E0046BE09 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAF1705795E0046BE09 /* libboost_thread.a */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -65,13 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1A6BB01705795E0046BE09 /* libboost_date_time.a in Frameworks */,
-				4A1A6BB11705795E0046BE09 /* libboost_filesystem.a in Frameworks */,
-				4A1A6BB21705795E0046BE09 /* libboost_iostreams.a in Frameworks */,
-				4A1A6BB31705795E0046BE09 /* libboost_regex.a in Frameworks */,
-				4A1A6BB41705795E0046BE09 /* libboost_system.a in Frameworks */,
-				4A1A6BB51705795E0046BE09 /* libboost_thread.a in Frameworks */,
-				4A1A6BA9170579350046BE09 /* libcinder_d.a in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
 				53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */,
