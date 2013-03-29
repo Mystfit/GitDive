@@ -45,6 +45,7 @@ public:
     string author;
     string date;
     string message;
+private:
     vector<Diff> diffList;
 };
 
