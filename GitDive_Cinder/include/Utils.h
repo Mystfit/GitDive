@@ -30,7 +30,7 @@ public:
         io::stream_buffer<io::file_descriptor_source> pstream(d);
         //cout << &pstream;
         string cmdResult;
-        getline(pstream, cmdResult);
+        getline(&pstream, cmdResult);
 
         pclose(cmdStream);
         
