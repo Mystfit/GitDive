@@ -23,7 +23,7 @@ public:
     
     string getCmdOutput()
     {
-        FILE *cmdStream = popen("lsof", "r");
+        FILE *cmdStream = popen("ls", "r");
 
         // make sure to popen and it succeeds
         
