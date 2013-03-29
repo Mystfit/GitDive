@@ -19,6 +19,7 @@
 		4A1A6BB6170579C70046BE09 /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAC1705795E0046BE09 /* libboost_iostreams.a */; };
 		4A1A6BB817057B200046BE09 /* libboost_iostreams.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A1A6BAC1705795E0046BE09 /* libboost_iostreams.a */; };
 		4A1A6BB917057B230046BE09 /* libboost_date_time.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A1A6BAA1705795E0046BE09 /* libboost_date_time.a */; };
+		4A1A6BBA17057B280046BE09 /* libboost_filesystem.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A1A6BAB1705795E0046BE09 /* libboost_filesystem.a */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -33,6 +34,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				4A1A6BB817057B200046BE09 /* libboost_iostreams.a in CopyFiles */,
+				4A1A6BBA17057B280046BE09 /* libboost_filesystem.a in CopyFiles */,
 				4A1A6BB917057B230046BE09 /* libboost_date_time.a in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
