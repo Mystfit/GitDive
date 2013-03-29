@@ -19,7 +19,7 @@ using namespace std;
 
 class Utils {
 public:
-    static string getCmdOutput(string command)
+    static string getCmdOutput(char[] command)
     {
         FILE *cmdStream = popen(command, "r");
 
