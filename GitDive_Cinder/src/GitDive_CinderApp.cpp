@@ -8,7 +8,7 @@ void GitDive_CinderApp::setup()
     string gitCmd = "git log --reverse --pretty=format:\"GD_commit|-%H||GD_commitAuthor|-%cn||GD_date|-%cd||GD_message|-%B\"";
     string combinedCmd = repoPath + " && " + gitCmd;
     
-    console() << Utils::getCmdOutput(combinedCmd) << endl;
+    console() << Utils::getCmdOutput(combinedCmd.c_str()) << endl;
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
