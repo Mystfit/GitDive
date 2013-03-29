@@ -25,7 +25,10 @@ public:
     {
         FILE *cmdStream = popen("ls", "r");
 
-        // make sure to popen and it succeeds
+        if (!cmdStream)
+        {
+            return -1;
+        }
         
         boost_stream stream(fileno(cmdStream));
         stream.set_auto_close(false);
