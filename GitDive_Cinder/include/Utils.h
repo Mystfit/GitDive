@@ -23,7 +23,8 @@ public:
     
     string getCmdOutput()
     {
-        FILE *cmdStream;
+        FILE *cmdStream = popen("lsof", "r");
+
         // make sure to popen and it succeeds
         
         boost_stream stream(fileno(cmdStream));
