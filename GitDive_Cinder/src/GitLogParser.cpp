@@ -7,3 +7,5 @@
 //
 
 #include "GitLogParser.h"
+
+vector<Commit> GitLogParser::parseLog(vector<string> diffLog);
