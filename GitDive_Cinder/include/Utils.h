@@ -27,12 +27,12 @@ public:
         if (!cmdStream) return "Command failed";
         
        
-        file_descriptor_source d(fileno(cmdStream), close_handle);
-        stream_buffer<file_descriptor_source> pstream(d);
+        boost::iostreamsfile_descriptor_source d(fileno(cmdStream), close_handle);
+        boost::iostreamsstream_buffer<boost::iostreamsfile_descriptor_source> pstream(d);
         cout << &pstream;
         pclose(cmdStream);
         
-        string cmdResult;
+        string cmdResult = "End";
              
         return cmdResult;
     }
