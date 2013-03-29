@@ -146,8 +146,8 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				4A1A6BC81705A5880046BE09 /* GitDataTypes.h */,
 				4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */,
+				4A1A6BC81705A5880046BE09 /* GitDataTypes.h */,
 				4A1A6B7B17042CCA0046BE09 /* Utils.h */,
 				32CA4F630368D1EE00C91783 /* GitDive_Cinder_Prefix.pch */,
 			);
