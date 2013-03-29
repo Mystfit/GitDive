@@ -44,10 +44,10 @@ public:
     Diff();
     string diffType; //  "default: text";
     string fileMode; // "default: updated";
+    void addDiffHunk(DiffHunk hunk){ m_hunkList.push_back(hunk); };
 private:
     string m_fileNameA;
     string m_fileNameB;
-private:
     vector<DiffHunk> m_hunkList;
 };
 
