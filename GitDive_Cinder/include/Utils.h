@@ -35,6 +35,7 @@ public:
         
         while(in){
             getline(in, cmdResult);
+            cout << cmdResult << endl;
         }
 
         pclose(cmdStream);
