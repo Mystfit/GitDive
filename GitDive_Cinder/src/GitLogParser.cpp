@@ -22,3 +22,5 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
     
     return diffList;
 }
+
+string GitLogParser::serializeCommit(Commit commit)
