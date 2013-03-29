@@ -12,6 +12,9 @@
 #include "cinder/app/AppBasic.h"
 #include "cinder/gl/gl.h"
 
+#include <stdio.h>
+
+
 using namespace ci;
 using namespace ci::app;
 using namespace std;
