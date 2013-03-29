@@ -20,13 +20,13 @@ public:
     DiffHunk();
         
     void setPreChangedLines(int linePos, int numLines){
-        m_startAddLines = linePos;
-        m_numAddLines = numLines;
+        m_preLinePos = linePos;
+        m_preBlockSize = numLines;
     };
     
     void setPostChangedLines(int linePos, int numLines){
-        m_startRemoveLines = linePos;
-        m_numRemoveLines = numLines;
+        m_postLinePos = linePos;
+        m_postBlockSize = numLines;
     }
     
     void addLine(string line){ m_hunkData.push_back(line); };
