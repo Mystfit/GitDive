@@ -14,4 +14,4 @@
 #endif /* defined(__GitDive_Cinder__GitDataTypes__) */
 
 
-class 
+class COmmit
