@@ -36,7 +36,6 @@ private:
     string m_preBlockSize;
     string m_postLinePos;
     string m_postBlockSize;
-
     vector<string> m_hunkData;
 };
 
