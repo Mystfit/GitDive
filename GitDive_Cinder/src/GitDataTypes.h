@@ -16,6 +16,14 @@
 
 using namespace std;
 
+struct Diff {
+    string fileNameA = "";
+    string fileNameB = "";
+    string diffType = "text";
+    string fileMode = "updated";
+    string hunkList;
+};
+
 struct Commit {
     string commitHash;
     string author;
@@ -24,13 +32,7 @@ struct Commit {
     vector<Diff> diffList;
 };
 
-struct Diff {
-    string fileNameA = "";
-    string fileNameB = "";
-    string diffType = "text";
-    string fileMode = "updated";
-    string hunkList;
-};
+
 
 struct DiffHunk {
     
