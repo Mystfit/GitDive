@@ -39,10 +39,10 @@ private:
 class Commit {
 public:
     Commit(string commit, string date, string author = "", string message = "");
-    string m_commitHash;
-    string m_author;
-    string m_date;
-    string m_message;
+    string commitHash;
+    string author;
+    string date;
+    string message;
     vector<Diff> diffList;
 };
 
