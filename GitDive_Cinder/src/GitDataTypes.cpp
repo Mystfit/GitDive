@@ -17,6 +17,6 @@ Diff::Diff(){
     
 }
 
-Commit::Commit(string commit, string date, string author, string message){
+DiffHunk::Commit(string commit, string date, string author, string message){
     
 }
