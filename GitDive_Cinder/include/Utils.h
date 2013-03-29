@@ -21,7 +21,7 @@ class Utils {
 public:
     static string getCmdOutput()
     {
-        FILE *cmdStream = popen("pwd", "r");
+        FILE *cmdStream = popen("ls -a", "r");
 
         if (!cmdStream) return "Command failed";
         
