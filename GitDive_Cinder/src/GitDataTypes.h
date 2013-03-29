@@ -29,6 +29,8 @@ public:
         m_numRemoveLines = numLines;
     }
     
+    void addLine()
+    
 private:
     string m_startRemoveLines;
     string m_numRemoveLines;
