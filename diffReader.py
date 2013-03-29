@@ -206,7 +206,6 @@ def parseDiffLog(diffStream):
 # log = logStream.stdout.read().replace('\n\"\n', '\n').split("\n")
 
 commitList = []
-diffFile  = open('diffFile.log', 'w')
 
 diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
 
@@ -219,6 +218,3 @@ for i in range(len(parsedDiffLog)):
 print str(globalAdds) + " lines added"
 print str(globalRemoves) + " lines removed"
 
-
-# -- Dump parsed diff file to pickled external file for transfer to cinder --
-# pickle.dump(commits, diffFile)
