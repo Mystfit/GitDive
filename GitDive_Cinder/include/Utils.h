@@ -19,9 +19,9 @@ using namespace std;
 
 class Utils {
 public:
-    static string getCmdOutput()
+    static string getCmdOutput(string command)
     {
-        FILE *cmdStream = popen("ls -a", "r");
+        FILE *cmdStream = popen(command, "r");
 
         if (!cmdStream) return "Command failed";
         
