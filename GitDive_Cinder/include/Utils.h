@@ -19,9 +19,11 @@ using namespace std;
 
 class Utils {
 public:
-    static string getCmdOutput(char[] command)
+    static string getCmdOutput(const char* command)
     {
         FILE *cmdStream = popen(command, "r");
+        
+        pop
 
         if (!cmdStream) return "Command failed";
         
