@@ -34,7 +34,7 @@ public:
 private:
     string m_fileNameA;
     string m_fileNameB;
-    
+private:
     vector<DiffHunk> m_hunkList;
 };
 
