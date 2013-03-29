@@ -28,9 +28,11 @@ public:
         io::file_descriptor_source d(fileno(cmdStream), io::close_handle);
         
         io::stream_buffer<io::file_descriptor_source> pstream(d);
+        istream in(&pstream);
+
         //cout << &pstream;
         string cmdResult;
-        getline(&pstream, cmdResult);
+        getline(&in, cmdResult);
 
         pclose(cmdStream);
         
