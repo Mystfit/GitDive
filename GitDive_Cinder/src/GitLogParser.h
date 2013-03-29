@@ -14,7 +14,7 @@
 
 class GitLogParser {
 public:
-    static vector<Commit> 
+    static vector<Commit> parseLog;
 };
 
 #endif /* defined(__GitDive_Cinder__GitLogParser__) */
