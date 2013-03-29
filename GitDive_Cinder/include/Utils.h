@@ -35,6 +35,8 @@ public:
         string s;
         
         p2 >> s;
+        
+        p2.close();
 
 
 //        char buffer[2048];
