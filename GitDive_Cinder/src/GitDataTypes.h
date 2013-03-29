@@ -16,6 +16,10 @@
 
 using namespace std;
 
+struct DiffHunk {
+    
+};
+
 struct Diff {
     string fileNameA = "";
     string fileNameB = "";
@@ -33,8 +37,4 @@ struct Commit {
 };
 
 
-
-struct DiffHunk {
-    
-};
 
