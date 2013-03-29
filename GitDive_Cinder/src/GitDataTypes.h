@@ -26,7 +26,6 @@ public:
     void setPostChangedLines(int linePos, int numLines){
         m_startRemoveLines = linePos;
         m_numRemoveLines = numLines;
-
     }
 private:
     string m_startRemoveLines;
