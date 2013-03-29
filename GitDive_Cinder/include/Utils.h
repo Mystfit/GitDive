@@ -30,7 +30,7 @@ public:
         if (!cmdStream) return "Command failed";
         
         
-        boost::iostreams::file_descriptor_source p2(fileno(cmdStream));
+        ifstream p2(fileno(cmdStream));
         
         string s;
         
