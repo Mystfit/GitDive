@@ -34,7 +34,7 @@ public:
         
         string s;
         
-        s = getline(p2, s);
+        p2 >> s;
         
         p2.close();
         
