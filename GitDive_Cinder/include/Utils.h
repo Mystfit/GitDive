@@ -27,7 +27,7 @@ public:
 
         if (!cmdStream)
         {
-            return "Command failed"
+            return "Command failed";
         }
         
         boost_stream stream(fileno(cmdStream));
