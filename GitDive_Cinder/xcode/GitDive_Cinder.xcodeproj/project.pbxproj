@@ -16,18 +16,6 @@
 		00BAE65A0E7ED9C10018A608 /* GitDive_CinderApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* GitDive_CinderApp.cpp */; };
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
 		4A1A6B8117054D940046BE09 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B7F17054D940046BE09 /* Utils.cpp */; };
-		4A1A6BB6170579C70046BE09 /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAC1705795E0046BE09 /* libboost_iostreams.a */; };
-		4A1A6BB817057B200046BE09 /* libboost_iostreams.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A1A6BAC1705795E0046BE09 /* libboost_iostreams.a */; };
-		4A1A6BB917057B230046BE09 /* libboost_date_time.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A1A6BAA1705795E0046BE09 /* libboost_date_time.a */; };
-		4A1A6BBA17057B280046BE09 /* libboost_filesystem.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A1A6BAB1705795E0046BE09 /* libboost_filesystem.a */; };
-		4A1A6BBB17057B2B0046BE09 /* libboost_regex.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A1A6BAD1705795E0046BE09 /* libboost_regex.a */; };
-		4A1A6BBC17057B2D0046BE09 /* libboost_system.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A1A6BAE1705795E0046BE09 /* libboost_system.a */; };
-		4A1A6BBD17057B2F0046BE09 /* libboost_thread.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A1A6BAF1705795E0046BE09 /* libboost_thread.a */; };
-		4A1A6BBE17057B5C0046BE09 /* libboost_date_time.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAA1705795E0046BE09 /* libboost_date_time.a */; };
-		4A1A6BBF17057B5C0046BE09 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAB1705795E0046BE09 /* libboost_filesystem.a */; };
-		4A1A6BC017057B5C0046BE09 /* libboost_regex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAD1705795E0046BE09 /* libboost_regex.a */; };
-		4A1A6BC117057B5C0046BE09 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAE1705795E0046BE09 /* libboost_system.a */; };
-		4A1A6BC217057B5C0046BE09 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BAF1705795E0046BE09 /* libboost_thread.a */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -41,12 +29,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4A1A6BB817057B200046BE09 /* libboost_iostreams.a in CopyFiles */,
-				4A1A6BBD17057B2F0046BE09 /* libboost_thread.a in CopyFiles */,
-				4A1A6BBC17057B2D0046BE09 /* libboost_system.a in CopyFiles */,
-				4A1A6BBB17057B2B0046BE09 /* libboost_regex.a in CopyFiles */,
-				4A1A6BBA17057B280046BE09 /* libboost_filesystem.a in CopyFiles */,
-				4A1A6BB917057B230046BE09 /* libboost_date_time.a in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,12 +51,6 @@
 		4A1A6B7B17042CCA0046BE09 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../include/Utils.h; sourceTree = "<group>"; };
 		4A1A6B7F17054D940046BE09 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../src/Utils.cpp; sourceTree = "<group>"; };
 		4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDive_CinderApp.h; path = ../include/GitDive_CinderApp.h; sourceTree = "<group>"; };
-		4A1A6BAA1705795E0046BE09 /* libboost_date_time.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_date_time.a; path = ../../../../Cinder/lib/macosx/libboost_date_time.a; sourceTree = "<group>"; };
-		4A1A6BAB1705795E0046BE09 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../../../../Cinder/lib/macosx/libboost_filesystem.a; sourceTree = "<group>"; };
-		4A1A6BAC1705795E0046BE09 /* libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_iostreams.a; path = ../../../../Cinder/lib/macosx/libboost_iostreams.a; sourceTree = "<group>"; };
-		4A1A6BAD1705795E0046BE09 /* libboost_regex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_regex.a; path = ../../../../Cinder/lib/macosx/libboost_regex.a; sourceTree = "<group>"; };
-		4A1A6BAE1705795E0046BE09 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../Cinder/lib/macosx/libboost_system.a; sourceTree = "<group>"; };
-		4A1A6BAF1705795E0046BE09 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = ../../../../Cinder/lib/macosx/libboost_thread.a; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -87,12 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1A6BBE17057B5C0046BE09 /* libboost_date_time.a in Frameworks */,
-				4A1A6BBF17057B5C0046BE09 /* libboost_filesystem.a in Frameworks */,
-				4A1A6BB6170579C70046BE09 /* libboost_iostreams.a in Frameworks */,
-				4A1A6BC017057B5C0046BE09 /* libboost_regex.a in Frameworks */,
-				4A1A6BC117057B5C0046BE09 /* libboost_system.a in Frameworks */,
-				4A1A6BC217057B5C0046BE09 /* libboost_thread.a in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
 				53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */,
@@ -156,12 +126,6 @@
 		29B97314FDCFA39411CA2CEA /* GitDive_Cinder */ = {
 			isa = PBXGroup;
 			children = (
-				4A1A6BAA1705795E0046BE09 /* libboost_date_time.a */,
-				4A1A6BAB1705795E0046BE09 /* libboost_filesystem.a */,
-				4A1A6BAC1705795E0046BE09 /* libboost_iostreams.a */,
-				4A1A6BAD1705795E0046BE09 /* libboost_regex.a */,
-				4A1A6BAE1705795E0046BE09 /* libboost_system.a */,
-				4A1A6BAF1705795E0046BE09 /* libboost_thread.a */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
