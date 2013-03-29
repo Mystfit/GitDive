@@ -41,7 +41,6 @@ public:
         string cmdResult;
         
         cmdResult << pstream;
-
      
         return cmdResult;
     }
