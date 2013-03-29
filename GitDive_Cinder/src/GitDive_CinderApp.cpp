@@ -9,6 +9,8 @@ void GitDive_CinderApp::setup()
     string combinedCmd = "cd " + repoPath + " && " + gitCmd;
     
     console() << Utils::getCmdOutput(combinedCmd.c_str()) << endl;
+    
+    console() << GitLogParser::serializeCommit(Commit("asdasdsa", "asdsadsad");
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
