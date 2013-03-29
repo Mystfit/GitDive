@@ -11,7 +11,6 @@
 
 #include <iostream>
 #include <boost/iostreams/stream.hpp>
-#include <boost/iostreams/device/file_descriptor.hpp>
 
 
 using namespace std;
