@@ -17,7 +17,11 @@
 using namespace std;
 
 struct DiffHunk {
-    
+    string startRemoveLines;
+    string numRemoveLines;
+    string startAddLines;
+    string numAddLines;
+    vector<string> hunkData;
 };
 
 struct Diff {
