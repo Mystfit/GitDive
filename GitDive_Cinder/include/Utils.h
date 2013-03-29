@@ -24,14 +24,13 @@ public:
     string getCmdOutput()
     {
         FILE *cmdStream;
-        string cmdOutput;
-
         // make sure to popen and it succeeds
         
         boost_stream stream(fileno(cmdStream));
         stream.set_auto_close(false);
         
-        while((boost::iostreams::stream<boost::iostreams::file_descriptor_sink>(fileno(cmdStream)), cmdOutput));
+        string cmdOutput;
+        while(getline(stream, cmdOutput));
         
         return cmdOutput;
     }
