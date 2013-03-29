@@ -27,8 +27,8 @@ public:
         if (!cmdStream) return "Command failed";
         
        
-        boost::iostreamsfile_descriptor_source d(fileno(cmdStream), close_handle);
-        boost::iostreamsstream_buffer<boost::iostreamsfile_descriptor_source> pstream(d);
+        boost::iostreams::file_descriptor_source d(fileno(cmdStream), close_handle);
+        boost::iostreams::stream_buffer<boost::iostreams::file_descriptor_source> pstream(d);
         cout << &pstream;
         pclose(cmdStream);
         
