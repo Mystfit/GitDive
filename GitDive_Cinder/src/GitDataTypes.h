@@ -18,30 +18,31 @@ using namespace std;
 class DiffHunk {
 public:
     DiffHunk();
-    string startRemoveLines;
-    string numRemoveLines;
-    string startAddLines;
-    string numAddLines;
-    vector<string> hunkData;
+    string m_startRemoveLines;
+    string m_numRemoveLines;
+    string m_startAddLines;
+    string m_numAddLines;
+    vector<string> m_hunkData;
 };
 
 class Diff {
 public:
     Diff();
-    string fileNameA;
-    string fileNameB;
-    string diffType; //  "default: text";
-    string fileMode; // "default: updated";
-    vector<DiffHunk> hunkList;
+private:
+    string m_fileNameA;
+    string m_fileNameB;
+    string m_diffType; //  "default: text";
+    string m_fileMode; // "default: updated";
+    vector<DiffHunk> m_hunkList;
 };
 
 class Commit {
 public:
     Commit(string commit, string date, string author = "", string message = "");
-    string commitHash;
-    string author;
-    string date;
-    string message;
+    string m_commitHash;
+    string m_author;
+    string m_date;
+    string m_message;
     vector<Diff> diffList;
 };
 
