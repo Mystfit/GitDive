@@ -10,10 +10,11 @@
 #define __GitDive_Cinder__GitLogParser__
 
 #include <iostream>
+#include "GitDataTypes.h"
 
 class GitLogParser {
 public:
-    
+    static vector<Commit>
 };
 
 #endif /* defined(__GitDive_Cinder__GitLogParser__) */
