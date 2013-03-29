@@ -38,7 +38,7 @@
 		32CA4F630368D1EE00C91783 /* GitDive_Cinder_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitDive_Cinder_Prefix.pch; sourceTree = "<group>"; };
 		4A1A6B7B17042CCA0046BE09 /* GitDive_CinderApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitDive_CinderApp.h; sourceTree = "<group>"; };
 		4A1A6B7F17054D940046BE09 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../src/Utils.cpp; sourceTree = "<group>"; };
-		4A1A6B8017054D940046BE09 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../src/Utils.h; sourceTree = "<group>"; };
+		4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDive_CinderApp.h; path = ../include/GitDive_CinderApp.h; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -126,7 +126,7 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				4A1A6B8017054D940046BE09 /* Utils.h */,
+				4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */,
 				4A1A6B7B17042CCA0046BE09 /* GitDive_CinderApp.h */,
 				32CA4F630368D1EE00C91783 /* GitDive_Cinder_Prefix.pch */,
 			);
