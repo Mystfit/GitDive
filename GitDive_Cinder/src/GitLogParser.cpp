@@ -25,5 +25,5 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
 
 string GitLogParser::serializeCommit(Commit commit)
 {
-    return "";
+    return commit.commitHash;
 }
