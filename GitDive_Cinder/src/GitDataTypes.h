@@ -45,6 +45,7 @@ public:
     string diffType;
     string fileMode;
     void addDiffHunk(DiffHunk hunk){ m_hunkList.push_back(hunk); };
+    
 private:
     string m_fileNameA;
     string m_fileNameB;
