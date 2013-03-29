@@ -31,10 +31,12 @@ public:
         istream in(&pstream);
 
         //cout << &pstream;
-        string cmdResult;
+        string cmdResult = "";
+        string line
         
         while(in){
-            getline(in, cmdResult);
+            getline(in, line);
+            cmdResult += line;
         }
 
         pclose(cmdStream);
