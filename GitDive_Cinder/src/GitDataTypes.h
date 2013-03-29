@@ -19,7 +19,15 @@ class DiffHunk {
 public:
     DiffHunk();
         
-    void setPre
+    void setPreChangedLines(int linePos, int numLines){
+        m_startAddLines = linePos;
+        m_numAddLines = numLines;
+    };
+    void setPostChangedLines(int linePos, int numLines){
+        m_startRemoveLines = linePos;
+        m_numRemoveLines = numLines;
+
+    }
 private:
     string m_startRemoveLines;
     string m_numRemoveLines;
