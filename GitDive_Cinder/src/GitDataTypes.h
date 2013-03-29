@@ -17,6 +17,7 @@
 using namespace std;
 
 class DiffHunk {
+public:
     string startRemoveLines;
     string numRemoveLines;
     string startAddLines;
@@ -34,6 +35,7 @@ public:
 };
 
 class Commit {
+public:
     string commitHash;
     string author;
     string date;
