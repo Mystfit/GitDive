@@ -9,7 +9,7 @@
 #include "GitDataTypes.h"
 
 
-Commit::Commit(string commit, string date, string author, string message){
+Commit::Commit(string _commit, string _date, string _author, string _message){
     commitHash = commit;
     date = date;
 }
