@@ -36,5 +36,5 @@ struct Commit {
 
 struct DiffHunk {
     
-}
+};
 
