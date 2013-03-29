@@ -25,7 +25,7 @@ public:
     {
         FILE *myfile;
         // make sure to popen and it succeeds
-        boost::iostreams::stream stream(fileno(myfile));
+        boost_stream stream(fileno(myfile));
         stream.set_auto_close(false); // https://svn.boost.org/trac/boost/ticket/3517
         std::string mystring;
         while(std::getline(stream,mystring));
