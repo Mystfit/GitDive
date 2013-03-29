@@ -42,11 +42,7 @@ public:
         
         cmdResult << pstream;
 
-        
-
-//        char buffer[2048];
-//        char *line_p = fgets(buffer, sizeof(buffer), cmdStream);        
-        
+     
         return cmdResult;
     }
 };
