@@ -208,7 +208,6 @@ def parseDiffLog(diffStream):
 commitList = []
 
 diffStream = subprocess.Popen(diffCmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, cwd=path)
-
 parsedDiffLog = parseDiffLog(diffStream.stdout)
 
 for i in range(len(parsedDiffLog)):
