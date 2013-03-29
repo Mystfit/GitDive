@@ -13,6 +13,8 @@
 
 #endif /* defined(__GitDive_Cinder__GitDataTypes__) */
 
+using namespace std;
+
 
 struct Commit {
     string commitHash;
