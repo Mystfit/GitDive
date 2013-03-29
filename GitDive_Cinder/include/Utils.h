@@ -21,14 +21,20 @@ public:
     
     typedef boost::iostreams::stream<boost::iostreams::file_descriptor_source> boost_stream;
     
+    
+    
     static string getCmdOutput()
     {
         FILE *cmdStream = popen("pwd", "r");
 
         if (!cmdStream) return "Command failed";
+        
+        
+        boost::iostreams::file_descriptor_source p2(fileno(p));
 
-        char buffer[2048];
-        char *line_p = fgets(buffer, sizeof(buffer), cmdStream);
+
+//        char buffer[2048];
+//        char *line_p = fgets(buffer, sizeof(buffer), cmdStream);
         
         pclose(cmdStream);
         
