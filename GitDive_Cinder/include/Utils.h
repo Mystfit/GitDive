@@ -28,8 +28,10 @@ public:
         
         boost_stream stream(fileno(myfile));
         stream.set_auto_close(false); // https://svn.boost.org/trac/boost/ticket/3517
-        std::string mystring;
-        while(getline(stream,mystring));
+        std::string cmdOutput;
+        while(getline(stream, cmdOutput));
+        
+        return cmdOutput;
     }
 };
 
