@@ -8,7 +8,7 @@
 
 #include "Utils.h"
 
-static string Utils::getCmdOutput(const char* command)
+string Utils::getCmdOutput(const char* command)
 {
     FILE *cmdStream = popen(command, "r");
     
