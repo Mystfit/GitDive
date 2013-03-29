@@ -33,7 +33,7 @@ public:
         boost::iostreams::file_descriptor_source p2(fileno(cmdStream));
         
         string s;
-        p2 >> s;
+        
         p2.close();
         
 
