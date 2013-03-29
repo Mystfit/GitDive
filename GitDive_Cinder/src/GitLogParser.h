@@ -18,7 +18,7 @@ public:
     static vector<Commit> parseLog(vector<string> diffLog);
     
     //Parses individual commit datablock into diffs
-    vector<Diff> parseCommit(vector<string> diffBlock);
+    static vector<Diff> parseCommit(vector<string> diffBlock);
     
     string serializeCommit(Commit commit);
 };
