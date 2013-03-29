@@ -15,7 +15,6 @@
 
 using namespace std;
 
-
 struct Commit {
     string commitHash;
     string author;
