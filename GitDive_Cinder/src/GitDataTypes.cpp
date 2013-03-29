@@ -10,8 +10,10 @@
 
 
 Commit::Commit(string _commit, string _date, string _author, string _message){
-    commitHash = commit;
-    date = date;
+    commitHash = _commit;
+    date = _date;
+    author = _author;
+    message = _message;
 }
 
 Diff::Diff(){
