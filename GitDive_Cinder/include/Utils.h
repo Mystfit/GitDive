@@ -34,7 +34,7 @@ public:
         string cmdResult;
         
         while(in){
-            cmdResult << getline(in, cmdResult);
+            cmdResult += getline(in, cmdResult);
         }
 
         pclose(cmdStream);
