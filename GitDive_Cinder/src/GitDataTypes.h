@@ -32,10 +32,10 @@ public:
     void addLine(string line){ m_hunkData.push_back(line); };
     
 private:
-    string m_startRemoveLines;
-    string m_numRemoveLines;
-    string m_startAddLines;
-    string m_numAddLines;
+    string m_preLinePos;
+    string m_preBlockSize;
+    string m_postLinePos;
+    string m_postBlockSize;
 
     vector<string> m_hunkData;
 };
