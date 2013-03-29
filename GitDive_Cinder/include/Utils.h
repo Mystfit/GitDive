@@ -33,14 +33,12 @@ public:
         //cout << &pstream;
         string cmdResult;
         
-        while(
-        getline(in, cmdResult);
+        while(in){
+            cmdResult << getline(in, cmdResult);
+        }
 
         pclose(cmdStream);
         
-        
-        //string cmdResult = "End";
-             
         return cmdResult;
     }
 };
