@@ -16,7 +16,6 @@ Commit::Commit(string commit, string date, string author, string message){
 Diff::Diff(){
     m_diffType = "text";
     m_fileMode = "updated";
-    
 }
 
 DiffHunk::DiffHunk(){
