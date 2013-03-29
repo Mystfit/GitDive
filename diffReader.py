@@ -70,10 +70,10 @@ class CommitEntry:
 
 	def serializeCommit(self):
 		commitText = "/***=== Commit begins\n"
-		commitText += "== Commit hash: " + self.commitHash + "\n"
-		commitText += "== Author: " + self.author + "\n"
-		commitText += "== Date: " + self.date + "\n"
-		commitText += "== Message: " + self.message + "\n\n"
+		commitText += "|== Commit hash: " + self.commitHash + "\n"
+		commitText += "|== Author: " + self.author + "\n"
+		commitText += "|== Date: " + self.date + "\n"
+		commitText += "|== Message: " + self.message + "\n\n"
 		commitText += self.serializeDiffs()
 		commitText += "\\***=== Commit ends\n\n\n"
 		return commitText
@@ -84,14 +84,14 @@ class CommitEntry:
 
 		for i in range(len(self.diffList[0])):
 			diff = self.diffList[0][i]
-			hunkString += "/=== Diff File: " + diff.getFilename() + "\n"
+			hunkString += "|/=== Diff File: " + diff.getFilename() + "\n"
 
 			for j in range(len(diff.hunkList)):
-				hunkString += "/--- Code hunk begins\n"
+				hunkString += "||/--- Code hunk begins\n"
 				for k in range(len(diff.hunkList[j].hunkData)):
-					hunkString += diff.hunkList[j].hunkData[k]
-				hunkString += "\\--- Code hunk ends\n"
-			hunkString += "\\=== Diff Finish\n\n"
+					hunkString += "|| " + diff.hunkList[j].hunkData[k]
+				hunkString += "\\||--- Code hunk ends\n"
+			hunkString += "\\|=== Diff Finish\n\n"
 
 
 		return hunkString + "\n"
