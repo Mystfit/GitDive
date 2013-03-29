@@ -32,14 +32,13 @@ public:
         if (!cmdStream) return "Command failed";
         
         
-        ifstream p2(fileno(cmdStream));
-        
-        string s;
-        
-        p2 >> s;
-        
-        p2.close();
-        pclose(cmdStream);
+        if (FILE* p = popen(argv[1], "r"))
+        {
+            boost::iostreams::file_descriptor_source d(fileno(p), boost::iostreams::close_handle);
+            boost::iostreams::stream_buffer<boost::iostreams::file_descriptor_source> pstream(d);
+            std::cout << &pstream;
+            pclose(p);
+        }
 
         
 
