@@ -20,11 +20,15 @@ struct Commit {
     string author;
     string date;
     string message;
-    string diffList;
+    vector<Diff> diffList;
 };
 
 struct Diff {
-    
+    string fileNameA = "";
+    string fileNameB = "";
+    string diffType = "text";
+    string fileMode = "updated";
+    string hunkList = []
 };
 
 struct DiffHunk {
