@@ -35,9 +35,12 @@ public:
        
         file_descriptor_source d(fileno(cmdStream), close_handle);
         stream_buffer<file_descriptor_source> pstream(d);
-        std::cout << &pstream;
+        cout << &pstream;
         pclose(cmdStream);
         
+        string cmdResult;
+        
+        cmdStream << s;
 
         
 
