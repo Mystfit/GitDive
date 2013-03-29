@@ -40,14 +40,14 @@ public:
         
         string cmdResult;
         
-        cmdResult << s;
+        cmdResult << pstream;
 
         
 
 //        char buffer[2048];
 //        char *line_p = fgets(buffer, sizeof(buffer), cmdStream);        
         
-        return s;
+        return cmdResult;
     }
 };
 
