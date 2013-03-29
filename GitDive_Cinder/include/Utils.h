@@ -30,7 +30,7 @@ public:
         stream.set_auto_close(false);
         
         string cmdOutput;
-        while(getline(stream, cmdOutput))
+        while(boost::iostreams::stream<boost::iostreams::file_descriptor_sink>(stream, cmdOutput))
         
         return cmdOutput;
     }
