@@ -20,7 +20,7 @@ public:
     //Parses individual commit datablock into diffs
     static vector<Diff> parseCommit(vector<string> diffBlock);
     
-    string serializeCommit(Commit commit);
+    static string serializeCommit(Commit commit);
 };
 
 #endif /* defined(__GitDive_Cinder__GitLogParser__) */
