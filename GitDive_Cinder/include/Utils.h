@@ -36,7 +36,7 @@ public:
         
         while(in){
             getline(in, line);
-            cmdResult += line + "\n";
+            cmdResult += line;
         }
 
         pclose(cmdStream);
