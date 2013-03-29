@@ -14,7 +14,7 @@
 #include <boost/iostreams/device/file_descriptor.hpp>
 
 
-using namespace boost::iostreams;
+namespace io = boost::iostreams;
 using namespace std;
 
 class Utils {
@@ -26,8 +26,8 @@ public:
         if (!cmdStream) return "Command failed";
         
        
-        file_descriptor_source d(fileno(cmdStream), close_handle);
-        boost::iostreams::stream_buffer<boost::iostreams::file_descriptor_source> pstream(d);
+        io::file_descriptor_source d(fileno(cmdStream), io::close_handle);
+        io:stream_buffer<io::file_descriptor_source> pstream(d);
         cout << &pstream;
         pclose(cmdStream);
         
