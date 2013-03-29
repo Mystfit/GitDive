@@ -39,9 +39,7 @@ public:
         pclose(cmdStream);
         
         string cmdResult;
-        
-        cmdResult << pstream;
-     
+             
         return cmdResult;
     }
 };
