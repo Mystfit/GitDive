@@ -59,7 +59,7 @@ public:
     string date;
     string message;
     
-    void addDiff(DiffHunk hunk){ m_hunkList.push_back(hunk); };
+    void addDiff(Diff diff){ m_diffList.push_back(diff); };
 
 private:
     vector<Diff> m_diffList;
