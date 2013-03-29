@@ -35,10 +35,11 @@ public:
         
         while(in){
             getline(in, cmdResult);
-            //cout << cmdResult << endl;
         }
 
         pclose(cmdStream);
+        
+        cout << cmdResult << endl;
         
         return cmdResult;
     }
