@@ -37,11 +37,12 @@ public:
         p2 >> s;
         
         p2.close();
+        pclose(cmdStream);
+
         
 
 //        char buffer[2048];
 //        char *line_p = fgets(buffer, sizeof(buffer), cmdStream);        
-//        pclose(cmdStream);
         
         return s;
     }
