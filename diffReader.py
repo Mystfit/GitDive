@@ -92,7 +92,6 @@ class CommitEntry:
 				hunkString += "||\\--- Code hunk ends\n"
 			hunkString += "|\\=== Diff Finish\n"
 
-
 		return hunkString + "\n"
 
 	# Convert raw diff lines into diff and hunk objects
