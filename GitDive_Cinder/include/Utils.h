@@ -32,6 +32,8 @@ public:
         string cmdOutput;
         while(getline(stream, cmdOutput));
         
+        int pclose(FILE *stream);
+        
         return cmdOutput;
     }
 };
