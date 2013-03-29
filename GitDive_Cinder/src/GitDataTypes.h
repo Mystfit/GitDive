@@ -28,7 +28,7 @@ struct Diff {
     string fileNameB = "";
     string diffType = "text";
     string fileMode = "updated";
-    string hunkList = []
+    string hunkList;
 };
 
 struct DiffHunk {
