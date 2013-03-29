@@ -40,7 +40,7 @@ public:
         
         string cmdResult;
         
-        cmdStream << s;
+        cmdResult << s;
 
         
 
