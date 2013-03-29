@@ -28,10 +28,12 @@ public:
         io::file_descriptor_source d(fileno(cmdStream), io::close_handle);
         
         io::stream_buffer<io::file_descriptor_source> pstream(d);
-        //cout << &pstream;
+        string output
+        
+        output << &pstream;
         pclose(cmdStream);
                      
-        return pstream;
+        return output;
     }
 };
 
