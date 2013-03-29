@@ -14,12 +14,14 @@
 
 using namespace std;
 
+typedef boost::iostreams::stream<boost::iostreams::file_descriptor_sink>
+boost_stream;
+
 class Utils {
 public:
     string getCmdOutput()
     {
-        typedef boost::iostreams::stream<boost::iostreams::file_descriptor_sink>
-        boost_stream;
+        
         
         FILE *myfile;
         // make sure to popen and it succeeds
