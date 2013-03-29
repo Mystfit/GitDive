@@ -27,6 +27,7 @@ public:
 
 class Diff {
 public:
+    Diff()
     string fileNameA;
     string fileNameB;
     string diffType; //  "default: text";
