@@ -31,7 +31,7 @@ public:
         boost_stream stream(fileno(cmdStream));
         stream.set_auto_close(false);
         
-        while(boost::iostreams::stream<boost::iostreams::file_descriptor_sink>(stream, cmdOutput))
+        while(boost::iostreams::stream<boost::iostreams::file_descriptor_sink>(stream, cmdOutput));
         
         return cmdOutput;
     }
