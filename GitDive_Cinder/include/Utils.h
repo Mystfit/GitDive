@@ -19,7 +19,7 @@ using namespace std;
 class Utils {
 public:
     
-    typedef boost::iostreams::stream<boost::iostreams::file_descriptor_sink> boost_stream;
+    typedef boost::iostreams::<boost::iostreams::file_descriptor_sink> boost_stream;
     
     string getCmdOutput()
     {
