@@ -21,7 +21,7 @@ public:
     
     typedef boost::iostreams::stream<boost::iostreams::file_descriptor_source> boost_stream;
     
-    string getCmdOutput()
+    static string getCmdOutput()
     {
         FILE *cmdStream = popen("ls", "r");
 
