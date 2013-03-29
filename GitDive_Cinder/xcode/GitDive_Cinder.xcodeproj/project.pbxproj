@@ -88,8 +88,8 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */,
 				00BAE6590E7ED9C10018A608 /* GitDive_CinderApp.cpp */,
+				4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */,
 				4A1A6B7F17054D940046BE09 /* Utils.cpp */,
 			);
 			name = Source;
