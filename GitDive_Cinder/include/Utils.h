@@ -14,11 +14,15 @@
 
 using namespace std;
 
-typedef boost::iostreams::stream<boost::iostreams::file_descriptor_sink>
-boost_stream;
+
 
 class Utils {
 public:
+    
+    typedef boost::iostreams::stream<boost::iostreams::file_descriptor_sink>
+    boost_stream;
+    
+    
     string getCmdOutput()
     {
         
