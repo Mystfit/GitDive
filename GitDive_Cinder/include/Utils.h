@@ -19,6 +19,7 @@ using namespace std;
 
 class Utils {
 public:
+    //Returns stdout from a given command
     static string getCmdOutput(const char* command);
 };
 
