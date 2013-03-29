@@ -40,14 +40,6 @@
 		4A1A6B7B17042CCA0046BE09 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../include/Utils.h; sourceTree = "<group>"; };
 		4A1A6B7F17054D940046BE09 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../src/Utils.cpp; sourceTree = "<group>"; };
 		4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDive_CinderApp.h; path = ../include/GitDive_CinderApp.h; sourceTree = "<group>"; };
-		4A1A6B82170571000046BE09 /* libboost_date_time.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_date_time.dylib; path = ../../../../Cinder/boost/stage/lib/libboost_date_time.dylib; sourceTree = "<group>"; };
-		4A1A6B83170571000046BE09 /* libboost_iostreams.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_iostreams.dylib; path = ../../../../Cinder/boost/stage/lib/libboost_iostreams.dylib; sourceTree = "<group>"; };
-		4A1A6B84170571000046BE09 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = ../../../../Cinder/boost/stage/lib/libboost_system.dylib; sourceTree = "<group>"; };
-		4A1A6B85170571000046BE09 /* libboost_thread.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_thread.dylib; path = ../../../../Cinder/boost/stage/lib/libboost_thread.dylib; sourceTree = "<group>"; };
-		4A1A6B8A170575140046BE09 /* libboost_date_time.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_date_time.a; path = ../../../../Cinder/boost/stage/lib/libboost_date_time.a; sourceTree = "<group>"; };
-		4A1A6B8B170575140046BE09 /* libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_iostreams.a; path = ../../../../Cinder/boost/stage/lib/libboost_iostreams.a; sourceTree = "<group>"; };
-		4A1A6B8C170575140046BE09 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../Cinder/boost/stage/lib/libboost_system.a; sourceTree = "<group>"; };
-		4A1A6B8D170575140046BE09 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = ../../../../Cinder/boost/stage/lib/libboost_thread.a; sourceTree = "<group>"; };
 		4A1A6BA8170579350046BE09 /* libcinder_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcinder_d.a; path = ../../../../Cinder/lib/libcinder_d.a; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
@@ -126,14 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				4A1A6BA8170579350046BE09 /* libcinder_d.a */,
-				4A1A6B8A170575140046BE09 /* libboost_date_time.a */,
-				4A1A6B8B170575140046BE09 /* libboost_iostreams.a */,
-				4A1A6B8C170575140046BE09 /* libboost_system.a */,
-				4A1A6B8D170575140046BE09 /* libboost_thread.a */,
-				4A1A6B82170571000046BE09 /* libboost_date_time.dylib */,
-				4A1A6B83170571000046BE09 /* libboost_iostreams.dylib */,
-				4A1A6B84170571000046BE09 /* libboost_system.dylib */,
-				4A1A6B85170571000046BE09 /* libboost_thread.dylib */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
