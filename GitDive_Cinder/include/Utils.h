@@ -40,9 +40,7 @@ public:
         }
 
         pclose(cmdStream);
-        
-        cout << cmdResult << endl;
-        
+                
         return cmdResult;
     }
 };
