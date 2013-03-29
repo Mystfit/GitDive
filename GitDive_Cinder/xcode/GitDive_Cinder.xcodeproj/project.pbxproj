@@ -16,6 +16,10 @@
 		00BAE65A0E7ED9C10018A608 /* GitDive_CinderApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* GitDive_CinderApp.cpp */; };
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
 		4A1A6B8117054D940046BE09 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B7F17054D940046BE09 /* Utils.cpp */; };
+		4A1A6B86170571000046BE09 /* libboost_date_time.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6B82170571000046BE09 /* libboost_date_time.dylib */; };
+		4A1A6B87170571000046BE09 /* libboost_iostreams.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6B83170571000046BE09 /* libboost_iostreams.dylib */; };
+		4A1A6B88170571000046BE09 /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6B84170571000046BE09 /* libboost_system.dylib */; };
+		4A1A6B89170571000046BE09 /* libboost_thread.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6B85170571000046BE09 /* libboost_thread.dylib */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -39,6 +43,10 @@
 		4A1A6B7B17042CCA0046BE09 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../include/Utils.h; sourceTree = "<group>"; };
 		4A1A6B7F17054D940046BE09 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../src/Utils.cpp; sourceTree = "<group>"; };
 		4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDive_CinderApp.h; path = ../include/GitDive_CinderApp.h; sourceTree = "<group>"; };
+		4A1A6B82170571000046BE09 /* libboost_date_time.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_date_time.dylib; path = ../../../../Cinder/boost/stage/lib/libboost_date_time.dylib; sourceTree = "<group>"; };
+		4A1A6B83170571000046BE09 /* libboost_iostreams.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_iostreams.dylib; path = ../../../../Cinder/boost/stage/lib/libboost_iostreams.dylib; sourceTree = "<group>"; };
+		4A1A6B84170571000046BE09 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = ../../../../Cinder/boost/stage/lib/libboost_system.dylib; sourceTree = "<group>"; };
+		4A1A6B85170571000046BE09 /* libboost_thread.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_thread.dylib; path = ../../../../Cinder/boost/stage/lib/libboost_thread.dylib; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -51,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1A6B86170571000046BE09 /* libboost_date_time.dylib in Frameworks */,
+				4A1A6B87170571000046BE09 /* libboost_iostreams.dylib in Frameworks */,
+				4A1A6B88170571000046BE09 /* libboost_system.dylib in Frameworks */,
+				4A1A6B89170571000046BE09 /* libboost_thread.dylib in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
 				53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */,
@@ -114,6 +126,10 @@
 		29B97314FDCFA39411CA2CEA /* GitDive_Cinder */ = {
 			isa = PBXGroup;
 			children = (
+				4A1A6B82170571000046BE09 /* libboost_date_time.dylib */,
+				4A1A6B83170571000046BE09 /* libboost_iostreams.dylib */,
+				4A1A6B84170571000046BE09 /* libboost_system.dylib */,
+				4A1A6B85170571000046BE09 /* libboost_thread.dylib */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -230,6 +246,10 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Cinder/boost/stage/lib\"",
+				);
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder_d.a\"";
 				PRODUCT_NAME = GitDive_Cinder;
 				WRAPPER_EXTENSION = app;
@@ -251,6 +271,10 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Cinder/boost/stage/lib\"",
+				);
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
 				PRODUCT_NAME = GitDive_Cinder;
 				STRIP_INSTALLED_PRODUCT = YES;
