@@ -37,7 +37,7 @@ public:
 
 class Commit {
 public:
-    Commit(string commit, string date, string author = "", string message = "")
+    Commit(string commit, string date, string author = "", string message = "");
     string commitHash;
     string author;
     string date;
