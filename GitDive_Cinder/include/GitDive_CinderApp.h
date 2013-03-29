@@ -11,6 +11,7 @@
 
 #include "cinder/app/AppBasic.h"
 #include "cinder/gl/gl.h"
+#include "Utils.h"
 
 #include <stdio.h>
 
