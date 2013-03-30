@@ -123,6 +123,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             else {
                 if(!inDiffHeader){
                     diffHunk->addLine(line);
+                    cout << line << endl;
                 }
             }
         }
