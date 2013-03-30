@@ -110,6 +110,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
                 shared_ptr<DiffHunk> diffHunkPtr;
                 diffHunk = diffHunkPtr;
                 diffList.push_back(diff);
+                
                 inDiffHeader = false;
             }
             
