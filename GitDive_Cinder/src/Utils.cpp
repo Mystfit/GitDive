@@ -34,7 +34,7 @@ string Utils::getCmdOutput(const char* command)
 }
 
 
-string Utils::checkStrIndexInRange(vector<string> &strs, int index)
+string Utils::checkStrIndexInRange(vector<string> &strs, int index, bool padZero)
 {
     if(index < strs.size()) return strs[index];
     return "";
