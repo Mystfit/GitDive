@@ -48,14 +48,14 @@ public:
     Diff();
     string fileType;
     string fileMode;
-    void addDiffHunk(shared_ptr<DiffHunk> hunk){ m_hunkList.push_back(hunk); };
+    void addDiffHunk(boost::shared_ptr<DiffHunk> hunk){ m_hunkList.push_back(hunk); };
     void setFileNameA(string filename){ m_fileNameA = filename; };
     void setFileNameB(string filename){ m_fileNameB = filename; };
 
 private:
     string m_fileNameA;
     string m_fileNameB;
-    vector<shared_ptr< DiffHunk> > m_hunkList;
+    vector<boost::shared_ptr< DiffHunk> > m_hunkList;
 };
 
 
