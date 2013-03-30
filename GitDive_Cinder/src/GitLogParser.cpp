@@ -103,7 +103,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             }
             
             //Start a new hunk in the current diff
-            if(starts_with(line, "@@"))
+            if(starts_with(line, "@@ "))
             {
                 cout << line << endl;
 
