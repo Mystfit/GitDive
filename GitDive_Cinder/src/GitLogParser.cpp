@@ -43,6 +43,11 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             string commitDate;
             string commitMessage;
             
+            vector<string> strVars;
+            for(int j = 0; j < logVars.size(); j++){
+                strVars[j] = Utils::checkStrIndexOutOfRange(logVars, j);
+            }
+            
             if(hashStrings.size()>1) commitHash = hashStrings[1];
             if(authorStrings.size()>1) commitAuthor= authorStrings[1];
             if(dateStrings.size()>1) commitDate = dateStrings[1];
