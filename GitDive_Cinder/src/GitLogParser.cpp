@@ -40,7 +40,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             for(int j = 0; j < logVars.size(); j++){
                 vector<string> logVarsSplit;
                 boost::split(logVarsSplit, logVars[j], boost::is_any_of("&"));
-                strVars[j] = Utils::checkStrIndexOutOfRange(logVarsSplit, j);
+                strVars[j] = Utils::checkStrIndexOutOfRange(logVarsSplit, 1);
             }
             
             if(hashStrings.size()>1) commitHash = hashStrings[1];
