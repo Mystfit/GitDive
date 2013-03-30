@@ -67,6 +67,7 @@ vector< shared_ptr<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
             
             //Add last diff to the list
             if(i > 0) diffList.push_back(diff);
+            shared_ptr<Diff> diffPtr;
             diff = Diff();
             
             //Move through the header and set up the diff object from the parsed diff vars
