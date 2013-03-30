@@ -21,8 +21,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             string commitHash;
             string commitAuthor;
             string commitDate
-            string commitMessage = messageStrings[1];
-            
+            string commitMessage            
             
             Utils::strip(line, "\n");
                         
@@ -48,6 +47,8 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             if(hashStrings.size()>1) commitHash = hashStrings[1];
              = authorStrings[1];
              = dateStrings[1];
+            = messageStrings[1];
+
             
 //            
 //            cout << "----" << commitHash << " - " << commitAuthor << " - " << commitDate << " - " << commitMessage << endl;
