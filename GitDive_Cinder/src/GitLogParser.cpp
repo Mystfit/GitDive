@@ -36,7 +36,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             boost::split(messageStrings, logVars[3], boost::is_any_of("|-"));
             
             for(int j = 0; j < logVars.size(); j++){
-                cout << logVars[j] << endl;
+                cout << "--" << logVars[j] << endl;
             }
             
 //            string commitHash = hashStrings[1];
