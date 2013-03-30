@@ -25,7 +25,6 @@ public:
     static string getCmdOutput(const char* command);
     static void strip(string &input, string search){ boost::replace_all(input, search, ""); }
     static string checkStrIndexInRange(vector<string> &strs, int index);
-    static string checkIndexInRange(vector<string> &strs, int index);
 };
 
 #endif /* defined(__GitDive_Cinder__Utils__) */
