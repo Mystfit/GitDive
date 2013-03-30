@@ -66,7 +66,7 @@ public:
     string message;
     
     void addDiff(Diff diff){ m_diffList.push_back(diff); };
-    void addDiffList(Diff diff){ m_diffList.push_back(diff); };
+    void addDiffList(vector<Diff> diffList){ m_diffList.push_back(diff); };
 
 
 private:
