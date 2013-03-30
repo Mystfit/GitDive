@@ -50,7 +50,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 }
 
 
-vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
+vector< shared_ptr<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
 {
     bool inDiffHeader = false;
     vector< shared_ptr<Diff> > diffList;
