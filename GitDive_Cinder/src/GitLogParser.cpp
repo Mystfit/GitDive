@@ -36,7 +36,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             boost::split(messageStrings, logVars[3], boost::is_any_of("|-"));
             
             string commitHash = hashStrings[1];
-            string commitAuthor = hashStrings[1];
+            string commitAuthor = authorStrings[1];
             string commitDate = hashStrings[1];
             string commitMessage = hashStrings[1];
 
