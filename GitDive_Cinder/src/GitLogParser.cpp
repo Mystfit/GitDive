@@ -12,9 +12,11 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 {
     vector<Commit> commitList;
     
+    
     for(int i = 0; i < diffLog.size(); i++)
     {
-        cout << diffLog[i] << endl;
+        string line = diffLog[i];
+        
     }
     
     return commitList;
