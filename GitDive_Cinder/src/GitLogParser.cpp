@@ -112,6 +112,10 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
                 
                 
                 vector<string> preDiffLines, postDiffLines;
+                vector<string> splitLine;
+                
+                split(splitLine, line, is_any_of(""));
+
                 
                 
                 
