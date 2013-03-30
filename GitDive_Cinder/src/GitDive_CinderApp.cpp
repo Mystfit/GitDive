@@ -9,7 +9,8 @@ void GitDive_CinderApp::setup()
     string combinedCmd = "cd " + repoPath + " && " + gitCmd;
     
     vector<string> outputStrings = Utils::splitTextLines( Utils::getCmdOutput(combinedCmd.c_str()) );
-
+    
+    GitLogParser::parseLog(outputStrings);
     
     console() << GitLogParser::serializeCommit(Commit("asdasdsa", "asdsadsad")) << endl;
 }
