@@ -26,7 +26,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
                 commitList[commitList.size()-1].addDiffList( parseCommit(diffBlock) );
             }
     
-            //Split line into seperate strings to pull out git info
+            //Split line into seperate strings and pull out git info
             Utils::strip(line, "\n");
                         
             vector<string> logVars;
