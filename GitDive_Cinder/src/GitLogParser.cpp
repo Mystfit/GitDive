@@ -22,7 +22,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             //Parse last commit first with the lines between the last GD_commit line
             if(commitList.size() > 0){
                 Diff diff;
-                
+            
                 commitList[commitList.size()-1].addDiffList( parseCommit(diffBlock) );
             }
     
