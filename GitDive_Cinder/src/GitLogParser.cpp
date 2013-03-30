@@ -34,6 +34,10 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
                 cout << strVars[j] << endl;
             }
             
+            if(commitList.size() > 0){
+                
+            }
+            
             commitList.push_back( commit(strVars[0], strVars[1], strVars[2], strVars[3]) );
         } else {
             if(commitList.size() > 0){
