@@ -10,7 +10,6 @@
 #define __GitDive_Cinder__GitLogParser__
 
 #include <iostream>
-#include <boost/algorithm/string/predicate.hpp>
 #include "GitDataTypes.h"
 
 class GitLogParser {
