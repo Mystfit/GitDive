@@ -12,7 +12,8 @@ void GitDive_CinderApp::setup()
     string cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
     
     //Split string into lines
-    vector<string> outputStrings = Utils::splitTextLines( cmdOutput );
+    vector<string> outputStrings;
+    Utils::splitTextLines( outputStrings, cmdOutput );
     
     //Send lines through the log parser to make commit objects
     commitList = GitLogParser::parseLog(outputStrings);
