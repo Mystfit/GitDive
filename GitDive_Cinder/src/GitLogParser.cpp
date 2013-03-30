@@ -57,6 +57,8 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
         Diff diff;
         
         //Parse diff from diffblock lines here
+        
+        
                 
         diffList.push_back(diff);
     }
