@@ -12,6 +12,8 @@
 #include <iostream>
 #include "GitDataTypes.h"
 
+using namespace boost;
+
 class GitLogParser {
 public:
     //Parses entire git log into commit objects
