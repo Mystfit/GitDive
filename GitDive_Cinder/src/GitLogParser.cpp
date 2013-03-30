@@ -116,7 +116,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             vector<string> splitLine;
             split(splitLine, line, is_any_of(" ,"));
             
-            string preLines = Utils::checkStrIndexInRange(splitLine, 1, true )
+            string preLines = Utils::checkStrIndexInRange(splitLine, 1, true );
             
             diffHunk->setPreChangedLines(atoi( preLines.c_str() ), atoi( Utils::checkStrIndexInRange(splitLine, 2, true ).c_str() ));
             diffHunk->setPostChangedLines(atoi( Utils::checkStrIndexInRange(splitLine, 3, true ).c_str() ), atoi( Utils::checkStrIndexInRange(splitLine, 4, true ).c_str() ));
