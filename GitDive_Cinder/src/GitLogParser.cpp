@@ -38,7 +38,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             string commitHash = hashStrings[1];
             string commitAuthor = authorStrings[1];
             string commitDate = dateStrings[1];
-            string commitMessage = hashStrings[1];
+            string commitMessage = messageStrings[1];
 
 
             
