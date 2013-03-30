@@ -116,8 +116,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
                 
                 split(splitLine, line, is_any_of(" ,"));
                 
-                
-                
+                                
                 diffHunk->setPreChangedLines( boost::lexical_cast<int>( splitLine[1] ), splitLine[2]);
                 diffHunk->setPostChangedLines(splitLine[3], splitLine[4]);
 
