@@ -100,7 +100,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
                     
                 }
                 
-                else if(boost::starts_with(line, "new file mode"))
+                else if(boost::starts_with(line, "\+\+\+ b/"))
                 {
                     
                 }
