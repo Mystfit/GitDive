@@ -30,6 +30,8 @@ public:
     
     string repoPath;
     string gitCmd;
+    
+    vector<Commit> commitList;
 };
 
 #endif
