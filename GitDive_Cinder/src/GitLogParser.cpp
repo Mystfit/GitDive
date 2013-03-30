@@ -23,10 +23,10 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             if(commitList.size() > 0){
                 Diff diff;
                 
-                parseCommit(diffBlock);
                 
                 
-                commitList[commitList.size()-1].addDiff(diff);
+                
+                commitList[commitList.size()-1].addDiffList( parseCommit(diffBlock) );
             }
     
             //Split line into seperate strings to pull out git info
