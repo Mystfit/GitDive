@@ -19,6 +19,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
         if(boost::starts_with(line, "GD_commit")){
             
             Utils::strip(line, "\n");
+            
             cout << "---" << line << endl;
             
             vector<string> logVars;
