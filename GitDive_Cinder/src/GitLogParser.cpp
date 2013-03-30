@@ -92,7 +92,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
                 
                 else if(boost::starts_with(line, "--- a/"))
                 {
-                    
+                    diff
                 }
                 
                 else if(boost::starts_with(line, "+++ b/"))
