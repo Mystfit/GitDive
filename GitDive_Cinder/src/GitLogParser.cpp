@@ -66,7 +66,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             inDiffHeader = true;
             
             //Create new diff container
-            shared_ptr<Diff> diffPtr;
+            shared_ptr<Diff> diffPtr(new Diff());
             diff = diffPtr;
             diffList.push_back(diff);
         }
