@@ -23,12 +23,8 @@ class Utils {
 public:
     //Returns stdout from a given command
     static string getCmdOutput(const char* command);
-    static void splitTextLines(vector<string> &strs, string input){
-        boost::split(strs, input, boost::is_any_of("\n"));
-    }
-    static void strip(string &input, string search){
-        boost::replace_all(input, search, "");
-    }
+    static vector<string> splitTextLines(vector<string> &strs, string input);
+    static void strip(string &input, string search){ boost::replace_all(input, search, ""); }
 
 };
 
