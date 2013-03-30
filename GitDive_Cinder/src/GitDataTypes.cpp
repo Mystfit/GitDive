@@ -17,7 +17,7 @@ Commit::Commit(string _commit, string _date, string _author, string _message){
 }
 
 Diff::Diff(){
-    diffType = "text";
+    fileType = "text";
     fileMode = "updated";
 }
 
