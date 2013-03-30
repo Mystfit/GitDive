@@ -26,7 +26,6 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             boost::split(logVars, line, boost::is_any_of("^"));
             
             vector<string> hashStrings;
-            boost::split(hashStrings, logVars[0], boost::is_any_of("&"));
             
             vector<string> authorStrings;
             boost::split(authorStrings, logVars[1], boost::is_any_of("&"));
@@ -36,15 +35,10 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             
             vector<string> messageStrings;
             boost::split(messageStrings, logVars[3], boost::is_any_of("&"));
-        
-            //Split variable headers from data for git variables
-            string commitHash;
-            string commitAuthor;
-            string commitDate;
-            string commitMessage;
             
             vector<string> strVars;
             for(int j = 0; j < logVars.size(); j++){
+                boost::split(hashStrings, logVars[0], boost::is_any_of("&"));
                 strVars[j] = Utils::checkStrIndexOutOfRange(logVars, j);
             }
             
