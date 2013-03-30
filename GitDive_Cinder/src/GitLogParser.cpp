@@ -23,20 +23,10 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             Utils::strip(line, "\n");
                         
             vector<string> logVars;
+            vector<string> strVars;
+
             boost::split(logVars, line, boost::is_any_of("^"));
             
-            vector<string> hashStrings;
-            
-            vector<string> authorStrings;
-            boost::split(authorStrings, logVars[1], boost::is_any_of("&"));
-            
-            vector<string> dateStrings;
-            boost::split(dateStrings, logVars[2], boost::is_any_of("&"));
-            
-            vector<string> messageStrings;
-            boost::split(messageStrings, logVars[3], boost::is_any_of("&"));
-            
-            vector<string> strVars;
             
             for(int j = 0; j < logVars.size(); j++){
                 vector<string> logVarsSplit;
