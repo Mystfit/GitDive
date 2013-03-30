@@ -70,6 +70,7 @@ public:
         for(int i = 0; i < diffList.size(); i++){
             m_diffList.push_back(diffList[i]);
         }
+    }
 
 
 private:
