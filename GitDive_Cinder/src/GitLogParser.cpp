@@ -35,7 +35,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             }
             
             if(commitList.size() > 0){
-                commitList[commitList.size()-1].
+                commitList[commitList.size()-1].addDiff(<#Diff diff#>)
             }
             
             commitList.push_back( Commit(strVars[0], strVars[1], strVars[2], strVars[3]) );
