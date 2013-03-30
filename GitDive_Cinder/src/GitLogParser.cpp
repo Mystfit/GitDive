@@ -54,7 +54,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
 {
     bool inDiffHeader = false;
     vector<Diff> diffList;
-    Diff &diff = Diff();
+    Diff diff;
     
     for(int i = 0; i < diffBlock.size(); i++){
         
@@ -63,7 +63,6 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
         //Start a new diff object when a diff command is found
         if(boost::starts_with(line, "diff --git")){
             inDiffHeader = true;
-            
             
         }
         
