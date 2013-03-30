@@ -84,6 +84,8 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
                 {
                     
                 }
+                
+                
 
             }
         }
