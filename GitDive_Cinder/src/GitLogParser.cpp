@@ -87,12 +87,11 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
                 
                 else if(boost::starts_with(line, "new file mode"))
                 {
-                    diff.fileType = "binary";
                 }
                 
                 else if(boost::starts_with(line, "Binary files"))
                 {
-                    
+                    diff.fileType = "binary";
                 }
                 
                 else if(boost::starts_with(line, "--- a/"))
