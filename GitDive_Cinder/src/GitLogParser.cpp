@@ -111,6 +111,10 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
             {
                 inDiffHeader = false;
             }
+            
+            else {
+                
+            }
         }
         
         
