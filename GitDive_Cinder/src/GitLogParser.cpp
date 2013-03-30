@@ -107,6 +107,10 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             //Start a new hunk in the current diff
             if(starts_with(line, "@@ "))
             {
+                if(i > 0) diffList.push_back(diff);
+
+                shared_ptr<Diff> diffPtr;
+                diff = diffPtr;
                 inDiffHeader = false;
                 
             }
