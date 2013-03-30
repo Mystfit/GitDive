@@ -100,7 +100,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
                     
                 }
                 
-                else if(boost::starts_with(line, "\+\+\+ b/"))
+                else if(boost::starts_with(line, "+++ b/"))
                 {
                     
                 }
