@@ -112,7 +112,6 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
                 shared_ptr<Diff> diffPtr;
                 diff = diffPtr;
                 inDiffHeader = false;
-                
             }
             
             //Already in an existing hunk, add current line
