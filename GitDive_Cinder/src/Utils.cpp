@@ -37,6 +37,6 @@ string Utils::getCmdOutput(const char* command)
 vector<string> Utils::splitTextLines(string input)
 {
     vector<string> lines;
-    boost::split(strs,input,boost::is_any_of("\n"));
+    boost::split(lines,input,boost::is_any_of("\n"));
 }
 
