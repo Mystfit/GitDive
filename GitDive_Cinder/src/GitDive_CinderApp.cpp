@@ -14,7 +14,6 @@ void GitDive_CinderApp::setup()
     //Split string into lines
     vector<string> outputStrings;
     boost::split(outStrings, cmdOutput, boost::is_any_of("\n"));
-    Utils::splitTextLines( outputStrings, cmdOutput );
     
     //Send lines through the log parser to make commit objects
     commitList = GitLogParser::parseLog(outputStrings);
