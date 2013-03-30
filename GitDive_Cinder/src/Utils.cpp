@@ -32,3 +32,7 @@ string Utils::getCmdOutput(const char* command)
     
     return cmdResult;
 }
+
+
+vector<string> Utils::splitTextLines(string input);
+
