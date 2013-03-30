@@ -112,7 +112,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             cout << line << endl;
             
             //Creates a new diffHunk to store changed lines
-            shared_ptr<DiffHunk> diffHunkPtr;
+            shared_ptr<DiffHunk> diffHunkPtr(new DiffHunk());
             diffHunk = diffHunkPtr;
             diff->addDiffHunk(diffHunk);
             
