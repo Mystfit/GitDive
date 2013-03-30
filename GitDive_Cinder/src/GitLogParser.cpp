@@ -112,6 +112,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             diffHunk = diffHunkPtr;
             diff->addDiffHunk(diffHunk);
             
+            //Splits hunk header into startPos/numLines and endPos/numLines
             vector<string> splitLine;
             split(splitLine, line, is_any_of(" ,"));
             
