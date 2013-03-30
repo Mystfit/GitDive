@@ -20,7 +20,7 @@ public:
     static vector<Commit> parseLog(vector<string> diffLog);
     
     //Parses individual commit datablock into diffs
-    static vector<Diff> parseCommit(vector<string> diffBlock);
+    static shared_ptr< vector<Diff> > parseCommit(vector<string> diffBlock);
     
     //Converts commit into a pretty string for printing
     static string serializeCommit(Commit commit);
