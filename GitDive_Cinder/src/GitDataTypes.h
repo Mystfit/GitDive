@@ -49,6 +49,7 @@ public:
     string fileType;
     string fileMode;
     void addDiffHunk(DiffHunk hunk){ m_hunkList.push_back(hunk); };
+    void setFileNameA(string filename){ m_fileNameA = filename; };
     
 private:
     string m_fileNameA;
