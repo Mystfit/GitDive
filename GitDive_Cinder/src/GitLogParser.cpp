@@ -17,6 +17,8 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
     {
         string line = diffLog[i];
         
+        if(boost::starts_with(line, "diff "))
+        
     }
     
     return commitList;
