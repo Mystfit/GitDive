@@ -36,7 +36,8 @@ string Utils::getCmdOutput(const char* command)
 
 string Utils::checkStringIndex(vector<string> &strs, int index)
 {
-    
+    if(index < strs.size()) return strs[index];
+    return "";
 }
 
 
