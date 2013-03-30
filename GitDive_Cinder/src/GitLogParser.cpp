@@ -49,6 +49,8 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             if(messageStrings.size()>1) commitMessage = messageStrings[1];
             
             Commit commit(commitHash, commitAuthor, commitDate, commitMessage);
+        } else {
+            
         }
         
     }
