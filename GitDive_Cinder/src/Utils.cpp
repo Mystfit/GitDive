@@ -41,3 +41,8 @@ vector<string> Utils::splitTextLines(string input)
     return lines;
 }
 
+string strip(string &input, string search)
+{
+    
+}
+
