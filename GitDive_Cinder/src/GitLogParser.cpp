@@ -36,7 +36,9 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             
             commitList.push_back( commit(strVars[0], strVars[1], strVars[2], strVars[3]) );
         } else {
-            diffBlock.push_back(line);
+            if(commitList.size() > 0){
+                diffBlock.push_back(line);
+            }
         }
         
     }
