@@ -53,8 +53,8 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
 {
     bool inDiffHeader = false;
-
     vector<Diff> diffList;
+    
     for(int i = 0; i < diffBlock.size(); i++){
         
         Diff diff;
