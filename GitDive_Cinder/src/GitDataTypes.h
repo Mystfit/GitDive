@@ -46,7 +46,7 @@ private:
 class Diff {
 public:
     Diff();
-    string diffType;
+    string fileType;
     string fileMode;
     void addDiffHunk(DiffHunk hunk){ m_hunkList.push_back(hunk); };
     
