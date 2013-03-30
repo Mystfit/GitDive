@@ -121,9 +121,6 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             string postLines = Utils::checkStrIndexInRange(splitLine, 3, true ).erase(0,1);
             string numPostLines = Utils::checkStrIndexInRange(splitLine, 4, true );
             
-            cout << preLines << "," << numPreLines << "," << postLines << "," << numPostLines << endl;
-
-            
             diffHunk->setPreChangedLines(atoi( preLines.c_str() ), atoi( numPreLines.c_str() ));
             diffHunk->setPostChangedLines(atoi( postLines.c_str() ), atoi( numPostLines.c_str() ));
             
