@@ -12,7 +12,6 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 {
     vector<Commit> commitList;
     
-    
     for(int i = 0; i < diffLog.size(); i++)
     {
         string line = diffLog[i];
@@ -24,6 +23,9 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             vector<string> logVars;
             boost::split(logVars, line, boost::is_any_of("||"));
             
+            for(int j = 0; j < logVars.size(); j++){
+                cout << logVars[j] << endl;
+            }
             
 
         }
