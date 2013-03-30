@@ -52,12 +52,13 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 
 vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
 {
+    bool inDiffHeader = false;;
+
     vector<Diff> diffList;
     for(int i = 0; i < diffList.size(); i++){
         Diff diff;
         
         //Parse diff from diffblock lines here
-        bool inDiffHeader = false;
         
                 
         diffList.push_back(diff);
