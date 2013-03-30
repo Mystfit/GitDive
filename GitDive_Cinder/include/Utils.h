@@ -24,7 +24,7 @@ public:
     //Returns stdout from a given command
     static string getCmdOutput(const char* command);
     static vector<string> splitTextLines(string input);
-    static string strip(string &input, string search){ };
+    static string strip(string &input, string search){  boost::replace_all(str1, "\r\n", ""); };
 };
 
 #endif /* defined(__GitDive_Cinder__Utils__) */
