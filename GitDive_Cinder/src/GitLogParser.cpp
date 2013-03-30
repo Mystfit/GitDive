@@ -18,7 +18,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
         
         if(boost::starts_with(line, "GD_commit")){
             
-            string commitHash = hashStrings[1];
+            string commitHash;
             string commitAuthor = authorStrings[1];
             string commitDate = dateStrings[1];
             string commitMessage = messageStrings[1];
@@ -45,7 +45,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
                 cout << "--" << logVars[j] << endl;
             }
             
-            if(hashStrings.size()>1)
+            if(hashStrings.size()>1) commitHash = hashStrings[1];
             
 //            
 //            cout << "----" << commitHash << " - " << commitAuthor << " - " << commitDate << " - " << commitMessage << endl;
