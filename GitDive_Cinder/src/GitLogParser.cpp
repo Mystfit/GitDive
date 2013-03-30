@@ -100,12 +100,14 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
                 {
                     diff->setFileNameB( line.erase(0, 6) );
                 }
+                
+                cout << line << endl;
             }
+            
             
             //Start a new hunk in the current diff
             if(starts_with(line, "@@ "))
             {
-                cout << line << endl;
 
                 //Creates a new diffHunk to store changed lines
                 shared_ptr<DiffHunk> diffHunkPtr;
