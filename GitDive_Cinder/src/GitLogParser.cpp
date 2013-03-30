@@ -34,7 +34,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
                 cout << strVars[j] << endl;
             }
             
-            Commit commit(strVars[0], strVars[1], strVars[2], strVars[3]);
+            commitList.push_back( commit(strVars[0], strVars[1], strVars[2], strVars[3]) );
         } else {
             diffBlock.push_back(line);
         }
