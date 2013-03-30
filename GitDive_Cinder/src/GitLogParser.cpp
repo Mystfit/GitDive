@@ -100,9 +100,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             else if(starts_with(line, "+++ b/"))
             {
                 diff->setFileNameB( line.erase(0, 6) );
-            }
-            
-            cout << line << endl;
+            }            
         }
         
         
@@ -128,7 +126,6 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             if(!inDiffHeader){
                 diffHunk->addLine(line);
                 cout << line << endl;
-
             }
         }
                 
