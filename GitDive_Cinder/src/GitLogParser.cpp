@@ -19,7 +19,9 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
         
         if(boost::starts_with(line, "GD_commit")){
             
-            boost::algorithm::trim(line);
+            if (!line.empty() && line[s.length()-1] == '\n') {
+                s.erase(s.length()-1);
+            }
             
             vector<string> logVars;
             boost::split(logVars, line, boost::is_any_of("||"));
