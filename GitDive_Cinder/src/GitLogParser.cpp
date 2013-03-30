@@ -105,11 +105,12 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             //Start a new hunk in the current diff
             if(starts_with(line, "@@ "))
             {
+                inDiffHeader = false;
+
                 shared_ptr<DiffHunk> diffHunkPtr;
                 diffHunk = diffHunkPtr;
                 diff->addDiffHunk(diffHunk);
                 
-                inDiffHeader = false;
             }
             
             //Already in an existing hunk, add current line
