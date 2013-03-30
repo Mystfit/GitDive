@@ -18,6 +18,16 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
         string line = diffLog[i];
         
         if(boost::starts_with(line, "GD_commit")){
+            
+            //Parse last commit first with all the lines from the last GD_commit line
+            if(commitList.size() > 0){
+                Diff diff;
+                
+                parseCommit(diffBlock);
+                
+                
+                commitList[commitList.size()-1].addDiff(diff);
+            }
     
             //Split line into seperate strings to pull out git info
             Utils::strip(line, "\n");
@@ -33,11 +43,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
                 strVars.push_back( Utils::checkStrIndexInRange(logVarsSplit, 1) );
             }
             
-            if(commitList.size() > 0){
-                Diff diff;
-                
-                commitList[commitList.size()-1].addDiff(diff);
-            }
+            
             
             commitList.push_back( Commit(strVars[0], strVars[1], strVars[2], strVars[3]) );
         } else {
