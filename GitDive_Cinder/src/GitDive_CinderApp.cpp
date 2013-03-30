@@ -8,10 +8,12 @@ void GitDive_CinderApp::setup()
     string gitCmd = "git log --reverse --pretty=format:\"GD_commit|-%H||GD_commitAuthor|-%cn||GD_date|-%cd||GD_message|-%B\"";
     string combinedCmd = "cd " + repoPath + " && " + gitCmd;
     
-    vector<string> outputStrings = Utils::splitTextLines( Utils::getCmdOutput(combinedCmd.c_str()) );
+    string cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
+    vector<string> outputStrings = Utils::splitTextLines(  );
     
     commitList = GitLogParser::parseLog(outputStrings);
     
+    //Test of the commit serializer
     console() << GitLogParser::serializeCommit(Commit("asdasdsa", "asdsadsad")) << endl;
 }
 
