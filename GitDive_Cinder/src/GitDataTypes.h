@@ -72,7 +72,7 @@ public:
 
 
 private:
-    vector<Diff> m_diffList;
+    vector<boost::shared_ptr< Diff > > m_diffList;
 };
 
 
