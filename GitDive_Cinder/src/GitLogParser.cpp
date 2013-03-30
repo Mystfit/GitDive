@@ -51,7 +51,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             
             Commit commit(commitHash, commitAuthor, commitDate, commitMessage);
         } else {
-            diffBlock.push_back(line)
+            diffBlock.push_back(line);
         }
         
     }
