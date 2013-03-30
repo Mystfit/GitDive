@@ -77,7 +77,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
                 
                 else if(starts_with(line, "new file mode"))
                 {
-                    diff.fileMode = "added";
+                    diff->fileMode = "added";
                 }
                 
                 else if(starts_with(line, "deleted file mode"))
