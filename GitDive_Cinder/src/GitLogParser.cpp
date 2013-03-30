@@ -14,7 +14,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
     
     for(int i = 0; i < diffLog.size(); i++)
     {
-        
+        cout << diffLog[i] << endl;
     }
     
     return commitList;
