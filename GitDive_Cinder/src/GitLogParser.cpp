@@ -53,7 +53,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
 {
     bool inDiffHeader = false;
-    vector<Diff> diffList;
+    vector<boost::shared_ptr<Diff> diffList;
     Diff diff;
     DiffHunk diffHunk;
     
@@ -105,7 +105,6 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
             if(boost::starts_with(line, "@@ "))
             {
                 inDiffHeader = false;
-                boost::shared_ptr<DiffHunk> diffHunk;
                 
             }
             
