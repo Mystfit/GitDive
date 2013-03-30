@@ -82,22 +82,22 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
                 
                 else if(starts_with(line, "deleted file mode"))
                 {
-                    diff.fileMode = "deleted";
+                    diff->fileMode = "deleted";
                 }
                 
                 else if(starts_with(line, "Binary files"))
                 {
-                    diff.fileType = "binary";
+                    diff->fileType = "binary";
                 }
                 
                 else if(starts_with(line, "--- a/"))
                 {
-                    diff.setFileNameA( line.erase(0, 6) );
+                    diff->setFileNameA( line.erase(0, 6) );
                 }
                 
                 else if(starts_with(line, "+++ b/"))
                 {
-                    diff.setFileNameB( line.erase(0, 6) );
+                    diff->setFileNameB( line.erase(0, 6) );
                 }
             }
             
