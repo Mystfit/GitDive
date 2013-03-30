@@ -69,7 +69,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
                 diff = Diff();
             }
             
-            //Move through the header and
+            //Move through the header and set up the diff object from the parsed diff vars
             if(inDiffHeader){
                 
             }
