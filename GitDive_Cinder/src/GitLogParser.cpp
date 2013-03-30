@@ -19,7 +19,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
         if(boost::starts_with(line, "GD_commit")){
             
             
-            
+            //Split line into seperate strings to pull out git info
             Utils::strip(line, "\n");
                         
             vector<string> logVars;
@@ -37,7 +37,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             vector<string> messageStrings;
             boost::split(messageStrings, logVars[3], boost::is_any_of("&"));
             
-            
+        
             
             string commitHash;
             string commitAuthor;
@@ -49,9 +49,6 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             if(dateStrings.size()>1) commitDate = dateStrings[1];
             if(messageStrings.size()>1) commitMessage = messageStrings[1];
             
-            cout << commitHash << " || " << commitAuthor << " || " << commitDate << " || " << commitMessage << endl;
-    
-
         }
         
     }
