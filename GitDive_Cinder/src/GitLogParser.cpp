@@ -61,6 +61,9 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
         
         string line = diffBlock[i];
         
+        cout << line << endl;
+
+        
         //Start a new diff object when a diff command is found
         if(starts_with(line, "diff --git")){
             inDiffHeader = true;
@@ -123,7 +126,6 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             else {
                 if(!inDiffHeader){
                     diffHunk->addLine(line);
-                    cout << line << endl;
                 }
             }
         }
