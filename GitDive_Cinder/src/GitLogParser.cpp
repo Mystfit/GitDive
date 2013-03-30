@@ -17,8 +17,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
         string line = diffLog[i];
         
         if(boost::starts_with(line, "GD_commit")){
-            
-            
+    
             //Split line into seperate strings to pull out git info
             Utils::strip(line, "\n");
                         
