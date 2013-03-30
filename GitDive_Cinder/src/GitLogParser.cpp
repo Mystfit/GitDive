@@ -60,7 +60,8 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
         
         string line = diffBlock[i];
         
-        //Parse diff from diffblock lines here
+        f(boost::starts_with(line, "GD_commit")){
+        
         
                 
         diffList.push_back(diff);
