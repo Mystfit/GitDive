@@ -52,8 +52,8 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             for(int j = 0; j < logVars.size(); j++){
                 cout << "--" << logVars[j] << endl;
             }
-//            
-//            cout << "----" << commitHash << " - " << commitAuthor << " - " << commitDate << " - " << commitMessage << endl;
+            
+            cout << "----" << commitHash << " - " << commitAuthor << " - " << commitDate << " - " << commitMessage << endl;
     
 
         }
