@@ -50,7 +50,8 @@ public:
     string fileMode;
     void addDiffHunk(DiffHunk hunk){ m_hunkList.push_back(hunk); };
     void setFileNameA(string filename){ m_fileNameA = filename; };
-    
+    void setFileNameB(string filename){ m_fileNameB = filename; };
+
 private:
     string m_fileNameA;
     string m_fileNameB;
