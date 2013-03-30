@@ -113,7 +113,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
             //Already in an existing hunk, add current line
             else {
                 if(!inDiffHeader){
-                    diffHunk.addLine(<#string line#>)
+                    diffHunk.addLine(line);
                 }
             }
         }
