@@ -111,6 +111,9 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
                 diffHunk = diffHunkPtr;
                 diff->addDiffHunk(diffHunk);
                 
+                
+                
+                
                 diffHunk->setPreChangedLines(0, 0);
                 diffHunk->setPPostChangedLines(0, 0);
 
