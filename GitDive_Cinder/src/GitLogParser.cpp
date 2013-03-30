@@ -19,7 +19,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
         
         if(boost::starts_with(line, "GD_commit")){
             
-            //Parse last commit first with the lines from the last GD_commit line
+            //Parse last commit first with the lines between the last GD_commit line
             if(commitList.size() > 0){
                 Diff diff;
                 
