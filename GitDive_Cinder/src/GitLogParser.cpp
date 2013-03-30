@@ -53,7 +53,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             if(dateStrings.size()>1) commitDate = dateStrings[1];
             if(messageStrings.size()>1) commitMessage = messageStrings[1];
             
-            Commit commit(strVars[0], strVars, commitDate, commitMessage);
+            Commit commit(strVars[0], strVars[1], strVars[2], strVars[3]);
         } else {
             diffBlock.push_back(line);
         }
