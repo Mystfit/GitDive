@@ -60,7 +60,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
         
         string line = diffBlock[i];
         
-        //Start a new diff when a diff command is found
+        //Start a new diff object when a diff command is found
         if(boost::starts_with(line, "diff --git")){
         }
         
