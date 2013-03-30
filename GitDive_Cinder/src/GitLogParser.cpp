@@ -36,7 +36,6 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             
             vector<string> messageStrings;
             boost::split(messageStrings, logVars[3], boost::is_any_of("&"));
-            
         
             //Split variable headers from data for git variables
             string commitHash;
