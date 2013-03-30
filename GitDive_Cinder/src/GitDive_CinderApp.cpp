@@ -10,7 +10,7 @@ void GitDive_CinderApp::setup()
     
     vector<string> outputStrings = Utils::splitTextLines( Utils::getCmdOutput(combinedCmd.c_str()) );
     
-    GitLogParser::parseLog(outputStrings);
+    commitList = GitLogParser::parseLog(outputStrings);
     
     console() << GitLogParser::serializeCommit(Commit("asdasdsa", "asdsadsad")) << endl;
 }
