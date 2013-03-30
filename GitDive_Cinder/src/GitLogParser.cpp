@@ -40,8 +40,6 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
                 strVars.push_back( Utils::checkStrIndexInRange(logVarsSplit, 1) );
             }
             
-            
-            
             commitList.push_back( Commit(strVars[0], strVars[1], strVars[2], strVars[3]) );
         } else {
             diffBlock.push_back(line);
