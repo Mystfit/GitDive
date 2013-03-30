@@ -11,7 +11,7 @@
 vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 {
     vector<Commit> commitList;
-    vector <string
+    vector <string> diffBlock;
     
     for(int i = 0; i < diffLog.size(); i++)
     {
