@@ -41,6 +41,4 @@ vector<string> splitTextLines(string input)
     return outStrings;
 }
 
-}
-
 
