@@ -34,7 +34,7 @@ string Utils::getCmdOutput(const char* command)
 }
 
 
-string Utils::checkIndexOutOfRange(vector<string> &strs, int index)
+string Utils::checkStrIndexOutOfRange(vector<string> &strs, int index)
 {
     if(index < strs.size()) return strs[index];
     return "";
