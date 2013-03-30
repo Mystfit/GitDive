@@ -61,6 +61,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
         string line = diffBlock[i];
         
         f(boost::starts_with(line, "diff")){
+        }
         
         
                 
