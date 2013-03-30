@@ -20,8 +20,8 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             
             string commitHash;
             string commitAuthor;
-            string commitDate
-            string commitMessage            
+            string commitDate;
+            string commitMessage;
             
             Utils::strip(line, "\n");
                         
