@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <vector>
+#include <boost/string/
 #include <boost/iostreams/stream.hpp>
 #include <boost/iostreams/device/file_descriptor.hpp>
 
