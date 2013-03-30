@@ -118,8 +118,8 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
                 
                 
                 
-                diffHunk->setPreChangedLines(0, 0);
-                diffHunk->setPostChangedLines(0, 0);
+                diffHunk->setPreChangedLines(splitLine[1], splitLine[2]);
+                diffHunk->setPostChangedLines(splitLine[3], splitLine[4]);
 
                 inDiffHeader = false;
             }
