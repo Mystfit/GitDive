@@ -10,6 +10,7 @@
 #define __GitDive_Cinder__Utils__
 
 #include <iostream>
+#include <vector>
 #include <boost/iostreams/stream.hpp>
 #include <boost/iostreams/device/file_descriptor.hpp>
 
