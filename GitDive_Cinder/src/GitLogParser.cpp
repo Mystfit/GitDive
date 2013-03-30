@@ -17,7 +17,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
     {
         string line = diffLog[i];
         
-        if(boost::starts_with(line, "GD_commit")){
+        if(starts_with(line, "GD_commit")){
             
             //Parse last commit first with the lines between the last GD_commit line
             if(commitList.size() > 0){            
@@ -30,12 +30,12 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             vector<string> logVars;
             vector<string> strVars;
 
-            boost::split(logVars, line, boost::is_any_of("^"));
+            split(logVars, line, is_any_of("^"));
             
             //Split git log message into component variables
             for(int j = 0; j < logVars.size(); j++){
                 vector<string> logVarsSplit;
-                boost::split(logVarsSplit, logVars[j], boost::is_any_of("&"));
+                split(logVarsSplit, logVars[j], is_any_of("&"));
                 strVars.push_back( Utils::checkStrIndexInRange(logVarsSplit, 1) );
             }
             
@@ -53,7 +53,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
 {
     bool inDiffHeader = false;
-    vector< boost::shared_ptr<Diff> > diffList;
+    vector< shared_ptr<Diff> > diffList;
     Diff diff;
     DiffHunk diffHunk;
     
@@ -62,7 +62,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
         string line = diffBlock[i];
         
         //Start a new diff object when a diff command is found
-        if(boost::starts_with(line, "diff --git")){
+        if(starts_with(line, "diff --git")){
             inDiffHeader = true;
             
             //Add last diff to the list
@@ -71,38 +71,38 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
             
             //Move through the header and set up the diff object from the parsed diff vars
             if(inDiffHeader){
-                if(boost::starts_with(line, "index"))
+                if(starts_with(line, "index"))
                 {
                 }
                 
-                else if(boost::starts_with(line, "new file mode"))
+                else if(starts_with(line, "new file mode"))
                 {
                     diff.fileMode = "added";
                 }
                 
-                else if(boost::starts_with(line, "deleted file mode"))
+                else if(starts_with(line, "deleted file mode"))
                 {
                     diff.fileMode = "deleted";
                 }
                 
-                else if(boost::starts_with(line, "Binary files"))
+                else if(starts_with(line, "Binary files"))
                 {
                     diff.fileType = "binary";
                 }
                 
-                else if(boost::starts_with(line, "--- a/"))
+                else if(starts_with(line, "--- a/"))
                 {
                     diff.setFileNameA( line.erase(0, 6) );
                 }
                 
-                else if(boost::starts_with(line, "+++ b/"))
+                else if(starts_with(line, "+++ b/"))
                 {
                     diff.setFileNameB( line.erase(0, 6) );
                 }
             }
             
             //Start a new hunk in the current diff
-            if(boost::starts_with(line, "@@ "))
+            if(starts_with(line, "@@ "))
             {
                 inDiffHeader = false;
                 
