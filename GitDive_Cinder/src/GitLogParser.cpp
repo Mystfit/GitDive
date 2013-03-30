@@ -31,7 +31,6 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
                 vector<string> logVarsSplit;
                 boost::split(logVarsSplit, logVars[j], boost::is_any_of("&"));
                 strVars.push_back( Utils::checkStrIndexInRange(logVarsSplit, 1) );
-                cout << strVars[j] << endl;
             }
             
             if(commitList.size() > 0){
