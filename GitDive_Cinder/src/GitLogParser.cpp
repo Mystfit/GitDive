@@ -74,6 +74,11 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
                 if(boost::starts_with(line, "index"))
                 {
                 }
+                
+                else if(boost::starts_with(line, "index"))
+                {
+                    
+                }
 
             }
         }
