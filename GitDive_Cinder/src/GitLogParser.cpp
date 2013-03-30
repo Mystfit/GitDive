@@ -135,6 +135,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
     return diffList;
 }
 
+
 string GitLogParser::serializeCommit(Commit commit)
 {
     return commit.commitHash;
