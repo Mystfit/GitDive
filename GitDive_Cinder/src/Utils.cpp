@@ -34,15 +34,3 @@ string Utils::getCmdOutput(const char* command)
 }
 
 
-vector<string> Utils::splitTextLines(string input)
-{
-    vector<string> lines;
-    boost::split(lines,input,boost::is_any_of("\n"));
-    return lines;
-}
-
-void strip(string &input, string search)
-{
-    boost::replace_all(input, search, "");
-}
-
