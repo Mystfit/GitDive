@@ -48,7 +48,7 @@ public:
     Diff();
     string fileType;
     string fileMode;
-    void addDiffHunk(DiffHunk hunk){ m_hunkList.push_back(hunk); };
+    void addDiffHunk(shared_ptr<DiffHunk> hunk){ m_hunkList.push_back(hunk); };
     void setFileNameA(string filename){ m_fileNameA = filename; };
     void setFileNameB(string filename){ m_fileNameB = filename; };
 
