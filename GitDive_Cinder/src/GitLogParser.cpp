@@ -38,7 +38,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             
             vector<string> strVars;
             for(int j = 0; j < logVars.size(); j++){
-                vector<string> 
+                vector<string> logVarsSplit
                 boost::split(hashStrings, logVars[0], boost::is_any_of("&"));
                 strVars[j] = Utils::checkStrIndexOutOfRange(logVars, j);
             }
