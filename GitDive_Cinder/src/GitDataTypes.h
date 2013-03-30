@@ -15,6 +15,7 @@
 
 using namespace std;
 
+
 class DiffHunk {
 public:
     DiffHunk();
@@ -39,6 +40,7 @@ private:
     vector<string> m_hunkData;
 };
 
+
 class Diff {
 public:
     Diff();
@@ -51,6 +53,7 @@ private:
     string m_fileNameB;
     vector<DiffHunk> m_hunkList;
 };
+
 
 class Commit {
 public:
