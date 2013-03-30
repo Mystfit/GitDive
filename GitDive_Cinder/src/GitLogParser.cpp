@@ -27,7 +27,6 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 
             boost::split(logVars, line, boost::is_any_of("^"));
             
-            
             for(int j = 0; j < logVars.size(); j++){
                 vector<string> logVarsSplit;
                 boost::split(logVarsSplit, logVars[j], boost::is_any_of("&"));
