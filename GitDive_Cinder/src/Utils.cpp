@@ -38,6 +38,7 @@ vector<string> splitTextLines(string input)
 {
     vector<string> outStrings;
     boost::split(outStrings, input, boost::is_any_of("\n"));
+    return outStrings;
 }
 
 }
