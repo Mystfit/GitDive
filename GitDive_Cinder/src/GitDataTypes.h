@@ -69,7 +69,8 @@ public:
     
     void addDiff(boost::shared_ptr<Diff> diff){ m_diffList.push_back(diff); };
     void addDiffList(vector< boost::shared_ptr<Diff> > diffList){
-        for(int i = 0; i < diffList.size(); i++) m_diffList.push_back(diffList[i]);
+        for(int i = 0; i < diffList.size(); i++)
+            m_diffList.push_back(diffList[i]);
     }
 
 
