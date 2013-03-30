@@ -37,16 +37,12 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             boost::split(messageStrings, logVars[3], boost::is_any_of("&"));
             
             vector<string> strVars;
+            
             for(int j = 0; j < logVars.size(); j++){
                 vector<string> logVarsSplit;
                 boost::split(logVarsSplit, logVars[j], boost::is_any_of("&"));
                 strVars[j] = Utils::checkStrIndexOutOfRange(logVarsSplit, 1);
             }
-            
-            if(hashStrings.size()>1) commitHash = hashStrings[1];
-            if(authorStrings.size()>1) commitAuthor= authorStrings[1];
-            if(dateStrings.size()>1) commitDate = dateStrings[1];
-            if(messageStrings.size()>1) commitMessage = messageStrings[1];
             
             Commit commit(strVars[0], strVars[1], strVars[2], strVars[3]);
         } else {
