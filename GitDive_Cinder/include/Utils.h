@@ -21,7 +21,7 @@ class Utils {
 public:
     //Returns stdout from a given command
     static string getCmdOutput(const char* command);
-    static splitTextLines(string input, vector<string &dest);
+    static vector<string> splitTextLines(string input);
 };
 
 #endif /* defined(__GitDive_Cinder__Utils__) */
