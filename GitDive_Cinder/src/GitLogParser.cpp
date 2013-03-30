@@ -12,6 +12,8 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 {
     vector<Commit> commitList;
     
+    
+    
     return commitList;
 }
 
