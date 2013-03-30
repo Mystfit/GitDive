@@ -64,6 +64,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
         if(boost::starts_with(line, "diff --git")){
             inDiffHeader = true;
             
+            diffList.push_back(diff)
         }
         
         
