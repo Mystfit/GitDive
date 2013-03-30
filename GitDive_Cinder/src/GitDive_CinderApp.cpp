@@ -5,7 +5,7 @@
 void GitDive_CinderApp::setup()
 {
     string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
-    string gitCmd = "git log -p --reverse --pretty=format:\"GD_commit|-%H&GD&GD_commitAuthor|-%cn&GD&GD_date|-%cd&GD&GD_message|-%B\"";
+    string gitCmd = "git log -p --reverse --pretty=format:\"GD_commit||%H&GD&GD_commitAuthor||%cn&GD&GD_date|-%cd&GD&GD_message|-%B\"";
     string combinedCmd = "cd " + repoPath + " && " + gitCmd;
     
     //Get the output of the git command from stdout as a giant string
