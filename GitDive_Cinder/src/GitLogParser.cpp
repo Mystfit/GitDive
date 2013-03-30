@@ -105,6 +105,8 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
             if(boost::starts_with(line, "@@ "))
             {
                 inDiffHeader = false;
+                
+                
             }
             
             //Already in an existing hunk, add current line
