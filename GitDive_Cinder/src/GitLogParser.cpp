@@ -20,7 +20,7 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
         if(boost::starts_with(line, "GD_commit")){
             
             if (!line.empty() && line[line.length()-1] == '\n') {
-                s.erase(s.length()-1);
+                line.erase(line.length()-1);
             }
             
             vector<string> logVars;
