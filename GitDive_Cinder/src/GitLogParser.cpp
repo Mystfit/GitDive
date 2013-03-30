@@ -69,65 +69,65 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             shared_ptr<Diff> diffPtr;
             diff = diffPtr;
             diffList.push_back(diff);
-            
-            //Move through the header and set up the diff object from the parsed diff vars
-            if(inDiffHeader){
-                if(starts_with(line, "index"))
-                {
-                }
-                
-                else if(starts_with(line, "new file mode"))
-                {
-                    diff->fileMode = "added";
-                }
-                
-                else if(starts_with(line, "deleted file mode"))
-                {
-                    diff->fileMode = "deleted";
-                }
-                
-                else if(starts_with(line, "Binary files"))
-                {
-                    diff->fileType = "binary";
-                }
-                
-                else if(starts_with(line, "--- a/"))
-                {
-                    diff->setFileNameA( line.erase(0, 6) );
-                }
-                
-                else if(starts_with(line, "+++ b/"))
-                {
-                    diff->setFileNameB( line.erase(0, 6) );
-                }
-                
-                cout << line << endl;
-            }
-            
-            
-            //Start a new hunk in the current diff
-            if(starts_with(line, "@@ "))
+        }
+        
+        //Move through the header and set up the diff object from the parsed diff vars
+        if(inDiffHeader){
+            if(starts_with(line, "index"))
             {
-
-                //Creates a new diffHunk to store changed lines
-                shared_ptr<DiffHunk> diffHunkPtr;
-                diffHunk = diffHunkPtr;
-                diff->addDiffHunk(diffHunk);
-                
-                vector<string> splitLine;
-                split(splitLine, line, is_any_of(" ,"));
-                
-                diffHunk->setPreChangedLines(atoi( Utils::checkStrIndexInRange(splitLine, 1, true ).c_str() ), atoi( Utils::checkStrIndexInRange(splitLine, 2, true ).c_str() ));
-                diffHunk->setPostChangedLines(atoi( Utils::checkStrIndexInRange(splitLine, 3, true ).c_str() ), atoi( Utils::checkStrIndexInRange(splitLine, 4, true ).c_str() ));
-                
-                inDiffHeader = false;
             }
             
-            //Already in an existing hunk, add current line
-            else {
-                if(!inDiffHeader){
-                    diffHunk->addLine(line);
-                }
+            else if(starts_with(line, "new file mode"))
+            {
+                diff->fileMode = "added";
+            }
+            
+            else if(starts_with(line, "deleted file mode"))
+            {
+                diff->fileMode = "deleted";
+            }
+            
+            else if(starts_with(line, "Binary files"))
+            {
+                diff->fileType = "binary";
+            }
+            
+            else if(starts_with(line, "--- a/"))
+            {
+                diff->setFileNameA( line.erase(0, 6) );
+            }
+            
+            else if(starts_with(line, "+++ b/"))
+            {
+                diff->setFileNameB( line.erase(0, 6) );
+            }
+            
+            cout << line << endl;
+        }
+        
+        
+        //Start a new hunk in the current diff
+        if(starts_with(line, "@@ "))
+        {
+
+            //Creates a new diffHunk to store changed lines
+            shared_ptr<DiffHunk> diffHunkPtr;
+            diffHunk = diffHunkPtr;
+            diff->addDiffHunk(diffHunk);
+            
+            vector<string> splitLine;
+            split(splitLine, line, is_any_of(" ,"));
+            
+            diffHunk->setPreChangedLines(atoi( Utils::checkStrIndexInRange(splitLine, 1, true ).c_str() ), atoi( Utils::checkStrIndexInRange(splitLine, 2, true ).c_str() ));
+            diffHunk->setPostChangedLines(atoi( Utils::checkStrIndexInRange(splitLine, 3, true ).c_str() ), atoi( Utils::checkStrIndexInRange(splitLine, 4, true ).c_str() ));
+            
+            inDiffHeader = false;
+        }
+        
+        //Already in an existing hunk, add current line
+        else {
+            if(!inDiffHeader){
+                diffHunk->addLine(line);
             }
         }
                 
