@@ -54,7 +54,7 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
 {
     bool inDiffHeader = false;
     vector< shared_ptr<Diff> > diffList;
-    Diff diff;
+    shared_ptr<Diff> diff;
     DiffHunk diffHunk;
     
     for(int i = 0; i < diffBlock.size(); i++){
