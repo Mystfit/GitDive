@@ -92,12 +92,12 @@ vector<Diff> GitLogParser::parseCommit(vector<string> diffBlock)
                 
                 else if(boost::starts_with(line, "--- a/"))
                 {
-                    diff.setFileNameA( line.erase(0, 5) );
+                    diff.setFileNameA( line.erase(0, 6) );
                 }
                 
                 else if(boost::starts_with(line, "+++ b/"))
                 {
-                    diff.setFileNameB( line.erase(0, 5) );
+                    diff.setFileNameB( line.erase(0, 6) );
                 }
             }
             
