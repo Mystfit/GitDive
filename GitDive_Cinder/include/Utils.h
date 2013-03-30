@@ -23,7 +23,7 @@ class Utils {
 public:
     //Returns stdout from a given command
     static string getCmdOutput(const char* command);
-    static void splitTextLines(string input);
+    static void splitTextLines(string &input, string format);
     static void strip(string &input, string search){ boost::replace_all(input, search, ""); }
 
 };
