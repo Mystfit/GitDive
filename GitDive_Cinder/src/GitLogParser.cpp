@@ -146,28 +146,28 @@ string GitLogParser::serializeCommit(Commit commit)
     stringstream commitText;
     commitText << "/***=== Commit begins" << endl;
     
-    commitText += "|== Commit hash: " + commit.commitHash + "\n";
-    commitText += "|== Author: " + commit.author + "\n";
-    commitText += "|== Date: " + commit.date + "\n";
-    commitText += "|== Message: " + commit.message + "\n\n";
+    commitText << "|== Commit hash: " << commit.commitHash << endl;
+    commitText << "|== Author: " + commit.author + "\n";
+    commitText << "|== Date: " + commit.date + "\n";
+    commitText << "|== Message: " + commit.message + "\n\n";
     
     for(int i = 0; i < commit.getNumDiffs(); i++){
         shared_ptr<Diff> diff = commit.getDiff(i);
-        commitText += "|/=== Diff File: " + diff->getFileName() + "\n";
+        commitText << "|/=== Diff File: " + diff->getFileName() + "\n";
         
         for(int j = 0; j < diff->getNumHunks(); j++){
             shared_ptr<DiffHunk> diffHunk = diff->getDiffHunk(j);
-            commitText += "||/--- Code hunk begins\n";
+            commitText << "||/--- Code hunk begins\n";
             
             for(int k = 0; k < diffHunk->getNumLines(); k++){
-                commitText += "|| " + diffHunk->getLine(k) + "\n";
+                commitText << "|| " + diffHunk->getLine(k) + "\n";
             }
             
-            commitText += "||\\--- Code hunk ends\n";
+            commitText << "||\\--- Code hunk ends\n";
         }
-        commitText += "|\\=== Diff Finish\n";
+        commitText << "|\\=== Diff Finish\n";
     }
-    commitText += "\\***=== Commit ends\n\n\n";
+    commitText << "\\***=== Commit ends\n\n\n";
     
     return commitText.str();
 }
