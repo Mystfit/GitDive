@@ -59,7 +59,8 @@ public:
     
     string getFileName(){
         if(m_fileNameB != "/dev/null") return m_fileNameB;
-        if
+        if(m_fileNameB != "/dev/null") return m_fileNameB;
+
     }
     
     int getNumHunks(){ return m_hunkList.size(); };
