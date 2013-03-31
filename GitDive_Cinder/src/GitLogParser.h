@@ -23,7 +23,7 @@ public:
     static vector< boost::shared_ptr<Diff> > parseCommit(vector<string> diffBlock);
     
     //Converts commit into a pretty string for printing
-    static string serializeCommit(Commit commit);
+    static string serializeCommit(shared_ptr<Commit> commit);
 };
 
 #endif /* defined(__GitDive_Cinder__GitLogParser__) */
