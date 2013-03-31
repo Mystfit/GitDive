@@ -73,6 +73,8 @@ public:
             m_diffList.push_back(diffList[i]);
         }
     }
+    
+    Diff getDiff(int index){ return m_diffList[index]; };
 
 
 private:
