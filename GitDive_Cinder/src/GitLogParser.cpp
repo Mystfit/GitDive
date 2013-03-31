@@ -158,6 +158,10 @@ string GitLogParser::serializeCommit(Commit commit)
             shared_ptr<DiffHunk> diffHunk = diff->getDiffHunk(j);
             commitText += "||/--- Code hunk begins\n";
             
+            for(int k = 0; k < diffHunk->getNumLines(); k++){
+                
+            }
+            
             commitText += "||\\--- Code hunk ends\n";
 
         }
