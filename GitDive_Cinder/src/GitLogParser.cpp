@@ -150,14 +150,12 @@ string GitLogParser::serializeCommit(Commit commit)
     commitText += "|== Date: " + commit.date + "\n";
     commitText += "|== Message: " + commit.message + "\n\n";
     
-    for(int i = 0; i < commit.getNumDiffs(); i++)
-    {
+    for(int i = 0; i < commit.getNumDiffs(); i++){
         shared_ptr<Diff> diff = commit.getDiff(i);
         commitText += "|/=== Diff File: " + diff->getFileName() + "\n";
         
         for(int j = 0; j < diff->getNumHunks(); j++){
             shared_ptr<DiffHunk> diffHunk = diff->getDiffHunk(j);
-
             commitText += "||/--- Code hunk begins\n";
 
         }
