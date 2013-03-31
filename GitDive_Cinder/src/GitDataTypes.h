@@ -57,7 +57,7 @@ public:
     void setFileNameA(string filename){ m_fileNameA = filename; };
     void setFileNameB(string filename){ m_fileNameB = filename; };
     
-    int getNumHunks()
+    int getNumHunks(){ return m_hunkLiist.size(); };
 
 private:
     string m_fileNameA;
