@@ -20,7 +20,7 @@ void GitDive_CinderApp::setup()
     
     //Test of the commit serializer
     for(int i = 0; i < commitList.size(); i++){
-        
+        console() << GitLogParser::serializeCommit(Commit("asdasdsa", "asdsadsad")) << endl;
     }
 }
 
