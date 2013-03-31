@@ -145,7 +145,7 @@ string GitLogParser::serializeCommit(Commit commit)
 {
     string commitText = "/***=== Commit begins\n";
     
-    commitText += "|== Commit hash: " + self.commitHash + "\n";
+    commitText += "|== Commit hash: " + commit.commitHash + "\n";
     
     
     return commitText;
