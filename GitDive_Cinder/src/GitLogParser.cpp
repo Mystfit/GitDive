@@ -155,6 +155,9 @@ string GitLogParser::serializeCommit(Commit commit)
         shared_ptr<Diff> diff = commit.getDiff(i);
         commitText += "|/=== Diff File: " + diff->getFileName() + "\n";
         
+        for(int j = 0; j < diff->getNumHunks(); j++){
+            shared_ptr<DiffHunk>
+        }
     }
     
     commitText += "\\***=== Commit ends\n\n\n";
