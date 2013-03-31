@@ -169,5 +169,5 @@ string GitLogParser::serializeCommit(Commit commit)
     }
     commitText += "\\***=== Commit ends\n\n\n";
     
-    return commitText;
+    return commitText.str();
 }
