@@ -22,7 +22,10 @@ void GitDive_CinderApp::setup()
     ofstream diffOutput;
     
     diffOutput.open ("/Users/mystfit/desktop/diffOut.txt");
-    for(int i = 0; i < commitList.size(); i++) diffOutput << GitLogParser::serializeCommit(commitList[i]);
+    for(int i = 0; i < commitList.size(); i++) {
+        console() << "Writing commit:" << i << endl;
+        diffOutput << GitLogParser::serializeCommit(commitList[i]);
+    }
     diffOutput.close();
 
 }
