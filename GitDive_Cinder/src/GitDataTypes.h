@@ -56,6 +56,8 @@ public:
     void addDiffHunk(boost::shared_ptr<DiffHunk> hunk){ m_hunkList.push_back(hunk); };
     void setFileNameA(string filename){ m_fileNameA = filename; };
     void setFileNameB(string filename){ m_fileNameB = filename; };
+    
+    int getNumHunks)
 
 private:
     string m_fileNameA;
