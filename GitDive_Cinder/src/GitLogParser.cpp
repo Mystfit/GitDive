@@ -134,7 +134,6 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             }
         }
                 
-        diffList.push_back(diff);
     }
     
     return diffList;
