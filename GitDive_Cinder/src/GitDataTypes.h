@@ -59,7 +59,7 @@ public:
     
     string getFileName(){
         if(m_fileNameB != "/dev/null") return m_fileNameB;
-        if(m_fileNameB != "/dev/null") return m_fileNameB;
+        if(m_fileNameA != "/dev/null") return m_fileNameA;
 
     }
     
