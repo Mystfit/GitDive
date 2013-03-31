@@ -74,7 +74,7 @@ public:
         }
     }
     
-    int getGumDiffs(){ return m_diffList.size(); };
+    int getNumDiffs(){ return m_diffList.size(); };
     
     boost::shared_ptr<Diff> getDiff(int index){ return m_diffList[index]; };
 
