@@ -10,6 +10,7 @@
 #define __GitDive_Cinder__GitLogParser__
 
 #include <iostream>
+#include <sstream>
 #include "GitDataTypes.h"
 
 using namespace boost;
