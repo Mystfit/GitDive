@@ -58,7 +58,7 @@ public:
     void setFileNameB(string filename){ m_fileNameB = filename; };
     
     string getFileName(){
-        if(m_fileNameA != "/dev/null") return m_fileNameB;
+        if(m_fileNameB != "/dev/null") return m_fileNameB;
         if
     }
     
