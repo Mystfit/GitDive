@@ -153,7 +153,7 @@ string GitLogParser::serializeCommit(Commit commit)
     for(int i = 0; i < commit.getNumDiffs(); i++)
     {
         shared_ptr<Diff> diff = commit.getDiff(i);
-        commitText += "|/=== Diff File: " + diff.getFilename() + "\n"
+        commitText += "|/=== Diff File: " + diff.getFilename() + "\n";
         
     }
     
