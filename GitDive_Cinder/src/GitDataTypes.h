@@ -46,7 +46,7 @@ private:
 
 
 /*
- * Block of lines inside a Diff
+ * Collection of changes made to one file
  */
 class Diff {
 public:
@@ -64,6 +64,9 @@ private:
 };
 
 
+/*
+ * All file additions/deletions/changes made in one commit
+ */
 class Commit {
 public:
     Commit(string _commit, string _date, string _author = "", string _message = "");
