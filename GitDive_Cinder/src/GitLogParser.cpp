@@ -150,7 +150,7 @@ string GitLogParser::serializeCommit(Commit commit)
     commitText += "|== Date: " + commit.date + "\n";
     commitText += "|== Message: " + commit.message + "\n\n";
     commitText += self.serializeDiffs()
-    commitText += "\\***=== Commit ends\n\n\n"
+    commitText += "\\***=== Commit ends\n\n\n";
     
     
     return commitText;
