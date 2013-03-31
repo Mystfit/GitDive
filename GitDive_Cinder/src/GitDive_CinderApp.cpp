@@ -20,7 +20,7 @@ void GitDive_CinderApp::setup()
     
     //Test of the commit serializer
     ofstream diffOutput;
-    myfile.open ("diffOut");
+    myfile.open ("diffOut.txt");
     for ( int i = 1; i <= 5; ++i )
         myfile << i << "\n";
     myfile.close();
