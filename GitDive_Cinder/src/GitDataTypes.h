@@ -93,7 +93,3 @@ private:
 
 
 #endif /* defined(__GitDive_Cinder__GitDataTypes__) */
-
-
-
-
