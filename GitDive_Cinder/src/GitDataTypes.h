@@ -34,9 +34,9 @@ public:
         m_postBlockSize = numLines;
     }
     
+    int getNumLines(){ return m_hunkData.size(); };
     void addLine(string line){ m_hunkData.push_back(line); };
     string getLine(int index){ return m_hunkData[index]; };
-    int getNumLines(){ return m_hunkData.size(); };
     
 private:
     string m_preLinePos;
