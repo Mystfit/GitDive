@@ -141,7 +141,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
 }
 
 
-string GitLogParser::serializeCommit(Commit commit)
+string GitLogParser::serializeCommit(shared_ptr<Commit> commit)
 {
     string commitText = "/***=== Commit begins\n";
     
