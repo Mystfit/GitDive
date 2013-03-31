@@ -143,7 +143,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
 
 string GitLogParser::serializeCommit(Commit commit)
 {
-    stringstream commitText
+    stringstream commitText;
     commitText << "/***=== Commit begins" << endl;
     
     commitText += "|== Commit hash: " + commit.commitHash + "\n";
