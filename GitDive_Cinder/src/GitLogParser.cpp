@@ -147,20 +147,20 @@ string GitLogParser::serializeCommit(Commit commit)
     commitText << "/***=== Commit begins" << endl;
     
     commitText << "|== Commit hash: " << commit.commitHash << endl;
-    commitText << "|== Author: " + commit.author << endl;
-    commitText << "|== Date: " + commit.date << endl;
-    commitText << "|== Message: " + commit.message << endl << endl;
+    commitText << "|== Author: " << commit.author << endl;
+    commitText << "|== Date: " << commit.date << endl;
+    commitText << "|== Message: " << commit.message << endl << endl;
     
     for(int i = 0; i < commit.getNumDiffs(); i++){
         shared_ptr<Diff> diff = commit.getDiff(i);
-        commitText << "|/=== Diff File: " + diff->getFileName() << endl;
+        commitText << "|/=== Diff File: " << diff->getFileName() << endl;
         
         for(int j = 0; j < diff->getNumHunks(); j++){
             shared_ptr<DiffHunk> diffHunk = diff->getDiffHunk(j);
             commitText << "||/--- Code hunk begins" << endl;
             
             for(int k = 0; k < diffHunk->getNumLines(); k++){
-                commitText << "|| " + diffHunk->getLine(k) << endl;
+                commitText << "|| " << diffHunk->getLine(k) << endl;
             }
             
             commitText << "||\\--- Code hunk ends" << endl;
