@@ -165,7 +165,7 @@ string GitLogParser::serializeCommit(Commit commit)
             
             commitText << "||\\--- Code hunk ends" << endl;
         }
-        commitText << "|\\=== Diff Finish\n";
+        commitText << "|\\=== Diff Finish" << endl;
     }
     commitText << "\\***=== Commit ends\n\n\n";
     
