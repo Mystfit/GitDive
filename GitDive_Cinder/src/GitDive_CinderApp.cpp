@@ -21,7 +21,7 @@ void GitDive_CinderApp::setup()
     //Test of the commit serializer
     ofstream diffOutput;
     diffOutput.open ("diffOut.txt");
-        myfile << i << "\n";
+        diffOutput << i << "\n";
     for(int i = 0; i < commitList.size(); i++){
         console() << GitLogParser::serializeCommit(commitList[i]) << endl;
     }
