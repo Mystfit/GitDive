@@ -153,6 +153,8 @@ string GitLogParser::serializeCommit(Commit commit)
     for(int i = 0; i < commit.getNumDiffs(); i++)
     {
         
+        
+        
     }
     
     commitText += "\\***=== Commit ends\n\n\n";
