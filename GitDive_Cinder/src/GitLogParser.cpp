@@ -145,10 +145,10 @@ string GitLogParser::serializeCommit(shared_ptr<Commit> commit)
 {
     string commitText = "/***=== Commit begins\n";
     
-    commitText += "|== Commit hash: " + commit.commitHash + "\n";
-    commitText += "|== Author: " + commit.author + "\n";
-    commitText += "|== Date: " + commit.date + "\n";
-    commitText += "|== Message: " + commit.message + "\n\n";
+    commitText += "|== Commit hash: " + commit->commitHash + "\n";
+    commitText += "|== Author: " + commit->author + "\n";
+    commitText += "|== Date: " + commit->date + "\n";
+    commitText += "|== Message: " + commit->message + "\n\n";
     
     for(int i = 0; i < commit.getNumDiffs(); i++){
         shared_ptr<Diff> diff = commit.getDiff(i);
