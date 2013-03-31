@@ -35,8 +35,8 @@ public:
     }
     
     void addLine(string line){ m_hunkData.push_back(line); };
-    int getNumLines(){ return m_hunkData.size(); };
     string getLine(int index){ return m_hunkData[index]; };
+    int getNumLines(){ return m_hunkData.size(); };
     
 private:
     string m_preLinePos;
