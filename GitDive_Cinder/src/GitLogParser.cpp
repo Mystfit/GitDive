@@ -151,6 +151,9 @@ string GitLogParser::serializeCommit(Commit commit)
     commitText << "|== Date: " << commit.date << endl;
     commitText << "|== Message: " << commit.message << endl << endl;
     
+    cout << commit.getNumDiffs() << endl;
+    cout << endl;
+    
     for(int i = 0; i < commit.getNumDiffs(); i++){
         shared_ptr<Diff> diff = commit.getDiff(i);
         commitText << "|/=== Diff File: " << diff->getFileName() << endl;
