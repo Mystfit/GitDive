@@ -14,6 +14,7 @@
 #include "Utils.h"
 #include "GitLogParser.h"
 
+#include <fstream.h>
 #include <stdio.h>
 
 
