@@ -156,7 +156,7 @@ string GitLogParser::serializeCommit(Commit commit)
         commitText += "|/=== Diff File: " + diff->getFileName() + "\n";
         
         for(int j = 0; j < diff->getNumHunks(); j++){
-            shared_ptr<DiffHunk>
+            shared_ptr<DiffHunk> diffHunk = diff->getDiffHunk(j);
         }
     }
     
