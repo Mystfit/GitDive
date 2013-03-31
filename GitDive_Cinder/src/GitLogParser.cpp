@@ -147,9 +147,9 @@ string GitLogParser::serializeCommit(Commit commit)
     commitText << "/***=== Commit begins" << endl;
     
     commitText << "|== Commit hash: " << commit.commitHash << endl;
-    commitText << "|== Author: " + commit.author + "\n";
-    commitText << "|== Date: " + commit.date + "\n";
-    commitText << "|== Message: " + commit.message + "\n\n";
+    commitText << "|== Author: " + commit.author << endl;
+    commitText << "|== Date: " + commit.date << endl;
+    commitText << "|== Message: " + commit.message << endl << endl;
     
     for(int i = 0; i < commit.getNumDiffs(); i++){
         shared_ptr<Diff> diff = commit.getDiff(i);
