@@ -19,6 +19,11 @@ void GitDive_CinderApp::setup()
     commitList = GitLogParser::parseLog(outputStrings);
     
     //Test of the commit serializer
+    ofstream diffOutput;
+    myfile.open ("diffOut");
+    for ( int i = 1; i <= 5; ++i )
+        myfile << i << "\n";
+    myfile.close();
     for(int i = 0; i < commitList.size(); i++){
         console() << GitLogParser::serializeCommit(commitList[i]) << endl;
     }
