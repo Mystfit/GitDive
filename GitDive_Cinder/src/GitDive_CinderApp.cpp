@@ -20,13 +20,13 @@ void GitDive_CinderApp::setup()
     
     //Test of the commit serializer
     ofstream diffOutput;
-    myfile.open ("diffOut.txt");
-    for ( int i = 1; i <= 5; ++i )
+    diffOutput.open ("diffOut.txt");
         myfile << i << "\n";
-    myfile.close();
     for(int i = 0; i < commitList.size(); i++){
         console() << GitLogParser::serializeCommit(commitList[i]) << endl;
     }
+    diffOutput.close();
+
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
