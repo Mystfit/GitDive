@@ -58,6 +58,7 @@ public:
     void setFileNameB(string filename){ m_fileNameB = filename; };
     
     int getNumHunks(){ return m_hunkList.size(); };
+    boost::shared_ptr<Diff> getDiffHunk(int index){ return m_hunkList[index]; };
 
 private:
     string m_fileNameA;
