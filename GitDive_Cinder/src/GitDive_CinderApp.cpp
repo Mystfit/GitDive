@@ -22,9 +22,7 @@ void GitDive_CinderApp::setup()
     ofstream diffOutput;
     diffOutput.open ("diffOut.txt");
     for(int i = 0; i < commitList.size(); i++){
-        diffOutput << i << 
-
-        console() << GitLogParser::serializeCommit(commitList[i]) << "\n";;
+        diffOutput << GitLogParser::serializeCommit(commitList[i]) << "\n";;
     }
     diffOutput.close();
 
