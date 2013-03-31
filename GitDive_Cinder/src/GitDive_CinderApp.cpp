@@ -20,9 +20,9 @@ void GitDive_CinderApp::setup()
     
     //Test of the commit serializer
     ofstream diffOutput;
+    
     diffOutput.open ("diffOut.txt");
     for(int i = 0; i < commitList.size(); i++) diffOutput << GitLogParser::serializeCommit(commitList[i]);
-    
     diffOutput.close();
 
 }
