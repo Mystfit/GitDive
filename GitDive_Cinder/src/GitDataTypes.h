@@ -17,7 +17,9 @@
 
 using namespace std;
 
-
+/*
+ * Block of lines inside a Diff
+ */
 class DiffHunk {
 public:
     DiffHunk();
@@ -43,6 +45,9 @@ private:
 };
 
 
+/*
+ * Block of lines inside a Diff
+ */
 class Diff {
 public:
     Diff();
@@ -75,7 +80,6 @@ public:
     }
     
     int getNumDiffs(){ return m_diffList.size(); };
-    
     boost::shared_ptr<Diff> getDiff(int index){ return m_diffList[index]; };
 
 
