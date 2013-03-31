@@ -152,7 +152,7 @@ string GitLogParser::serializeCommit(Commit commit)
     
     for(int i = 0; i < commit.getNumDiffs(); i++)
     {
-        
+        shared_ptr<Diff> diff =
         
         
     }
