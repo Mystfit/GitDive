@@ -58,7 +58,8 @@ public:
     void setFileNameB(string filename){ m_fileNameB = filename; };
     
     string getFileName(){
-        if(m_fileNameA != "/dev/null") return 
+        if(m_fileNameA != "/dev/null") return m_fileNameB;
+        if
     }
     
     int getNumHunks(){ return m_hunkList.size(); };
