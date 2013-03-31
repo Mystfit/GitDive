@@ -23,6 +23,8 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
             if(commitList.size() > 0){            
                 commitList[commitList.size()-1].addDiffList( parseCommit(diffBlock) );
             }
+            
+            diffBlock.clear();
     
             //Split commit line into key/pair values
             Utils::strip(line, "\n");
