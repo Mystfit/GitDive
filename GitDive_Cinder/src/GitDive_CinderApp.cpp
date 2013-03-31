@@ -19,7 +19,9 @@ void GitDive_CinderApp::setup()
     commitList = GitLogParser::parseLog(outputStrings);
     
     //Test of the commit serializer
-    //console() << GitLogParser::serializeCommit(Commit("asdasdsa", "asdsadsad")) << endl;
+    for(int i = 0; i < commitList.size(); i++){
+        
+    }
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
