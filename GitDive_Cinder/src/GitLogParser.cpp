@@ -146,6 +146,11 @@ string GitLogParser::serializeCommit(Commit commit)
     string commitText = "/***=== Commit begins\n";
     
     commitText += "|== Commit hash: " + commit.commitHash + "\n";
+    commitText += "|== Author: " + commit.author + "\n"
+    commitText += "|== Date: " + commit.date + "\n"
+    commitText += "|== Message: " + self.message + "\n\n"
+    commitText += self.serializeDiffs()
+    commitText += "\\***=== Commit ends\n\n\n"
     
     
     return commitText;
