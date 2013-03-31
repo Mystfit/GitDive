@@ -74,7 +74,7 @@ public:
         }
     }
     
-    int getNumDiffs(){ return m_diffList.size();
+    int size(){ return m_diffList.size();
     Diff getDiff(int index){ return m_diffList[index]; };
 
 
