@@ -12,7 +12,9 @@ GitFileManager::GitFileManager(){
     
 }
 
-void GitFileManager::addFile(GitFile file);
+void GitFileManager::addFile(GitFile file){
+    
+}
 
 
 boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
