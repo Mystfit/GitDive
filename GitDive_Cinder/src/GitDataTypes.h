@@ -24,8 +24,11 @@ using namespace std;
 class Line {
 public:
     Line(string lineStr);
-private:
     
+    int getLineState(){ return m_lineState; };
+    
+private:
+    int m_lineState
 };
 
 
