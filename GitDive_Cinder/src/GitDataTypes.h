@@ -23,6 +23,7 @@ using namespace std;
  */
 class Line {
 public:
+    enum lineState{LINE_NORMAL = 0; LINE_ADDED, LINE_DELETED};
     Line(string lineStr);
     
     int getLineState(){ return m_lineState; };
