@@ -26,6 +26,8 @@ public:
     
     //Strips a string from a string
     static void strip(string &input, string search){ boost::replace_all(input, search, ""); }
+    
+    //Checks that the output from a string vector is not out of bounds
     static string checkStrIndexInRange(vector<string> &strs, int index, bool padZero = false);
 };
 
