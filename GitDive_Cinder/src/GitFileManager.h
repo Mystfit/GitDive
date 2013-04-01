@@ -14,4 +14,8 @@
 
 using namespace std;
 
+GitFileManager::GitFileManager(){
+    
+}
+
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
