@@ -25,9 +25,9 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
     return boost::shared_ptr<GitFile>();
 }
 
-void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile>, boost::shared_ptr<Diff> diff){
+void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::shared_ptr<Diff> diff){
     
-    vector<string>
+    vector<string> 
     for(int i = 0; i < diff->getNumHunks(); i++){
         shared_ptr<DiffHunk> diffHunk = diff->getDiffHunk(i);
         
