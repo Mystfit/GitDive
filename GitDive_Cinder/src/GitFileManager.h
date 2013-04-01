@@ -14,6 +14,7 @@
 #include "GitDataTypes.h"
 
 using namespace std;
+using namespace boost;
 
 class GitFileManager {
 public:
