@@ -27,4 +27,7 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 
 void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile>, Commit &commit){
     
+    
+    for(
+    
 }
