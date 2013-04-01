@@ -70,6 +70,7 @@ public:
     int getLinepos(){return m_linePos; };
     void incrementLinePos(){ m_linePos++; };
     
+    //Methods for setting calculating line positions based on the old line positions
     void setOldLinePos(int pos){m_oldLinePos = pos; };
     int getOldLinePos(){return m_oldLinePos; };
     void incrementOldLinePos(){ m_oldLinePos++; };
