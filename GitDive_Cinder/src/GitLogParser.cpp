@@ -126,7 +126,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             diffHunk->setPreChangedLines(atoi( preLines.c_str() ), atoi( numPreLines.c_str() ));
             diffHunk->setPostChangedLines(atoi( postLines.c_str() ), atoi( numPostLines.c_str() ));
             diffHunk->setLinePos( atoi( postLines.c_str() ) );
-            diffHunk->setOldLinePos( atoi( postLines.c_str() ) );
+            diffHunk->setOldLinePos( atoi( preLines.c_str() ) );
             
             inDiffHeader = false;
         }
