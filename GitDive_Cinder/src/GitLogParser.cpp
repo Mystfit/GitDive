@@ -136,7 +136,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             if(!inDiffHeader){
                 
                 Line cLine(line);
-                
+                    
                 //If the line is to be removed, stick with the old line position
                 if(cLine.getLineState() == Line::LINE_ADDED || cLine.getLineState() == Line::LINE_NORMAL ) cLine.setLinePos(diffHunk->getLinepos());
                 if(cLine.getLineState() == Line::LINE_DELETED) cLine.setLinePos(diffHunk->getOldLinePos());
