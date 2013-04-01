@@ -162,10 +162,10 @@ string GitLogParser::serializeCommit(Commit commit)
             
             for(int k = 0; k < diffHunk->getNumLines(); k++){
                 Line strLine = diffHunk->getLine(k);
-                if(strLine.getLineState() == Line::LINE_ADDED)
+                if(strLine.getLineState() == Line::LINE_ADDED) commitText << "|| +" << diffHunk->getLine(k).getStr() << endl;
                 else if(strLine.getLineState() == Line::LINE_DELETED)
 
-                commitText << "|| " << diffHunk->getLine(k).getStr() << endl;
+                
             }
             
             commitText << "||\\--- Code hunk ends" << endl;
