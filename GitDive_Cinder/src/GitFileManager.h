@@ -18,6 +18,8 @@ using namespace std;
 class GitFileManager {
 public:
     GitFileManager();
+    
+    void addFile(GitFile file);
 private:
     vector<GitFile> m_fileList;
 };
