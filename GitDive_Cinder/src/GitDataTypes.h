@@ -64,10 +64,10 @@ public:
     
 private:
     int m_linePos;
-    string m_preLinePos;
-    string m_preBlockSize;
-    string m_postLinePos;
-    string m_postBlockSize;
+    int m_preLinePos;
+    int m_preBlockSize;
+    int m_postLinePos;
+    int m_postBlockSize;
     vector<Line> m_hunkData;
 };
 
