@@ -161,7 +161,7 @@ string GitLogParser::serializeCommit(Commit commit)
             commitText << "||/--- Code hunk begins" << endl;
             
             for(int k = 0; k < diffHunk->getNumLines(); k++){
-                commitText << "|| " << diffHunk->getLine(k) << endl;
+                commitText << "|| " << diffHunk->getLine(k).getStr() << endl;
             }
             
             commitText << "||\\--- Code hunk ends" << endl;
