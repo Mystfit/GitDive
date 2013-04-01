@@ -133,7 +133,9 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
         //Already in an existing hunk, add current line
         else {
             if(!inDiffHeader){
+                Line line(line);
                 diffHunk->addLine(Line(line));
+                
                 diffHunk->incrementLinePos();
             }
         }
