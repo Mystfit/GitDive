@@ -10,7 +10,7 @@
 
 Line::Line(string lineStr){
     
-    if(lineStr)
+    if(lineStr[0] == "+")
     
     
     m_lineStr = lineStr;
