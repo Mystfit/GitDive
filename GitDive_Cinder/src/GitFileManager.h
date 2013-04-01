@@ -23,6 +23,10 @@ public:
     void addFile(GitFile file);
     boost::shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
     boost::shared_ptr<GitFile> getFileByName(string fileName);
+    
+    //File modification
+    static void applyDiffToFile(boost::shared_ptr<GitFile>, Commit &commit );
+    
 private:
     vector< boost::shared_ptr<GitFile> > m_fileList;
 };
