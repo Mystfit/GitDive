@@ -13,9 +13,7 @@ Line::Line(string lineStr){
 }
 
 Line::getLineStr(){
-    if(m_lineState)
 }
-
 Commit::Commit(string _commit, string _date, string _author, string _message){
     commitHash = _commit;
     date = _date;
