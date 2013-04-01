@@ -9,6 +9,10 @@
 #include "GitDataTypes.h"
 
 Line::Line(string lineStr){
+    
+    if(lineStr)
+    
+    
     m_lineStr = lineStr;
 }
 
