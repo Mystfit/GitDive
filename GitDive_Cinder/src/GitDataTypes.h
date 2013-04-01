@@ -100,6 +100,7 @@ public:
     void setFileNameA(string filename){ m_fileNameA = filename; };  //Filename before renaming
     void setFileNameB(string filename){ m_fileNameB = filename; };  //Filename after renaming
     
+    //Always returns the renamed file
     string getFileName(){
         if(m_fileNameB != "/dev/null") return m_fileNameB;
         if(m_fileNameA != "/dev/null") return m_fileNameA;
