@@ -23,7 +23,7 @@ using namespace std;
  */
 class Line {
 public:
-    Line();
+    Line(string lineStr);
 private:
     
 };
