@@ -12,6 +12,6 @@
 #include <iostream>
 #include <vector>
 
-
+using namespace std;
 
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
