@@ -150,7 +150,7 @@ private:
 class GitFile {
 public:
     GitFile();
-    void active(){ return bIsActive; };
+    bool active(){ return bIsActive; };
 private:
     bool bIsActive;
     vector<string> m_activeLines;
