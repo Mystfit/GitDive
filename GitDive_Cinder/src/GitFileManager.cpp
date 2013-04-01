@@ -11,3 +11,5 @@
 GitFileManager::GitFileManager(){
     
 }
+
+GitFileManager::getFileByName()
