@@ -23,7 +23,7 @@ public:
     boost::shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
     boost::shared_ptr<GitFile> getFileByname(string fileName);
 private:
-    vector< shared_ptr<GitFile> > m_fileList;
+    vector< boost::shared_ptr<GitFile> > m_fileList;
 };
 
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
