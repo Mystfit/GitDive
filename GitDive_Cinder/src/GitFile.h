@@ -13,6 +13,7 @@
 
 class GitFile {
 public:
+    
 private:
 };
 
