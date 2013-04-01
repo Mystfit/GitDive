@@ -135,7 +135,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             if(!inDiffHeader){
                 Line currentLine(line);
                 
-                if(currentLine.getLineState() == Line::LINE_ADDED) diffHunk->incrementLinePos();
+                if(currentLine.getLineState() == Line::LINE_ADDED || currentLine.getLineState() == Line::LINE_NORMAL) diffHunk->incrementLinePos();
 
                  
                 diffHunk->addLine();
