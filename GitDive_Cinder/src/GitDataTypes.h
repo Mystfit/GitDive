@@ -18,6 +18,9 @@
 using namespace std;
 
 
+/*
+ * A single line
+ */
 class Line {
     
 };
