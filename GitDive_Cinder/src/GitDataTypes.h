@@ -141,7 +141,7 @@ private:
 
 /*
  * File object constructed from git diff deltas
-/
+ */
 class GitFile {
 public:
     GitFile();
