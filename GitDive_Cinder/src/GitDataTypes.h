@@ -31,10 +31,10 @@ public:
     enum lineState{LINE_NORMAL = 0, LINE_ADDED, LINE_DELETED};
     int getLineState(){ return m_lineState; };
     
-    int linePos;
     
 private:
     int m_lineState;
+    int m_linePos;
     string m_lineStr;
 };
 
