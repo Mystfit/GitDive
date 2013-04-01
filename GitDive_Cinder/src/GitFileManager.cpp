@@ -7,3 +7,7 @@
 //
 
 #include "GitFileManager.h"
+
+GitFileManager::GitFileManager(){
+    
+}
