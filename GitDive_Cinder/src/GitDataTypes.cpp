@@ -10,6 +10,8 @@
 
 Line::Line(string lineStr){
     m_lineStr = lineStr;
+    
+    
 
     if(strcmp(lineStr.c_str(), "+") != 0){
         m_lineState = LINE_ADDED;
