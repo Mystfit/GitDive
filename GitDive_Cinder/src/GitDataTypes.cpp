@@ -15,7 +15,10 @@ Line::Line(string lineStr){
         m_lineState = LINE_ADDED;
         m_lineStr.erase(0,1);
     }
-    else if(strcmp(lineStr.c_str(), "-") != 0) m_lineState = LINE_DELETED;
+    else if(strcmp(lineStr.c_str(), "-") != 0){
+        m_lineState = LINE_DELETED;
+        m_lineStr.erase(0,1);
+    }
     else m_lineState = LINE_NORMAL;
     
 }
