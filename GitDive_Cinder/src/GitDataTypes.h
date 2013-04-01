@@ -152,7 +152,7 @@ public:
     GitFile();
     
     bool active(){ return bIsActive; };
-    vector<string> getLines(){ return m_activeLines; };
+    vector<string> &getLines(){ return m_activeLines; };
     
     string filename;
 private:
