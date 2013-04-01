@@ -26,7 +26,7 @@ public:
     shared_ptr<GitFile> getFileByName(string fileName);
     
     //File modification
-    static void applyDiffToFile(shared_ptr<GitFile>, Diff &diff );
+    static void applyDiffToFile(shared_ptr<GitFile>, shared_ptr<Diff> diff );
     
 private:
     vector< boost::shared_ptr<GitFile> > m_fileList;
