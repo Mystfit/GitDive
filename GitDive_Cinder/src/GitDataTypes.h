@@ -60,9 +60,10 @@ public:
     void addLine(Line line){ m_hunkData.push_back(line); };
     Line getLine(int index){ return m_hunkData[index]; };
     
-    
+    void incrementLinePos(){
     
 private:
+        int m_currentLinePos;
     string m_preLinePos;
     string m_preBlockSize;
     string m_postLinePos;
