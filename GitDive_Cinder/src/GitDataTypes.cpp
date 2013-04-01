@@ -19,8 +19,9 @@ Line::Line(string lineStr){
         m_lineState = LINE_DELETED;
         m_lineStr.erase(0,1);
     }
-    else m_lineState = LINE_NORMAL;
-    
+    else{
+        m_lineState = LINE_NORMAL;
+    }    
 }
 
 Commit::Commit(string _commit, string _date, string _author, string _message){
