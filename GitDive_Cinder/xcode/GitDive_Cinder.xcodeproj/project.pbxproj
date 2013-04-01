@@ -99,7 +99,6 @@
 			children = (
 				00BAE6590E7ED9C10018A608 /* GitDive_CinderApp.cpp */,
 				4AD7491F17097505006ACBC6 /* GitFileManager.cpp */,
-				4AD7492017097505006ACBC6 /* GitFileManager.h */,
 				4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */,
 				4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */,
 				4AD7491C17096489006ACBC6 /* GitFile.cpp */,
@@ -161,6 +160,7 @@
 				4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */,
 				4A1A6BCB1705AAE60046BE09 /* GitLogParser.h */,
 				4A1A6BC81705A5880046BE09 /* GitDataTypes.h */,
+				4AD7492017097505006ACBC6 /* GitFileManager.h */,
 				4AD7491D17096489006ACBC6 /* GitFile.h */,
 				4A1A6B7B17042CCA0046BE09 /* Utils.h */,
 				32CA4F630368D1EE00C91783 /* GitDive_Cinder_Prefix.pch */,
