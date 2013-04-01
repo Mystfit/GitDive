@@ -22,5 +22,5 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
         if(m_fileList[i]->filename == fileName) return m_fileList[i];
     }
     
-    return NULL;
+    return boost::shared_ptr<File>;
 }
