@@ -150,6 +150,7 @@ private:
 class GitFile {
 public:
     GitFile();
+    
     bool active(){ return bIsActive; };
     string filename;
 private:
