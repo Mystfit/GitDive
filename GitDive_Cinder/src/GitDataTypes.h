@@ -30,8 +30,6 @@ public:
     void setLineState(int lineState){ m_lineState = lineState; };
     int getLineState(){ return m_lineState; };
     
-    
-    
 private:
     int m_lineState;
 };
