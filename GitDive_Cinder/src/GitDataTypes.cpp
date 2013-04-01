@@ -37,7 +37,13 @@ Diff::Diff(){
 }
 
 int Diff::getDeltaNumLines(){
+    int addLines, removeLines, deltaLines = 0;
     
+    for(int i = 0; i < m_hunkList.size(); i++){
+        for(int j = 0; j < m_hunkList[i]->getNumLines(); j++){
+            
+        }
+    }
 }
 
 
