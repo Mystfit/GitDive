@@ -32,7 +32,6 @@ public:
     enum lineState{LINE_NORMAL = 0, LINE_ADDED, LINE_DELETED};
     int getLineState(){ return m_lineState; };
     
-    
 private:
     int m_lineState;
     int m_linePos;
