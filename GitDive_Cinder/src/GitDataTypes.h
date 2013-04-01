@@ -62,9 +62,10 @@ public:
     
     void setLinePos(int pos){m_linePos = linePos; };
     void incrementLinePos(){ linePos++; };
-    int linePos;
     
 private:
+    int m_linePos;
+
     int m_preLinePos;
     int m_preBlockSize;
     int m_postLinePos;
