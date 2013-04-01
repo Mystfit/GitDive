@@ -13,7 +13,7 @@ Line::Line(string lineStr){
     
     
 
-    if(strcmp(lineStr.c_str(), "+") != 0){
+    if(lineStr[0] == "+") != 0){
         m_lineState = LINE_ADDED;
         m_lineStr.erase(0,1);
     }
