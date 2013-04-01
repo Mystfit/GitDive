@@ -61,6 +61,7 @@ public:
     Line getLine(int index){ return m_hunkData[index]; };
     
     void setLinePos(int pos){m_linePos = linePos; };
+    int getLinepos(){return m_linePos; };
     void incrementLinePos(){ linePos++; };
     
 private:
