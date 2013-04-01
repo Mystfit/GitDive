@@ -12,7 +12,7 @@ Line::Line(string lineStr){
     
     
     if(strcmp(lineStr.c_str(), "+") != 0) m_lineState = LINE_ADDED;
-    else if(strcmp(lineStr.c_str(), "-" != 0) m_lineState = LINE_DELETED;
+    else if(strcmp(lineStr.c_str(), "-") != 0) m_lineState = LINE_DELETED;
     else m_lineState = LINE_NORMAL;
 
     
