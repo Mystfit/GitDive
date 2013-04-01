@@ -12,6 +12,8 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 class GitFile {
 public:
     GitFile();
