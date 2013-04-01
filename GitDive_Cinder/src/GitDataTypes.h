@@ -22,7 +22,10 @@ using namespace std;
  * A single line
  */
 class Line {
+public:
     Line();
+private:
+    
 };
 
 
