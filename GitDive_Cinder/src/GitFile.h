@@ -15,6 +15,7 @@ class GitFile {
 public:
     GitFile();
 private:
+    m_activeLines;
 };
 
 #endif /* defined(__GitDive_Cinder__GitFile__) */
