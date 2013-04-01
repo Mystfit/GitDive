@@ -8,7 +8,7 @@
 
 #include "GitDataTypes.h"
 
-Line::Line(string lineStr, int linePos){
+Line::Line(string lineStr){
     m_lineStr = lineStr;
     m_linePos = linePos;
     
