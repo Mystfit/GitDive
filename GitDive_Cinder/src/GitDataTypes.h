@@ -47,7 +47,8 @@ private:
 class DiffHunk {
 public:
     DiffHunk();
-        
+    
+    //Methods for storing pre/post line information about the hunk line start and length
     void setPreChangedLines(int linePos, int numLines){
         m_preLinePos = linePos;
         m_preBlockSize = numLines;
