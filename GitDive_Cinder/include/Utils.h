@@ -23,6 +23,8 @@ class Utils {
 public:
     //Returns stdout from a given command
     static string getCmdOutput(const char* command);
+    
+    //Strips a string from a string
     static void strip(string &input, string search){ boost::replace_all(input, search, ""); }
     static string checkStrIndexInRange(vector<string> &strs, int index, bool padZero = false);
 };
