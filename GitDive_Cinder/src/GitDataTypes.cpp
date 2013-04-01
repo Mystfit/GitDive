@@ -8,6 +8,9 @@
 
 #include "GitDataTypes.h"
 
+Line::Line(string lineStr){
+    m_lineStr = lineStr;
+}
 
 Commit::Commit(string _commit, string _date, string _author, string _message){
     commitHash = _commit;
