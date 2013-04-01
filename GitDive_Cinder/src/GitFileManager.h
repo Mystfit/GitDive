@@ -19,6 +19,7 @@ class GitFileManager {
 public:
     GitFileManager();
     
+    //File addition/retrieval
     void addFile(GitFile file);
     boost::shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
     boost::shared_ptr<GitFile> getFileByName(string fileName);
