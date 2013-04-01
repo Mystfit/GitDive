@@ -18,6 +18,7 @@ class GitFileManager {
 public:
     GitFileManager();
 private:
+    vector<GitFile>
 };
 
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
