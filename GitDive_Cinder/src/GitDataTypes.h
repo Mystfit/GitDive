@@ -58,7 +58,8 @@ public:
     
     int getNumLines(){ return m_hunkData.size(); };
     void addLine(Line line){ m_hunkData.push_back(line); };
-    Line getLine(int index){ return m_hunkData[index].getStr(); };
+    Line getLine(int index){ return m_hunkData[index]; }; 
+    string getLineStr(int index){ return m_hunkData[index].getStr(); };
     
 private:
     string m_preLinePos;
