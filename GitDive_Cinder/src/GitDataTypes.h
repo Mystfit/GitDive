@@ -145,7 +145,7 @@ private:
 class GitFile {
 public:
     GitFile();
-    void getActive(){ return bisActive
+    void getActive(){ return bIsActive
 private:
     bool isActive;
     vector<string> m_activeLines;
