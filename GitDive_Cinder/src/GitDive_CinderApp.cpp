@@ -25,6 +25,8 @@ void GitDive_CinderApp::setup()
     for(int i = 0; i < commitList.size(); i++) {
         diffOutput << GitLogParser::serializeCommit(commitList[i]);
     }
+    
+    //Close the file
     diffOutput.close();
 
 }
