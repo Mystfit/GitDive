@@ -11,7 +11,8 @@
 Line::Line(string lineStr){
     
     if(lineStr.at(0) == "+") m_lineState == LINE_ADDED;
-    if(lineStr.at(0) == "-") m_lineState == LINE_DELETED;
+    else if(lineStr.at(0) == "-") m_lineState == LINE_DELETED;
+    else m_lineState == LINE_NORMAL
 
     
     
