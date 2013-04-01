@@ -134,7 +134,10 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
         else {
             if(!inDiffHeader){
                 Line currentLine(line);
-                diffHunk->addLine(Line(line));
+                
+                if(line)
+                
+                diffHunk->addLine();
                 
                 diffHunk->incrementLinePos();
             }
