@@ -10,6 +10,7 @@
 #define __GitDive_Cinder__GitFile__
 
 #include <iostream>
+#include <vector>
 
 class GitFile {
 public:
