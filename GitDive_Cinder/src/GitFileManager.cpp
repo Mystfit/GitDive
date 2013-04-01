@@ -16,4 +16,4 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
     for(int i = 0; i < m_fileList.size(); i++){
         
     }
-};
+}
