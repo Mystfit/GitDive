@@ -94,8 +94,8 @@ private:
 class Diff {
 public:
     Diff();
-    string fileType;
-    string fileMode;
+    string fileType;    //Binary/text
+    string fileMode;    //Added/deleted
     void addDiffHunk(boost::shared_ptr<DiffHunk> hunk){ m_hunkList.push_back(hunk); };
     void setFileNameA(string filename){ m_fileNameA = filename; };
     void setFileNameB(string filename){ m_fileNameB = filename; };
