@@ -24,7 +24,7 @@ using namespace std;
 class Line {
 public:
     
-    Line(string lineStr, int linePos);
+    Line(string lineStr);
     
     string getStr(){return m_lineStr; };
     int getLinePos(){ return m_linePos; };
