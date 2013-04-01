@@ -27,6 +27,7 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 
 void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::shared_ptr<Diff> diff){
     
+    //Make a copy of the original lines
     vector<string> originalLines = file->getLines();
     
     for(int i = 0; i < diff->getNumHunks(); i++){
