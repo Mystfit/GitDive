@@ -58,13 +58,15 @@ public:
     
     int getNumLines(){ return m_hunkData.size(); };
     void addLine(Line line){ m_hunkData.push_back(line); };
-    Line getLine(int index){ return m_hunkData[index]; }; 
+    Line getLine(int index){ return m_hunkData[index]; };
+    
+    void incrementLinePos(){
     
 private:
-    string m_preLinePos;
-    string m_preBlockSize;
-    string m_postLinePos;
-    string m_postBlockSize;
+    int m_preLinePos;
+    int m_preBlockSize;
+    int m_postLinePos;
+    int m_postBlockSize;
     vector<Line> m_hunkData;
 };
 
