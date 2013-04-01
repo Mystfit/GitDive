@@ -15,7 +15,6 @@
 using namespace std;
 
 class GitFileManager {
-
 public:
 private:
 };
