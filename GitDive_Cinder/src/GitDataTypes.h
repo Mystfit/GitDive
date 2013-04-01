@@ -146,6 +146,7 @@ class GitFile {
 public:
     GitFile();
 private:
+    bool isActive;
     vector<string> m_activeLines;
 };
 
