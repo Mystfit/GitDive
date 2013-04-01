@@ -10,7 +10,7 @@
 
 Line::Line(string lineStr, int linePos){
     m_lineStr = lineStr;
-    m_linePos = linePos
+    m_linePos = linePos;
     
     if(lineStr.compare(0, 1, "+") == 0){
         m_lineState = LINE_ADDED;
