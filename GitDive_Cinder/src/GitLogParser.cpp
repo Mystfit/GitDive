@@ -137,7 +137,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
                 
                 Line cLine(line);
                 
-                //If the line is an addition or unchanged, then we can move the hunk line positions forwards
+                //If the line is an addition or unchanged, then we can move the hunk line position forwards
                 if(cLine.getLineState() == Line::LINE_ADDED || cLine.getLineState() == Line::LINE_NORMAL) diffHunk->incrementLinePos();
                 cLine.setLinePos(diffHunk->getLinepos());
                 diffHunk->addLine(cLine);
