@@ -47,6 +47,7 @@ int Diff::getDeltaNumLines(){
             
             if(cLine.getLineState() == Line::LINE_ADDED) addLines++;
             else if(cLine.getLineState() == Line::LINE_DELETED) removeLines++;
+            else if(cLine.getLineState() == Line::LINE_NORMAL) removeLines++;
 
         }
     }
