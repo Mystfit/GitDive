@@ -36,7 +36,9 @@ Diff::Diff(){
     fileMode = "updated";
 }
 
-int Diff::getDeltaNumLines();
+int Diff::getDeltaNumLines(){
+    
+}
 
 
 DiffHunk::DiffHunk(){
