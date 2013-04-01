@@ -61,6 +61,7 @@ public:
     int getPreBlockStart(){ return m_postLinePos; };
     int getPostBlockStart(){ return m_postLinePos; };
     
+    //Line data addition/retrieval
     int getNumLines(){ return m_hunkData.size(); };
     void addLine(Line line){ m_hunkData.push_back(line); };
     Line getLine(int index){ return m_hunkData[index]; };
