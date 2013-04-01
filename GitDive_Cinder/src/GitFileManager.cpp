@@ -29,7 +29,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile>, Diff &diff){
     
     
     for(int i = 0; i < diff.getNumHunks(); i++){
-        
+        boost::shared_ptr<DiffHunk>
     }
     
 }
