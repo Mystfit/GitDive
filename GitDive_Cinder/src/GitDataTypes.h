@@ -65,7 +65,6 @@ public:
     
 private:
     int m_linePos;
-
     int m_preLinePos;
     int m_preBlockSize;
     int m_postLinePos;
