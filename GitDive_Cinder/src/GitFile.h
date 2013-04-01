@@ -13,7 +13,7 @@
 
 class GitFile {
 public:
-    
+    GitFile();
 private:
 };
 
