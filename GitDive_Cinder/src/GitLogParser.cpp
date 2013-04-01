@@ -137,8 +137,8 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
                 
                 Line cLine(line);
                 
-                cLine.setLinePos(diffHunk->getLinepos());
-                cLine.setOldLinePos(diffHunk->getOldLinePos());
+                if(cLine.getLineState() == Line::LINE_ADDED) cLine.setLinePos(diffHunk->getLinepos());
+                if(cLine.getLineState() == Line::LINE_DELETED) cLine.setLinePos(diffHunk->getLinepos());
 
                 diffHunk->addLine(cLine);
                 
