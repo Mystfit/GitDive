@@ -20,7 +20,7 @@ public:
     GitFileManager();
     
     void addFile(GitFile file);
-    shared_ptr<GitFile> getFile();
+    shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index];} ;
 private:
     vector< shared_ptr<GitFile> > m_fileList;
 };
