@@ -62,7 +62,7 @@ public:
     
     void setLinePos(int pos){m_linePos = pos; };
     int getLinepos(){return m_linePos; };
-    void incrementLinePos(){ linePos++; };
+    void incrementLinePos(){ m_linePos++; };
     
 private:
     int m_linePos;
