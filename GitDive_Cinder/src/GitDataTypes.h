@@ -151,7 +151,7 @@ class GitFile {
 public:
     GitFile();
     bool active(){ return bIsActive; };
-    string fileName;
+    string filename;
 private:
     bool bIsActive;
     vector<string> m_activeLines;
