@@ -69,6 +69,10 @@ public:
     int getLinepos(){return m_linePos; };
     void incrementLinePos(){ m_linePos++; };
     
+    void setOldLinePos(int pos){m_oldLinePos = pos; };
+    int getOldLinepos(){return m_oldLinePos; };
+    void incrementOldLinePos(){ m_oldLinePos++; };
+    
 private:
     int m_linePos;
     int m_oldLinePos;
