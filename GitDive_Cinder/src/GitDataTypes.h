@@ -139,5 +139,15 @@ private:
 };
 
 
+/*
+ * File object constructed from git diff deltas
+/
+class GitFile {
+public:
+    GitFile();
+private:
+    vector<string> m_activeLines;
+};
+
 
 #endif /* defined(__GitDive_Cinder__GitDataTypes__) */
