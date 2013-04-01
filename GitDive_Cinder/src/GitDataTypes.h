@@ -28,7 +28,7 @@ public:
     int getLineState(){ return m_lineState; };
     
 private:
-    int m_lineState
+    int m_lineState;
 };
 
 
