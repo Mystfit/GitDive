@@ -70,7 +70,7 @@ public:
     void incrementLinePos(){ m_linePos++; };
     
     void setOldLinePos(int pos){m_oldLinePos = pos; };
-    int getOldLinepos(){return m_oldLinePos; };
+    int getOldLinePos(){return m_oldLinePos; };
     void incrementOldLinePos(){ m_oldLinePos++; };
     
 private:
