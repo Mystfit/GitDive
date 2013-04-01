@@ -17,6 +17,12 @@
 
 using namespace std;
 
+
+class Line {
+    
+};
+
+
 /*
  * Block of lines inside a Diff
  */
