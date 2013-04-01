@@ -19,7 +19,6 @@ string Utils::getCmdOutput(const char* command)
     io::stream_buffer<io::file_descriptor_source> pstream(d);
     istream in(&pstream);
     
-    //cout << &pstream;
     string cmdResult = "";
     string line;
     
