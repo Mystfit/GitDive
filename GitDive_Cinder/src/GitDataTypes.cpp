@@ -13,11 +13,9 @@ Line::Line(string lineStr){
 }
 
 string Line::getLineStr(){
-    
     if(m_lineState == LINE_ADDED) return "+" + m_lineStr;
     if(m_lineState == LINE_DELETED) return "-" + m_lineStr;
-    if(m_lineState == LINE_NORMAL) return m_lineStr;
-
+    return m_lineStr;
 }
 
 Commit::Commit(string _commit, string _date, string _author, string _message){
