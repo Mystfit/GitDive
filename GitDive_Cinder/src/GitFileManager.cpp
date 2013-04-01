@@ -33,7 +33,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile>, boost::shared_p
         
         for(int j = 0; j < diffHunk->getNumLines(); j++)
         {
-            
+            Line cLine = diffHunk->getLine(j);
         }
     }
     
