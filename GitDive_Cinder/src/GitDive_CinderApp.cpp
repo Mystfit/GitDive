@@ -1,7 +1,5 @@
 #include "GitDive_CinderApp.h"
 
-
-
 void GitDive_CinderApp::setup()
 {
     string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
@@ -22,6 +20,7 @@ void GitDive_CinderApp::setup()
     ofstream diffOutput;
 
     diffOutput.open("/Users/mystfit/desktop/cinderDiffOut.log");
+    
     for(int i = 0; i < commitList.size(); i++) {
         diffOutput << GitLogParser::serializeCommit(commitList[i]);
     }
