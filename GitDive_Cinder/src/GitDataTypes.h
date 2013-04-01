@@ -152,11 +152,12 @@ public:
     GitFile();
     
     bool active(){ return bIsActive; };
-    vector<string> m_activeLines;
-
+    
+    
     string filename;
 private:
     bool bIsActive;
+    vector<string> m_activeLines;
 };
 
 
