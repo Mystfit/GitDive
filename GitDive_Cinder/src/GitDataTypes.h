@@ -65,6 +65,7 @@ public:
     void addLine(Line line){ m_hunkData.push_back(line); };
     Line getLine(int index){ return m_hunkData[index]; };
     
+    //Methods for setting/calculating line positions based on the modified line positions
     void setLinePos(int pos){m_linePos = pos; };
     int getLinepos(){return m_linePos; };
     void incrementLinePos(){ m_linePos++; };
