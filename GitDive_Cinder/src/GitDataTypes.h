@@ -60,7 +60,7 @@ public:
     void addLine(Line line){ m_hunkData.push_back(line); };
     Line getLine(int index){ return m_hunkData[index]; };
     
-    void setLinePos(int pos){m_linePos = linePos; };
+    void setLinePos(int pos){m_linePos = pos; };
     int getLinepos(){return m_linePos; };
     void incrementLinePos(){ linePos++; };
     
