@@ -11,4 +11,8 @@
 
 #include <iostream>
 
+class GitFile {
+    
+};
+
 #endif /* defined(__GitDive_Cinder__GitFile__) */
