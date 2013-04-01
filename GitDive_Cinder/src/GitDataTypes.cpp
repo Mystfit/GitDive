@@ -15,6 +15,7 @@ Line::Line(string lineStr){
 string Line::getLineStr(){
     
 }
+
 Commit::Commit(string _commit, string _date, string _author, string _message){
     commitHash = _commit;
     date = _date;
