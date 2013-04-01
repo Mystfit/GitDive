@@ -26,7 +26,7 @@ public:
     
     Line(string lineStr);
     
-    string str(){return m_lineStr; };
+    string getStr(){return m_lineStr; };
     
     enum lineState{LINE_NORMAL = 0, LINE_ADDED, LINE_DELETED};
     void setLineState(int lineState){ m_lineState = lineState; };
