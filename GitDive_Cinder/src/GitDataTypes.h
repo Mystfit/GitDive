@@ -58,7 +58,7 @@ public:
         m_postBlockSize = numLines;
     }
     
-    int getPostLinePos(){ return m_postLinePos;};
+    int getPostLinePos(){ return m_postLinePos; };
     
     int getNumLines(){ return m_hunkData.size(); };
     void addLine(Line line){ m_hunkData.push_back(line); };
