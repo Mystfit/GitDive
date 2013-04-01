@@ -20,8 +20,9 @@ public:
     GitFileManager();
     
     void addFile(GitFile file);
+    File
 private:
-    vector<GitFile> m_fileList;
+    vector< shared_ptr<GitFile> > m_fileList;
 };
 
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
