@@ -12,7 +12,7 @@ Line::Line(string lineStr){
     m_lineStr = lineStr;
 }
 
-Line::getLineStr(){
+string Line::getLineStr(){
     
 }
 Commit::Commit(string _commit, string _date, string _author, string _message){
