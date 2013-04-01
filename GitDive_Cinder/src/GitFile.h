@@ -12,7 +12,8 @@
 #include <iostream>
 
 class GitFile {
-    
+public:
+private:
 };
 
 #endif /* defined(__GitDive_Cinder__GitFile__) */
