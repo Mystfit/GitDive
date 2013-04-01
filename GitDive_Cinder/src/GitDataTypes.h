@@ -63,7 +63,7 @@ public:
     void incrementLinePos(){
     
 private:
-        int m_currentLinePos;
+        int m_linePos;
     string m_preLinePos;
     string m_preBlockSize;
     string m_postLinePos;
