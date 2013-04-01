@@ -46,7 +46,7 @@ int Diff::getDeltaNumLines(){
             Line cLine = m_hunkList[i]->getLine(j);
             
             if(cLine.getLineState() == Line::LINE_ADDED) addLines++;
-            else if(cLine.getLineState() == Line::LINE_DELETED) addLines++;
+            else if(cLine.getLineState() == Line::LINE_DELETED) removeLines++;
 
         }
     }
