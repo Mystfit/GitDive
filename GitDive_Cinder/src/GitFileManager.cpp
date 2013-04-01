@@ -29,6 +29,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     
     //Make a copy of the original lines
     vector<string> originalLines = file->getLines();
+    vector<string> newLines;
     
     
     //Iterate over the original lines, removing or adding lines that match in the diff
