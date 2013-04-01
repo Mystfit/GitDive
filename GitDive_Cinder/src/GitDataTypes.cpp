@@ -37,5 +37,5 @@ Diff::Diff(){
 }
 
 DiffHunk::DiffHunk(){
-    
+    m_linePos = 0;
 }
