@@ -34,6 +34,7 @@ public:
     
 private:
     int m_lineState;
+    m_lineStr;
 };
 
 
