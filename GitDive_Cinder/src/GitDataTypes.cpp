@@ -36,8 +36,6 @@ Diff::Diff(){
     fileMode = Diff::FILEMODE_UPDATED;
 }
 
-void Diff::addDiffHunk(boost::shared_ptr<DiffHunk> hunk){
-}
 
 int Diff::getNumDeltaLines(){
     int addLines = 0;
@@ -71,6 +69,7 @@ vector<Line> Diff::getAllDeltaLines(){
     
     return deltaLineList;
 }
+
 
 void Diff::updateDeltaLists(){
     vector<Line> originalLines = getAllDeltaLines();
