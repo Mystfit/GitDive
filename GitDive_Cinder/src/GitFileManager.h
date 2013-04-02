@@ -20,7 +20,7 @@ public:
     
     //File addition/retrieval
     void updateFilesFromCommit(boost::shared_ptr<Commit> commit);
-    void addFile(shared_ptr<GitFile> file){ m_fileList.push_back(file); };
+    void addFile(boost::shared_ptr<GitFile> file){ m_fileList.push_back(file); };
     shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
     shared_ptr<GitFile> getFileByName(string fileName);
     
