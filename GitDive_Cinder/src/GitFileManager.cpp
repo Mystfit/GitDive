@@ -89,6 +89,10 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         }
     }
     
+    for(int i = 0; i < interimLines.size(); i++){
+        cout << "--Pos:" << interimLines[i].getLinePos()  Line in interim"
+    }
+    
     //Reset counters
     linePos = 1;
     deltaIndex = 0;
