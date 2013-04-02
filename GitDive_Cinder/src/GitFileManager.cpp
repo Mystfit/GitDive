@@ -92,7 +92,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     linePos = 1;
     deltaIndex = 0;
     
-    cout << "Num lines (minus removed):" << interimLines.size() << " Num lines(with added):" << interimLines.size() + deltaAddLines.size() << endl;
+    cout << "Orig:" << originalLines.size() << " Num lines (minus removed):" << interimLines.size() << " Num lines(with added):" << interimLines.size() + deltaAddLines.size() << endl;
     
     //Add lines second;
     if(deltaAddLines.size() < 1){
