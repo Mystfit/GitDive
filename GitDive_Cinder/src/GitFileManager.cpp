@@ -59,7 +59,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     int deltaIndex = 0;
     
     if(originalLines.size() == 0){
-        file->setLines(newLines);
+        file->setLines(deltaLines);
         return;
     }
         
