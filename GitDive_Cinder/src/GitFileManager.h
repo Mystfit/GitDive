@@ -9,10 +9,6 @@
 #ifndef __GitDive_Cinder__GitFileManager__
 #define __GitDive_Cinder__GitFileManager__
 
-#include <iostream>
-#include <vector>
-#include <sstream>
-
 #include "GitDataTypes.h"
 
 using namespace std;
