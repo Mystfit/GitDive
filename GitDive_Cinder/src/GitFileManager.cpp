@@ -75,6 +75,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         
         if(deltaRemoveLines[deltaIndex].getLinePos() != linePos){
             interimLines.push_back(origLine);
+            deltaIndex++;
             linePos++;
         }
         
@@ -82,12 +83,17 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     }
     
     linePos = 1;
-    
+    deltaIndex = 0;
     
     //Add lines second;
     for(int lineNum = 1; lineNum < interimLines.size() + deltaAddLines.size(); lineNum++ ){
-        if()
-    
+        if(deltaAddLines[deltaIndex].getLinePos() == linePos){
+            newLines.push_back(deltaAddLines[deltaIndex]);
+            deltaIndex++;
+        } else {
+            newLines.push_back(interimLines[linePos]);
+            linePos++;
+        }
     }
     
     
