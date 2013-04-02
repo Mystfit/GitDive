@@ -122,6 +122,9 @@ private:
     string m_fileNameA;
     string m_fileNameB;
     vector<boost::shared_ptr< DiffHunk> > m_hunkList;
+    vector<Line> m_deltaAddLines;
+    vector<Line> m_deltaRemoveLines;
+
 };
 
 
