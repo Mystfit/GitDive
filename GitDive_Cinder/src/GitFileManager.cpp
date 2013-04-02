@@ -58,6 +58,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     int linePos = 1;
     int deltaIndex = 0;
     
+    //If the 
     if(originalLines.size() == 0){
         file->setLines(deltaLines);
         return;
