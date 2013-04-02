@@ -175,7 +175,8 @@ public:
     void setLines(vector<Line> lines){ m_activeLines = lines; };
     vector<Line> getLines(){ return m_activeLines; };
     
-    
+    void resetOrder();
+
         
 private:
     bool bIsActive;
