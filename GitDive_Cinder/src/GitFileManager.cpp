@@ -92,7 +92,8 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         if(oldLine.getLinePos() == deltaLines[deltaIndex].getLinePos() && deltaLines[deltaIndex].getLineState() == Line::LINE_DELETED){
             cout << "o:" << oldLine.getStr() << endl << "|| r:" << deltaLines[deltaIndex].getStr() << endl;
             
-            cout << "Inc: line:" << linePos++ << endl;
+            linePos++;
+            cout << "Inc: line:" << linePos << endl;
             lineNum--;
             deltaIndex++;
         }
@@ -107,7 +108,8 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         else {
             oldLine.setLinePos(lineNum);
             newLines.push_back(oldLine);
-            cout << "Inc: line:" << linePos++ << endl;
+            linePos++;
+            cout << "Inc: line:" << linePos << endl;
         }
         
         //Always increment the old line position so we get the correct original line number
