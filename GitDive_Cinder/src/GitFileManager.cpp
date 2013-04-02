@@ -46,7 +46,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
             {
                 Line cLine = diffHunk->getLine(j);
                 
-                
+                //Handle removed lines first
                 if(cLine.getLinePos())
                 
                 
