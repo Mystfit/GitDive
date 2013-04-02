@@ -105,11 +105,6 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
 //        cout << "--Pos:" << i <<  " Line ||" << interimLines[i].getStr() << endl;
 //    }
     
-    cout << "==Add deltas" << endl;
-    for(int i = 0; i < deltaAddLines.size(); i++){
-        cout << "--i:" << i << " Pos:" << deltaAddLines[i].getLinePos() <<  " Line ||" << deltaAddLines[i].getStr() << endl;
-    }
-    
     //Reset counters
     linePos = 0;
     lineNum = 1;
@@ -144,6 +139,13 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
             }
         }
     }
+    
+    cout << endl << endl << "==Final file" << endl;
+    for(int i = 0; i < newLines.size(); i++){
+        cout << "--i:" << i << " Mode:" << newLines[i].getLineState() <<  " Line ||" << newLines[i].getStr() << endl;
+    }
+    
+    cout << endl << endl;
     
     file->setLines(newLines);
     file->resetLineOrder();
