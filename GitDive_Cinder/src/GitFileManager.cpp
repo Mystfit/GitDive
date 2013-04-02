@@ -48,8 +48,9 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         linePos++;
         
         
-        
-        
+        //IF Line is added -> DON'T increment oldLinePos, DO increment deltaLinePos
+        //IF Line is added -> DON'T increment oldLinePos, DO increment deltaLinePos
+
 
 
 //        if(strcmp(cLine.getStr().c_str(), oldLine.c_str()) && cLine.getLineState() == Line::LINE_DELETED){
