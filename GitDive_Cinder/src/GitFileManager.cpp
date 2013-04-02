@@ -20,7 +20,7 @@ void GitFileManager::updateFilesFromCommit(boost::shared_ptr<Commit> commit){
         boost::shared_ptr<Diff> diff = commit->getDiff(i);
         
         if(diff->fileMode == Diff::FILEMODE_ADDED){
-            file(new GitFile(diff->getFileName());
+            file(new GitFile(diff->getFileName()));
         } else if(diff->fileMode == Diff::FILEMODE_DELETED){
             
         }
