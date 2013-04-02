@@ -121,7 +121,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
                 newLines.push_back(deltaAddLines[deltaIndex]);
                 deltaIndex++;
             } else {
-                cout << "---Adding old line:" << linePos << " Remaining:" << interimLines.size() - linePos << endl;
+                cout << "---Line target:" << linePos << "Source size:" << interimLines.size() << endl;
                 newLines.push_back(interimLines[linePos-1]);
                 linePos++;
             }
