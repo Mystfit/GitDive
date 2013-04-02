@@ -35,6 +35,7 @@ void GitDive_CinderApp::setup()
     
     //Close the file
     diffOutput.close();
+    fileOutput.close();
 
 }
 
