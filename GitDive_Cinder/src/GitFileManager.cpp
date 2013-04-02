@@ -17,6 +17,9 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
     boost::shared_ptr<GitFile> file;
     
     for(int i = 0; i < commit.getNumDiffs(); i++){
+        
+        cout << commit.getNumDiffs() << endl;
+        
         boost::shared_ptr<Diff> diff = commit.getDiff(i);
         
         if(diff->fileMode == Diff::FILEMODE_ADDED){
@@ -55,9 +58,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     
     int linePos = 1;
     int deltaIndex = 0;
-    
-    cout << originalLines.size() << endl;
-    
+        
     //Iterate over the original lines, removing or adding lines that match in the diff
     for(int lineNum = 1; lineNum <= originalLines.size() + diff->getNumDeltaLines(); lineNum++){
         
