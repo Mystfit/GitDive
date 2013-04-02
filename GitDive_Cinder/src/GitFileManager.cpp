@@ -30,6 +30,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
             file = getFileByName(diff->getFileName());
             if(file){
                 if(file->active()){
+                    cout << file->active() << endl;
                     applyDiffToFile(file, diff);
                 }
             }
