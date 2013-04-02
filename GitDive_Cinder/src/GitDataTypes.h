@@ -96,10 +96,10 @@ public:
     Diff();
     
     enum fileTypes {FILETYPE_TEXT = 0, FILETYPE_BINARY };
-    int fileType;    //Binary or text
+    int fileType;    
     
     enum fileModes {FILEMODE_ADDED = 0, FILEMODE_DELETED};
-    int fileMode;    //Added or deleted
+    int fileMode;
     
     void addDiffHunk(boost::shared_ptr<DiffHunk> hunk){ m_hunkList.push_back(hunk); };
     void setFileNameA(string filename){ m_fileNameA = filename; };  //Filename before renaming
