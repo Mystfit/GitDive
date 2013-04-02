@@ -27,6 +27,8 @@ public:
     shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
     shared_ptr<GitFile> getFileByName(string fileName);
     
+    void updateFilesFromCommit(boost:shared_ptr<Commit> commit);
+    
     //File modification
     static void applyDiffToFile(shared_ptr<GitFile>, shared_ptr<Diff> diff );
     
