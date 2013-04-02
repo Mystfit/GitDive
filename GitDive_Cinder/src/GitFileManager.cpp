@@ -85,8 +85,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
                 linePos++;
             }
             
-            interimLines[lineNum].setLinePos(lineNum);
-            
+            interimLines[lineNum-1].setLinePos(lineNum);
             linePos++;
         }
     }
@@ -120,6 +119,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
                 newLines.push_back(interimLines[linePos]);
                 linePos++;
             }
+            newLines[lineNum-1].setLinePos(lineNum);
         }
     }
     
