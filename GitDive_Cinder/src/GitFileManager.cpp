@@ -72,7 +72,5 @@ string GitFileManager::serializeFile(shared_ptr<GitFile> file){
         fileText << lines[i].getStr() << endl;
     }
     
-    
-    
     return fileText.str();
 }
