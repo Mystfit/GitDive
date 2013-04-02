@@ -63,7 +63,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
 }
 
 
-string GitFileManager::serializeFile(shared_ptr<File> file){
+string GitFileManager::serializeFile(shared_ptr<GitFile> file){
     stringstream fileText;
     
     return fileText.str();
