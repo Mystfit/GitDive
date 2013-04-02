@@ -12,7 +12,7 @@
 #include <iostream>
 #include <vector>
 #include <sstream>
-
+#include <boost/shared_ptr.hpp>
 #include "Utils.h"
 
 
