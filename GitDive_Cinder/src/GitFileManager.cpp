@@ -85,6 +85,9 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     cout << endl;
     //*END DEBUG*
     
+    
+    
+    
     cout << "==Combining deltas" << endl;
     //Iterate over the original lines, removing or adding lines that match in the diff
     for(int lineNum = 1; lineNum <= originalLines.size() + diff->getNumDeltaLines(); lineNum++){
@@ -122,8 +125,11 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
             newLines.push_back(oldLine);
             linePos++;
         }
+
         
-        //Always increment the old line position so we get the correct original line number
+        
+        
+        
     }
     
     file->setLines(newLines);
