@@ -94,7 +94,8 @@ private:
 class Diff {
 public:
     Diff();
-    string fileType;    //Binary or text
+    enum fileTypes {FILETYPE_TEXT = 0, FILETYPE_BINARY };
+    int fileType;    //Binary or text
     
     enum fileModes {FILEMODE_ADDED = 0, FILEMODE_DELETED};
     int fileMode;    //Added or deleted
