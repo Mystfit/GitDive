@@ -52,6 +52,9 @@ int Diff::getDeltaNumLines(){
     return addLines - removeLines;
 }
 
+boost::shared_ptr<Line> Diff::getAllDiffLines();
+
+
 
 DiffHunk::DiffHunk(){
     m_linePos = 0;
