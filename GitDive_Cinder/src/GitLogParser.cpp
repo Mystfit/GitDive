@@ -86,7 +86,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             
             else if(starts_with(line, "deleted file mode"))
             {
-                diff->fileMode = "deleted";
+                diff->fileMode = Diff::FILEMODE_DELETED;
             }
             
             else if(starts_with(line, "Binary files"))
