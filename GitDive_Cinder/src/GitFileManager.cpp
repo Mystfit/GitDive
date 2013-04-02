@@ -128,7 +128,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     for(int i = 0; i < newLines.size(); i++){
         cout << "--i:" << i << " Mode:" << newLines[i].getLineState() << " LineNum:" << newLines[i].getLinePos() <<  " Line ||" << newLines[i].getStr() << endl;
     }
-    
     cout << "=====" << endl << endl;
     
     for(int strIndex = 0; strIndex < lineString.size(); strIndex++){
