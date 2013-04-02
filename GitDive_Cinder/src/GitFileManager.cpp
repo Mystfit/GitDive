@@ -67,10 +67,10 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     
     int linePos = 1;
     int deltaIndex = 0;
-    
     int deltaLineShift = diff->getNumDeltaLines();
     
-    for(int lineNum = 1; lineNum < originalLines.size() +  )
+    //Remove lines first
+    for(int lineNum = 1; lineNum < originalLines.size() + deltaLineShift; lineNum++; )
 
     
     
