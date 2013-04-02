@@ -67,7 +67,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     if(originalLines.size() == 0){
         cout << "-- Dumping lines straight into new file for " << file->getFilename() << endl;
         file->setLines(deltaLines);
-        return;
+        return 0;
     }
     
     
