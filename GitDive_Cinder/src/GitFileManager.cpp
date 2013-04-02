@@ -27,7 +27,6 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
             file = getFileByName(diff->getFileName());
             file->setInactive();
         } else if(diff->fileMode == Diff::FILEMODE_UPDATED){
-            cout << file->active() << endl;
             file = getFileByName(diff->getFileName());
             if(file){
                 if(file->active()){
