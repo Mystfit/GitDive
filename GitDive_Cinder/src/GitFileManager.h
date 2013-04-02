@@ -12,7 +12,6 @@
 #include "GitDataTypes.h"
 
 using namespace std;
-using namespace boost;
 
 class GitFileManager {
 public:
@@ -21,12 +20,12 @@ public:
     //File addition/retrieval
     void updateFilesFromCommit(boost::shared_ptr<Commit> commit);
     void addFile(boost::shared_ptr<GitFile> file){ m_fileList.push_back(file); };
-    shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
-    shared_ptr<GitFile> getFileByName(string fileName);
+    boost::shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
+    boost::shared_ptr<GitFile> getFileByName(string fileName);
     
     
     //File modification
-    static void applyDiffToFile(shared_ptr<GitFile>, shared_ptr<Diff> diff );
+    static void applyDiffToFile(boost::shared_ptr<GitFile>, shared_ptr<Diff> diff );
     
     //File display
     string serializeAllFiles();
