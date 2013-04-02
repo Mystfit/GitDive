@@ -56,7 +56,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         
         //Add unmodified lines
         else {
-            oldLine.setLinePos(<#int linePos#>)
+            oldLine.setLinePos(lineNum);
             newLines.push_back(oldLine);
         }
         
