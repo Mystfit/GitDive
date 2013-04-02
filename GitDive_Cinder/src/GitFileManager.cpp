@@ -36,11 +36,10 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     int deltaIndex = 0;
     
     //Iterate over the original lines, removing or adding lines that match in the diff
-    for(int lineNum = 0; lineNum < originalLines.size() + diff->getNumDeltaLines(); lineNum++){
+    for(int lineNum = 1; lineNum < originalLines.size() + diff->getNumDeltaLines(); lineNum++){
         
         Line oldLine = originalLines[linePos];
         vector<Line> deltaLines = diff->getAllDeltaLines();
-        
       
         if(oldLine.getLinePos() == deltaLines[deltaIndex].getLinePos() &&  deltaLines[deltaIndex].getLineState() == Line::LINE_DELETED){
             linePos++;
