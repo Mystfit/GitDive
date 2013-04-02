@@ -19,7 +19,7 @@ void GitDive_CinderApp::setup()
     for(int commitIndex = 0; commitIndex < commitList.size(); commitIndex++){
         fManager.updateFilesFromCommit(commitList[commitIndex]);
     }
-    
+        
     //Test of the commit serializer
     ofstream diffOutput;
 
