@@ -70,7 +70,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         return;
     }
         
-    int linePos = 1;
+    int linePos = 0;
     int deltaIndex = 0;
     
     cout << "--File:" << diff->getFileName() << endl;
@@ -83,7 +83,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         for(int lineNum = 1; lineNum <= originalLines.size() - deltaRemoveLines.size(); lineNum++ ){
             Line origLine = originalLines[lineNum];
             
-            if(deltaRemoveLines[deltaIndex].getLinePos() != linePos){
+            if(deltaRemoveLines[deltaIndex].getLinePos() != linePos+1){
                 origLine.setLinePos(lineNum);
                 interimLines.push_back(origLine);
                 deltaIndex++;
@@ -105,7 +105,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
 //    }
     
     //Reset counters
-    linePos = 1;
+    linePos = 0;
     deltaIndex = 0;
     
     cout << endl << "--Removed lines. Orig Size:" << originalLines.size() << " Num lines (minus removed):" << interimLines.size() << " Num lines(with added):" << interimLines.size() + deltaAddLines.size() << endl << endl;
@@ -116,13 +116,13 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     } else {
         for(int lineNum = 1; lineNum <= interimLines.size() + deltaAddLines.size(); lineNum++ ){
                         
-            if(deltaAddLines[deltaIndex].getLinePos() == linePos){
+            if(deltaAddLines[deltaIndex].getLinePos() == linePos+1){
                 cout << "!!!Matched! lines A:" << linePos << " B:" << deltaAddLines[deltaIndex].getLinePos() << endl;
                 newLines.push_back(deltaAddLines[deltaIndex]);
                 deltaIndex++;
             } else {
                 cout << "---Line target:" << linePos << " Source size:" << interimLines.size() << endl;
-                newLines.push_back(interimLines[linePos-1]);
+                newLines.push_back(interimLines[linePos]);
                 linePos++;
             }
             newLines[lineNum-1].setLinePos(lineNum);
