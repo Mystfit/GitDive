@@ -47,7 +47,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
             deltaIndex++;
         }
         
-        
+        if(
         
         //Always increment the old line position so we get the correct original line number
         linePos++;
