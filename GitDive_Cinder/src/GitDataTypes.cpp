@@ -75,6 +75,6 @@ DiffHunk::DiffHunk(){
     m_linePos = 0;
 }
 
-GitFile::GitFile(){
-    
+GitFile::GitFile(string filename){
+    m_filename = filename;
 }
