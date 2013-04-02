@@ -116,8 +116,12 @@ public:
     int getNumHunks(){ return m_hunkList.size(); };
     int getNumDeltaLines();
     boost::shared_ptr<DiffHunk> getDiffHunk(int index){ return m_hunkList[index]; };
+    
     vector<Line> getAllDeltaLines();
     void updateDeltaLists();
+    vector<Line> getDeltaAddLines(){ return m_deltaAddLines; };
+    vector<Line> getDeltaRemoveLines(){ return m_deltaRemoveLines; };
+
 
 
 private:
