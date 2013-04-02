@@ -61,7 +61,7 @@ boost::shared_ptr<Line> Diff::getAllDiffLines(){
         
         for(int j = 0; j < diffHunk->getNumLines(); j++)
         {
-            Line cLine = diffHunk->getLine(j);
+            deltaLineList.push_back(diffHunk->getLine(j));
 
         }
     }
