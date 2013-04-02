@@ -131,6 +131,10 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
     cout << "=====" << endl << endl;
     
+    for(int strIndex = 0; strIndex < lineString.size(); strIndex++){
+        newLines.push_back(Line(lineString[strIndex]));
+    }
+    
     file.setLines(newLines);
     file.resetLineOrder();    
 }
