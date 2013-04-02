@@ -95,3 +95,14 @@ string GitFileManager::serializeFile(shared_ptr<GitFile> file){
     
     return fileText.str();
 }
+
+string GitFileManager::serializeFile(shared_ptr<GitFile> file){
+    stringstream fileText;
+    vector<Line> lines = file->getLines();
+    
+    for(int i = 0; i < lines.size(); i++){
+        fileText << lines[i].getStr() << endl;
+    }
+    
+    return fileText.str();
+}
