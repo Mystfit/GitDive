@@ -40,12 +40,14 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         Line oldLine = originalLines[linePos];
         vector<Line> deltaLines = diff->getAllDeltaLines();
       
+        //Skip adding lines if line is marked for removal
         if(oldLine.getLinePos() == deltaLines[deltaIndex].getLinePos() &&  deltaLines[deltaIndex].getLineState() == Line::LINE_DELETED){
             linePos++;
             deltaIndex++;
         }
         
-        if(deltaLines[deltaIndex].getLinePos() == lineNum && deltaLines[deltaIndex].getLineState() == Line::LINE_ADDED){
+        //Add new lines to list
+        else if(deltaLines[deltaIndex].getLinePos() == lineNum && deltaLines[deltaIndex].getLineState() == Line::LINE_ADDED){
             newLines.push_back(deltaLines[lineNum]);
             deltaIndex++;
         } else {
