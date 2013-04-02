@@ -49,7 +49,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         
         
         //IF Line is added -> DON'T increment oldLinePos, DO increment deltaLinePos
-        //IF Line is added -> DON'T increment oldLinePos, DO increment deltaLinePos
+        //IF Line is removed -> DO increment oldLinePos, DON'T increment deltaLinePos
 
 
 
