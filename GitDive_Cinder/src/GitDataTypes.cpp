@@ -65,6 +65,8 @@ boost::shared_ptr<Line> Diff::getAllDiffLines(){
 
         }
     }
+    
+    return deltaLineList;
 
 }
 
