@@ -12,11 +12,6 @@ GitFileManager::GitFileManager(){
     
 }
 
-void GitFileManager::addFile(GitFile file){
-    m_fileList.push_back(file);
-}
-
-
 boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
     for(int i = 0; i < m_fileList.size(); i++){
         if(m_fileList[i]->filename == fileName) return m_fileList[i];
