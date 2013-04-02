@@ -16,6 +16,8 @@ void GitDive_CinderApp::setup()
     //Send lines through the log parser to make commit objects
     commitList = GitLogParser::parseLog(outputStrings);
     
+    for(int fileIndex = 0; fileIndex < commitList.size();)
+    
     //Test of the commit serializer
     ofstream diffOutput;
 
