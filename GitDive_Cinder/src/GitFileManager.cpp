@@ -45,9 +45,11 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
             deltaIndex++;
         }
         
-        if(deltaLines[deltaIndex].getLinePos() == lineNum){
+        if(deltaLines[deltaIndex].getLinePos() == lineNum && deltaLines[deltaIndex].getLineState() == Line::LINE_ADDED){
             newLines.push_back(deltaLines[lineNum]);
             deltaIndex++;
+        } else {
+            
         }
         
         //Always increment the old line position so we get the correct original line number
