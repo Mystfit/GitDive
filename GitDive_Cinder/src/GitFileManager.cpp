@@ -69,7 +69,8 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         file->setLines(deltaAddLines);
         return;
     }
-        
+    
+    int lineNum = 1;
     int linePos = 0;
     int deltaIndex = 0;
     
@@ -80,7 +81,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     if(deltaRemoveLines.size() < 1){
         interimLines = originalLines;
     } else {
-        for(int lineNum = 1; lineNum <= originalLines.size() - deltaRemoveLines.size(); lineNum++ ){
+        for(lineNum; lineNum <= originalLines.size() - deltaRemoveLines.size(); lineNum++ ){
             Line origLine = originalLines[lineNum];
             
             if(deltaRemoveLines[deltaIndex].getLinePos() != linePos+1){
@@ -106,6 +107,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     
     //Reset counters
     linePos = 0;
+    lineNum = 1;
     deltaIndex = 0;
     
     cout << endl << "--Removed lines. Orig Size:" << originalLines.size() << " Num lines (minus removed):" << interimLines.size() << " Num lines(with added):" << interimLines.size() + deltaAddLines.size() << endl << endl;
@@ -114,7 +116,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     if(deltaAddLines.size() < 1){
         newLines = interimLines;
     } else {
-        for(int lineNum = 1; lineNum <= interimLines.size() + deltaAddLines.size(); lineNum++ ){
+        for(lineNum; lineNum <= interimLines.size() + deltaAddLines.size(); lineNum++ ){
             
             cout << "---Delta index:" << deltaIndex << " Line index:" << " Line num:" << lineNum << linePos << " Source size:" << interimLines.size() << " Search size:" << interimLines.size() + deltaAddLines.size() << endl;
             
