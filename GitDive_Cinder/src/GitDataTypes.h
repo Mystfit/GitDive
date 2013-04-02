@@ -96,7 +96,7 @@ public:
     Diff();
     string fileType;    //Binary or text
     
-    enum fileModes {FILEMODE_ADDED = 0; FILEMODE_DELETED};
+    enum fileModes {FILEMODE_ADDED = 0, FILEMODE_DELETED};
     int fileMode;    //Added or deleted
     
     void addDiffHunk(boost::shared_ptr<DiffHunk> hunk){ m_hunkList.push_back(hunk); };
