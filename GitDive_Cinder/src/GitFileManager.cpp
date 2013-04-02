@@ -28,9 +28,6 @@ void GitFileManager::updateFilesFromCommit(boost::shared_ptr<Commit> commit){
             if(file) applyDiffToFile(file, diff);
         }
     }
-    
-    
-    
 }
 
 
