@@ -110,7 +110,7 @@ public:
     int getNumHunks(){ return m_hunkList.size(); };
     int getDeltaNumLines();
     boost::shared_ptr<DiffHunk> getDiffHunk(int index){ return m_hunkList[index]; };
-    boost::shared_ptr<Line> getAllDiffLines();
+    vector<Line> getAllDiffLines();
 
 private:
     string m_fileNameA;
