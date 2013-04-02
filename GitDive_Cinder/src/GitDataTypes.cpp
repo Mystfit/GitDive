@@ -36,7 +36,7 @@ Diff::Diff(){
     fileMode = Diff::FILEMODE_UPDATED;
 }
 
-Diff::addDiffhunk(boost::shared_ptr<DiffHunk>){
+void Diff::addDiffhunk(boost::shared_ptr<DiffHunk>){
     m_hunkList.push_back(hunk);
 }
 
