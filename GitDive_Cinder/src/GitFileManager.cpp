@@ -135,15 +135,17 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
             newLines.push_back(interimLines[linePos]);
             linePos++;
             
+            //If we've run out of source lines, add the remaining delta lines to the end
             if(lineNum == interimLines.size()){
-                for(int leftovers = deltaIndex; leftovers < deltaAddLines.size() - deltaIndex;)
+                for(int leftovers = deltaIndex; leftovers < deltaAddLines.size() - deltaIndex; leftovers++){
+                    newLines.push_back(deltaAddLines[deltaIndex++]);
+                }
             }
-            
-            newLines[lineNum-1].setLinePos(lineNum);
         }
     }
     
     file->setLines(newLines);
+    file->resetLineOrder();
 }
 
 
