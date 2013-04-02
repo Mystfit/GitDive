@@ -17,10 +17,10 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
     boost::shared_ptr<GitFile> file;
     
     for(int i = 0; i < commit.getNumDiffs(); i++){
-        
-        cout << commit.getNumDiffs() << endl;
-        
+                
         boost::shared_ptr<Diff> diff = commit.getDiff(i);
+        
+        cout << diff->fileMode << endl;
         
         if(diff->fileMode == Diff::FILEMODE_ADDED){
             file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
