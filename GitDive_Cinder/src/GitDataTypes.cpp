@@ -74,6 +74,9 @@ vector<Line> Diff::getAllDeltaLines(){
 
 void Diff::updateDeltaLists(){
     vector<Line> originalLines = getAllDeltaLines();
+    
+    m_deltaAddLines.clear();
+    m_deltaRemoveLines.clear();
 }
 
 
