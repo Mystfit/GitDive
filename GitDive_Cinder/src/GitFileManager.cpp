@@ -17,6 +17,12 @@ void GitFileManager::updateFilesFromCommit(boost::shared_ptr<Commit> commit){
     
     for(int i = 0; i < commit->getNumDiffs(); i++){
         boost::shared_ptr<Diff> diff = commit->getDiff(i);
+        
+        if(diff->fileMode == Diff::FILEMODE_CREATED){
+            
+        } else if(diff->fileMode == Diff::FILEMODE_DELETED){
+            
+        }
     }
     
     
