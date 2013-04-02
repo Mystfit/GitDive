@@ -158,6 +158,8 @@ class GitFile {
 public:
     GitFile(string filename);
     
+    string getFilename(){ return m_filename; };
+    
     bool active(){ return bIsActive; };
     void setLines(vector<Line> lines){ m_activeLines = lines; };
     vector<Line> getLines(){ return m_activeLines; };
