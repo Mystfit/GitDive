@@ -130,11 +130,12 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
                 cout << " !!!Matched lines A:" << linePos+1 << " B:" << deltaAddLines[deltaIndex].getLinePos();
                 newLines.push_back(deltaAddLines[deltaIndex]);
                 deltaIndex++;
-            } else {
-                newLines.push_back(interimLines[linePos]);
-                linePos++;
             }
-            newLines[lineNum-1].setLinePos(lineNum);
+            
+            newLines.push_back(interimLines[linePos]);
+            linePos++;
+            
+            newLines[lineNum-1].setLinePos(lineNum + deltaIndex);
         }
     }
     
