@@ -87,10 +87,9 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
 
 string GitFileManager::serializeAllFiles(){
     stringstream fileText;
-    vector<Line> lines = file->getLines();
     
-    for(int i = 0; i < lines.size(); i++){
-        fileText << lines[i].getStr() << endl;
+    for(int i = 0; i < m_fileList.size(); i++){
+        fileText << serializeFile(m_fileList[i]) << endl;
     }
     
     return fileText.str();
