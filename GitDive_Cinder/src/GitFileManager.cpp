@@ -84,10 +84,12 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         for(lineNum = 1; lineNum <= originalLines.size() - deltaRemoveLines.size(); lineNum++ ){
             Line origLine = originalLines[lineNum-1];
             
-            if(deltaIndex < deltaRemoveLines.size() && deltaRemoveLines[deltaIndex].getLinePos() == linePos+1){
-                cout << endl << "--Removing Line " << deltaRemoveLines[deltaIndex].getLinePos() << endl;
-                deltaIndex++;
-            } else{
+            if(deltaIndex < deltaRemoveLines.size(){
+                if(deltaRemoveLines[deltaIndex].getLinePos() == linePos+1){
+                    cout << endl << "--Removing Line " << deltaRemoveLines[deltaIndex].getLinePos() << endl;
+                    deltaIndex++;
+                }
+            } else {
                 origLine.setLinePos(lineNum);
                 interimLines.push_back(origLine);
             }
