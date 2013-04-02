@@ -82,7 +82,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         interimLines = originalLines;
     } else {
         for(lineNum = 1; lineNum <= originalLines.size() - deltaRemoveLines.size(); lineNum++ ){
-            Line origLine = originalLines[lineNum];
+            Line origLine = originalLines[lineNum-1];
             
             if(deltaRemoveLines[deltaIndex].getLinePos() != linePos+1){
                 origLine.setLinePos(lineNum);
