@@ -28,7 +28,7 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::shared_ptr<Diff> diff){
     
     //Make a copy of the original lines
-    vector<string> originalLines = file->getLines();
+    vector<Line> originalLines = file->getLines();
     vector<string> newLines;
     
     int linePos = 0;
@@ -48,6 +48,8 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
                 
                 if(strcmp(cLine.getStr().c_str(), oldLine.c_str()) && cLine.getLineState() == Line::LINE_DELETED){
                     linePos++;
+                } else if() {
+                    
                 }
             }
         }
