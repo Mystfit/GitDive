@@ -79,30 +79,15 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
     interimLines = originalLines;
     
-    //Remove lines first
     if(deltaRemoveLines.size() < 1){
         
     } else {
-        interimLines.clear();
-        int size = originalLines.size() - deltaRemoveLines.size();
         
-        cout << "---Updating file " << diff->fileType << " with commit" << endl;
-        
-        for(lineNum = 1; lineNum <= size; lineNum++ ){
-            Line origLine = originalLines[linePos];
+        for(int i = 0; i < deltaRemoveLines.size(); i++){
             
-            cout << "Ln:" << lineNum << " Pos:" << linePos << " ||" << origLine.getStr() << endl;
-            
-            origLine.setLinePos(originalLines[linePos].getLinePos());
-            
-            if(deltaRemoveLines[deltaIndex].getLinePos() != lineNum){
-                interimLines.push_back(Line(""));
-                interimLines[interimLines.size() -1].setLinePos(lineNum);
-                deltaIndex++;
-                linePos++;
-            } else {
-                cout << "--Removing line:" << deltaRemoveLines[deltaIndex].getLinePos() << endl;
-            }            
+            Line rLine = deltaRemoveLines[i];
+
+                
         }
     }
     
