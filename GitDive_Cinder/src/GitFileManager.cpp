@@ -84,19 +84,26 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         for(lineNum = 1; lineNum <= originalLines.size() - deltaRemoveLines.size(); lineNum++ ){
             Line origLine = originalLines[lineNum-1];
             
-            if(deltaIndex < deltaRemoveLines.size()){
-                if(deltaRemoveLines[deltaIndex].getLinePos() == linePos+1){
-                    cout << endl << "--Removing Line " << deltaRemoveLines[deltaIndex].getLinePos() << endl;
-                    deltaIndex++;
-                }
-            } else {
+            if(deltaRemoveLines[deltaIndex].getLinePos() != linePos+1){
                 origLine.setLinePos(lineNum);
                 interimLines.push_back(origLine);
+                deltaIndex++;
+                linePos++;
             }
             
             linePos++;
         }
     }
+    
+//    cout << "==Original" << endl;
+//    for(int i = 0; i < originalLines.size(); i++){
+//        cout << "--Pos:" << originalLines[i].getLinePos() <<  " Line ||" << originalLines[i].getStr() << endl;
+//    }
+//    
+//    cout << "==Interim" << endl;
+//    for(int i = 0; i < interimLines.size(); i++){
+//        cout << "--Pos:" << i <<  " Line ||" << interimLines[i].getStr() << endl;
+//    }
     
     //Reset counters
     linePos = 0;
@@ -111,6 +118,14 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         newLines = interimLines;
     } else {
         for(lineNum = 1; lineNum <= interimLines.size(); lineNum++ ){
+            
+            cout << endl << "---Delta index:" << deltaIndex << " Line index:" << linePos << " Line num:" << lineNum << " Source size:" << interimLines.size() << " Search size:" << interimLines.size() + deltaAddLines.size();
+            
+            if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() + deltaIndex == linePos+1){
+                cout << " !!!Matched lines A:" << linePos+1 << " B:" << deltaAddLines[deltaIndex].getLinePos();
+                newLines.push_back(deltaAddLines[deltaIndex]);
+                deltaIndex++;
+            }
             
             newLines.push_back(interimLines[linePos]);
             linePos++;
