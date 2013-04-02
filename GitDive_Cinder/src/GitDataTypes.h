@@ -156,7 +156,7 @@ private:
  */
 class GitFile {
 public:
-    GitFile(string filename, );
+    GitFile(string filename);
     
     bool active(){ return bIsActive; };
     void setLines(vector<Line> lines){ m_activeLines = lines; };
