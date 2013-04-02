@@ -36,6 +36,10 @@ Diff::Diff(){
     fileMode = Diff::FILEMODE_UPDATED;
 }
 
+Diff::addDiffhunk(boost::shared_ptr<DiffHunk>){
+    m_hunkList.push_back(hunk);
+}
+
 int Diff::getNumDeltaLines(){
     int addLines = 0;
     int removeLines = 0;
