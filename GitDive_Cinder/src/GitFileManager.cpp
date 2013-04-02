@@ -71,8 +71,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         return;
     }
     
-    int lineNum = 1;
-    int linePos = 0;
     int deltaIndex = 0;
     
     cout << "--File:" << diff->getFileName() << endl;
@@ -88,8 +86,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
 
     //Reset counters
-    linePos = 0;
-    lineNum = 1;
+    int linePos = 0;
     deltaIndex = 0;
     string line;
     
@@ -100,7 +97,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     if(deltaAddLines.size() < 1){
         newLines = interimLines;
     } else {
-        for(lineNum = 1; lineNum <= interimLines.size(); lineNum++ ){
+        for(int lineNum = 1; lineNum <= interimLines.size(); lineNum++ ){
             
 //            cout << endl << "---Delta index:" << deltaIndex << " Line index:" << linePos << " Line num:" << lineNum << " Source size:" << interimLines.size() << " Search size:" << interimLines.size() + deltaAddLines.size();
             
