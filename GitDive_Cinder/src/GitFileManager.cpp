@@ -40,7 +40,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         Line oldLine = originalLines[lineNum];
         vector<Line> deltaLines = diff->getAllDeltaLines();
         
-        if(oldLine)
+        if(oldLine.getLinePos())
         
         
         //Always increment the old line position so we get the correct original line number
