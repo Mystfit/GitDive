@@ -98,7 +98,7 @@ public:
     enum fileTypes {FILETYPE_TEXT = 0, FILETYPE_BINARY };
     int fileType;    
     
-    enum fileModes {FILEMODE_ADDED = 0, FILEMODE_DELETED, FILEMODE_UPDATED};
+    enum fileModes {FILEMODE_ADDED = 0, FILEMODE_DELETED, FILEMODE_UPDATED };
     int fileMode;
     
     void addDiffHunk(boost::shared_ptr<DiffHunk> hunk){ m_hunkList.push_back(hunk); };
