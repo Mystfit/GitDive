@@ -29,7 +29,7 @@ public:
     static void applyDiffToFile(shared_ptr<GitFile>, shared_ptr<Diff> diff );
     
     //File display
-    string serializeFile(shared_ptr<File> file){
+    string serializeFile(shared_ptr<File> file);
         
     }
 
