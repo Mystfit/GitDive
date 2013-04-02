@@ -93,9 +93,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 linePos++;
             } else {
                 cout << "--Removing line:" << deltaRemoveLines[deltaIndex].getLinePos() << endl;
-            }
-            
-            linePos++;
+            }            
         }
     }
     
