@@ -91,6 +91,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     linePos = 0;
     lineNum = 1;
     deltaIndex = 0;
+    string line;
     
     cout << "--Removed lines. Orig Size:" << originalLines.size() << " Num lines (minus removed):" << interimLines.size() << " Num lines(with added):" << interimLines.size() + deltaAddLines.size() << endl;
     cout << "--Lines to add:" << deltaAddLines.size() << endl;
@@ -109,7 +110,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 deltaIndex++;
             }
             
-            string line = interimLines[linePos].getStr();
+             = interimLines[linePos].getStr();
             cout << line << endl;
             lineString.push_back(line);
             //newLines.push_back(interimLines[linePos]);
