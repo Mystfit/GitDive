@@ -122,8 +122,6 @@ public:
     vector<Line> getDeltaAddLines(){ return m_deltaAddLines; };
     vector<Line> getDeltaRemoveLines(){ return m_deltaRemoveLines; };
 
-
-
 private:
     string m_fileNameA;
     string m_fileNameB;
