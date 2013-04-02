@@ -158,7 +158,7 @@ public:
     string filename;
 private:
     bool bIsActive;
-    vector<string> m_activeLines;
+    vector<Line> m_activeLines;
 };
 
 
