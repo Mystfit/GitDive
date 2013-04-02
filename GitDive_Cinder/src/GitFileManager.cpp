@@ -32,6 +32,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     vector<Line> newLines;
     
     int linePos = 0;
+    int deltaLinePos = 0;
     int deltaIndex = 0;
     
     //Iterate over the original lines, removing or adding lines that match in the diff
@@ -55,6 +56,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         
         //Add unmodified lines
         else {
+            oldLine.setLinePos(<#int linePos#>)
             newLines.push_back(oldLine);
         }
         
