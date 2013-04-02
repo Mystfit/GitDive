@@ -162,9 +162,10 @@ public:
     void setLines(vector<Line> lines){ m_activeLines = lines; };
     vector<Line> getLines(){ return m_activeLines; };
         
-    string filename;
 private:
     bool bIsActive;
+    string m_filename;
+
     vector<Line> m_activeLines;
 };
 
