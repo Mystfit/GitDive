@@ -91,7 +91,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
             
             else if(starts_with(line, "Binary files"))
             {
-                diff->fileType = "binary";
+                diff->fileType = Diff::FILETYPE_BINARY;
             }
             
             else if(starts_with(line, "--- a/"))
