@@ -84,12 +84,12 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         interimLines.clear();
         int size = originalLines.size() - deltaRemoveLines.size();
         
-        
+        cout << "---Updating file " << diff->fileType << " with commit" << endl;
         
         for(lineNum = 1; lineNum <= size; lineNum++ ){
             Line origLine = originalLines[linePos];
             
-            
+            cout << "Ln:" << lineNum << " Pos:" << linePos << " ||" << origLine.getStr() << endl;
             
             origLine.setLinePos(originalLines[linePos].getLinePos());
             
