@@ -83,7 +83,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     } else {
         interimLines.clear();
         int size = originalLines.size() - deltaRemoveLines.size();
-        interimLines.resize(size);
+        //interimLines.resize(size);
 
         for(lineNum = 1; lineNum <= originalLines.size() - deltaRemoveLines.size(); lineNum++ ){
             Line origLine = Line(originalLines[linePos].getStr());
