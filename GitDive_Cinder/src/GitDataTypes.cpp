@@ -62,16 +62,7 @@ boost::shared_ptr<Line> Diff::getAllDiffLines(){
         for(int j = 0; j < diffHunk->getNumLines(); j++)
         {
             Line cLine = diffHunk->getLine(j);
-            
-            //Handle removed lines first
-            if(cLine.getLinePos())
-                
-                
-                if(strcmp(cLine.getStr().c_str(), oldLine.c_str()) && cLine.getLineState() == Line::LINE_DELETED){
-                    linePos++;
-                } else if() {
-                    
-                }
+
         }
     }
 
