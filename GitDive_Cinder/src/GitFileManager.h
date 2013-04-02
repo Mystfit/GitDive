@@ -29,7 +29,7 @@ public:
     static void applyDiffToFile(shared_ptr<GitFile>, shared_ptr<Diff> diff );
     
     //File display
-    string serializeFile(boost::shared_ptr<File> file);
+    string serializeFile(boost::shared_ptr<GitFile> file);
 
     
 private:
