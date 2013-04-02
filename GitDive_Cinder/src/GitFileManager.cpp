@@ -13,7 +13,7 @@ GitFileManager::GitFileManager(){
 }
 
 void GitFileManager::addFile(GitFile file){
-    
+    m_fileList.push_back(file);
 }
 
 
