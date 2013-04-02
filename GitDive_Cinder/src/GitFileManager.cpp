@@ -59,78 +59,13 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     vector<Line> deltaLines = diff->getAllDeltaLines();
     vector<Line> newLines;
     
-    int linePos = 1;
-    int deltaIndex = 0;
-    
-    cout << endl;
-    //If there are no original lines we dump all the new lines straight into the file
-    if(originalLines.size() == 0){
-        cout << "-- Creating new file for " << file->getFilename() << endl;
-        file->setLines(deltaLines);
-        return void();
-    }
-    
-    
-    //*DEBUG* -- Determine file contents first
-    cout << "===Original file contents for " << file->getFilename() << endl;
-    for(int index = 0; index < originalLines.size(); index++){
-        cout << "Line no:" << originalLines[index].getLinePos() << " Line||" << originalLines[index].getStr() << endl;
-    };
-    
-    cout << endl << "===Delta contents for " << file->getFilename() << endl;
-    for(int deltaI = 0; deltaI < deltaLines.size(); deltaI++){
-        cout << "Line no:" << deltaLines[deltaI].getLinePos() << " Mode:" << deltaLines[deltaI].getLineState() << " Line|| " <<  deltaLines[deltaI].getStr() << endl;
-    };
-    
-    cout << endl;
-    //*END DEBUG*
-    
-    
-    
-    
-    cout << "==Combining deltas" << endl;
-    //Iterate over the original lines, removing or adding lines that match in the diff
-    for(int lineNum = 1; lineNum <= originalLines.size() + diff->getNumDeltaLines(); lineNum++){
-        
-        Line oldLine("empty");
-        
-        try {
-            cout << "--Line position:" << linePos << " Original size:" << originalLines.size() << " Delta:" << diff->getNumDeltaLines() <<  " New total:" << originalLines.size() + diff->getNumDeltaLines() << " Status:" << originalLines[linePos-1].getLineState() << endl;
 
-            oldLine = originalLines[linePos-1];
-        } catch(std::exception e){
-            cout << e.what();
-        }
-        
-        //Skip over lines if line is marked for removal
-        cout << "--Checking for removal. Old:" << oldLine.getLinePos() << " New:" << deltaLines[deltaIndex].getLinePos() << endl;
-        
-        if(oldLine.getLinePos() == deltaLines[deltaIndex].getLinePos() && deltaLines[deltaIndex].getLineState() == Line::LINE_DELETED){
-            
-            cout << "o:" << oldLine.getStr() << endl << "|| r:" << deltaLines[deltaIndex].getStr() << endl;
-            
-            linePos++;        
-            deltaIndex++;
-        }
-        
-//        //Add new lines to list
-//        else if(deltaLines[deltaIndex].getLinePos() == lineNum && deltaLines[deltaIndex].getLineState() == Line::LINE_ADDED){
-//            newLines.push_back(deltaLines[lineNum]);
-//            deltaIndex++;
-//        }
-
-        //Add unmodified lines
-        else {
-            oldLine.setLinePos(lineNum);
-            newLines.push_back(oldLine);
-            linePos++;
-        }
-
-        
-        
-        
-        
-    }
+    
+    
+    
+    
+    
+    
     
     file->setLines(newLines);
 }
