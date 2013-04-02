@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <vector>
+#include <sstream>
 #include "GitDataTypes.h"
 
 using namespace std;
