@@ -107,18 +107,15 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 deltaIndex++;
             }
             
-            line = interimLines[linePos].getStr();
-            cout << line << endl;
-            lineString.push_back(line);
-            //newLines.push_back(interimLines[linePos]);
+            
+            newLines.push_back(interimLines[linePos]);
             linePos++;
             
             //If we've run out of source lines, add the remaining delta lines to the end
             if(lineNum == interimLines.size()){
                 cout << "--Adding " << deltaAddLines.size() - deltaIndex << " lines to the end of the file" << endl;
                 for(int leftovers = deltaIndex; leftovers < deltaAddLines.size() - deltaIndex; leftovers++){
-                    lineString.push_back(deltaAddLines[deltaIndex++].getStr());
-                    //newLines.push_back(deltaAddLines[deltaIndex++]);
+                    newLines.push_back(deltaAddLines[deltaIndex++]);
                 }
             }
         }
@@ -129,10 +126,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         cout << "--i:" << i << " Mode:" << newLines[i].getLineState() << " LineNum:" << newLines[i].getLinePos() <<  " Line ||" << newLines[i].getStr() << endl;
     }
     cout << "=====" << endl << endl;
-    
-    for(int strIndex = 0; strIndex < lineString.size(); strIndex++){
-        newLines.push_back(Line(lineString[strIndex]));
-    }
+
     
     file.setLines(newLines);
     file.resetLineOrder();    
