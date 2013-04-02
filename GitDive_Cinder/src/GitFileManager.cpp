@@ -61,7 +61,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     
     cout << "===Original file contents" << endl;
     for(int index = 0; index < originalLines.size(); index++){
-        cout << originalLines[index] << endl;
+        cout << originalLines[index].getStr() << endl;
     };
     
     int linePos = 1;
