@@ -75,7 +75,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         Line oldLine;
         try {
             cout << "--Line position:" << linePos << " Original size:" << originalLines.size() << " With delta:" << originalLines.size() + diff->getNumDeltaLines() << endl;
-             = originalLines[linePos-1];
+              line = originalLines[linePos-1];
         } catch(std::exception e){
             cout << e.what();
         }
