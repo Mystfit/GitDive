@@ -124,7 +124,6 @@ private:
     vector<boost::shared_ptr< DiffHunk> > m_hunkList;
     vector<Line> m_deltaAddLines;
     vector<Line> m_deltaRemoveLines;
-
 };
 
 
