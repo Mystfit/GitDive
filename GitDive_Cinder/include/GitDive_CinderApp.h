@@ -13,6 +13,7 @@
 #include "cinder/gl/gl.h"
 #include "Utils.h"
 #include "GitLogParser.h"
+#include "GitFileManager.h"
 
 #include <fstream.h>
 #include <stdio.h>
@@ -31,6 +32,8 @@ public:
     
     string repoPath;
     string gitCmd;
+    
+    GitMana
     
     vector<Commit> commitList;
 };
