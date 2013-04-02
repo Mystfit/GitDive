@@ -94,6 +94,7 @@ private:
 class Diff {
 public:
     Diff();
+    
     enum fileTypes {FILETYPE_TEXT = 0, FILETYPE_BINARY };
     int fileType;    //Binary or text
     
