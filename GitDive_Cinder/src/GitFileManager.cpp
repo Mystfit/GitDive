@@ -98,11 +98,10 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         cout << "--Pos:" << originalLines[i].getLinePos() <<  " Line ||" << originalLines[i].getStr() << endl;
     }
     
-    cout << "==Interim" << endl;
-
-    for(int i = 0; i < interimLines.size(); i++){
-        cout << "--Pos:" << i <<  " Line ||" << interimLines[i].getStr() << endl;
-    }
+//    cout << "==Interim" << endl;
+//    for(int i = 0; i < interimLines.size(); i++){
+//        cout << "--Pos:" << i <<  " Line ||" << interimLines[i].getStr() << endl;
+//    }
     
     //Reset counters
     linePos = 1;
