@@ -77,4 +77,5 @@ DiffHunk::DiffHunk(){
 
 GitFile::GitFile(string filename){
     m_filename = filename;
+    bIsActive = true;
 }
