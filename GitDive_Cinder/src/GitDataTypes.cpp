@@ -54,7 +54,7 @@ int Diff::getDeltaNumLines(){
 
 boost::shared_ptr<Line> Diff::getAllDiffLines(){
     
-    vector<Line>
+    vector<Line> lineList;
     
     for(int i = 0; i < m_hunkList.size(); i++){
         boost::shared_ptr<DiffHunk> diffHunk = m_hunkList[i];
