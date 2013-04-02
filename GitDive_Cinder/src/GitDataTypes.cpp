@@ -52,7 +52,7 @@ int Diff::getDeltaNumLines(){
     return addLines - removeLines;
 }
 
-boost::shared_ptr<Line> Diff::getAllDiffLines(){
+vector<Line> Diff::getAllDiffLines(){
     
     vector<Line> deltaLineList;
     
