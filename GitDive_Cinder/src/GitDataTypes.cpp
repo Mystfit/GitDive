@@ -99,6 +99,9 @@ void Diff::updateDeltaLists(){
         else if(originalLines[i].getLineState() == Line::LINE_DELETED){
             m_deltaRemoveLines.push_back(originalLines[i]);
         }
+        else if(originalLines[i].getLineState() == Line::LINE_NORMAL){
+            cout << "Ignore" << endl;
+        }
     }
 }
 
