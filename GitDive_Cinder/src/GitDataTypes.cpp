@@ -100,6 +100,7 @@ void Diff::updateDeltaLists(){
             m_deltaRemoveLines.push_back(originalLines[i]);
         }
         else if(originalLines[i].getLineState() == Line::LINE_NORMAL){
+            //Throw away
         }
     }
 }
