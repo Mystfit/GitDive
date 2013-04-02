@@ -22,7 +22,7 @@ void GitDive_CinderApp::setup()
         
     //Test of the commit serializer
     ofstream diffOutput;
-    ofstream fileoutput;
+    ofstream fileOutput;
 
     diffOutput.open("/Users/mystfit/desktop/cinderDiffOut.log");
     fileOutput.open("/Users/mystfit/desktop/cinderFileOut.log");
