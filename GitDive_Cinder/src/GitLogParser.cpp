@@ -148,7 +148,10 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
                 if(cLine.getLineState() == Line::LINE_DELETED || cLine.getLineState() == Line::LINE_NORMAL) diffHunk->incrementOldLinePos();
             }
         }
-                
+    }
+    
+    for(int j = 0; j < diffList.size(); j++){
+        difflist[j]->updateDeltaLists();
     }
     
     return diffList;
