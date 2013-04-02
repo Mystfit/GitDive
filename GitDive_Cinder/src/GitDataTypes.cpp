@@ -77,6 +77,11 @@ void Diff::updateDeltaLists(){
     
     m_deltaAddLines.clear();
     m_deltaRemoveLines.clear();
+    
+    for(int i = 0; i < originalLines.size(); i++){
+        if(originalLines[i].getLineState() == Line::LINE_ADDED) m_deltaAddLines.push_back(originalLines[i]);
+        else if(originalLines[i].getLineState() == Line::LINE_DELETED) m_deltaRemoveLines.push_back(originalLines[i]);
+    }
 }
 
 
