@@ -60,8 +60,15 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     vector<Line> deltaRemoveLines = diff->getDeltaRemoveLines();
     vector<Line> newLines;
     
+    if(originalLines.size() < 1){
+        file->setLines(deltaAddLines);
+        return;
+    }
+    
     int linePos = 1;
     int deltaIndex = 0;
+    
+    for(int lineNum = 1; lineNum < originalLines->)
 
     
     
