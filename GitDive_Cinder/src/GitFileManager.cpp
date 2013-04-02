@@ -35,7 +35,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
             file = getFileByName(diff->getFileName());
             if(file){
                 if(file->active()){
-                    applyDiffToFile(file, diff);
+                    applyDiffToFile(*(file), diff);
                 }
             }
         }
@@ -56,7 +56,7 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff){
     
     //Make a copy of the original lines
-    vector<Line> originalLines = file->getLines();
+    vector<Line> originalLines = file.getLines();
     vector<Line> deltaAddLines = diff->getDeltaAddLines();
     vector<Line> deltaRemoveLines = diff->getDeltaRemoveLines();
     vector<Line> interimLines;
@@ -66,7 +66,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         cout << endl << "===Creating new file " << diff->getFileName() << endl << endl;
         for(int i = 0; i < deltaAddLines.size(); i++) deltaAddLines[i].setLinePos(i);
         
-        file->setLines(deltaAddLines);
+        file.setLines(deltaAddLines);
         return;
     }
     
