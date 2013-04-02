@@ -109,7 +109,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 deltaIndex++;
             }
             
-            lineString.push_back(interimLines[linePos].getStr());
+            string line = interimLines[linePos].getStr();
+            cout line;
+            lineString.push_back(line);
             //newLines.push_back(interimLines[linePos]);
             linePos++;
             
