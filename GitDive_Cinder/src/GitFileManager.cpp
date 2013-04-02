@@ -90,7 +90,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         
         //Skip over lines if line is marked for removal
         if(oldLine.getLinePos() == deltaLines[deltaIndex].getLinePos() && deltaLines[deltaIndex].getLineState() == Line::LINE_DELETED){
-            cout << "o:" << oldLine << end << "|| r:" << deltaLines[deltaIndex].getStr() << endl;
+            cout << "o:" << oldLine.getStr() << end << "|| r:" << deltaLines[deltaIndex].getStr() << endl;
             linePos++;
             lineNum--;
             deltaIndex++;
