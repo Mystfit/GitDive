@@ -26,9 +26,11 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
             file = getFileByName(diff->getFileName());
             file->setInactive();
         } else if(diff->fileMode == Diff::FILEMODE_UPDATED){
-            if(file->active()){
-                file = getFileByName(diff->getFileName());
-                if(file) applyDiffToFile(file, diff);
+            if(file){
+                if(file->active()){
+                    file = getFileByName(diff->getFileName());
+                    if(file) applyDiffToFile(file, diff);
+                }
             }
         }
     }
