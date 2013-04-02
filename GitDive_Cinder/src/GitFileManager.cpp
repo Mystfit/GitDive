@@ -77,9 +77,11 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     cout << endl << "--File:" << diff->getFileName() << endl;
     cout << "--Num Add lines:" << deltaAddLines.size() << " Num remove lines:" << deltaRemoveLines.size() << endl;
     
+    interimLines = originalLines;
+    
     //Remove lines first
     if(deltaRemoveLines.size() < 1){
-        interimLines = originalLines;
+        
     } else {
         interimLines.clear();
         int size = originalLines.size() - deltaRemoveLines.size();
