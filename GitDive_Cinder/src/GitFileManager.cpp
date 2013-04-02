@@ -89,7 +89,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             if(deltaRemoveLines[deltaIndex].getLinePos() != lineNum){
                 try{
                     interimLines.push_back(origLine);
-                } catch(std::e)
+                } catch(exception e){
+                    cout << e.what();
+                }
                 interimLines[interimLines.size() -1].setLinePos(lineNum);
                 deltaIndex++;
                 linePos++;
