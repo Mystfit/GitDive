@@ -95,7 +95,7 @@ string GitFileManager::serializeAllFiles(){
     return fileText.str();
 }
 
-string GitFileManager::serializeFile(shared_ptr<GitFile> file){
+string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     stringstream fileText;
     vector<Line> lines = file->getLines();
     
