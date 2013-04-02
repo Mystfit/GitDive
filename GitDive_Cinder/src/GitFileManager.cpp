@@ -141,14 +141,8 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     
     cout << endl << endl;
     
-//    file->setLines(newLines);
-//    file->resetLineOrder();
-    
-    boost::shared_ptr<GitFile> newFile(new GitFile());
-    newFile->setLines(newLines);
-    newFile->resetLineOrder();
-    
-    return newFile;
+    file.setLines(newLines);
+    file.resetLineOrder();    
 }
 
 
