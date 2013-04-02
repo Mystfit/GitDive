@@ -47,7 +47,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
                 Line cLine = diffHunk->getLine(j);
                 
                 if(strcmp(cLine.getStr().c_str(), oldLine.c_str()) && cLine.getLineState() == Line::LINE_DELETED){
-                    
+                    linePos++;
                 }
             }
         }
