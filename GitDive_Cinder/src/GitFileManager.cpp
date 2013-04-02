@@ -96,12 +96,6 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         }
     }
     
-    
-    
-    
-    
-    
-    
     file->setLines(newLines);
 }
 
