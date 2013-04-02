@@ -71,7 +71,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     }
     
     
-    //DEBUG -- Determine file contents first
+    //*DEBUG* -- Determine file contents first
     cout << "===Original file contents" << endl;
     for(int index = 0; index < originalLines.size(); index++){
         cout << originalLines[index].getStr() << endl;
@@ -83,12 +83,9 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     };
     
     cout << endl;
-
+    //*END DEBUG*
     
     
-    int linesAdded = 0;
-    int linesRemoved = 0;
-        
     //Iterate over the original lines, removing or adding lines that match in the diff
     for(int lineNum = 1; lineNum <= originalLines.size() + diff->getNumDeltaLines(); lineNum++){
         
@@ -96,8 +93,6 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         
         try {
             cout << "--Line position:" << linePos << " Original size:" << originalLines.size() << " Delta:" << diff->getNumDeltaLines() <<  " New total:" << originalLines.size() + diff->getNumDeltaLines() << " Status:" << originalLines[linePos-1].getLineState() << endl;
-            if(originalLines[linePos-1].getLineState() == Line::LINE_ADDED) linesAdded++;
-            if(originalLines[linePos-1].getLineState() == Line::LINE_DELETED) linesRemoved++;
 
             oldLine = originalLines[linePos-1];
         } catch(std::exception e){
