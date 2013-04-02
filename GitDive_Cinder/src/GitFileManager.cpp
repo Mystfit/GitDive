@@ -23,12 +23,14 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
         if(diff->fileMode == Diff::FILEMODE_ADDED){
             file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
             m_fileList.push_back(file);
-            
-        } else if(diff->fileMode == Diff::FILEMODE_DELETED){
+        }
+        
+        else if(diff->fileMode == Diff::FILEMODE_DELETED){
             file = getFileByName(diff->getFileName());
             file->setInactive();
-            
-        } else if(diff->fileMode == Diff::FILEMODE_UPDATED){
+        }
+        
+        else if(diff->fileMode == Diff::FILEMODE_UPDATED){
             file = getFileByName(diff->getFileName());
             if(file){
                 if(file->active()){
