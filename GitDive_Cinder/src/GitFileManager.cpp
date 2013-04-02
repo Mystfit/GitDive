@@ -92,7 +92,6 @@ string GitFileManager::serializeAllFiles(){
     
     for(int i = 0; i < m_fileList.size(); i++){
         fileText << serializeFile(m_fileList[i]) << endl;
-        cout << serializeFile(m_fileList[i])  << endl;
     }
     
     return fileText.str();
