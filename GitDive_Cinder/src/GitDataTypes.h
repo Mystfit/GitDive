@@ -115,9 +115,10 @@ public:
     
     int getNumHunks(){ return m_hunkList.size(); };
     int getNumDeltaLines();
-    void updateDeltaLists();
     boost::shared_ptr<DiffHunk> getDiffHunk(int index){ return m_hunkList[index]; };
     vector<Line> getAllDeltaLines();
+    void updateDeltaLists();
+
 
 private:
     string m_fileNameA;
