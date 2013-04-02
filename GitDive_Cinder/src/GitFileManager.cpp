@@ -61,6 +61,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     vector<Line> deltaRemoveLines = diff->getDeltaRemoveLines();
     vector<Line> interimLines;
     vector<Line> newLines;
+    vector<String> lineString;
         
     if(originalLines.size() < 1){
         cout << endl << "===Creating new file " << diff->getFileName() << endl << endl;
