@@ -53,7 +53,7 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 }
 
 
-void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::shared_ptr<Diff> diff){
+void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff){
     
     //Make a copy of the original lines
     vector<Line> originalLines = file->getLines();
