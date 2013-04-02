@@ -80,11 +80,9 @@ void Diff::updateDeltaLists(){
     for(int i = 0; i < originalLines.size(); i++){
         if(originalLines[i].getLineState() == Line::LINE_ADDED) {
             m_deltaAddLines.push_back(originalLines[i]);
-            cout << "Add:" << originalLines[i].getLinePos() << endl;
         }
         else if(originalLines[i].getLineState() == Line::LINE_DELETED){
             m_deltaRemoveLines.push_back(originalLines[i]);
-            cout << "Remove:" << originalLines[i].getLinePos() << endl;
         }
     }
     
