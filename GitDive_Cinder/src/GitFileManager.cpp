@@ -56,7 +56,9 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     
     //Make a copy of the original lines
     vector<Line> originalLines = file->getLines();
-    vector<Line> deltaLines = diff->getAllDeltaLines();
+    vector<Line> deltaAddLines = diff->getDeltaAddLines();
+    vector<Line> deltaremoveLines = diff->getDeltaAddLines();
+
     vector<Line> newLines;
     
 
