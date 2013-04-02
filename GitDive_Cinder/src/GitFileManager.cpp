@@ -137,7 +137,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
             
             //If we've run out of source lines, add the remaining delta lines to the end
             if(lineNum == interimLines.size()){
-                cout << "--Adding " << deltaAddLines.size() - deltaIndex << " lines to the end of the file" << endl;
+                cout << endl << "--Adding " << deltaAddLines.size() - deltaIndex << " lines to the end of the file" << endl;
                 for(int leftovers = deltaIndex; leftovers < deltaAddLines.size() - deltaIndex; leftovers++){
                     newLines.push_back(deltaAddLines[deltaIndex++]);
                 }
