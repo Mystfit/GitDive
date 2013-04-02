@@ -69,7 +69,7 @@ string GitFileManager::serializeFile(shared_ptr<GitFile> file){
     vector<Line> lines = file->getLines();
     
     for(int i = 0; i < lines.size(); i++){
-        fileText << lines[i] << endl;
+        fileText << &lines[i] << endl;
     }
     
     
