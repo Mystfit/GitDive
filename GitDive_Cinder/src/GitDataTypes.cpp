@@ -8,6 +8,10 @@
 
 #include "GitDataTypes.h"
 
+
+/*
+ * Line
+ */
 Line::Line(string lineStr){
     m_lineStr = lineStr;
     
@@ -24,6 +28,11 @@ Line::Line(string lineStr){
     }    
 }
 
+
+
+/*
+ * Commit
+ */
 Commit::Commit(string _commit, string _date, string _author, string _message){
     commitHash = _commit;
     date = _date;
@@ -31,6 +40,11 @@ Commit::Commit(string _commit, string _date, string _author, string _message){
     message = _message;
 }
 
+
+
+/*
+ * Diff
+ */
 Diff::Diff(){
     fileType = Diff::FILETYPE_TEXT;
     fileMode = Diff::FILEMODE_UPDATED;
@@ -52,6 +66,7 @@ int Diff::getNumDeltaLines(){
     
     return addLines - removeLines;
 }
+
 
 vector<Line> Diff::getAllDeltaLines(){
     
@@ -89,10 +104,18 @@ void Diff::updateDeltaLists(){
 
 
 
+/*
+ * DiffHunk
+ */
 DiffHunk::DiffHunk(){
     m_linePos = 0;
 }
 
+
+
+/*
+ * Git File
+ */
 GitFile::GitFile(string filename){
     m_filename = filename;
     bIsActive = true;
