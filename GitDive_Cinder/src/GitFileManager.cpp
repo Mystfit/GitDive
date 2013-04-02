@@ -88,7 +88,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         }
     }
     
-    
+    //Reset counters
     linePos = 1;
     deltaIndex = 0;
     
