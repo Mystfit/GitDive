@@ -41,7 +41,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         vector<Line> deltaLines = diff->getAllDeltaLines();
         
         if(oldLine.getLinePos() == deltaLines[deltaLinePos].getLinePos()){
-            \
+            
         }
         
         
