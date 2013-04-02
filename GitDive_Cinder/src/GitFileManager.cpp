@@ -77,6 +77,13 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         cout << originalLines[index].getStr() << endl;
     };
     
+    cout << endl << "===Delta contents" << endl;
+    for(int deltaI = 0; deltaI < deltaLines.size(); deltaI++){
+        cout << deltaLines[deltaI].getStr() << endl;
+    };
+
+    
+    
     int linesAdded = 0;
     int linesRemoved = 0;
         
