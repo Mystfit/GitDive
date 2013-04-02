@@ -42,7 +42,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         Line oldLine = originalLines[linePos-1];
       
         //Skip adding lines if line is marked for removal
-        if(oldLine.getLinePos() == deltaLines[deltaIndex].getLinePos() &&  deltaLines[deltaIndex].getLineState() == Line::LINE_DELETED){
+        if(oldLine.getLinePos() == deltaLines[deltaIndex].getLinePos() && deltaLines[deltaIndex].getLineState() == Line::LINE_DELETED){
             linePos++;
             deltaIndex++;
         }
