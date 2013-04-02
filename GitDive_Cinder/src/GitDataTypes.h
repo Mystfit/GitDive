@@ -160,6 +160,7 @@ public:
     
     string getFilename(){ return m_filename; };
     
+    //Set active states
     bool active(){ return bIsActive; };
     void setInactive(){ bIsActive = false; };
     void setActive(){ bIsActive = true; };
