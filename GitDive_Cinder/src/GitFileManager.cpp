@@ -113,12 +113,12 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
             deltaIndex++;
         }
         
-        //Add new lines to list
-        else if(deltaLines[deltaIndex].getLinePos() == lineNum && deltaLines[deltaIndex].getLineState() == Line::LINE_ADDED){
-            newLines.push_back(deltaLines[lineNum]);
-            deltaIndex++;
-        }
-        
+//        //Add new lines to list
+//        else if(deltaLines[deltaIndex].getLinePos() == lineNum && deltaLines[deltaIndex].getLineState() == Line::LINE_ADDED){
+//            newLines.push_back(deltaLines[lineNum]);
+//            deltaIndex++;
+//        }
+//        
         //Add unmodified lines
         else {
             oldLine.setLinePos(lineNum);
