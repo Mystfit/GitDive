@@ -23,6 +23,7 @@ void GitFileManager::updateFilesFromCommit(boost::shared_ptr<Commit> commit){
             file = shared_ptr<GitFile>(new GitFile(diff->getFileName()));
         } else if(diff->fileMode == Diff::FILEMODE_DELETED){
             file = getFileByName(diff->getFileName());
+            file->setInactive();
         } else if(diff->fileMode == Diff::FILEMODE_UPDATED){
             file = getFileByName(diff->getFileName());
             if(file) applyDiffToFile(file, diff);
