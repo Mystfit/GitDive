@@ -85,8 +85,6 @@ void Diff::updateDeltaLists(){
             m_deltaRemoveLines.push_back(originalLines[i]);
         }
     }
-    
-    cout << endl;
 }
 
 
