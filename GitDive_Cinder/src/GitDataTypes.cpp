@@ -52,7 +52,7 @@ int Diff::getNumDeltaLines(){
     return addLines - removeLines;
 }
 
-vector<Line> Diff::getAllDiffLines(){
+vector<Line> Diff::getAllDeltaLines(){
     
     vector<Line> deltaLineList;
     
