@@ -27,6 +27,10 @@ public:
     
     //File modification
     static void applyDiffToFile(shared_ptr<GitFile>, shared_ptr<Diff> diff );
+    string serializeFile(shared_ptr<File> file){
+        
+    }
+
     
 private:
     vector< boost::shared_ptr<GitFile> > m_fileList;
