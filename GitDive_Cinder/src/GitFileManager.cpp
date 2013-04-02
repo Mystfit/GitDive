@@ -19,9 +19,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
     for(int i = 0; i < commit.getNumDiffs(); i++){
                 
         boost::shared_ptr<Diff> diff = commit.getDiff(i);
-        
-        cout << diff->fileMode << endl;
-        
+                
         if(diff->fileMode == Diff::FILEMODE_ADDED){
             file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
             m_fileList.push_back(file);
@@ -30,6 +28,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
             file->setInactive();
         } else if(diff->fileMode == Diff::FILEMODE_UPDATED){
             if(file){
+                cout << file->active() << endl;
                 if(file->active()){
                     file = getFileByName(diff->getFileName());
                     if(file) applyDiffToFile(file, diff);
