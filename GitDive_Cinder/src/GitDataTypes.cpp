@@ -36,7 +36,7 @@ Diff::Diff(){
     fileMode = "updated";
 }
 
-int Diff::getDeltaNumLines(){
+int Diff::getNumDeltaLines(){
     int addLines = 0;
     int removeLines = 0;
     
