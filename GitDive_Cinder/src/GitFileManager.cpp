@@ -64,5 +64,5 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         linePos++;        
     }
     
-    file->setLines(newLines;)
+    file->setLines(newLines);
 }
