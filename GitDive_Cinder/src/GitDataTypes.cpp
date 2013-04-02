@@ -73,7 +73,7 @@ vector<Line> Diff::getAllDeltaLines(){
 }
 
 void Diff::updateDeltaLists(){
-    originalLines = getAllDeltaLines();
+    vector<Line> originalLines = getAllDeltaLines();
 }
 
 
