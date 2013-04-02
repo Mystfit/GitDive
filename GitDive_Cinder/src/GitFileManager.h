@@ -21,8 +21,7 @@ public:
     GitFileManager();
     
     //File addition/retrieval
-    void addFile(void GitFileManager::addFile(shared_ptr<GitFile> file){
- file);
+    void addFile(shared_ptr<GitFile> file);
     shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
     shared_ptr<GitFile> getFileByName(string fileName);
     
