@@ -84,7 +84,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     
     //Add lines second;
     for(int lineNum = 1; lineNum < interimLines.size() + deltaAddLines.size(); lineNum++ ){
-    
+        if()
     
     }
     
