@@ -151,9 +151,7 @@ vector< shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
     }
     
     //Sort deltas into add/remove categories
-    for(int j = 0; j < diffList.size(); j++){
-        diffList[j]->updateDeltaLists();
-    }
+    for(int j = 0; j < diffList.size(); j++) diffList[j]->updateDeltaLists();
     
     return diffList;
 }
