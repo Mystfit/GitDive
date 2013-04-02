@@ -92,15 +92,11 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
                     continue;
                 }
             }
-            
-            if(deltaIndex < deltaRemoveLines.size()){
-            {
-                origLine.setLinePos(lineNum);
-                interimLines.push_back(origLine);
-                deltaIndex++;
-                linePos++;
-            }
-            
+           
+            origLine.setLinePos(lineNum);
+            interimLines.push_back(origLine);
+            deltaIndex++;
+
             linePos++;
         }
     }
