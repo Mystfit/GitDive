@@ -119,6 +119,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
             cout << "---Comparing lines A:" << linePos << " B:" << deltaAddLines[deltaIndex].getLinePos() << endl;
             
             if(deltaAddLines[deltaIndex].getLinePos() == linePos){
+                cout << "!!!Matched! lines A:" << linePos << " B:" << deltaAddLines[deltaIndex].getLinePos() << endl;
                 newLines.push_back(deltaAddLines[deltaIndex]);
                 deltaIndex++;
             } else {
