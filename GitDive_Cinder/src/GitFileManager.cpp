@@ -58,8 +58,9 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     int linePos = 1;
     int deltaIndex = 0;
     
-    //If the 
+    //If there are no original lines we dump all the new lines straight into the file
     if(originalLines.size() == 0){
+        cout << "BING" << endl;
         file->setLines(deltaLines);
         return;
     }
