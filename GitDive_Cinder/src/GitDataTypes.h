@@ -161,6 +161,8 @@ public:
     string getFilename(){ return m_filename; };
     
     bool active(){ return bIsActive; };
+    void setInactive(){ bIsActive = false; };
+    void setActive(){ bIsActive = true; };
     void setLines(vector<Line> lines){ m_activeLines = lines; };
     vector<Line> getLines(){ return m_activeLines; };
         
