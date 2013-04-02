@@ -25,7 +25,7 @@ public:
     
     
     //File modification
-    static void applyDiffToFile(boost::shared_ptr<GitFile>, shared_ptr<Diff> diff );
+    static void applyDiffToFile(boost::shared_ptr<GitFile>, boost::shared_ptr<Diff> diff );
     
     //File display
     string serializeAllFiles();
