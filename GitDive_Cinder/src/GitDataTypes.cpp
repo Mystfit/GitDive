@@ -86,8 +86,6 @@ void Diff::updateDeltaLists(){
 
 
 
-
-
 DiffHunk::DiffHunk(){
     m_linePos = 0;
 }
