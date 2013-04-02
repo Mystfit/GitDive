@@ -37,7 +37,6 @@ Diff::Diff(){
 }
 
 void Diff::addDiffHunk(boost::shared_ptr<DiffHunk> hunk){
-    m_hunkList.push_back(hunk);
 }
 
 int Diff::getNumDeltaLines(){
@@ -73,6 +72,9 @@ vector<Line> Diff::getAllDeltaLines(){
     return deltaLineList;
 }
 
+void Diff::updateDeltaLists(){
+    
+}
 
 
 
