@@ -33,7 +33,7 @@ Commit::Commit(string _commit, string _date, string _author, string _message){
 
 Diff::Diff(){
     fileType = Diff::FILETYPE_TEXT;
-    fileMode = Diff::FILEMODE_UPDATED:
+    fileMode = Diff::FILEMODE_UPDATED;
 }
 
 int Diff::getNumDeltaLines(){
