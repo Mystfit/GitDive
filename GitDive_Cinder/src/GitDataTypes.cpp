@@ -87,6 +87,8 @@ void Diff::updateDeltaLists(){
             cout << "Remove:" << originalLines[i].getLinePos() << endl;
         }
     }
+    
+    cout << endl;
 }
 
 
