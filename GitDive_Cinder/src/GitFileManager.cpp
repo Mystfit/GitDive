@@ -61,23 +61,6 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         }
         
         //Always increment the old line position so we get the correct original line number
-        linePos++;
-        
-        
-        //IF Line is added -> DON'T increment oldLinePos, DO increment deltaLinePos
-        //IF Line is removed -> DO increment oldLinePos, DON'T increment deltaLinePos
-
-
-
-//        if(strcmp(cLine.getStr().c_str(), oldLine.c_str()) && cLine.getLineState() == Line::LINE_DELETED){
-//            linePos++;
-//        } else if() {
-//            
-//        }
-        
-        
+        linePos++;        
     }
-    
-    
-    
 }
