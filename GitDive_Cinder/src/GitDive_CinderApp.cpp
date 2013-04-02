@@ -26,7 +26,6 @@ void GitDive_CinderApp::setup()
 
     diffOutput.open("/Users/mystfit/desktop/cinderDiffOut.log");
     fileoutput.open("/Users/mystfit/desktop/cinderFileOut.log");
-
     
     for(int i = 0; i < commitList.size(); i++) {
         diffOutput << GitLogParser::serializeCommit(commitList[i]);
