@@ -23,11 +23,11 @@ public:
     GitFileManager();
     
     //File addition/retrieval
+    void updateFilesFromCommit(boost::shared_ptr<Commit> commit);
     void addFile(shared_ptr<GitFile> file){ m_fileList.push_back(file); };
     shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
     shared_ptr<GitFile> getFileByName(string fileName);
     
-    void updateFilesFromCommit(boost::shared_ptr<Commit> commit);
     
     //File modification
     static void applyDiffToFile(shared_ptr<GitFile>, shared_ptr<Diff> diff );
