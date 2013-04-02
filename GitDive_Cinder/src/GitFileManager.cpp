@@ -97,16 +97,6 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         }
     }
     
-//    cout << "==Original" << endl;
-//    for(int i = 0; i < originalLines.size(); i++){
-//        cout << "--Pos:" << originalLines[i].getLinePos() <<  " Line ||" << originalLines[i].getStr() << endl;
-//    }
-//    
-//    cout << "==Interim" << endl;
-//    for(int i = 0; i < interimLines.size(); i++){
-//        cout << "--Pos:" << i <<  " Line ||" << interimLines[i].getStr() << endl;
-//    }
-    
     //Reset counters
     linePos = 0;
     lineNum = 1;
@@ -120,16 +110,6 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         newLines = interimLines;
     } else {
         for(lineNum = 1; lineNum <= interimLines.size(); lineNum++ ){
-            
-            //**DEBUG
-            cout << endl << "---Delta index:" << deltaIndex << " Line index:" << linePos << " Line num:" << lineNum << " Source size:" << interimLines.size() << " Search size:" << interimLines.size() + deltaAddLines.size();
-            
-            if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() + deltaIndex == linePos+1){
-                cout << " !!!Matched lines A:" << linePos+1 << " B:" << deltaAddLines[deltaIndex].getLinePos();
-                newLines.push_back(deltaAddLines[deltaIndex]);
-                deltaIndex++;
-            }
-            //**END DEBUG
             
             newLines.push_back(interimLines[linePos]);
             linePos++;
