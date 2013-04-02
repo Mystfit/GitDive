@@ -90,6 +90,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 if(interimLines.empty()){
                     interimLines.push_back(Line(origLine.getStr()));
                     interimLines[interimLines.size() -1].setLinePos(lineNum);
+                } else {
+                    interimLines.push_back(Line(origLine.getStr()));
+                    interimLines[interimLines.size() -1].setLinePos(lineNum);
                 }
                 deltaIndex++;
                 linePos++;
