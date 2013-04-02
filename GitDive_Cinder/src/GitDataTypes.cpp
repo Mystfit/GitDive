@@ -52,7 +52,9 @@ int Diff::getDeltaNumLines(){
     return addLines - removeLines;
 }
 
-boost::shared_ptr<Line> Diff::getAllDiffLines();
+boost::shared_ptr<Line> Diff::getAllDiffLines(){
+    
+}
 
 
 
