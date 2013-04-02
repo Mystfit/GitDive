@@ -38,7 +38,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     for(int lineNum = 0; lineNum < originalLines.size() + diff->getNumDeltaLines(); lineNum++){
         
         string oldLine = originalLines[lineNum].getStr();
-        vector<Line> deltaLines = diff->getAllDiffLines();
+        vector<Line> deltaLines = diff->getAllDeltaLines();
 
 
 //        if(strcmp(cLine.getStr().c_str(), oldLine.c_str()) && cLine.getLineState() == Line::LINE_DELETED){
