@@ -33,7 +33,7 @@ public:
     string repoPath;
     string gitCmd;
     
-    GitMana
+    GitFileManager fManager;
     
     vector<Commit> commitList;
 };
