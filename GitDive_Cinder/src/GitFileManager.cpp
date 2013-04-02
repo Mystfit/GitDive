@@ -42,7 +42,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         vector<Line> deltaLines = diff->getAllDeltaLines();
         
       
-        if(oldLine.getLinePos() == deltaLines[deltaIndex] )
+        if(oldLine.getLinePos() == deltaLines[deltaIndex].getLinePos() &&  deltaLines[deltaIndex].getLineState() == Line::LINE_DELETED)
         
         //Always increment the old line position so we get the correct original line number
         deltaLinePos++;
