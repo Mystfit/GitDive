@@ -30,8 +30,6 @@ public:
     
     //File display
     string serializeFile(boost::shared_ptr<File> file);
-        
-    }
 
     
 private:
