@@ -91,8 +91,9 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         else {
             oldLine.setLinePos(lineNum);
             newLines.push_back(oldLine);
-            linePos++;
         }
+        
+        linePos++;
         
         //Always increment the old line position so we get the correct original line number
     }
