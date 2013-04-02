@@ -71,6 +71,9 @@ vector<Line> Diff::getAllDeltaLines(){
 
 
 
+
+
+
 DiffHunk::DiffHunk(){
     m_linePos = 0;
 }
