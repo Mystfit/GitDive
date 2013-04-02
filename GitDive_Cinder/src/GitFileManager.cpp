@@ -50,7 +50,9 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
         else if(deltaLines[deltaIndex].getLinePos() == lineNum && deltaLines[deltaIndex].getLineState() == Line::LINE_ADDED){
             newLines.push_back(deltaLines[lineNum]);
             deltaIndex++;
-        } else {
+        }
+        
+        else {
             
         }
         
