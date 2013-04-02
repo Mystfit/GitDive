@@ -14,18 +14,19 @@ GitFileManager::GitFileManager(){
 
 void GitFileManager::updateFilesFromCommit(boost::shared_ptr<Commit> commit){
     
+    shared_ptr<GitFile> file;
     
     for(int i = 0; i < commit->getNumDiffs(); i++){
         boost::shared_ptr<Diff> diff = commit->getDiff(i);
         
         if(diff->fileMode == Diff::FILEMODE_ADDED){
-            shared_ptr<GitFile> file(new GitFile(diff->getFileName()));
+            (new GitFile(diff->getFileName()));
         } else if(diff->fileMode == Diff::FILEMODE_DELETED){
             
-        } else if(diff->fileMode == Diff::FILEMODE_UPDATED){
-            applyDiffToFile(getFileByName(diff->getFileName()), diff);
         }
     }
+    
+    applyDiff
     
     
 }
