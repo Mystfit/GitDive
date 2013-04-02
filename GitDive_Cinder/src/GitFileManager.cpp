@@ -107,7 +107,7 @@ void GitFileManager::applyDiffToFile(boost::shared_ptr<GitFile> file, boost::sha
     
     cout << "==Add deltas" << endl;
     for(int i = 0; i < deltaAddLines.size(); i++){
-        cout << "--Pos:" << i <<  " Line ||" << deltaAddLines[i].getStr() << endl;
+        cout << "--i:" << i << " Pos:" << deltaAddLines[i].getLinePos() <<  " Line ||" << deltaAddLines[i].getStr() << endl;
     }
     
     //Reset counters
