@@ -11,7 +11,6 @@
 
 #include "GitDataTypes.h"
 
-
 class GitCommitManager {
 public:
     //Commit traversal
