@@ -18,7 +18,7 @@ void GitDive_CinderApp::setup()
     //Send lines through the log parser to make commit objects
     boost::shared_ptr< vector<Commit> > commitList = GitLogParser::parseLog(cmdOutput);
     
-    fManager.addCommitSource(commitList);
+    fManager.setCommitSource(commitList);
     
     GitLogParser::dumpDiffOutput(*(commitList), "/Users/mystfit/desktop/cinderDiffOut.log");
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
