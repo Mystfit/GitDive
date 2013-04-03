@@ -118,7 +118,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     }
     
     
-    
     //Reset counters
     deltaIndex = 0;
     int lineCounter = 0;
