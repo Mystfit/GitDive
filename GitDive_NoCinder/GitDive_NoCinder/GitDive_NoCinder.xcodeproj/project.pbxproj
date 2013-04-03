@@ -180,10 +180,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib,
-					/Users/mystfit/Code/Cinder/lib/macosx,
-				);
+				LIBRARY_SEARCH_PATHS = /Users/mystfit/Code/Cinder/lib/macosx;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lboost_iostreams";
@@ -214,10 +211,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib,
-					/Users/mystfit/Code/Cinder/lib/macosx,
-				);
+				LIBRARY_SEARCH_PATHS = /Users/mystfit/Code/Cinder/lib/macosx;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = "-lboost_iostreams";
 				SDKROOT = macosx;
