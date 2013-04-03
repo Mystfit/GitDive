@@ -25,7 +25,7 @@ public:
     boost::shared_ptr<GitFile> getFileByName(string fileName);
     
     //Commit traversal
-    void addCommitSource(boost::shared_ptr< vector<Commit> > commitList){ m_commitList = commitList; };
+    void setCommitSource(boost::shared_ptr< vector<Commit> > commitList){ m_commitList = commitList; };
     
     //File modification
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
