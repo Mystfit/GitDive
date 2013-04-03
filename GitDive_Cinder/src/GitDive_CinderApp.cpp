@@ -3,7 +3,7 @@
 void GitDive_CinderApp::prepareSettings( Settings *settings )
 {
 	settings->setWindowSize( 1024, 1024 );
-	settings->setFrameRate( 60 );
+	settings->setFrameRate( 10 );
 }
 
 void GitDive_CinderApp::setup()
@@ -37,6 +37,8 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 
 void GitDive_CinderApp::update()
 {
+    fManager.applyNextCommit();
+    fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
 }
 
 void GitDive_CinderApp::draw()
