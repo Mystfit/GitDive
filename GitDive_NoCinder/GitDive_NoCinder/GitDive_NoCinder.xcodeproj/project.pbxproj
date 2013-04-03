@@ -77,8 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				4AEDB2FB170BABA400E087F0 /* main.cpp */,
-				4AEDB306170BAC0500E087F0 /* GitDataTypes.cpp */,
 				4AEDB307170BAC0500E087F0 /* GitDataTypes.h */,
+				4AEDB306170BAC0500E087F0 /* GitDataTypes.cpp */,
 				4AEDB309170BAC0500E087F0 /* GitFileManager.h */,
 				4AEDB308170BAC0500E087F0 /* GitFileManager.cpp */,
 				4AEDB30B170BAC0500E087F0 /* GitLogParser.h */,
