@@ -33,7 +33,6 @@
 		4AEDB2F8170BABA400E087F0 /* GitDive_NoCinder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GitDive_NoCinder; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEDB2FB170BABA400E087F0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4AEDB2FD170BABA400E087F0 /* GitDive_NoCinder.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = GitDive_NoCinder.1; sourceTree = "<group>"; };
-		4AEDB304170BAC0500E087F0 /* Resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../../../GitDive_Cinder/include/Resources.h; sourceTree = "<group>"; };
 		4AEDB305170BAC0500E087F0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../../../GitDive_Cinder/include/Utils.h; sourceTree = "<group>"; };
 		4AEDB306170BAC0500E087F0 /* GitDataTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitDataTypes.cpp; path = ../../../GitDive_Cinder/src/GitDataTypes.cpp; sourceTree = "<group>"; };
 		4AEDB307170BAC0500E087F0 /* GitDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDataTypes.h; path = ../../../GitDive_Cinder/src/GitDataTypes.h; sourceTree = "<group>"; };
@@ -78,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				4AEDB2FB170BABA400E087F0 /* main.cpp */,
-				4AEDB304170BAC0500E087F0 /* Resources.h */,
 				4AEDB305170BAC0500E087F0 /* Utils.h */,
 				4AEDB306170BAC0500E087F0 /* GitDataTypes.cpp */,
 				4AEDB307170BAC0500E087F0 /* GitDataTypes.h */,
