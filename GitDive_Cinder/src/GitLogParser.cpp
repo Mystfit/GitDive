@@ -25,7 +25,7 @@ vector<Commit> GitLogParser::parseLog(string logString)
             
             //Parse last commit first with the lines between the last GD_commit line
             if(commitList.size() > 0){            
-                commitList[commitList.end()].addDiffList( parseCommit(diffBlock) );
+                commitList.end().addDiffList( parseCommit(diffBlock) );
             }
             
             diffBlock.clear();
