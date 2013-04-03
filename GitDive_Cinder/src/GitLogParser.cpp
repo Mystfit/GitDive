@@ -8,7 +8,7 @@
 
 #include "GitLogParser.h"
 
-vector<Commit> GitLogParser::parseLog(string diffLog)
+vector<Commit> GitLogParser::parseLog(string diffString)
 {
     vector<Commit> commitList;
     vector <string> diffBlock;
