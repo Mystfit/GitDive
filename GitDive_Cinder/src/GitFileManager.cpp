@@ -100,6 +100,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block = FileChangeBlock();
                     block.blockType = FileChangeBlock::FILECHANGE_DELETE;
                     block.blockStart = pos;
+                    block.blockEnd = pos;
                 }
                 if(pos - blockEnd > 1){
                     fileChanges.push_back(block);
