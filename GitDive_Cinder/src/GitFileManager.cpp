@@ -9,7 +9,7 @@
 #include "GitFileManager.h"
 
 GitFileManager::GitFileManager(){
-    
+    m_commitIndex = 0;
 }
 
 void GitFileManager::updateFilesFromCommit(Commit &commit){
@@ -55,6 +55,7 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 bool GitFileManager::applyNextCommit(){
     if(m_commitIndex < m_commitList.size()) {
         updateFilesFromCommit(m_commitList[m_commitIndex]);
+        m_commitIndex++;
         return true;
     }
     
