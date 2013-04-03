@@ -164,6 +164,20 @@ vector< boost::shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffB
 }
 
 
+void GitLogParser::dumpDiffOutput(vector<Commit> commitList){
+    //Test of the commit serializer
+    ofstream diffOutput;
+    diffOutput.open("/Users/mystfit/desktop/cinderDiffOut.log");
+    
+    for(int i = 0; i < commitList.size(); i++) {
+        diffOutput << GitLogParser::serializeCommit(commitList[i]);
+    }
+    
+    //Close the file
+    diffOutput.close();
+}
+
+
 string GitLogParser::serializeCommit(Commit commit)
 {
     stringstream commitText;
