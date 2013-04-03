@@ -10,6 +10,7 @@
 #define __GitDive_Cinder__GitLogParser__
 
 #include <iostream>
+#include <fstream>
 #include <sstream>
 #include "GitDataTypes.h"
 
