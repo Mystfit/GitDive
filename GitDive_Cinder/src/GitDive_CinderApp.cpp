@@ -31,20 +31,24 @@ void GitDive_CinderApp::dumpDiffOutput(){
         diffOutput << GitLogParser::serializeCommit(commitList[i]);
     }
     
-    for(int commitIndex = 0; commitIndex < commitList.size(); commitIndex++){
-        fManager.updateFilesFromCommit(commitList[commitIndex]);
-    }
+
     
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
     
     //Close the file
     diffOutput.close();
+    
+    // /Users/mystfit/desktop/cinderFileOut.log
 }
 
-void GitDive_CinderApp::dumpFileOutput(){
+void GitDive_CinderApp::dumpFileOutput(string path){
     ofstream fileOutput;
-    fileOutput.open("/Users/mystfit/desktop/cinderFileOut.log");
-
+    fileOutput.open(path.c_str());
+    
+    for(int commitIndex = 0; commitIndex < commitList.size(); commitIndex++){
+        fManager.updateFilesFromCommit(commitList[commitIndex]);
+    }
+    
     fileOutput << fManager.serializeAllFiles();
     fileOutput.close();
 }
