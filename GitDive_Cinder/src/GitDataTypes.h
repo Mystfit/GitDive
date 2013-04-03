@@ -34,7 +34,7 @@ public:
     
     enum lineState{LINE_NORMAL = 0, LINE_ADDED, LINE_DELETED};
     int getLineState(){ return m_lineState; };
-    char getLineStateSymbol(){
+    string getLineStateSymbol(){
         if(m_lineState == LINE_ADDED) return "+";
         if(m_lineState == LINE_DELETED) return "-";
         return " ";
