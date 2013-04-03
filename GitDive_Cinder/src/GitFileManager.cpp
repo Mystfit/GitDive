@@ -96,6 +96,8 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             if(pos < interimLines.size()){
                 //Erase the line from the file
                 interimLines.erase(interimLines.begin() + pos);
+                
+                //Store the removed lines as a block of lines so we can keep the original structure of the file
                 if(!blockOpen){
                     blockOpen = true;
                     block = FileChangeBlock();
