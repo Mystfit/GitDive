@@ -13,12 +13,7 @@
 		4AEDB30E170BAC0500E087F0 /* GitFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB308170BAC0500E087F0 /* GitFileManager.cpp */; };
 		4AEDB30F170BAC0500E087F0 /* GitLogParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB30A170BAC0500E087F0 /* GitLogParser.cpp */; };
 		4AEDB310170BAC0500E087F0 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB30C170BAC0500E087F0 /* Utils.cpp */; };
-		4AEDB317170BAC6100E087F0 /* libboost_date_time.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB311170BAC6100E087F0 /* libboost_date_time.a */; };
-		4AEDB318170BAC6100E087F0 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB312170BAC6100E087F0 /* libboost_filesystem.a */; };
 		4AEDB319170BAC6100E087F0 /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB313170BAC6100E087F0 /* libboost_iostreams.a */; };
-		4AEDB31A170BAC6100E087F0 /* libboost_regex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB314170BAC6100E087F0 /* libboost_regex.a */; };
-		4AEDB31B170BAC6100E087F0 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB315170BAC6100E087F0 /* libboost_system.a */; };
-		4AEDB31C170BAC6100E087F0 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB316170BAC6100E087F0 /* libboost_thread.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,12 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AEDB317170BAC6100E087F0 /* libboost_date_time.a in Frameworks */,
-				4AEDB318170BAC6100E087F0 /* libboost_filesystem.a in Frameworks */,
 				4AEDB319170BAC6100E087F0 /* libboost_iostreams.a in Frameworks */,
-				4AEDB31A170BAC6100E087F0 /* libboost_regex.a in Frameworks */,
-				4AEDB31B170BAC6100E087F0 /* libboost_system.a in Frameworks */,
-				4AEDB31C170BAC6100E087F0 /* libboost_thread.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
