@@ -53,7 +53,7 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 
 
 bool GitFileManager::applyNextCommit(){
-    if(m_commitIndex < m_commitList->size()) updateFilesFromCommit(*(m_commitList[m_commitIndex]));
+    if(m_commitIndex < m_commitList->size()) updateFilesFromCommit(m_commitList[m_commitIndex]);
     
     return false;
 }
