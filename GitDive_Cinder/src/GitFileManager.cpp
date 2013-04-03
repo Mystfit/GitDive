@@ -102,7 +102,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block.blockStart = pos;
                     block.blockEnd = pos;
                 }
-                if(pos - blockEnd > 1){
+                if(pos - block.blockEnd > 1){
                     fileChanges.push_back(block);
                     blockOpen = false;
                 } else {
