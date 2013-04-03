@@ -139,6 +139,10 @@ void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path
     vector<Line> lines = file->getLines();
     
     string fileName = file->getFilename();
+    vector<string> splitLine;
+    split(splitLine, fileName, is_any_of("/."));
+    
+    string finalPath = path + "/" + splitLine[splitLine.size()-1];
     
     fileOutput.open(path);
     for(int i = 0; i <   lines.size(); i++){
