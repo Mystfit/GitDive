@@ -134,7 +134,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
 }
 
 void GitFileManager::dumpAllFiles(string path){
-    for(int i = 0; i < m_fileList[i]; i++){
+    for(int i = 0; i < m_fileList[i].size(); i++){
         saveFileToDisk(m_fileList[i], path);
     }
 }
