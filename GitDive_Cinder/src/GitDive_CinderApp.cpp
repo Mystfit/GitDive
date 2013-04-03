@@ -24,8 +24,6 @@ void GitDive_CinderApp::setup()
     fManager.dumpFileOutput("/Users/mystfit/desktop/cinderFileOut.log");
 }
 
-
-
 void GitDive_CinderApp::mouseDown( MouseEvent event )
 {
 }
