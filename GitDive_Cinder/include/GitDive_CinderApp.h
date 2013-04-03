@@ -27,6 +27,7 @@ class GitDive_CinderApp : public AppBasic {
 public:
 	void setup();
 	void mouseDown( MouseEvent event );
+    void keyDown( KeyEvent event );
 	void update();
 	void draw();
     
