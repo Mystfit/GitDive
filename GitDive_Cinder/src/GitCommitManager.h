@@ -21,7 +21,7 @@ public:
     bool applyNextCommit();
     int getCommitIndex(){ return m_commitIndex; };
 private:
-    vector<Commit> m_commitList;
+    boost::shared_ptr< vector<Commit> > m_commitList;
     int m_commitIndex;
 };
 
