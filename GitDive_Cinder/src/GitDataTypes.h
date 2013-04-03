@@ -195,8 +195,9 @@ private:
 /*
  * A a block describing a removed section from a file
  */
-struct fileChangeBLock{
-    int 
+struct FileChangeBlock{
+    enum fileChangeType {FILECHANGE_ADD = 0, FILECHANGE_DELETE};
+    int blockType;
     int blockStart;
     int blockEnd;
 };
