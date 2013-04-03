@@ -17,15 +17,15 @@ Line::Line(string lineStr){
     
     if(lineStr.compare(0, 1, "+") == 0){
         m_lineState = LINE_ADDED;
-        m_lineStr.erase(0,1);
     }
     else if(lineStr.compare(0, 1, "-") == 0){
         m_lineState = LINE_DELETED;
-        m_lineStr.erase(0,1);
     }
     else{
         m_lineState = LINE_NORMAL;
-    }    
+    }
+    m_lineStr.erase(0,1);
+
 }
 
 
