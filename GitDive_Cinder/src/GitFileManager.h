@@ -29,6 +29,7 @@ public:
     void setCommitSource(vector<Commit> commitList){ m_commitList = commitList; };
     bool applyNextCommit();
     int getCommitIndex(){ return m_commitIndex; };
+    int resetCommitIndex(){ m_commitIndex = 0; };
     
     //File modification
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
