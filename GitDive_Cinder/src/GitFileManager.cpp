@@ -137,7 +137,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
 void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path){
     ofstream fileOutput;
     vector<Line> lines = file->getLines();
-    string path;
     
     fileName = file->getFilename();
     
