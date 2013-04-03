@@ -10,7 +10,7 @@
 
 vector<Commit> GitLogParser::parseLog(string logString)
 {
-    vector<Commit> commitList;
+    shared_ptr< vector<Commit> > commitList(new vector<Commit>);
     vector <string> diffBlock;
     
     //Split string into lines
