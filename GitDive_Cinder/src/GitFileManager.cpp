@@ -86,7 +86,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     deltaIndex = 0;
     int lineCounter = 0;
     
-    //Add lines second;
+    //Add lines
     if(deltaAddLines.size() == 0){
         newLines = interimLines;
     } else {
@@ -109,7 +109,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             }
         }
     }
-    
     
     //Reset the file with the new lines
     file.setLines(newLines);
