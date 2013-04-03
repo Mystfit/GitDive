@@ -134,8 +134,8 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     }
     
     cout << endl << "--After line addition" << endl;
-    for(int i = 0; i < interimLines.size(); i++){
-        cout << "Ln no:" << interimLines[i].getLinePos() << " " << interimLines[i].getLineStateSymbol() << "|" << interimLines[i].getStr() << endl;
+    for(int i = 0; i < newLines.size(); i++){
+        cout << "Ln no:" << newLines[i].getLinePos() << " " << newLines[i].getLineStateSymbol() << "|" << newLines[i].getStr() << endl;
     }
 
     
