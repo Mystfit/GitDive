@@ -18,7 +18,7 @@ using namespace boost;
 class GitLogParser {
 public:
     //Parses entire git log into commit objects
-    static vector<Commit> parseLog(vector<string> diffLog);
+    static vector<Commit> parseLog(string logString);
     
     //Parses individual commit datablock into diffs
     static vector< boost::shared_ptr<Diff> > parseCommit(vector<string> diffBlock);
