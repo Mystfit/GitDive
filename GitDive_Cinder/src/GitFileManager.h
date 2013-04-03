@@ -37,7 +37,7 @@ public:
 
     
 private:
-    vector< boost::shared_ptr<GitFile> > m_fileList;
+    vector< boost::shared_ptr<GitFile> > m_fileList;-=
 };
 
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
