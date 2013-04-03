@@ -55,7 +55,7 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 
 bool GitFileManager::applyNextCommit(){
     
-    return fals;
+    return false;
 }
 
 
