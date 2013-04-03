@@ -50,6 +50,8 @@ vector<Commit> GitLogParser::parseLog(string logString)
             diffBlock.push_back(line);
         }
         
+        if(diffLog.end())
+        
     }
     
     return commitList;
