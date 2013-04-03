@@ -22,6 +22,7 @@ public:
     int getCommitIndex(){ return m_commitIndex; };
 private:
     vector<Commit> m_commitList;
+    int m_commitIndex;
 };
 
 #endif /* defined(__GitDive_Cinder__GitCommitManager__) */
