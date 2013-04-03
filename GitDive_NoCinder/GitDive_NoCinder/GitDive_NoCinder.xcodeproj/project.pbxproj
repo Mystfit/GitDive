@@ -184,6 +184,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = /Users/mystfit/Code/Cinder/boost/boost;
 			};
 			name = Debug;
 		};
@@ -210,6 +211,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = /Users/mystfit/Code/Cinder/boost/boost;
 			};
 			name = Release;
 		};
