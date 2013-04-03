@@ -2,7 +2,7 @@
 
 void GitDive_CinderApp::setup()
 {
-    string repoPath = "/Users/mystfit/Code/Cinder";
+    string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
     string gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
     string combinedCmd = "cd " + repoPath + " && " + gitCmd;
     
