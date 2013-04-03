@@ -15,12 +15,8 @@ void GitDive_CinderApp::setup()
     //Get the output of the git command from stdout as a giant string
     string cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
     
-    //Split string into lines
-    vector<string> outputStrings;
-    boost::split(outputStrings, cmdOutput, boost::is_any_of("\n"));
-    
     //Send lines through the log parser to make commit objects
-    commitList = GitLogParser::parseLog(outputStrings);
+    commitList = GitLogParser::parseLog(cmdOutput);
     
     for(int commitIndex = 0; commitIndex < commitList.size(); commitIndex++){
         fManager.updateFilesFromCommit(commitList[commitIndex]);
