@@ -15,6 +15,7 @@
 
 #include "GitDataTypes.h"
 
+using namespace boost;
 
 class GitLogParser {
 public:
