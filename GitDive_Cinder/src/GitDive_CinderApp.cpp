@@ -29,9 +29,9 @@ void GitDive_CinderApp::mouseDown( MouseEvent event )
 }
 
 void GitDive_CinderApp::keyDown(KeyEvent event){
-    char key =  event.getChar();
+    char key =  
     
-    if(strcmp(&key, " ") == 0){
+    if(event.getChar() == KeyEvent::){
         fManager.applyNextCommit();
         fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
     }
