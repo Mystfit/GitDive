@@ -20,7 +20,7 @@ void GitDive_CinderApp::setup()
     
     fManager.setCommitSource(commitList);
     
-    GitLogParser::dumpDiffOutput(commitList, "/Users/mystfit/desktop/cinderDiffOut.log");
+    GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
 }
 
