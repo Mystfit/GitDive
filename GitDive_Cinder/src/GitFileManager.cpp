@@ -114,12 +114,14 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     file.setLines(newLines);
 }
 
+
 void GitFileManager::dumpFileOutput(string path){
     ofstream fileOutput;
     fileOutput.open(path.c_str());
-    fileOutput << fManager.serializeAllFiles();
+    fileOutput << serializeAllFiles();
     fileOutput.close();
 }
+
 
 void GitFileManager::dumpAllFiles(string path){
     for(int i = 0; i < m_fileList.size(); i++){
