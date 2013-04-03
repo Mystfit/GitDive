@@ -13,7 +13,6 @@
 		4AEDB30E170BAC0500E087F0 /* GitFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB308170BAC0500E087F0 /* GitFileManager.cpp */; };
 		4AEDB30F170BAC0500E087F0 /* GitLogParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB30A170BAC0500E087F0 /* GitLogParser.cpp */; };
 		4AEDB310170BAC0500E087F0 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB30C170BAC0500E087F0 /* Utils.cpp */; };
-		4AEDB319170BAC6100E087F0 /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB313170BAC6100E087F0 /* libboost_iostreams.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,7 +41,6 @@
 		4AEDB30A170BAC0500E087F0 /* GitLogParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitLogParser.cpp; path = ../../../GitDive_Cinder/src/GitLogParser.cpp; sourceTree = "<group>"; };
 		4AEDB30B170BAC0500E087F0 /* GitLogParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitLogParser.h; path = ../../../GitDive_Cinder/src/GitLogParser.h; sourceTree = "<group>"; };
 		4AEDB30C170BAC0500E087F0 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../../../GitDive_Cinder/src/Utils.cpp; sourceTree = "<group>"; };
-		4AEDB313170BAC6100E087F0 /* libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_iostreams.a; path = ../../../../Cinder/lib/macosx/libboost_iostreams.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AEDB319170BAC6100E087F0 /* libboost_iostreams.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +57,6 @@
 		4AEDB2EF170BABA400E087F0 = {
 			isa = PBXGroup;
 			children = (
-				4AEDB313170BAC6100E087F0 /* libboost_iostreams.a */,
 				4AEDB2FA170BABA400E087F0 /* GitDive_NoCinder */,
 				4AEDB2F9170BABA400E087F0 /* Products */,
 			);
