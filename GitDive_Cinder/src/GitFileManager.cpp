@@ -64,7 +64,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         
     if(originalLines.size() < 1){
         cout << endl << "===Creating new file " << diff->getFileName() << endl << endl;
-        for(int i = 0; i < deltaAddLines.size(); i++) deltaAddLines[i].setLinePos(i);
+        for(int i = 0; i < deltaAddLines.size(); i++) deltaAddLines[i].setLinePos(i+1);
         
         file.setLines(deltaAddLines);
         return;
