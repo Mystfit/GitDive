@@ -87,6 +87,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     int deltaIndex = 0;
     bool blockOpen;
     vector<FileChangeBlock> fileChanges;
+    FileChangeBlock block;
     
     //Move through existing lines and strip out lines that match the deltaRemove list
     if(deltaRemoveLines.size() > 0){
@@ -99,6 +100,8 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     removeStart = pos;
                 }
             } else if(blockOpen) {
+                fileChanges.push_back(block);
+
                 removeEnd = pos;
                 blockOpen = false;
                 //Push block to list
