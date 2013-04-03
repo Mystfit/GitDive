@@ -28,6 +28,7 @@ public:
     void setCommitSource(boost::shared_ptr< vector<Commit> > commitList){ m_commitList = commitList; };
     void applyNextCommit();
     
+    
     //File modification
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
     
@@ -42,6 +43,7 @@ public:
 private:
     boost::shared_ptr< vector<Commit> > m_commitList;
     vector< boost::shared_ptr<GitFile> > m_fileList;
+    int m_commitIndex;
 };
 
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
