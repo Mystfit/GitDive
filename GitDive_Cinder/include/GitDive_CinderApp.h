@@ -25,6 +25,7 @@ using namespace std;
 
 class GitDive_CinderApp : public AppBasic {
 public:
+    void prepareSettings( Settings *settings );
 	void setup();
 	void mouseDown( MouseEvent event );
     void keyDown( KeyEvent event );
