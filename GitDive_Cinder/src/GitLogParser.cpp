@@ -8,7 +8,7 @@
 
 #include "GitLogParser.h"
 
-shared_ptr< vector<Commit> > GitLogParser::parseLog(string logString)
+vector<Commit> GitLogParser::parseLog(string logString)
 {
     shared_ptr< vector<Commit> > commitList(new vector<Commit>);
     vector <string> diffBlock;
