@@ -24,10 +24,8 @@ void GitDive_CinderApp::setup()
 void GitDive_CinderApp::dumpDiffOutput(){
     //Test of the commit serializer
     ofstream diffOutput;
-    ofstream fileOutput;
     
     diffOutput.open("/Users/mystfit/desktop/cinderDiffOut.log");
-    fileOutput.open("/Users/mystfit/desktop/cinderFileOut.log");
     
     for(int i = 0; i < commitList.size(); i++) {
         diffOutput << GitLogParser::serializeCommit(commitList[i]);
@@ -37,15 +35,18 @@ void GitDive_CinderApp::dumpDiffOutput(){
         fManager.updateFilesFromCommit(commitList[commitIndex]);
     }
     
-    fileOutput << fManager.serializeAllFiles();
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
     
     //Close the file
     diffOutput.close();
-    fileOutput.close();
 }
 
 void GitDive_CinderApp::dumpFileOutput(){
+    ofstream fileOutput;
+    fileOutput.open("/Users/mystfit/desktop/cinderFileOut.log");
+
+    fileOutput << fManager.serializeAllFiles();
+    fileOutput.close();
 }
 
 
