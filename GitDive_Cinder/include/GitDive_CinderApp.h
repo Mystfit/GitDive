@@ -40,6 +40,7 @@ public:
     
     //Methods
     void applyNextCommit();
+    void dumpResults();
 };
 
 #endif
