@@ -53,6 +53,11 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 }
 
 
+bool GitFileManager::applyNextCommit(){
+    
+}
+
+
 
 void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff){
     
