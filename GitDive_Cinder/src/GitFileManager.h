@@ -24,12 +24,6 @@ public:
     boost::shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
     boost::shared_ptr<GitFile> getFileByName(string fileName);
     
-    //Commit traversal
-    boost::shared_ptr< vector<Commit> > getCommitSource(){ return m_commitList; };
-    void setCommitSource(boost::shared_ptr< vector<Commit> > commitList){ m_commitList = commitList; };
-    bool applyNextCommit();
-    int getCommitIndex(){ return m_commitIndex; };
-    
     //File modification
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
     
@@ -42,7 +36,6 @@ public:
 
     
 private:
-    boost::shared_ptr< vector<Commit> > m_commitList;
     vector< boost::shared_ptr<GitFile> > m_fileList;
     
     int m_commitIndex;
