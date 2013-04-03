@@ -82,7 +82,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
     cout << endl << "--Lines to add" << endl;
     for(int i = 0; i < deltaAddLines.size(); i++){
-        cout << "Ln no:" << deltaAddLines[i].getLinePos() << " |" << deltaAddLines[i].getStr() << endl;
+        cout << "Ln no:" << deltaAddLines[i].getLinePos() << " " << deltaAddLines[i].getLineStateSymbol() << "|" << deltaAddLines[i].getStr() << endl;
     }
         
     if(deltaRemoveLines.size() > 0){
