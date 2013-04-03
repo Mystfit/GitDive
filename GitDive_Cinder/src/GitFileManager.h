@@ -42,7 +42,7 @@ public:
 
     
 private:
-    boost::shared_ptr< vector<Commit> > m_commitList;
+    vector<Commit> m_commitList;
     vector< boost::shared_ptr<GitFile> > m_fileList;
     
     int m_commitIndex;
