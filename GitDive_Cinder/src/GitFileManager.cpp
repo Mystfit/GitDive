@@ -133,6 +133,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     file.resetLineOrder();    
 }
 
+void GitFileManager::dumpAllFiles(){
+    
+}
 
 void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path){
     ofstream fileOutput;
@@ -140,13 +143,13 @@ void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path
     
     string fileName = file->getFilename();
     vector<string> splitLine;
-    split(splitLine, fileName, is_any_of("/."));
+    split(splitLine, fileName, boost::is_any_of("/."));
     
     string finalPath = path + "/" + splitLine[splitLine.size()-2] + splitLine[splitLine.size()-1];
     cout << "-->Saving file as " << finalPath << endl;
     
     fileOutput.open(finalPath.c_str());
-    for(int i = 0; i <   lines.size(); i++){
+    for(int i = 0; i < lines.size(); i++){
         fileOutput << lines[i].getStr() << endl;
     }
     fileOutput.close();
