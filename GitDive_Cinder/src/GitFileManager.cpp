@@ -78,7 +78,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     if(deltaRemoveLines.size() > 0){
         for(int i = 0; i < deltaRemoveLines.size(); i++){
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
-            cout << "Removing:"  << pos << " Remaining:" << interimLines.size() << endl;
+            cout << << "R actual:" << deltaRemoveLines[i].getLinePos() << " Index:"  << pos << " Remaining:" << interimLines.size() << endl;
             interimLines.erase(interimLines.begin() + pos);
             deltaIndex++;
         }
