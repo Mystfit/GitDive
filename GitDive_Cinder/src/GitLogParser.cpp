@@ -50,9 +50,10 @@ vector<Commit> GitLogParser::parseLog(string logString)
             diffBlock.push_back(line);
         }
         
-        if(diffLog.end())
-        
+        //Remember to add the block to the last commit since we won't be looping around again
+        if(i == diffLog.size()-1) commitList.back().addDiffList( parseCommit(diffBlock) );
     }
+    
     
     return commitList;
 }
