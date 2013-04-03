@@ -22,10 +22,14 @@ void GitDive_CinderApp::setup()
         fManager.updateFilesFromCommit(commitList[commitIndex]);
     }
         
+    
+}
+
+void GitDive_CinderApp::dumpResults(){
     //Test of the commit serializer
     ofstream diffOutput;
     ofstream fileOutput;
-
+    
     diffOutput.open("/Users/mystfit/desktop/cinderDiffOut.log");
     fileOutput.open("/Users/mystfit/desktop/cinderFileOut.log");
     
