@@ -111,7 +111,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     deltaIndex = 0;
     
     //Add lines second;
-    if(deltaAddLines.size() < 1){
+    if(deltaAddLines.size() == 0){
         newLines = interimLines;
     } else {
         for(int lineNum = 1; lineNum <= interimLines.size(); lineNum++ ){
@@ -122,7 +122,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 deltaIndex++;
             }
             
-            newLines.push_back(interimLines[lineNum-1]);
+            Line oldLine = interimLines[lineNum-1];
+            oldLine.setLinePos(oldLine.getLinePos() + deltaIndex);
+            newLines.push_back(oldLine);
         }
         
         //If we've run out of source lines, add the remaining delta lines to the end
