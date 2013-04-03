@@ -15,11 +15,10 @@ void GitDive_CinderApp::setup()
     //Get the output of the git command from stdout as a giant string
     string cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
     
-    //Send lines through the log parser to make commit objects
-    vector<Commit> commitList = GitLogParser::parseLog(cmdOutput);
+    //Parse the diff log text into commit objects for the file manager
+    fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     
-    fManager.setCommitSource(commitList);
-    
+    //Debug serialization
     GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
 }
