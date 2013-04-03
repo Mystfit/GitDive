@@ -17,22 +17,13 @@ void GitDive_CinderApp::setup()
     
     //Send lines through the log parser to make commit objects
     commitList = GitLogParser::parseLog(cmdOutput);
+    
+    GitLogParser::dumpDiffOutput(commitList, "/Users/mystfit/desktop/cinderDiffOut.log");
 }
 
 
 
-void GitDive_CinderApp::dumpDiffOutput(){
-    //Test of the commit serializer
-    ofstream diffOutput;
-    diffOutput.open("/Users/mystfit/desktop/cinderDiffOut.log");
-    
-    for(int i = 0; i < commitList.size(); i++) {
-        diffOutput << GitLogParser::serializeCommit(commitList[i]);
-    }
-    
-    //Close the file
-    diffOutput.close();
-}
+
 
 
 
