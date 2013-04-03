@@ -16,8 +16,6 @@
 
 int main(int argc, const char * argv[])
 {
-    string repoPath;
-    string gitCmd;
     GitFileManager fManager;
     vector<Commit> commitList;
     
