@@ -12,6 +12,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+
 #include "GitDataTypes.h"
 
 using namespace boost;
