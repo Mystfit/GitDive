@@ -110,7 +110,7 @@ vector< boost::shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffB
         if(starts_with(line, "@@ "))
         {            
             //Creates a new diffHunk to store changed lines
-            shared_ptr<DiffHunk> diffHunkPtr(new DiffHunk());
+            boost::shared_ptr<DiffHunk> diffHunkPtr(new DiffHunk());
             diffHunk = diffHunkPtr;
             diff->addDiffHunk(diffHunk);
             
