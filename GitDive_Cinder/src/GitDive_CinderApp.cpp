@@ -43,7 +43,6 @@ void GitDive_CinderApp::setup()
     //Close the file
     diffOutput.close();
     fileOutput.close();
-
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
