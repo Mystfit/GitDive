@@ -37,7 +37,7 @@ void GitDive_CinderApp::mouseDown( MouseEvent event )
 }
 
 void GitDive_CinderApp::keyDown(KeyEvent event){
-    char ch = event.getChar();
+    console() << event.getChar() << endl;
     
 }
 
