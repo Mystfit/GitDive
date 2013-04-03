@@ -1,5 +1,11 @@
 #include "GitDive_CinderApp.h"
 
+void GitDive_CinderApp::prepareSettings( Settings *settings )
+{
+	settings->setWindowSize( 700, 700 );
+	settings->setFrameRate( 60 );
+}
+
 void GitDive_CinderApp::setup()
 {
     string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
