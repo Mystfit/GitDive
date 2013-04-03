@@ -196,7 +196,8 @@ private:
  * A a block describing a removed section from a file
  */
 struct removeBlock{
-    int block
+    int blockStart;
+    int blockEnd;
 };
 
 
