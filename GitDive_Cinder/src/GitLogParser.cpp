@@ -168,11 +168,11 @@ string GitLogParser::serializeCommit(Commit commit)
     commitText << "|== Message: " << commit.message << endl << endl;
     
     for(int i = 0; i < commit.getNumDiffs(); i++){
-        shared_ptr<Diff> diff = commit.getDiff(i);
+        boost::shared_ptr<Diff> diff = commit.getDiff(i);
         commitText << "|/=== Diff File: " << diff->getFileName() << endl;
         
         for(int j = 0; j < diff->getNumHunks(); j++){
-            shared_ptr<DiffHunk> diffHunk = diff->getDiffHunk(j);
+            boost::shared_ptr<DiffHunk> diffHunk = diff->getDiffHunk(j);
             commitText << "||/--- Code hunk begins at line " << diffHunk->getPostBlockStart() << endl;
             
             for(int k = 0; k < diffHunk->getNumLines(); k++){
