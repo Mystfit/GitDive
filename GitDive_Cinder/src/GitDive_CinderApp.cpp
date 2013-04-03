@@ -16,7 +16,7 @@ void GitDive_CinderApp::setup()
     string cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
     
     //Send lines through the log parser to make commit objects
-    boost::shared_ptr< vector<Commit> > commitList = GitLogParser::parseLog(cmdOutput);
+    vector<Commit> commitList = GitLogParser::parseLog(cmdOutput);
     
     fManager.setCommitSource(commitList);
     
