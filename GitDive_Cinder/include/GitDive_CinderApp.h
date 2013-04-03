@@ -32,12 +32,14 @@ public:
 	void update();
 	void draw();
     
+    //Variables
     string repoPath;
     string gitCmd;
-    
     GitFileManager fManager;
-    
     vector<Commit> commitList;
+    
+    //Methods
+    void applyNextCommit
 };
 
 #endif
