@@ -50,7 +50,7 @@ void GitDive_CinderApp::mouseDown( MouseEvent event )
 {
 }
 
-void GitDive_CinderApp::keyDown(<#cinder::app::KeyEvent event#>){
+void GitDive_CinderApp::keyDown(KeyEvent event){
     
 }
 
