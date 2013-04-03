@@ -96,10 +96,12 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
             if(pos < interimLines.size()){
                 interimLines.erase(interimLines.begin() + pos);
-                if(!blockOpen) removeStart = pos;
-                removeEnd = removeStart++;
+                if(!blockOpen){
+                    blockOpen = true;
+                    removeStart = pos;
+                }
             } else if(blockOpen) {
-                removeEnd = 
+                removeEnd = pos;
                 blockOpen = false;
             }
             deltaIndex++;
