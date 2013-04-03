@@ -18,14 +18,10 @@ void GitDive_CinderApp::setup()
     //Send lines through the log parser to make commit objects
     commitList = GitLogParser::parseLog(cmdOutput);
     
-    for(int commitIndex = 0; commitIndex < commitList.size(); commitIndex++){
-        fManager.updateFilesFromCommit(commitList[commitIndex]);
-    }
-        
     
 }
 
-void GitDive_CinderApp::dumpResults(){
+void GitDive_CinderApp::dumpDiffOutput(){
     //Test of the commit serializer
     ofstream diffOutput;
     ofstream fileOutput;
@@ -37,6 +33,10 @@ void GitDive_CinderApp::dumpResults(){
         diffOutput << GitLogParser::serializeCommit(commitList[i]);
     }
     
+    for(int commitIndex = 0; commitIndex < commitList.size(); commitIndex++){
+        fManager.updateFilesFromCommit(commitList[commitIndex]);
+    }
+    
     fileOutput << fManager.serializeAllFiles();
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
     
@@ -44,6 +44,11 @@ void GitDive_CinderApp::dumpResults(){
     diffOutput.close();
     fileOutput.close();
 }
+
+void GitDive_CinderApp::dumpFileOutput(){
+}
+
+
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
 {
