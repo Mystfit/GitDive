@@ -134,6 +134,19 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
 }
 
 
+void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file){
+    ofstream fileOutput;
+    vector<Line> lines = file->getLines();
+    
+    fileOutput.open("/Users/mystfit/desktop/cinderDiffOut.log");
+    for(int i = 0; i <   lines.size(); i++){
+        fileOutput << lines[i].getStr() << endl;
+    }
+    fileOutput.close();
+
+}
+
+
 string GitFileManager::serializeAllFiles(){
     stringstream fileText;
     
@@ -150,7 +163,7 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     vector<Line> lines = file->getLines();
     
     for(int i = 0; i < lines.size(); i++){
-        fileText << "| " << lines[i].getStr() << endl;
+        fileText << lines[i].getStr() << endl;
     }
     fileText << "\\***=========================" << file->getFilename() << endl;
     
