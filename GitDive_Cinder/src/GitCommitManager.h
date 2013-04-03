@@ -14,6 +14,7 @@
 class GitCommitManager {
 public:
     GitCommitManager();
+    
     //Commit traversal
     boost::shared_ptr< vector<Commit> > getCommitSource(){ return m_commitList; };
     void setCommitSource(boost::shared_ptr< vector<Commit> > commitList){ m_commitList = commitList; };
