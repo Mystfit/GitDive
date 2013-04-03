@@ -104,10 +104,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 block.blockEnd = pos;
             } else if(blockOpen) {
                 fileChanges.push_back(block);
-
-                removeEnd = pos;
                 blockOpen = false;
-                //Push block to list
             }
             deltaIndex++;
         }
