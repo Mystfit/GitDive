@@ -10,7 +10,7 @@
 
 vector<Commit> GitLogParser::parseLog(string logString)
 {
-    vector<Commit> commitList(new vector<Commit>);
+    vector<Commit> commitList;
     vector <string> diffBlock;
     
     //Split string into lines
@@ -24,8 +24,8 @@ vector<Commit> GitLogParser::parseLog(string logString)
         if(starts_with(line, "GD_commit")){
             
             //Parse last commit first with the lines between the last GD_commit line
-            if(commitList->size() > 0){
-                commitList->back().addDiffList( parseCommit(diffBlock) );
+            if(commitList.size() > 0){            
+                commitList.back().addDiffList( parseCommit(diffBlock) );
             }
             
             diffBlock.clear();
@@ -45,13 +45,13 @@ vector<Commit> GitLogParser::parseLog(string logString)
                 strVars.push_back( Utils::checkStrIndexInRange(logVarsSplit, 1) );
             }
             
-            commitList->push_back( Commit(strVars[0], strVars[1], strVars[2], strVars[3]) );
+            commitList.push_back( Commit(strVars[0], strVars[1], strVars[2], strVars[3]) );
         } else {
             diffBlock.push_back(line);
         }
         
         //Remember to add the block to the last commit since we won't be looping around again
-        if(i == diffLog.size()-1) commitList->back().addDiffList( parseCommit(diffBlock) );
+        if(i == diffLog.size()-1) commitList.back().addDiffList( parseCommit(diffBlock) );
     }
     
     
