@@ -55,9 +55,9 @@ vector<Commit> GitLogParser::parseLog(vector<string> diffLog)
 vector< boost::shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffBlock)
 {
     bool inDiffHeader = false;
-    vector< boost::sshared_ptr<Diff> > diffList;
-    boost::sshared_ptr<Diff> diff(new Diff());
-    boost::sshared_ptr<DiffHunk> diffHunk(new DiffHunk());
+    vector< boost::shared_ptr<Diff> > diffList;
+    boost::shared_ptr<Diff> diff(new Diff());
+    boost::shared_ptr<DiffHunk> diffHunk(new DiffHunk());
     
     for(int i = 0; i < diffBlock.size(); i++){
         
@@ -68,7 +68,7 @@ vector< boost::shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffB
             inDiffHeader = true;
             
             //Create new diff container
-            boost::sshared_ptr<Diff> diffPtr(new Diff());
+            boost::shared_ptr<Diff> diffPtr(new Diff());
             diff = diffPtr;
             diffList.push_back(diff);
         }
