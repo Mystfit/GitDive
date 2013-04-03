@@ -85,6 +85,10 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     }
     
     int deltaIndex = 0;
+    bool blockOpen;
+    int removeStart = 0;
+    int removeEnd = 0;
+    
     
     //Move through existing lines and strip out lines that match the deltaRemove list
     if(deltaRemoveLines.size() > 0){
@@ -92,6 +96,10 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
             if(pos < interimLines.size()){
                 interimLines.erase(interimLines.begin() + pos);
+                removeStart = 
+                
+            } else if(blockOpen) {
+                blockOpen = false;
             }
             deltaIndex++;
         }
