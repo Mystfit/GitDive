@@ -29,7 +29,7 @@ public:
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
     
     //File display
-    void dumpAllFiles();
+    void dumpAllFiles(string path);
     void saveFileToDisk(boost::shared_ptr<GitFile> file, string path);
     string serializeAllFiles();
     string serializeFile(boost::shared_ptr<GitFile> file);
