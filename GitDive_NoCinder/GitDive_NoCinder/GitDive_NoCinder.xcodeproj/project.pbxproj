@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4AEDB2FC170BABA400E087F0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB2FB170BABA400E087F0 /* main.cpp */; };
 		4AEDB2FE170BABA400E087F0 /* GitDive_NoCinder.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4AEDB2FD170BABA400E087F0 /* GitDive_NoCinder.1 */; };
+		4AEDB30D170BAC0500E087F0 /* GitDataTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB306170BAC0500E087F0 /* GitDataTypes.cpp */; };
+		4AEDB30E170BAC0500E087F0 /* GitFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB308170BAC0500E087F0 /* GitFileManager.cpp */; };
+		4AEDB30F170BAC0500E087F0 /* GitLogParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB30A170BAC0500E087F0 /* GitLogParser.cpp */; };
+		4AEDB310170BAC0500E087F0 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB30C170BAC0500E087F0 /* Utils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +32,15 @@
 		4AEDB2F8170BABA400E087F0 /* GitDive_NoCinder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GitDive_NoCinder; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEDB2FB170BABA400E087F0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4AEDB2FD170BABA400E087F0 /* GitDive_NoCinder.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = GitDive_NoCinder.1; sourceTree = "<group>"; };
+		4AEDB304170BAC0500E087F0 /* Resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../../../GitDive_Cinder/include/Resources.h; sourceTree = "<group>"; };
+		4AEDB305170BAC0500E087F0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../../../GitDive_Cinder/include/Utils.h; sourceTree = "<group>"; };
+		4AEDB306170BAC0500E087F0 /* GitDataTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitDataTypes.cpp; path = ../../../GitDive_Cinder/src/GitDataTypes.cpp; sourceTree = "<group>"; };
+		4AEDB307170BAC0500E087F0 /* GitDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDataTypes.h; path = ../../../GitDive_Cinder/src/GitDataTypes.h; sourceTree = "<group>"; };
+		4AEDB308170BAC0500E087F0 /* GitFileManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitFileManager.cpp; path = ../../../GitDive_Cinder/src/GitFileManager.cpp; sourceTree = "<group>"; };
+		4AEDB309170BAC0500E087F0 /* GitFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitFileManager.h; path = ../../../GitDive_Cinder/src/GitFileManager.h; sourceTree = "<group>"; };
+		4AEDB30A170BAC0500E087F0 /* GitLogParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitLogParser.cpp; path = ../../../GitDive_Cinder/src/GitLogParser.cpp; sourceTree = "<group>"; };
+		4AEDB30B170BAC0500E087F0 /* GitLogParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitLogParser.h; path = ../../../GitDive_Cinder/src/GitLogParser.h; sourceTree = "<group>"; };
+		4AEDB30C170BAC0500E087F0 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../../../GitDive_Cinder/src/Utils.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +73,15 @@
 		4AEDB2FA170BABA400E087F0 /* GitDive_NoCinder */ = {
 			isa = PBXGroup;
 			children = (
+				4AEDB304170BAC0500E087F0 /* Resources.h */,
+				4AEDB305170BAC0500E087F0 /* Utils.h */,
+				4AEDB306170BAC0500E087F0 /* GitDataTypes.cpp */,
+				4AEDB307170BAC0500E087F0 /* GitDataTypes.h */,
+				4AEDB308170BAC0500E087F0 /* GitFileManager.cpp */,
+				4AEDB309170BAC0500E087F0 /* GitFileManager.h */,
+				4AEDB30A170BAC0500E087F0 /* GitLogParser.cpp */,
+				4AEDB30B170BAC0500E087F0 /* GitLogParser.h */,
+				4AEDB30C170BAC0500E087F0 /* Utils.cpp */,
 				4AEDB2FB170BABA400E087F0 /* main.cpp */,
 				4AEDB2FD170BABA400E087F0 /* GitDive_NoCinder.1 */,
 			);
@@ -118,6 +140,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AEDB2FC170BABA400E087F0 /* main.cpp in Sources */,
+				4AEDB30D170BAC0500E087F0 /* GitDataTypes.cpp in Sources */,
+				4AEDB30E170BAC0500E087F0 /* GitFileManager.cpp in Sources */,
+				4AEDB30F170BAC0500E087F0 /* GitLogParser.cpp in Sources */,
+				4AEDB310170BAC0500E087F0 /* Utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
