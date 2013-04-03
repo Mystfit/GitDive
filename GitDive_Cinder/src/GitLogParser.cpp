@@ -8,14 +8,14 @@
 
 #include "GitLogParser.h"
 
-vector<Commit> GitLogParser::parseLog(string diffString)
+vector<Commit> GitLogParser::parseLog(string logString)
 {
     vector<Commit> commitList;
     vector <string> diffBlock;
     
     //Split string into lines
     vector<string> diffLog;
-    boost::split(outputStrings, cmdOutput, boost::is_any_of("\n"));
+    boost::split(diffLog, logString, boost::is_any_of("\n"));
     
     for(int i = 0; i < diffLog.size(); i++)
     {
