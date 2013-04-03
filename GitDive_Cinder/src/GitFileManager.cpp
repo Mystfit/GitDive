@@ -123,6 +123,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
     cout << endl << "==Final file" << endl;
     for(int i = 0; i < newLines.size(); i++){
+        newLines[i].setLinePos(i+1);
         cout << "--i:" << i << " Mode:" << newLines[i].getLineState() << " LineNum:" << newLines[i].getLinePos() <<  " Line ||" << newLines[i].getStr() << endl;
     }
     cout << "=====" << endl << endl;
