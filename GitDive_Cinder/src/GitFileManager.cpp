@@ -133,8 +133,10 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     file.resetLineOrder();    
 }
 
-void GitFileManager::dumpAllFiles(){
-    
+void GitFileManager::dumpAllFiles(string path){
+    for(int i = 0; i < m_fileList[i]; i++){
+        saveFileToDisk(m_fileList[i], path);
+    }
 }
 
 void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path){
