@@ -28,7 +28,7 @@ public:
     static string serializeCommit(Commit commit);
     
     //Dumps diff output to a text file
-    void GitLogParser::dumpDiffOutput(vector<Commit> commitList, string path);
+    void dumpDiffOutput(vector<Commit> commitList, string path);
 
 };
 
