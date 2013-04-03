@@ -134,11 +134,13 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
 }
 
 
-void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file){
+void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path){
     ofstream fileOutput;
     vector<Line> lines = file->getLines();
     
-    fileOutput.open("/Users/mystfit/desktop/cinderDiffOut.log");
+    fileName = file->getFilename();
+    
+    fileOutput.open(path + );
     for(int i = 0; i <   lines.size(); i++){
         fileOutput << lines[i].getStr() << endl;
     }
