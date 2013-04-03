@@ -25,12 +25,6 @@ void GitDive_CinderApp::setup()
 
 
 
-
-
-
-
-
-
 void GitDive_CinderApp::mouseDown( MouseEvent event )
 {
 }
