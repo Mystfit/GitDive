@@ -37,7 +37,7 @@ public:
 
     
 private:
-    vector<Commit> * m_commits;
+    vector<Commit> & m_commits;
     vector< boost::shared_ptr<GitFile> > m_fileList;
 };
 
