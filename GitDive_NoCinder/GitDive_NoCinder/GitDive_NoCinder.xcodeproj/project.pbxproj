@@ -42,12 +42,7 @@
 		4AEDB30A170BAC0500E087F0 /* GitLogParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitLogParser.cpp; path = ../../../GitDive_Cinder/src/GitLogParser.cpp; sourceTree = "<group>"; };
 		4AEDB30B170BAC0500E087F0 /* GitLogParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitLogParser.h; path = ../../../GitDive_Cinder/src/GitLogParser.h; sourceTree = "<group>"; };
 		4AEDB30C170BAC0500E087F0 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../../../GitDive_Cinder/src/Utils.cpp; sourceTree = "<group>"; };
-		4AEDB311170BAC6100E087F0 /* libboost_date_time.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_date_time.a; path = ../../../../Cinder/lib/macosx/libboost_date_time.a; sourceTree = "<group>"; };
-		4AEDB312170BAC6100E087F0 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../../../../Cinder/lib/macosx/libboost_filesystem.a; sourceTree = "<group>"; };
 		4AEDB313170BAC6100E087F0 /* libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_iostreams.a; path = ../../../../Cinder/lib/macosx/libboost_iostreams.a; sourceTree = "<group>"; };
-		4AEDB314170BAC6100E087F0 /* libboost_regex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_regex.a; path = ../../../../Cinder/lib/macosx/libboost_regex.a; sourceTree = "<group>"; };
-		4AEDB315170BAC6100E087F0 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../Cinder/lib/macosx/libboost_system.a; sourceTree = "<group>"; };
-		4AEDB316170BAC6100E087F0 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = ../../../../Cinder/lib/macosx/libboost_thread.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +60,7 @@
 		4AEDB2EF170BABA400E087F0 = {
 			isa = PBXGroup;
 			children = (
-				4AEDB311170BAC6100E087F0 /* libboost_date_time.a */,
-				4AEDB312170BAC6100E087F0 /* libboost_filesystem.a */,
 				4AEDB313170BAC6100E087F0 /* libboost_iostreams.a */,
-				4AEDB314170BAC6100E087F0 /* libboost_regex.a */,
-				4AEDB315170BAC6100E087F0 /* libboost_system.a */,
-				4AEDB316170BAC6100E087F0 /* libboost_thread.a */,
 				4AEDB2FA170BABA400E087F0 /* GitDive_NoCinder */,
 				4AEDB2F9170BABA400E087F0 /* Products */,
 			);
