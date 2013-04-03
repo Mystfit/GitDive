@@ -30,7 +30,6 @@ public:
     bool applyNextCommit();
     int getCommitIndex(){ return m_commitIndex; };
     
-    
     //File modification
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
     
