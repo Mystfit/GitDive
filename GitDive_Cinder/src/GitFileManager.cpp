@@ -114,7 +114,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     file.setLines(newLines);
 }
 
-void GitDive_CinderApp::dumpFileOutput(string path){
+void GitFileManager::dumpFileOutput(string path){
     ofstream fileOutput;
     fileOutput.open(path.c_str());
     fileOutput << fManager.serializeAllFiles();
