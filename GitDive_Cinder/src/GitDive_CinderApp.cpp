@@ -32,6 +32,7 @@ void GitDive_CinderApp::setup()
     }
     
     fileOutput << fManager.serializeAllFiles();
+    fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
     
     //Close the file
     diffOutput.close();
