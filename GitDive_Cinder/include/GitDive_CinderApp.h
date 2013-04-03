@@ -37,10 +37,6 @@ public:
     string gitCmd;
     GitFileManager fManager;
     
-    //Methods
-    void applyNextCommit();
-    void dumpDiffOutput();
-    void dumpFileOutput();
 };
 
 #endif
