@@ -109,8 +109,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
 //            cout << "Ln no:" << interimLines[i].getLinePos() << " " << interimLines[i].getLineStateSymbol() << "|" << interimLines[i].getStr() << endl;
 //        }
     }
-    
-        
 
     //Reset counters
     deltaIndex = 0;
@@ -158,6 +156,7 @@ void GitFileManager::dumpAllFiles(string path){
     }
 }
 
+
 void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path){
     ofstream fileOutput;
     vector<Line> lines = file->getLines();
@@ -187,6 +186,7 @@ string GitFileManager::serializeAllFiles(){
     
     return fileText.str();
 }
+
 
 string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     stringstream fileText;
