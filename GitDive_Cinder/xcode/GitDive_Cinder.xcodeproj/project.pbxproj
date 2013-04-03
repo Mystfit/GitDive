@@ -20,7 +20,6 @@
 		4A1A6BC91705A5880046BE09 /* GitDataTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */; };
 		4A1A6BCC1705AAE60046BE09 /* GitLogParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */; };
 		4AD7492117097505006ACBC6 /* GitFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7491F17097505006ACBC6 /* GitFileManager.cpp */; };
-		4AEDB364170C312C00E087F0 /* GitCommitManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDB362170C312C00E087F0 /* GitCommitManager.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -63,8 +62,6 @@
 		4A1A6BCB1705AAE60046BE09 /* GitLogParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitLogParser.h; path = ../src/GitLogParser.h; sourceTree = "<group>"; };
 		4AD7491F17097505006ACBC6 /* GitFileManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitFileManager.cpp; path = ../src/GitFileManager.cpp; sourceTree = "<group>"; };
 		4AD7492017097505006ACBC6 /* GitFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitFileManager.h; path = ../src/GitFileManager.h; sourceTree = "<group>"; };
-		4AEDB362170C312C00E087F0 /* GitCommitManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitCommitManager.cpp; path = ../src/GitCommitManager.cpp; sourceTree = "<group>"; };
-		4AEDB363170C312C00E087F0 /* GitCommitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitCommitManager.h; path = ../src/GitCommitManager.h; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -97,8 +94,6 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				4AEDB362170C312C00E087F0 /* GitCommitManager.cpp */,
-				4AEDB363170C312C00E087F0 /* GitCommitManager.h */,
 				00BAE6590E7ED9C10018A608 /* GitDive_CinderApp.cpp */,
 				4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */,
 				4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */,
@@ -251,7 +246,6 @@
 				4A1A6BC91705A5880046BE09 /* GitDataTypes.cpp in Sources */,
 				4A1A6BCC1705AAE60046BE09 /* GitLogParser.cpp in Sources */,
 				4AD7492117097505006ACBC6 /* GitFileManager.cpp in Sources */,
-				4AEDB364170C312C00E087F0 /* GitCommitManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
