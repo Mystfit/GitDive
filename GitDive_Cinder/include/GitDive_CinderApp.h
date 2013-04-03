@@ -39,7 +39,7 @@ public:
     vector<Commit> commitList;
     
     //Methods
-    void applyNextCommit
+    void applyNextCommit();
 };
 
 #endif
