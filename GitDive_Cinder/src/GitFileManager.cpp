@@ -122,9 +122,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 deltaIndex++;
             }
             
-            newLines.push_back(interimLines[lineNum]);
-            
-           
+            newLines.push_back(interimLines[lineNum-1]);
         }
         
         //If we've run out of source lines, add the remaining delta lines to the end
