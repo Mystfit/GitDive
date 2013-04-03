@@ -37,8 +37,8 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 
 void GitDive_CinderApp::update()
 {
-    fManager.applyNextCommit();
-    fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+    bool success = fManager.applyNextCommit();
+    if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
 }
 
 void GitDive_CinderApp::draw()
