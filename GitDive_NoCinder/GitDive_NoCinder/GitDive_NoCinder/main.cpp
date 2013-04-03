@@ -7,6 +7,12 @@
 //
 
 #include <iostream>
+#include "Utils.h"
+#include "GitLogParser.h"
+#include "GitFileManager.h"
+
+#include <fstream.h>
+#include <stdio.h>
 
 int main(int argc, const char * argv[])
 {
