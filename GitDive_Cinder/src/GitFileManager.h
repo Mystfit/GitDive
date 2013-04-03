@@ -25,7 +25,7 @@ public:
     boost::shared_ptr<GitFile> getFileByName(string fileName);
     
     //Commit traversal
-    vector<Commit> &getCommitSource(){ return m_commitList; };
+    vector<Commit> & getCommitSource(){ return m_commitList; };
     void setCommitSource(vector<Commit> commitList){ m_commitList = commitList; };
     bool applyNextCommit();
     int getCommitIndex(){ return m_commitIndex; };
