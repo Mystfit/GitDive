@@ -146,11 +146,13 @@ string GitFileManager::serializeAllFiles(){
 
 string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     stringstream fileText;
+    fileText << "/***======== File: " << file->getFilename() << endl;
     vector<Line> lines = file->getLines();
     
     for(int i = 0; i < lines.size(); i++){
-        fileText << lines[i].getStr() << endl;
+        fileText << "| " << lines[i].getStr() << endl;
     }
+    fileText << "\\***=========================" << file->getFilename() << endl;
     
     return fileText.str();
 }
