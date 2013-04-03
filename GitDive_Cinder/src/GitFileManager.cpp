@@ -108,7 +108,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
 
     //Reset counters
-    int linePos = 1;
     deltaIndex = 0;
     string line;
     
@@ -119,14 +118,13 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     } else {
         for(int lineNum = 1; lineNum <= interimLines.size(); lineNum++ ){
             
-            if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() + deltaIndex == linePos){
+            if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() + deltaIndex == lineNum){
 //              cout << " !!!Matched lines A:" << linePos+1 << " B:" << deltaAddLines[deltaIndex].getLinePos();
                 newLines.push_back(deltaAddLines[deltaIndex]);
                 deltaIndex++;
             }
             
             newLines.push_back(interimLines[lineNum]);
-            linePos++;
             
             //If we've run out of source lines, add the remaining delta lines to the end
             if(lineNum == interimLines.size()){
