@@ -2,7 +2,7 @@
 
 void GitDive_CinderApp::prepareSettings( Settings *settings )
 {
-	settings->setWindowSize( 700, 700 );
+	settings->setWindowSize( 1024, 1024 );
 	settings->setFrameRate( 60 );
 }
 
@@ -48,6 +48,10 @@ void GitDive_CinderApp::setup()
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
 {
+}
+
+void GitDive_CinderApp::keyDown(<#cinder::app::KeyEvent event#>){
+    
 }
 
 void GitDive_CinderApp::update()
