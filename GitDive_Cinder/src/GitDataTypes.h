@@ -195,10 +195,13 @@ private:
 /*
  * A a block describing a removed section from a file
  */
-struct removeBlock{
+struct fileChangeBLock{
+    int 
     int blockStart;
     int blockEnd;
 };
+
+
 
 
 #endif /* defined(__GitDive_Cinder__GitDataTypes__) */
