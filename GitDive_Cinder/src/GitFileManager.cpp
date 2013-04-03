@@ -59,6 +59,8 @@ bool GitFileManager::applyNextCommit(){
         return true;
     }
     
+    cout << "-->Out of commits!" << endl;
+    
     return false;
 }
 
