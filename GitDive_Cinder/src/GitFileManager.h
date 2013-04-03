@@ -25,7 +25,7 @@ public:
     boost::shared_ptr<GitFile> getFileByName(string fileName);
     
     //Commit traversal
-    void addCommitSource(vector<Commit> commitList){ m_commitList = commitList; };
+    void addCommitSource(vector<Commit> * commitList){ m_commitList = commitList; };
     
     
     //File modification
