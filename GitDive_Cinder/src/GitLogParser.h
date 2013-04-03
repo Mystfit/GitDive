@@ -25,6 +25,10 @@ public:
     
     //Converts commit into a pretty string for printing
     static string serializeCommit(Commit commit);
+    
+    //Dumps diff output to a text file
+    void GitLogParser::dumpDiffOutput(vector<Commit> commitList, string path);
+
 };
 
 #endif /* defined(__GitDive_Cinder__GitLogParser__) */
