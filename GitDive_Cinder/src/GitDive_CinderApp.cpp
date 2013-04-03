@@ -29,7 +29,11 @@ void GitDive_CinderApp::mouseDown( MouseEvent event )
 }
 
 void GitDive_CinderApp::keyDown(KeyEvent event){
-    console() << event.getChar() << endl;
+    char key =  event.getChar();
+    
+    if(key == " "){
+        
+    }
 }
 
 void GitDive_CinderApp::update()
