@@ -11,7 +11,7 @@
 #include "GitLogParser.h"
 #include "GitFileManager.h"
 
-#include <fstream.h>
+#include <fstream>
 #include <stdio.h>
 
 int main(int argc, const char * argv[])
