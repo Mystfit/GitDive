@@ -21,6 +21,7 @@ public:
     bool applyNextCommit();
     int getCommitIndex(){ return m_commitIndex; };
 private:
+    vector<Commit> m_commitList;
 };
 
 #endif /* defined(__GitDive_Cinder__GitCommitManager__) */
