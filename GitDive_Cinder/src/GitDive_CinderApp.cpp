@@ -19,9 +19,7 @@ void GitDive_CinderApp::setup()
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     
     //Debug serialization
-    GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
-    fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
-    fManager.dumpFileOutput("/Users/mystfit/desktop/cinderFileOut.log");
+    //GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
