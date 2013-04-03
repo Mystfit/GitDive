@@ -97,6 +97,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 interimLines.erase(interimLines.begin() + pos);
                 if(!blockOpen){
                     block = FileChangeBlock();
+                    block.blockType = FileChangeBlock::FILECHANGE_DELETE;
                     blockOpen = true;
                     removeStart = pos;
                 }
