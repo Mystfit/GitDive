@@ -32,7 +32,8 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
     char key =  event.getChar();
     
     if(strcmp(&key, " ") == 0){
-        
+        fManager.applyNextCommit();
+        fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
     }
 }
 
