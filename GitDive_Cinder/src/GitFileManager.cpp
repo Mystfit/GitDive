@@ -76,36 +76,41 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     cout << endl << "--File:" << diff->getFileName() << endl;
     cout << "--Num Add lines:" << deltaAddLines.size() << " Num remove lines:" << deltaRemoveLines.size() << endl;
     
-    cout << "--Lines to remove" << endl;
-    for(int i = 0; i < deltaRemoveLines.size(); i++){
-        cout << "Ln no:" << deltaRemoveLines[i].getLinePos() << " " << deltaRemoveLines[i].getLineStateSymbol() << "|" << deltaRemoveLines[i].getStr() << endl;
+    if(deltaRemoveLines.size() > 0){
+        cout << "--Lines to remove" << endl;
+        for(int i = 0; i < deltaRemoveLines.size(); i++){
+            cout << "Ln no:" << deltaRemoveLines[i].getLinePos() << " " << deltaRemoveLines[i].getLineStateSymbol() << "|" << deltaRemoveLines[i].getStr() << endl;
+        }
     }
     
-    cout << endl << "--Lines to add" << endl;
-    for(int i = 0; i < deltaAddLines.size(); i++){
-        cout << "Ln no:" << deltaAddLines[i].getLinePos() << " " << deltaAddLines[i].getLineStateSymbol() << "|" << deltaAddLines[i].getStr() << endl;
+    if(deltaAddLines.size() > 0){
+        cout << endl << "--Lines to add" << endl;
+        for(int i = 0; i < deltaAddLines.size(); i++){
+            cout << "Ln no:" << deltaAddLines[i].getLinePos() << " " << deltaAddLines[i].getLineStateSymbol() << "|" << deltaAddLines[i].getStr() << endl;
+        }
     }
-    
-    cout << endl << "--Before line removal" << endl;
-    for(int i = 0; i < interimLines.size(); i++){
-        cout << "Ln no:" << interimLines[i].getLinePos() << " " << interimLines[i].getLineStateSymbol() << "|" << interimLines[i].getStr() << endl;
-    }
-
     
     //Move through existing lines and strip out lines that match the deltaRemove list
     if(deltaRemoveLines.size() > 0){
+        
+        cout << endl << "--Before line removal" << endl;
+        for(int i = 0; i < interimLines.size(); i++){
+            cout << "Ln no:" << interimLines[i].getLinePos() << " " << interimLines[i].getLineStateSymbol() << "|" << interimLines[i].getStr() << endl;
+        }
+        
         for(int i = 0; i < deltaRemoveLines.size(); i++){
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
             if(pos < interimLines.size()) interimLines.erase(interimLines.begin() + pos);
             deltaIndex++;
         }
+        
+        cout << endl << "--After line removal" << endl;
+        for(int i = 0; i < interimLines.size(); i++){
+            cout << "Ln no:" << interimLines[i].getLinePos() << " " << interimLines[i].getLineStateSymbol() << "|" << interimLines[i].getStr() << endl;
+        }
     }
     
-    cout << endl << "--After line removal" << endl;
-    for(int i = 0; i < interimLines.size(); i++){
-        cout << "Ln no:" << interimLines[i].getLinePos() << " " << interimLines[i].getLineStateSymbol() << "|" << interimLines[i].getStr() << endl;
-    }
-    
+        
 
     //Reset counters
     deltaIndex = 0;
