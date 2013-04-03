@@ -100,7 +100,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 oldLine.setLinePos(lineNum);
                 newLines.push_back(oldLine);
             }
-           
         }
         
         //If we've run out of source lines, add the remaining delta lines to the end
