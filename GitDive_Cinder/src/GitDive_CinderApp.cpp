@@ -18,6 +18,8 @@ void GitDive_CinderApp::setup()
     //Parse the diff log text into commit objects for the file manager
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     
+    while(fManager.applyNextCommit());
+    
     //Debug serialization
     //GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
 }
@@ -35,8 +37,8 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 
 void GitDive_CinderApp::update()
 {
-    bool success = fManager.applyNextCommit();
-    if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+//    bool success = fManager.applyNextCommit();
+//    if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
 }
 
 void GitDive_CinderApp::draw()
