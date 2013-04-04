@@ -136,10 +136,10 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
     //Add lines
     if(deltaAddLines.size() == 0){
-        newLines = interimCopy;
+        newLines = interimLines;
     } else {
-        if(diff->getFileName() == "gitSave.sh") cout << interimCopy.size() << endl;
-        for(int lineNum = 1; lineNum <= interimCopy.size() + deltaAddLines.size(); lineNum++ ){
+        if(diff->getFileName() == "gitSave.sh") cout << interimLines.size() << endl;
+        for(int lineNum = 1; lineNum <= interimLines.size() + deltaAddLines.size(); lineNum++ ){
             
             if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() == lineNum){
                 newLines.push_back(deltaAddLines[deltaIndex]);
