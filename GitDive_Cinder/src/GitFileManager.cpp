@@ -92,18 +92,21 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     //Move through existing lines and strip out lines that match the deltaRemove list
     if(deltaRemoveLines.size() > 0){
         for(int i = 0; i < deltaRemoveLines.size(); i++){
+            
+            if(file.getFilename() == "gitSave.sh"){
+                if(boost::starts_with(deltaRemoveLines[i].getStr(), "git commit --quiet -m")){
+                    
+                }
+            }
+            
+            
+            
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
             if(pos < interimLines.size()){
                 //Erase the line from the file
                 interimLines.erase(interimLines.begin() + pos);
                 
-                if(file.getFilename() == "gitSave.sh"){
-                    if(boost::starts_with(deltaRemoveLines[i].getStr(), "git commit --quiet -m")){
-                        
-                    }
-
-                }
-                
+           
                 //Store the removed lines as a block of lines so we can keep the original structure of the file
                 if(!blockOpen){
                     blockOpen = true;
