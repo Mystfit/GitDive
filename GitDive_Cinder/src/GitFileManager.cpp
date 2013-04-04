@@ -182,7 +182,8 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         //If we've run out of source lines, add the remaining delta lines to the end
         if(deltaIndex < deltaAddLines.size()){
             
-            cout << "BING. " << file.getFilename() << " Leftover index:" << deltaIndex << " Size:" << deltaAddLines.size() << " Line|" << deltaAddLines[deltaIndex].getStr() << "!!!" << endl;
+            if(file.getFilename() == "gitSave.sh") cout << "BING. " << file.getFilename() << " Leftover index:" << deltaIndex << " Size:" << deltaAddLines.size() << " Line|" << deltaAddLines[deltaIndex].getStr() << "!!!" << endl;
+            
             for(int leftovers = deltaIndex; leftovers < deltaAddLines.size(); leftovers++){
                 
                 //Will definitely need a new filechange block on the end if dumping all the remaining lines
