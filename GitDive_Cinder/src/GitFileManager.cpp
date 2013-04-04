@@ -98,7 +98,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 interimLines.erase(interimLines.begin() + pos);
                 
                 if(file.getFilename() == "gitSave.sh"){
-                    if(deltaRemoveLines[i].getStr() == boost::begin("git commit --quiet -m"){
+                    if(deltaRemoveLines[i].getStr() == boost::begin("git commit --quiet -m")){
                         
                     }
 
