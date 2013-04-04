@@ -137,6 +137,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 
                 //Save changes of lines added as blocks of line positions for animation
                 if(!blockOpen){
+                    blockOpen = true;
                     block = FileChangeBlock();
                     block.blockType = FileChangeBlock::FILECHANGE_ADD;
                     block.blockStart = deltaAddLines[deltaIndex].getLinePos();
