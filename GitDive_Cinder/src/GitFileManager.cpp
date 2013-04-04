@@ -119,7 +119,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             deltaIndex++;
         }
         
-        //Close the block if 
+        //Close the block if the last line is marked for removal
         if(blockOpen){
             fileChanges.push_back(block);
             blockOpen = false;
