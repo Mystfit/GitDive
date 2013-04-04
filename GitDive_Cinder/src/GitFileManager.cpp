@@ -104,13 +104,15 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block.blockType = FileChangeBlock::FILECHANGE_DELETE;
                     block.blockStart = pos;
                     block.blockEnd = pos;
-                }
-                if(pos - block.blockEnd > 1){
-                    fileChanges.push_back(block);
-                    blockOpen = false;
                 } else {
-                    block.blockEnd = pos;
+                    if(pos - block.blockEnd > 1){
+                        fileChanges.push_back(block);
+                        blockOpen = false;
+                    } else {
+                        block.blockEnd = pos;
+                    }
                 }
+                
                     
             }
             deltaIndex++;
@@ -136,7 +138,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block = FileChangeBlock();
                     block.blockType = FileChangeBlock::FILECHANGE_ADD;
                     block.blockStart = deltaAddLines[deltaIndex].getLinePos();
+                    block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
                 } else {
+                    
                     block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
                 }
 
