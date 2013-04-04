@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # TIMESTAMP=$(date +%m%d%y%H%M%S)
 
 source gitMood.sh
