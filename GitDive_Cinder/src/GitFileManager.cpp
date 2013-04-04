@@ -113,7 +113,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     }
                 }
                 
-                    
             }
             deltaIndex++;
         }
@@ -123,6 +122,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     //Reset counters
     deltaIndex = 0;
     int lineCounter = 0;
+    blockOpen = false;
     
     //Add lines
     if(deltaAddLines.size() == 0){
@@ -140,7 +140,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block.blockStart = deltaAddLines[deltaIndex].getLinePos();
                     block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
                 } else {
-                    
                     block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
                 }
 
