@@ -147,15 +147,14 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     blockOpen = true;
                     block = FileChangeBlock();
                     block.blockType = FileChangeBlock::FILECHANGE_ADD;
-                    block.blockStart = deltaAddLines[deltaIndex].getLinePos();
-                    block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
-                    cout << "AddBlock Start:" << block.blockStart << " |.";
+                    block.blockStart = newLines.back().getLinePos();
+                    cout << "AddBlock Start:" << block.blockStart << " |";
 
-                } else {
-                    block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
-                    cout << ".";
                 }
-
+                
+                block.blockEnd = newLines.back().getLinePos();
+                cout << ".";
+                
                 deltaIndex++;
             } else {
                 Line oldLine = interimLines[lineCounter++];
