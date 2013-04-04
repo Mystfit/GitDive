@@ -142,6 +142,8 @@ vector< boost::shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffB
         else {
             if(!inDiffHeader){
                 
+                if(starts_with(line, "\\ "))
+                
                 Line cLine(line);
                     
                 //If the line is to be removed, stick with the old line position
