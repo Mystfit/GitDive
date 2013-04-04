@@ -114,6 +114,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     blockOpen = false;
                     cout << " End:" << block.blockEnd << endl << endl;
                 } else {
+                    cout << " Incrementing end pos" << endl;
                     block.blockEnd = deltaRemoveLines[i].getLinePos();
                 }
                 
