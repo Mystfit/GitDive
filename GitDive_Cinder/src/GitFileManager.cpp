@@ -130,10 +130,12 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             
             if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() == lineNum){
                 newLines.push_back(deltaAddLines[deltaIndex]);
-//                block = FileChangeBlock();
-//                block.blockType == FileChangeBlock::FILECHANGE_ADD;
-//                block.blockStart = deltaAddLines[deltaIndex].getLinePos();
-//                block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
+                if(!blockOpen){
+                    block = FileChangeBlock();
+                    block.blockType == FileChangeBlock::FILECHANGE_ADD;
+                    block.blockStart = deltaAddLines[deltaIndex].getLinePos();
+                    block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
+                }
                 deltaIndex++;
             } else {
                 Line oldLine = interimLines[lineCounter++];
