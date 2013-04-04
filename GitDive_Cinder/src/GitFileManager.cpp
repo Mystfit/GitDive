@@ -104,9 +104,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block.blockType = FileChangeBlock::FILECHANGE_DELETE;
                     block.blockStart = pos;
                     block.blockEnd = pos;
-                    cout << "RemoveBlock Start:" << block.blockStart;
+                    cout << "RemoveBlock Start:" << block.blockStart << " ";
                 } else {
-                    cout << " Difference:" << pos - block.blockEnd;
+                    cout << "Difference:" << pos - block.blockEnd;
                     if(pos - block.blockEnd > 1){
                         fileChanges.push_back(block);
                         blockOpen = false;
