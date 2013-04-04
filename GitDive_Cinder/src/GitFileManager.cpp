@@ -103,21 +103,16 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     if(deltaRemoveLines.size() > 0){
         for(int i = 0; i < deltaRemoveLines.size(); i++){
             
+            
+            
             if(file.getFilename() == "gitSave.sh"){
                 if(boost::starts_with(deltaRemoveLines[i].getStr(), "git commit --quiet -m")){
                     cout << "gitSave.sh" << endl;
                     vector<Line> unsortedDeltas = diff->getAllDeltaLines();
-                    
-//                    for(vector<Line>::iterator it = unsortedDeltas.begin(); it != unsortedDeltas.end(); ++it){
-//                        it->getLinePos();
-//                    }
                 }
             }
             
            
-
-            
-            
             
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
             if(pos < interimLines.size()){
