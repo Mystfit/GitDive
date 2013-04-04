@@ -97,6 +97,10 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 //Erase the line from the file
                 interimLines.erase(interimLines.begin() + pos);
                 
+                if(file.getFilename() == "gitSave.sh"){
+                    
+                }
+                
                 //Store the removed lines as a block of lines so we can keep the original structure of the file
                 if(!blockOpen){
                     blockOpen = true;
