@@ -95,7 +95,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
     
     int deltaIndex = 0;
-    bool blockOpen;
+    bool blockOpen = false;
     vector<FileChangeBlock> fileChanges;
     FileChangeBlock block;
     
