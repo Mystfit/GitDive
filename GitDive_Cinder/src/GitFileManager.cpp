@@ -104,6 +104,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
             if(pos < interimLines.size()){
                 //Erase the line from the file
+                cout << interimLines.begin() << endl;
                 interimLines.erase(interimLines.begin() + pos);
                 
            
