@@ -200,7 +200,10 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             }
         }
         
-        blockOpen = false;
+        if(blockOpen){
+            fileChanges.push_back(block);
+            blockOpen = false;
+        }
         
         //If we've run out of source lines, add the remaining delta lines to the end
         if(deltaIndex < deltaAddLines.size()){
