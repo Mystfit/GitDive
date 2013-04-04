@@ -98,10 +98,10 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 interimLines.erase(interimLines.begin() + pos);
                 
                 if(file.getFilename() == "gitSave.sh"){
-                    if(deltaRemoveLines[i].getStr() == "git commit --quiet -m \"Gitdive_autolog | MOOD:\"$MOOD\" | COFFEE:$COFFEE | LOCATION:\"$LOCATION\""){
+                    if(deltaRemoveLines[i].getStr() == "git commit --quiet -m \"Gitdive_autolog | MOOD:\"$MOOD\" | COFFEE:$COFFEE | LOCATION:\"$LOCATION\"\""){
                         
                     }
-)
+
                 }
                 
                 //Store the removed lines as a block of lines so we can keep the original structure of the file
