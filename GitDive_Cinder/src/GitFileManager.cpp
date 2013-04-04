@@ -177,7 +177,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 if(blockOpen){
                     fileChanges.push_back(block);
                     blockOpen = false;
-                    cout << "| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
+                    cout << "+| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
                 }
             }
         }
