@@ -108,23 +108,11 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     if(deltaRemoveLines.size() > 0){
         for(int i = 0; i < deltaRemoveLines.size(); i++){
             
-            
-            //DEBUG -- REMOVING
-            if(file.getFilename() == "gitSave.sh"){
-                if(boost::starts_with(deltaRemoveLines[i].getStr(), "git commit -m"))
-                {
-                    cout << "BONG" << endl;
-                }
-            }
-            
-           
-            
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
             if(pos < interimLines.size()){
                 //Erase the line from the file
                 interimLines.erase(interimLines.begin() + pos);
                 
-           
                 //Store the removed lines as a block of lines so we can keep the original structure of the file
                 if(!blockOpen){
                     blockOpen = true;
@@ -216,8 +204,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         
         //If we've run out of source lines, add the remaining delta lines to the end
         if(deltaIndex < deltaAddLines.size()){
-            
-            if(file.getFilename() == "gitSave.sh") cout << "BING. " << file.getFilename() << " Leftover index:" << deltaIndex << " Size:" << deltaAddLines.size() << " Line|" << deltaAddLines[deltaIndex].getStr() << "!!!" << endl;
             
             for(int leftovers = deltaIndex; leftovers < deltaAddLines.size(); leftovers++){
                 
