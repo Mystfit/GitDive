@@ -98,9 +98,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     cout << "gitSave.sh" << endl;
                     vector<Line> unsortedDeltas = diff->getAllDeltaLines();
                     
-                    for(vector<Line>::iterator it = unsortedDeltas.begin(); it != unsortedDeltas.end(); ++it){
-                        
-                    }
+//                    for(vector<Line>::iterator it = unsortedDeltas.begin(); it != unsortedDeltas.end(); ++it){
+//                        it->getLinePos();
+//                    }
                 }
             }
             
