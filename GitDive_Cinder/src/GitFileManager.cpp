@@ -123,7 +123,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         if(blockOpen){
             fileChanges.push_back(block);
             blockOpen = false;
-            cout << "| End:" << block.blockEnd;
+            cout << "| End:" << block.blockEnd << endl;
         }
     }
     
