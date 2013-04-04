@@ -145,13 +145,15 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
 
                 deltaIndex++;
             } else {
+                Line oldLine = interimLines[lineCounter++];
+                oldLine.setLinePos(lineNum);
+                newLines.push_back(oldLine);
+                
+                //Close the file change block
                 if(blockOpen){
                     fileChanges.push_back(block);
                     blockOpen = false;
                 }
-                Line oldLine = interimLines[lineCounter++];
-                oldLine.setLinePos(lineNum);
-                newLines.push_back(oldLine);
             }
         }
         
