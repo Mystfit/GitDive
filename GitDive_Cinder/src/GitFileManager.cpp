@@ -203,7 +203,7 @@ void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path
     
     fileName = Utils::checkStrIndexInRange(splitLine, splitLine.size()-2) + "." + Utils::checkStrIndexInRange(splitLine, splitLine.size()-1);
     string finalPath = path + "/" + fileName;
-    cout << "-->Saving file as " << finalPath << endl;
+    //cout << "-->Saving file as " << finalPath << endl;
     
     fileOutput.open(finalPath.c_str());
     for(int i = 0; i < lines.size(); i++){
