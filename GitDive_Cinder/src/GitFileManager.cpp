@@ -152,14 +152,14 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block.blockType = FileChangeBlock::FILECHANGE_ADD;
                     block.blockStart = newLines.back().getLinePos();
                     block.blockEnd = newLines.back().getLinePos();
-                    cout << "|.";
+                    cout << "+|.";
                 }
                 
                 //cout << "Diff:" << newLines.back().getLinePos() - block.blockEnd << endl;
                 if(newLines.back().getLinePos() - block.blockEnd > 1){
                     fileChanges.push_back(block);
                     blockOpen = false;
-                    cout << "+| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
+                    cout << "| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
                 } else {
                     block.blockEnd = newLines.back().getLinePos();
                     cout << ".";
@@ -177,7 +177,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 if(blockOpen){
                     fileChanges.push_back(block);
                     blockOpen = false;
-                    cout << "+| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
+                    cout << "| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
                 }
             }
         }
@@ -185,7 +185,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         if(blockOpen){
             fileChanges.push_back(block);
             blockOpen = false;
-            cout << "+| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
+            cout << "| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
         }
         
         //If we've run out of source lines, add the remaining delta lines to the end
