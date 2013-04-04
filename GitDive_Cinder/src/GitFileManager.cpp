@@ -87,7 +87,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     //DEBUG
     for(vector<Line>::iterator it = deltaAddLines.begin(); it != deltaAddLines.end(); ++it){
         if(file.getFilename() == "gitSave.sh"){
-            if(boost::starts_with(it->getStr(), "git commit --quiet -m")){
+            if(boost::starts_with(it->getStr(), "git commit -m")){
                 cout << "BANG" << endl;
             }
         }
@@ -106,9 +106,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             
             //DEBUG
             if(file.getFilename() == "gitSave.sh"){
-                if(originalLines.size() >= 9){
-                    cout << "ARRGH" << endl;
-                }
                 if(boost::starts_with(deltaRemoveLines[i].getStr(), "git commit -m"))
                 {
                     cout << "BONG" << endl;
