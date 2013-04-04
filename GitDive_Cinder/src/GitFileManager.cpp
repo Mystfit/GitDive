@@ -183,7 +183,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         if(deltaIndex < deltaAddLines.size()){
             
             cout << "BING. " << file.getFilename() << " Leftovers:" << deltaIndex << " Size:" << deltaAddLines.size() << " Line:" << deltaAddLines[deltaIndex].getStr() << "!!!" << endl;
-            for(int leftovers = deltaIndex; leftovers < deltaAddLines.size(); leftovers++){
+            for(int leftovers = deltaIndex; leftovers < deltaAddLines.size() - deltaIndex; leftovers++){
                 
                 //Will definitely need a new filechange block on the end if dumping all the remaining lines
                 if(!blockOpen){
