@@ -74,6 +74,11 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     vector<Line> deltaRemoveLines = diff->getDeltaRemoveLines();
     vector<Line> interimLines = originalLines;
     vector<Line> newLines;
+    int deltaIndex = 0;
+    bool blockOpen;
+    vector<FileChangeBlock> fileChanges;
+    FileChangeBlock block;
+
     
     //If the file is blank/new, only dump in all the new lines
     if(originalLines.size() < 1){
@@ -94,11 +99,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     }
     
     
-    int deltaIndex = 0;
-    bool blockOpen;
-    vector<FileChangeBlock> fileChanges;
-    FileChangeBlock block;
-    
+        
     //Move through existing lines and strip out lines that match the deltaRemove list
     if(deltaRemoveLines.size() > 0){
         for(int i = 0; i < deltaRemoveLines.size(); i++){
