@@ -142,7 +142,7 @@ vector< boost::shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffB
         else {
             if(!inDiffHeader){
                 
-                if(starts_with(line, "\\ No newline at end of file"))
+                if(starts_with(line, "\\ No newline at end of file")) line = "\n";
                 
                 Line cLine(line);
                     
