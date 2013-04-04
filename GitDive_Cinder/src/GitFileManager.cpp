@@ -167,17 +167,34 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     fileChanges.push_back(block);
                     blockOpen = false;
                     cout << "| End:" << block.blockEnd << endl;
-                    
-
                 }
             }
         }
         
         //If we've run out of source lines, add the remaining delta lines to the end
         if(deltaIndex < deltaAddLines.size()){
+            
             for(int leftovers = deltaIndex; leftovers < deltaAddLines.size() - deltaIndex; leftovers++){
+                
+                //Will definitely need a new filechange block on the end if dumping all the remaining lines
+                if(!blockOpen){
+                    blockOpen = true;
+                    block = FileChangeBlock();
+                    block.blockType = FileChangeBlock::FILECHANGE_ADD;
+                    block.blockStart = deltaAddLines[deltaIndex].getLinePos();
+                    cout << "AddBlock Start:" << block.blockStart << " |.";
+                }
+                
                 newLines.push_back(deltaAddLines[deltaIndex++]);
+                block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
             }
+        }
+        
+        //Close the block if the last line is marked for addition
+        if(blockOpen){
+            fileChanges.push_back(block);
+            blockOpen = false;
+            cout << "| End:" << block.blockEnd << endl;
         }
     }
     
