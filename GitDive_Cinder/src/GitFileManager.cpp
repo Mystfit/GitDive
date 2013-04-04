@@ -152,13 +152,13 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block.blockType = FileChangeBlock::FILECHANGE_ADD;
                     block.blockStart = newLines.back().getLinePos();
                     block.blockEnd = newLines.back().getLinePos();
-                    cout << "AddBlock Start:" << block.blockStart << " |.";
+                    cout << " |.";
                 } else {
                     if(newLines.back().getLinePos() - block.blockEnd > 1){
                         cout << "Diff:" << newLines.back().getLinePos() - block.blockEnd << endl;
                         fileChanges.push_back(block);
                         blockOpen = false;
-                        cout << "| End:" << block.blockEnd << endl;
+                        cout << "| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
                     } else {
                         block.blockEnd = newLines.back().getLinePos();
                         cout << ".";
@@ -198,7 +198,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block = FileChangeBlock();
                     block.blockType = FileChangeBlock::FILECHANGE_ADD;
                     block.blockStart = deltaAddLines[deltaIndex].getLinePos();
-                    cout << "Final AddBlock Start:" << block.blockStart << " |";
+                    cout << "|";
                 }
                 
                 cout << ".";
@@ -211,7 +211,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         if(blockOpen){
             fileChanges.push_back(block);
             blockOpen = false;
-            cout << "| End:" << block.blockEnd << endl;
+            cout << "| Final AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
         }
     }
     
