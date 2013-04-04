@@ -133,7 +133,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     deltaIndex = 0;
     int lineCounter = 0;
     blockOpen = false;
-    vector<Line> interimCopy = interimLines;
     
     //Add lines
     if(deltaAddLines.size() == 0){
