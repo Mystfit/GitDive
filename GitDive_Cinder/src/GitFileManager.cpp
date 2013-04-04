@@ -84,6 +84,15 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         return;
     }
     
+    //DEBUG
+    for(vector<Line>::iterator it = unsortedDeltas.begin(); it != unsortedDeltas.end(); ++it){
+    if(file.getFilename() == "gitSave.sh"){
+        if(boost::starts_with(deltaAddLines[i].getStr(), "git commit --quiet -m")){
+            cout << "BANG" << endl;
+        }
+    }
+    
+    
     int deltaIndex = 0;
     bool blockOpen;
     vector<FileChangeBlock> fileChanges;
@@ -103,6 +112,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
 //                    }
                 }
             }
+            
+           
+
             
             
             
