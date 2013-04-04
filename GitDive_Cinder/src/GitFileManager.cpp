@@ -84,21 +84,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         return;
     }
     
-    //DEBUG -- ADDING
-    for(vector<Line>::iterator it = deltaAddLines.begin(); it != deltaAddLines.end(); ++it){
-        if(file.getFilename() == "gitSave.sh"){
-            if(boost::starts_with(it->getStr(), "git commit -m")){
-                cout << endl << "<----- gitSave.h edge case test" << endl;
-                for(vector<Line>::iterator it = originalLines.begin(); it != originalLines.end(); ++it){
-                    cout << it->getStr()<< endl;
-                }
-                cout << "----->" << endl;
-                cout << endl;
-            }
-        }
-    }
-    
-    
     int deltaIndex = 0;
     bool blockOpen = false;
     vector<FileChangeBlock> fileChanges;
