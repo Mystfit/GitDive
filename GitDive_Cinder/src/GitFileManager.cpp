@@ -105,17 +105,18 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block.blockStart = deltaRemoveLines[i].getLinePos();
                     block.blockEnd = deltaRemoveLines[i].getLinePos();
                     cout << "RemoveBlock Start:" << block.blockStart << " ";
-                }
-                
-                if(blockOpen) cout << endl << "Difference:" << deltaRemoveLines[i].getLinePos() - block.blockEnd << " ";
-                
-                if(deltaRemoveLines[i].getLinePos() - block.blockEnd > 1){
-                    fileChanges.push_back(block);
-                    blockOpen = false;
-                    cout << " End:" << block.blockEnd << endl << endl;
                 } else {
-                    cout << " Incrementing end pos" << endl;
-                    block.blockEnd = deltaRemoveLines[i].getLinePos();
+                
+                    if(blockOpen) cout << endl << "Difference:" << deltaRemoveLines[i].getLinePos() - block.blockEnd << " ";
+                    
+                    if(deltaRemoveLines[i].getLinePos() - block.blockEnd > 1){
+                        fileChanges.push_back(block);
+                        blockOpen = false;
+                        cout << " End:" << block.blockEnd << endl << endl;
+                    } else {
+                        cout << " Incrementing end pos" << endl;
+                        block.blockEnd = deltaRemoveLines[i].getLinePos();
+                    }
                 }
                 
             }
