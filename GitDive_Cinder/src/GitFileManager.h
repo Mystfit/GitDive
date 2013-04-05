@@ -34,7 +34,7 @@ public:
     void resetCommitIndex(){ m_commitIndex = 0; };
     
     //File modification
-    static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
+    static bool applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
     
     //File display
     void dumpFileOutput(string path);
