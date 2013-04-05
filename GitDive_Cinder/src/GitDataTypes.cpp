@@ -142,7 +142,6 @@ void GitFile::resetLineOrder(){
 
 stringstream GitFile::getAsStringStream(){
     stringstream outStream;
-    vector< boost::shared_ptr<Line> >::iterator it;
     
     for(int i = 0; i < m_activeLines.size(); i++) {
         outStream << m_activeLines[i]->getStr() << endl;
