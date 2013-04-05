@@ -178,7 +178,7 @@ public:
     void setActive(){ bIsActive = true; };
     
     void setLines(vector<Line> lines){ m_activeLines = lines; };
-    vector< shared_ptr<Line> > getLines(){ return m_activeLines; };
+    vector< boost::shared_ptr<Line> > getLines(){ return m_activeLines; };
     
     void resetLineOrder();
 
