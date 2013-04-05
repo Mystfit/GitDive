@@ -143,7 +143,7 @@ void GitFile::resetLineOrder(){
 string GitFile::getAsColourifiedStr(){
     
     
-    
+    return "";
 }
 
 stringstream GitFile::getAsStringStream(){
