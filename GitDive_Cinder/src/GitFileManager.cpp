@@ -42,7 +42,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
         }
         
         if(success){
-            cout << HAVE_D << endl;
+            cout << HAVE_CONFIG_H << endl;
             cout << colourfyFile(*(file)) << endl;
         }
         
