@@ -11,8 +11,8 @@
 
 #include <fstream>
 #include <sstream>
-#include "srchilite/sourcehighlight.h"
-#include "srchilite/langmap.h"
+#include "sourcehighlight.h"
+#include "langmap.h"
 #include "GitDataTypes.h"
 
 using namespace std;
