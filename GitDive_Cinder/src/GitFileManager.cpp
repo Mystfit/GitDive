@@ -294,6 +294,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     fileStream << file.getStr();
     
+    m_srcHiglight.set
     m_srcHiglight.highlight(fileStream, colourStream, "cpp.lang");
 
     return colourStream.str();
