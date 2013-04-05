@@ -293,14 +293,5 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     return fileText.str();
 }
 
-string GitFileManager::getAsColourifiedStr(){
-    
-    
-    
-}
 
-stringstream GitFileManager::getAsStringStream(){
-    for(vector< <boost::shared_ptr<Line> >::iterator it = m_fileList.begin(); it != v.end(); ++it) {
-    
-}
 
