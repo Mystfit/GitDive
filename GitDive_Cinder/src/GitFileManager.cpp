@@ -292,3 +292,7 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     
     return fileText.str();
 }
+
+string GitFileManager::getAsColouredSyntax(){
+    
+}
