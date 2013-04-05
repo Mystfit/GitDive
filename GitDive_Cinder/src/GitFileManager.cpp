@@ -96,7 +96,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
             if(pos < interimLines.size()){
                 //Erase the line from the file
-                interimLines.erase(interimLines.begin() + pos);
+                
+                interimLines[i]->markForRemoval();
+                interimLines.erase(interimLines.begin() + pos); // Needs to be handled in a better way that updates the visuals
                 
                 //Store the removed lines as a block of lines so we can keep the original structure of the file
                 if(!blockOpen){
@@ -149,8 +151,8 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     blockOpen = true;
                     block = FileChangeBlock();
                     block.blockType = FileChangeBlock::FILECHANGE_ADD;
-                    block.blockStart = newLines.back().getLinePos();
-                    block.blockEnd = newLines.back().getLinePos();
+                    block.blockStart = newLines.back()->getLinePos();
+                    block.blockEnd = newLines.back()->getLinePos();
                     cout << "+|";
                 }
                 
