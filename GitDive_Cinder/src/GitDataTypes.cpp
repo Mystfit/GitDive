@@ -141,8 +141,6 @@ void GitFile::resetLineOrder(){
 }
 
 string GitFile::getAsColourifiedStr(){
-    
-    
     return "";
 }
 
