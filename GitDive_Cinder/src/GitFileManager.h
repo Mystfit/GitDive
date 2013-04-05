@@ -44,10 +44,8 @@ public:
     
     //Syntax highlighting
     
-
-    
 private:
-    SourceHighlight srcHiglight;
+    srchilite::SourceHighlight srcHiglight;
 
     vector<Commit> m_commitList;
     vector< boost::shared_ptr<GitFile> > m_fileList;
