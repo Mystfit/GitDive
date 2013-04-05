@@ -148,8 +148,8 @@ string GitFile::getAsColourifiedStr(){
 
 stringstream GitFile::getAsStringStream(){
     stringstream outStream;
-    
-    for(vector< boost::shared_ptr<Line> >::iterator it = m_activeLines.begin(); it != m_activeLines.end(); ++it) {
+    vector< boost::shared_ptr<Line> >::iterator it
+    for(it = m_activeLines.begin(); it != m_activeLines.end(); ++it) {
         outStream << it->getStr();
     }
     
