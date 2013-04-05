@@ -61,7 +61,7 @@
 		4A1A6BC81705A5880046BE09 /* GitDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDataTypes.h; path = ../src/GitDataTypes.h; sourceTree = "<group>"; };
 		4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitLogParser.cpp; path = ../src/GitLogParser.cpp; sourceTree = "<group>"; };
 		4A1A6BCB1705AAE60046BE09 /* GitLogParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitLogParser.h; path = ../src/GitLogParser.h; sourceTree = "<group>"; };
-		4A363C0E170EF16F00F6371D /* libsource-highlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsource-highlight.a"; path = "../../../../../../../usr/local/lib/libsource-highlight.a"; sourceTree = "<group>"; };
+		4A363C0E170EF16F00F6371D /* libsource-highlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsource-highlight.a"; path = "/usr/local/lib/libsource-highlight.a"; sourceTree = "<absolute>"; };
 		4AD7491F17097505006ACBC6 /* GitFileManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitFileManager.cpp; path = ../src/GitFileManager.cpp; sourceTree = "<group>"; };
 		4AD7492017097505006ACBC6 /* GitFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitFileManager.h; path = ../src/GitFileManager.h; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
@@ -144,7 +144,6 @@
 		29B97314FDCFA39411CA2CEA /* GitDive_Cinder */ = {
 			isa = PBXGroup;
 			children = (
-				4A363C0E170EF16F00F6371D /* libsource-highlight.a */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -179,6 +178,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A363C0E170EF16F00F6371D /* libsource-highlight.a */,
 				4A1A6BC5170580320046BE09 /* libboost_iostreams.a */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
