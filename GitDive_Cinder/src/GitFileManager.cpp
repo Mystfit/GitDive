@@ -91,7 +91,7 @@ bool GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         }
         
         file.setLines(newLines);
-        return;
+        return true;
     }
     
     int deltaIndex = 0;
