@@ -245,7 +245,7 @@ void GitFileManager::dumpAllFiles(string path){
 
 void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path){
     ofstream fileOutput;
-    vector<Line> lines = file->getLines();
+    vector< boost::shared_ptr<Line> > lines = file->getLines();
     
     string fileName = file->getFilename();
     vector<string> splitLine;
