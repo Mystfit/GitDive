@@ -186,7 +186,6 @@ public:
     void resetLineOrder();
     
     //Syntax highlighting
-    string getAsColourifiedStr();
     stringstream getAsStringStream();
 
     
