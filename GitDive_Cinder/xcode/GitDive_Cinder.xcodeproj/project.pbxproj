@@ -19,6 +19,7 @@
 		4A1A6BC6170580320046BE09 /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1A6BC5170580320046BE09 /* libboost_iostreams.a */; };
 		4A1A6BC91705A5880046BE09 /* GitDataTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */; };
 		4A1A6BCC1705AAE60046BE09 /* GitLogParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */; };
+		4A363C0F170EF16F00F6371D /* libsource-highlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A363C0E170EF16F00F6371D /* libsource-highlight.a */; };
 		4AD7492117097505006ACBC6 /* GitFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7491F17097505006ACBC6 /* GitFileManager.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
@@ -60,6 +61,7 @@
 		4A1A6BC81705A5880046BE09 /* GitDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDataTypes.h; path = ../src/GitDataTypes.h; sourceTree = "<group>"; };
 		4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitLogParser.cpp; path = ../src/GitLogParser.cpp; sourceTree = "<group>"; };
 		4A1A6BCB1705AAE60046BE09 /* GitLogParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitLogParser.h; path = ../src/GitLogParser.h; sourceTree = "<group>"; };
+		4A363C0E170EF16F00F6371D /* libsource-highlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsource-highlight.a"; path = "../../../../../../../usr/local/lib/libsource-highlight.a"; sourceTree = "<group>"; };
 		4AD7491F17097505006ACBC6 /* GitFileManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitFileManager.cpp; path = ../src/GitFileManager.cpp; sourceTree = "<group>"; };
 		4AD7492017097505006ACBC6 /* GitFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitFileManager.h; path = ../src/GitFileManager.h; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A363C0F170EF16F00F6371D /* libsource-highlight.a in Frameworks */,
 				4A1A6BC6170580320046BE09 /* libboost_iostreams.a in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
@@ -141,6 +144,7 @@
 		29B97314FDCFA39411CA2CEA /* GitDive_Cinder */ = {
 			isa = PBXGroup;
 			children = (
+				4A363C0E170EF16F00F6371D /* libsource-highlight.a */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
