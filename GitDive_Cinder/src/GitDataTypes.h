@@ -184,8 +184,12 @@ public:
     vector< boost::shared_ptr<Line> > getLines(){ return m_activeLines; };
     
     void resetLineOrder();
+    
+    //Syntax highlighting
+    string getAsColourifiedStr();
+    stringstream getAsStringStream();
 
-        
+    
 private:
     bool bIsActive;
     string m_filename;
