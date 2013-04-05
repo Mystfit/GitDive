@@ -41,7 +41,6 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
         }
         
         colourfyFile(*(file));
-        
     }
 }
 
@@ -301,7 +300,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     fileStream << file.getStr();
     
-    //m_srcHiglight.highlight(fileStream, colourStream, "cpp.lang");
+    m_srcHiglight.highlight(fileStream, colourStream, "cpp.lang");
 
-    return fileStream.str();
+    return colourStream.str();
 }
