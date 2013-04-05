@@ -23,7 +23,7 @@ void GitDive_CinderApp::setup()
     fManager.dumpFileOutput("//Users/mystfit/desktop/colourOut.html");
     
     //Debug serialization
-    GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
+    //GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
