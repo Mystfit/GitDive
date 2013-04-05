@@ -71,7 +71,7 @@ bool GitFileManager::applyNextCommit(){
 
 
 
-void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff){
+bool GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff){
     
     //Make a copy of the original lines
     vector< boost::shared_ptr <Line> > originalLines = file.getLines();
