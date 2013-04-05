@@ -298,3 +298,9 @@ string GitFileManager::getAsColourifiedStr(){
     
     
 }
+
+stringstream GitFileManager::getAsStringStream(){
+    
+    
+}
+
