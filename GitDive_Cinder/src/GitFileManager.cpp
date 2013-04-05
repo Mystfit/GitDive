@@ -305,6 +305,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     set<string> fileList = langMap.getMappedFileNames();
     
     cout << fileList.size() << endl;
+    cout << DATADIR << endl;
     
     
     for(set<string>::iterator it = fileList.begin(); it != fileList.end(); ++it){
