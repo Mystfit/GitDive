@@ -150,3 +150,4 @@ stringstream GitFile::getAsStringStream(){
     for(<boost::shared_ptr<Line>::iterator it = m_activeLines.begin(); it != m_activeLines.end(); ++it) {
         
     }
+}
