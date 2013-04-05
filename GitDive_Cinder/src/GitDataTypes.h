@@ -192,6 +192,7 @@ public:
 private:
     bool bIsActive;
     string m_filename;
+    string m_colourFileString;
 
     vector< boost::shared_ptr<Line> > m_activeLines;
 };
