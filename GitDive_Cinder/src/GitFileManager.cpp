@@ -257,7 +257,7 @@ void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path
     
     fileOutput.open(finalPath.c_str());
     for(int i = 0; i < lines.size(); i++){
-        fileOutput << lines[i].getStr() << endl;
+        fileOutput << lines[i]->getStr() << endl;
     }
     fileOutput.close();
 }
