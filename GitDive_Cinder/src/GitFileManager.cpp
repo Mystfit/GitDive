@@ -303,21 +303,8 @@ string GitFileManager::colourfyFile(GitFile & file){
 
     string inputLang = "cpp.lang";
     srchilite::LangMap langMap(DATADIR, "lang.map");
-    
-    set<string> fileList = langMap.getMappedFileNames();
-    
-    cout << fileList.size() << endl;
-    cout << DATADIR << endl;
-    
-    
-    for(set<string>::iterator it = fileList.begin(); it != fileList.end(); ++it){
-        cout << "bing" << endl;
-        cout <<  it->c_str() << endl;
-    }
-    
 
-        
-    string lang;// = langMap.getMappedFileNameFromFileName(fileName);
+    string lang = langMap.getMappedFileNameFromFileName(fileName);
     if (lang != "") {
         inputLang = lang;
     } // otherwise we default to C++
