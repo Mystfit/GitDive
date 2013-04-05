@@ -294,7 +294,9 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
 
 string GitFileManager::colourfyFile(GitFile & file){
     
-    m_srcHiglight->highlight();
+    
+    
+    m_srcHiglight.highlight(<#std::istream &input#>, <#std::ostream &output#>, <#const std::string &inputLang#>)
 
 
 }
