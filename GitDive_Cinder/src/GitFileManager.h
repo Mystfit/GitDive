@@ -44,6 +44,7 @@ public:
     
     //Syntax highlighting
     string getAsColourifiedStr();
+    stringstream getAsStringStream();
     
 private:
     srchilite::SourceHighlight srcHiglight;
