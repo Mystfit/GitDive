@@ -39,8 +39,7 @@ public:
         if(m_lineState == LINE_DELETED) return "-";
         return " ";
     }
-    
-    
+
     void markForRemoval(){
         //Update visuals here. Break apart line into component parts
     }
