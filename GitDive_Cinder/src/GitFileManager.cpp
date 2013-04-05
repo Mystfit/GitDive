@@ -294,6 +294,10 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     fileStream << file.getStr();
     
+    string fileName = file.getFilename();
+    vector<string> splitLine;
+    split(splitLine, fileName, boost::is_any_of("/."));
+    
     string inputLang = "cpp.lang";
     srchilite::LangMap langMap("", "lang.map");
     
