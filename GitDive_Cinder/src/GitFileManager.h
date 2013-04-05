@@ -30,7 +30,7 @@ public:
     //Commit traversal
     vector<Commit> & getCommitSource(){ return m_commitList; };
     void setCommitSource(vector<Commit> commitList){ m_commitList = commitList; };
-    bool applyNextCommit();
+    void applyNextCommit();
     int getCommitIndex(){ return m_commitIndex; };
     void resetCommitIndex(){ m_commitIndex = 0; };
     
