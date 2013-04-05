@@ -29,6 +29,11 @@ Line::Line(string lineStr){
 }
 
 
+void Line::markForRemoval(){
+    //Update visuals here. Break apart line into component parts
+}
+
+
 
 /*
  * Commit
