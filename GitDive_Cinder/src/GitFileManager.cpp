@@ -302,7 +302,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     string inputLang = "cpp.lang";
     srchilite::LangMap langMap("", "lang.map");
     
-    set filenames = langMap.getMappedFileNames();
+    std::<set> filenames = langMap.getMappedFileNames()
     cout <<  << endl;
         
     string lang = langMap.getMappedFileNameFromFileName(fileName);
