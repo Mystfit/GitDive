@@ -60,7 +60,6 @@
 		4A1A6BC81705A5880046BE09 /* GitDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDataTypes.h; path = ../src/GitDataTypes.h; sourceTree = "<group>"; };
 		4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitLogParser.cpp; path = ../src/GitLogParser.cpp; sourceTree = "<group>"; };
 		4A1A6BCB1705AAE60046BE09 /* GitLogParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitLogParser.h; path = ../src/GitLogParser.h; sourceTree = "<group>"; };
-		4A363C12170F059C00F6371D /* libsource-highlight.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsource-highlight.4.dylib"; path = "../../../../../../../usr/local/lib/libsource-highlight.4.dylib"; sourceTree = "<group>"; };
 		4A363C15170F05D600F6371D /* libsource-highlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsource-highlight.a"; path = "../../../../../../../usr/local/lib/libsource-highlight.a"; sourceTree = "<group>"; };
 		4A363C17170F1C6600F6371D /* libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_iostreams.a; path = ../../../../../../../usr/local/lib/libboost_iostreams.a; sourceTree = "<group>"; };
 		4AD7491F17097505006ACBC6 /* GitFileManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitFileManager.cpp; path = ../src/GitFileManager.cpp; sourceTree = "<group>"; };
@@ -147,7 +146,6 @@
 			children = (
 				4A363C17170F1C6600F6371D /* libboost_iostreams.a */,
 				4A363C15170F05D600F6371D /* libsource-highlight.a */,
-				4A363C12170F059C00F6371D /* libsource-highlight.4.dylib */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
