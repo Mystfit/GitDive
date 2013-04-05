@@ -139,11 +139,13 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     if(deltaAddLines.size() == 0){
         newLines = originalLines;
     } else {
-        if(diff->getFileName() == "gitSave.sh") cout << originalLines.size() << endl;
         for(int lineNum = 1; lineNum <= originalLines.size() + deltaAddLines.size(); lineNum++ ){
             
             if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() == lineNum){
+                
+                //Create new line pointer for the file
                 boost::shared_ptr<Line> newLine( new Line(deltaAddLines[deltaIndex].getStr()) );
+                newLine->setLinePos(deltaAddLines[deltaIndex].getLinePos());
                 newLine->
                 newLines.push_back(deltaAddLines[deltaIndex]);
                 
