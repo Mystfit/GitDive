@@ -43,6 +43,7 @@ public:
     string serializeFile(boost::shared_ptr<GitFile> file);
     
     //Syntax highlighting
+    void getSyntaxColoured();
     
 private:
     srchilite::SourceHighlight srcHiglight;
