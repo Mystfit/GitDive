@@ -12,7 +12,7 @@
 /*
  * Line
  */
-Line::Line(string lineStr){
+Line::Line(string lineStr, bool justUpdated){
     m_lineStr = lineStr;
     
     if(lineStr.compare(0, 1, "+") == 0){
@@ -24,7 +24,8 @@ Line::Line(string lineStr){
     else{
         m_lineState = LINE_NORMAL;
     }
-    m_lineStr.erase(0,1);
+    
+    if(!justUpdated) m_lineStr.erase(0,1);
 
 }
 
