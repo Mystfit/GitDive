@@ -70,9 +70,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
     //Make a copy of the original lines
     vector< boost::shared_ptr <Line> > originalLines = file.getLines();
+    vector< boost::shared_ptr <Line> > newLines;
     vector<Line> deltaAddLines = diff->getDeltaAddLines();
     vector<Line> deltaRemoveLines = diff->getDeltaRemoveLines();
-    vector< boost::shared_ptr <Line> > newLines;
     
     //If the file is blank/new, only dump in all the new lines
     if(originalLines.size() < 1){
@@ -93,11 +93,11 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         for(int i = 0; i < deltaRemoveLines.size(); i++){
             
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
-            if(pos < interimLines.size()){
+            if(pos < originalLines.size()){
                 //Erase the line from the file
                 
-                interimLines[i]->markForRemoval();
-                interimLines.erase(interimLines.begin() + pos); // Needs to be handled in a better way that updates the visuals
+                originalLines[i]->markForRemoval();
+                originalLines.erase(originalLines.begin() + pos); // Needs to be handled in a better way that updates the visuals
                 
                 //Store the removed lines as a block of lines so we can keep the original structure of the file
                 if(!blockOpen){
@@ -137,12 +137,14 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
     //Add lines
     if(deltaAddLines.size() == 0){
-        newLines = interimLines;
+        newLines = originalLines;
     } else {
-        if(diff->getFileName() == "gitSave.sh") cout << interimLines.size() << endl;
-        for(int lineNum = 1; lineNum <= interimLines.size() + deltaAddLines.size(); lineNum++ ){
+        if(diff->getFileName() == "gitSave.sh") cout << originalLines.size() << endl;
+        for(int lineNum = 1; lineNum <= originalLines.size() + deltaAddLines.size(); lineNum++ ){
             
             if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() == lineNum){
+                boost::shared_ptr<Line> newLine(Line(deltaAddLines[deltaIndex]));
+                newLine->
                 newLines.push_back(deltaAddLines[deltaIndex]);
                 
                 //Save changes of lines added as blocks of line positions for animation
@@ -168,7 +170,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 deltaIndex++;
             
             } else {
-                Line oldLine = interimLines[lineCounter];
+                Line oldLine = originalLines[lineCounter];
                 oldLine.setLinePos(lineNum);
                 newLines.push_back(oldLine);
                 lineCounter++;
