@@ -149,7 +149,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             
             if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() == lineNum){
                 
-                //Create new line pointer for the file
+                //Create new line pointer
                 boost::shared_ptr<Line> newLine( new Line(deltaAddLines[deltaIndex].getStr()) );
                 newLine->setLinePos(deltaAddLines[deltaIndex].getLinePos());
                 newLines.push_back(newLine);
@@ -213,7 +213,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 cout << ".";
                 block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
                 
-                //Create new line pointer for the file
+                //Create new line pointer
                 boost::shared_ptr<Line> newLine( new Line(deltaAddLines[deltaIndex++].getStr()) );
                 newLine->setLinePos(deltaAddLines[deltaIndex].getLinePos());
                 newLines.push_back(newLine);
