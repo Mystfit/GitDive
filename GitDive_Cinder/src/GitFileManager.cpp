@@ -295,11 +295,14 @@ string GitFileManager::colourfyFile(GitFile & file){
     fileStream << file.getStr();
     
     string fileName = file.getFilename();
-    //vector<string> splitLine;
-    //split(splitLine, fileName, boost::is_any_of("."));
+    vector<string> splitLine;
+    split(splitLine, fileName, boost::is_any_of("."));
     //fileName = splitLine.back();
     
-    cout << fileName << endl;
+    for(int i = 0; i < splitLine.size(); i++){
+        cout << splitLine[i] << endl;
+    }
+    //cout << fileName << endl;
     
     m_srcHiglight.setDataDir(DATADIR);
 
