@@ -73,7 +73,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     vector<Line> deltaAddLines = diff->getDeltaAddLines();
     vector<Line> deltaRemoveLines = diff->getDeltaRemoveLines();
     vector< boost::shared_ptr <Line> > interimLines = originalLines;
-    vector<Line> newLines;
+    vector< boost::shared_ptr <Line> > newLines;
     
     //If the file is blank/new, only dump in all the new lines
     if(originalLines.size() < 1){
