@@ -294,6 +294,5 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
 
 string GitFileManager::colourfyFile(GitFile & file){
 
-}
 
 }
