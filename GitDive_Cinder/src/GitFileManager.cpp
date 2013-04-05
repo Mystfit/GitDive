@@ -299,7 +299,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     stringstream colourStream;
     stringstream fileStream;
     
-    fileStream << file.getAsStr();
+    fileStream << file.getStr();
     
     //m_srcHiglight.highlight(file.getAsStringStream(), colourStream, );
 
