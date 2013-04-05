@@ -295,9 +295,9 @@ string GitFileManager::colourfyFile(GitFile & file){
     fileStream << file.getStr();
     
     string fileName = file.getFilename();
-    vector<string> splitLine;
-    split(splitLine, fileName, boost::is_any_of("/."));
-    fileName = splitLine.back();
+    //vector<string> splitLine;
+    //split(splitLine, fileName, boost::is_any_of("."));
+    //fileName = splitLine.back();
     
     cout << fileName << endl;
     
