@@ -143,7 +143,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         for(int lineNum = 1; lineNum <= originalLines.size() + deltaAddLines.size(); lineNum++ ){
             
             if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() == lineNum){
-                boost::shared_ptr<Line> newLine(Line(deltaAddLines[deltaIndex]).getStr());
+                boost::shared_ptr<Line> newLine(Line(deltaAddLines[deltaIndex].getStr()));
                 newLine->
                 newLines.push_back(deltaAddLines[deltaIndex]);
                 
