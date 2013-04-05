@@ -11,7 +11,7 @@
 
 #include <fstream>
 #include <sstream>
-#include "sourcehighlight.h"
+#include "srchilite/sourcehighlight.h"
 #include "srchilite/langmap.h"
 #include "GitDataTypes.h"
 
