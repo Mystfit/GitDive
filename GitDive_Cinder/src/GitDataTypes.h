@@ -187,6 +187,7 @@ public:
     
     //Syntax highlighting
     stringstream getAsStringStream();
+    void setColourfulString(string colourfulString){ m_colourfulString = colourfulString; };
 
     
 private:
