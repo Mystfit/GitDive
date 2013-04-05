@@ -180,7 +180,7 @@ public:
     void setInactive(){ bIsActive = false; };
     void setActive(){ bIsActive = true; };
     
-    void setLines(vector<Line> lines);
+    void setLines(vector< boost::shared_ptr<Line> > lines);
     vector< boost::shared_ptr<Line> > getLines(){ return m_activeLines; };
     
     void resetLineOrder();
