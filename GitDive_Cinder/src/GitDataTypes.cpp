@@ -140,10 +140,6 @@ void GitFile::resetLineOrder(){
     }
 }
 
-string GitFile::getAsColourifiedStr(){
-    return "";
-}
-
 stringstream GitFile::getAsStringStream(){
     stringstream outStream;
     vector< boost::shared_ptr<Line> >::iterator it;
