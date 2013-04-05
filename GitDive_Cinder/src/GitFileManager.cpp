@@ -299,6 +299,8 @@ string GitFileManager::colourfyFile(GitFile & file){
     split(splitLine, fileName, boost::is_any_of("/."));
     fileName = splitLine.back();
     
+    cout << fileName << endl;
+    
     m_srcHiglight.setDataDir(DATADIR);
 
     string inputLang = "cpp.lang";
