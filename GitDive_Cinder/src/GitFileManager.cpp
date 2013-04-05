@@ -79,7 +79,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         cout << endl << "===Creating new file " << diff->getFileName() << endl << endl;
         for(int i = 0; i < deltaAddLines.size(); i++) {
             
-            //Create new line pointer for the line
+            //Create new line pointer
             boost::shared_ptr<Line> newLine( new Line(deltaAddLines[i].getStr()) );
             newLine->setLinePos(i+1);
             newLines.push_back(newLine);            
@@ -103,7 +103,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 //Erase the line from the file
                 
                 originalLines[i]->markForRemoval();
-                originalLines.erase(originalLines.begin() + pos); // Needs to be handled in a better way that updates the visuals
+                originalLines.erase(originalLines.begin() + pos); // TODO:Needs to be handled in a better way that updates the visuals
                 
                 //Store the removed lines as a block of lines so we can keep the original structure of the file
                 if(!blockOpen){
