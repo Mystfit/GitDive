@@ -124,7 +124,7 @@ GitFile::GitFile(string filename){
     bIsActive = true;
 }
 
-void GitFile::setLines(){
+void GitFile::setLines(vector< boost::shared_ptr<Line> lines){
     m_activeLines = lines;
 };
 
