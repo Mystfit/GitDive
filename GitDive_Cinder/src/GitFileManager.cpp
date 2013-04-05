@@ -77,7 +77,15 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     //If the file is blank/new, only dump in all the new lines
     if(originalLines.size() < 1){
         cout << endl << "===Creating new file " << diff->getFileName() << endl << endl;
-        for(int i = 0; i < deltaAddLines.size(); i++) deltaAddLines[i].setLinePos(i+1);
+        for(int i = 0; i < deltaAddLines.size(); i++) {
+            
+            //Create new line pointer for the file
+            boost::shared_ptr<Line> newLine( new Line(deltaAddLines[i].getStr()) );
+            newLine->setLinePos(deltaAddLines[deltaIndex].getLinePos());
+            newLines.push_back(newLine);
+            
+            deltaAddLines[i].setLinePos(i+1);
+        }
         
         file.setLines(deltaAddLines);
         return;
