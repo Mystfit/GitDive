@@ -294,7 +294,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     fileStream << file.getStr();
     
-    srchilite::LangMap langMap(DATADIR, "lang.map");
+    srchilite::LangMap langMap("", "lang.map");
 
     m_srcHiglight.highlight(fileStream, colourStream, "cpp.lang");
 
