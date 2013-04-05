@@ -42,7 +42,7 @@ public:
 
     void markForRemoval(){
         //Update visuals here. Break apart line into component parts
-    }
+    };
     
 private:
     int m_lineState;
