@@ -303,15 +303,6 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     stringstream colourStream;
     colourStream << "Dgbds";
-    
-    // we have a file name so we detect the input source language
-    srchilite::LangMap langMap(DATADIR, "lang.map");
-    string lang = langMap.getMappedFileNameFromFileName(argv[1]);
-    if (lang != "") {
-        inputLang = lang;
-    } // otherwise we default to C++
-    
-    
     //m_srcHiglight.highlight(file.getAsStringStream(), colourStream, );
 
     return colourStream.str();
