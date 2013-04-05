@@ -30,12 +30,12 @@ public:
     //Commit traversal
     vector<Commit> & getCommitSource(){ return m_commitList; };
     void setCommitSource(vector<Commit> commitList){ m_commitList = commitList; };
-    void applyNextCommit();
+    bool applyNextCommit();
     int getCommitIndex(){ return m_commitIndex; };
     void resetCommitIndex(){ m_commitIndex = 0; };
     
     //File modification
-    static bool applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
+    static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
     
     //File display
     void dumpFileOutput(string path);
