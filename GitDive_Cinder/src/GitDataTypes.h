@@ -186,7 +186,7 @@ public:
     void resetLineOrder();
     
     //Syntax highlighting
-    stringstream getAsStringStream();
+    stringstream fileToStrStream(stringstream & stream);
     void setColourfulString(string colourfulString){ m_colourfulString = colourfulString; };
     string getColourfulString(string colourfulString){ return m_colourfulString; };
     
