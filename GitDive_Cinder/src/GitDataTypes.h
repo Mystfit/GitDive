@@ -25,7 +25,7 @@ using namespace std;
 class Line {
 public:
     
-    Line(string lineStr);
+    Line(string lineStr, bool justUpdated = false);
     
     string getStr(){return m_lineStr; };
     
