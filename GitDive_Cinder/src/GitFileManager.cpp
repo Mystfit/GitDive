@@ -298,7 +298,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     vector<string> splitLine;
     split(splitLine, fileName, boost::is_any_of("/."));
     
-    if(splitLine.size() == < 2) 
+    if(splitLine.size() < 2) fileName = splitLine.back();
     
     string inputLang = "cpp.lang";
     srchilite::LangMap langMap("", "lang.map");
