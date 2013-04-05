@@ -307,7 +307,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     cout <<  &fileList << endl;
 
         
-    string lang = langMap.getMappedFileNameFromFileName(fileName);
+    string lang;// = langMap.getMappedFileNameFromFileName(fileName);
     if (lang != "") {
         inputLang = lang;
     } // otherwise we default to C++
