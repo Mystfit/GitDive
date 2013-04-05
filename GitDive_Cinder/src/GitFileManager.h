@@ -10,7 +10,7 @@
 #define __GitDive_Cinder__GitFileManager__
 
 #include <fstream>
-#include <sstream
+#include <sstream>
 #include "sourcehighlight.h"
 #include "GitDataTypes.h"
 
