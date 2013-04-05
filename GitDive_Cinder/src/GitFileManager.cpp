@@ -304,7 +304,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     set<string> fileList = langMap.getMappedFileNames();
     
-    f        cout <<  &fileList << endl;
+    cout <<  &fileList << endl;
 
         
     string lang = langMap.getMappedFileNameFromFileName(fileName);
