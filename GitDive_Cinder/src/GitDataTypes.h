@@ -39,10 +39,9 @@ public:
         if(m_lineState == LINE_DELETED) return "-";
         return " ";
     }
-
-    void markForRemoval(){
-        //Update visuals here. Break apart line into component parts
-    };
+    
+    //Line is queued for deletion
+    void markForRemoval();
     
 private:
     int m_lineState;
