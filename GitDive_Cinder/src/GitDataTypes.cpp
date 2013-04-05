@@ -140,7 +140,7 @@ void GitFile::resetLineOrder(){
     }
 }
 
-string GitFile::getAsStr(){
+string GitFile::getStr(){
     
     stringstream stream;
     for(int i = 0; i < m_activeLines.size(); i++) {
