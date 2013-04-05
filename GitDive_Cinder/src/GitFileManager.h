@@ -41,7 +41,7 @@ public:
     void saveFileToDisk(boost::shared_ptr<GitFile> file, string path);
     string serializeAllFiles();
     string serializeFile(boost::shared_ptr<GitFile> file);
-    string getColourfulFile();
+    static string getColourfulFile(GitFile & file);
 
     
 private:
