@@ -103,7 +103,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 //Erase the line from the file
                 
                 originalLines[i]->markForRemoval();
-                originalLines.erase(originalLines.begin() + pos); // TODO:Needs to be handled in a better way that updates the visuals
+                originalLines.erase(originalLines.begin() + pos); // TODO: Needs to be handled in a better way that updates the visuals
                 
                 //Store the removed lines as a block of lines so we can keep the original structure of the file
                 if(!blockOpen){
