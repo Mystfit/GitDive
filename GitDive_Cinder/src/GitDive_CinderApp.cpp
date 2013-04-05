@@ -31,10 +31,10 @@ void GitDive_CinderApp::mouseDown( MouseEvent event )
 }
 
 void GitDive_CinderApp::keyDown(KeyEvent event){    
-    if(event.getChar() == KeyEvent::KEY_SPACE){
-        fManager.applyNextCommit();
-        fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
-    }
+//    if(event.getChar() == KeyEvent::KEY_SPACE){
+//        fManager.applyNextCommit();
+//        fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+//    }
 }
 
 void GitDive_CinderApp::update()
