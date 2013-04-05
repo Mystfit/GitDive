@@ -10,7 +10,6 @@
 #define __GitDive_Cinder__GitFileManager__
 
 #include <fstream>
-#include <sstream>
 #include "sourcehighlight.h"
 #include "GitDataTypes.h"
 
@@ -42,10 +41,6 @@ public:
     void saveFileToDisk(boost::shared_ptr<GitFile> file, string path);
     string serializeAllFiles();
     string serializeFile(boost::shared_ptr<GitFile> file);
-    
-    //Syntax highlighting
-    string getAsColourifiedStr();
-    stringstream getAsStringStream();
     
 private:
     srchilite::SourceHighlight srcHiglight;
