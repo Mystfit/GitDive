@@ -147,5 +147,5 @@ string GitFile::getAsStr(){
         stream << m_activeLines[i]->getStr().c_str() << endl;
     }
     
-    return stream;
+    return stream.str();
 }
