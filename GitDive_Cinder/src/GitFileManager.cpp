@@ -296,6 +296,10 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     string inputLang = "cpp.lang";
     srchilite::LangMap langMap("", "lang.map");
+    string lang = langMap.getMappedFileNameFromFileName(argv[1]);
+    if (lang != "") {
+        inputLang = lang;
+    } // otherwise we default to C++
 
     m_srcHiglight.highlight(fileStream, colourStream, "cpp.lang");
 
