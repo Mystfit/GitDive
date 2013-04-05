@@ -300,7 +300,7 @@ string GitFileManager::getAsColourifiedStr(){
 }
 
 stringstream GitFileManager::getAsStringStream(){
-    for(
+    for(vector< <boost::shared_ptr<Line> >::iterator it = v.begin(); it != v.end(); ++it) {
     
 }
 
