@@ -15,6 +15,7 @@ GitFileManager::GitFileManager(){
 void GitFileManager::updateFilesFromCommit(Commit &commit){
     
     boost::shared_ptr<GitFile> file;
+    bool success - false;
     
     for(int i = 0; i < commit.getNumDiffs(); i++){
                 
