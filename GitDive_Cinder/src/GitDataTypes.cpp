@@ -130,6 +130,6 @@ void GitFile::setLines(vector< boost::shared_ptr<Line> lines){
 
 void GitFile::resetLineOrder(){
     for(int i = 1; i <= m_activeLines.size(); i++){
-        m_activeLines[i-1].setLinePos(i);
+        m_activeLines[i-1]->setLinePos(i);
     }
 }
