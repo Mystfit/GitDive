@@ -129,7 +129,7 @@ GitFile::GitFile(string filename){
     bIsActive = true;
 }
 
-void GitFile::setLines(vector< boost::shared_ptr<Line> lines){
+void GitFile::setLines(vector< boost::shared_ptr<Line> > lines);
     m_activeLines = lines;
 };
 
