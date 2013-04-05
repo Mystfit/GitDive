@@ -15,7 +15,6 @@ GitFileManager::GitFileManager(){
 void GitFileManager::updateFilesFromCommit(Commit &commit){
     
     boost::shared_ptr<GitFile> file;
-    bool success = false;
     
     for(int i = 0; i < commit.getNumDiffs(); i++){
                 
@@ -23,7 +22,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
                 
         if(diff->fileMode == Diff::FILEMODE_ADDED){
             file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
-            success = applyDiffToFile(*(file), diff);
+            applyDiffToFile(*(file), diff);
             m_fileList.push_back(file);
         }
         
@@ -36,14 +35,12 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
             file = getFileByName(diff->getFileName());
             if(file){
                 if(file->active()){
-                    success = applyDiffToFile(*(file), diff);
+                    applyDiffToFile(*(file), diff);
                 }
             }
         }
         
-        if(success){
-            cout << colourfyFile(*(file)) << endl;
-        }
+        colourfyFile(*(file));
         
     }
 }
@@ -71,14 +68,14 @@ bool GitFileManager::applyNextCommit(){
 
 
 
-bool GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff){
+void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff){
     
     //Make a copy of the original lines
     vector< boost::shared_ptr <Line> > originalLines = file.getLines();
     vector< boost::shared_ptr <Line> > newLines;
     vector<Line> deltaAddLines = diff->getDeltaAddLines();
     vector<Line> deltaRemoveLines = diff->getDeltaRemoveLines();
-        
+    
     //If the file is blank/new, only dump in all the new lines
     if(originalLines.size() < 1){
         cout << endl << "===Creating new file " << diff->getFileName() << endl << endl;
@@ -91,7 +88,7 @@ bool GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         }
         
         file.setLines(newLines);
-        return true;
+        return;
     }
     
     int deltaIndex = 0;
@@ -236,8 +233,6 @@ bool GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     //Reset the file with the new lines
     file.setLines(newLines);
     file.resetLineOrder();
-    
-    return true;
 }
 
 
@@ -302,7 +297,6 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
 string GitFileManager::colourfyFile(GitFile & file){
     
     stringstream colourStream;
-    colourStream << "Dgbds";
     //m_srcHiglight.highlight(file.getAsStringStream(), colourStream, );
 
     return colourStream.str();
