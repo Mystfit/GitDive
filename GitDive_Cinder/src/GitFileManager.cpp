@@ -313,8 +313,6 @@ string GitFileManager::colourfyFile(GitFile & file){
         inputLang = lang;
     } // otherwise we default to C++
     
-    cout << "Lang is " << inputLang << endl;
-
     m_srcHiglight.highlight(fileStream, colourStream, inputLang);
 
     return colourStream.str();
