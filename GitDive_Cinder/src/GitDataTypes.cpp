@@ -139,3 +139,14 @@ void GitFile::resetLineOrder(){
         m_activeLines[i-1]->setLinePos(i);
     }
 }
+
+string GitFile::getAsColourifiedStr(){
+    
+    
+    
+}
+
+stringstream GitFile::getAsStringStream(){
+    for(vector< <boost::shared_ptr<Line> >::iterator it = m_fileList.begin(); it != v.end(); ++it) {
+        
+    }
