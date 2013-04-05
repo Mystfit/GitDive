@@ -299,7 +299,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     split(splitLine, fileName, boost::is_any_of("/."));
     fileName = splitLine.back();
     
-    sourceHighlight.setDataDir(DATADIR);
+    m_srcHiglight.setDataDir(DATADIR);
 
     string inputLang = "cpp.lang";
     srchilite::LangMap langMap(DATADIR, "lang.map");
