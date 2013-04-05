@@ -44,7 +44,7 @@ public:
     static string colourfyFile(GitFile & file);
     
 private:
-    srchilite::SourceHighlight srcHiglight;
+    srchilite::SourceHighlight m_srcHiglight;
 
     vector<Commit> m_commitList;
     vector< boost::shared_ptr<GitFile> > m_fileList;
