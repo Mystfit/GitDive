@@ -20,7 +20,7 @@ void GitDive_CinderApp::setup()
     
     while(fManager.applyNextCommit());
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
-
+    fManager.dumpFileOutput("//Users/mystfit/desktop/colourOut.log");
     
     //Debug serialization
     GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
