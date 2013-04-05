@@ -124,7 +124,7 @@ GitFile::GitFile(string filename){
     bIsActive = true;
 }
 
-void GitFIle::setLines(){
+void GitFile::setLines(){
     m_activeLines = lines;
 };
 
