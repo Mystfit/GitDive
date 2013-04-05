@@ -80,7 +80,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         for(int i = 0; i < deltaAddLines.size(); i++) {
             
             //Create new line pointer
-            boost::shared_ptr<Line> newLine( new Line(deltaAddLines[i].getStr()) );
+            boost::shared_ptr<Line> newLine( new Line(deltaAddLines[i].getStr(), true) );
             newLine->setLinePos(i+1);
             newLines.push_back(newLine);            
         }
@@ -150,7 +150,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() == lineNum){
                 
                 //Create new line pointer
-                boost::shared_ptr<Line> newLine( new Line(deltaAddLines[deltaIndex].getStr()) );
+                boost::shared_ptr<Line> newLine( new Line(deltaAddLines[deltaIndex].getStr(), true) );
                 newLine->setLinePos(deltaAddLines[deltaIndex].getLinePos());
                 newLines.push_back(newLine);
                 
@@ -214,7 +214,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
                 
                 //Create new line pointer
-                boost::shared_ptr<Line> newLine( new Line(deltaAddLines[deltaIndex++].getStr()) );
+                boost::shared_ptr<Line> newLine( new Line(deltaAddLines[deltaIndex++].getStr(), true) );
                 newLine->setLinePos(deltaAddLines[deltaIndex].getLinePos());
                 newLines.push_back(newLine);
             }
