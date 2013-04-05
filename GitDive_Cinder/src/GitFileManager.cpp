@@ -38,9 +38,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
                     applyDiffToFile(*(file), diff);
                 }
             }
-        }
-        
-        colourfyFile(*(file));
+        }        
     }
 }
 
@@ -281,16 +279,14 @@ string GitFileManager::serializeAllFiles(){
 
 
 string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
-    stringstream fileText;
-    fileText << "/***======== File: " << file->getFilename() << endl;
-    vector< boost::shared_ptr<Line> > lines = file->getLines();
+//    stringstream fileText;
+//    fileText << "/***======== File: " << file->getFilename() << endl;
+//    fileText << file->getStr();
+//    fileText << "\\***=========================" << file->getFilename() << endl;
+//
+//    return fileText.str();
     
-    for(int i = 0; i < lines.size(); i++){
-        fileText << lines[i]->getStr() << endl;
-    }
-    fileText << "\\***=========================" << file->getFilename() << endl;
-    
-    return fileText.str();
+    return colourfyFile(*(file));
 }
 
 string GitFileManager::colourfyFile(GitFile & file){
