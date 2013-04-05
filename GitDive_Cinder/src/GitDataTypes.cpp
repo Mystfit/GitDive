@@ -155,5 +155,4 @@ stringstream GitFile::getAsStringStream(){
     }
     
     return outStream;
-    
 }
