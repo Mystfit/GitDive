@@ -143,9 +143,9 @@ void GitFile::resetLineOrder(){
 stringstream GitFile::getAsStringStream(){
     stringstream outStream;
     
-//    for(int i = 0; i < m_activeLines.size(); i++) {
-//        outStream << m_activeLines[i]->getStr().c_str() << endl;
-//    }
+    for(int i = 0; i < m_activeLines.size(); i++) {
+        outStream << m_activeLines[i]->getStr().c_str() << endl;
+    }
     
     return outStream;
 }
