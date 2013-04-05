@@ -41,8 +41,7 @@ public:
     void saveFileToDisk(boost::shared_ptr<GitFile> file, string path);
     string serializeAllFiles();
     string serializeFile(boost::shared_ptr<GitFile> file);
-    static string getColourfulFile(GitFile & file);
-
+    static string colourfyFile(GitFile & file);
     
 private:
     srchilite::SourceHighlight srcHiglight;
