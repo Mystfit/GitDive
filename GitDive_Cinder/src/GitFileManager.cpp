@@ -306,6 +306,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     cout << fileList.size() << endl;
     
+    
     for(set<string>::iterator it = fileList.begin(); it != fileList.end(); ++it){
         cout << "bing" << endl;
         cout <<  it->c_str() << endl;
