@@ -256,9 +256,10 @@ void GitFileManager::saveFileToDisk(boost::shared_ptr<GitFile> file, string path
     vector<string> splitLine;
     split(splitLine, fileName, boost::is_any_of("/."));
     
-    vector<string>::iterator splitLine
+    vector<string>::iterator last = splitLine.back();
+    vector<string>::iterator last - 1;
     
-    fileName = Utils::checkStrIndexInRange(splitLine, splitLine.back().) + "." + Utils::checkStrIndexInRange(splitLine, splitLine.size()-1);
+    fileName = Utils::checkStrIndexInRange(splitLine, ) + "." + Utils::checkStrIndexInRange(splitLine, splitLine.size()-1);
     string finalPath = path + "/" + fileName;
     
     fileOutput.open(finalPath.c_str());
