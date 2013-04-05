@@ -304,7 +304,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     set<string> fileList = langMap.getMappedFileNames();
     
-    fileList.
+    cout << fileList.size() << endl;
     
     for(set<string>::iterator it = fileList.begin(); it != fileList.end(); ++it){
         cout << "bing" << endl;
