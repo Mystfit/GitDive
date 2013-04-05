@@ -10,7 +10,7 @@
 #define __GitDive_Cinder__GitFileManager__
 
 #ifndef DATADIR
-#define DATADIR ""
+#define DATADIR "/usr/local/share/source-highlight"
 #endif
 
 #include <fstream>
