@@ -154,5 +154,6 @@ stringstream GitFile::getAsStringStream(){
         outStream << it->get()->getStr();
     }
     
+    return outStream;
     
 }
