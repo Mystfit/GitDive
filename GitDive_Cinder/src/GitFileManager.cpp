@@ -42,6 +42,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
         }
         
         if(success){
+            cout << DATAFILE << endl;
             cout << colourfyFile(*(file)) << endl;
         }
         
