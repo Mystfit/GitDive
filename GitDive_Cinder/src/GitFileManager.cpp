@@ -301,7 +301,7 @@ string GitFileManager::colourfyFile(GitFile & file){
         inputLang = lang;
     } // otherwise we default to C++
 
-    m_srcHiglight.highlight(fileStream, colourStream, "cpp.lang");
+    m_srcHiglight.highlight(fileStream, colourStream, inputLang);
 
     return colourStream.str();
 }
