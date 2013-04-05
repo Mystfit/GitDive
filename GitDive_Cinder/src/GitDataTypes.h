@@ -40,6 +40,11 @@ public:
         return " ";
     }
     
+    
+    void markForRemoval(){
+        //Update visuals here. Break apart line into component parts
+    }
+    
 private:
     int m_lineState;
     int m_linePos;
@@ -176,10 +181,6 @@ public:
     bool active(){ return bIsActive; };
     void setInactive(){ bIsActive = false; };
     void setActive(){ bIsActive = true; };
-    
-    void markForRemoval(){
-        //Update visuals here. Break apart line into component parts
-    }
     
     void setLines(vector<Line> lines);
     vector< boost::shared_ptr<Line> > getLines(){ return m_activeLines; };
