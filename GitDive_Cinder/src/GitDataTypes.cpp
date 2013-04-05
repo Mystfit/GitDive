@@ -151,7 +151,7 @@ stringstream GitFile::getAsStringStream(){
     vector< boost::shared_ptr<Line> >::iterator it;
     
     for(it = m_activeLines.begin(); it != m_activeLines.end(); ++it) {
-        outStream << it->getStr();
+        outStream << it->get()->getStr();
     }
     
     
