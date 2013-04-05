@@ -9,6 +9,10 @@
 #ifndef __GitDive_Cinder__GitFileManager__
 #define __GitDive_Cinder__GitFileManager__
 
+#ifndef DATADIR
+#define DATADIR ""
+#endif
+
 #include <fstream>
 #include <sstream>
 #include "srchilite/sourcehighlight.h"
