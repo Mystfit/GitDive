@@ -105,7 +105,6 @@
 				4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */,
 				4AD7491F17097505006ACBC6 /* GitFileManager.cpp */,
 				4A1253FA170FF90000DE28C9 /* SyntaxColourListener.cpp */,
-				4A1253FB170FF90000DE28C9 /* SyntaxColourListener.h */,
 				4A1A6B7F17054D940046BE09 /* Utils.cpp */,
 			);
 			name = Source;
@@ -168,6 +167,7 @@
 				4A1A6BC81705A5880046BE09 /* GitDataTypes.h */,
 				4AD7492017097505006ACBC6 /* GitFileManager.h */,
 				4A1A6B7B17042CCA0046BE09 /* Utils.h */,
+				4A1253FB170FF90000DE28C9 /* SyntaxColourListener.h */,
 				32CA4F630368D1EE00C91783 /* GitDive_Cinder_Prefix.pch */,
 			);
 			name = Headers;
