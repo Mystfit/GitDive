@@ -16,6 +16,7 @@
 		00BAE65A0E7ED9C10018A608 /* GitDive_CinderApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* GitDive_CinderApp.cpp */; };
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
 		4A1253FC170FF90000DE28C9 /* SyntaxColourTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1253FA170FF90000DE28C9 /* SyntaxColourTools.cpp */; };
+		4A1254BC171035FF00DE28C9 /* libsource-highlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A363C19170F1DFE00F6371D /* libsource-highlight.a */; };
 		4A1A6B8117054D940046BE09 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B7F17054D940046BE09 /* Utils.cpp */; };
 		4A1A6BC91705A5880046BE09 /* GitDataTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */; };
 		4A1A6BCC1705AAE60046BE09 /* GitLogParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */; };
@@ -79,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A363C18170F1C6700F6371D /* libboost_iostreams.a in Frameworks */,
+				4A1254BC171035FF00DE28C9 /* libsource-highlight.a in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
 				53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */,
