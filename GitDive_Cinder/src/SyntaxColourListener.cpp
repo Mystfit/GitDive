@@ -11,3 +11,7 @@
 SyntaxColourListener::SyntaxColourListener(){
     
 }
+
+SyntaxColourListener::notify(<#const srchilite::HighlightEvent &event#>){
+    
+}
