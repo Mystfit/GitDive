@@ -14,8 +14,32 @@ LineHighlighter::LineHighlighter(HighlightStatePtr mainState) : mainHighlightSta
     
 }
 void LineHighlighter::format(const std::string &elem, const std::string &s) {
-    formatterManager->getFormatter(elem);
-    SourceHighlighter::format(elem, s);
+    if (suspended)
+        return;
+    
+    if (!s.size())
+        return;
+    
+    // the formatter is allowed to be null
+    if (formatterManager) {
+        if (!optimize) {
+            formatterManager->getFormatter(elem)->format(s, formatterParams);
+        } else {
+            // otherwise we optmize output generation: delay formatting a specific
+            // element until we deal with another element; this way strings that belong
+            // to the same element are formatted using only one tag: e.g.,
+            // <comment>/* mycomment */</comment>
+            // instead of
+            // <comment>/*</comment><comment>mycomment</comment><comment>*/</comment>
+            if (elem != currentElement) {
+                if (currentElement.size())
+                    flush();
+            }
+            
+            currentElement = elem;
+            currentElementBuffer << s;
+        }
+    }
 }
 
 
