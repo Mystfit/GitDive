@@ -19,7 +19,6 @@ public:
     virtual ~SyntaxColourListener();
     
     virtual void notify(const srchilite::HighlightEvent &event);
-}
 
 private:
 };
