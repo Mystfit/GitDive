@@ -316,7 +316,8 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
 //    boost::shared_ptr< SyntaxColourListener > colourListener(new SyntaxColourListener());
 //    highlighter.addListener(colourListener.get());
 
-    
+    //Iterate over the lines and highlight as we go
+    //The formatter needs to follow along with the current line target at the same time
     vector< boost::shared_ptr<Line> > lines = file.getLines();
     for(int i = 0; i < lines.size(); i++){
         params.start = 0;
@@ -324,7 +325,6 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
         //colourListener->setTargetLine(lines[i]);
         highlighter.highlightParagraph(lines[i]->getStr());
     }
-    //----------------------------------------
 }
 
 string GitFileManager::colourfyFile(GitFile & file){
