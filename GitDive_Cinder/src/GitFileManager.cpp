@@ -293,7 +293,7 @@ void GitFileManager::syntaxParseAllFiles(){
     srchilite::LangMap langMap(DATADIR, "lang.map");
     
     for(int i = 0; i < m_fileList.size(); i++){
-        string lang = langMap.getMappedFileNameFromFileName(file.getFilename());
+        string lang = langMap.getMappedFileNameFromFileName(m_fileList[i]->getFilename());
         if (lang != "") {
             inputLang = lang;
         }
