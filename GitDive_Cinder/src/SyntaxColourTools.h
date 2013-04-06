@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "srchilite/formatter.h"
+#include "srchilite/formattermanager.h"
 #include "srchilite/formatterparams.h"
 #include "srchilite/highlighteventlistener.h"
 #include "srchilite/highlightevent.h"
