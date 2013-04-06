@@ -287,45 +287,7 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     return fileText.str();
 }
 
-void GitFileManager::syntaxParseFile(GitFile &file ){
-    
-    //Detect file language
-    string inputLang = "cpp.lang";
-    srchilite::LangMap langMap(DATADIR, "lang.map");
-    
-    string lang = langMap.getMappedFileNameFromFileName(file.getFilename());
-    if (lang != "") {
-        inputLang = lang;
-    }
-    
-    //Set up highlighter based on language
-    srchilite::RegexRuleFactory ruleFactory;
-    srchilite::LangDefManager langDefManager(&ruleFactory);
-    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, inputLang));
-    
-    //Set up formatters to modify our lines
-    boost::shared_ptr<LineFormatter> passthroughLineFormatter(new LineFormatter("", boost::shared_ptr<Line>()));
-    boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(passthroughLineFormatter));
-    highlighter.setFormatterManager(formatterManager.get());
-    
-    //Set up params to hold the element position from the start of the line
-    srchilite::FormatterParams params;
-    highlighter.setFormatterParams(&params);
-    
-//    //Set up listener to modify the output - handled in the formatter now
-//    boost::shared_ptr< SyntaxColourListener > colourListener(new SyntaxColourListener());
-//    highlighter.addListener(colourListener.get());
 
-    //Iterate over the lines and highlight as we go
-    //The formatter needs to follow along with the current line target at the same time
-    vector< boost::shared_ptr<Line> > lines = file.getLines();
-    for(int i = 0; i < lines.size(); i++){
-        params.start = 0;
-        formatterManager->setTargetLine(lines[i]);
-        //colourListener->setTargetLine(lines[i]);
-        highlighter.highlightParagraph(lines[i]->getStr());
-    }
-}
 
 string GitFileManager::colourfyFile(GitFile & file){
     
