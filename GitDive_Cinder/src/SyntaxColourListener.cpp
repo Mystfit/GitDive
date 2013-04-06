@@ -7,3 +7,7 @@
 //
 
 #include "SyntaxColourListener.h"
+
+SyntaxColourListener::SyntaxColourListener(){
+    
+}
