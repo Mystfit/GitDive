@@ -287,39 +287,30 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     return fileText.str();
 }
 
-void GitFileManager::syntaxParseFile(GitFile &file ){    
+void GitFileManager::syntaxParseFile(GitFile &file ){
+    
+    //Detect file language
     string inputLang = "cpp.lang";
     srchilite::LangMap langMap(DATADIR, "lang.map");
     
     string lang = langMap.getMappedFileNameFromFileName(file.getFilename());
     if (lang != "") {
         inputLang = lang;
-    } // otherwise we default to C++
-
-    //-------------------------------------
+    }
+    
+    //Set up highlighter based on language
     srchilite::RegexRuleFactory ruleFactory;
     srchilite::LangDefManager langDefManager(&ruleFactory);
-    
-    // we highlight C++ code for simplicity
     srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, inputLang));
     
+    //Set up formatters to modify our lines
     boost::shared_ptr<LineFormatter> passthroughLineFormatter(new LineFormatter("", boost::shared_ptr<Line>()));
     boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(passthroughLineFormatter));
     highlighter.setFormatterManager(formatterManager.get());
-    highlighter.getFormatterManager()->getFormatter("normal");
-
-//    InfoFormatterPtr keywordFormatter(new InfoFormatter("keyword"));
-//    formatterManager.addFormatter("keyword", keywordFormatter);
-//    formatterManager.addFormatter("string", InfoFormatterPtr(new InfoFormatter("string")));
-//    // for "type" we use the same formatter as for "keyword"
-//    formatterManager.addFormatter("type", keywordFormatter);
-//    formatterManager.addFormatter("comment", InfoFormatterPtr(new InfoFormatter("comment")));
-//    formatterManager.addFormatter("symbol", InfoFormatterPtr(new InfoFormatter("symbol")));
-//    formatterManager.addFormatter("number", InfoFormatterPtr(new InfoFormatter("number")));
-//    formatterManager.addFormatter("preproc", InfoFormatterPtr(new InfoFormatter("preproc")));
     
-    boost::shared_ptr< SyntaxColourListener > colourListener(new SyntaxColourListener());
-    highlighter.addListener(colourListener.get());
+    //Set up listener to modify the output - handled in the formatter now
+//    boost::shared_ptr< SyntaxColourListener > colourListener(new SyntaxColourListener());
+//    highlighter.addListener(colourListener.get());
 
     // make sure it uses additional information
     srchilite::FormatterParams params;
@@ -328,7 +319,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     for(int i = 0; i < lines.size(); i++){
         params.start = 0;
         formatterManager->setTargetLine(lines[i]);
-        colourListener->setTargetLine(lines[i]);
+        //colourListener->setTargetLine(lines[i]);
         highlighter.highlightParagraph(lines[i]->getStr());
     }
     //----------------------------------------
