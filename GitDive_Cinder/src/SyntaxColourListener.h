@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "srchilite/highlighteventlistener.h"
+#include "srchilite/highlightevent.h"
 #include "GitDataTypes.h"
 
 class SyntaxColourListener : public srchilite::HighlightEventListener{
