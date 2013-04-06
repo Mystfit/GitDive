@@ -145,7 +145,7 @@ vector< boost::shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffB
                 //Strip out diff newline warnings since they don't count as line numbers
                 if(starts_with(line, "\\ No newline at end of file")) continue;
                 
-                //REplace tabs with 4 spaces so they count as individual characters for the syntax highlighter
+                //Replace tabs with 4 spaces so they count as individual characters for the syntax highlighter
                 boost::replace_all(line, "\t", "    ");
                 Line cLine(line);
                     
