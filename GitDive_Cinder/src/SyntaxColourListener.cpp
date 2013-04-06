@@ -19,7 +19,6 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
     switch (event.type) {
         case HighlightEvent::FORMAT:
             // print information about the rule
-            //event.token.rule;
             if (event.token.rule) {
                 cout << event.token.rule->getAdditionalInfo() << endl;
                 cout << "expression: \"" << event.token.rule->toString() << "\""
@@ -32,7 +31,6 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
                 cout << "formatting \"" << it->second << "\" as " << it->first
                 << endl;
             }
-            step();
             break;
         case HighlightEvent::FORMATDEFAULT:
             cout << "formatting \"" << event.token.matched.front().second
