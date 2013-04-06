@@ -52,14 +52,30 @@ public:
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
     
     //File display
+    //------------
+    
+    //Dumps the final file output to a text file
     void dumpFileOutput(string path);
+    
+    //Save all files at once
     void dumpAllFiles(string path);
+    
+    //Saves the file to the disk in its original format
     void saveFileToDisk(boost::shared_ptr<GitFile> file, string path);
+    
+    //Converts all files to strings
     string serializeAllFiles();
+    
+    //Converts a single file to a string
     string serializeFile(boost::shared_ptr<GitFile> file);
+    
+    //Converts file to a coloured string
     string colourfyFile(GitFile & file);
     
+    //Runs all files through the syntax highlighter to seperate lines into language elements
     void syntaxParseAllFiles(){ for(int i = 0; i < m_fileList.size(); i++) syntaxParseFile(*(m_fileList[i])); };
+    
+    //Gets syntax from a single file
     void syntaxParseFile(GitFile &file );
     
 private:
