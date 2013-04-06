@@ -49,7 +49,7 @@ public:
     virtual FormatterPtr getFormatter(const std::string &elem) const;
 private:
     mutable FormatterMap formatterMap;
-    FormatterPtr defaultFormatter;
+    FormatterPtr defaultFormatter;  
 };
 
 
@@ -61,7 +61,7 @@ public:
     LineFormatter(const std::string &elem_ = "normal") : elem(elem_) {}
     void setTargetLine(boost::shared_ptr<Line> line){m_targetLine = line; };
     void setNextElemType(string & elem_){ elem = elem_; };
-    virtual void format(const std::string &s, const srchilite::FormatterParams *params = 0);
+    overide void format(const std::string &s, const srchilite::FormatterParams *params = 0);
 private:
     boost::shared_ptr<Line> m_targetLine;
     std::string elem;
