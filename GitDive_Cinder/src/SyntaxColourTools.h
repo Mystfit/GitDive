@@ -53,7 +53,6 @@ public:
 private:
     mutable FormatterMap formatterMap;
     FormatterPtr defaultFormatter;
-    boost::shared_ptr<Line> m_targetLine;
 };
 
 
