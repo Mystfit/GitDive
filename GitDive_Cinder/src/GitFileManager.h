@@ -36,12 +36,17 @@ public:
     GitFileManager();
     
     //File addition/retrieval
+    //-----------------------
     void updateFilesFromCommit(Commit &commit);
     void addFile(boost::shared_ptr<GitFile> file){ m_fileList.push_back(file); };
     boost::shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
     boost::shared_ptr<GitFile> getFileByName(string fileName);
     
+    
+    
     //Commit traversal
+    //----------------
+    
     vector<Commit> & getCommitSource(){ return m_commitList; };
     void setCommitSource(vector<Commit> commitList){ m_commitList = commitList; };
     int getCommitIndex(){ return m_commitIndex; };
@@ -49,7 +54,6 @@ public:
     
     //Moves forward through the commit list and applies diffs to all files
     bool applyNextCommit();
-
     
     
     
