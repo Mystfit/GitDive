@@ -35,7 +35,6 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
         case HighlightEvent::FORMATDEFAULT:
             cout << "formatting \"" << event.token.matched.front().second
             << "\" as default" << endl;
-            step();
             break;
         case HighlightEvent::ENTERSTATE:
             cout << "entering state: " << event.token.rule->getNextState()->getId()
