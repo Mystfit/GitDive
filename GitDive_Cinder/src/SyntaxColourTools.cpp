@@ -88,16 +88,7 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
 }
 
 
-void LineFormatter::syntaxParseFile(string lang, vector<boost::shared_ptr<Line> lines){
-    
-    //Detect file language
-    string inputLang = "cpp.lang";
-    srchilite::LangMap langMap(DATADIR, "lang.map");
-    
-    string lang = langMap.getMappedFileNameFromFileName(file.getFilename());
-    if (lang != "") {
-        inputLang = lang;
-    }
+void LineFormatter::syntaxParseLines(string lang, vector<boost::shared_ptr<Line> lines){
     
     //Set up highlighter based on language
     srchilite::RegexRuleFactory ruleFactory;
