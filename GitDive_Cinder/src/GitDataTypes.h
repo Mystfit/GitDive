@@ -32,6 +32,8 @@ public:
     int getLinePos(){ return m_linePos; };
     void setLinePos(int linePos){ m_linePos = linePos; };
     
+    void addLineElement()
+    
     enum lineState{LINE_NORMAL = 0, LINE_ADDED, LINE_DELETED};
     int getLineState(){ return m_lineState; };
     string getLineStateSymbol(){
