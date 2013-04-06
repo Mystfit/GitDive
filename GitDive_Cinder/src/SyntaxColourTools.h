@@ -10,6 +10,7 @@
 #define __GitDive_Cinder__SyntaxColourListener__
 
 #include <iostream>
+#include "srchilite/formatter.h"
 #include "srchilite/formatterparams.h"
 #include "srchilite/highlighteventlistener.h"
 #include "srchilite/highlightevent.h"
