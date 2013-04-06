@@ -84,8 +84,5 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     if(elem.empty()) elem = "normal";
     
     m_targetLine->addLineElement(LineElement(elem, s, params->start));
-    std::cout << "Adding " << elem << " to line|" << s;
-    if (params)
-        std::cout << ", start: " << params->start;
-    std::cout << std::endl;
+    if (params) std::cout << "Adding " << elem << " to line at pos " << params->start << "|" << s << endl;
 }
