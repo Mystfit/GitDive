@@ -41,6 +41,9 @@ class ElemFormatManager : public srchilite::FormatterManager
 {
 public:
     virtual FormatterPtr getFormatter(const std::string &elem) const;
+private:
+    mutable FormatterMap formatterMap;
+    FormatterPtr defaultFormatter;
 };
 
 
