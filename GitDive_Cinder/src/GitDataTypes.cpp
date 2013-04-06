@@ -29,6 +29,11 @@ Line::Line(string lineStr, bool justUpdated){
 
 }
 
+void addLineElement(string elem, string str, int pos){
+    
+}
+
+
 
 void Line::markForRemoval(){
     //Update visuals here. Break apart line into component parts
