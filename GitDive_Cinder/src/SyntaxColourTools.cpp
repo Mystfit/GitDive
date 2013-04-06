@@ -56,7 +56,7 @@ FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
     
     
     if (!formatterMap[elem].get()) {
-        formatterMap[elem] = boost::shared_ptr<InfoFormatter>(new InfoFormatter(elem));
+        formatterMap[elem] = boost::shared_ptr<LineFormatter>(new InfoFormatter(elem));
     }
             
     return formatterMap[elem];
@@ -65,7 +65,7 @@ FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
 
 
 
-void InfoFormatter::format(const std::string &s, const srchilite::FormatterParams *params) {
+void LineFormatter::format(const std::string &s, const srchilite::FormatterParams *params) {
     m_targetLine->addLineElement(LineElement(elem, s, params->start));
     std::cout << "Adding " << elem << " to line: " << s;
     if (params)
