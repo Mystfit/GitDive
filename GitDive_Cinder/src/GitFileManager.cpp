@@ -317,7 +317,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     // make sure it uses additional information
     srchilite::FormatterParams params;
     highlighter.setFormatterParams(&params);
-    vector< boost::shared_ptr<Line> > lines;
+    vector< boost::shared_ptr<Line> > lines = file.getLines();
     for(int i = 0; i < file.getLines().size(); i++){
         params.start = 0;
         
