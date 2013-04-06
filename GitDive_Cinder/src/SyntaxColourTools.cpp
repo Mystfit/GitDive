@@ -67,18 +67,20 @@ LineFormatterManager::LineFormatterManager(FormatterPtr _defaultFormatter) : For
 {
 }
 
+LineFormatterManager::updateTargetLine(boost::shared_ptr<Line> target){
+    
+    
+    boost::shared_ptr<LineFormatter> formatter = boost::dynamic_pointer_cast<LineFormatter>(formatterMap[elem]);
+    formatter->setTargetLine(m_targetLine);
+    
+}
+
 
 FormatterPtr LineFormatterManager::getFormatter(const std::string &elem) const{
-    
-    //Update the line pointer
-    
     if (!formatterMap[elem].get()) {
         formatterMap[elem] = boost::shared_ptr<LineFormatter>(new LineFormatter(elem));
-        
-        boost::shared_ptr<LineFormatter> formatter = boost::dynamic_pointer_cast<LineFormatter>(formatterMap[elem]);
-        formatter->setTargetLine(m_targetLine);
     }
-            
+    
     return formatterMap[elem];
 }
 
