@@ -147,6 +147,8 @@ vector< boost::shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffB
                 
                 //Replace tabs with 4 spaces so they count as individual characters for the syntax highlighter
                 boost::replace_all(line, "\t", "    ");
+                
+                //Create the new line object
                 Line cLine(line);
                     
                 //If the line is to be removed, stick with the old line position
