@@ -93,7 +93,7 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     //Set up highlighter based on language
     srchilite::RegexRuleFactory ruleFactory;
     srchilite::LangDefManager langDefManager(&ruleFactory);
-    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, inputLang));
+    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, lang));
     
     //Set up formatters to modify our lines
     boost::shared_ptr<LineFormatter> passthroughLineFormatter(new LineFormatter("", boost::shared_ptr<Line>()));
