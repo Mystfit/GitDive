@@ -89,7 +89,7 @@ FormatterPtr LineFormatterManager::getFormatter(const std::string &elem) const{
 
 void LineFormatter::format(const std::string &s, const srchilite::FormatterParams *params) {
     
-    if(!elem.size()) elem = "normal";
+    if(elem.empty()) elem = "normal";
     
     m_targetLine->addLineElement(LineElement(elem, s, params->start));
     std::cout << "Adding " << elem << " to line: " << s;
