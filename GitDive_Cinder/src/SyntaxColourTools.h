@@ -47,6 +47,7 @@ public:
     LineFormatterManager(FormatterPtr _defaultFormatter);
     //Overriden accessor for getting a formatter creates a generic line formatter
     FormatterPtr getFormatter(const std::string &elem) const;
+    v
 private:
     mutable FormatterMap formatterMap;
     FormatterPtr defaultFormatter;  
