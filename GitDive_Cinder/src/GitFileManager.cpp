@@ -292,11 +292,10 @@ void GitFileManager::syntaxParseAllFiles(){
     string inputLang = "cpp.lang";
     srchilite::LangMap langMap(DATADIR, "lang.map");
     
-    for(int i = 0; i < m_fileList.size(); i++){
-        string lang = langMap.getMappedFileNameFromFileName(m_fileList[i]->getFilename());
-        if (lang != "") {
-            inputLang = lang;
-        }
+    for(vector< boost::shared_ptr<GitFile> >::iterator it = m_fileList.begin(); it != m_fileList.end(); ++it){
+        string lang = langMap.getMappedFileNameFromFileName(it->getFilename());
+        if (lang == "") lang = inputLang;
+            
         LineFormatter::syntaxParseLines(m_fileList[i]->getLines(), lang);
     }
 }
