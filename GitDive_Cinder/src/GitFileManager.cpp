@@ -301,13 +301,12 @@ string GitFileManager::colourfyFile(GitFile & file){
     srchilite::LangMap langMap(DATADIR, "lang.map");
     
     
-    
+    //-------------------------------------
     srchilite::RegexRuleFactory ruleFactory;
     srchilite::LangDefManager langDefManager(&ruleFactory);
     
     // we highlight C++ code for simplicity
-    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(
-                                                                              DATADIR, "cpp.lang"));
+    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(                                                                              DATADIR, "cpp.lang"));
     
     srchilite::FormatterManager formatterManager(InfoFormatterPtr(
                                                                   new InfoFormatter));
@@ -331,6 +330,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     // make sure it uses additional information
     srchilite::FormatterParams params;
     highlighter.setFormatterParams(&params);
+    //----------------------------------------
 
     
     
