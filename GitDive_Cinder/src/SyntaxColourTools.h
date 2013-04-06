@@ -47,10 +47,11 @@ public:
     LineFormatterManager(FormatterPtr _defaultFormatter);
     //Overriden accessor for getting a formatter creates a generic line formatter
     FormatterPtr getFormatter(const std::string &elem) const;
-    v
+    void setTargetLine(boost::shared_ptr<Line> line){m_targetLine = line; };
 private:
     mutable FormatterMap formatterMap;
-    FormatterPtr defaultFormatter;  
+    FormatterPtr defaultFormatter;
+    boost::shared_ptr<Line> m_targetLine;
 };
 
 
