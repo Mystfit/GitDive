@@ -52,7 +52,7 @@ private:
 class LineFormatter: public srchilite::Formatter
 {    
 public:
-    InfoFormatter(const std::string &elem_ = "normal") : elem(elem_) {}
+    LineFormatter(const std::string &elem_ = "normal") : elem(elem_) {}
     void setTargetLine(boost::shared_ptr<Line> line){m_targetLine = line; };
     void setNextElemType(string & elem_){ elem = elem_; };
     virtual void format(const std::string &s, const srchilite::FormatterParams *params = 0);
@@ -62,6 +62,6 @@ private:
 };
 
 /// shared pointer for InfoFormatter
-typedef boost::shared_ptr<InfoFormatter> InfoFormatterPtr;
+typedef boost::shared_ptr<LineFormatter> LineFormatterPtr;
 
 #endif /* defined(__GitDive_Cinder__SyntaxColourListener__) */
