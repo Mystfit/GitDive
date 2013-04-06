@@ -63,7 +63,7 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
 }
 
 
-ElemFormatManager::ElemFormatManager(FormatterPtr _defaultFormatter) : FormatterManager(_defaultFormatter)
+LineFormatterManager::LineFormatterManager(FormatterPtr _defaultFormatter) : FormatterManager(_defaultFormatter)
 {
 }
 
