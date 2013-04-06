@@ -23,8 +23,11 @@
 using namespace srchilite;
 
 //Extended base highlighter class
-class LineHighlighter : public srchilite::SourceHighlighter {
+class LineHighlighter : public srchilite::SourceHighlighter {\
+public:
     virtual void format(const std::string &elem, const std::string &s);
+private:
+    FormatterManager formatterManager;
 };
 
 // SyntaxListener that triggers each time the syntax highlighter fires off an event
