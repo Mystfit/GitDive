@@ -78,7 +78,7 @@ public:
     virtual void format(const std::string &elem, const std::string &s);
     void setElemFormatterManager(boost::shared_ptr<ElemFormatManager> manager){  };
 private:
-    ElemFormatManager formatterManager;
+    boost::shared_ptr<ElemFormatManager> formatterManager;
 };
 
 
