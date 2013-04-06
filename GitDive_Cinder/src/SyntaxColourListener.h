@@ -11,4 +11,6 @@
 
 #include <iostream>
 
+class SyntaxListener
+
 #endif /* defined(__GitDive_Cinder__SyntaxColourListener__) */
