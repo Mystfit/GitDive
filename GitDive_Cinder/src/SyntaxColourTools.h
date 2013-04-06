@@ -48,8 +48,8 @@ public:
     //Overriden accessor for getting a formatter creates a generic line formatter
     virtual FormatterPtr getFormatter(const std::string &elem) const;
 private:
-    mutable FormatterMap formatterMap;
-    FormatterPtr defaultFormatter;
+    mutable FormatterMap m_formatterMap;
+    FormatterPtr m_defaultFormatter;
 };
 
 
