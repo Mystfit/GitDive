@@ -289,9 +289,6 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
 }
 
 void GitFileManager::syntaxParseAllFiles(){
-    //Detect file language
-    string inputLang = "cpp.lang";
-    srchilite::LangMap langMap(DATADIR, "lang.map");
     
     for(vector< boost::shared_ptr<GitFile> >::iterator it = m_fileList.begin(); it != m_fileList.end(); ++it){
         string lang = langMap.getMappedFileNameFromFileName(it->get()->getFilename());
