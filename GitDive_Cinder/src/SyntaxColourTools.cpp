@@ -8,6 +8,11 @@
 
 #include "SyntaxColourTools.h"
 
+void SourceHighlighter::format(const std::string &elem, const std::string &s) {
+    
+}
+
+
 SyntaxColourListener::SyntaxColourListener(){
 }
 
