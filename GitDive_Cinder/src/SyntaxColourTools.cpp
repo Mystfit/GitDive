@@ -8,7 +8,10 @@
 
 #include "SyntaxColourTools.h"
 
-void SourceHighlighter::format(const std::string &elem, const std::string &s) {
+
+LineHighlighter(HighlightStatePtr mainState);
+
+void LineHighLighter::format(const std::string &elem, const std::string &s) {
     formatterManager->getFormatter(elem);
     SourceHighlighter::format(elem, s);
 }
