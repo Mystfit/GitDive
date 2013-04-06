@@ -75,7 +75,7 @@ private:
 //Extended base highlighter class
 class LineHighlighter : public srchilite::SourceHighlighter {
 public:
-    LineHighlighter(HighlightStatePtr );
+    LineHighlighter(HighlightStatePtr mainState);
     virtual void format(const std::string &elem, const std::string &s);
     void setElemFormatterManager(boost::shared_ptr<ElemFormatManager> manager){ formatterManager = manager; };
 private:
