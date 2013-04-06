@@ -29,10 +29,6 @@ Line::Line(string lineStr, bool justUpdated){
 
 }
 
-void addLineElement(string elem, string str, int pos){
-    
-}
-
 
 
 void Line::markForRemoval(){
