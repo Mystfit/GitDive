@@ -304,7 +304,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, inputLang));
     
     boost::shared_ptr<LineFormatter> passthroughLineFormatter(new LineFormatter);
-    boost::shared_ptr<ElemFormatManager> formatterManager(new ElemFormatManager(passthroughLineFormatter));
+    boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(passthroughLineFormatter));
     highlighter.setFormatterManager(formatterManager.get());
     highlighter.getFormatterManager()->getFormatter("normal");
 
