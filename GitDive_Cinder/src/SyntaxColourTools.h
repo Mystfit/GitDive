@@ -19,7 +19,9 @@
 
 using namespace srchilite;
 
-class SyntaxColourListener : public srchilite::HighlightEventListener{
+// SyntaxListener that triggers each time the syntax highlighter fires off an event
+class SyntaxColourListener : public srchilite::HighlightEventListener
+{
 public:
     SyntaxColourListener();
     virtual ~SyntaxColourListener();
@@ -33,9 +35,9 @@ private:
 
 
 
-
-class InfoFormatter: public srchilite::Formatter {
-    
+//Passthrough infoformatter that dumps the seperated elements into the current line
+class InfoFormatter: public srchilite::Formatter
+{    
 public:
     InfoFormatter(const std::string &elem_ = "normal") : elem(elem_) {}
     void setLine(boost::shared_ptr<Line> line){m_targetLine = line; };
@@ -43,7 +45,6 @@ public:
 private:
     boost::shared_ptr<Line> m_targetLine;
     std::string elem;
-
 };
 
 /// shared pointer for InfoFormatter
