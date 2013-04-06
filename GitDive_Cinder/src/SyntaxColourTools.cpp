@@ -70,9 +70,10 @@ LineFormatterManager::LineFormatterManager(FormatterPtr _defaultFormatter) : For
 
 void LineFormatterManager::updateTargetLine(boost::shared_ptr<Line> target){
     m_targetLine = target;
+    
     for(FormatterMap::iterator it = formatterMap.begin(); it != formatterMap.end(); ++it){
         boost::shared_ptr<LineFormatter> formatter = boost::dynamic_pointer_cast<LineFormatter>(it->second);
-        formatter->setTargetLine(target);
+        formatter->setTargetLine(m_targetLine);
     }
 }
 
