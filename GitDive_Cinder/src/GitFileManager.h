@@ -81,6 +81,8 @@ public:
     elem(elem_) {
     }
     
+    void setLine->SyntaxColourListener
+    
     virtual void format(const std::string &s,
                         const srchilite::FormatterParams *params = 0) {
         // do not print anything if normal or string to format is empty
