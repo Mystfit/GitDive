@@ -143,7 +143,7 @@ vector< boost::shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffB
             if(!inDiffHeader){
                 
                 if(starts_with(line, "\\ No newline at end of file")) continue;
-                line.Replace
+                boost::replace
                 Line cLine(line);
                     
                 //If the line is to be removed, stick with the old line position
