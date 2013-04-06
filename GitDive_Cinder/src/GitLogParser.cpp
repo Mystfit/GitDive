@@ -142,8 +142,11 @@ vector< boost::shared_ptr<Diff> > GitLogParser::parseCommit(vector<string> diffB
         else {
             if(!inDiffHeader){
                 
+                //Strip out diff newline warnings since they don't count as line numbers
                 if(starts_with(line, "\\ No newline at end of file")) continue;
-                boost::replace_all(line, "\t", "    ")
+                
+                //REplace tabs with 4 spaces so they count as individual characters for the syntax highlighter
+                boost::replace_all(line, "\t", "    ");
                 Line cLine(line);
                     
                 //If the line is to be removed, stick with the old line position
