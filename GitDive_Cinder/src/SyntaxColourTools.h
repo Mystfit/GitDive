@@ -22,6 +22,8 @@
 #include "srchilite/highlightevent.h"
 #include "srchilite/highlighttoken.h"
 #include "srchilite/highlightrule.h"
+#include "srchilite/langdefmanager.h"
+#include "srchilite/regexrulefactory.h"
 #include "GitDataTypes.h"
 
 using namespace srchilite;
