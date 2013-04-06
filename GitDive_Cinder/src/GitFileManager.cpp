@@ -287,28 +287,33 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     return fileText.str();
 }
 
-void GitFileManager::syntaxParseFile(GitFile &file ){
+void GitFileManager::syntaxParseFile(GitFile &file ){    
+    string inputLang = "cpp.lang";
+    srchilite::LangMap langMap(DATADIR, "lang.map");
+    
+    string lang = langMap.getMappedFileNameFromFileName(file.getFilename());
+    if (lang != "") {
+        inputLang = lang;
+    } // otherwise we default to C++
+
     //-------------------------------------
     srchilite::RegexRuleFactory ruleFactory;
     srchilite::LangDefManager langDefManager(&ruleFactory);
     
     // we highlight C++ code for simplicity
-    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(                                                                              DATADIR, "cpp.lang"));
+    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(                                                                              DATADIR, inputLang));
     
-    srchilite::FormatterManager formatterManager(InfoFormatterPtr(
-                                                                  new InfoFormatter));
-    InfoFormatterPtr keywordFormatter(new InfoFormatter("keyword"));
-    
-    formatterManager.addFormatter("keyword", keywordFormatter);
-    formatterManager.addFormatter("string", InfoFormatterPtr(new InfoFormatter(
-                                                                               "string")));
-    // for "type" we use the same formatter as for "keyword"
-    formatterManager.addFormatter("type", keywordFormatter);
-    formatterManager.addFormatter("comment", InfoFormatterPtr(new InfoFormatter("comment")));
-    formatterManager.addFormatter("symbol", InfoFormatterPtr(new InfoFormatter("symbol")));
-    formatterManager.addFormatter("number", InfoFormatterPtr(new InfoFormatter("number")));
-    formatterManager.addFormatter("preproc", InfoFormatterPtr(new InfoFormatter("preproc")));
-    highlighter.setFormatterManager(&formatterManager);
+//    srchilite::FormatterManager formatterManager(InfoFormatterPtr(new InfoFormatter));
+//    InfoFormatterPtr keywordFormatter(new InfoFormatter("keyword"));
+//    formatterManager.addFormatter("keyword", keywordFormatter);
+//    formatterManager.addFormatter("string", InfoFormatterPtr(new InfoFormatter("string")));
+//    // for "type" we use the same formatter as for "keyword"
+//    formatterManager.addFormatter("type", keywordFormatter);
+//    formatterManager.addFormatter("comment", InfoFormatterPtr(new InfoFormatter("comment")));
+//    formatterManager.addFormatter("symbol", InfoFormatterPtr(new InfoFormatter("symbol")));
+//    formatterManager.addFormatter("number", InfoFormatterPtr(new InfoFormatter("number")));
+//    formatterManager.addFormatter("preproc", InfoFormatterPtr(new InfoFormatter("preproc")));
+//    highlighter.setFormatterManager(&formatterManager);
     
     boost::shared_ptr< SyntaxColourListener > colourListener(new SyntaxColourListener());
     highlighter.addListener(colourListener.get());
