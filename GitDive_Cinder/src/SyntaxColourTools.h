@@ -10,6 +10,7 @@
 #define __GitDive_Cinder__SyntaxColourListener__
 
 #include <iostream>
+#include "srchilite/sourcehighlighter.h;
 #include "srchilite/formatter.h"
 #include "srchilite/formattermanager.h"
 #include "srchilite/formatterparams.h"
@@ -20,6 +21,9 @@
 #include "GitDataTypes.h"
 
 using namespace srchilite;
+
+//Extended base highlighter class
+class LineHighlighter : public srchilite::SourceHighlighter
 
 // SyntaxListener that triggers each time the syntax highlighter fires off an event
 class SyntaxColourListener : public srchilite::HighlightEventListener
