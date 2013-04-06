@@ -15,7 +15,7 @@
 
 class SyntaxColourListener : public srchilite::HighlightEventListener{
 public:
-    SyntaxColourListener(std::ostream &_os = std::cout);
+    SyntaxColourListener();
     virtual ~SyntaxColourListener();
     virtual void notify(const srchilite::HighlightEvent &event);
     void setTargetLine(boost::shared_ptr<Line> target){m_targetLine = target; };
