@@ -62,7 +62,7 @@ private:
 class LineFormatter: public srchilite::Formatter
 {    
 public:
-    LineFormatter(const std::string &elem_ = "normal", boost::shared_ptr<Line> line) : elem(elem_), m_targetLine(line) {}
+    LineFormatter(const std::string &elem_, boost::shared_ptr<Line> line) : elem(elem_), m_targetLine(line) {}
     void setTargetLine(boost::shared_ptr<Line> line){m_targetLine = line; };
     void format(const std::string &s, const srchilite::FormatterParams *params = 0);
 private:
