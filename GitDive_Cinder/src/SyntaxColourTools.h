@@ -39,7 +39,7 @@ private:
 class ElemFormatManager : public srchilite::FormatterManager
 {
 public:
-    virtual void notify(const srchilite::HighlightEvent &event);
+    virtual FormatterPtr getFormatter(const std::string &elem) const;
 };
 
 
