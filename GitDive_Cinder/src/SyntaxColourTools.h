@@ -76,6 +76,7 @@ private:
 class LineHighlighter : public srchilite::SourceHighlighter {\
 public:
     virtual void format(const std::string &elem, const std::string &s);
+    void setElemFormatterManager(boost::shared_ptr<ElemFormatManager> manager){ formatterManager = manager; };
 private:
     ElemFormatManager formatterManager;
 };
