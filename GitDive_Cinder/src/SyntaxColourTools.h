@@ -80,6 +80,9 @@ private:
     ElemFormatManager formatterManager;
 };
 
+
+
+
 /// shared pointer for InfoFormatter
 typedef boost::shared_ptr<LineFormatter> LineFormatterPtr;
 
