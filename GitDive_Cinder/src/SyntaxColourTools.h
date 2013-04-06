@@ -23,7 +23,9 @@
 using namespace srchilite;
 
 //Extended base highlighter class
-class LineHighlighter : public srchilite::SourceHighlighter
+class LineHighlighter : public srchilite::SourceHighlighter {
+    
+};
 
 // SyntaxListener that triggers each time the syntax highlighter fires off an event
 class SyntaxColourListener : public srchilite::HighlightEventListener
