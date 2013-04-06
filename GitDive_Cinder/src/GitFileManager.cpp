@@ -298,10 +298,7 @@ void GitFileManager::syntaxParseAllFiles(){
             inputLang = lang;
         }
         syntaxParseLines(m_fileList[i]->getLines(), lang);
-
     }
-    
-
 }
 
 string GitFileManager::colourfyFile(GitFile & file){
