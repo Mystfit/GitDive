@@ -15,6 +15,14 @@
 
 class SyntaxColourListener : public srchilite::HighlightEventListener{
 public:
+    SyntaxColourListener(std::ostream &_os = std::cout);
+    virtual ~SyntaxColourListener();
+    
+    virtual void notify(const HighlightEvent &event);
+    
+    void setInteractive(bool i = true) {
+        interactive = i;
+    }
     
 private:
 };
