@@ -15,8 +15,13 @@
 
 #include <fstream>
 #include <sstream>
+
+
+#include "srchilite/formatter.h"
+#include "srchilite/formatterparams.h"
 #include "srchilite/sourcehighlight.h"
 #include "srchilite/langmap.h"
+
 #include "GitDataTypes.h"
 
 using namespace std;
