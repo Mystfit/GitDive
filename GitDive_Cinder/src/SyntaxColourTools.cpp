@@ -68,7 +68,7 @@ LineFormatterManager::LineFormatterManager(FormatterPtr _defaultFormatter) : For
 }
 
 
-void LineFormatterManager::updateTargetLine(boost::shared_ptr<Line> target){
+void LineFormatterManager::setTargetLine(boost::shared_ptr<Line> target){
     m_targetLine = target;
     
     for(FormatterMap::iterator it = formatterMap.begin(); it != formatterMap.end(); ++it){
