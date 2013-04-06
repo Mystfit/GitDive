@@ -12,6 +12,7 @@
 #include <iostream>
 #include "srchilite/highlighteventlistener.h"
 #include "srchilite/highlightevent.h"
+#include "srchilite/highlighttoken.h"
 #include "GitDataTypes.h"
 
 using namespace srchilite;
