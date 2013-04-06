@@ -44,9 +44,12 @@ public:
     //Commit traversal
     vector<Commit> & getCommitSource(){ return m_commitList; };
     void setCommitSource(vector<Commit> commitList){ m_commitList = commitList; };
-    bool applyNextCommit();
     int getCommitIndex(){ return m_commitIndex; };
     void resetCommitIndex(){ m_commitIndex = 0; };
+    
+    //Moves forward through the commit list and applies diffs to all files
+    bool applyNextCommit();
+
     
     
     
