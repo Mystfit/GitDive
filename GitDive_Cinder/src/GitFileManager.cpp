@@ -303,7 +303,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     // we highlight C++ code for simplicity
     srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(                                                                              DATADIR, inputLang));
     
-      srchilite::FormatterManager formatterManager(InfoFormatterPtr(new InfoFormatter));
+//    srchilite::FormatterManager formatterManager(InfoFormatterPtr(new InfoFormatter));
 //    InfoFormatterPtr keywordFormatter(new InfoFormatter("keyword"));
 //    formatterManager.addFormatter("keyword", keywordFormatter);
 //    formatterManager.addFormatter("string", InfoFormatterPtr(new InfoFormatter("string")));
@@ -313,7 +313,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
 //    formatterManager.addFormatter("symbol", InfoFormatterPtr(new InfoFormatter("symbol")));
 //    formatterManager.addFormatter("number", InfoFormatterPtr(new InfoFormatter("number")));
 //    formatterManager.addFormatter("preproc", InfoFormatterPtr(new InfoFormatter("preproc")));
-      highlighter.setFormatterManager(&formatterManager);
+//    highlighter.setFormatterManager(&formatterManager);
     
     boost::shared_ptr< SyntaxColourListener > colourListener(new SyntaxColourListener());
     highlighter.addListener(colourListener.get());
@@ -321,7 +321,6 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     // make sure it uses additional information
     srchilite::FormatterParams params;
     highlighter.setFormatterParams(&params);
-    
     vector< boost::shared_ptr<Line> > lines = file.getLines();
     for(int i = 0; i < lines.size(); i++){
         params.start = 0;
