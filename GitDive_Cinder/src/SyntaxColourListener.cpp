@@ -9,7 +9,6 @@
 #include "SyntaxColourListener.h"
 
 SyntaxColourListener::SyntaxColourListener(){
-    
 }
 
 void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
