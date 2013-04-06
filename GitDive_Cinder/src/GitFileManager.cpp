@@ -320,6 +320,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     vector< boost::shared_ptr<Line> > lines = file.getLines();
     for(int i = 0; i < lines.size(); i++){
         params.start = 0;
+        highlighter.addListener(<#srchilite::HighlightEventListener *listener#>)
         
         highlighter.highlightParagraph(lines[i]->getStr());
     }
