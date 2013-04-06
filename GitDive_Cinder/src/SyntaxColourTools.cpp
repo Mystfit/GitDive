@@ -9,14 +9,14 @@
 #include "SyntaxColourTools.h"
 
 
-LineHighlighter::LineHighlighter(HighlightStatePtr mainState) : mainHighlightState(mainState), currentHighlightState(mainState)
-{
-    
-}
-void LineHighLighter::format(const std::string &elem, const std::string &s) {
-    formatterManager->getFormatter(elem);
-    SourceHighlighter::format(elem, s);
-}
+//LineHighlighter::LineHighlighter(HighlightStatePtr mainState) : mainHighlightState(mainState), currentHighlightState(mainState)
+//{
+//    
+//}
+//void LineHighLighter::format(const std::string &elem, const std::string &s) {
+//    formatterManager->getFormatter(elem);
+//    SourceHighlighter::format(elem, s);
+//}
 
 
 SyntaxColourListener::SyntaxColourListener(){
