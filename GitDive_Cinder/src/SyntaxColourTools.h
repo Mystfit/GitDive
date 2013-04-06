@@ -64,6 +64,7 @@ public:
     void setTargetLine(boost::shared_ptr<Line> line){m_targetLine = line; };
     void format(const std::string &s, const srchilite::FormatterParams *params = 0);
 private:
+    boost::shared_ptr<Line> m_targetLine;
     std::string elem;
 };
 
