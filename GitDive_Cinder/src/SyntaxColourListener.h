@@ -13,7 +13,8 @@
 #include "srchilite/highlighteventlistener.h"
 
 class SyntaxColourListener : public HighlightEventListener{
-    
+public:
+private:
 };
 
 #endif /* defined(__GitDive_Cinder__SyntaxColourListener__) */
