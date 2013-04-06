@@ -50,3 +50,18 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
             break;
     }
 }
+
+
+
+void InfoFormatter::format(const std::string &s,
+                    const srchilite::FormatterParams *params = 0) {
+    // do not print anything if normal or string to format is empty
+    //if (elem != "normal" || !s.size()) {
+    std::cout << elem << ": " << s;
+    if (params)
+        std::cout << ", start: " << params->start;
+    std::cout << std::endl;
+    
+    m_targetLine->addLineElement(LineElement(elem, s, params->start));
+    //}
+}
