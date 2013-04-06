@@ -50,7 +50,7 @@ class InfoFormatter: public srchilite::Formatter
 public:
     InfoFormatter(const std::string &elem_ = "normal") : elem(elem_) {}
     void setTargetLine(boost::shared_ptr<Line> line){m_targetLine = line; };
-    void setNextElemType(string & _elem){ elem = _elem; };
+    void setNextElemType(string & elem_){ elem = _elem; };
     virtual void format(const std::string &s, const srchilite::FormatterParams *params = 0);
 private:
     boost::shared_ptr<Line> m_targetLine;
