@@ -39,13 +39,7 @@ private:
 class ElemFormatManager : public srchilite::FormatterManager
 {
 public:
-    SyntaxColourListener();
-    virtual ~SyntaxColourListener();
     virtual void notify(const srchilite::HighlightEvent &event);
-    void setTargetLine(boost::shared_ptr<Line> target){m_targetLine = target; };
-    
-private:
-    boost::shared_ptr<Line> m_targetLine;
 };
 
 
