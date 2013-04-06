@@ -327,6 +327,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
         params.start = 0;
         colourListener->setTargetLine(lines[i]);
         highlighter.highlightParagraph(lines[i]->getStr());
+        cout << "BING" << params.start << endl;
     }
     //----------------------------------------
 }
