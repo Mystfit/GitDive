@@ -287,7 +287,7 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     return fileText.str();
 }
 
-void GitFileManager::syntaxParseFile(){
+void GitFileManager::syntaxParseFile(GitFile &file ){
     //-------------------------------------
     srchilite::RegexRuleFactory ruleFactory;
     srchilite::LangDefManager langDefManager(&ruleFactory);
@@ -317,6 +317,12 @@ void GitFileManager::syntaxParseFile(){
     // make sure it uses additional information
     srchilite::FormatterParams params;
     highlighter.setFormatterParams(&params);
+    vector< boost::shared_ptr<Line> > lines;
+    for(int i = 0; i < file.getLines().size(); i++){
+        params.start = 0;
+        
+        highlighter.highlightParagraph(line);
+    }
     //----------------------------------------
 }
 
