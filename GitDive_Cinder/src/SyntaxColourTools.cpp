@@ -54,21 +54,17 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
 
 FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
     
-    FormatterPtr formatter = getFormatter(elem);
+//    FormatterPtr formatter = getFormatter(elem);
     
-    formatter->setNextElemType(elem);
-    return formatter;
+    // the formatter for this element is not present
+    if (!formatterMap[elem].get()) {
+        // use the default formatter and store it for future requests
+        formatterMap[elem] = defaultFormatter;
+    }
     
+    formatterMap[elem].setNextElemType(elem);FormatterManager
     
-//    // the formatter for this element is not present
-//    if (!formatterMap[elem].get()) {
-//        // use the default formatter and store it for future requests
-//        formatterMap[elem] = defaultFormatter;
-//    }
-//    
-//    formatterMap[elem].setNextElemType(elem);FormatterManager
-//    
-//    return formatterMap[elem];
+    return formatterMap[elem];
 }
 
 
