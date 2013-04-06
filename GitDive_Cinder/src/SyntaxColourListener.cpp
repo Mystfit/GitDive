@@ -16,10 +16,10 @@ SyntaxColourListener::~SyntaxColourListener(){
 
 void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
     cout << event.type << " on line " << m_targetLine->getStr() << endl;
-    
     switch (event.type) {
         case HighlightEvent::FORMAT:
             // print information about the rule
+            //event.token.rule;
             if (event.token.rule) {
                 cout << event.token.rule->getAdditionalInfo() << endl;
                 cout << "expression: \"" << event.token.rule->toString() << "\""
