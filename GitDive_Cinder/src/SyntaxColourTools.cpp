@@ -6,7 +6,7 @@
 //
 //
 
-#include "SyntaxColourListener.h"
+#include "SyntaxColourTools.h"
 
 SyntaxColourListener::SyntaxColourListener(){
 }
