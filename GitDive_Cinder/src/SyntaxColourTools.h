@@ -39,24 +39,10 @@ class InfoFormatter: public srchilite::Formatter {
     std::string elem;
     
 public:
-    InfoFormatter(const std::string &elem_ = "normal") :
-    elem(elem_) {
-    }
+    InfoFormatter(const std::string &elem_ = "normal") : elem(elem_) {}
     
     void setLine(boost::shared_ptr<Line> line){m_targetLine = line; };
-    
-    virtual void format(const std::string &s,
-                        const srchilite::FormatterParams *params = 0) {
-        // do not print anything if normal or string to format is empty
-        //if (elem != "normal" || !s.size()) {
-        std::cout << elem << ": " << s;
-        if (params)
-            std::cout << ", start: " << params->start;
-        std::cout << std::endl;
-        
-        m_targetLine->addLineElement(LineElement(elem, s, params->start));
-        //}
-    }
+    virtual void format(const std::string &s, const srchilite::FormatterParams *params = 0);    }
 private:
     boost::shared_ptr<Line> m_targetLine;
 };
