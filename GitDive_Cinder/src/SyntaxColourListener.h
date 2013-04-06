@@ -12,7 +12,7 @@
 #include <iostream>
 #include "srchilite/highlighteventlistener.h"
 
-class SyntaxColourListener : public HighlightEventListener{
+class SyntaxColourListener : public srchilite::HighlightEventListener{
 public:
 private:
 };
