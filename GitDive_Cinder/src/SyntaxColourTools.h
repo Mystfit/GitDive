@@ -9,6 +9,10 @@
 #ifndef __GitDive_Cinder__SyntaxColourListener__
 #define __GitDive_Cinder__SyntaxColourListener__
 
+#ifndef DATADIR
+#define DATADIR "/usr/local/share/source-highlight"
+#endif
+
 #include <iostream>
 #include "srchilite/sourcehighlighter.h";
 #include "srchilite/formatter.h"
