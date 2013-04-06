@@ -14,6 +14,7 @@
 
 class SyntaxColourListener : public srchilite::HighlightEventListener{
 public:
+    
 private:
 };
 
