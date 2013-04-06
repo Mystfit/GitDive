@@ -81,7 +81,7 @@ public:
     elem(elem_) {
     }
     
-    void setLine->SyntaxColourListener
+    void setLine(boost::shared_ptr<Line> line){m_targetLine = line; };
     
     virtual void format(const std::string &s,
                         const srchilite::FormatterParams *params = 0) {
