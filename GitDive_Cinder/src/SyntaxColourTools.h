@@ -41,10 +41,10 @@ private:
 
 
 // SyntaxListener that triggers each time the syntax highlighter fires off an event
-class ElemFormatManager : public srchilite::FormatterManager
+class LineFormatterManager : public srchilite::FormatterManager
 {
 public:
-    ElemFormatManager(FormatterPtr _defaultFormatter);
+    LineFormatterManager(FormatterPtr _defaultFormatter);
     //Overriden accessor for getting a formatter creates a generic line formatter
     virtual FormatterPtr getFormatter(const std::string &elem) const;
 private:
