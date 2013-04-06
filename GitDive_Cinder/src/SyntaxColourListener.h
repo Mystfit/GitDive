@@ -17,10 +17,10 @@ class SyntaxColourListener : public srchilite::HighlightEventListener{
 public:
     SyntaxColourListener(std::ostream &_os = std::cout);
     virtual ~SyntaxColourListener();
-    
     virtual void notify(const srchilite::HighlightEvent &event);
 
 private:
+    boost::shared_ptr<Line> m_targetLine;
 };
 
 #endif /* defined(__GitDive_Cinder__SyntaxColourListener__) */
