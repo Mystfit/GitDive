@@ -303,7 +303,8 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     // we highlight C++ code for simplicity
     srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(                                                                              DATADIR, inputLang));
     
-//    srchilite::FormatterManager formatterManager(InfoFormatterPtr(new InfoFormatter));
+    boost::shared_ptr<InfoFormatter> passthroughLineFormatter(new InfoFormatter);
+    srchilite::FormatterManager formatterManager(passthroughLineFormatter);
 //    InfoFormatterPtr keywordFormatter(new InfoFormatter("keyword"));
 //    formatterManager.addFormatter("keyword", keywordFormatter);
 //    formatterManager.addFormatter("string", InfoFormatterPtr(new InfoFormatter("string")));
@@ -313,7 +314,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
 //    formatterManager.addFormatter("symbol", InfoFormatterPtr(new InfoFormatter("symbol")));
 //    formatterManager.addFormatter("number", InfoFormatterPtr(new InfoFormatter("number")));
 //    formatterManager.addFormatter("preproc", InfoFormatterPtr(new InfoFormatter("preproc")));
-//    highlighter.setFormatterManager(&formatterManager);
+    highlighter.setFormatterManager(&formatterManager);
     
     boost::shared_ptr< SyntaxColourListener > colourListener(new SyntaxColourListener());
     highlighter.addListener(colourListener.get());
@@ -324,6 +325,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     vector< boost::shared_ptr<Line> > lines = file.getLines();
     for(int i = 0; i < lines.size(); i++){
         params.start = 0;
+        passthroughLineFormatter->setLine(line);
         colourListener->setTargetLine(lines[i]);
         highlighter.highlightParagraph(lines[i]->getStr());
     }
