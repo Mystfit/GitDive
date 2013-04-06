@@ -318,10 +318,10 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     srchilite::FormatterParams params;
     highlighter.setFormatterParams(&params);
     vector< boost::shared_ptr<Line> > lines = file.getLines();
-    for(int i = 0; i < file.getLines().size(); i++){
+    for(int i = 0; i < lines.size(); i++){
         params.start = 0;
         
-        highlighter.highlightParagraph(line);
+        highlighter.highlightParagraph(lines[i]->getStr());
     }
     //----------------------------------------
 }
