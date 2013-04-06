@@ -33,8 +33,6 @@ private:
 };
 
 
-
-
 //Passthrough infoformatter that dumps the seperated elements into the current line
 class InfoFormatter: public srchilite::Formatter
 {    
