@@ -15,7 +15,7 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00BAE65A0E7ED9C10018A608 /* GitDive_CinderApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* GitDive_CinderApp.cpp */; };
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
-		4A1253FC170FF90000DE28C9 /* SyntaxColourLTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1253FA170FF90000DE28C9 /* SyntaxColourLTools.cpp */; };
+		4A1253FC170FF90000DE28C9 /* SyntaxColourTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1253FA170FF90000DE28C9 /* SyntaxColourTools.cpp */; };
 		4A1A6B8117054D940046BE09 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B7F17054D940046BE09 /* Utils.cpp */; };
 		4A1A6BC91705A5880046BE09 /* GitDataTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */; };
 		4A1A6BCC1705AAE60046BE09 /* GitLogParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */; };
@@ -54,7 +54,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* GitDive_Cinder_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitDive_Cinder_Prefix.pch; sourceTree = "<group>"; };
-		4A1253FA170FF90000DE28C9 /* SyntaxColourLTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyntaxColourLTools.cpp; path = ../src/SyntaxColourLTools.cpp; sourceTree = "<group>"; };
+		4A1253FA170FF90000DE28C9 /* SyntaxColourTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyntaxColourTools.cpp; path = ../src/SyntaxColourTools.cpp; sourceTree = "<group>"; };
 		4A1253FB170FF90000DE28C9 /* SyntaxColourTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyntaxColourTools.h; path = ../src/SyntaxColourTools.h; sourceTree = "<group>"; };
 		4A1A6B7B17042CCA0046BE09 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../include/Utils.h; sourceTree = "<group>"; };
 		4A1A6B7F17054D940046BE09 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../src/Utils.cpp; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */,
 				4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */,
 				4AD7491F17097505006ACBC6 /* GitFileManager.cpp */,
-				4A1253FA170FF90000DE28C9 /* SyntaxColourLTools.cpp */,
+				4A1253FA170FF90000DE28C9 /* SyntaxColourTools.cpp */,
 				4A1A6B7F17054D940046BE09 /* Utils.cpp */,
 			);
 			name = Source;
@@ -255,7 +255,7 @@
 				4A1A6BC91705A5880046BE09 /* GitDataTypes.cpp in Sources */,
 				4A1A6BCC1705AAE60046BE09 /* GitLogParser.cpp in Sources */,
 				4AD7492117097505006ACBC6 /* GitFileManager.cpp in Sources */,
-				4A1253FC170FF90000DE28C9 /* SyntaxColourLTools.cpp in Sources */,
+				4A1253FC170FF90000DE28C9 /* SyntaxColourTools.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
