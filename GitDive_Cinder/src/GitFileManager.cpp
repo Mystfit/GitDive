@@ -309,9 +309,11 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     formatterManager.addFormatter("number", InfoFormatterPtr(new InfoFormatter("number")));
     formatterManager.addFormatter("preproc", InfoFormatterPtr(new InfoFormatter("preproc")));
     highlighter.setFormatterManager(&formatterManager);
+    
+    boost::shared_ptr< SyntaxColourListener >
+    
     highlighter.addListener(<#srchilite::HighlightEventListener *listener#>);
 
-    
     // make sure it uses additional information
     srchilite::FormatterParams params;
     highlighter.setFormatterParams(&params);
