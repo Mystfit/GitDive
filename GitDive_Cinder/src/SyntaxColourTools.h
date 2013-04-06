@@ -35,8 +35,6 @@ private:
 
 
 class InfoFormatter: public srchilite::Formatter {
-    /// the language element represented by this formatter
-    std::string elem;
     
 public:
     InfoFormatter(const std::string &elem_ = "normal") : elem(elem_) {}
@@ -44,6 +42,8 @@ public:
     virtual void format(const std::string &s, const srchilite::FormatterParams *params = 0);    }
 private:
     boost::shared_ptr<Line> m_targetLine;
+    std::string elem;
+
 };
 
 /// shared pointer for InfoFormatter
