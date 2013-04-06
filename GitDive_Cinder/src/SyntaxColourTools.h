@@ -40,7 +40,7 @@ private:
 class ElemFormatManager : public srchilite::FormatterManager
 {
 public:
-    ElemFormatManager() : 
+    ElemFormatManager() : FormatterManager(
     //Overriden accessor for getting a formatter creates a generic line formatter
     virtual FormatterPtr getFormatter(const std::string &elem) const;
 private:
