@@ -59,7 +59,7 @@ FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
         formatterMap[elem] = defaultFormatter;
     }
     
-    formatterMap[elem].setNextElemType(elem);
+    formatterMap[elem].setNextElemType(elem);FormatterManager
     
     return formatterMap[elem];
 }
