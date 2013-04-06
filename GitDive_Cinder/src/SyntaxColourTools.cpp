@@ -55,7 +55,7 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
 FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
     
     FormatterPtr formatter = getFormatter(elem);
-    formatter.setNextElemType(elem);
+    formatter->setNextElemType(elem);
     return formatter;
     
     
