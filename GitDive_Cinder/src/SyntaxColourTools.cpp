@@ -21,7 +21,7 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
             // print information about the rule
             if (event.token.rule) {
                 cout << event.token.rule->getAdditionalInfo() << endl;
-                cout << "expression: \"" << event.token.rule->toString() << "\""<< endl;
+                //cout << "expression: \"" << event.token.rule->toString() << "\""<< endl;
             }
             
             // now format the matched strings
@@ -55,7 +55,7 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
 
 void InfoFormatter::format(const std::string &s, const srchilite::FormatterParams *params) {
     m_targetLine->addLineElement(LineElement(elem, s, params->start));
-    std::cout << elem << ": " << s;
+    std::cout << "Adding " << elem << " to line: " << s;
     if (params)
         std::cout << ", start: " << params->start;
     std::cout << std::endl;
