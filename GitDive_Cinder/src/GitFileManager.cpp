@@ -303,16 +303,7 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     fileStream << file.getStr();
     
-    m_srcHiglight.setDataDir(DATADIR);
-
-    string inputLang = "cpp.lang";
-    srchilite::LangMap langMap(DATADIR, "lang.map");
-    
-    string lang = langMap.getMappedFileNameFromFileName(fileName);
-    if (lang != "") {
-        inputLang = lang;
-    } // otherwise we default to C++
-    
+    string inputLang = LineFormatter::getFileLangType(file.getFilename());
     m_srcHiglight.highlight(fileStream, colourStream, inputLang);
 
     return colourStream.str();
