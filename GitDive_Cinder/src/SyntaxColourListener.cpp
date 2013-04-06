@@ -23,12 +23,10 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
                 cout << event.token.rule->getAdditionalInfo() << endl;
                 //cout << "expression: \"" << event.token.rule->toString() << "\"" << endl;
             }
-            
+                        
             // now format the matched strings
-            for (MatchedElements::const_iterator it = event.token.matched.begin(); it
-                 != event.token.matched.end(); ++it) {
-                cout << "formatting \"" << it->second << "\" as " << it->first
-                << endl;
+            for (MatchedElements::const_iterator it = event.token.matched.begin(); it != event.token.matched.end(); ++it) {
+                cout << "formatting \"" << it->second << "\" as " << it->first << endl;
             }
             break;
         case HighlightEvent::FORMATDEFAULT:
