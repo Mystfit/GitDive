@@ -73,7 +73,7 @@ LineFormatterManager::updateTargetLine(boost::shared_ptr<Line> target){
     boost::shared_ptr<LineFormatter> formatter = boost::dynamic_pointer_cast<LineFormatter>(formatterMap[elem]);
     formatter->setTargetLine(m_targetLine);
     
-    for(FormatterMap::iterator it = formatterMap)
+    for(FormatterMap::iterator it = formatter.begin(); )
     
 }
 
