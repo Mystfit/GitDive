@@ -59,6 +59,8 @@ FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
         formatterMap[elem] = defaultFormatter;
     }
     
+    formatterMap[elem].setNextElemType(elem);
+    
     return formatterMap[elem];
 }
 
