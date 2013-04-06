@@ -311,7 +311,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     highlighter.setFormatterManager(&formatterManager);
     
     boost::shared_ptr< SyntaxColourListener > colourListener;
-    highlighter.addListener(colourListener);
+    highlighter.addListener(*(colourListener));
 
     // make sure it uses additional information
     srchilite::FormatterParams params;
