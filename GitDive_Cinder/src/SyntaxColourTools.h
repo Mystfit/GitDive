@@ -40,6 +40,7 @@ private:
 class ElemFormatManager : public srchilite::FormatterManager
 {
 public:
+    //Overriden accessor for getting a formatter creates a generic line formatter
     virtual FormatterPtr getFormatter(const std::string &elem) const;
 private:
     mutable FormatterMap formatterMap;
@@ -48,7 +49,7 @@ private:
 
 
 //Passthrough infoformatter that dumps the seperated elements into the current line
-class InfoFormatter: public srchilite::Formatter
+class LineFormatter: public srchilite::Formatter
 {    
 public:
     InfoFormatter(const std::string &elem_ = "normal") : elem(elem_) {}
