@@ -51,6 +51,8 @@ public:
     //File modification
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
     
+    
+    
     //File display
     //------------
     
