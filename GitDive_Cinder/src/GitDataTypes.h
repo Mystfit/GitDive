@@ -24,6 +24,7 @@ using namespace std;
  */
 
 struct LineElement {
+    LineElement(string element, string elemStr, int pos) : elem(element)
     string elem;
     string str;
     int position;
