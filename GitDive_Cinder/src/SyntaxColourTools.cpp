@@ -74,6 +74,7 @@ FormatterPtr LineFormatterManager::getFormatter(const std::string &elem) const{
     
     if (!formatterMap[elem].get()) {
         formatterMap[elem] = boost::shared_ptr<LineFormatter>(new LineFormatter(elem));
+        formatterMap[elem]
     }
             
     return formatterMap[elem];
