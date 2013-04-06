@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include "srchilite/sourcehighlighter.h";
+#include "srchilite/langmap.h"
 #include "srchilite/formatter.h"
 #include "srchilite/formattermanager.h"
 #include "srchilite/formatterparams.h"
