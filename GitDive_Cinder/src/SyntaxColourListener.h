@@ -18,12 +18,9 @@ public:
     SyntaxColourListener(std::ostream &_os = std::cout);
     virtual ~SyntaxColourListener();
     
-    virtual void notify(const HighlightEvent &event);
-    
-    void setInteractive(bool i = true) {
-        interactive = i;
-    }
-    
+    virtual void notify(const srchilite::HighlightEvent &event);
+}
+
 private:
 };
 
