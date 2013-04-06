@@ -291,10 +291,7 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
 void GitFileManager::syntaxParseAllFiles(){
     
     for(vector< boost::shared_ptr<GitFile> >::iterator it = m_fileList.begin(); it != m_fileList.end(); ++it){
-        string lang = langMap.getMappedFileNameFromFileName(it->get()->getFilename());
-        if (lang == "") lang = inputLang;
-            
-        LineFormatter::syntaxParseLines(it->get()->getLines(), lang);
+        LineFormatter::syntaxParseLines(it->get()->getLines(), getFileLangType(it->get()->getFilename()));
     }
 }
 
