@@ -48,7 +48,12 @@ public:
     int getCommitIndex(){ return m_commitIndex; };
     void resetCommitIndex(){ m_commitIndex = 0; };
     
+    
+    
     //File modification
+    //-----------------
+    
+    //Applies a diff to the current state of a file object
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff );
     
     
