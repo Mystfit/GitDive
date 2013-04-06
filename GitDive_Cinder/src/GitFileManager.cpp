@@ -306,6 +306,8 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     boost::shared_ptr<InfoFormatter> passthroughLineFormatter(new InfoFormatter);
     srchilite::FormatterManager formatterManager(passthroughLineFormatter);
     formatterManager.setDefaultFormatter(passthroughLineFormatter);
+    highlighter.setFormatterManager(&formatterManager);
+
 //    InfoFormatterPtr keywordFormatter(new InfoFormatter("keyword"));
 //    formatterManager.addFormatter("keyword", keywordFormatter);
 //    formatterManager.addFormatter("string", InfoFormatterPtr(new InfoFormatter("string")));
@@ -315,7 +317,6 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
 //    formatterManager.addFormatter("symbol", InfoFormatterPtr(new InfoFormatter("symbol")));
 //    formatterManager.addFormatter("number", InfoFormatterPtr(new InfoFormatter("number")));
 //    formatterManager.addFormatter("preproc", InfoFormatterPtr(new InfoFormatter("preproc")));
-    highlighter.setFormatterManager(&formatterManager);
     
     boost::shared_ptr< SyntaxColourListener > colourListener(new SyntaxColourListener());
     highlighter.addListener(colourListener.get());
