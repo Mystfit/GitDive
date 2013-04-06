@@ -9,10 +9,6 @@
 #ifndef __GitDive_Cinder__GitFileManager__
 #define __GitDive_Cinder__GitFileManager__
 
-#ifndef DATADIR
-#define DATADIR "/usr/local/share/source-highlight"
-#endif
-
 #include <fstream>
 #include <sstream>
 
@@ -87,7 +83,20 @@ public:
     string colourfyFile(GitFile & file);
     
     //Runs all files through the syntax highlighter to seperate lines into language elements
-    void syntaxParseAllFiles(){ for(int i = 0; i < m_fileList.size(); i++) syntaxParseFile(*(m_fileList[i])); };
+    void syntaxParseAllFiles(){
+        //Detect file language
+        string inputLang = "cpp.lang";
+        srchilite::LangMap langMap(DATADIR, "lang.map");
+        
+        for(int i = 0; i < m_fileList.size(); i++){
+            string lang = langMap.getMappedFileNameFromFileName(file.getFilename());
+            if (lang != "") {
+                inputLang = lang;
+            }
+
+            syntaxParseFile(*(m_fileList[i]);
+        });
+    };
     
     //Gets syntax from a single file
     void syntaxParseFile(GitFile &file );
