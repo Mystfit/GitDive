@@ -305,6 +305,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     
     boost::shared_ptr<InfoFormatter> passthroughLineFormatter(new InfoFormatter);
     srchilite::FormatterManager formatterManager(passthroughLineFormatter);
+    formatterManager.setDefaultFormatter(passthroughLineFormatter);
 //    InfoFormatterPtr keywordFormatter(new InfoFormatter("keyword"));
 //    formatterManager.addFormatter("keyword", keywordFormatter);
 //    formatterManager.addFormatter("string", InfoFormatterPtr(new InfoFormatter("string")));
