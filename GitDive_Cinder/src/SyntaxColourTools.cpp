@@ -52,7 +52,9 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
 }
 
 
-FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const;
+FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
+    
+}
 
 
 
