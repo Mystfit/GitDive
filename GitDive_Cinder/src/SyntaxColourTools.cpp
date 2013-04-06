@@ -112,7 +112,7 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     //The formatter needs to follow along with the current line target at the same time
     for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         params.start = 0;
-        formatterManager->setTargetLine(it->get());
+        formatterManager->setTargetLine(it);
         //colourListener->setTargetLine(lines[i]);
         highlighter.highlightParagraph(it->get()->getStr());
     }
