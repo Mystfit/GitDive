@@ -10,8 +10,8 @@
 #define __GitDive_Cinder__SyntaxColourListener__
 
 #include <iostream>
-#include "srchilite/debuglistener.h"
 #include "srchilite/highlighteventlistener.h"
+#include "GitDataTypes.h"
 
 class SyntaxColourListener : public srchilite::HighlightEventListener{
 public:
