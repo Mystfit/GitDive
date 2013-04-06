@@ -27,7 +27,7 @@
 #include "srchilite/formattermanager.h"
 
 #include "GitDataTypes.h"
-#include "SyntaxColourListener.h"
+#include "SyntaxColourListener.h
 
 using namespace std;
 
