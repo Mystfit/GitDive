@@ -92,7 +92,7 @@ public:
                 std::cout << ", start: " << params->start;
             std::cout << std::endl;
         
-            m_targetLine->addElement(LineElement(elem, s, params->start));
+            m_targetLine->addLineElement(LineElement(elem, s, params->start));
             
         //}
     }
