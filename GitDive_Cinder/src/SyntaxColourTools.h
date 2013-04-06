@@ -68,7 +68,7 @@ public:
     LineFormatter(const std::string &elem_, boost::shared_ptr<Line> line) : elem(elem_), m_targetLine(line) {};
     void setTargetLine(boost::shared_ptr<Line> line){m_targetLine = line; };
     void format(const std::string &s, const srchilite::FormatterParams *params = 0);
-    void syntaxParseLines(vector<boost::shared_ptr<Line> lines, string lang);
+    void syntaxParseLines(vector<boost::shared_ptr<Line> > lines, string lang);
 
 private:
     boost::shared_ptr<Line> m_targetLine;
