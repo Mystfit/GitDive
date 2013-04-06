@@ -10,7 +10,7 @@
 #define __GitDive_Cinder__SyntaxColourListener__
 
 #include <iostream>
-#include "srchilite/sourcehighlighter.h;
+#include "srchilite/sourcehighlighter.h";
 #include "srchilite/formatter.h"
 #include "srchilite/formattermanager.h"
 #include "srchilite/formatterparams.h"
