@@ -59,15 +59,15 @@ FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
     return formatter;
     
     
-    // the formatter for this element is not present
-    if (!formatterMap[elem].get()) {
-        // use the default formatter and store it for future requests
-        formatterMap[elem] = defaultFormatter;
-    }
-    
-    formatterMap[elem].setNextElemType(elem);FormatterManager
-    
-    return formatterMap[elem];
+//    // the formatter for this element is not present
+//    if (!formatterMap[elem].get()) {
+//        // use the default formatter and store it for future requests
+//        formatterMap[elem] = defaultFormatter;
+//    }
+//    
+//    formatterMap[elem].setNextElemType(elem);FormatterManager
+//    
+//    return formatterMap[elem];
 }
 
 
