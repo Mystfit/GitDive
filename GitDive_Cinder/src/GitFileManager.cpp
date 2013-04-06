@@ -304,8 +304,8 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, inputLang));
     
     //Set up formatters to modify our lines
-    boost::shared_ptr<LineFormatter> passthroughLineFormatter(new LineFormatter("", boost::shared_ptr<Line>()));
-    boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(passthroughLineFormatter));
+    boost::shared_ptr<LineFormatter> passthroughLineFormatter();
+    boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(boost::shared_ptr<LineFormatter>(new LineFormatter("", boost::shared_ptr<Line>())));
     highlighter.setFormatterManager(formatterManager.get());
     
     //Set up params to hold the element position from the start of the line
