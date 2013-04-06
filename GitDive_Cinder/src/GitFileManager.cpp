@@ -302,6 +302,37 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     
     
+    srchilite::RegexRuleFactory ruleFactory;
+    srchilite::LangDefManager langDefManager(&ruleFactory);
+    
+    // we highlight C++ code for simplicity
+    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(
+                                                                              DATADIR, "cpp.lang"));
+    
+    srchilite::FormatterManager formatterManager(InfoFormatterPtr(
+                                                                  new InfoFormatter));
+    InfoFormatterPtr keywordFormatter(new InfoFormatter("keyword"));
+    
+    formatterManager.addFormatter("keyword", keywordFormatter);
+    formatterManager.addFormatter("string", InfoFormatterPtr(new InfoFormatter(
+                                                                               "string")));
+    // for "type" we use the same formatter as for "keyword"
+    formatterManager.addFormatter("type", keywordFormatter);
+    formatterManager.addFormatter("comment", InfoFormatterPtr(
+                                                              new InfoFormatter("comment")));
+    formatterManager.addFormatter("symbol", InfoFormatterPtr(new InfoFormatter(
+                                                                               "symbol")));
+    formatterManager.addFormatter("number", InfoFormatterPtr(new InfoFormatter(
+                                                                               "number")));
+    formatterManager.addFormatter("preproc", InfoFormatterPtr(
+                                                              new InfoFormatter("preproc")));
+    highlighter.setFormatterManager(&formatterManager);
+    
+    // make sure it uses additional information
+    srchilite::FormatterParams params;
+    highlighter.setFormatterParams(&params);
+
+    
     
     
 
