@@ -57,7 +57,7 @@ public:
     string serializeAllFiles();
     string serializeFile(boost::shared_ptr<GitFile> file);
     string colourfyFile(GitFile & file);
-    void syntaxParseFile(GitFile &file ){
+    void syntaxParseFile(GitFile &file );
 
     
 private:
