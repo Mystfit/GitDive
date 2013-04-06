@@ -291,22 +291,19 @@ string GitFileManager::colourfyFile(GitFile & file){
     
     stringstream colourStream;
     stringstream fileStream;
+    string fileName = file.getFilename();
     
     fileStream << file.getStr();
-    
-    string fileName = file.getFilename();
-//    vector<string> splitLine;
-//    split(splitLine, fileName, boost::is_any_of("."));
-//    fileName = splitLine.back();
-//    
-//    for(int i = 0; i < splitLine.size(); i++){
-//        cout << splitLine[i] << endl;
-//    }
     
     m_srcHiglight.setDataDir(DATADIR);
 
     string inputLang = "cpp.lang";
     srchilite::LangMap langMap(DATADIR, "lang.map");
+    
+    
+    
+    
+    
 
     string lang = langMap.getMappedFileNameFromFileName(fileName);
     if (lang != "") {
