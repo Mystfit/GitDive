@@ -296,7 +296,7 @@ void GitFileManager::syntaxParseAllFiles(){
         string lang = langMap.getMappedFileNameFromFileName(it->get()->getFilename());
         if (lang == "") lang = inputLang;
             
-        LineFormatter::syntaxParseLines(m_fileList[i]->getLines(), lang);
+        LineFormatter::syntaxParseLines(it->get()->getLines(), lang);
     }
 }
 
