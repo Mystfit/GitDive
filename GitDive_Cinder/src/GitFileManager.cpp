@@ -310,7 +310,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     formatterManager.addFormatter("preproc", InfoFormatterPtr(new InfoFormatter("preproc")));
     highlighter.setFormatterManager(&formatterManager);
     
-    boost::shared_ptr< SyntaxColourListener >
+    boost::shared_ptr< SyntaxColourListener > colourListener;
     
     highlighter.addListener(<#srchilite::HighlightEventListener *listener#>);
 
