@@ -297,7 +297,7 @@ void GitFileManager::syntaxParseAllFiles(){
         if (lang != "") {
             inputLang = lang;
         }
-        syntaxParseLines(m_fileList[i]->getLines(), lang);
+        LineFormatter::syntaxParseLines(m_fileList[i]->getLines(), lang);
     }
 }
 
