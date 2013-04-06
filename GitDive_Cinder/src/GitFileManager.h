@@ -84,12 +84,12 @@ public:
     virtual void format(const std::string &s,
                         const srchilite::FormatterParams *params = 0) {
         // do not print anything if normal or string to format is empty
-        if (elem != "normal" || !s.size()) {
+        //if (elem != "normal" || !s.size()) {
             std::cout << elem << ": " << s;
             if (params)
                 std::cout << ", start: " << params->start;
             std::cout << std::endl;
-        }
+        //}
     }
 };
 
