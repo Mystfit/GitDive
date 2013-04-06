@@ -50,7 +50,6 @@ public:
     void updateTargetLine(boost::shared_ptr<Line> target);
     void setTargetLine(boost::shared_ptr<Line> target){m_targetLine = target; };
 
-
 private:
     mutable FormatterMap formatterMap;
     FormatterPtr defaultFormatter;
