@@ -287,20 +287,7 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     return fileText.str();
 }
 
-string GitFileManager::colourfyFile(GitFile & file){
-    
-    stringstream colourStream;
-    stringstream fileStream;
-    string fileName = file.getFilename();
-    
-    fileStream << file.getStr();
-    
-    m_srcHiglight.setDataDir(DATADIR);
-
-    string inputLang = "cpp.lang";
-    srchilite::LangMap langMap(DATADIR, "lang.map");
-    
-    
+void GitFileManager::syntaxParseFile(){
     //-------------------------------------
     srchilite::RegexRuleFactory ruleFactory;
     srchilite::LangDefManager langDefManager(&ruleFactory);
@@ -331,11 +318,21 @@ string GitFileManager::colourfyFile(GitFile & file){
     srchilite::FormatterParams params;
     highlighter.setFormatterParams(&params);
     //----------------------------------------
+}
 
+string GitFileManager::colourfyFile(GitFile & file){
     
+    stringstream colourStream;
+    stringstream fileStream;
+    string fileName = file.getFilename();
     
+    fileStream << file.getStr();
     
+    m_srcHiglight.setDataDir(DATADIR);
 
+    string inputLang = "cpp.lang";
+    srchilite::LangMap langMap(DATADIR, "lang.map");
+    
     string lang = langMap.getMappedFileNameFromFileName(fileName);
     if (lang != "") {
         inputLang = lang;
