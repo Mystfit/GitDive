@@ -17,8 +17,6 @@
 #include "srchilite/formatterparams.h"
 #include "srchilite/sourcehighlight.h"
 #include "srchilite/langmap.h"
-#include "srchilite/langdefmanager.h"
-#include "srchilite/regexrulefactory.h"
 #include "srchilite/sourcehighlighter.h"
 #include "srchilite/formattermanager.h"
 
