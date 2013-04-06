@@ -58,7 +58,7 @@ FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
     if (!formatterMap[elem].get()) {
         // use the default formatter and store it for future requests
         formatterMap[elem] = defaultFormatter;
-        formatterMap[elem]->format(<#const std::string &s#>)
+        formatterMap[elem](new InfoFormatter(elem));
     }
         
     formatterMap[elem].setNextElemType(elem);
