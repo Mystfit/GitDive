@@ -10,7 +10,10 @@
 #define __GitDive_Cinder__SyntaxColourListener__
 
 #include <iostream>
+#include "srchilite/highlighteventlistener.h"
 
-class SyntaxColourListener : public 
+class SyntaxColourListener : public HighlightEventListener{
+    
+};
 
 #endif /* defined(__GitDive_Cinder__SyntaxColourListener__) */
