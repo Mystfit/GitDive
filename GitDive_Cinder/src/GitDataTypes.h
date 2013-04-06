@@ -22,6 +22,13 @@ using namespace std;
 /*
  * A single line
  */
+
+struct LineElement {
+    string elem;
+    string str;
+    int position;
+};
+
 class Line {
 public:
     
