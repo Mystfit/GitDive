@@ -304,7 +304,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     LineHighlighter highlighter(langDefManager.getHighlightState(DATADIR, inputLang));
     
     boost::shared_ptr<LineFormatter> passthroughLineFormatter(new LineFormatter);
-    boost::shared_ptr<ElemFormatManager> formatterManager(passthroughLineFormatter);
+    boost::shared_ptr<ElemFormatManager> formatterManager(new ElemFormatManager(passthroughLineFormatter));
     highlighter.setFormatterManager(formatterManager);
     
     formatterManager.getFormatter("normal");
