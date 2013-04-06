@@ -55,7 +55,6 @@
 		32CA4F630368D1EE00C91783 /* GitDive_Cinder_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitDive_Cinder_Prefix.pch; sourceTree = "<group>"; };
 		4A1253FA170FF90000DE28C9 /* SyntaxColourTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SyntaxColourTools.cpp; path = ../src/SyntaxColourTools.cpp; sourceTree = "<group>"; };
 		4A1253FB170FF90000DE28C9 /* SyntaxColourTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyntaxColourTools.h; path = ../src/SyntaxColourTools.h; sourceTree = "<group>"; };
-		4A1254B41710350200DE28C9 /* srchilite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = srchilite.xcodeproj; path = "../../../../Repos/source-highlight-3.1.7/lib/srchilite/srchilite.xcodeproj"; sourceTree = "<group>"; };
 		4A1A6B7B17042CCA0046BE09 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../include/Utils.h; sourceTree = "<group>"; };
 		4A1A6B7F17054D940046BE09 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../src/Utils.cpp; sourceTree = "<group>"; };
 		4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDive_CinderApp.h; path = ../include/GitDive_CinderApp.h; sourceTree = "<group>"; };
@@ -184,18 +183,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4A1254B41710350200DE28C9 /* srchilite.xcodeproj */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4A1254B51710350200DE28C9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,12 +225,6 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* GitDive_Cinder */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4A1254B51710350200DE28C9 /* Products */;
-					ProjectRef = 4A1254B41710350200DE28C9 /* srchilite.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* GitDive_Cinder */,
