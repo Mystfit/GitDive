@@ -287,6 +287,22 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     return fileText.str();
 }
 
+void GitFileManager::syntaxParseAllFiles(){
+    //Detect file language
+    string inputLang = "cpp.lang";
+    srchilite::LangMap langMap(DATADIR, "lang.map");
+    
+    for(int i = 0; i < m_fileList.size(); i++){
+        string lang = langMap.getMappedFileNameFromFileName(file.getFilename());
+        if (lang != "") {
+            inputLang = lang;
+        }
+        
+        syntaxParseFile(*(m_fileList[i]);
+                        });
+    };
+
+
 
 
 string GitFileManager::colourfyFile(GitFile & file){
