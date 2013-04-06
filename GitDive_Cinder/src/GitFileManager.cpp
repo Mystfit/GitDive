@@ -319,6 +319,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     vector< boost::shared_ptr<Line> > lines = file.getLines();
     for(int i = 0; i < lines.size(); i++){
         params.start = 0;
+        colourListener->setTargetLine(lines[i]);
         
         highlighter.highlightParagraph(lines[i]->getStr());
     }
