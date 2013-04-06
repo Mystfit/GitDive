@@ -301,7 +301,7 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     srchilite::LangDefManager langDefManager(&ruleFactory);
     
     // we highlight C++ code for simplicity
-    SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, inputLang));
+    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, inputLang));
     
     boost::shared_ptr<LineFormatter> passthroughLineFormatter(new LineFormatter);
     boost::shared_ptr<ElemFormatManager> formatterManager(new ElemFormatManager(passthroughLineFormatter));
