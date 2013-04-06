@@ -110,11 +110,10 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     
     //Iterate over the lines and highlight as we go
     //The formatter needs to follow along with the current line target at the same time
-    vector< boost::shared_ptr<Line> > lines = file.getLines();
-    for(int i = 0; i < lines.size(); i++){
+    for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         params.start = 0;
-        formatterManager->setTargetLine(lines[i]);
+        formatterManager->setTargetLine(it->get());
         //colourListener->setTargetLine(lines[i]);
-        highlighter.highlightParagraph(lines[i]->getStr());
+        highlighter.highlightParagraph(it->get()->getStr());
     }
 }
