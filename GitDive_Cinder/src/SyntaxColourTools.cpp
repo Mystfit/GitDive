@@ -9,7 +9,7 @@
 #include "SyntaxColourTools.h"
 
 
-LineHighlighter(HighlightStatePtr mainState);
+LineHighlighter::LineHightLigher(HighlightStatePtr mainState);
 
 void LineHighLighter::format(const std::string &elem, const std::string &s) {
     formatterManager->getFormatter(elem);
