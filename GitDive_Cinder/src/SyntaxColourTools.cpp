@@ -9,7 +9,7 @@
 #include "SyntaxColourTools.h"
 
 
-LineHighlighter::LineHighlighter(HighlightStatePtr mainState);
+LineHighlighter::LineHighlighter(HighlightStatePtr mainState):
 
 void LineHighLighter::format(const std::string &elem, const std::string &s) {
     formatterManager->getFormatter(elem);
@@ -59,6 +59,9 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
 //            break;
 //    }
 }
+
+ElemFormatManager::ElemFormatManager(FormatterPtr _defaultFormatter) : FormatterManager(_defaultFormatter){
+
 
 
 FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
