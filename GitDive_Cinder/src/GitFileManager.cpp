@@ -308,13 +308,15 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(passthroughLineFormatter));
     highlighter.setFormatterManager(formatterManager.get());
     
-    //Set up listener to modify the output - handled in the formatter now
+    //Set up params to hold the element position from the start of the line
+    srchilite::FormatterParams params;
+    highlighter.setFormatterParams(&params);
+    
+//    //Set up listener to modify the output - handled in the formatter now
 //    boost::shared_ptr< SyntaxColourListener > colourListener(new SyntaxColourListener());
 //    highlighter.addListener(colourListener.get());
 
-    // make sure it uses additional information
-    srchilite::FormatterParams params;
-    highlighter.setFormatterParams(&params);
+    
     vector< boost::shared_ptr<Line> > lines = file.getLines();
     for(int i = 0; i < lines.size(); i++){
         params.start = 0;
