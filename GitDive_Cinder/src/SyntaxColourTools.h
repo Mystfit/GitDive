@@ -46,7 +46,7 @@ class LineFormatterManager : public srchilite::FormatterManager
 public:
     LineFormatterManager(FormatterPtr _defaultFormatter);
     //Overriden accessor for getting a formatter creates a generic line formatter
-    virtual FormatterPtr getFormatter(const std::string &elem) const;
+    FormatterPtr getFormatter(const std::string &elem) const;
 private:
     mutable FormatterMap formatterMap;
     FormatterPtr defaultFormatter;  
