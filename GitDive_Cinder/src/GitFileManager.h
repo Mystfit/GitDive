@@ -93,6 +93,8 @@ public:
             std::cout << std::endl;
         //}
     }
+private:
+    boost::shared_ptr<Line> m_targetLine;
 };
 
 /// shared pointer for InfoFormatter
