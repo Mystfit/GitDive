@@ -91,6 +91,9 @@ public:
             if (params)
                 std::cout << ", start: " << params->start;
             std::cout << std::endl;
+        
+        m_targetLine->addElement(elem, s, params->start);
+            
         //}
     }
 private:
