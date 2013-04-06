@@ -12,5 +12,5 @@ SyntaxColourListener::SyntaxColourListener(){
 }
 
 void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
-    cout << event.type << endl;
+    cout << event.type << " on line " << m_targetLine << endl;
 }
