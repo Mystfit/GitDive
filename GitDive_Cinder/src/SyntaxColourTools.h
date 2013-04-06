@@ -44,10 +44,7 @@ private:
 class ElemFormatManager : public srchilite::FormatterManager
 {
 public:
-    ElemFormatManager(FormatterPtr _defaultFormatter) : FormatterManager(_defaultFormatter){
-        cout << "--> USING CUSTOM FORMATTER" << endl;
-    };
-    
+    ElemFormatManager(FormatterPtr _defaultFormatter);
     //Overriden accessor for getting a formatter creates a generic line formatter
     virtual FormatterPtr getFormatter(const std::string &elem) const;
 private:
