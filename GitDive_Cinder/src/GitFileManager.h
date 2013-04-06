@@ -83,20 +83,7 @@ public:
     string colourfyFile(GitFile & file);
     
     //Runs all files through the syntax highlighter to seperate lines into language elements
-    void syntaxParseAllFiles(){
-        //Detect file language
-        string inputLang = "cpp.lang";
-        srchilite::LangMap langMap(DATADIR, "lang.map");
-        
-        for(int i = 0; i < m_fileList.size(); i++){
-            string lang = langMap.getMappedFileNameFromFileName(file.getFilename());
-            if (lang != "") {
-                inputLang = lang;
-            }
-
-            syntaxParseFile(*(m_fileList[i]);
-        });
-    };
+    void syntaxParseAllFiles();
     
     //Gets syntax from a single file
     void syntaxParseFile(GitFile &file );
