@@ -304,15 +304,13 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
                                                                                "string")));
     // for "type" we use the same formatter as for "keyword"
     formatterManager.addFormatter("type", keywordFormatter);
-    formatterManager.addFormatter("comment", InfoFormatterPtr(
-                                                              new InfoFormatter("comment")));
-    formatterManager.addFormatter("symbol", InfoFormatterPtr(new InfoFormatter(
-                                                                               "symbol")));
-    formatterManager.addFormatter("number", InfoFormatterPtr(new InfoFormatter(
-                                                                               "number")));
-    formatterManager.addFormatter("preproc", InfoFormatterPtr(
-                                                              new InfoFormatter("preproc")));
+    formatterManager.addFormatter("comment", InfoFormatterPtr(new InfoFormatter("comment")));
+    formatterManager.addFormatter("symbol", InfoFormatterPtr(new InfoFormatter("symbol")));
+    formatterManager.addFormatter("number", InfoFormatterPtr(new InfoFormatter("number")));
+    formatterManager.addFormatter("preproc", InfoFormatterPtr(new InfoFormatter("preproc")));
     highlighter.setFormatterManager(&formatterManager);
+    highlighter.addListener(<#srchilite::HighlightEventListener *listener#>);
+
     
     // make sure it uses additional information
     srchilite::FormatterParams params;
@@ -320,7 +318,6 @@ void GitFileManager::syntaxParseFile(GitFile &file ){
     vector< boost::shared_ptr<Line> > lines = file.getLines();
     for(int i = 0; i < lines.size(); i++){
         params.start = 0;
-        highlighter.addListener(<#srchilite::HighlightEventListener *listener#>);
         
         highlighter.highlightParagraph(lines[i]->getStr());
     }
