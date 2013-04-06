@@ -58,7 +58,7 @@ FormatterPtr ElemFormatManager::getFormatter(const std::string &elem) const{
     if (!formatterMap[elem].get()) {
         // use the default formatter and store it for future requests
         //formatterMap[elem] = defaultFormatter;
-        formatterMap[elem] = boost::shared_ptr<InfoFormatter(new InfoFormatter(elem));
+        formatterMap[elem] = boost::shared_ptr<InfoFormatter>(new InfoFormatter(elem));
     }
             
     return formatterMap[elem];
