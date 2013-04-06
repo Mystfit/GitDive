@@ -58,4 +58,29 @@ private:
     int m_commitIndex;
 };
 
+
+class InfoFormatter: public srchilite::Formatter {
+    /// the language element represented by this formatter
+    std::string elem;
+    
+public:
+    InfoFormatter(const std::string &elem_ = "normal") :
+    elem(elem_) {
+    }
+    
+    virtual void format(const std::string &s,
+                        const srchilite::FormatterParams *params = 0) {
+        // do not print anything if normal or string to format is empty
+        if (elem != "normal" || !s.size()) {
+            std::cout << elem << ": " << s;
+            if (params)
+                std::cout << ", start: " << params->start;
+            std::cout << std::endl;
+        }
+    }
+};
+
+/// shared pointer for InfoFormatter
+typedef boost::shared_ptr<InfoFormatter> InfoFormatterPtr;
+
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
