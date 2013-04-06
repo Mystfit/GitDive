@@ -87,6 +87,15 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     if (params) std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << s << "|" << endl;
 }
 
+string LineFormatter::getFileLangType(string filename){
+    string inputLang = "cpp.lang";
+    srchilite::LangMap langMap(DATADIR, "lang.map");
+    string lang = langMap.getMappedFileNameFromFileName(it->get()->getFilename());
+    if (lang == "") lang = inputLang;
+    
+    return lang;
+}
+
 
 void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, string lang){
     
