@@ -22,7 +22,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
                 
         if(diff->fileMode == Diff::FILEMODE_ADDED){
             file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
-            applyDiffToFile(*(file), diff, useSyntaxHighlighting);
+            applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
             m_fileList.push_back(file);
         }
         
@@ -35,7 +35,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
             file = getFileByName(diff->getFileName());
             if(file){
                 if(file->active()){
-                    applyDiffToFile(*(file), diff, useSyntaxHighlighting);
+                    applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
                 }
             }
         }        
