@@ -20,7 +20,7 @@ void GitDive_CinderApp::setup()
     fManager.setSyntaxHighlighting(true);
     
     mParams = ci::params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
-    mParams.addParam( "Use flat shading", &bUseFlatShading);
+    mParams.addParam( "Use flat shading", &fManager.setSyntaxHighlighting(<#bool state#>));
 
 
     
