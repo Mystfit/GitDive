@@ -27,7 +27,7 @@ void GitDive_CinderApp::setup()
     
     fManager.syntaxParseAllFiles();
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
-    fManager.dumpFileOutput("//Users/mystfit/desktop/colourOut.html");
+    fManager.dumpFileOutput("/Users/mystfit/desktop/colourOut.html");
 //    //Debug serialization
 //    GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
 }
