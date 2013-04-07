@@ -33,7 +33,7 @@ Line::Line(string lineStr, bool justUpdated){
 string Line::getStr(){
     stringstream lineStr;
 
-    if(!m_lineElements.empty()){
+    if(!m_lineElements.size()){
         lineStr << m_lineStr << endl;
     } else {
         for(vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
