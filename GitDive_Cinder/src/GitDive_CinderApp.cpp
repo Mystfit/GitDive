@@ -52,7 +52,11 @@ void GitDive_CinderApp::update()
 void GitDive_CinderApp::draw()
 {
 	// clear out the window with black
-	gl::clear( Color( 0, 0, 0 ) ); 
+	gl::clear( Color( 0, 0, 0 ) );
+    
+    //Draw params window
+    params::InterfaceGl::draw();
+
 }
 
 
