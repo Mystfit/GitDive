@@ -43,7 +43,6 @@ string Line::getStr(){
     }
     
     return lineStr.str();
-
 }
 
 
