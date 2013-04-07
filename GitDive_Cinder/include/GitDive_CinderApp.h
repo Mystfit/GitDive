@@ -11,6 +11,7 @@
 
 #include "cinder/app/AppBasic.h"
 #include "cinder/gl/gl.h"
+#include "cinder/params/Params.h"
 #include "Utils.h"
 #include "GitLogParser.h"
 #include "GitFileManager.h"
