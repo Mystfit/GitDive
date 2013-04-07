@@ -17,6 +17,7 @@ void GitDive_CinderApp::setup()
     
     //Parse the diff log text into commit objects for the file manager
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
+    fManager.setSyntaxHighlighting(true);
     
 //    while(fManager.applyNextCommit());
 //    
