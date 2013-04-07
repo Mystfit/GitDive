@@ -39,7 +39,7 @@ string Line::getStr(){
         cout << m_lineElements.size();
         for(vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
             cout << "|" << it->str << "|" ;
-            lineStr << it->str;
+            if(it->str != "\n") lineStr << it->str;
         }
     }
     
