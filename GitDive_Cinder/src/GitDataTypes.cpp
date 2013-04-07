@@ -58,6 +58,7 @@ void Line::addLineElement(LineElement element){
 
 
 void Line::markForRemoval(){
+    m_lineState = Line::LINE_DELETED;
     //Update visuals here. Break apart line into component parts
 }
 
