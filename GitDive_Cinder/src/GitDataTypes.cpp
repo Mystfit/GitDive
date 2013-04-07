@@ -31,7 +31,6 @@ Line::Line(string lineStr, bool justUpdated){
 
 
 string Line::getStr(){
-    string lineStr = "";
     stringstream lineStr;
 
     if(!m_lineElements.empty()){
