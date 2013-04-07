@@ -177,6 +177,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             } else {
                 boost::shared_ptr<Line> oldLine = originalLines[lineCounter];
                 oldLine->setLinePos(lineNum);
+                oldLine->setLineStatus(Line::LINE_NORMAL);
                 newLines.push_back(oldLine);
                 lineCounter++;
                 
