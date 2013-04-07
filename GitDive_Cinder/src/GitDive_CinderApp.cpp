@@ -3,7 +3,7 @@
 void GitDive_CinderApp::prepareSettings( Settings *settings )
 {
 	settings->setWindowSize( 1024, 1024 );
-	settings->setFrameRate( 10 );
+	settings->setFrameRate( 10 );    
 }
 
 void GitDive_CinderApp::setup()
@@ -18,6 +18,9 @@ void GitDive_CinderApp::setup()
     //Parse the diff log text into commit objects for the file manager
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     fManager.setSyntaxHighlighting(true);
+    
+    mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
+
     
 //    while(fManager.applyNextCommit());
 //    
