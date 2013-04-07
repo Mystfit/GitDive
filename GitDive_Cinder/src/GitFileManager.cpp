@@ -22,7 +22,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
                 
         if(diff->fileMode == Diff::FILEMODE_ADDED){
             file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
-            applyDiffToFile(*(file), diff);
+            applyDiffToFile(*(file), diff, );
             m_fileList.push_back(file);
         }
         
