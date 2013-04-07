@@ -35,7 +35,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
             file = getFileByName(diff->getFileName());
             if(file){
                 if(file->active()){
-                    applyDiffToFile(*(file), diff);
+                    applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
                 }
             }
         }        
