@@ -32,10 +32,13 @@ public:
 	void update();
 	void draw();
     
+
+    
     //Variables
     string repoPath;
     string gitCmd;
     GitFileManager fManager;
+    params::InterfaceGl		mParams;
     
 };
 
