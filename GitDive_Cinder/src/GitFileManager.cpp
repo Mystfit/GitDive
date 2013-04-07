@@ -215,6 +215,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 
                 //Create new line pointer
                 boost::shared_ptr<Line> newLine( new Line(deltaAddLines[deltaIndex++].getStr(), true) );
+                newLine->setLineState(Line::LINE_ADDED);
                 newLine->setLinePos(deltaAddLines[deltaIndex].getLinePos());
                 newLines.push_back(newLine);
             }
