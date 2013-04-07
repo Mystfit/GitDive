@@ -58,7 +58,7 @@ public:
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff, bool useSyntaxHighlighting);
     
     bool & getSyntaxHighlightStatus(){ return bUseSyntaxHighlighting; };
-    void getSyntaxHighlightStatus(bool state){ bUseSyntaxHighlighting = state; };
+    void setSyntaxHighlightStatus(bool state){ bUseSyntaxHighlighting = state; };
     
     //File display
     //------------
