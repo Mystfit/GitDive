@@ -86,8 +86,8 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     string str = s;
     Utils::strip(str, "\n");
     
-    m_targetLine->addLineElement(LineElement(elem, s, params->start));
-    std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << s << "|" << endl;
+    m_targetLine->addLineElement(LineElement(elem, str, params->start));
+    std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << str << "|" << endl;
 }
 
 string LineFormatter::getFileLangType(string filename){
