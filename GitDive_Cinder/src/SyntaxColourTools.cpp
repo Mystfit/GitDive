@@ -125,7 +125,6 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     //Iterate over the lines and highlight as we go
     //The formatter needs to follow along with the current line target at the same time
     for(int i = 0; i < lines.size(); i++){
-        cout << "Line state:" << lines[i]->getLineState() << endl;
         if(lines[i]->getLineState() == Line::LINE_ADDED){
             params.start = 0;
             formatterManager->setTargetLine(lines[i]);
