@@ -83,9 +83,8 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     
     if(elem == "") elem = "normal";
     
-    string str = s;
     
-    Utils::strip(str, "\n");
+    Utils::strip(string(s), "\n");
 
     
     m_targetLine->addLineElement(LineElement(elem, s, params->start));
