@@ -56,6 +56,7 @@ public:
     
     //Applies a diff to the current state of a file object
     static void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff, bool useSyntaxHighlighting);
+    void setSyntaxHighlighting(bool state){ bUseSyntaxHighlighting = state; };
     
     
     //File display
@@ -92,6 +93,7 @@ private:
     vector< boost::shared_ptr<GitFile> > m_fileList;
     
     int m_commitIndex;
+    bool bUseSyntaxHighlighting;
 };
 
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
