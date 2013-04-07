@@ -23,9 +23,9 @@ void GitDive_CinderApp::setup()
     mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
 
     
-//    while(fManager.applyNextCommit());
-//    
-//    fManager.syntaxParseAllFiles();
+    while(fManager.applyNextCommit());
+    
+    fManager.syntaxParseAllFiles();
 //    fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
 //    fManager.dumpFileOutput("//Users/mystfit/desktop/colourOut.html");
 //    //Debug serialization
