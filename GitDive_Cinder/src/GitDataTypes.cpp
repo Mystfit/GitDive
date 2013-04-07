@@ -31,13 +31,20 @@ Line::Line(string lineStr, bool justUpdated){
 
 
 string Line::getStr(){
+    string lineStr;
+
     if(!m_lineElements.empty()){
-        return m_lineStr;
+        lineStr = m_lineStr;
     } else {
         for(vector<string>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
             
         }
+        
+        return lineElems;
     }
+    
+    return lineStr;
+
 }
 
 
