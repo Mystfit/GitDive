@@ -20,8 +20,7 @@ void GitDive_CinderApp::setup()
     fManager.setSyntaxHighlightStatus(true);
     
     mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
-    mParams.addParam( "Use flat shading", &fManager.getSyntaxHighlightStatus());
-
+    mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
 
     
 //    while(fManager.applyNextCommit());
