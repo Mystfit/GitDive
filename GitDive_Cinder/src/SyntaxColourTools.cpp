@@ -84,7 +84,7 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     if(elem == "") elem = "normal";
     
     m_targetLine->addLineElement(LineElement(elem, s, params->start));
-    if (params) std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << s << "|" << endl;
+    std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << s << "|" << endl;
 }
 
 string LineFormatter::getFileLangType(string filename){
