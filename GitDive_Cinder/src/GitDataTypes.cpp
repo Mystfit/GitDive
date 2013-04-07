@@ -42,7 +42,7 @@ string Line::getStr(){
         lineStr << endl;
     }
     
-    return lineStr;
+    return lineStr.str();
 
 }
 
