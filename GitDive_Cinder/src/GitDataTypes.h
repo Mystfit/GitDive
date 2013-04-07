@@ -35,7 +35,7 @@ public:
     
     Line(string lineStr, bool justUpdated = false);
     
-    string getStr(){return m_lineStr; };
+    string getStr();
     
     int getLinePos(){ return m_linePos; };
     void setLinePos(int linePos){ m_linePos = linePos; };
