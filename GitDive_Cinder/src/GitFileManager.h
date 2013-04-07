@@ -59,7 +59,6 @@ public:
     
     bool & getSyntaxHighlightStatus(){ return bUseSyntaxHighlighting; };
     
-    
     //File display
     //------------
     
