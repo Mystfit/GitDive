@@ -17,11 +17,10 @@ void GitDive_CinderApp::setup()
     
     //Parse the diff log text into commit objects for the file manager
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
-    fManager.setSyntaxHighlightStatus(true);
+    fManager.setSyntaxHighlightStatus(false);
     
     mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
     mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
-
     
     while(fManager.applyNextCommit());
     
