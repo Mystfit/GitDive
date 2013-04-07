@@ -65,7 +65,7 @@ bool GitFileManager::applyNextCommit(){
 
 
 
-void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff){
+void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff, bool useSyntaxHighlighting){
     
     //Make a copy of the original lines
     vector< boost::shared_ptr <Line> > originalLines = file.getLines();
@@ -228,7 +228,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     }
     
     //Reset the file with the new lines
-    LineFormatter::syntaxParseLines(newLines, LineFormatter::getFileLangType(file.getFilename()));
+    if(useSyntaxHighlighting) LineFormatter::syntaxParseLines(newLines, LineFormatter::getFileLangType(file.getFilename()));
     file.setLines(newLines);
     file.resetLineOrder();
 }
