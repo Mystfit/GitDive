@@ -167,7 +167,7 @@ string GitFile::getStr(){
     
     stringstream stream;
     for(int i = 0; i < m_activeLines.size(); i++) {
-        stream << m_activeLines[i]->getStr().c_str() << endl;
+        stream << m_activeLines[i]->getStr().c_str();
     }
     
     return stream.str();
