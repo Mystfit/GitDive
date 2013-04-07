@@ -43,9 +43,7 @@ string Line::getStr(){
             lineStr << it->str;
         }
     }
-    
-    lineStr << endl;
-    
+        
     return lineStr.str();
 }
 
