@@ -82,7 +82,9 @@ FormatterPtr LineFormatterManager::getFormatter(const std::string &elem) const{
 void LineFormatter::format(const std::string &s, const srchilite::FormatterParams *params) {
     
     if(elem == "") elem = "normal";
-    if(elem == "comment") cout << "WHAT IS MY LIFE?!" << endl;
+    if(elem == "comment") {
+        cout << "WHAT IS MY LIFE?!" << endl;
+    }
     
     string str = s;
     Utils::strip(str, "\n");
