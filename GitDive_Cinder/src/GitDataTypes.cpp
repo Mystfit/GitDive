@@ -34,12 +34,12 @@ string Line::getStr(){
     stringstream lineStr;
 
     if(!m_lineElements.empty()){
-        lineStr << m_lineStr;
+        lineStr << m_lineStr << endl;
     } else {
         for(vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
             lineStr << it->str;
         }
-        
+        lineStr << endl;
     }
     
     return lineStr;
