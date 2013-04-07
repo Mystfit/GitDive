@@ -27,7 +27,7 @@ struct LineElement {
     LineElement(string element, string elemStr, int pos) : elem(element), str(elemStr), position(pos)
     {
         if(elem == "comment"){
-            cout << "COMMENT!!";
+            cout << elem << "|" << elemStr << endl;
         }
     };
     string elem;
