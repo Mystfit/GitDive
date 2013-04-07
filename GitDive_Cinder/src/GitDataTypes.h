@@ -46,7 +46,7 @@ public:
     void setLinePos(int linePos){ m_linePos = linePos; };
     
     void addLineElement(LineElement element);
-    LineElement
+    vector< LineElement > getLineElements(){return m_lineElements; };
     
     enum lineState{LINE_NORMAL = 0, LINE_ADDED, LINE_DELETED};
     int getLineState(){ return m_lineState; };
