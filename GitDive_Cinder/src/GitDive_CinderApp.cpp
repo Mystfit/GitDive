@@ -17,7 +17,7 @@ void GitDive_CinderApp::setup()
     
     //Parse the diff log text into commit objects for the file manager
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
-    fManager.useSyntaxHighlighting = true;
+    fManager.setSyntaxHighlightStatus = true;
     
     mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
     mParams.addParam( "Use flat shading", &fManager.useSyntaxHighlighting);
