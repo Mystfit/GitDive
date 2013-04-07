@@ -40,7 +40,6 @@ string Line::getStr(){
             
         }
         
-        return lineElems;
     }
     
     return lineStr;
