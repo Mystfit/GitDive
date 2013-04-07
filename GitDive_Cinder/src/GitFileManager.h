@@ -93,7 +93,7 @@ private:
     vector< boost::shared_ptr<GitFile> > m_fileList;
     
     int m_commitIndex;
-    bool bUseSyntaxHighlighting;
+    bool useSyntaxHighlighting;
 };
 
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
