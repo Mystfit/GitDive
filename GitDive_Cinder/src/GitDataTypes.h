@@ -24,7 +24,12 @@ using namespace std;
  */
 
 struct LineElement {
-    LineElement(string element, string elemStr, int pos) : elem(element), str(elemStr), position(pos){};
+    LineElement(string element, string elemStr, int pos) : elem(element), str(elemStr), position(pos)
+    {
+        if(elem == "comment"){
+            cout << "COMMENT!!";
+        }
+    };
     string elem;
     string str;
     int position;
