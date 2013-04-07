@@ -46,6 +46,12 @@ string Line::getStr(){
 }
 
 
+void Line::addLineElement(LineElement element){
+    if(element.str != "\n") m_lineElements.push_back(element);
+}
+
+
+
 
 void Line::markForRemoval(){
     //Update visuals here. Break apart line into component parts
