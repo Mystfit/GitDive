@@ -30,6 +30,11 @@ Line::Line(string lineStr, bool justUpdated){
 }
 
 
+Line::getStr(){
+    return m_lineStr;
+}
+
+
 
 void Line::markForRemoval(){
     //Update visuals here. Break apart line into component parts
