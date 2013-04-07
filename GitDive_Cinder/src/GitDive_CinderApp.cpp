@@ -19,7 +19,7 @@ void GitDive_CinderApp::setup()
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     fManager.setSyntaxHighlighting(true);
     
-    mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
+    mParams = ci::params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
     mParams.addParam( "Use flat shading", &bUseFlatShading);
 
 
