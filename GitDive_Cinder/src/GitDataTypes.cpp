@@ -39,7 +39,7 @@ string Line::getStr(){
         for(vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
             lineStr << it->str;
         }
-        lineStr << endl;
+        //lineStr << endl;
     }
     
     return lineStr.str();
