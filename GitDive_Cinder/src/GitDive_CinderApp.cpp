@@ -37,16 +37,16 @@ void GitDive_CinderApp::mouseDown( MouseEvent event )
 }
 
 void GitDive_CinderApp::keyDown(KeyEvent event){    
-//    if(event.getChar() == KeyEvent::KEY_SPACE){
-//        fManager.applyNextCommit();
-//        fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
-//    }
+    if(event.getChar() == KeyEvent::KEY_SPACE){
+        bool success = fManager.applyNextCommit();
+        if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+    }
 }
 
 void GitDive_CinderApp::update()
 {
-    bool success = fManager.applyNextCommit();
-    if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+//    bool success = fManager.applyNextCommit();
+//    if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
 }
 
 void GitDive_CinderApp::draw()
