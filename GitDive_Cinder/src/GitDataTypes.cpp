@@ -36,8 +36,9 @@ string Line::getStr(){
     if(!m_lineElements.size()){
         lineStr << m_lineStr << endl;
     } else {
+        cout << m_lineElements.size();
         for(vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
-            cout << m_lineElements.size() << "|" << it->str << "|" ;
+            cout << "|" << it->str << "|" ;
             lineStr << it->str;
         }
     }
