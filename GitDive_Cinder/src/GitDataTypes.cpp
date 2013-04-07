@@ -30,7 +30,7 @@ Line::Line(string lineStr, bool justUpdated){
 }
 
 
-Line::getStr(){
+string Line::getStr(){
     return m_lineStr;
 }
 
