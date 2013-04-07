@@ -170,7 +170,7 @@ string GitFile::getStr(){
     
     stringstream stream;
     for(int i = 0; i < m_activeLines.size(); i++) {
-        stream << m_activeLines[i]->getStr().c_str();
+        stream << m_activeLines[i]->getStr().c_str() << endl;
     }
     
     return stream.str();
