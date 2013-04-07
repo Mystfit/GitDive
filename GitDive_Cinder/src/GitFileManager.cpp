@@ -281,9 +281,9 @@ string GitFileManager::serializeAllFiles(){
 
 string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
     stringstream fileText;
-    fileText << "<p><h3>File: " << file->getFilename() << "</h3></p>" << endl;
+    //fileText << "<p><h3>File: " << file->getFilename() << "</h3></p>" << endl;
     fileText << file->getStr(); //colourfyFile(*(file)); 
-    fileText << "<p />" << endl << endl;
+    //fileText << "<p />" << endl << endl;
 
     return fileText.str();
 }
