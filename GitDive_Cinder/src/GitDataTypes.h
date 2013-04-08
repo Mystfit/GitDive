@@ -35,7 +35,7 @@ struct LineElement : public TextAnimateable {
     int position;
 };
 
-class Line {
+class Line : public TextAnimateable {
 public:
     
     Line(string lineStr, bool justUpdated = false);
