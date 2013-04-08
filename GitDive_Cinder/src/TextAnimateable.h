@@ -21,9 +21,6 @@ public:
     TextAnimateable();
     virtual void animIn( Timeline &timeline, Vec2<float> position, Color colour )
     {
-        
-        timeline.apply( &m_position, position, 1.0f, EaseOutAtan( 20 ));
-        
         timeline.apply( &m_colour, colour, 1.0f, EaseOutAtan( 20 ) );
         timeline.apply( &m_position, position, 0.5f, EaseOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
     }
