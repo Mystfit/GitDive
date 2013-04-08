@@ -27,9 +27,7 @@ public:
     
     //Returns a free line element
     void getFreeLineElem(LineElement searchTarget);
-    
-    void removeLineElement()
-    
+        
 private:
     vector<boost::chared_ptr<Line> m_trackedLines;
     vector<LineElement> m_freeLineElements;
