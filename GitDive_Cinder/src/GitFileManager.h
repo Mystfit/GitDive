@@ -28,7 +28,7 @@ using namespace std;
 class GitFileManager {
 public:
     GitFileManager();
-    void setTextRenderer( TextRenderer & tRender ){ m_tRender = tRender };
+    void setTextRenderer( boost_shared_ptr<TextRenderer> tRender ){ m_tRender = tRender };
     
     //File addition/retrieval
     //-----------------------
