@@ -38,7 +38,9 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
                     applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
                 }
             }
-        }        
+        }
+        
+        m_tRender->animLinesIn(file->getLines());
     }
 }
 
@@ -238,7 +240,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     if(useSyntaxHighlighting) LineFormatter::syntaxParseLines(newLines, LineFormatter::getFileLangType(file.getFilename()));
     file.setLines(newLines);
     file.resetLineOrder();
-    m_tRender->animLinesIn(file.getLines());
 }
 
 
