@@ -103,7 +103,7 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 void GitDive_CinderApp::update()
 {
     if(bVizActive){
-        if(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed == 0){
+        if(round(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed) == 0){
             bool success = fManager.applyNextCommit();
             if(success){
                 if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
