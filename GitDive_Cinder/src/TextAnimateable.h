@@ -16,6 +16,8 @@
 #include "cinder/gl/TextureFont.h"
 #include "cinder/Easing.h"
 
+using cinder::easing;
+
 class TextAnimateable {
 public:
     TextAnimateable();
