@@ -8,7 +8,8 @@
 
 #include "TextAnimateable.h"
                 
-//void TextAnimateable::draw(cinder::gl::TextureFont & texFont){
-//    cinder::gl::color( m_colour );
-//    texFont.drawString( getStr(), m_position);
-//}
+void TextAnimateable::draw(cinder::gl::TextureFont & texFont){
+    cinder::gl::color( m_colour );
+    texFont.drawString( getStr(), m_position);
+}
+            
