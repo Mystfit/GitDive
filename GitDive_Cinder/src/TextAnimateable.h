@@ -28,7 +28,7 @@ public:
     virtual void animOut( Timeline &timeline, Vec2<float> destVec )
     {
         mDestMatrix = matrix;
-        timeline.apply( &mColorCur, mColorStart, 1.0f, EaseOutQuad() ).finishFn( bind( &TextAnimateable::onAnimOut, this ) );
+        timeline.apply( &mColorCur, mColorStart, 1.0f, EaseOutQuad() ).finishFn( std::bind( &TextAnimateable::onAnimOut, this ) );
         timeline.apply( &mMatrix, matrix, 1.0f, EaseOutQuad() );
     }
     
