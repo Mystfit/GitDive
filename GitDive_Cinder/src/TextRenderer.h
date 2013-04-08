@@ -20,7 +20,7 @@ public:
     TextRenderer();
     void draw();
     
-    TextureFontRef & getTexFont(){return m_textureFont; };
+    cinder::gl::TextureFontRef & getTexFont(){return m_textureFont; };
     
     //Starts tracking a line for rendering
     void trackLine(boost::shared_ptr<Line> line);
