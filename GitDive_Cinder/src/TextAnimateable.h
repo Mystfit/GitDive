@@ -20,6 +20,7 @@ using namespace cinder;
 class TextAnimateable {
 public:
     TextAnimateable(gl::TextureFontRef & textureFont);
+    virtual void draw();
     
     virtual void animIn( Timeline &timeline, Vec2<float> destVec, Color destColour )
     {
@@ -35,7 +36,6 @@ public:
     virtual void onAnimIn();
     virtual void onAnimOut();
     
-    void draw();
 private:
     Anim<Vec2f> m_position;
     Anim<Color> m_colour;
