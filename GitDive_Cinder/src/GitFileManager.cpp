@@ -83,7 +83,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         for(int i = 0; i < deltaAddLines.size(); i++) {
             
             //Create new line pointer
-            boost::shared_ptr<Line> newLine( mnew Line(deltaAddLines[i].getStr(), true) );
+            boost::shared_ptr<Line> newLine( &m_tRender.getTexFont()  new Line(deltaAddLines[i].getStr(), true) );
             newLine->setLinePos(i+1);
             newLines.push_back(newLine);            
         }
