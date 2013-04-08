@@ -105,15 +105,16 @@ void GitDive_CinderApp::update()
     cout << floor(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed) << endl;
     if(bVizActive){
         if(round(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed) == 0){
-            m_commitReady = true;
-            if(m_commitReady){
-                bool success = fManager.applyNextCommit();
-                if(success){
-                    if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
-                    m_frameReady = false;
-                } else {
-                    bVizActive = false;
-                }
+            bFframeReady = true;
+        }
+        
+        if(bFframeReady){
+            bool success = fManager.applyNextCommit();
+            if(success){
+                if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
+                bFframeReady = false;
+            } else {
+                bVizActive = false;
             }
         }
     }
