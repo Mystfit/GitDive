@@ -8,6 +8,6 @@
 
 #include "TextRenderer.h"
 
-TextRenderer::TexterRenderer(){
+TextRenderer::TextRenderer(){
     
 }
