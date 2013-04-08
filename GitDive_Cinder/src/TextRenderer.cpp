@@ -43,7 +43,6 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     }
     
     line.reset();
-    
 }
 
 
