@@ -34,7 +34,7 @@ public:
 	void update();
 	void draw();
     
-    void loadGitOutput();
+    void loadGitOutput(string repo, string gitCmd);
     void startVisualization();
     void pauseVisualization(){ bVizActive = false; };
     void jumpToEnd();
