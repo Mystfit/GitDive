@@ -29,7 +29,7 @@ void GitDive_CinderApp::setup()
     
     initUI();
         
-    fManager.setTextRenderer(tRender.getTextFont());
+    fManager.setTextRenderer(tRender);
     fManager.setSyntaxHighlightStatus(false);
 }
 
