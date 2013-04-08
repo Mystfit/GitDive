@@ -7,8 +7,6 @@ void GitDive_CinderApp::prepareSettings( Settings *settings )
 	settings->setWindowSize( 1024, 1024 );
 	settings->setFrameRate( 60 );
     
-    m_timeSpeed = 20;
-    bVizActive = false;
 }
 
 
@@ -18,6 +16,12 @@ void GitDive_CinderApp::setup()
     repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
     string gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
     string combinedCmd = "cd " + repoPath + " && " + gitCmd;
+    
+    m_timeSpeed = 20;
+    bVizActive = false;
+    bDumpFiles = true;
+    bOutputSyntax = true;
+    bOutputDifflog = false;
     
     initUI();
     
