@@ -17,7 +17,7 @@
 
 class TextRenderer {
 public:
-    TextRenderer(&textureFontRef) : m_textureFont(textureFontRef);
+    TextRenderer();
     void draw():
     
     //Starts tracking a line for rendering
@@ -38,7 +38,7 @@ private:
     vector<LineElement> m_freeLineElements;
     vector<LineElement> m_tweeingElements;
     
-    boost::shared_ptr<cinder::gl::TextureFontRef> m_textureFont;
+    m_textureFont;
     
 };
 
