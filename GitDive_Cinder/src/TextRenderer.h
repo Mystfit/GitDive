@@ -11,7 +11,8 @@
 
 #include <iostream>
 #include "GitDataTypes.h"
-#include "cinder/gl/
+#include "cinder/gl/TextureFont.h"
+
 
 class TextRenderer {
 public:
