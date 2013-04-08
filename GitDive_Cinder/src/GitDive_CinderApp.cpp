@@ -47,7 +47,6 @@ void GitDive_CinderApp::initUI(){
     mParams.addParam("Output syntax to file", &bOutputSyntax);
     mParams.addParam("Output Git diff log to file", &bOutputDifflog);
     mParams.addParam( "Dump files", &bDumpFiles);
-    
 
     mParams.addParam("Commits per second", &m_timeSpeed);
     mParams.addButton("Start", std::bind(&GitDive_CinderApp::startVisualization, this));
