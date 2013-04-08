@@ -33,13 +33,16 @@ public:
 	void update();
 	void draw();
     
+    void startVisualization(){ visActive = true; };
 
     
     //Variables
     string repoPath;
     string gitCmd;
     GitFileManager fManager;
-    params::InterfaceGl		mParams;
+    params::InterfaceGl mParams;
+    
+    bool vizActive;
     
 };
 
