@@ -113,9 +113,9 @@ void GitDive_CinderApp::update()
             if(success){
                 if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
             } else {
-                bFframeReady = false;
+                bVizActive = false;
             }
-            bVizActive = false;
+            bFframeReady = false;
         }
     }
 
