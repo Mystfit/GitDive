@@ -40,7 +40,6 @@ private:
     Anim<Color> m_colour;
     
     ci::gl::TextureFontRef mTextureFont;
-
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
