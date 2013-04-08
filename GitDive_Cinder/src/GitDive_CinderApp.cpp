@@ -7,7 +7,6 @@ void GitDive_CinderApp::prepareSettings( Settings *settings )
     
     m_timeSpeed = 20;
     bVizActive = false;
-    
 }
 
 void GitDive_CinderApp::setup()
