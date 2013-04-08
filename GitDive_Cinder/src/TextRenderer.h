@@ -36,7 +36,7 @@ private:
     vector<LineElement> m_freeLineElements;
     vector<LineElement> m_tweeingElements;
     
-	gl::TextureFontRef	mTextureFont;
+	cinder::gl::TextureFontRef	mTextureFont;
     
 };
 
