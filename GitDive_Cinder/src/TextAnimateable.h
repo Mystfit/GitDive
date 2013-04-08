@@ -14,6 +14,8 @@
 #include "cinder/Vector.h"
 #include "cinder/Color.h"
 
+using namespace cinder;
+
 class TextAnimateable {
 public:
     TextAnimateable();
@@ -34,6 +36,7 @@ public:
     {
     }
 private:
+    cinder::vec
     cinder::Color m_colour;
 };
 
