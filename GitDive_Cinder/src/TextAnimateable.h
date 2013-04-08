@@ -19,6 +19,7 @@ using namespace cinder;
 class TextAnimateable {
 public:
     TextAnimateable();
+    
     virtual void animIn( Timeline &timeline, Vec2<float> destVec, Color destColour )
     {
         timeline.apply( &m_colour, destColour, 1.0f, EaseOutAtan( 20 ) );
