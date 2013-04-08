@@ -35,6 +35,8 @@ private:
     vector< boost::shared_ptr<Line> > m_trackedLines;
     vector<LineElement> m_freeLineElements;
     vector<LineElement> m_tweeingElements;
+    
+    TextureFont m_texFont;
 };
 
 #endif /* defined(__GitDive_Cinder__TextRenderer__) */
