@@ -35,7 +35,7 @@ void TextAnimateable::animIn( cinder::TimelineRef timeline, cinder::Vec2<float> 
 //    timeline.apply( &m_position, destVec, 0.5f).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
 }
 
-cinder::TweenRef<cinder::Color> TextAnimateable::animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour)
+void TextAnimateable::animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour)
 {
     cinder::EaseInSine easer;
     m_posTween = timeline->apply( &m_position, destVec, 0.4f,  easer);
