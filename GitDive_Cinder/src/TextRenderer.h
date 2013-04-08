@@ -18,7 +18,7 @@
 class TextRenderer {
 public:
     TextRenderer();
-    void draw():
+    void draw();
     
     TextureFontRef & getTexFont(){return m_textureFont; };
     
