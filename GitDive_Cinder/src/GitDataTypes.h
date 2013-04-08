@@ -23,7 +23,7 @@ using namespace std;
  * A single line
  */
 
-struct LineElement : TextAnimateable {
+struct LineElement : public TextAnimateable {
     LineElement(string element, string elemStr, int pos) : elem(element), str(elemStr), position(pos)
     {
         if(elem == "comment"){
@@ -35,7 +35,7 @@ struct LineElement : TextAnimateable {
     int position;
 };
 
-class Line : TextAnimateable {
+class Line : public TextAnimateable {
 public:
     
     Line(string lineStr, bool justUpdated = false);
