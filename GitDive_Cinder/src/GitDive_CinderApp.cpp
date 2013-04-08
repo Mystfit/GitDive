@@ -14,6 +14,9 @@ void GitDive_CinderApp::setup()
     mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
     mParams.addParam("Repo path", &repoPath);
     mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
+    mParams.addParam( "Output syntax to file", &bOutputSyntax);
+    mParams.addParam( "Dump files", &bDumpFiles);
+
     mParams.addParam("Rebuild speed", &m_timeSpeed);
     mParams.addButton("Start", &GitDive_CinderApp::startVisualization);
     mParams.addButton("Jump to end", &GitDive_CinderApp::jumpToEnd);
