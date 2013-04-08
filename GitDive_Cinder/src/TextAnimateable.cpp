@@ -21,7 +21,7 @@ void TextAnimateable::draw(cinder::gl::TextureFont & texFont){
 
 void TextAnimateable::animIn( cinder::Timeline &timeline, cinder::Vec2<float> destVec, cinder::Color destColour )
 {
-    timeline.apply( &m_colour, destColour, 1.0f, cinder::easeOutAtan( 20.0f ) );
+    timeline.apply( &m_colour, destColour, 1.0f, std::bind(cinder::easeOutAtan( 20 ), this) );
     //timeline.apply( &m_position, destVec, 0.5f, cinder::easeOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
 }
 
