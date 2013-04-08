@@ -20,8 +20,8 @@ class TextAnimateable {
 public:
     TextAnimateable();
     void draw(cinder::gl::TextureFontRef & texFont);
-    void animIn( boost::shared_ptr<cinder::TimelineRef> timeline, cinder::Vec2<float> destVec, cinder::Color destColour );
-    void animOut( boost::shared_ptr<cinder::TimelineRef> timeline, cinder::Vec2<float> destVec, cinder::Color destColour );
+    void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour );
+    void animOut( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour );
     virtual std::string getStr();
     
     void onAnimIn();
