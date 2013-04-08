@@ -27,7 +27,14 @@ void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
     for(vector<boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         if(it->get()->getLineState() == Line::LINE_ADDED){
             it->get()->setPosition(cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT));
-            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
+            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));\
+            
+            vector<LineElement> elems = it->get()->getLineElements();
+            
+            for(int i = 0; i < elems.size(); i++){
+                elems[i].draw(m_textureFont);
+            }
+            
         } else if(it->get()->getLineState() == Line::LINE_NORMAL){
             it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
         }
