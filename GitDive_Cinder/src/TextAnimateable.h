@@ -14,6 +14,7 @@
 #include "cinder/Vector.h"
 #include "cinder/Color.h"
 #include "cinder/gl/TextureFont.h"
+#include "cinder/Easing.h"
 
 class TextAnimateable {
 public:
