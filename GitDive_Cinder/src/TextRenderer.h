@@ -9,7 +9,7 @@
 #ifndef __GitDive_Cinder__TextRenderer__
 #define __GitDive_Cinder__TextRenderer__
 
-#define LINE_HEIGHT 16
+#define LINE_HEIGHT 17
 #define FONT_SIZE 15
 
 #include <iostream>
