@@ -28,15 +28,12 @@ public:
     virtual void animOut( Timeline &timeline, Vec2<float> destVec )
     {
         mDestMatrix = matrix;
-        timeline.apply( &mColorCur, mColorStart, 1.0f, EaseOutQuad() ).finishFn( bind( &Character::onAnimOut, this ) );
+        timeline.apply( &mColorCur, mColorStart, 1.0f, EaseOutQuad() ).finishFn( bind( &onAnimOut, this ) );
         timeline.apply( &mMatrix, matrix, 1.0f, EaseOutQuad() );
     }
     
     virtual void onAnimIn();
-    
-    virtual void onAnimOut()
-    {
-    }
+    virtual void onAnimOut();
 private:
     Vec2<float> m_position;
     Color; m_colour;
