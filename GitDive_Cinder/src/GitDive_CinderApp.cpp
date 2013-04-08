@@ -69,7 +69,7 @@ void GitDive_CinderApp::loadGitOutput(string repo, string gitCmd){
 
 void GitDive_CinderApp::jumpToEnd(){
     if(!m_cmdOutput.size()){
-        m_cmdOutput
+        loadGitOutput(m_repoPath, m_gitCmd);
     }
     fManager.setSyntaxHighlightStatus(false);
     while(fManager.applyNextCommit());
