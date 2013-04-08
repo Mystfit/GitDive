@@ -24,8 +24,8 @@ public:
     void animOut( cinder::Timeline &timeline, cinder::Vec2<float> destVec, cinder::Color destColour );
     virtual std::string getStr();
     
-//    virtual void onAnimIn();
-//    virtual void onAnimOut();
+    void onAnimIn();
+    void onAnimOut();
     
 private:
     cinder::Anim<cinder::Vec2f> m_position;
