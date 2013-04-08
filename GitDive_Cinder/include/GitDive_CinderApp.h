@@ -44,7 +44,7 @@ public:
     params::InterfaceGl mParams;
     
     string repoPath;
-    bool bVizActive, bOutputSyntax, bDumpFiles;
+    bool bVizActive, bOutputSyntax, bDumpFiles, bOutputDifflog;
     int m_timeSpeed;
 };
 
