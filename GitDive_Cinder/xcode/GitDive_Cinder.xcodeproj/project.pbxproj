@@ -115,7 +115,6 @@
 				4A1A6B7F17054D940046BE09 /* Utils.cpp */,
 				4AB896D717129B8900533992 /* TextRenderer.cpp */,
 				4AB896DB1712B84900533992 /* TextAnimateable.cpp */,
-				4AB896DC1712B84900533992 /* TextAnimateable.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -172,6 +171,7 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				4AB896DC1712B84900533992 /* TextAnimateable.h */,
 				4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */,
 				4A1A6BCB1705AAE60046BE09 /* GitLogParser.h */,
 				4A1A6BC81705A5880046BE09 /* GitDataTypes.h */,
