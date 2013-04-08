@@ -33,7 +33,7 @@ public:
     {
     }
 private:
-    m_colour;
+    Colour m_colour;
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
