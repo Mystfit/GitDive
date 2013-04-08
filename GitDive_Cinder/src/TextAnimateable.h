@@ -19,9 +19,9 @@ using namespace cinder;
 class TextAnimateable {
 public:
     TextAnimateable();
-    virtual void animIn( Timeline &timeline, Vec2<float> destVec )
+    virtual void animIn( Timeline &timeline, Vec2<float> destVec, Colour destColour )
     {
-        timeline.apply( &mColorCur, mColorDest, 1.0f, EaseOutAtan( 20 ) );
+        timeline.apply( &m_colour, mColorDest, 1.0f, EaseOutAtan( 20 ) );
         timeline.apply( &m_position, destVec, 0.5f, EaseOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
     }
     
