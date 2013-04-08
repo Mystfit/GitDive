@@ -41,6 +41,7 @@ public:
     
     //Managers
     GitFileManager fManager;
+    TextRenderer tRender;
     params::InterfaceGl mParams;
     
     //Variables
