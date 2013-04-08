@@ -10,8 +10,9 @@ void GitDive_CinderApp::prepareSettings( Settings *settings )
 void GitDive_CinderApp::setup()
 {
     mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
-    mParams.addButton("Start", &start_path)
     mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
+    mParams.addButton("Start", &startVisualization);
+
 
     string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
     string gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
@@ -47,8 +48,14 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 
 void GitDive_CinderApp::update()
 {
-//    bool success = fManager.applyNextCommit();
-//    if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+    if(bVizActive){
+        
+        if(ci::)
+        
+        bool success = fManager.applyNextCommit();
+        if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+    }
+
 }
 
 void GitDive_CinderApp::draw()
