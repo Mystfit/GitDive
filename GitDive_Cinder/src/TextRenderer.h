@@ -16,6 +16,8 @@ class TextRenderer {
 public:
     TextRenderer();
     
+    void trackLine(boost::shared_ptr<Line> line);
+    
     void addFreeLineElem(LineElement lnElem);
     void getFreeLineElem(LineElement searchTarget);
     
