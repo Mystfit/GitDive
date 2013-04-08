@@ -43,7 +43,7 @@ private:
     vector<LineElement> m_freeLineElements;
     
     cinder::gl::TextureFontRef m_textureFont;
-    cinder::TimelineRef m_timeline;
+    boost::shared_ptr< cinder::TimelineRef > m_timeline;
     
 };
 
