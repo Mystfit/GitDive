@@ -15,6 +15,9 @@
 class TextRenderer {
 public:
     TextRenderer();
+    
+    void addFreeLineElement(LineElement element);
+    
 private:
     vector<LineElement> m_freeLineElements;
 };
