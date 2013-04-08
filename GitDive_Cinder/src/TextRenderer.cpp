@@ -26,7 +26,8 @@ void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
     for(vector<boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         if(it->get()->getLineState() == Line::LINE_ADDED){
-            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * 10), cinder::Color(255,255,255));
+            it->get()->setPosition(50, it->get()->getLinePos() * 15);
+            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * 16), cinder::Color(255,255,255));
         }
     }
 }
