@@ -31,7 +31,7 @@ void TextAnimateable::animIn( cinder::Timeline &timeline, cinder::Vec2<float> de
 void TextAnimateable::animOut( cinder::Timeline &timeline, cinder::Vec2<float> destVec, cinder::Color destColour )
 {
     
-    cinder::Tween<cinder::Vec2f> test = timeLine.apply(m_position, destVec, 0.5f);
+    cinder::Tween<cinder::Vec2f> test = timeline.apply(m_position, destVec, 0.5f);
     
     cinder::EaseOutAtan easer(30);
     timeline.apply( &m_colour, destColour, 1.0f,  easer);
