@@ -10,7 +10,7 @@
 
 
                 
-TextAnimateable::draw(){
+void TextAnimateable::draw(){
     gl::color( m_colour );
     m_TextureFont->drawString( mChar, mKernBounds.getCenter() - Vec2f( mKernBounds.getWidth(), 0.0f ) );
     gl::popMatrices();
