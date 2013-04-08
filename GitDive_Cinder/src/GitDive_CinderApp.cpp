@@ -29,11 +29,6 @@ void GitDive_CinderApp::setup()
     
     initUI();
     
-    //Get the output of the git command from stdout as a giant string
-    string cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
-    
-    //Parse the diff log text into commit objects for the file manager
-    fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     fManager.setSyntaxHighlightStatus(false);
 }
 
@@ -52,6 +47,18 @@ void GitDive_CinderApp::initUI(){
     mParams.addButton("Start", std::bind(&GitDive_CinderApp::startVisualization, this));
     mParams.addButton("Jump to end", std::bind(&GitDive_CinderApp::jumpToEnd, this));
 }
+
+
+void GitDive_CinderApp::startVisualization(){
+    bVizActive = true;
+    
+    //Get the output of the git command from stdout as a giant string
+    string cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
+    
+    //Parse the diff log text into commit objects for the file manager
+    fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
+};
+
 
 
 
