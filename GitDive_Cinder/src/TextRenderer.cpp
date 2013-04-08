@@ -23,6 +23,13 @@ void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 
 
 
+void animLinesIn(vector<boost::shared_ptr<Line> > lines){
+    
+}
+
+
+
+
 void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     vector<LineElement> lineElems = line->getLineElements();
     for(int i = 0; i < lineElems.size(); i++){
