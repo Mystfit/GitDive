@@ -23,7 +23,7 @@ public:
     cinder::gl::TextureFontRef & getTexFont(){return m_textureFont; };
     
     //Starts tracking a line for rendering
-    void addLine(boost::shared_ptr<Line> line);
+    void makeLineFromFreeElements(boost::shared_ptr<Line> line);
     
     //Breaks line into component elements
     void breakLine(boost::shared_ptr<Line> line);
