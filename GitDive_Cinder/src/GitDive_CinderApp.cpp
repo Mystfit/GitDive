@@ -102,6 +102,7 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 
 void GitDive_CinderApp::update()
 {
+    cout << "frame" << endl;
     if(bVizActive){
         if(round(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed) == 0){
             bool success = fManager.applyNextCommit();
