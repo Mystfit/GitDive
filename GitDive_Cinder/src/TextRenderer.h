@@ -34,7 +34,7 @@ public:
     //Returns a free line element
     void getFreeLineElem(LineElement searchTarget);
     
-    void animLinesIn(vector<boost::shared_ptr<Lines> > lines);
+    void animLinesIn(vector<boost::shared_ptr<Line> > lines);
         
 private:    
     vector<LineElement> m_freeLineElements;
