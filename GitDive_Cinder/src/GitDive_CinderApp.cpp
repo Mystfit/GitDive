@@ -11,7 +11,7 @@ void GitDive_CinderApp::setup()
 {
     mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
     mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
-    mParams.addButton("Start", &startVisualization);
+    mParams.addButton("Start", &GitDiv_Cinder::startVisualization);
 
 
     string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
