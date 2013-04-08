@@ -49,21 +49,28 @@ void GitDive_CinderApp::initUI(){
 
 
 void GitDive_CinderApp::startVisualization(){    
-    string combinedCmd = "cd " + repoPath + " && " + gitCmd;
     
-    //Get the output of the git command from stdout as a giant string
-    string cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
-    
-    //Parse the diff log text into commit objects for the file manager
-    fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     
     bVizActive = true;
 };
 
 
 
+void GitDive_CinderApp::loadGitOutput(string repo, string gitCmd){
+    string combinedCmd = "cd " + repoPath + " && " + gitCmd;
+    
+    //Get the output of the git command from stdout as a giant string
+    m_cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
+    
+    //Parse the diff log text into commit objects for the file manager
+    fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
+}
+
 
 void GitDive_CinderApp::jumpToEnd(){
+    if(!m_cmdOutput.size()){
+        m_cmdOutput
+    }
     fManager.setSyntaxHighlightStatus(false);
     while(fManager.applyNextCommit());
     
