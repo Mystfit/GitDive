@@ -42,15 +42,15 @@ void GitDive_CinderApp::setup()
 void GitDive_CinderApp::initUI(){
     //Setup UI
     mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
-    mParams.addParam("Repo path", &repoPath);
-    mParams.addParam("Split lines by syntax", &fManager.getSyntaxHighlightStatus());
-    mParams.addParam("Output syntax to file", &bOutputSyntax);
-    mParams.addParam("Output Git diff log to file", &bOutputDifflog);
-    mParams.addParam( "Dump files", &bDumpFiles);
-    
-    mParams.addParam("Commits per second", &m_timeSpeed);
-    mParams.addButton("Start", &GitDive_CinderApp::startVisualization);
-    mParams.addButton("Jump to end", &GitDive_CinderApp::jumpToEnd);
+//    mParams.addParam("Repo path", &repoPath);
+//    mParams.addParam("Split lines by syntax", &fManager.getSyntaxHighlightStatus());
+//    mParams.addParam("Output syntax to file", &bOutputSyntax);
+//    mParams.addParam("Output Git diff log to file", &bOutputDifflog);
+//    mParams.addParam( "Dump files", &bDumpFiles);
+//    
+//    mParams.addParam("Commits per second", &m_timeSpeed);
+//    mParams.addButton("Start", &GitDive_CinderApp::startVisualization);
+//    mParams.addButton("Jump to end", &GitDive_CinderApp::jumpToEnd);
 }
 
 
