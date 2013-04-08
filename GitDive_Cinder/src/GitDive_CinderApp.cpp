@@ -3,11 +3,16 @@
 void GitDive_CinderApp::prepareSettings( Settings *settings )
 {
 	settings->setWindowSize( 1024, 1024 );
-	settings->setFrameRate( 10 );    
+	settings->setFrameRate( 10 );
+    
 }
 
 void GitDive_CinderApp::setup()
 {
+    mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
+    mParams.addButton("Start", &start_path)
+    mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
+
     string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
     string gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
     string combinedCmd = "cd " + repoPath + " && " + gitCmd;
@@ -19,9 +24,7 @@ void GitDive_CinderApp::setup()
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     fManager.setSyntaxHighlightStatus(false);
     
-    mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
-    mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
-    
+       
     while(fManager.applyNextCommit());
     
     fManager.syntaxParseAllFiles();
