@@ -20,7 +20,7 @@ public:
     TextRenderer();
     void draw():
     
-    TextureFontRef & getTextureFont(){return
+    TextureFontRef & getTextureFont(){return m_textureFont; };
     
     //Starts tracking a line for rendering
     void trackLine(boost::shared_ptr<Line> line);
