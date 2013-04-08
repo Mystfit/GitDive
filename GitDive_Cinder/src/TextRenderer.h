@@ -23,7 +23,7 @@ public:
     
     cinder::gl::TextureFontRef & getTexFont(){return m_textureFont; };
     
-    void setTimeline(Timeline & timeline){ m_timeline = timeline; };
+    void setTimeline(cinder::Timeline & timeline){ m_timeline = timeline; };
         
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
