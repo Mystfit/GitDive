@@ -29,7 +29,7 @@ void GitDive_CinderApp::setup()
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     fManager.setSyntaxHighlightStatus(false);
     
-       
+    
     fManager.syntaxParseAllFiles();
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
     fManager.dumpFileOutput("/Users/mystfit/desktop/colourOut.html");
@@ -38,9 +38,9 @@ void GitDive_CinderApp::setup()
 }
 
 void jumpToEnd(){
+    fManager.setSyntaxHighlightStatus(false);
     while(fManager.applyNextCommit());
-    if()
-
+    fManager.syntaxParseAllFiles();
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
