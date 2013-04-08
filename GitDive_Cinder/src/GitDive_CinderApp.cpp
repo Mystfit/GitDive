@@ -50,7 +50,7 @@ void GitDive_CinderApp::initUI(){
     
 
     mParams.addParam("Commits per second", &m_timeSpeed);
-    mParams.addButton("Start", std::bind(this, &GitDive_CinderApp::startVisualization));
+    mParams.addButton("Start", &GitDive_CinderApp::startVisualization);
 //    mParams.addButton("Jump to end", &GitDive_CinderApp::jumpToEnd);
 }
 
