@@ -34,9 +34,9 @@ public:
         //timeline.apply( &m_position, destVec, 0.5f, cinder::easeOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
     }
     
-    virtual void onAnimIn();
-    virtual void onAnimOut();
-        
+//    virtual void onAnimIn();
+//    virtual void onAnimOut();
+    
 private:
     cinder::Anim<cinder::Vec2f> m_position;
     cinder::Anim<cinder::Color> m_colour;
