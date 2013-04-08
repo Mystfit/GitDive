@@ -28,7 +28,7 @@ using namespace std;
 class GitFileManager {
 public:
     GitFileManager();
-    void setTextureFontRef( ){ m_textureFont = textureFont };
+    void setTextRenderer( TextRenderer tRender ){ m_tRender = tRender };
     
     //File addition/retrieval
     //-----------------------
