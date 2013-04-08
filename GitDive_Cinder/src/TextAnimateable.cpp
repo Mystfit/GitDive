@@ -33,4 +33,5 @@ void TextAnimateable::animOut( cinder::Timeline &timeline, cinder::Vec2<float> d
 
 std::string TextAnimateable::getStr()
 {
+    return "";
 }
