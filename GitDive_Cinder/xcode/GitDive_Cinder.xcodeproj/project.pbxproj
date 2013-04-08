@@ -104,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				4AB896D717129B8900533992 /* TextRenderer.cpp */,
-				4AB896D817129B8900533992 /* TextRenderer.h */,
 				00BAE6590E7ED9C10018A608 /* GitDive_CinderApp.cpp */,
 				4A1A6BCA1705AAE60046BE09 /* GitLogParser.cpp */,
 				4A1A6BC71705A5880046BE09 /* GitDataTypes.cpp */,
@@ -173,6 +172,7 @@
 				4AD7492017097505006ACBC6 /* GitFileManager.h */,
 				4A1253FB170FF90000DE28C9 /* SyntaxColourTools.h */,
 				4A1A6B7B17042CCA0046BE09 /* Utils.h */,
+				4AB896D817129B8900533992 /* TextRenderer.h */,
 				32CA4F630368D1EE00C91783 /* GitDive_Cinder_Prefix.pch */,
 			);
 			name = Headers;
