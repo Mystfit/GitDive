@@ -43,7 +43,7 @@ void GitDive_CinderApp::initUI(){
     mParams.addParam( "Dump files", &bDumpFiles);
     
     stringstream maxSpeed; 
-    maxSpeed << "min=1, max=" << ci::app::getFrameRate();
+    maxSpeed << "min=1, max=" << ci::app::getFrameRate()/2;
     mParams.addParam("Commits per second", &m_timeSpeed, maxSpeed.str());
     mParams.addButton("Jump to end", std::bind(&GitDive_CinderApp::jumpToEnd, this));
     mParams.addButton("Start", std::bind(&GitDive_CinderApp::startVisualization, this));
