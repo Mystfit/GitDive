@@ -32,7 +32,7 @@ void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
             vector<LineElement> elems = it->get()->getLineElements();
             
             for(int i = 0; i < elems.size(); i++){
-                elems[i].draw(m_textureFont);
+                elems[i].setPosition(cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT));
             }
             
         } else if(it->get()->getLineState() == Line::LINE_NORMAL){
