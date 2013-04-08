@@ -12,6 +12,6 @@
                 
 void TextAnimateable::draw(){
     gl::color( m_colour );
-    m_textureFont->drawString( getStr(), m_position) );
+    m_textureFont->drawString( getStr(), m_position) ;
 }
             
