@@ -17,7 +17,7 @@ void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     texFont->drawString( getStr(), m_position);
 }
 
-void TextAnimateable::setPosition(cinder::Vecf position){
+void TextAnimateable::setPosition(cinder::Vec2f position){
     m_position = position;
 }
 
