@@ -35,8 +35,12 @@ public:
         timeline.apply( &m_colour, destColour, 1.0f, EaseOutAtan( 20 ) );
         timeline.apply( &m_position, destVec, 0.5f, EaseOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );    }
     
-    virtual void onAnimIn();
+    virtual void onAnimIn(){
+        
+    };
     virtual void onAnimOut();
+    
+    bool 
     
 private:
     Anim<Vec2f> m_position;
