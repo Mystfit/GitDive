@@ -18,9 +18,11 @@
 class TextRenderer {
 public:
     TextRenderer();
-    void draw();
+    void draw(vector< boost::shared_ptr<Line> > & lines);
     
     cinder::gl::TextureFontRef & getTexFont(){return m_textureFont; };
+    
+    void setLineSource()
     
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
