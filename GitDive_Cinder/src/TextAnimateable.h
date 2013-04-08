@@ -22,14 +22,12 @@ public:
     virtual void animIn( Timeline &timeline, Vec2<float> destVec )
     {
         timeline.apply( &mColorCur, mColorDest, 1.0f, EaseOutAtan( 20 ) );
-        timeline.apply( &mMatrix, matrix, 0.5f, EaseOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
+        timeline.apply( &m_position, destVec, 0.5f, EaseOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
     }
     
     virtual void animOut( Timeline &timeline, Vec2<float> destVec )
     {
-        mDestMatrix = matrix;
         timeline.apply( &mColorCur, mColorStart, 1.0f, EaseOutQuad() ).finishFn( std::bind( &TextAnimateable::onAnimOut, this ) );
-        timeline.apply( &mMatrix, matrix, 1.0f, EaseOutQuad() );
     }
     
     virtual void onAnimIn();
