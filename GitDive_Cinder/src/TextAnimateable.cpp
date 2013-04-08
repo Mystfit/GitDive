@@ -12,7 +12,6 @@
                 
 void TextAnimateable::draw(){
     gl::color( m_colour );
-    m_textureFont->drawString( getStr(), m_postion, 0.0f ) );
-    gl::popMatrices();
+    m_textureFont->drawString( getStr(), m_position) );
 }
             
