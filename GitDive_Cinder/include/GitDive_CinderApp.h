@@ -41,7 +41,7 @@ public:
     
     //Managers
     GitFileManager fManager;
-    TextRenderer tRender;
+    boost::shared_ptr<TextRenderer> tRender;
     params::InterfaceGl mParams;
     
     //Variables
