@@ -35,6 +35,7 @@ public:
     
     void startVisualization(){ bVizActive = true; };
     void pauseVisualization(){ bVizActive = false; };
+    void jumpToEnd();
     
     //Variables
     string repoPath;
