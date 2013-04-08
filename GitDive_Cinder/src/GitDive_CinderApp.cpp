@@ -31,7 +31,7 @@ void GitDive_CinderApp::setup()
     initUI();
     
     tRender = boost::shared_ptr<TextRenderer>(new TextRenderer());
-    tRender->setTimeline(cinder::app::)
+    tRender->setTimeline(cinder::app::timeline())
     fManager.setTextRenderer(tRender);
     fManager.setSyntaxHighlightStatus(false);
 }
