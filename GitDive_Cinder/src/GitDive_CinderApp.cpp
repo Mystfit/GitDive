@@ -147,7 +147,9 @@ void GitDive_CinderApp::draw()
     
     if(tRender && bVizActive)
     {
-        tRender->draw( fManager.getFileByName(m_targetFile)->getLines() );
+        if(fManager.getFileByName(m_targetFile)){
+            tRender->draw( fManager.getFileByName(m_targetFile)->getLines() );
+        }
     }
 }
 
