@@ -5,6 +5,8 @@ void GitDive_CinderApp::prepareSettings( Settings *settings )
 	settings->setWindowSize( 1024, 1024 );
 	settings->setFrameRate( 60 );
     
+    m_timeSpeed = 20;
+    
 }
 
 void GitDive_CinderApp::setup()
@@ -13,7 +15,6 @@ void GitDive_CinderApp::setup()
     mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
     mParams.addParam("Rebuild speed", &m_timeSpeed);
     mParams.addButton("Start", &GitDive_CinderApp::startVisualization);
-
 
     string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
     string gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
@@ -25,7 +26,6 @@ void GitDive_CinderApp::setup()
     //Parse the diff log text into commit objects for the file manager
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     fManager.setSyntaxHighlightStatus(false);
-    
        
     while(fManager.applyNextCommit());
     
