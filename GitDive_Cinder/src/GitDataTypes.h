@@ -14,6 +14,7 @@
 #include <sstream>
 #include <boost/shared_ptr.hpp>
 #include "Utils.h"
+#include "TextAnimateable.h"
 
 
 using namespace std;
