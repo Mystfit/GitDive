@@ -47,7 +47,7 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
 
 void TextRenderer::draw(vector< boost::shared_ptr<Line> > & lines){
     
-    for(vector<Line>::iterator it = lines.begin(); it != lines.end(); ++it){
+    for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         it->draw(m_textureFont);
     }
 }
