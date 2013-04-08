@@ -31,8 +31,8 @@ private:
     cinder::Anim<cinder::Vec2f> m_position;
     cinder::Anim<cinder::Color> m_colour;
     
-    cinder::Tween<cinder::Vec2f> m_posTween;
-    cinder::Tween<cinder::Color> m_colourTween;    
+    cinder::TweenRef<cinder::Vec2f> m_posTween;
+    cinder::TweenRef<cinder::Color> m_colourTween;
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
