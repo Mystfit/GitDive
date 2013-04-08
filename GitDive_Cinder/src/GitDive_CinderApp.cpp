@@ -27,7 +27,6 @@ void GitDive_CinderApp::setup()
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     fManager.setSyntaxHighlightStatus(false);
     
-    
     while(fManager.applyNextCommit());
     
     fManager.syntaxParseAllFiles();
