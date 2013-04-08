@@ -15,7 +15,7 @@ TextRenderer::TextRenderer(){
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
 }
 
-void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line);
+void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 
 }
 
