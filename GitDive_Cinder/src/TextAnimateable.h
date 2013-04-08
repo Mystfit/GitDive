@@ -14,6 +14,7 @@
 
 class TextAnimateable {
 public:
+    TextAnimateable();
     virtual void animIn( Timeline &timeline, Matrix44f matrix )
     {
         mDestMatrix = matrix;
