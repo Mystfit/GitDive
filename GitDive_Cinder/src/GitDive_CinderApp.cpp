@@ -1,5 +1,7 @@
 #include "GitDive_CinderApp.h"
 
+
+
 void GitDive_CinderApp::prepareSettings( Settings *settings )
 {
 	settings->setWindowSize( 1024, 1024 );
