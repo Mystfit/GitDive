@@ -58,7 +58,6 @@ void GitDive_CinderApp::startVisualization(){
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     
     bVizActive = true;
-
 };
 
 
@@ -97,7 +96,6 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 void GitDive_CinderApp::update()
 {
     if(bVizActive){
-        
         if(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed == 0){
             bool success = fManager.applyNextCommit();
             if(success && bDumpFiles) fManager.dumpAllFiles(m_fileDir);
