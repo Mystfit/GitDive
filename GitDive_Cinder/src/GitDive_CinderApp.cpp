@@ -112,11 +112,10 @@ void GitDive_CinderApp::update()
             bool success = fManager.applyNextCommit();
             if(success){
                 if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
-                bFframeReady = false;
             } else {
                 bFframeReady = false;
-                bVizActive = false;
             }
+            bVizActive = false;
         }
     }
 
