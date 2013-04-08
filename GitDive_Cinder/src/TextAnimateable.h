@@ -37,7 +37,7 @@ public:
 
 protected:
     cinder::Anim<cinder::Vec2f> m_position;
-    Anim<cinder::Color> m_colour;
+    cinder::Anim<cinder::Color> m_colour;
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
