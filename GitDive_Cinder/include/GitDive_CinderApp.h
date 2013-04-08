@@ -43,7 +43,8 @@ public:
     GitFileManager fManager;
     params::InterfaceGl mParams;
     
-    bool bVizActive;
+    string repoPath;
+    bool bVizActive, bOutputSyntax, bDumpFiles;
     int m_timeSpeed;
 };
 
