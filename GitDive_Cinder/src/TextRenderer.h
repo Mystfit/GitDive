@@ -24,7 +24,7 @@ public:
     cinder::gl::TextureFontRef & getTexFont(){return m_textureFont; };
     
     void setTimeline(cinder::TimelineRef timelineRef){ m_timeline = timelineRef; };
-        
+    
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
     
@@ -43,7 +43,7 @@ private:
     vector<LineElement> m_freeLineElements;
     
     cinder::gl::TextureFontRef m_textureFont;
-    boost::shared_ptr< cinder::TimelineRef > m_timeline;
+    cinder::TimelineRef m_timeline;
     
 };
 
