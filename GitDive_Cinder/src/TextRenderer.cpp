@@ -9,7 +9,7 @@
 #include "TextRenderer.h"
 
 TextRenderer::TextRenderer(){
-    m_textureFont(new TextFont())
+    m_textureFont(new TextFont());
 }
 
 TextRenderer::TextRenderer(){
