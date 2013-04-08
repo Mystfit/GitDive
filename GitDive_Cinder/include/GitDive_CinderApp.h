@@ -33,8 +33,8 @@ public:
 	void update();
 	void draw();
     
-    void startVisualization(){ visActive = true; };
-    void pauseVisualization(){ visActive = false; };
+    void startVisualization(){ bVizActive = true; };
+    void pauseVisualization(){ bVizActive = false; };
     
     //Variables
     string repoPath;
@@ -42,7 +42,7 @@ public:
     GitFileManager fManager;
     params::InterfaceGl mParams;
     
-    bool vizActive;
+    bool bVizActive;
     
 };
 
