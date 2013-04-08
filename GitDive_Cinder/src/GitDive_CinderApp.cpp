@@ -29,6 +29,8 @@ void GitDive_CinderApp::setup()
     
     initUI();
     
+    tRender = new TextRenderer();
+    
     fManager.setTextRenderer();
     fManager.setSyntaxHighlightStatus(false);
 }
