@@ -63,7 +63,7 @@ void GitDive_CinderApp::loadGitOutput(string repo, string gitCmd){
     m_cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
     
     //Parse the diff log text into commit objects for the file manager
-    fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
+    fManager.setCommitSource(GitLogParser::parseLog(m_cmdOutput));
 }
 
 
