@@ -48,7 +48,7 @@ public:
     string m_diffLogPath, m_fileDir, m_fileOutput;
 
     bool bVizActive, bOutputSyntax, bDumpFiles, bOutputDifflog, bFframeReady;
-    int m_timeSpeed;
+    int m_timeSpeed, m_lastFrame;
 };
 
 #endif
