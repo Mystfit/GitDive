@@ -44,7 +44,7 @@ public:
     
     //Variables
     string repoPath;
-    string gitCmd, gitCmd;
+    string gitCmd;
     string m_diffLogPath, m_fileDir, m_fileOutput;
 
     bool bVizActive, bOutputSyntax, bDumpFiles, bOutputDifflog;
