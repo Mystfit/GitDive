@@ -55,6 +55,7 @@ void GitDive_CinderApp::startVisualization(){
 
 
 void GitDive_CinderApp::loadGitOutput(string repo, string gitCmd){
+    cout << "Running git command:" << m_gitCmd << endl;
     string combinedCmd = "cd " + repo + " && " + gitCmd;
     
     //Get the output of the git command from stdout as a giant string
