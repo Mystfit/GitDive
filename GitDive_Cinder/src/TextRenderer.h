@@ -11,7 +11,7 @@
 
 #include <iostream>
 #include "GitDataTypes.h"
-#include "cinder/timeline.h
+#include "cinder/timeline.h"
 #include "cinder/gl/gl.h"
 #include "cinder/gl/TextureFont.h"
 
@@ -22,6 +22,8 @@ public:
     void draw(vector< boost::shared_ptr<Line> > & lines);
     
     cinder::gl::TextureFontRef & getTexFont(){return m_textureFont; };
+    
+    void setTimeline(Timeline & timeline){ m_timeline = timeline; };
         
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
