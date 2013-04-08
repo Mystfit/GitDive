@@ -17,6 +17,10 @@ void GitDive_CinderApp::setup()
     string gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
     string combinedCmd = "cd " + repoPath + " && " + gitCmd;
     
+    m_diffLogPath = "/Users/mystfit/desktop/cinderDiffOut.log";
+    m_fileDir = "/Users/mystfit/desktop/dumpFiles";
+    m_fileOutput = "/Users/mystfit/desktop/colourOut.html";
+    
     m_timeSpeed = 20;
     bVizActive = false;
     bDumpFiles = true;
@@ -57,11 +61,11 @@ void GitDive_CinderApp::jumpToEnd(){
     
     if(bOutputSyntax){
         fManager.syntaxParseAllFiles();
-        fManager.dumpFileOutput("/Users/mystfit/desktop/colourOut.html");
+        fManager.dumpFileOutput(m_fileOutput);
     }
     
-    if(bDumpFiles) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
-    if(bOutputDifflog) GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
+    if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
+    if(bOutputDifflog) GitLogParser::dumpDiffOutput(fManager.getCommitSource(), m_diffLogPath);
 }
 
 
