@@ -21,7 +21,7 @@ class TextAnimateable {
 public:
     TextAnimateable(gl::TextureFontRef & textureFont) : m_textureFont(textureFont){};
     void draw();
-    virtual string getStr();
+    virtual std::string getStr();
     
     virtual void animIn( Timeline &timeline, Vec2<float> destVec, Color destColour )
     {
