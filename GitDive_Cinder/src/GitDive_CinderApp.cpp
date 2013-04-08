@@ -13,8 +13,9 @@ void GitDive_CinderApp::setup()
 {
     mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
     mParams.addParam("Repo path", &repoPath);
-    mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
-    mParams.addParam( "Output syntax to file", &bOutputSyntax);
+    mParams.addParam("Split lines by syntax", &fManager.getSyntaxHighlightStatus());
+    mParams.addParam("Output syntax to file", &bOutputSyntax);
+    mParams.addParam("Output Git diff log to file", &bOutputDifflog);
     mParams.addParam( "Dump files", &bDumpFiles);
 
     mParams.addParam("Commits per second", &m_timeSpeed);
@@ -32,17 +33,19 @@ void GitDive_CinderApp::setup()
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     fManager.setSyntaxHighlightStatus(false);
     
-    fManager.syntaxParseAllFiles();
-    fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
-    fManager.dumpFileOutput("/Users/mystfit/desktop/colourOut.html");
-//    //Debug serialization
-//    GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
 }
 
 void GitDive_CinderApp::jumpToEnd(){
     fManager.setSyntaxHighlightStatus(false);
     while(fManager.applyNextCommit());
-    fManager.syntaxParseAllFiles();
+    
+    if(bOutputSyntax){
+        fManager.syntaxParseAllFiles();
+        fManager.dumpFileOutput("/Users/mystfit/desktop/colourOut.html");
+    }
+    
+    if(bDumpFiles) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+    if(bOutputDifflog) GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
@@ -50,10 +53,10 @@ void GitDive_CinderApp::mouseDown( MouseEvent event )
 }
 
 void GitDive_CinderApp::keyDown(KeyEvent event){    
-    if(event.getChar() == KeyEvent::KEY_SPACE){
-        bool success = fManager.applyNextCommit();
-        if(success && bDumpFiles) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
-    }
+//    if(event.getChar() == KeyEvent::KEY_SPACE){
+//        bool success = fManager.applyNextCommit();
+//        if(success && bDumpFiles) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+//    }
 }
 
 void GitDive_CinderApp::update()
