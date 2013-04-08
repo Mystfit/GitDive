@@ -46,7 +46,6 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
 
 void TextRenderer::removeLine(boost::shared_ptr<Line> line){
     line.reset();
-
 }
 
 
