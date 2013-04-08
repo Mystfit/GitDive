@@ -19,6 +19,7 @@ void GitDive_CinderApp::setup()
     m_diffLogPath = "/Users/mystfit/desktop/cinderDiffOut.log";
     m_fileDir = "/Users/mystfit/desktop/dumpFiles";
     m_fileOutput = "/Users/mystfit/desktop/colourOut.html";
+    m_targetFile = "diffReader.py";
     
     m_timeSpeed = 20;
     bVizActive = false;
@@ -52,6 +53,8 @@ void GitDive_CinderApp::initUI(){
     mParams.addButton("Jump to end", std::bind(&GitDive_CinderApp::jumpToEnd, this));
     mParams.addButton("Start", std::bind(&GitDive_CinderApp::startVisualization, this));
     mParams.addButton("Pause", std::bind(&GitDive_CinderApp::pauseVisualization, this));
+    mParams.addParam("File to track", &m_targetFile);
+
 }
 
 
