@@ -25,7 +25,7 @@ public:
         timeline.apply( &m_position, destVec, 0.5f, EaseOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
     }
     
-    virtual void animOut( Timeline &timeline, Vec2<float> destVec, Colour destCOlour )
+    virtual void animOut( Timeline &timeline, Vec2<float> destVec, Colour destColour )
     {
         timeline.apply( &mColorCur, mColorStart, 1.0f, EaseOutQuad() ).finishFn( std::bind( &TextAnimateable::onAnimOut, this ) );
     }
