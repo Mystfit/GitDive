@@ -34,9 +34,7 @@ public:
     //Returns a free line element
     void getFreeLineElem(LineElement searchTarget);
         
-private:
-    
-    vector< boost::shared_ptr<Line> > m_trackedLines;
+private:    
     vector<LineElement> m_freeLineElements;
     
     cinder::gl::TextureFontRef m_textureFont;
