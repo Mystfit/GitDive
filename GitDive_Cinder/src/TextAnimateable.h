@@ -36,7 +36,7 @@ public:
     virtual void onAnimIn();
     virtual void onAnimOut();
 
-protected:
+private:
     cinder::Anim<cinder::Vec2f> m_position;
     cinder::Anim<cinder::Color> m_colour;
 };
