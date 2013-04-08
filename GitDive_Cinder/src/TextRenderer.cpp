@@ -16,5 +16,7 @@ TextRenderer::TextRenderer(){
 }
 
 void TextRenderer::draw(){
-    
+    for(vector<){
+        
+    }
 }
