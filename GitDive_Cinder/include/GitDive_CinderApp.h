@@ -37,13 +37,13 @@ public:
     void pauseVisualization(){ bVizActive = false; };
     void jumpToEnd();
     
-    //Variables
-    string repoPath;
-    string gitCmd;
+    //Managers
     GitFileManager fManager;
     params::InterfaceGl mParams;
     
+    //Variables
     string repoPath;
+    string gitCmd;
     bool bVizActive, bOutputSyntax, bDumpFiles, bOutputDifflog;
     int m_timeSpeed;
 };
