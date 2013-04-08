@@ -15,6 +15,10 @@ TextRenderer::TextRenderer(){
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
 }
 
+void LineElement::addLine(boost::shared_ptr<Line> line){
+    
+}
+
 void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     vector<LineElement> lineElems = line->getLineElements();
     for(int i = 0; i < lineElems.size(); i++){
