@@ -39,7 +39,7 @@ private:
     Anim<Vec2f> m_position;
     Anim<Color> m_colour;
     
-    ci::gl::TextureFontRef mTextureFont;
+    gl::TextureFontRef mTextureFont;
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
