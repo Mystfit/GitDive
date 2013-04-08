@@ -29,6 +29,7 @@ void GitDive_CinderApp::setup()
     bLoadCommits = true;
     
     initUI();
+    gl::enableAlphaBlending();
     
     tRender = boost::shared_ptr<TextRenderer>(new TextRenderer());
     tRender->setTimeline(cinder::app::timeline().thisRef());
