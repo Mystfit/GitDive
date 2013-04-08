@@ -47,7 +47,7 @@ public:
     string m_gitCmd, m_repoPath, m_cmdOutput;
     string m_diffLogPath, m_fileDir, m_fileOutput;
 
-    bool bVizActive, bOutputSyntax, bDumpFiles, bOutputDifflog, bFframeReady;
+    bool bVizActive, bOutputSyntax, bDumpFiles, bOutputDifflog, bFframeReady, bLoadCommits;
     int m_timeSpeed, m_lastFrame;
 };
 
