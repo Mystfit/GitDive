@@ -34,7 +34,6 @@ public:
 	void update();
 	void draw();
     
-    void startVisualization(){ bVizActive = true; };
     void pauseVisualization(){ bVizActive = false; };
     void jumpToEnd();
     
