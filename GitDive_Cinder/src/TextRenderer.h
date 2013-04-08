@@ -9,6 +9,9 @@
 #ifndef __GitDive_Cinder__TextRenderer__
 #define __GitDive_Cinder__TextRenderer__
 
+#define LINE_HEIGHT 16
+#DEfine FONT_SIZE 15
+
 #include <iostream>
 #include "GitDataTypes.h"
 #include "cinder/timeline.h"
