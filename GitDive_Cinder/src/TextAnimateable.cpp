@@ -8,8 +8,8 @@
 
 #include "TextAnimateable.h"
                 
-void TextAnimateable::draw(){
+void TextAnimateable::draw(TextureFont & texFont){
     gl::color( m_colour );
-    m_textureFont->drawString( getStr(), m_position);
+    texFont->drawString( getStr(), m_position);
 }
             
