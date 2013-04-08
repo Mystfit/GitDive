@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "GitDataTypes.h"
+#include "cinder/gl/
 
 class TextRenderer {
 public:
@@ -29,6 +30,7 @@ public:
     void getFreeLineElem(LineElement searchTarget);
         
 private:
+    
     vector< boost::shared_ptr<Line> > m_trackedLines;
     vector<LineElement> m_freeLineElements;
     vector<LineElement> m_tweeingElements;
