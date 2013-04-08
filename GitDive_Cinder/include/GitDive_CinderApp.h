@@ -44,7 +44,6 @@ public:
     
     bool bVizActive;
     int m_timeSpeed;
-    
 };
 
 #endif

@@ -3,7 +3,7 @@
 void GitDive_CinderApp::prepareSettings( Settings *settings )
 {
 	settings->setWindowSize( 1024, 1024 );
-	settings->setFrameRate( 10 );
+	settings->setFrameRate( 60 );
     
 }
 
@@ -50,7 +50,7 @@ void GitDive_CinderApp::update()
 {
     if(bVizActive){
         
-        if(ci::app::getElapsedFrames() % m_rebuildSpeed == 0){
+        if(ci::app::getElapsedFrames() % m_timeSpeed == 0){
             bool success = fManager.applyNextCommit();
             if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
         }
