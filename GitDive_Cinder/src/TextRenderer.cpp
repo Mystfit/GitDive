@@ -20,7 +20,7 @@ void TextRenderer::draw(){
         it->get()->draw(m_textureFont);
     }
     
-    for(vector< boost::shared_ptr<LineElement> >::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it){
+    for(vector<LineElement>::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it){
         it->get()->draw(m_textureFont);
     }
 
