@@ -17,6 +17,7 @@
 
 class TextAnimateable {
 public:
+    TextAnimateable();
     void draw(cinder::gl::TextureFont & texFont);
     
     virtual std::string getStr();
