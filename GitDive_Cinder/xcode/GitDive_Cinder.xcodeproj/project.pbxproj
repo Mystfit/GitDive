@@ -113,8 +113,8 @@
 				4AD7491F17097505006ACBC6 /* GitFileManager.cpp */,
 				4A1253FA170FF90000DE28C9 /* SyntaxColourTools.cpp */,
 				4A1A6B7F17054D940046BE09 /* Utils.cpp */,
-				4AB896D717129B8900533992 /* TextRenderer.cpp */,
 				4AB896DB1712B84900533992 /* TextAnimateable.cpp */,
+				4AB896D717129B8900533992 /* TextRenderer.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
