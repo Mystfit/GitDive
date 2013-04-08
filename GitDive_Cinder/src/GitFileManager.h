@@ -93,7 +93,7 @@ private:
     vector<Commit> m_commitList;
     vector< boost::shared_ptr<GitFile> > m_fileList;
     
-    gl::TextureFontRef m_textureFont;
+    gl::TextureFontRef m_tRender;
     
     int m_commitIndex;
     bool bUseSyntaxHighlighting;
