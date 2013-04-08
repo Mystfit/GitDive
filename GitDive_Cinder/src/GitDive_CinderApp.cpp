@@ -29,7 +29,7 @@ void GitDive_CinderApp::setup()
     
     initUI();
     
-    tRender(new TextRenderer());
+    tRender = boost::shared_ptr<TextRenderer>(new TextRenderer());
     fManager.setTextRenderer(tRender);
     fManager.setSyntaxHighlightStatus(false);
 }
