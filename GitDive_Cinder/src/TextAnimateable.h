@@ -23,6 +23,9 @@ public:
     {
         Anim<Vec2f> destVec = position;
         Anim<Color> destColour = colour;
+        
+        timeline.apply( &m_position, <#T endValue#>, <#float duration#>)
+        
         timeline.apply( &m_colour, destColour, 1.0f, EaseOutAtan( 20 ) );
         timeline.apply( &m_position, destVec, 0.5f, EaseOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
     }
