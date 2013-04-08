@@ -27,8 +27,7 @@ using namespace std;
 
 class GitFileManager {
 public:
-    GitFileManager();
-    void setTextureFontRef( gl::TextureFontRef textureFont){ m_textureFont = textureFont };
+    GitFileManager(gl::TextureFontRef textureFont) : m_textureFontRef(textureFont);
     
     //File addition/retrieval
     //-----------------------
