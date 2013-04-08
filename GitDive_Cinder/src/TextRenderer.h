@@ -18,6 +18,7 @@
 class TextRenderer {
 public:
     TextRenderer();
+    void draw():
     
     //Starts tracking a line for rendering
     void trackLine(boost::shared_ptr<Line> line);
