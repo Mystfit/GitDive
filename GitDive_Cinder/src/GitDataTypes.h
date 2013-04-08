@@ -25,11 +25,11 @@ using namespace std;
  */
 
 class LineElement : public TextAnimateable {
-    LineElement(string element, string elemStr, int pos) : elem(element), str(elemStr), position(pos)
+    LineElement(string element, string elemStr, int pos)
     {
-        if(elem == "comment"){
-            cout << elem << "|" << elemStr << endl;
-        }
+        elem = element;
+        str = elemStr;
+        position = pos;
     };
     string elem;
     string str;
