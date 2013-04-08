@@ -43,7 +43,7 @@ private:
     vector<LineElement> m_freeLineElements;
     
     cinder::gl::TextureFontRef m_textureFont;
-    cinder::
+    cinder::Timeline m_timeline;
     
 };
 
