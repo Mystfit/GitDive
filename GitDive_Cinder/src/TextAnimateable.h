@@ -19,7 +19,7 @@ using namespace cinder;
 
 class TextAnimateable {
 public:
-    TextAnimateable(gl::TextureFontRef & textureFont);
+    TextAnimateable(gl::TextureFontRef & textureFont) : m_textureFont(textureFont)
     virtual void draw();
     
     virtual void animIn( Timeline &timeline, Vec2<float> destVec, Color destColour )
@@ -40,7 +40,7 @@ private:
     Anim<Vec2f> m_position;
     Anim<Color> m_colour;
     
-    gl::TextureFontRef mTextureFont;
+    gl::TextureFontRef m_textureFont;
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
