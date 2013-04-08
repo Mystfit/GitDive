@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "GitDataTypes.h"
+#include "cinder/timeline.h
 #include "cinder/gl/gl.h"
 #include "cinder/gl/TextureFont.h"
 
@@ -40,6 +41,7 @@ private:
     vector<LineElement> m_freeLineElements;
     
     cinder::gl::TextureFontRef m_textureFont;
+    cinder::
     
 };
 
