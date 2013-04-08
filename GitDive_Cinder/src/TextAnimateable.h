@@ -22,7 +22,7 @@ public:
     virtual void animIn( Timeline &timeline, Vec2<float> destVec )
     {
         timeline.apply( &mColorCur, mColorDest, 1.0f, EaseOutAtan( 20 ) );
-        timeline.apply( &mMatrix, matrix, 0.5f, EaseOutAtan( 10 ) ).finishFn( bind( &TextAnimateable::onAnimIn, this ) );
+        timeline.apply( &mMatrix, matrix, 0.5f, EaseOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
     }
     
     virtual void animOut( Timeline &timeline, Vec2<float> destVec )
