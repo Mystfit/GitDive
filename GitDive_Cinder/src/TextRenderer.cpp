@@ -9,7 +9,7 @@
 #include "TextRenderer.h"
 
 TextRenderer::TextRenderer(){
-    cinder::Font customFont( cinder::Font( "Chalk", FONT_SIZE ) );
+    cinder::Font customFont( cinder::Font( "Chalkduster", FONT_SIZE ) );
 	cinder::gl::TextureFont::Format f;
 	f.enableMipmapping( true );
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
