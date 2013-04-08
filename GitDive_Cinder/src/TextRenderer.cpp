@@ -22,6 +22,7 @@ void TextRenderer::draw(){
     
     for(vector<LineElement>::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it){
         it.draw(m_textureFont);
+        it->draw(m_textureFont);)
     }
 
 }
