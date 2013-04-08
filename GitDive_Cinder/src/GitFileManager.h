@@ -12,7 +12,6 @@
 #include <fstream>
 #include <sstream>
 
-
 #include "srchilite/formatter.h"
 #include "srchilite/formatterparams.h"
 #include "srchilite/sourcehighlight.h"
@@ -20,6 +19,7 @@
 #include "srchilite/sourcehighlighter.h"
 #include "srchilite/formattermanager.h"
 
+#include "TextRenderer.h"
 #include "GitDataTypes.h"
 #include "SyntaxColourTools.h"
 
