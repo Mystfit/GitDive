@@ -14,7 +14,6 @@
 #include <sstream>
 #include <boost/shared_ptr.hpp>
 #include "Utils.h"
-#include "TextAnimateable.h"
 
 
 using namespace std;
@@ -24,7 +23,7 @@ using namespace std;
  * A single line
  */
 
-struct LineElement : public TextAnimateable {
+struct LineElement {
     LineElement(string element, string elemStr, int pos) : elem(element), str(elemStr), position(pos)
     {
         if(elem == "comment"){
@@ -36,7 +35,7 @@ struct LineElement : public TextAnimateable {
     int position;
 };
 
-class Line : public TextAnimateable {
+class Line {
 public:
     
     Line(string lineStr, bool justUpdated = false);
