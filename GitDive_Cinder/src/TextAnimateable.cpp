@@ -31,7 +31,7 @@ void TextAnimateable::animOut( cinder::Timeline &timeline, cinder::Vec2<float> d
     //timeline.apply( &m_position, destVec, 0.5f, cinder::easeOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
 }
 
-virtual std::string TextAnimateable::getStr()
+std::string TextAnimateable::getStr()
 {
     
 }
