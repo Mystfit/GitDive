@@ -44,8 +44,7 @@ public:
     params::InterfaceGl mParams;
     
     //Variables
-    string repoPath;
-    string gitCmd;
+    string m_gitCmd, m_repoPath, m_cmdoutput;
     string m_diffLogPath, m_fileDir, m_fileOutput;
 
     bool bVizActive, bOutputSyntax, bDumpFiles, bOutputDifflog;
