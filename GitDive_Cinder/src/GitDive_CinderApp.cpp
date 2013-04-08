@@ -28,7 +28,8 @@ void GitDive_CinderApp::setup()
     bLoadCommits = true;
     
     initUI();
-        
+    
+    tRender(new TextRenderer());
     fManager.setTextRenderer(tRender);
     fManager.setSyntaxHighlightStatus(false);
 }
