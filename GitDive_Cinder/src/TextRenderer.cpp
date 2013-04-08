@@ -15,6 +15,6 @@ TextRenderer::TextRenderer(){
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
 }
 
-TextRenderer::draw(){
+void TextRenderer::draw(){
     
 }
