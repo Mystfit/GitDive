@@ -31,7 +31,7 @@ public:
         elem = element;
         str = elemStr;
         position = pos;
-        setPosition(cinder::Vec2f((float)position * 10.0f, 0.0f);
+        setPosition(cinder::Vec2f((float)position * 10.0f, 0.0f));
     };
     string getStr(){return str;};
     string elem;
