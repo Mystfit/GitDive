@@ -14,3 +14,7 @@ TextRenderer::TextRenderer(){
 	f.enableMipmapping( true );
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
 }
+
+TextRenderer::draw(){
+    
+}
