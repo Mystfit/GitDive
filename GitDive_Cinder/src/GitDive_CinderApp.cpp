@@ -12,11 +12,13 @@ void GitDive_CinderApp::prepareSettings( Settings *settings )
 void GitDive_CinderApp::setup()
 {
     mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
+    mParams.addParam("Repo path", &repoPath);
     mParams.addParam( "Split lines by syntax", &fManager.getSyntaxHighlightStatus());
     mParams.addParam("Rebuild speed", &m_timeSpeed);
     mParams.addButton("Start", &GitDive_CinderApp::startVisualization);
+    mParams.addButton("Jump to end", &GitDive_CinderApp::jumpToEnd);
 
-    string repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
+    repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
     string gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
     string combinedCmd = "cd " + repoPath + " && " + gitCmd;
     
@@ -27,13 +29,18 @@ void GitDive_CinderApp::setup()
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     fManager.setSyntaxHighlightStatus(false);
     
-    while(fManager.applyNextCommit());
-    
+       
     fManager.syntaxParseAllFiles();
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
     fManager.dumpFileOutput("/Users/mystfit/desktop/colourOut.html");
 //    //Debug serialization
 //    GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
+}
+
+void jumpToEnd(){
+    while(fManager.applyNextCommit());
+    if()
+
 }
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
