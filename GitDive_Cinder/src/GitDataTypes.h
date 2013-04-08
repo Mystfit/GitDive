@@ -32,6 +32,7 @@ public:
         str = elemStr;
         position = pos;
     };
+    string getStr(){return str;};
     string elem;
     string str;
     int position;
