@@ -66,6 +66,7 @@ bool GitFileManager::applyNextCommit(){
 void GitFileManager::reset(){
     m_commitIndex = 0;
     m_fileList.clear();
+    m_fileList.clear();
 }
 
 
