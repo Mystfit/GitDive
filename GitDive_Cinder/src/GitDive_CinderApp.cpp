@@ -13,8 +13,8 @@ void GitDive_CinderApp::prepareSettings( Settings *settings )
 
 void GitDive_CinderApp::setup()
 {
-    repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
-    gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
+    m_repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
+    m_gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
     
     m_diffLogPath = "/Users/mystfit/desktop/cinderDiffOut.log";
     m_fileDir = "/Users/mystfit/desktop/dumpFiles";
@@ -71,6 +71,7 @@ void GitDive_CinderApp::jumpToEnd(){
     if(!m_cmdOutput.size()){
         loadGitOutput(m_repoPath, m_gitCmd);
     }
+    
     fManager.setSyntaxHighlightStatus(false);
     while(fManager.applyNextCommit());
     
