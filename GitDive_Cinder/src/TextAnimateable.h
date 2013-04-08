@@ -13,6 +13,7 @@
 #include "cinder/Timeline.h"
 #include "cinder/Vector.h"
 #include "cinder/Color.h"
+#include "cinder/gl/TextureFont.h"
 
 using namespace cinder;
 
