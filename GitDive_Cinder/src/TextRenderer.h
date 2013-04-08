@@ -40,6 +40,8 @@ public:
     //Returns a free line element
     void getFreeLineElem(LineElement searchTarget);
     
+    void removeLine(boost::shared_ptr<Line> line);
+    
     void animLinesIn(vector<boost::shared_ptr<Line> > lines);
         
 private:    
