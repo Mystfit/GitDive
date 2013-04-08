@@ -53,6 +53,8 @@ void GitDive_CinderApp::initUI(){
 
 void GitDive_CinderApp::startVisualization(){
     if(!m_cmdOutput.size()) loadGitOutput(m_repoPath, m_gitCmd);
+    
+    fManager.reset();
     bVizActive = true;
 };
 
