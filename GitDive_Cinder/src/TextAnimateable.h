@@ -19,7 +19,7 @@ using namespace cinder;
 
 class TextAnimateable {
 public:
-    TextAnimateable();
+    TextAnimateable(gl::TextureFontRef & textureFont);
     
     virtual void animIn( Timeline &timeline, Vec2<float> destVec, Color destColour )
     {
