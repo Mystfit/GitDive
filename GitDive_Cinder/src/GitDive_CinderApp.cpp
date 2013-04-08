@@ -14,8 +14,7 @@ void GitDive_CinderApp::prepareSettings( Settings *settings )
 void GitDive_CinderApp::setup()
 {
     repoPath = "/Users/mystfit/Code/Python/Gitdive_Prototypes";
-    string gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
-    string combinedCmd = "cd " + repoPath + " && " + gitCmd;
+    gitCmd = "git log -p --reverse --pretty=format:\"GD_commit&%H^GD_commitAuthor&%cn^GD_date&%cd^GD_message&%B\"";
     
     m_diffLogPath = "/Users/mystfit/desktop/cinderDiffOut.log";
     m_fileDir = "/Users/mystfit/desktop/dumpFiles";
@@ -51,6 +50,8 @@ void GitDive_CinderApp::initUI(){
 
 void GitDive_CinderApp::startVisualization(){
     bVizActive = true;
+    
+    string combinedCmd = "cd " + repoPath + " && " + gitCmd;
     
     //Get the output of the git command from stdout as a giant string
     string cmdOutput = Utils::getCmdOutput(combinedCmd.c_str());
