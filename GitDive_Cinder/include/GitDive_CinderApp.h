@@ -34,6 +34,7 @@ public:
 	void update();
 	void draw();
     
+    void startVisualization();
     void pauseVisualization(){ bVizActive = false; };
     void jumpToEnd();
     
@@ -43,7 +44,7 @@ public:
     
     //Variables
     string repoPath;
-    string gitCmd;
+    string gitCmd, gitCmd;
     string m_diffLogPath, m_fileDir, m_fileOutput;
 
     bool bVizActive, bOutputSyntax, bDumpFiles, bOutputDifflog;
