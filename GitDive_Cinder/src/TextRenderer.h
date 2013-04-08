@@ -31,6 +31,7 @@ public:
     void removeLineElement()
     
 private:
+    vector<boost::chared_ptr<Line> m_trackedLines;
     vector<LineElement> m_freeLineElements;
     vector<LineElement> m_tweeingElements;
 };
