@@ -102,9 +102,9 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 
 void GitDive_CinderApp::update()
 {
-    cout << floor(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed) << " " << bFframeReady << endl;
     if(bVizActive){
-        if(round(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed) == 0){
+        cout << floor(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed) << " " << bFframeReady << endl;
+        if(floor(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed) == 0){
             bFframeReady = true;
         }
         
