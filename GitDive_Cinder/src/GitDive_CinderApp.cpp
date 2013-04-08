@@ -48,9 +48,7 @@ void GitDive_CinderApp::initUI(){
 }
 
 
-void GitDive_CinderApp::startVisualization(){
-    bVizActive = true;
-    
+void GitDive_CinderApp::startVisualization(){    
     string combinedCmd = "cd " + repoPath + " && " + gitCmd;
     
     //Get the output of the git command from stdout as a giant string
@@ -58,6 +56,9 @@ void GitDive_CinderApp::startVisualization(){
     
     //Parse the diff log text into commit objects for the file manager
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
+    
+    bVizActive = true;
+
 };
 
 
