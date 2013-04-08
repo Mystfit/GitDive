@@ -9,7 +9,7 @@
 #include "TextAnimateable.h"
 
 TextAnimateable::TextAnimateable(){
-    m_colour(0,0,0);
+    m_colour = cinder::Color(0,0,0);
 }
                 
 void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
