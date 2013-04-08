@@ -10,7 +10,8 @@
 #define __GitDive_Cinder__TextRenderer__
 
 #include <iostream>
-#include "GitDataTypes.h"
+#include "GitDataTypes.h"#include "cinder/gl/gl.h"
+
 #include "cinder/gl/TextureFont.h"
 
 
