@@ -18,7 +18,7 @@ void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
 }
 
 
-void TextAnimateable::animIn( cinder::Timeline &timeline, cinder::Vec2<float> destVec, cinder::Color destColour )
+void TextAnimateable::animIn( cinder::TimelineRef &timeline, cinder::Vec2<float> destVec, cinder::Color destColour )
 {
     
     cinder::EaseInAtan easer(20);
