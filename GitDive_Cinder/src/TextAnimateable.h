@@ -11,4 +11,9 @@
 
 #include <iostream>
 
+class TextAnimateable {
+public:
+private:
+}
+
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
