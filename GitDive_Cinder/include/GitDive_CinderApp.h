@@ -34,6 +34,7 @@ public:
 	void update();
 	void draw();
     
+    void loadGitOutput();
     void startVisualization();
     void pauseVisualization(){ bVizActive = false; };
     void jumpToEnd();
