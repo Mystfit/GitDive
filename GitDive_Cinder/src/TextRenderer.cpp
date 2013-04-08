@@ -7,3 +7,7 @@
 //
 
 #include "TextRenderer.h"
+
+TextRenderer::TexterRenderer(){
+    
+}
