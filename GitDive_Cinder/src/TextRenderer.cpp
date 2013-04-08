@@ -37,7 +37,7 @@ void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
 
 void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     vector<LineElement> lineElems = line->getLineElements();
-    line->animOut(m_timeline, cinder::Vec2f(), cinder::Color(0,0,0)).finishFn( std::bind( &TextRenderer::removeLine, this ) );
+    line->animOut(m_timeline, cinder::Vec2f(), cinder::Color(0,0,0)).finishFn( std::bind( &TextRenderer::removeLine, line ) );
     for(int i = 0; i < lineElems.size(); i++){
         m_freeLineElements.push_back(lineElems[i]);
     }
