@@ -25,7 +25,7 @@ public:
         timeline.apply( &mMatrix, matrix, 0.5f, EaseOutAtan( 10 ) );
     }
     
-    virtual void animOut( Timeline &timeline, destVec )
+    virtual void animOut( Timeline &timeline, Vec2<float> destVec )
     {
         mDestMatrix = matrix;
         timeline.apply( &mColorCur, mColorStart, 1.0f, EaseOutQuad() ).finishFn( bind( &Character::onAnimOut, this ) );
@@ -37,7 +37,7 @@ public:
     }
 private:
     vec
-    cinder::Color m_colour;
+    Color; m_colour;
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
