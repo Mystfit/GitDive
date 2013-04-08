@@ -9,7 +9,7 @@
 #include "TextRenderer.h"
 
 TextRenderer::TextRenderer(){
-    Font customFont( Font( loadResource( RES_CUSTOM_FONT ), 100 ) );
+    Font customFont( Font( "Lucidia Console", 100 ) );
 	gl::TextureFont::Format f;
 	f.enableMipmapping( true );
 	mTextureFont = gl::TextureFont::create( customFont, f );
