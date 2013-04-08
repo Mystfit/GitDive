@@ -50,10 +50,10 @@ void GitDive_CinderApp::update()
 {
     if(bVizActive){
         
-        if(ci::)
-        
-        bool success = fManager.applyNextCommit();
-        if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+        if(ci::app::getElapsedFrames() % speed == 0){
+            bool success = fManager.applyNextCommit();
+            if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+        }
     }
 
 }
