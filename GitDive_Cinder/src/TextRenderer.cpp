@@ -19,4 +19,9 @@ void TextRenderer::draw(){
     for(vector< boost::shared_ptr<Line> >::iterator it = m_trackedLines.begin(); it != m_trackedLines.end(); ++it){
         it->get()->draw(m_textureFont);
     }
+    
+    for(vector< boost::shared_ptr<LineElement> >::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it){
+        it->get()->draw(m_textureFont);
+    }
+
 }
