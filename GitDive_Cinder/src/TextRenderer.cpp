@@ -15,6 +15,11 @@ TextRenderer::TextRenderer(){
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
 }
 
+void breakLine(boost::shared_ptr<Line> line){
+    
+}
+
+
 void TextRenderer::draw(){
     for(vector< boost::shared_ptr<Line> >::iterator it = m_trackedLines.begin(); it != m_trackedLines.end(); ++it){
         it->get()->draw(m_textureFont);
