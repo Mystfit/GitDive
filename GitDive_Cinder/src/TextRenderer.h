@@ -17,7 +17,7 @@
 
 class TextRenderer {
 public:
-    TextRenderer(&textureFontRef) : m_textureFont;
+    TextRenderer(&textureFontRef) : m_textureFont(textureFontRef);
     void draw():
     
     //Starts tracking a line for rendering
