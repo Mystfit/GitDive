@@ -155,7 +155,6 @@
 		29B97314FDCFA39411CA2CEA /* GitDive_Cinder */ = {
 			isa = PBXGroup;
 			children = (
-				4AB896DA1712B04700533992 /* Resources.h */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -176,6 +175,7 @@
 				4A1A6B7B17042CCA0046BE09 /* Utils.h */,
 				4AB896D817129B8900533992 /* TextRenderer.h */,
 				32CA4F630368D1EE00C91783 /* GitDive_Cinder_Prefix.pch */,
+				4AB896DA1712B04700533992 /* Resources.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
