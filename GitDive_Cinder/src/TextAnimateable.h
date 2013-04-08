@@ -20,7 +20,7 @@ using namespace cinder;
 class TextAnimateable {
 public:
     TextAnimateable(gl::TextureFontRef & textureFont) : m_textureFont(textureFont){};
-    void draw();
+    void draw(TextureFont & textFont);
     
     virtual std::string getStr();
     
