@@ -16,7 +16,10 @@ TextRenderer::TextRenderer(){
 }
 
 void breakLine(boost::shared_ptr<Line> line){
-    
+    vector<LineElement> lineElements = line->getLineElements();
+    for(vector<LineElement>::iterator it = lineElements.begin(); it != lineElements.end(); ++it){
+        m_freeLineElements.push_back(it);
+    }
 }
 
 
