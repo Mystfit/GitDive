@@ -29,7 +29,6 @@ void GitDive_CinderApp::setup()
     fManager.setCommitSource(GitLogParser::parseLog(cmdOutput));
     fManager.setSyntaxHighlightStatus(false);
     
-    
     fManager.syntaxParseAllFiles();
     fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
     fManager.dumpFileOutput("/Users/mystfit/desktop/colourOut.html");
@@ -37,7 +36,7 @@ void GitDive_CinderApp::setup()
 //    GitLogParser::dumpDiffOutput(fManager.getCommitSource(), "/Users/mystfit/desktop/cinderDiffOut.log");
 }
 
-void jumpToEnd(){
+void GitDive_CinderApp::jumpToEnd(){
     fManager.setSyntaxHighlightStatus(false);
     while(fManager.applyNextCommit());
     fManager.syntaxParseAllFiles();
