@@ -22,7 +22,7 @@ public:
     void draw(cinder::gl::TextureFontRef & texFont);
     void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour );
     void animOut( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour );
-    void setPosition(cinder::Vecf position){ m_position = pos; };
+    void setPosition(cinder::Vecf position);
     virtual std::string getStr();
     
     void onAnimIn();
