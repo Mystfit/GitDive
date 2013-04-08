@@ -9,7 +9,7 @@
 #include "TextRenderer.h"
 
 TextRenderer::TextRenderer(){
-    cinder::Font customFont( cinder::Font( "Lucida Console", 6 ) );
+    cinder::Font customFont( cinder::Font( "Lucida Console", 12 ) );
 	cinder::gl::TextureFont::Format f;
 	f.enableMipmapping( true );
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
