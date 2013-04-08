@@ -32,6 +32,8 @@ public:
         timeline.apply( &mMatrix, matrix, 1.0f, EaseOutQuad() );
     }
     
+    virtual void onAnimIn();
+    
     virtual void onAnimOut()
     {
     }
