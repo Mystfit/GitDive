@@ -18,12 +18,11 @@ public:
     TextAnimateable();
     virtual void animIn( cinder::Timeline &timeline, cinder::Vec2<float> destVec )
     {
-        mDestMatrix = matrix;
         timeline.apply( &mColorCur, mColorDest, 1.0f, EaseOutAtan( 20 ) );
         timeline.apply( &mMatrix, matrix, 0.5f, EaseOutAtan( 10 ) );
     }
     
-    virtual void animOut( cinder::Timeline &timeline, vec )
+    virtual void animOut( cinder::Timeline &timeline, destVec )
     {
         mDestMatrix = matrix;
         timeline.apply( &mColorCur, mColorStart, 1.0f, EaseOutQuad() ).finishFn( bind( &Character::onAnimOut, this ) );
