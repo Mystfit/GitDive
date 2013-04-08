@@ -9,7 +9,7 @@
 #include "TextRenderer.h"
 
 TextRenderer::TextRenderer(){
-    cinder::Font customFont( cinder::Font( "Lucida Console", 12 ) );
+    cinder::Font customFont( cinder::Font( "Lucida Console", FONT_HEIGHT ) );
 	cinder::gl::TextureFont::Format f;
 	f.enableMipmapping( true );
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
@@ -26,8 +26,8 @@ void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
     for(vector<boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         if(it->get()->getLineState() == Line::LINE_ADDED){
-            it->get()->setPosition(cinder::Vec2f(50, it->get()->getLinePos() * 16));
-            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * 16), cinder::Color(255,255,255));
+            it->get()->setPosition(cinder::Vec2f(50, it->get()->getLinePos() * (FONT_HEIGHT * 2 - LINE_SPACING)));
+            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * (FONT_HEIGHT * 2 - LINE_SPACING)), cinder::Color(255,255,255));
         }
     }
 }
