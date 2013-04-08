@@ -39,9 +39,7 @@ public:
         
     };
     virtual void onAnimOut();
-    
-    bool 
-    
+        
 private:
     Anim<Vec2f> m_position;
     Anim<Color> m_colour;
