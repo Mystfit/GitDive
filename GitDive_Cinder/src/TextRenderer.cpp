@@ -21,7 +21,7 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
         m_freeLineElements.push_back(lineElems[i]);
     }
     
-    line->reset();
+    line.reset();
 }
 
 
