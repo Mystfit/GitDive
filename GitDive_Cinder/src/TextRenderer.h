@@ -38,7 +38,6 @@ private:
     
     vector< boost::shared_ptr<Line> > m_trackedLines;
     vector<LineElement> m_freeLineElements;
-    vector<LineElement> m_tweeingElements;
     
     cinder::gl::TextureFontRef m_textureFont;
     
