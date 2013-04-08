@@ -35,7 +35,7 @@ public:
     virtual void onAnimIn();
     virtual void onAnimOut();
 private:
-    Vec2<float> m_position;
+    Vec2f m_position;
     Color m_colour;
 };
 
