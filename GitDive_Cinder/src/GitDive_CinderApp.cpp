@@ -6,6 +6,7 @@ void GitDive_CinderApp::prepareSettings( Settings *settings )
 	settings->setFrameRate( 60 );
     
     m_timeSpeed = 20;
+    bVizActive = false;
     
 }
 
