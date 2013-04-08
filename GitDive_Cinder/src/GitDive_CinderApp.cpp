@@ -25,6 +25,7 @@ void GitDive_CinderApp::setup()
     bDumpFiles = true;
     bOutputSyntax = true;
     bOutputDifflog = false;
+    bLoadCommits = true;
     
     initUI();
     
