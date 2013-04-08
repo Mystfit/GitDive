@@ -93,7 +93,7 @@ private:
     vector<Commit> m_commitList;
     vector< boost::shared_ptr<GitFile> > m_fileList;
     
-    boost::shared_ptr<TextRender> m_tRender;
+    boost::shared_ptr<TextRenderer> m_tRender;
     
     int m_commitIndex;
     bool bUseSyntaxHighlighting;
