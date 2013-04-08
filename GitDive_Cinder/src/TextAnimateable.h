@@ -17,27 +17,27 @@
 
 class TextAnimateable {
 public:
-    void draw(gl::TextureFont & texFont);
+    void draw(cinder::gl::TextureFont & texFont);
     
     virtual std::string getStr();
     
-    virtual void animIn( Timeline &timeline, Vec2<float> destVec, Color destColour )
+    virtual void animIn( cinder::Timeline &timeline, Vec2<float> destVec, cinder::Color destColour )
     {
         timeline.apply( &m_colour, destColour, 1.0f, EaseOutAtan( 20 ) );
-        timeline.apply( &m_position, destVec, 0.5f, EaseOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
+        timeline.apply( &m_position, destVec, 0.5f, cinder::easeOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
     }
     
-    virtual void animOut( Timeline &timeline, Vec2<float> destVec, Color destColour )
+    virtual void animOut( cinder::Timeline &timeline, cinder::Vec2<float> destVec, Color destColour )
     {
         timeline.apply( &m_colour, destColour, 1.0f, EaseOutAtan( 20 ) );
-        timeline.apply( &m_position, destVec, 0.5f, EaseOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );    }
+        timeline.apply( &m_position, destVec, 0.5f, cinder::easeOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );    }
     
     virtual void onAnimIn();
     virtual void onAnimOut();
 
 protected:
-    Anim<Vec2f> m_position;
-    Anim<Color> m_colour;    
+    cinder::Anim<Vec2f> m_position;
+    Anim<cinder::Color> m_colour;    
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
