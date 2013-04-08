@@ -105,7 +105,8 @@ void GitDive_CinderApp::update()
 {
     if(bVizActive){
         cout << floor(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed) << " " << bFframeReady << endl;
-        if(floor(ci::app::getElapsedFrames() % int(ci::app::getFrameRate()) / m_timeSpeed) == 0){
+        int frameNum = floor(ci::app::getElapsedFrames() % int(ci::app::getFrameRate() / m_timeSpeed);
+        if(frameNum == 0 && frameNum != m_lastFrameNum){
             bFframeReady = true;
         }
         
