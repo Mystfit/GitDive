@@ -58,6 +58,6 @@ void TextRenderer::draw(vector< boost::shared_ptr<Line> > & lines){
             elemIt->draw(m_textureFont);
         }
         
-        it->get()->draw(m_textureFont);
+        //it->get()->draw(m_textureFont);
     }
 }
