@@ -34,7 +34,7 @@ public:
     {
     }
 private:
-    Colour m_colour;
+    cinder::Color m_colour;
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
