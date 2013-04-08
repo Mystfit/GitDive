@@ -25,7 +25,7 @@ using namespace std;
  */
 
 struct LineElement : public TextAnimateable {
-    LineElement(TextureFont & textureFont, string element, string elemStr, int pos) : m_textureFont(textureFont), elem(element), str(elemStr), position(pos)
+    LineElement(cinder::gl::TextureFont & textureFont, string element, string elemStr, int pos) : m_textureFont(textureFont), elem(element), str(elemStr), position(pos)
     {
         if(elem == "comment"){
             cout << elem << "|" << elemStr << endl;
