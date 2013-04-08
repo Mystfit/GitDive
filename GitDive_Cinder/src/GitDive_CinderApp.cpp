@@ -43,7 +43,6 @@ void GitDive_CinderApp::initUI(){
     mParams.addParam("Output Git diff log to file", &bOutputDifflog);
     mParams.addParam( "Dump files", &bDumpFiles);
     mParams.addParam("Reload commits", &bLoadCommits);
-
     
     stringstream maxSpeed; 
     maxSpeed << "min=1, max=" << ci::app::getFrameRate()/2;
