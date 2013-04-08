@@ -15,8 +15,6 @@
 #include "cinder/Color.h"
 #include "cinder/gl/TextureFont.h"
 
-using namespace cinder;
-
 class TextAnimateable {
 public:
     void draw(gl::TextureFont & texFont);
