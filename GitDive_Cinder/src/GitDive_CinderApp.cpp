@@ -52,7 +52,7 @@ void GitDive_CinderApp::mouseDown( MouseEvent event )
 void GitDive_CinderApp::keyDown(KeyEvent event){    
     if(event.getChar() == KeyEvent::KEY_SPACE){
         bool success = fManager.applyNextCommit();
-        if(success) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
+        if(success && bDumpFiles) fManager.dumpAllFiles("/Users/mystfit/desktop/dumpFiles");
     }
 }
 
