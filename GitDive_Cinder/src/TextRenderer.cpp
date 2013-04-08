@@ -9,5 +9,8 @@
 #include "TextRenderer.h"
 
 TextRenderer::TextRenderer(){
-    m_textureFont
+    Font customFont( Font( loadResource( RES_CUSTOM_FONT ), 100 ) );
+	gl::TextureFont::Format f;
+	f.enableMipmapping( true );
+	mTextureFont = gl::TextureFont::create( customFont, f );
 }
