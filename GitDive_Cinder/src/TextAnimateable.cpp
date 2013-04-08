@@ -26,6 +26,7 @@ void TextAnimateable::animIn( cinder::Timeline &timeline, cinder::Vec2<float> de
     cinder::EaseInAtan easer(20);
     timeline.apply( &m_colour, destColour, 1.0f, easer);
     timeline.apply( &m_position, destVec, 0.5f);
+    
     cinder::Tween<cinder::Vec2f> test = timeline.apply( &m_colour, destColour, 1.0f, easer);
 
     //timeline.apply( &m_position, destVec, 0.5f).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
