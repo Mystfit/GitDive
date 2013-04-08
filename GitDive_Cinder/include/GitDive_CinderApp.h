@@ -43,6 +43,7 @@ public:
     params::InterfaceGl mParams;
     
     bool bVizActive;
+    int m_timeSpeed;
     
 };
 
