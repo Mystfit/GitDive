@@ -32,6 +32,7 @@ public:
     
 private:
     vector<LineElement> m_freeLineElements;
+    vector<LineElement> m_tweeingElements;
 };
 
 #endif /* defined(__GitDive_Cinder__TextRenderer__) */
