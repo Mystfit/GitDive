@@ -55,7 +55,7 @@ void TextRenderer::draw(vector< boost::shared_ptr<Line> > & lines){
     for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         
         for(vector<LineElement>::iterator elemIt = it->get()->getLineElements().begin(); elemIt != it->get()->getLineElements().end(); ++elemIt){
-            elemIt->draw(m_textureFont);
+            if(elemIt) elemIt->draw(m_textureFont);
         }
         
         //it->get()->draw(m_textureFont);
