@@ -63,6 +63,10 @@ bool GitFileManager::applyNextCommit(){
     return false;
 }
 
+void GitFileManager::reset(){
+    m_commitIndex = 0;
+    m_fileList.clear();
+}
 
 
 void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff, bool useSyntaxHighlighting){
