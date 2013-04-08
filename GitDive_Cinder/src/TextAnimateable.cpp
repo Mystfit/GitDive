@@ -21,7 +21,7 @@ void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
 void TextAnimateable::animIn( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour )
 {
     
-    cinder::EaseOutSine easer();
+    cinder::EaseOutSine easer;
         
     m_colourTween = timeline->apply( &m_colour, destColour, 1.0f,  easer);
     m_posTween = timeline->apply( &m_position, destVec, 0.5f,  easer);
