@@ -36,7 +36,7 @@ public:
     {
     }
 private:
-    Vec2<float> m_position
+    Vec2<float> m_position;
     Color; m_colour;
 };
 
