@@ -48,12 +48,10 @@ void GitDive_CinderApp::initUI(){
 }
 
 
-void GitDive_CinderApp::startVisualization(){    
-    
-    
+void GitDive_CinderApp::startVisualization(){
+    if(!m_cmdOutput.size()) loadGitOutput(m_repoPath, m_gitCmd);
     bVizActive = true;
 };
-
 
 
 void GitDive_CinderApp::loadGitOutput(string repo, string gitCmd){
