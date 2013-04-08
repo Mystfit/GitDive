@@ -25,6 +25,7 @@ using namespace std;
  */
 
 class LineElement : public TextAnimateable {
+public:
     LineElement(string element, string elemStr, int pos)
     {
         elem = element;
