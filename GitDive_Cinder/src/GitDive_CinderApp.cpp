@@ -17,7 +17,7 @@ void GitDive_CinderApp::setup()
     mParams.addParam( "Output syntax to file", &bOutputSyntax);
     mParams.addParam( "Dump files", &bDumpFiles);
 
-    mParams.addParam("Rebuild speed", &m_timeSpeed);
+    mParams.addParam("Commits per second", &m_timeSpeed);
     mParams.addButton("Start", &GitDive_CinderApp::startVisualization);
     mParams.addButton("Jump to end", &GitDive_CinderApp::jumpToEnd);
 
