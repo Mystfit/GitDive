@@ -11,6 +11,7 @@ void GitDive_CinderApp::prepareSettings( Settings *settings )
 
 void GitDive_CinderApp::setup()
 {
+    //Setup UI
     mParams = params::InterfaceGl( "App parameters", Vec2i( 200, 400 ) );
     mParams.addParam("Repo path", &repoPath);
     mParams.addParam("Split lines by syntax", &fManager.getSyntaxHighlightStatus());
