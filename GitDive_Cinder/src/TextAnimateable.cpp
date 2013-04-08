@@ -28,8 +28,7 @@ void TextAnimateable::animIn( cinder::Timeline &timeline, cinder::Vec2<float> de
 
 void TextAnimateable::animOut( cinder::Timeline &timeline, cinder::Vec2<float> destVec, cinder::Color destColour )
 {
-    timeline.apply( &m_colour, destColour, 1.0f);
-    timeline.apply( &m_position, destVec, 0.5f );
+    timeline.apply( &m_colour, destColour, 1.0f, cinder::easeOutAtan( 20 ) );
     //timeline.apply( &m_position, destVec, 0.5f, cinder::easeOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
 }
 
