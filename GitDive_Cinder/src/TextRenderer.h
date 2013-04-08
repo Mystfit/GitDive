@@ -36,7 +36,8 @@ private:
     vector<LineElement> m_freeLineElements;
     vector<LineElement> m_tweeingElements;
     
-    cinder::gl::TextureFont m_texFont;
+	gl::TextureFontRef	mTextureFont;
+    
 };
 
 #endif /* defined(__GitDive_Cinder__TextRenderer__) */
