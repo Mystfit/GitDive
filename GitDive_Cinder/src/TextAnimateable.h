@@ -34,7 +34,7 @@ public:
     virtual void onAnimOut();
 private:
     Vec2<float> m_position;
-    Color; m_colour;
+    Color m_colour;
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */
