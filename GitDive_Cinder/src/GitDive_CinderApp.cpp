@@ -110,7 +110,7 @@ void GitDive_CinderApp::update()
                 bool success = fManager.applyNextCommit();
                 if(success){
                     if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
-                    m_commitReady = false;
+                    m_frameReady = false;
                 } else {
                     bVizActive = false;
                 }
