@@ -12,6 +12,7 @@
 #include <iostream>
 #include "cinder/Timeline.h"
 #include "cinder/Vector.h"
+#include "cinder/Color.h"
 
 class TextAnimateable {
 public:
