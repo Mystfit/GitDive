@@ -17,6 +17,11 @@ void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     texFont->drawString( getStr(), m_position);
 }
 
+void TextAnimateable::setPosition(cinder::Vecf position){
+    m_position = position;
+}
+
+
 
 void TextAnimateable::animIn( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour )
 {
