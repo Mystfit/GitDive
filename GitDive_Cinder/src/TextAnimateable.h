@@ -11,18 +11,19 @@
 
 #include <iostream>
 #include "cinder/Timeline.h"
+#include "cinder/Vector.h"
 
 class TextAnimateable {
 public:
     TextAnimateable();
-    virtual void animIn( Timeline &timeline, Matrix44f matrix )
+    virtual void animIn( cinder::Timeline &timeline, cinder::Vec2<float> destVec )
     {
         mDestMatrix = matrix;
         timeline.apply( &mColorCur, mColorDest, 1.0f, EaseOutAtan( 20 ) );
         timeline.apply( &mMatrix, matrix, 0.5f, EaseOutAtan( 10 ) );
     }
     
-    virtual void animOut( Timeline &timeline, Matrix44f matrix )
+    virtual void animOut( cinder::Timeline &timeline, vec )
     {
         mDestMatrix = matrix;
         timeline.apply( &mColorCur, mColorStart, 1.0f, EaseOutQuad() ).finishFn( bind( &Character::onAnimOut, this ) );
