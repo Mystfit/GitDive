@@ -64,7 +64,7 @@ string Line::getStr(){
 
 void Line::update(){
     for(std::vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
-        if(!it->bIsFloating) it->setPosition( cinder::Vec2f((float)it->position * TextRenderer::FONT_WIDTH, getPosition().y) );
+        if(!it->bIsFloating) it->setPosition( cinder::Vec2f((float)it->position * 8.0f, getPosition().y) );
     }
 }
 
