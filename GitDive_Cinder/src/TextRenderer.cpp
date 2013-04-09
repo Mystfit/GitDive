@@ -54,6 +54,7 @@ void TextRenderer::draw(vector< boost::shared_ptr<Line> > & lines){
     
     for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         
+        //Draws the free-floating line elements
         vector<LineElement> elems = it->get()->getLineElements();
         
 //        for(int i = 0; i < elems.size(); i++){
