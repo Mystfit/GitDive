@@ -20,7 +20,7 @@ public:
     void loadFile(string path);
     void parseCss(string cssData);
 private:
-    
+    map<string, string> m_cssMap;
 };
 
 #endif /* defined(__GitDive_Cinder__CssParser__) */
