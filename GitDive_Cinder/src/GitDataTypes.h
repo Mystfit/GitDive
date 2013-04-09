@@ -46,7 +46,7 @@ public:
     
     string getStr();
     
-    void draw(cinder::TextureFontRef & texFont);
+    void draw(cinder::gl::TextureFontRef & texFont);
     
     int getLinePos(){ return m_linePos; };
     void setLinePos(int linePos){ m_linePos = linePos; };
