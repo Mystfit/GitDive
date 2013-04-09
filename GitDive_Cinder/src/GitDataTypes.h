@@ -33,6 +33,8 @@ public:
         position = pos;
         setPosition(cinder::Vec2f((float)position * 10.0f, 0.0f));
     };
+    void setFloating(){bIsFloating = true; };
+    void setParented(){bIsFloating = false; };
     string getStr(){return str;};
     string elem;
     string str;
