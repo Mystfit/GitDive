@@ -36,10 +36,12 @@ void CssParser::parseCss(vector<string> cssData){
     for(vector<string>::iterator it = cssData.begin(); it != cssData.end(); ++it){
         
         if(starts_with(it, ".")){
-            
-        } else if(starts_with(it, ".")){
-            
+            insideBlock = true;
+        } else if(starts_with(it, "}")){
+            insideBlock = false;
         }
+        
+        if(insideBlock)
         
     }
     
