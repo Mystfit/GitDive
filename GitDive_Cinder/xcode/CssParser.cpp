@@ -57,7 +57,8 @@ void CssParser::parseCss(vector<string> cssData){
                 for(int i = 0; i < line.size(); i++){
                     if(strcmp("#", &line[i]) == 0) foundHash = true;
                     if(foundHash && numChars<6){
-                        colourStr << line[i];
+                        colourStr << line[i+1];
+                        numChars++;
                     }
 
                 }
