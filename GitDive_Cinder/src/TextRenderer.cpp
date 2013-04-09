@@ -60,15 +60,19 @@ void TextRenderer::update(){
 
 
 
-void TextRenderer::draw(vector< boost::shared_ptr<Line> > & lines){
+void TextRenderer::draw(){
     
-    for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
-        
-        //Draws the free-floating line elements        
-        for(int i = 0; i < m_freeLineElements.size(); i++){
-            m_freeLineElements[i].draw(m_textureFont);
+    vector< boost::shared_ptr<Line> > lines = m_targetFile->getLines();
+    
+    if(lines.size()){
+        for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
+            
+            //Draws the free-floating line elements        
+            for(int i = 0; i < m_freeLineElements.size(); i++){
+                m_freeLineElements[i].draw(m_textureFont);
+            }
+            
+            it->get()->draw(m_textureFont);
         }
-        
-        it->get()->draw(m_textureFont);
     }
 }
