@@ -43,6 +43,7 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     
     for(int i = 0; i < lineElems.size(); i++){
         m_freeLineElements.push_back(lineElems[i]);
+        m_freeLineElements.back().setFloating();
     }
     
     line.reset();
