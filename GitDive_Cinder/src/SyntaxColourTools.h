@@ -17,6 +17,7 @@
 #include "srchilite/sourcehighlighter.h";
 #include "srchilite/textstyleformatterfactory.h"
 #include "srchilite/textstyles.h"
+#include "srchilite/outlangdefparserfun.h"
 #include "srchilite/langmap.h"
 #include "srchilite/formatter.h"
 #include "srchilite/formattermanager.h"
