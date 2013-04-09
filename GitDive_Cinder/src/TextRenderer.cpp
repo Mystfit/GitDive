@@ -42,8 +42,8 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0,0,0));
     
     for(int i = 0; i < lineElems.size(); i++){
-        m_freeLineElements.push_back(lineElems[i]);
-        m_freeLineElements.back().setFloating();
+        //m_freeLineElements.push_back(lineElems[i]);
+        //m_freeLineElements.back().setFloating();
     }
     
     line.reset();
