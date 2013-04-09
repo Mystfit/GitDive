@@ -11,17 +11,13 @@
 
 LineElement::LineElement(string element, string elemStr, int pos){
     elem = element;
-    
     str = elemStr;
-    
-//    if(elem == "cbracket"){
-//        if(elemStr == "{") str = "\{";
-//        else if(elemStr == "}") str = "\}";
-//    }
     
     position = pos;
     setPosition(cinder::Vec2f((float)position * 10.0f, 0.0f));
 }
+
+void LineElement::applyCss(boost::shared_ptr<CssParser> cssParser){
 
 /*
  * Line
@@ -43,7 +39,11 @@ Line::Line(string lineStr, bool justUpdated){
 }
 
 
-void Line::applyCss(boost::shared_ptr<CssParser> cssParser);
+void Line::applyCss(boost::shared_ptr<CssParser> cssParser){
+    for(vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
+        it->TextAnimateable::applyCss(cssParser, it->elem);
+    }
+}
 
 
 
