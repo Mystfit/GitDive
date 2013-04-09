@@ -15,6 +15,7 @@
 #include <boost/shared_ptr.hpp>
 #include "Utils.h"
 #include "TextAnimateable.h"
+#include "TextRenderer.h"
 
 
 using namespace std;
