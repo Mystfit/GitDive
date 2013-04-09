@@ -48,7 +48,7 @@ void CssParser::parseCss(vector<string> cssData){
         
         if(starts_with(line, ".")){
             insideBlock = true;
-            string key = line;
+            key = line;
             erase_all(key, ".");
             erase_all(key, " ");
             erase_all(key, "{");
