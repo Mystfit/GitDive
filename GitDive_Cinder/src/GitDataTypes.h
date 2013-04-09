@@ -27,7 +27,7 @@ using namespace std;
 class LineElement : public TextAnimateable {
 public:
     LineElement(string element, string elemStr, int pos);
-    void applyCss(boost::shared_ptr<CssParser cssParser);
+    void applyCss(boost::shared_ptr<CssParser> cssParser);
     void setFloating(){bIsFloating = true; };
     void setParented(){bIsFloating = false; };
     string getStr(){return str;};
@@ -43,7 +43,7 @@ public:
     Line(string lineStr, bool justUpdated = false);
     
     string getStr();
-    
+    void applyCss(boost::shared_ptr<CssParser> cssParser);
     void draw(cinder::gl::TextureFontRef & texFont);
     void update();
     
