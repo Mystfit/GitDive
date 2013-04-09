@@ -16,6 +16,10 @@ void TextAnimateable::update(){
     
 }
 
+void TextAnimateable::CssParser(boost::shared_ptr<CssParser cssParser){
+    cinder::Color::hex(m_cssColours->getColour(m_freeLineElements.back().elem)  )
+}
+
 
 void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     cinder::gl::color( m_colour );
