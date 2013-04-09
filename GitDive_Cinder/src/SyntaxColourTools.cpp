@@ -109,14 +109,15 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     srchilite::LangDefManager langDefManager(&ruleFactory);
     srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, lang));
     
-    boost::shared_ptr<srchilite::TextStyleFormatterFactory> formatterFactory(new srchilite::TextStyleFormatterFactory());
-    
-    srchilite::StyleFileParser::parseStyleFile("sh_greenlcd.css", , "#FFFFFF");
-    
     //Set up formatters to modify our lines
     boost::shared_ptr<LineFormatter> passthroughLineFormatter(new LineFormatter("", boost::shared_ptr<Line>()));
     boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(passthroughLineFormatter));
     highlighter.setFormatterManager(formatterManager.get());
+    
+    boost::shared_ptr<srchilite::TextStyleFormatterFactory> formatterFactory(new srchilite::TextStyleFormatterFactory());
+    
+    srchilite::StyleFileParser::parseStyleFile("sh_greenlcd.css", , "#FFFFFF");
+
     
     //Set up params to hold the element position from the start of the line
     srchilite::FormatterParams params;
