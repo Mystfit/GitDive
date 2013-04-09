@@ -49,7 +49,7 @@ void CssParser::parseCss(vector<string> cssData){
         if(starts_with(line, ".")){
             insideBlock = true;
             string key = line;
-            Utils::strip(key, ".{");
+            erase_all(key, ".{");
             
         } else if(starts_with(line, "}")){
             insideBlock = false;
