@@ -120,7 +120,7 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     srchilite::TextStyleFormatterFactory formatterFactory(textStyles, preFormatter.get(), ctags.get(), formatterManager.get());
     
     string bgcolour = "#FFFFFF";
-    srchilite::parseCssStyles(DATADIR, "sh_golden.css", &formatterFactory, bgcolour.c_str());
+    srchilite::parseCssStyles(DATADIR, "sh_golden.css", &formatterFactory, &bgcolour.c_str());
     
     //Set up params to hold the element position from the start of the line
     srchilite::FormatterParams params;
