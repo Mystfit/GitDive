@@ -49,7 +49,7 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     
     for(int i = 0; i < lineElems.size(); i++){
         m_freeLineElements.push_back(lineElems[i]);
-        m_freeLineElements.back().setColour(cinder::Color::hex(m_cssColours.getColour(m_freeLineElements.back().elem)  ) );
+        m_freeLineElements.back().setColour( );
         m_freeLineElements.back().setFloating();
         m_freeLineElements.back().animOut(m_timeline, m_freeLineElements.back().getPosition(), cinder::Color(0,0,0), 10.0f);
     }
