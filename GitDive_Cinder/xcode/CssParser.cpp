@@ -49,7 +49,7 @@ void CssParser::parseCss(vector<string> cssData){
             m_cssMap[key] = colour;
         }
         
-        if(insideBlock)
+        if(insideBlock){
             if(find_first(line, "color")){
                 stringstream colourStr;
                 bool foundHash = false;
@@ -60,10 +60,9 @@ void CssParser::parseCss(vector<string> cssData){
                         colourStr << line[i+1];
                         numChars++;
                     }
-
                 }
             }
-        
+        }
     }
     
 }
