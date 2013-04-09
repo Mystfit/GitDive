@@ -153,10 +153,7 @@ void GitDive_CinderApp::draw()
     //Draw params window
     params::InterfaceGl::draw();
     
-    if(tRender)
-    {
-        tRender->draw();
-    }
+    if(tRender) tRender->draw();
 }
 
 
