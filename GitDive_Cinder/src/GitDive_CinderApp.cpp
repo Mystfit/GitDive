@@ -153,11 +153,9 @@ void GitDive_CinderApp::draw()
     //Draw params window
     params::InterfaceGl::draw();
     
-    if(tRender && bVizActive)
+    if(tRender)
     {
-        if(fManager.getFileByName(m_targetFile)){
-            tRender->draw( fManager.getFileByName(m_targetFile)->getLines() );
-        }
+        tRender->draw();
     }
 }
 
