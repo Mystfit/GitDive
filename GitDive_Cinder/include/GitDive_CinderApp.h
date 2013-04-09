@@ -38,7 +38,7 @@ public:
     void startVisualization();
     void pauseVisualization(){ bVizActive = false; };
     void jumpToEnd();
-    void setTrackedFile(string trackedFile);
+    void setTrackedFile();
     
     //Managers
     GitFileManager fManager;
