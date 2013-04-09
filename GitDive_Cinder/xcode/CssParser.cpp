@@ -14,7 +14,7 @@ CssParser::CssParser(){
 
 
 void CssParser::loadFile(string path){
-    ofstream file;
+    ifstream file;
     file.open(path.c_str(), ios::in);
     file.
 }
