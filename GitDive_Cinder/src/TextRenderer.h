@@ -10,7 +10,7 @@
 #define __GitDive_Cinder__TextRenderer__
 
 #define LINE_HEIGHT 15
-#define FONT_SIZE 11
+#define FONT_SIZE 14
 
 #include <iostream>
 #include "GitDataTypes.h"
