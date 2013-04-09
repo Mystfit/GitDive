@@ -48,7 +48,9 @@ void CssParser::parseCss(vector<string> cssData){
         }
         
         if(insideBlock)
-            if(boost::find)
+            if(find_first(it, "color")){
+                
+            }
         
     }
     
