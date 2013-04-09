@@ -38,7 +38,9 @@ void CssParser::parseCss(vector<string> cssData){
         
         if(starts_with(it, ".")){
             insideBlock = true;
-            key = it
+            string input = it;
+            Utils::strip(input, ".{");
+            key = input;
             
         } else if(starts_with(it, "}")){
             insideBlock = false;
