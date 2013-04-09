@@ -114,6 +114,8 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(passthroughLineFormatter));
     highlighter.setFormatterManager(formatterManager.get());
     
+    
+    
     boost::shared_ptr<srchilite::TextStyleFormatterFactory> formatterFactory(new srchilite::TextStyleFormatterFactory());
     
     srchilite::StyleFileParser::parseStyleFile("sh_greenlcd.css", , "#FFFFFF");
