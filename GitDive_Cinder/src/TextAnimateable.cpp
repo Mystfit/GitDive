@@ -17,7 +17,7 @@ void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     
     if(m_lineElements.size())
     {
-        for(std::vector<TextAnimateable>::iterator it = m_lineElements.begine(); it != m_lineElements.end(); ++it){
+        for(std::vector<TextAnimateable>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
             it->draw(texFont);
         }
     } else {
