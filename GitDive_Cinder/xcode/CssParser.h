@@ -26,7 +26,7 @@ public:
     void parseCss(vector<string> cssData);
         
 private:
-    map<string, string> m_cssMap;
+    map<string, int> m_cssMap;
     bool bIsLoaded;
 };
 
