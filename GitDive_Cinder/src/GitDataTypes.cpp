@@ -9,8 +9,11 @@
 #include "GitDataTypes.h"
 
 
-LineElement::LineElement(){
-    
+LineElement::LineElement(string element, string elemStr, int pos){
+        elem = element;
+        str = elemStr;
+        position = pos;
+        setPosition(cinder::Vec2f((float)position * 10.0f, 0.0f));
 }
 
 /*

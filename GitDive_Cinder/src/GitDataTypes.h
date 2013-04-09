@@ -26,13 +26,7 @@ using namespace std;
 
 class LineElement : public TextAnimateable {
 public:
-    LineElement(string element, string elemStr, int pos)
-    {
-        elem = element;
-        str = elemStr;
-        position = pos;
-        setPosition(cinder::Vec2f((float)position * 10.0f, 0.0f));
-    };
+    LineElement(string element, string elemStr, int pos);
     void setFloating(){bIsFloating = true; };
     void setParented(){bIsFloating = false; };
     string getStr(){return str;};
