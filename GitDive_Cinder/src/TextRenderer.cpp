@@ -62,7 +62,10 @@ void TextRenderer::update(){
 
 void TextRenderer::draw(){
     
-    vector< boost::shared_ptr<Line> > lines = m_targetFile->getLines();
+    vector< boost::shared_ptr<Line> > lines;
+    
+    if(m_targetFile) lines = m_targetFile->getLines();
+    else return;
     
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
