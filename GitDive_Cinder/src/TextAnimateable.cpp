@@ -25,9 +25,11 @@ void TextAnimateable::applyCss(boost::shared_ptr<CssParser> cssParser, string ke
 
 void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     cinder::gl::color( m_colour );
-    if(getStr() == "{" || getStr() == "}"){
-        cout << "CBRACKET" << endl;
-    }
+    string str = getStr();
+
+    if(str == "{") str = "\{";
+    if(str == "}") str = "\}";
+
     texFont->drawString( getStr(), m_position);
 }
 
