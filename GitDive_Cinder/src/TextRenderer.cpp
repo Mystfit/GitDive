@@ -9,7 +9,7 @@
 #include "TextRenderer.h"
 
 TextRenderer::TextRenderer(){
-    cinder::Font customFont( cinder::Font( "GohuFont", FONT_SIZE ) ); //GohuFont
+    cinder::Font customFont( cinder::Font( "Andale Mono", FONT_SIZE ) ); //GohuFont
 	cinder::gl::TextureFont::Format f;
 	f.enableMipmapping( true );
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
