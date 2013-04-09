@@ -20,9 +20,7 @@ public:
     CssParser();
     void loadFile(string path);
     void parseCss(string cssData);
-    
-    cinder::hex
-    
+        
 private:
     map<string, string> m_cssMap;
 };
