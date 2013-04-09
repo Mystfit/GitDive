@@ -14,10 +14,10 @@ LineElement::LineElement(string element, string elemStr, int pos){
     
     str = elemStr;
     
-    if(elem == "cbracket"){
-        if(elemStr == "{") str = "\{";
-        else if(elemStr == "}") str = "\}";
-    }
+//    if(elem == "cbracket"){
+//        if(elemStr == "{") str = "\{";
+//        else if(elemStr == "}") str = "\}";
+//    }
     
     position = pos;
     setPosition(cinder::Vec2f((float)position * 10.0f, 0.0f));
