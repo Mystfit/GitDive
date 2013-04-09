@@ -65,6 +65,7 @@ private:
     float m_textZoom;
     cinder::Vec2f m_textOffset;
     cinder::Vec2f m_scrollVelocity;
+    CssParser m_cssColours;
 };
 
 #endif /* defined(__GitDive_Cinder__TextRenderer__) */
