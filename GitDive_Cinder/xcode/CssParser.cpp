@@ -31,5 +31,5 @@ vector<string> CssParser::loadFile(string path){
 
 
 void CssParser::parseCss(string cssData){
-    if()
+    if(!bIsLoaded)
 }
