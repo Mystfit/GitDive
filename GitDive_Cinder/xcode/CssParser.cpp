@@ -65,5 +65,4 @@ void CssParser::parseCss(vector<string> cssData){
             }
         }
     }
-    
 }
