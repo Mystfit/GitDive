@@ -11,12 +11,16 @@
 
 #include <iostream>
 #include <fstream>
+#include <map>
 #include "Utils.h"
 
 class CssParser {
 public:
-    loadFile(string cssData);
+    CssParser();
+    void loadFile(string path);
+    void parseCss(string cssData);
 private:
+    
 };
 
 #endif /* defined(__GitDive_Cinder__CssParser__) */
