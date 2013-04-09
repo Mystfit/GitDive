@@ -16,7 +16,7 @@ TextRenderer::TextRenderer(){
     
     string cssPath = DATADIR;
     string cssFile = "sh_golden.css";
-    m_cssColours.loadFile( cssPath + "/" + cssFile; );
+    m_cssColours.loadFile( cssPath + "/" + cssFile );
 }
 
 
