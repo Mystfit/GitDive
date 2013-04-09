@@ -177,7 +177,7 @@ GitFile::GitFile(string filename){
 
 void GitFile::update(){
     for(vector< boost:shared_ptr<Line> >::iterator = m_activeLines.begin(); it != m_ActiveLines.end(); ++it){
-        it
+        it->get()->update();
     }
 }
 
