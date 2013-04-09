@@ -28,10 +28,12 @@ public:
     void onAnimIn();
     void onAnimOut();
     
+protected:
+    vector< LineElement > m_lineElements;
+    
 private:
     cinder::Anim<cinder::Vec2f> m_position;
     cinder::Anim<cinder::Color> m_colour;
-    
     cinder::TweenRef<cinder::Vec2f> m_posTween;
     cinder::TweenRef<cinder::Color> m_colourTween;
 };
