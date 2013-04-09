@@ -19,6 +19,7 @@
 #include "cinder/gl/gl.h"
 #include "cinder/gl/TextureFont.h"
 #include "CssParser.h"
+#include "SyntaxColourTools.h"
 
 
 class TextRenderer {
