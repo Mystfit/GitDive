@@ -14,15 +14,7 @@ TextAnimateable::TextAnimateable(){
                 
 void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     cinder::gl::color( m_colour );
-    
-    if(m_lineElements.size())
-    {
-        for(std::vector<TextAnimateable>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
-            it->draw(texFont);
-        }
-    } else {
-        texFont->drawString( getStr(), m_position);
-    }
+    texFont->drawString( getStr(), m_position);
 }
 
 void TextAnimateable::setPosition(cinder::Vec2f position){
