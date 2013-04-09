@@ -88,7 +88,7 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     //Utils::strip(str, "\n");
     //std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << str << "|" << endl;
     LineElement newElem(elem, str, params->start);
-    elem.setColour( srchilite::  );
+    //elem.setColour( srchilite::  );
     m_targetLine->addLineElement(newElem);
 }
 
@@ -108,7 +108,7 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     srchilite::RegexRuleFactory ruleFactory;
     srchilite::LangDefManager langDefManager(&ruleFactory);
     srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, lang));
-    srchilit::c
+    srchilit::StyleFileParser styleParser;
     
     //Set up formatters to modify our lines
     boost::shared_ptr<LineFormatter> passthroughLineFormatter(new LineFormatter("", boost::shared_ptr<Line>()));
