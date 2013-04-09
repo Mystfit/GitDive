@@ -50,6 +50,7 @@ private:
     cinder::gl::TextureFontRef m_textureFont;
     cinder::TimelineRef m_timeline;
     
+    cinder::Vec2f m_textOffset;
     cinder::Vec2f m_kineticVelocity;
 };
 
