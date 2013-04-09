@@ -18,7 +18,7 @@
 class CssParser {
 public:
     CssParser();
-    void loadFile(string path);
+    static vector<string> loadFile(string path);
     void parseCss(string cssData);
         
 private:
