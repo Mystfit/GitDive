@@ -35,7 +35,7 @@ void CssParser::parseCss(vector<string> cssData){
     bool insideBlock = false;
     string key;
     string line;
-    int32_t colour;
+    int colour;
     for(vector<string>::iterator it = cssData.begin(); it != cssData.end(); ++it){
         line = *it;
         
@@ -61,6 +61,7 @@ void CssParser::parseCss(vector<string> cssData){
                         numChars++;
                     }
                 }
+                colour 
             }
         }
     }
