@@ -132,6 +132,8 @@ void GitDive_CinderApp::update()
             }
             bFframeReady = false;
         }
+        
+        tRender->update();
     }
 
 }
