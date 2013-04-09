@@ -201,6 +201,8 @@ class GitFile {
 public:
     GitFile(string filename);
     
+    void update();
+    
     string getFilename(){ return m_filename; };
     
     //Set active states
