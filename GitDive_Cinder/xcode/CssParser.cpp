@@ -7,3 +7,17 @@
 //
 
 #include "CssParser.h"
+
+CssParser::CssParser(){
+    
+}
+
+
+void CssParser::loadFile(string path){
+    
+}
+
+
+void CssParser::parseCss(string cssData){
+    
+}
