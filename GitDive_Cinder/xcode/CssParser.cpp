@@ -32,9 +32,12 @@ vector<string> CssParser::loadFile(string path){
 
 void CssParser::parseCss(vector<string> cssData){
     
+    bool insideBlock = false;
     for(vector<string>::iterator it = cssData.begin(); it != cssData.end(); ++it){
         
         if(starts_with(it, ".")){
+            
+        } else if(starts_with(it, ".")){
             
         }
         
