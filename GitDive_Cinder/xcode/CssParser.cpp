@@ -48,6 +48,7 @@ void CssParser::parseCss(vector<string> cssData){
         }
         
         if(insideBlock)
+            
         
     }
     
