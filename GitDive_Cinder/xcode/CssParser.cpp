@@ -21,6 +21,7 @@ void CssParser::loadFile(string path){
     file.open(path.c_str(), ios::in);
     while(file.good()){
         std::getline(file, line);
+        lines.push_back(line);
     }
 }
 
