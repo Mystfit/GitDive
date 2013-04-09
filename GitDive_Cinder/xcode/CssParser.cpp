@@ -32,4 +32,10 @@ vector<string> CssParser::loadFile(string path){
 
 void CssParser::parseCss(vector<string> cssData){
     
+    for(vector<string>::iterator it = cssData.begin(); it != cssData.end(); ++it){
+        
+        if()
+        
+    }
+    
 }
