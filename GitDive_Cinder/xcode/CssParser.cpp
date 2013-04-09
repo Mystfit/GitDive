@@ -29,6 +29,10 @@ vector<string> CssParser::loadFile(string path){
     return lines;
 }
 
+int CssParser::getColour(string elem){
+    
+}
+
 
 void CssParser::parseCss(vector<string> cssData){
     
