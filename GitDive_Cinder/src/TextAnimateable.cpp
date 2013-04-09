@@ -14,13 +14,14 @@ TextAnimateable::TextAnimateable(){
                 
 void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     cinder::gl::color( m_colour );
-    texFont->drawString( getStr(), m_position);
     
     if(m_lineElements.size())
     {
-        for(vector<LineElements>::iterator it = m_lineElements.begine(); it != m_lineElements.end(); ++it){
-            
+        for(vector<LineElement>::iterator it = m_lineElements.begine(); it != m_lineElements.end(); ++it){
+            it->get()->draw(texFont);
         }
+    } else {
+        texFont->drawString( getStr(), m_position);
     }
 }
 
