@@ -114,12 +114,12 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(passthroughLineFormatter));
     highlighter.setFormatterManager(formatterManager.get());
     
-    TextStylesPtr textStyles = srchilite::parse_outlang_def(DATADIR, lang.c_str());
-    PreFormatterPtr preFormatter(new PreFormatter(textStyles->charTranslator));
-    boost::shared_ptr<CTagsFormatter> ctags;
-    srchilite::TextStyleFormatterFactory formatterFactory(textStyles, preFormatter.get(), ctags.get(), formatterManager.get());
-    string bgcolour = "";
-    srchilite::parseCssStyles(DATADIR, "sh_golden.css", &formatterFactory, bgcolour);
+//    TextStylesPtr textStyles = srchilite::parse_outlang_def(DATADIR, lang.c_str());
+//    PreFormatterPtr preFormatter(new PreFormatter(textStyles->charTranslator));
+//    boost::shared_ptr<CTagsFormatter> ctags;
+//    srchilite::TextStyleFormatterFactory formatterFactory(textStyles, preFormatter.get(), ctags.get(), formatterManager.get());
+//    string bgcolour = "";
+//    srchilite::parseCssStyles(DATADIR, "sh_golden.css", &formatterFactory, bgcolour);
     
     //Set up params to hold the element position from the start of the line
     srchilite::FormatterParams params;
