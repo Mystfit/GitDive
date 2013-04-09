@@ -10,9 +10,6 @@
 
 
 LineElement::LineElement(string element, string elemStr, int pos){
-    
-    
-
     elem = element;
     
     str = elemStr;
@@ -66,7 +63,7 @@ string Line::getStr(){
 
 void Line::update(){
     for(std::vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
-        if(!it->bIsFloating) it->setPosition( cinder::Vec2f((float)it->position * 5.0f, getPosition().y) );
+        if(!it->bIsFloating) it->setPosition( cinder::Vec2f((float)it->position * 10.0f, getPosition().y) );
     }
 }
 
