@@ -16,7 +16,7 @@ TextRenderer::TextRenderer(){
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f, supportedChars );
     
     string cssPath = DATADIR;
-    string cssFile = "sh_typical.css";
+    string cssFile = "sh_vampire.css";
     m_cssColours = boost::shared_ptr<CssParser>(new CssParser());
     m_cssColours->loadFile( cssPath + "/" + cssFile );
 }
