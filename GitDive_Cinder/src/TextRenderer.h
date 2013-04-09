@@ -23,6 +23,8 @@ class TextRenderer {
 public:
     TextRenderer();
     void draw(vector< boost::shared_ptr<Line> > & lines);
+    void update();
+
     
     cinder::gl::TextureFontRef & getTexFont(){return m_textureFont; };
     
