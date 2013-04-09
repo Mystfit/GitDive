@@ -34,6 +34,7 @@ void CssParser::parseCss(vector<string> cssData){
     
     bool insideBlock = false;
     string key;
+    int32_t colour;
     for(vector<string>::iterator it = cssData.begin(); it != cssData.end(); ++it){
         
         if(starts_with(it, ".")){
@@ -43,6 +44,7 @@ void CssParser::parseCss(vector<string> cssData){
             
         } else if(starts_with(it, "}")){
             insideBlock = false;
+            m_cssMap[key] = colour;
         }
         
         if(insideBlock)
