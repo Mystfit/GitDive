@@ -54,7 +54,8 @@ void Line::draw(cinder::gl::TextureFontRef & texFont){
             it->draw(texFont);
         }
     } else {
-        texFont->drawString( getStr(), m_position);
+        TextAnimateable::draw(texFont);
+        //texFont->drawString( getStr(), m_position);
     }
 
 }
