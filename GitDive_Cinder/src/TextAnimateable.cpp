@@ -19,7 +19,6 @@ void TextAnimateable::update(){
 void TextAnimateable::applyCss(boost::shared_ptr<CssParser cssParser){
 }
 
-
 void TextAnimateable::applyCss(boost::shared_ptr<CssParser cssParser, string key){
     setColour(cinder::Color::hex(cssParser->getColour(key) ));
 }
