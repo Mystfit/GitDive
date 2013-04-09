@@ -62,7 +62,7 @@ void CssParser::parseCss(vector<string> cssData){
                 bool foundHash = false;
                 int numChars = 0;
                 for(int i = 0; i < line.size(); i++){
-                    if("#" == line[i]){
+                    if("#" == line  ){
                         foundHash = true;
                     }
                     if(foundHash && numChars<6){
