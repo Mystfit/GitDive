@@ -24,6 +24,8 @@ vector<string> CssParser::loadFile(string path){
         lines.push_back(line);
     }
     
+    bIsLoaded = true;
+    
     return lines;
 }
 
