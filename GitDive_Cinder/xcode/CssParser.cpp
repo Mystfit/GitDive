@@ -52,6 +52,9 @@ void CssParser::parseCss(vector<string> cssData){
             erase_all(key, ".");
             erase_all(key, " ");
             erase_all(key, "{");
+            erase_all(key, "\n\r");
+
+
         } else if(starts_with(line, "}")){
             insideBlock = false;
             m_cssMap[key] = colour;
