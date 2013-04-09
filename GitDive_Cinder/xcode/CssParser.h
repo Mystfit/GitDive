@@ -19,7 +19,7 @@ class CssParser {
 public:
     CssParser();
     vector<string> loadFile(string path);
-    void parseCss(string cssData);
+    void parseCss(vector<string> cssData);
         
 private:
     map<string, string> m_cssMap;
