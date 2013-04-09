@@ -29,7 +29,7 @@ public:
     void setTimeline(cinder::TimelineRef timelineRef){ m_timeline = timelineRef; };
     
     void setTextOffset(cinder::Vec2f position);
-    void setScrollVelocity(cinder::Vec2 velocity);
+    void setScrollVelocity(cinder::Vec2f velocity);
     
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
