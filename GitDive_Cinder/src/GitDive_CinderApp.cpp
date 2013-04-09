@@ -53,10 +53,10 @@ void GitDive_CinderApp::initUI(){
     maxSpeed << "min=1, max=" << ci::app::getFrameRate()/2;
     mParams.addParam("Commits per second", &m_timeSpeed, maxSpeed.str());
     mParams.addButton("Jump to end", std::bind(&GitDive_CinderApp::jumpToEnd, this));
-    mParams.addButton("Start", std::bind(&GitDive_CinderApp::startVisualization, this));
-    mParams.addButton("Pause", std::bind(&GitDive_CinderApp::pauseVisualization, this));
     mParams.addParam("File to track", &m_targetFile);
     mParams.addButton("Track", std::bind(&GitDive_CinderApp::setTrackedFile, this));
+    mParams.addButton("Pause", std::bind(&GitDive_CinderApp::pauseVisualization, this));
+    mParams.addButton("Start", std::bind(&GitDive_CinderApp::startVisualization, this));
 }
 
 void GitDive_CinderApp::setTrackedFile(){
