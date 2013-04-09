@@ -37,6 +37,7 @@ public:
     string elem;
     string str;
     int position;
+    bool bIsFloating;
 };
 
 class Line : public TextAnimateable {
