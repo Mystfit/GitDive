@@ -15,6 +15,13 @@ TextAnimateable::TextAnimateable(){
 void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     cinder::gl::color( m_colour );
     texFont->drawString( getStr(), m_position);
+    
+    if(m_lineElements.size())
+    {
+        for(vector<LineElements>::iterator it = m_lineElements.begine(); it != m_lineElements.end(); ++it){
+            
+        }
+    }
 }
 
 void TextAnimateable::setPosition(cinder::Vec2f position){
@@ -25,7 +32,6 @@ void TextAnimateable::setPosition(cinder::Vec2f position){
 
 void TextAnimateable::animIn( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour )
 {
-    
     cinder::EaseOutSine easer;
         
     m_colourTween = timeline->apply( &m_colour, destColour, 0.4f,  easer);
