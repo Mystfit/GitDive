@@ -85,7 +85,7 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
 
     //The highlighter adds newlines automatically to the end of the line. Chuck em!
     string str = s;
-    Utils::strip(str, "\n");
+    //Utils::strip(str, "\n");
     
     std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << str << "|" << endl;
     

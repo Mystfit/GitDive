@@ -77,7 +77,6 @@ void Line::draw(cinder::gl::TextureFontRef & texFont){
         TextAnimateable::draw(texFont);
         //texFont->drawString( getStr(), m_position);
     }
-
 }
 
 
