@@ -109,7 +109,9 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     srchilite::LangDefManager langDefManager(&ruleFactory);
     srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, lang));
     
-    srchilite::StyleFileParser::parseStyleFile("sh_greenlcd.css", <#srchilite::FormatterFactory *formatterFactory#>, <#std::string &bodyBgColor#>);
+    boost::shared_ptr<srchilite::FormatterFactory> formatterFactory(new srchilite::FormatterFactory());
+    
+    srchilite::StyleFileParser::parseStyleFile("sh_greenlcd.css", , "#FFFFFF");
     
     //Set up formatters to modify our lines
     boost::shared_ptr<LineFormatter> passthroughLineFormatter(new LineFormatter("", boost::shared_ptr<Line>()));
