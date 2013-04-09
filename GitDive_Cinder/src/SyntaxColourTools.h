@@ -19,6 +19,7 @@
 #include "srchilite/textstyles.h"
 #include "srchilite/outlangdefparserfun.h"
 #include "srchilite/langmap.h"
+#include "srchilite/parsestyles.h"
 #include "srchilite/formatter.h"
 #include "srchilite/formattermanager.h"
 #include "srchilite/formatterparams.h"
