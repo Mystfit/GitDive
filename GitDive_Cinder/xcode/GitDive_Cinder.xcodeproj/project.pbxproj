@@ -116,7 +116,6 @@
 				4AD7491F17097505006ACBC6 /* GitFileManager.cpp */,
 				4A1253FA170FF90000DE28C9 /* SyntaxColourTools.cpp */,
 				4ABFC141171412B600791CC0 /* CssParser.cpp */,
-				4ABFC142171412B600791CC0 /* CssParser.h */,
 				4A1A6B7F17054D940046BE09 /* Utils.cpp */,
 				4AB896DB1712B84900533992 /* TextAnimateable.cpp */,
 				4AB896D717129B8900533992 /* TextRenderer.cpp */,
@@ -178,6 +177,7 @@
 			children = (
 				4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */,
 				4A1A6BCB1705AAE60046BE09 /* GitLogParser.h */,
+				4ABFC142171412B600791CC0 /* CssParser.h */,
 				4A1A6BC81705A5880046BE09 /* GitDataTypes.h */,
 				4AD7492017097505006ACBC6 /* GitFileManager.h */,
 				4A1253FB170FF90000DE28C9 /* SyntaxColourTools.h */,
