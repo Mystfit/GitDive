@@ -18,6 +18,7 @@
 #include "cinder/timeline.h"
 #include "cinder/gl/gl.h"
 #include "cinder/gl/TextureFont.h"
+#include "CssParser.h"
 
 
 class TextRenderer {
