@@ -64,12 +64,11 @@ void CssParser::parseCss(vector<string> cssData){
                 for(int i = 0; i < line.size(); i++){
                     cout << &line[i] << endl;
                     int offset = line.find("#");
-                    if(offset != std::)
-                    if("#" == line.at(i) ){
+                    if(offset != std::string::npos){
                         foundHash = true;
                     }
                     if(foundHash && numChars<6){
-                        colourStr << line[i+1];
+                        colourStr << line[i + offset + 1];
                         numChars++;
                     }
                 }
