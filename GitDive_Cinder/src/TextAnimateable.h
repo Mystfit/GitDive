@@ -28,9 +28,6 @@ public:
     void onAnimIn();
     void onAnimOut();
     
-protected:
-    std::vector<TextAnimateable> m_lineElements;
-    
 private:
     cinder::Anim<cinder::Vec2f> m_position;
     cinder::Anim<cinder::Color> m_colour;
