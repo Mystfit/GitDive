@@ -15,7 +15,7 @@ TextAnimateable::TextAnimateable(){
 void TextAnimateable::update(){
 }
 
-void TextAnimateable::applyCss(boost::shared_ptr<CssParser cssParser){
+void TextAnimateable::applyCss(boost::shared_ptr<CssParser> cssParser){
 }
 
 void TextAnimateable::applyCss(boost::shared_ptr<CssParser> cssParser, string key){
