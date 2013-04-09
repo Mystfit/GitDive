@@ -24,7 +24,6 @@ public:
     TextRenderer();
     void draw(vector< boost::shared_ptr<Line> > & lines);
     void update();
-    
     void setTargetFile(boost::shared_ptr<GitFile> file){m_targetFile = file; };
     
     //Texturefont reference for drawing text
