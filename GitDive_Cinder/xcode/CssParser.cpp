@@ -63,7 +63,7 @@ void CssParser::parseCss(vector<string> cssData){
                 int numChars = 0;
                 for(int i = 0; i < line.size(); i++){
                     cout << &line[i] << endl;
-                    if("#" == &line.at(i) ){
+                    if("#" == line.at(i) ){
                         foundHash = true;
                     }
                     if(foundHash && numChars<6){
