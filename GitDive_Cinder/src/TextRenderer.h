@@ -24,10 +24,11 @@ public:
     TextRenderer();
     void draw(vector< boost::shared_ptr<Line> > & lines);
     void update();
-
     
+    //Texturefont reference for drawing text
     cinder::gl::TextureFontRef & getTexFont(){return m_textureFont; };
     
+    //Timeline reference for animation
     void setTimeline(cinder::TimelineRef timelineRef){ m_timeline = timelineRef; };
     
     //Sets the position of the file on the screen
@@ -47,8 +48,7 @@ public:
     //Returns a free line element
     void getFreeLineElem(LineElement searchTarget);
     
-    void removeLine(boost::shared_ptr<Line> line);
-    
+    //Animate lines into position
     void animLinesIn(vector<boost::shared_ptr<Line> > lines);
         
 private:    
