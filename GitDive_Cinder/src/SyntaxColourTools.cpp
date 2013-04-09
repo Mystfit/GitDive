@@ -89,7 +89,7 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     //std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << str << "|" << endl;
     LineElement newElem(elem, str, params->start);
     elem1.setColour( srchilite::  );
-    m_targetLine->addLineElement(newElem;
+    m_targetLine->addLineElement(newElem);
 }
 
 string LineFormatter::getFileLangType(string filename){
