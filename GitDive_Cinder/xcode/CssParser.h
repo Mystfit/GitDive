@@ -15,6 +15,8 @@
 #include "Utils.h"
 #include "cinder/Color.h"
 
+using namespace boost;
+
 class CssParser {
 public:
     CssParser();
