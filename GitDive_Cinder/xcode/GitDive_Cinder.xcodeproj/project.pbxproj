@@ -177,9 +177,9 @@
 			children = (
 				4A1A6B8017054D940046BE09 /* GitDive_CinderApp.h */,
 				4A1A6BCB1705AAE60046BE09 /* GitLogParser.h */,
-				4ABFC142171412B600791CC0 /* CssParser.h */,
 				4A1A6BC81705A5880046BE09 /* GitDataTypes.h */,
 				4AD7492017097505006ACBC6 /* GitFileManager.h */,
+				4ABFC142171412B600791CC0 /* CssParser.h */,
 				4A1253FB170FF90000DE28C9 /* SyntaxColourTools.h */,
 				4A1A6B7B17042CCA0046BE09 /* Utils.h */,
 				4AB896DC1712B84900533992 /* TextAnimateable.h */,
