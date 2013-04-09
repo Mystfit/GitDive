@@ -15,7 +15,7 @@ TextRenderer::TextRenderer(){
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
     
     string cssPath = DATADIR;
-    string cssFile = "sh_berries-dark.css";
+    string cssFile = "sh_greenlcd.css";
     m_cssColours = boost::shared_ptr<CssParser>(new CssParser());
     m_cssColours->loadFile( cssPath + "/" + cssFile );
 }
