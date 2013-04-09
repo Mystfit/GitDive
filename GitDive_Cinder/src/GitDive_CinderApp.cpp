@@ -122,7 +122,6 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 
 void GitDive_CinderApp::update()
 {
-    cout << "\a";
     if(fManager.getFileByName(m_targetFile) && !bFileActive){
         setTrackedFile();
         bFileActive = true;
