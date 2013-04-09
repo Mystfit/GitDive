@@ -88,7 +88,7 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     //Utils::strip(str, "\n");
     //std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << str << "|" << endl;
     LineElement newElem(elem, str, params->start);
-    elem1.setColour( srchilite::  );
+    elem.setColour( srchilite::  );
     m_targetLine->addLineElement(newElem);
 }
 
