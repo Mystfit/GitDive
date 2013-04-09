@@ -61,7 +61,7 @@ void CssParser::parseCss(vector<string> cssData){
                         numChars++;
                     }
                 }
-                colourStr >> std::hex >> 
+                colourStr >> std::hex >> colour;
             }
         }
     }
