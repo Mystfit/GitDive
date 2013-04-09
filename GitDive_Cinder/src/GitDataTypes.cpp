@@ -40,8 +40,11 @@ Line::Line(string lineStr, bool justUpdated){
     }
     
     if(!justUpdated) m_lineStr.erase(0,1);
-
 }
+
+
+void Line::applyCss(boost::shared_ptr<CssParser> cssParser);
+
 
 
 string Line::getStr(){
