@@ -34,12 +34,13 @@ void CssParser::parseCss(vector<string> cssData){
     
     bool insideBlock = false;
     string key;
+    string line;
     int32_t colour;
     for(vector<string>::iterator it = cssData.begin(); it != cssData.end(); ++it){
-        
+        line = *it;
         if(starts_with(it, ".")){
             insideBlock = true;
-            string key = *it;
+            string key = line;
             Utils::strip(key, ".{");
             
         } else if(starts_with(it, "}")){
