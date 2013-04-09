@@ -134,7 +134,6 @@ void GitDive_CinderApp::update()
         }
         m_lastFrame = frameNum;
         
-        cinder::ColorAT<<#typename T#>::>
         
         if(bFframeReady){
             bool success = fManager.applyNextCommit();
