@@ -31,6 +31,7 @@ public:
     //Sets the position of the file on the screen
     void setTextOffset(cinder::Vec2f position){m_textOffset = position;};
     void setScrollVelocity(cinder::Vec2f velocity){m_scrollVelocity = velocity; };
+    void setTextZoom(float zoom){m_textZoom = zoom; };
     
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
@@ -54,6 +55,7 @@ private:
     cinder::gl::TextureFontRef m_textureFont;
     cinder::TimelineRef m_timeline;
     
+    float m_textZoom;
     cinder::Vec2f m_textOffset;
     cinder::Vec2f m_scrollVelocity;
 };
