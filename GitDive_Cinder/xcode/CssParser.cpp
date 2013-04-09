@@ -62,7 +62,6 @@ void CssParser::parseCss(vector<string> cssData){
                 bool foundHash = false;
                 int numChars = 0;
                 for(int i = 0; i < line.size(); i++){
-                    cout << &line[i] << endl;
                     int offset = line.find("#");
                     if(offset != std::string::npos){
                         foundHash = true;
