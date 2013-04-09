@@ -14,6 +14,7 @@ TextRenderer::TextRenderer(){
 	f.enableMipmapping( true );
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
     
+    string cssPath = DATADIR;
     m_cssColours.loadFile( DATADIR + "/sh_golden.css" );
 }
 
