@@ -27,7 +27,7 @@ using namespace std;
 class LineElement : public TextAnimateable {
 public:
     LineElement(string element, string elemStr, int pos);
-    virtual void applyCss(boost::shared_ptr<CssParser cssParser, string key);
+    void applyCss(boost::shared_ptr<CssParser cssParser);
     void setFloating(){bIsFloating = true; };
     void setParented(){bIsFloating = false; };
     string getStr(){return str;};
