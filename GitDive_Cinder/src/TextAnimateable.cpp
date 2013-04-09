@@ -17,7 +17,7 @@ void TextAnimateable::update(){
 }
 
 void TextAnimateable::CssParser(boost::shared_ptr<CssParser cssParser){
-    cinder::Color::hex(m_cssColours->getColour(m_freeLineElements.back().elem)  )
+    cinder::Color::hex(cssParser->getColour(m_freeLineElements.back().elem)  )
 }
 
 
