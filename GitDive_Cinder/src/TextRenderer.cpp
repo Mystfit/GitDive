@@ -51,7 +51,7 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
 
 void TextRenderer::update(){
     
-    m_targetFile->update();
+    if(m_targetFile) m_targetFile->update();
     
     for(int i = 0; i < m_freeLineElements.size(); i++){
         //m_freeLineElements[i].draw(m_textureFont);
