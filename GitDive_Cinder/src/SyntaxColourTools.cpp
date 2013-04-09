@@ -114,7 +114,7 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(passthroughLineFormatter));
     highlighter.setFormatterManager(formatterManager.get());
     
-    TextStylesPtr textStyles = srchilite::parse_outlang_def(DATADIR.c_str(), lang.c_str());
+    TextStylesPtr textStyles = srchilite::parse_outlang_def(DATADIR, lang.c_str());
         
     boost::shared_ptr<srchilite::TextStyleFormatterFactory> formatterFactory(new srchilite::TextStyleFormatterFactory());
     
