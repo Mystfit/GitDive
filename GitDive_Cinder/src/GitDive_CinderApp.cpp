@@ -65,7 +65,6 @@ void GitDive_CinderApp::setTrackedFile(string trackedFile){
 }
 
 
-
 void GitDive_CinderApp::startVisualization(){
     fManager.reset();
     if(bLoadCommits) loadGitOutput(m_repoPath, m_gitCmd);

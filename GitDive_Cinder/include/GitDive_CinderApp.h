@@ -34,11 +34,11 @@ public:
 	void update();
 	void draw();
     
-    void setTrackedFile(string trackedFile);
     void loadGitOutput(string repo, string gitCmd);
     void startVisualization();
     void pauseVisualization(){ bVizActive = false; };
     void jumpToEnd();
+    void setTrackedFile(string trackedFile);
     
     //Managers
     GitFileManager fManager;
