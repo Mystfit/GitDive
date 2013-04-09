@@ -13,7 +13,7 @@ CssParser::CssParser(){
 }
 
 
-void CssParser::loadFile(string path){
+vector<string> CssParser::loadFile(string path){
     ifstream file;
     string line;
     vector<string> lines;
