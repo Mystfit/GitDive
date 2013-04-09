@@ -55,6 +55,7 @@ void CssParser::parseCss(vector<string> cssData){
         }
         
         if(insideBlock){
+            cout << line << endl;
             if(find_first(line, "color")){
                 stringstream colourStr;
                 bool foundHash = false;
