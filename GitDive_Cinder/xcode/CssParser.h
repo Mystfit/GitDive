@@ -22,6 +22,7 @@ class CssParser {
 public:
     CssParser();
     vector<string> loadFile(string path);
+    int getColour(string elem);
     void parseCss(vector<string> cssData);
         
 private:
