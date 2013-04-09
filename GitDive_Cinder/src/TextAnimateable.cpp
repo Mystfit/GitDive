@@ -11,7 +11,12 @@
 TextAnimateable::TextAnimateable(){
     m_colour = cinder::Color(0,0,0);
 }
-                
+
+void TextAnimateable::update(){
+    
+}
+
+
 void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     cinder::gl::color( m_colour );
     texFont->drawString( getStr(), m_position);
