@@ -36,7 +36,7 @@ public:
     
     void loadGitOutput(string repo, string gitCmd);
     void startVisualization();
-    void pauseVisualization(){ bVizActive = false; };
+    void pauseVisualization(){ bVizActive = !bVizActive; };
     void jumpToEnd();
     void setTrackedFile();
     
