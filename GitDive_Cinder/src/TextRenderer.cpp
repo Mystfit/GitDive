@@ -48,18 +48,22 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     line.reset();
 }
 
+void TextRenderer::update(){
+    for(int i = 0; i < m_freeLineElements.size(); i++){
+        //m_freeLineElements[i].draw(m_textureFont);
+    }
+}
+
 
 
 void TextRenderer::draw(vector< boost::shared_ptr<Line> > & lines){
     
     for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         
-        //Draws the free-floating line elements
-        vector<LineElement> elems = it->get()->getLineElements();
-        
-//        for(int i = 0; i < elems.size(); i++){
-//            elems[i].draw(m_textureFont);
-//        }
+        //Draws the free-floating line elements        
+        for(int i = 0; i < m_freeLineElements.size(); i++){
+            m_freeLineElements[i].draw(m_textureFont);
+        }
         
         it->get()->draw(m_textureFont);
     }
