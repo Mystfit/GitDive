@@ -25,6 +25,7 @@
 #include "srchilite/highlightrule.h"
 #include "srchilite/langdefmanager.h"
 #include "srchilite/regexrulefactory.h"
+#include "srchilite/stylefileparser.h"
 #include "GitDataTypes.h"
 
 using namespace srchilite;
