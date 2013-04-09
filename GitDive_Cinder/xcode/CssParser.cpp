@@ -76,7 +76,7 @@ void CssParser::parseCss(vector<string> cssData){
                     }
                 }
                 colourStr >> std::hex >> colour;
-                cout << "LOADED COLOUR:" << colourStr.str() << endl;
+                cout << "LOADED ELEM:" << key << " COLOUR:" << colourStr.str() << endl;
             }
         }
     }
