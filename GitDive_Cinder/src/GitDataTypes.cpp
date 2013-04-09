@@ -50,7 +50,7 @@ string Line::getStr(){
 void Line::draw(cinder::gl::TextureFontRef & texFont){
     if(m_lineElements.size())
     {
-        for(std::vector<TextAnimateable>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
+        for(std::vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
             it->draw(texFont);
         }
     } else {
