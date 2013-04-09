@@ -11,9 +11,11 @@
 
 #include <iostream>
 #include <fstream>
+#include "Utils.h"
 
 class CssParser {
 public:
+    loadFile(string cssData);
 private:
 };
 
