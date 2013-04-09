@@ -56,11 +56,11 @@ void GitDive_CinderApp::initUI(){
     mParams.addButton("Start", std::bind(&GitDive_CinderApp::startVisualization, this));
     mParams.addButton("Pause", std::bind(&GitDive_CinderApp::pauseVisualization, this));
     mParams.addParam("File to track", &m_targetFile);
-    mParams.addButton("Track", std::bind(&GitDive_CinderApp::setTrackedFile, this, &m_targetFile));
+    mParams.addButton("Track", std::bind(&GitDive_CinderApp::setTrackedFile, this));
 }
 
-void GitDive_CinderApp::setTrackedFile(string trackedFile){
-    boost::shared_ptr<GitFile> file = fManager.getFileByName(trackedFile);
+void GitDive_CinderApp::setTrackedFile(){
+    boost::shared_ptr<GitFile> file = fManager.getFileByName(m_targetFile);
     if(file) tRender->setTargetFile(file);
 }
 
