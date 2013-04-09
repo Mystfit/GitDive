@@ -22,6 +22,7 @@
 #include "srchilite/parsestyles.h"
 #include "srchilite/preformatter.h"
 #include "srchilite/formatter.h"
+#include "srchilite/ctagsformatter.h"
 #include "srchilite/formattermanager.h"
 #include "srchilite/formatterparams.h"
 #include "srchilite/highlighteventlistener.h"
