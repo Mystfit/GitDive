@@ -30,7 +30,7 @@ vector<string> CssParser::loadFile(string path){
 }
 
 int CssParser::getColour(string elem){
-    
+    return m_cssMap[elem];
 }
 
 
