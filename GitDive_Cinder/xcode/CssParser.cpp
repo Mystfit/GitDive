@@ -52,7 +52,7 @@ void CssParser::parseCss(vector<string> cssData){
         if(insideBlock)
             if(find_first(line, "color")){
                 for(int i = 0; i < line.size(); i++){
-                    if(strcmp("#", &line[i])){
+                    if(strcmp("#", &line[i]) == "0"){
                         
                     }
                 }
