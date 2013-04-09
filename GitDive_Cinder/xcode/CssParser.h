@@ -19,6 +19,7 @@ public:
     CssParser();
     void loadFile(string path);
     void parseCss(string cssData);
+    
 private:
     map<string, string> m_cssMap;
 };
