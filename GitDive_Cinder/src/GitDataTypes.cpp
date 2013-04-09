@@ -61,11 +61,13 @@ string Line::getStr(){
     return lineStr.str();
 }
 
+
 void Line::update(){
     for(std::vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
         if(!it->bIsFloating) it->setPosition( cinder::Vec2f((float)it->position * 10.0f, getPosition().y) );
     }
 }
+
 
 void Line::draw(cinder::gl::TextureFontRef & texFont){
     if(m_lineElements.size())
