@@ -23,6 +23,8 @@ public:
     void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour );
     void animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour);
     void setPosition(cinder::Vec2f position);
+    cinder::Vec2f getPosition(){ return m_position;};
+    cinder::Color getColour(){ return m_colour;};
     virtual std::string getStr();
     
     void onAnimIn();
