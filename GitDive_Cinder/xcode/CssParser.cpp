@@ -15,9 +15,10 @@ CssParser::CssParser(){
 
 void CssParser::loadFile(string path){
     ifstream file;
+    string line;
     file.open(path.c_str(), ios::in);
-    while(getline()){
-        
+    while(file.good()){
+        std::getline(file, line);
     }
 }
 
