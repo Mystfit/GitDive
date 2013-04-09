@@ -9,6 +9,10 @@
 #include "GitDataTypes.h"
 
 
+LineElement::LineElement(){
+    
+}
+
 /*
  * Line
  */
