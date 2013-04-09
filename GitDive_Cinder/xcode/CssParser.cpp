@@ -23,6 +23,8 @@ vector<string> CssParser::loadFile(string path){
         std::getline(file, line);
         lines.push_back(line);
     }
+    
+    return lines;
 }
 
 
