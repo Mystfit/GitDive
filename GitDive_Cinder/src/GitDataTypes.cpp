@@ -47,6 +47,18 @@ string Line::getStr(){
     return lineStr.str();
 }
 
+void Line::draw(cinder::gl::TextureFontRef & texFont){
+    if(m_lineElements.size())
+    {
+        for(std::vector<TextAnimateable>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
+            it->draw(texFont);
+        }
+    } else {
+        texFont->drawString( getStr(), m_position);
+    }
+
+}
+
 
 void Line::addLineElement(LineElement element){
     m_lineElements.push_back(element);
