@@ -95,7 +95,6 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
 string LineFormatter::getFileLangType(string filename){
     string inputLang = "cpp.lang";
     srchilite::LangMap langMap(DATADIR, "lang.map");
-    srchilite::ColorMap colourMap ;
     string lang = langMap.getMappedFileNameFromFileName(filename);
     if (lang == "") lang = inputLang;
     
