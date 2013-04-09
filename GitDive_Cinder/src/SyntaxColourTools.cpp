@@ -117,7 +117,7 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     TextStylesPtr textStyles = srchilite::parse_outlang_def(DATADIR, lang.c_str());
     PreFormatterPtr preFormatter(new PreFormatter(textStyles->charTranslator));
     boost::shared_ptr<CTagsFormatter> ctags;
-    srchilite::TextStyleFormatterFactory formatterFactory(textStyles, preFormatter, ctags, formatterManager);
+    srchilite::TextStyleFormatterFactory formatterFactory(textStyles, preFormatter, ctags, formatterManager.get());
     
     string bgcolour = "#FFFFFF";
     srchilite::parseCssStyles(DATADIR, "sh_golden.css", &formatterFactory, bgcolour.c_str());
