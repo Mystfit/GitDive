@@ -23,6 +23,7 @@ public:
         
 private:
     map<string, string> m_cssMap;
+    bool bIsLoaded;
 };
 
 #endif /* defined(__GitDive_Cinder__CssParser__) */
