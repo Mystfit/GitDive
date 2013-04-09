@@ -13,6 +13,7 @@
 #include <fstream>
 #include <map>
 #include "Utils.h"
+#include "cinder/Color.h"
 
 class CssParser {
 public:
