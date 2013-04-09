@@ -34,7 +34,9 @@ void CssParser::parseCss(vector<string> cssData){
     
     for(vector<string>::iterator it = cssData.begin(); it != cssData.end(); ++it){
         
-        if()
+        if(starts_with(it, ".")){
+            
+        }
         
     }
     
