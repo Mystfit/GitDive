@@ -12,6 +12,7 @@ GitFileManager::GitFileManager(){
     m_commitIndex = 0;
 }
 
+
 void GitFileManager::updateFilesFromCommit(Commit &commit){
     
     boost::shared_ptr<GitFile> file;
