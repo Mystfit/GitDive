@@ -134,6 +134,8 @@ void GitDive_CinderApp::update()
         }
         m_lastFrame = frameNum;
         
+        cinder::Col
+        
         if(bFframeReady){
             bool success = fManager.applyNextCommit();
             if(success){
