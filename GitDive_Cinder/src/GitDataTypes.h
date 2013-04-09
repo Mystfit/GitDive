@@ -68,7 +68,6 @@ private:
     int m_lineState;
     int m_linePos;
     string m_lineStr;
-    vector< LineElement > m_lineElements;
 };
 
 
