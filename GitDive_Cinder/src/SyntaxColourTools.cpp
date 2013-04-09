@@ -116,9 +116,9 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     
     TextStylesPtr textStyles = srchilite::parse_outlang_def(DATADIR, lang.c_str());
         
-    boost::shared_ptr<srchilite::TextStyleFormatterFactory> formatterFactory(new srchilite::TextStyleFormatterFactory());
+    boost::shared_ptr<srchilite::TextStyleFormatterFactory> formatterFactory;
     
-    srchilite::StyleFileParser::parseStyleFile("sh_greenlcd.css", , "#FFFFFF");
+    srchilite::StyleFileParser::parseStyleFile("sh_greenlcd.css", &formatterFactory, "#FFFFFF");
 
     
     //Set up params to hold the element position from the start of the line
