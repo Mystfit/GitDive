@@ -29,7 +29,7 @@ public:
     void onAnimOut();
     
 protected:
-    vector< LineElement > m_lineElements;
+    vector<TextAnimateable> m_lineElements;
     
 private:
     cinder::Anim<cinder::Vec2f> m_position;
