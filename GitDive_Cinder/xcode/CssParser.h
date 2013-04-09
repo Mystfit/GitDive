@@ -10,6 +10,7 @@
 #define __GitDive_Cinder__CssParser__
 
 #include <iostream>
+#include <fstream>
 
 class CssParser {
 public:
