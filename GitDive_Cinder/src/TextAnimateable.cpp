@@ -27,10 +27,7 @@ void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     cinder::gl::color( m_colour );
     string str = getStr();
 
-    if(str == "{") str = "\{";
-    if(str == "}") str = "\}";
-
-    texFont->drawString( getStr(), m_position);
+    texFont->drawString( str, m_position);
 }
 
 void TextAnimateable::setPosition(cinder::Vec2f position){

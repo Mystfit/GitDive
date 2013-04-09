@@ -12,7 +12,7 @@ TextRenderer::TextRenderer(){
     cinder::Font customFont( cinder::Font( "Andale Mono", FONT_SIZE ) ); //GohuFont
 	cinder::gl::TextureFont::Format f;
 	f.enableMipmapping( true );
-	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
+	m_textureFont = cinder::gl::TextureFont::create( customFont, f,  );
     
     string cssPath = DATADIR;
     string cssFile = "sh_greenlcd.css";
