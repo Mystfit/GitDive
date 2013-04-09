@@ -16,7 +16,8 @@ TextRenderer::TextRenderer(){
     
     string cssPath = DATADIR;
     string cssFile = "sh_golden.css";
-    m_cssColours.loadFile( cssPath + "/" + cssFile );
+    m_cssColours = boost::shared_ptr<CssParser>(new CssParser());
+    m_cssColours->loadFile( cssPath + "/" + cssFile );
 }
 
 
@@ -30,6 +31,7 @@ void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
     for(vector<boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         if(it->get()->getLineState() == Line::LINE_ADDED){
+            it->get()->applyCss(m_cssColours);
             it->get()->setPosition(cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT));
             it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
         } else if(it->get()->getLineState() == Line::LINE_NORMAL){
