@@ -19,7 +19,6 @@ void TextAnimateable::update(){
 
 void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     cinder::gl::color( m_colour );
-    std::cout << "--Drawing |" << getStr() << "|" << std::endl;
     texFont->drawString( getStr(), m_position);
 }
 
