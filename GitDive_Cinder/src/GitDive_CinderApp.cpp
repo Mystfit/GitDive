@@ -46,7 +46,7 @@ void GitDive_CinderApp::initUI(){
     mParams.addParam("Split lines by syntax", &fManager.getSyntaxHighlightStatus());
     mParams.addParam("Output syntax to file", &bOutputSyntax);
     mParams.addParam("Output Git diff log to file", &bOutputDifflog);
-    mParams.addParam( "Dump files", &bDumpFiles);
+    mParams.addParam("Dump files", &bDumpFiles);
     mParams.addParam("Reload commits", &bLoadCommits);
     
     stringstream maxSpeed; 
@@ -122,6 +122,11 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 
 void GitDive_CinderApp::update()
 {
+    if(fManager.getFileByName(m_targetFile) && !bFileActive){
+        setTrackedFile();
+        bFileActive = true;
+    }
+    
     if(bVizActive){
         int frameNum = floor(ci::app::getElapsedFrames() % int(ci::app::getFrameRate() / m_timeSpeed));
         if(frameNum == 0 && frameNum != m_lastFrame){
