@@ -29,8 +29,8 @@ public:
     void setTimeline(cinder::TimelineRef timelineRef){ m_timeline = timelineRef; };
     
     //Sets the position of the file on the screen
-    void setTextOffset(cinder::Vec2f position){m_textOffset = position};
-    void setScrollVelocity(cinder::Vec2f velocity){m_scrollVelocity = velocity;
+    void setTextOffset(cinder::Vec2f position){m_textOffset = position;};
+    void setScrollVelocity(cinder::Vec2f velocity){m_scrollVelocity = velocity; };
     
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
