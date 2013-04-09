@@ -18,6 +18,8 @@ LineElement::LineElement(string element, string elemStr, int pos){
 }
 
 void LineElement::applyCss(boost::shared_ptr<CssParser> cssParser){
+    TextAnimateable::applyCss(cssParser, elem);
+}
 
 /*
  * Line
