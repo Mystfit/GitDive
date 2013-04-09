@@ -175,6 +175,12 @@ GitFile::GitFile(string filename){
     bIsActive = true;
 }
 
+void GitFile::update(){
+    for(vector< boost:shared_ptr<Line> >::iterator = m_activeLines.begin(); it != m_ActiveLines.end(); ++it){
+        it
+    }
+}
+
 void GitFile::setLines(vector< boost::shared_ptr<Line> > lines){
     m_activeLines = lines;
 };
