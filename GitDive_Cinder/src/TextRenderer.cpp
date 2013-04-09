@@ -15,7 +15,8 @@ TextRenderer::TextRenderer(){
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f );
     
     string cssPath = DATADIR;
-    m_cssColours.loadFile( cssPath + "/sh_golden.css" );
+    string cssFile = "sh_golden.css";
+    m_cssColours.loadFile( cssPath + "/" + cssFIle; );
 }
 
 
