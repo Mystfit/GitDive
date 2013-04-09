@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <map>
 #include "Utils.h"
 #include "cinder/Color.h"
