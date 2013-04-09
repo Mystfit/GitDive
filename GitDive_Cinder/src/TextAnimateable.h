@@ -20,6 +20,7 @@ class TextAnimateable {
 public:
     TextAnimateable();
     virtual void draw(cinder::gl::TextureFontRef & texFont);
+    virtual void update();
     void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour );
     void animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour);
     void setPosition(cinder::Vec2f position);
