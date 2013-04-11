@@ -56,10 +56,10 @@ string Line::getStr(){
         lineStr << m_lineStr;
     } else {
         //cout << m_lineElements.size() << "|";
-        for(vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
+        for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
             //cout << it->str << "|";
             //if(it->str != "\n")
-            lineStr << it->str;
+            lineStr << it->get()->str;
         }
     }
         
