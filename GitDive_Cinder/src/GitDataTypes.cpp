@@ -69,7 +69,7 @@ string Line::getStr(){
 
 void Line::update(){
     for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
-        if(!it->bIsFloating) it->setPosition( cinder::Vec2f((float)it->position * 8.5f, getPosition().y) );
+        if(!it->get()->bIsFloating) it->get()->setPosition( cinder::Vec2f((float)it->position * 8.5f, getPosition().y) );
     }
     m_life++;
 }
