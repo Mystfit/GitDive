@@ -63,7 +63,7 @@ void TextRenderer::update(){
     if(m_targetFile) m_targetFile->update();
     
     for(vector< boost::shared_ptr<LineElement> >::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it ){
-        it->draw(m_textureFont);
+        it->get()->draw(m_textureFont);
     }
 }
 
