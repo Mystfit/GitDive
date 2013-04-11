@@ -53,7 +53,7 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
         m_freeLineElements.back()->setFloating();
         m_freeLineElements.back()->animOut(m_timeline, m_freeLineElements.back()->getPosition(), cinder::Color(0,0,0), 10.0f);
     }
-    
+
     line.reset();
 }
 
