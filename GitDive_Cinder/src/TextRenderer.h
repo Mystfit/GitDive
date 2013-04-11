@@ -56,7 +56,7 @@ public:
     void animLinesIn(vector<boost::shared_ptr<Line> > lines);
         
 private:    
-    vector<LineElement> m_freeLineElements;
+    vector< boost::shared_ptr<LineElement> > m_freeLineElements;
     
     boost::shared_ptr<GitFile> m_targetFile;
     
