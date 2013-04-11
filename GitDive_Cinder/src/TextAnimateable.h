@@ -28,8 +28,8 @@ public:
     void applyCss(boost::shared_ptr<CssParser> cssParser, string key);
     virtual void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour , float duration = 0.5f);
     virtual void animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour, float duration = 1.0f);
-    void life();
-    void lifePercent();
+    void getLife();
+    void getLifePercent();
     void setPosition(cinder::Vec2f position);
     void setColour(cinder::Color colour){m_colour = colour; };
     cinder::Vec2f getPosition(){ return m_position;};
