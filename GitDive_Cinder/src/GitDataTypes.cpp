@@ -9,6 +9,9 @@
 #include "GitDataTypes.h"
 
 
+/*
+ * Line Element
+ */
 LineElement::LineElement(string element, string elemStr, int pos){
     elem = element;
     str = elemStr;
@@ -20,6 +23,8 @@ LineElement::LineElement(string element, string elemStr, int pos){
 void LineElement::applyCss(boost::shared_ptr<CssParser> cssParser){
     TextAnimateable::applyCss(cssParser, elem);
 }
+
+
 
 /*
  * Line
