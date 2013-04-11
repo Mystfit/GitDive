@@ -9,6 +9,8 @@
 #ifndef __GitDive_Cinder__TextAnimateable__
 #define __GitDive_Cinder__TextAnimateable__
 
+#define MAX_LIFE = 1000
+
 #include <iostream>
 #include "cinder/Timeline.h"
 #include "cinder/Vector.h"
@@ -24,8 +26,10 @@ public:
     virtual void update();
     virtual void applyCss(boost::shared_ptr<CssParser> cssParser);
     void applyCss(boost::shared_ptr<CssParser> cssParser, string key);
-    void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour , float duration = 0.5f);
-    void animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour, float duration = 1.0f);
+    virtual void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour , float duration = 0.5f);
+    virtual void animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour, float duration = 1.0f);
+    void life();
+    void lifePercent();
     void setPosition(cinder::Vec2f position);
     void setColour(cinder::Color colour){m_colour = colour; };
     cinder::Vec2f getPosition(){ return m_position;};
@@ -40,6 +44,7 @@ private:
     cinder::Anim<cinder::Color> m_colour;
     cinder::TweenRef<cinder::Vec2f> m_posTween;
     cinder::TweenRef<cinder::Color> m_colourTween;
+    int m_life;
 };
 
 #endif /* defined(__GitDive_Cinder__TextAnimateable__) */

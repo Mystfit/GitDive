@@ -10,6 +10,7 @@
 
 TextAnimateable::TextAnimateable(){
     m_colour = cinder::Color(255,255,255);
+    m_life = 0;
 }
 
 void TextAnimateable::update(){
@@ -55,6 +56,11 @@ void TextAnimateable::animOut( cinder::TimelineRef timeline, cinder::Vec2<float>
 
     //timeline.apply( &m_colour, destColour, 1.0f,  easer);
     //timeline.apply( &m_position, destVec, 0.5f, cinder::easeOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
+}
+
+float TextAnimateable::lifePercent(){
+    
+    return m_life / MAX_LIFE;
 }
 
 std::string TextAnimateable::getStr()
