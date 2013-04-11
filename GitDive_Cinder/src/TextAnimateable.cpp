@@ -58,10 +58,6 @@ void TextAnimateable::animOut( cinder::TimelineRef timeline, cinder::Vec2<float>
     //timeline.apply( &m_position, destVec, 0.5f, cinder::easeOutAtan( 10 ) ).finishFn( std::bind( &TextAnimateable::onAnimIn, this ) );
 }
 
-float TextAnimateable::lifePercent(){
-    
-    return m_life / MAX_LIFE;
-}
 
 std::string TextAnimateable::getStr()
 {
