@@ -73,6 +73,7 @@ string Line::getStr(){
 
 void Line::update(){
     for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
+        it->get()->update();
         if(!it->get()->bIsFloating) it->get()->setPosition( cinder::Vec2f((float)it->get()->position * 8.5f, getPosition().y) );
     }
     m_life++;
