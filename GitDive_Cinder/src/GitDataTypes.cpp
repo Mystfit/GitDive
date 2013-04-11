@@ -53,7 +53,6 @@ void Line::applyCss(boost::shared_ptr<CssParser> cssParser){
 }
 
 
-
 string Line::getStr(){
     stringstream lineStr;
 
