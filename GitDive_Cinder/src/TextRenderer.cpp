@@ -48,6 +48,7 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     vector< boost::shared_ptr<LineElement> > lineElems = line->getLineElements();
     line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0.2,0.2,0.2));
     
+    //Rescue line elements first
     for(int i = 0; i < lineElems.size(); i++){
         m_freeLineElements.push_back(lineElems[i]);
         m_freeLineElements.back()->setFloating();
