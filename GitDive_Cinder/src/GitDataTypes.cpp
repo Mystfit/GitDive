@@ -88,7 +88,7 @@ void Line::draw(cinder::gl::TextureFontRef & texFont){
 }
 
 
-void Line::addLineElement(LineElement element){
+void Line::addLineElement( boost::shared_ptr<LineElement> element){
     m_lineElements.push_back(element);
 }
 
