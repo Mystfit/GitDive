@@ -78,7 +78,7 @@ void Line::update(){
 void Line::draw(cinder::gl::TextureFontRef & texFont){
     if(m_lineElements.size())
     {
-        for(std::vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
+        for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
             it->draw(texFont);
         }
     } else {
