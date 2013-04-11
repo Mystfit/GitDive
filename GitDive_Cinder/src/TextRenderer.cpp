@@ -62,8 +62,8 @@ void TextRenderer::update(){
     
     if(m_targetFile) m_targetFile->update();
     
-    for(int i = 0; i < m_freeLineElements.size(); i++){
-        //m_freeLineElements[i].draw(m_textureFont);
+    for(vector< boost::shared_ptr<LineElement> >::iterator it = m_freeLineElements.begin();  ){
+        m_freeLineElements[i]->draw(m_textureFont);
     }
 }
 
