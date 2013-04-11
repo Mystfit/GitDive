@@ -42,8 +42,8 @@ Line::Line(string lineStr, bool justUpdated){
 
 
 void Line::applyCss(boost::shared_ptr<CssParser> cssParser){
-    for(vector<LineElement>::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
-        it->TextAnimateable::applyCss(cssParser, it->elem);
+    for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
+        it->get()->TextAnimateable::applyCss(cssParser, it->get()->elem);
     }
 }
 
