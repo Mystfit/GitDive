@@ -63,8 +63,7 @@ void TextRenderer::update(){
     if(m_targetFile) m_targetFile->update();
     
     for(vector< boost::shared_ptr<LineElement> >::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it ){
-        if(it->get()->getLifePercent() < 1.0f) it->get()->draw(m_textureFont);
-        else it->reset();
+        if(it->get()->getLifePercent() > 1.0f) it->reset();
     }
 }
 
