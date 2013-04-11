@@ -50,8 +50,8 @@ public:
     int getLinePos(){ return m_linePos; };
     void setLinePos(int linePos){ m_linePos = linePos; };
     
-    void addLineElement(LineElement element);
-    vector< LineElement > getLineElements(){ return m_lineElements; };
+    void addLineElement(boost::shared_ptr<LineElement> element);
+    vector< boost::shared_ptr<LineElement> > getLineElements(){ return m_lineElements; };
     
     enum lineState{LINE_NORMAL = 0, LINE_ADDED, LINE_DELETED};
     int getLineState(){ return m_lineState; };
@@ -69,7 +69,7 @@ private:
     int m_lineState;
     int m_linePos;
     string m_lineStr;
-    vector< LineElement > m_lineElements;
+    vector< boost::shared_ptr<LineElement> > m_lineElements;
 };
 
 
