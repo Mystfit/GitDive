@@ -79,7 +79,7 @@ void Line::draw(cinder::gl::TextureFontRef & texFont){
     if(m_lineElements.size())
     {
         for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
-            it->draw(texFont);
+            it->get()->draw(texFont);
         }
     } else {
         TextAnimateable::draw(texFont);
