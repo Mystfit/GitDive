@@ -28,8 +28,6 @@ class LineElement : public TextAnimateable {
 public:
     LineElement(string element, string elemStr, int pos);
     void applyCss(boost::shared_ptr<CssParser> cssParser);
-    void setFree(){isFloating = true; };
-    void setParented(){isFloating = false; };
     string getStr(){return str;};
     string elem;
     string str;
