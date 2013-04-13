@@ -12,7 +12,7 @@ LineElementFactory::LineElementFactory(){
     
 }
 
-LineElementFactory::getFreeLineElement(string elemType, string search){
+boost::shared_ptr<LineElement> LineElementFactory::getFreeLineElement(string elemType, string search){
     
     
 }
