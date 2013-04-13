@@ -31,10 +31,10 @@ void GitDive_CinderApp::setup()
     initUI();
     gl::enableAlphaBlending();
     
-    lineManager = boost::shared_ptr<LineElementManager>(new LineElementManager());
+    lineElementManager = boost::shared_ptr<LineElementManager>(new LineElementManager());
     tRender = boost::shared_ptr<TextRenderer>(new TextRenderer());
     tRender->setTimeline(cinder::app::timeline().thisRef());
-    tRender->setLineManager(lineManager);
+    tRender->setLineManager(lineElementManager);
     fManager.setTextRenderer(tRender);
     fManager.setSyntaxHighlightStatus(false);
 }
