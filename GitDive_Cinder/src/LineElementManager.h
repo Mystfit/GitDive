@@ -20,6 +20,9 @@ public:
     boost::shared_ptr<LineElement> getFreeLineElement(string elemType, string search, int index);
     
     //Rescues line elements from a line
+    void salvageLine( vector< boost::shared_ptr<LineElement> > lineElements );
+
+        
     void update();
 
 private:
