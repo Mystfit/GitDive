@@ -6,13 +6,13 @@
 //
 //
 
-#include "LineElementFactory.h"
+#include "LineElementManager"
 
-LineElementManager::LineElementFactory(){
+LineElementManager::LineElementManager(){
     
 }
 
-boost::shared_ptr<LineElement> LineElementFactory::getFreeLineElement(string elemType, string search, int index){
+boost::shared_ptr<LineElement> LineElementManager::getFreeLineElement(string elemType, string search, int index){
     boost::shared_ptr<LineElement> lineElem;
     
     vector< boost::shared_ptr<LineElement> >::iterator elem;
