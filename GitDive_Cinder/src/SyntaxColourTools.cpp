@@ -83,12 +83,9 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     
     if(elem == "") elem = "normal";
 
-    //The highlighter adds newlines automatically to the end of the line. Chuck em!
     string str = s;
-    //Utils::strip(str, "\n");
     //std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << str << "|" << endl;
     boost::shared_ptr<LineElement> newElem(new LineElement(elem, str, params->start));
-    //elem.setColour( srchilite::  );
 
     m_targetLine->addLineElement(newElem);
 }
