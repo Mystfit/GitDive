@@ -18,7 +18,7 @@ boost::shared_ptr<LineElement> LineElementFactory::getFreeLineElement(string ele
     vector< boost::shared_ptr<LineElement> >::iterator elem;
     for(elem = m_freeLineElements.begin(); elem != m_freeLineElements.end(); ++elem){
         if(elem->get()->elem == elemType && elem->get()->getStr() == search){
-            lineElem = elem->get();
+            return elem;
         }
     }
     
