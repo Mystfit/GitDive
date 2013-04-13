@@ -8,7 +8,7 @@
 
 #include "LineElementFactory.h"
 
-LineElementFactory::LineElementFactory(){
+LineElementManager::LineElementFactory(){
     
 }
 
