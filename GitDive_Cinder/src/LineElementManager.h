@@ -18,6 +18,8 @@ public:
     
     //Returns a free line element that already exists of a specific type or creates a new one if none are available
     boost::shared_ptr<LineElement> getFreeLineElement(string elemType, string search, int index);
+    
+    //Rescues line elements from a line
     void update();
 
 private:
