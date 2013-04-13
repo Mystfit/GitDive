@@ -46,12 +46,12 @@ void LineElementManager::update(){
 }
 
 
-void LineElementManager::salvageLine(  vector< boost::shared_ptr<LineElement> > lineElements ){
+void LineElementManager::salvageLine( vector< boost::shared_ptr<LineElement> > lineElements ){
     
     //Rescue line elements first
-    for(int i = 0; i < lineElems.size(); i++){
-        m_freeLineElements.push_back(lineElems[i]);
-        m_freeLineElements.back()->setFloating();
+    for(int i = 0; i < lineElements.size(); i++){
+        m_freeLineElements.push_back(lineElements[i]);
+        m_freeLineElements.back()->isFloating = true;
         m_freeLineElements.back()->animOut(m_timeline, m_freeLineElements.back()->getPosition(), cinder::Color(0,0,0), 10.0f);
     }
 }
