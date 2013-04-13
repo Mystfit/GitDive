@@ -70,7 +70,7 @@
 		4A363C17170F1C6600F6371D /* libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_iostreams.a; path = /usr/local/lib/libboost_iostreams.a; sourceTree = "<absolute>"; };
 		4A363C19170F1DFE00F6371D /* libsource-highlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsource-highlight.a"; path = "/usr/local/lib/libsource-highlight.a"; sourceTree = "<absolute>"; };
 		4A9504DE171968CB000A67E1 /* LineElementFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LineElementFactory.cpp; path = ../src/LineElementFactory.cpp; sourceTree = "<group>"; };
-		4A9504DF171968CB000A67E1 /* LineElementFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineElementFactory.h; path = ../src/LineElementFactory.h; sourceTree = "<group>"; };
+		4A9504DF171968CB000A67E1 /* LineElementManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineElementManager.h; path = ../src/LineElementManager.h; sourceTree = "<group>"; };
 		4AB896D717129B8900533992 /* TextRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextRenderer.cpp; path = ../src/TextRenderer.cpp; sourceTree = "<group>"; };
 		4AB896D817129B8900533992 /* TextRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextRenderer.h; path = ../src/TextRenderer.h; sourceTree = "<group>"; };
 		4AB896DA1712B04700533992 /* Resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 				4A1A6BCB1705AAE60046BE09 /* GitLogParser.h */,
 				4A1A6BC81705A5880046BE09 /* GitDataTypes.h */,
 				4AD7492017097505006ACBC6 /* GitFileManager.h */,
-				4A9504DF171968CB000A67E1 /* LineElementFactory.h */,
+				4A9504DF171968CB000A67E1 /* LineElementManager.h */,
 				4ABFC142171412B600791CC0 /* CssParser.h */,
 				4A1253FB170FF90000DE28C9 /* SyntaxColourTools.h */,
 				4A1A6B7B17042CCA0046BE09 /* Utils.h */,
