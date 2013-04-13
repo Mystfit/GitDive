@@ -28,8 +28,6 @@ public:
     void applyCss(boost::shared_ptr<CssParser> cssParser, string key);
     virtual void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour , float duration = 0.5f);
     virtual void animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour, float duration = 1.0f);
-    void setFree(){ bIsFree = true };
-    void setParented(){ bIsFree = false };
     bool isFree(){ return bIsFree; };
     int getLife(){ return m_life; };
     float getLifePercent(){ return m_life / MAX_LIFE; };
