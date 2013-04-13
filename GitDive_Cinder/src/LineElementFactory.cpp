@@ -12,4 +12,7 @@ LineElementFactory::LineElementFactory(){
     
 }
 
-LineElementFactory::get
+LineElementFactory::getFreeLineElement(string elemType, string search){
+    
+    
+}
