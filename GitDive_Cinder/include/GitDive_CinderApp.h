@@ -44,7 +44,7 @@ public:
     //Managers
     GitFileManager fManager;
     boost::shared_ptr<TextRenderer> tRender;
-    boost::shared_ptr<LineManager> lineManager;
+    boost::shared_ptr<LineElementManager> lineManager;
     params::InterfaceGl mParams;
     
     //Variables
