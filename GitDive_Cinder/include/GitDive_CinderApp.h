@@ -15,6 +15,7 @@
 #include "Utils.h"
 #include "GitLogParser.h"
 #include "GitFileManager.h"
+#include "LineElementManager.h"
 
 #include <fstream.h>
 #include <stdio.h>
@@ -43,6 +44,7 @@ public:
     //Managers
     GitFileManager fManager;
     boost::shared_ptr<TextRenderer> tRender;
+    boost::shared_ptr<LineManager> lineManager;
     params::InterfaceGl mParams;
     
     //Variables
