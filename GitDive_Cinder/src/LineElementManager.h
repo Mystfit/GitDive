@@ -21,7 +21,6 @@ public:
     void breakLine(boost::shared_ptr<Line> line);
     void update();
 
-
 private:
     vector<boost::shared_ptr<LineElement> > m_freeLineElements;
     
