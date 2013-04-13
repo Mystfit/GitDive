@@ -22,7 +22,7 @@ public:
     //Rescues line elements from a line
     void salvageLine( vector< boost::shared_ptr<LineElement> > lineElements );
     
-    vector< boost::shared_ptr<LineElement> > getFloatingElements(){ return m_freeLineElements; }l
+    vector< boost::shared_ptr<LineElement> > getFloatingElements(){ return m_freeLineElements; };
 
         
     void update();
