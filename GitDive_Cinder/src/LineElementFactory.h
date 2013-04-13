@@ -9,6 +9,14 @@
 #ifndef __GitDive_Cinder__LineElementFactory__
 #define __GitDive_Cinder__LineElementFactory__
 
+#include "GitDataTypes.h"
 #include <iostream>
+
+class LineElementFactory {
+public:
+    LineElementFactory();
+private:
+    vector<boost::shared_ptr<LineElement> m_freeLineElements;
+};
 
 #endif /* defined(__GitDive_Cinder__LineElementFactory__) */
