@@ -12,9 +12,9 @@
 #include "GitDataTypes.h"
 #include <iostream>
 
-class LineElementFactory {
+class LineElementManager {
 public:
-    LineElementFactory();
+    LineElementManager();
     
     //Returns a free line element that already exists of a specific type or creates a new one if none are available
     boost::shared_ptr<LineElement> getFreeLineElement(string elemType, string search, int index);
