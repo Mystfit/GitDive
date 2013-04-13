@@ -28,6 +28,7 @@ public:
     void draw();
     void update();
     void setTargetFile(boost::shared_ptr<GitFile> file){m_targetFile = file; };
+    void setLineManager(boost::shared_ptr<LineElementManager> lineManager){ m_lineManager = lineManager; };
     
     //Texturefont reference for drawing text
     cinder::gl::TextureFontRef & getTexFont(){return m_textureFont; };
@@ -57,6 +58,7 @@ public:
         
 private:        
     boost::shared_ptr<GitFile> m_targetFile;
+    boost::shared_ptr<LineElementManager> m_lineManager;
     
     cinder::gl::TextureFontRef m_textureFont;
     cinder::TimelineRef m_timeline;
