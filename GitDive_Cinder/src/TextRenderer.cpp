@@ -70,9 +70,15 @@ void TextRenderer::draw(){
             it->get()->draw(m_textureFont);
         }
         
+        
+    }
+    
+    vector< boost::shared_ptr<LineElement> > freeLineElems = m_lineManager->getFloatingElements();
+    
+    if(freeLineElems.size()){
         //Draws the free-floating line elements
-        for(int i = 0; i < m_freeLineElements.size(); i++){
-            m_freeLineElements[i]->draw(m_textureFont);
+        for(int i = 0; i < freeLineElems.size(); i++){
+            freeLineElems[i]->draw(m_textureFont);
         }
     }
 }
