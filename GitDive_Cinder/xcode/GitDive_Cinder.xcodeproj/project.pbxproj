@@ -123,7 +123,6 @@
 				4AB896DB1712B84900533992 /* TextAnimateable.cpp */,
 				4AB896D717129B8900533992 /* TextRenderer.cpp */,
 				4A9504DE171968CB000A67E1 /* LineElementFactory.cpp */,
-				4A9504DF171968CB000A67E1 /* LineElementFactory.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -184,6 +183,7 @@
 				4A1A6BCB1705AAE60046BE09 /* GitLogParser.h */,
 				4A1A6BC81705A5880046BE09 /* GitDataTypes.h */,
 				4AD7492017097505006ACBC6 /* GitFileManager.h */,
+				4A9504DF171968CB000A67E1 /* LineElementFactory.h */,
 				4ABFC142171412B600791CC0 /* CssParser.h */,
 				4A1253FB170FF90000DE28C9 /* SyntaxColourTools.h */,
 				4A1A6B7B17042CCA0046BE09 /* Utils.h */,
