@@ -22,7 +22,6 @@ TextRenderer::TextRenderer(){
 }
 
 
-
 void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 
 }
