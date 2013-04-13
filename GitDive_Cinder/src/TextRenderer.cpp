@@ -69,8 +69,6 @@ void TextRenderer::draw(){
         for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
             it->get()->draw(m_textureFont);
         }
-        
-        
     }
     
     vector< boost::shared_ptr<LineElement> > freeLineElems = m_lineManager->getFloatingElements();
