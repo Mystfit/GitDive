@@ -43,6 +43,7 @@ void GitDive_CinderApp::initUI(){
     //Setup UI
     mParams = params::InterfaceGl( "App parameters", Vec2i( 400, 250 ) );
     mParams.addParam("Repo path", &m_repoPath);
+    mParams.addParam("Theme", &tRender->getThemepath());
     mParams.addParam("Split lines by syntax", &fManager.getSyntaxHighlightStatus());
     mParams.addParam("Output syntax to file", &bOutputSyntax);
     mParams.addParam("Output Git diff log to file", &bOutputDifflog);
