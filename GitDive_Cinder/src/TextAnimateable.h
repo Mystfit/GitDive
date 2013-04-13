@@ -44,7 +44,7 @@ public:
 
 protected:
     int m_life;
-    bool isFree;
+    bool bIsFree;
     
 private:
     cinder::Anim<cinder::Vec2f> m_position;
