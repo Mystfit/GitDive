@@ -44,3 +44,15 @@ void LineElementManager::update(){
         if(it->get()->getLifePercent() > 1.0f && it->get()->isFloating) it->reset();
     }
 }
+
+
+void LineElementManager::salvageLine(  vector< boost::shared_ptr<LineElement> > lineElements ){
+    
+    //Rescue line elements first
+    for(int i = 0; i < lineElems.size(); i++){
+        m_freeLineElements.push_back(lineElems[i]);
+        m_freeLineElements.back()->setFloating();
+        m_freeLineElements.back()->animOut(m_timeline, m_freeLineElements.back()->getPosition(), cinder::Color(0,0,0), 10.0f);
+    }
+}
+
