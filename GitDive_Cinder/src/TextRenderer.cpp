@@ -57,15 +57,6 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     line.reset();
 }
 
-void TextRenderer::update(){
-    
-    if(m_targetFile) m_targetFile->update();
-    
-    //Remove old line elements hanging around
-    for(vector< boost::shared_ptr<LineElement> >::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it ){
-        //Zif(it->get()->getLifePercent() > 1.0f) it->reset();
-    }
-}
 
 
 
