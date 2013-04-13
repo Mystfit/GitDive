@@ -15,7 +15,7 @@
 class LineElementFactory {
 public:
     LineElementFactory();
-    boost::shared_ptr<LineElement> getFreeLineElement(string elemType, string search);
+    boost::shared_ptr<LineElement> getFreeLineElement(string elemType, string search, int index);
 private:
     vector<boost::shared_ptr<LineElement> > m_freeLineElements;
     
