@@ -48,11 +48,11 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0.2,0.2,0.2));
     
     //Rescue line elements first
-//    for(int i = 0; i < lineElems.size(); i++){
-//        m_freeLineElements.push_back(lineElems[i]);
-//        m_freeLineElements.back()->setFloating();
-//        m_freeLineElements.back()->animOut(m_timeline, m_freeLineElements.back()->getPosition(), cinder::Color(0,0,0), 10.0f);
-//    }
+    for(int i = 0; i < lineElems.size(); i++){
+        m_freeLineElements.push_back(lineElems[i]);
+        m_freeLineElements.back()->setFloating();
+        m_freeLineElements.back()->animOut(m_timeline, m_freeLineElements.back()->getPosition(), cinder::Color(0,0,0), 10.0f);
+    }
 
     line.reset();
 }
