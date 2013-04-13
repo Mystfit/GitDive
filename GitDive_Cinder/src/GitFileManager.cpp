@@ -119,12 +119,12 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block.blockType = FileChangeBlock::FILECHANGE_DELETE;
                     block.blockStart = deltaRemoveLines[i].getLinePos();
                     block.blockEnd = deltaRemoveLines[i].getLinePos();
-                    cout << "-|.";
+                    //cout << "-|.";
                 } else {
                     if(deltaRemoveLines[i].getLinePos() - block.blockEnd > 1){
                         fileChanges.push_back(block);
                         blockOpen = false;
-                        cout << "| RemoveBlock Start:" << block.blockStart << " End:" << block.blockEnd << endl;
+                        //cout << "| RemoveBlock Start:" << block.blockStart << " End:" << block.blockEnd << endl;
                     } else {
                         cout << ".";
                         block.blockEnd = deltaRemoveLines[i].getLinePos();
@@ -138,7 +138,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         if(blockOpen){
             fileChanges.push_back(block);
             blockOpen = false;
-            cout << "| RemoveBlock Start:" << block.blockStart << " End:" << block.blockEnd << endl;
+            //cout << "| RemoveBlock Start:" << block.blockStart << " End:" << block.blockEnd << endl;
         }
     }
     
@@ -169,7 +169,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block.blockType = FileChangeBlock::FILECHANGE_ADD;
                     block.blockStart = newLines.back()->getLinePos();
                     block.blockEnd = newLines.back()->getLinePos();
-                    cout << "+|";
+                    //cout << "+|";
                 }
                 
                 if(newLines.back()->getLinePos() - block.blockEnd > 1){
@@ -178,7 +178,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     cout << "| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
                 } else {
                     block.blockEnd = newLines.back()->getLinePos();
-                    cout << ".";
+                    //cout << ".";
                 }
             
                 deltaIndex++;
@@ -194,7 +194,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 if(blockOpen){
                     fileChanges.push_back(block);
                     blockOpen = false;
-                    cout << "| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
+                    //cout << "| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
                 }
             }
         }
@@ -202,7 +202,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         if(blockOpen){
             fileChanges.push_back(block);
             blockOpen = false;
-            cout << "| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
+            //cout << "| AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
         }
         
         //If we've run out of source lines, add the remaining delta lines to the end
@@ -216,10 +216,10 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                     block = FileChangeBlock();
                     block.blockType = FileChangeBlock::FILECHANGE_ADD;
                     block.blockStart = deltaAddLines[deltaIndex].getLinePos();
-                    cout << "+|";
+                    //cout << "+|";
                 }
                 
-                cout << ".";
+                //cout << ".";
                 block.blockEnd = deltaAddLines[deltaIndex].getLinePos();
                 
                 //Create new line pointer
@@ -234,7 +234,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         if(blockOpen){
             fileChanges.push_back(block);
             blockOpen = false;
-            cout << "| Final AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
+            //cout << "| Final AddBlock Start:" << block.blockStart << "| End:" << block.blockEnd << endl;
         }
     }
     
