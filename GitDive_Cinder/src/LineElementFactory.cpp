@@ -7,3 +7,9 @@
 //
 
 #include "LineElementFactory.h"
+
+LineElementFactory::LineElementFactory(){
+    
+}
+
+LineElementFactory::get
