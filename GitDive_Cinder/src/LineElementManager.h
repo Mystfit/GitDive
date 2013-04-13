@@ -18,9 +18,6 @@ public:
     
     //Returns a free line element that already exists of a specific type or creates a new one if none are available
     boost::shared_ptr<LineElement> getFreeLineElement(string elemType, string search, int index);
-    void breakLine(boost::shared_ptr<Line> line);
-    void update();
-
 private:
     vector<boost::shared_ptr<LineElement> > m_freeLineElements;
     
