@@ -18,6 +18,7 @@ public:
     boost::shared_ptr<LineElement> getFreeLineElement(string elemType, string search);
 private:
     vector<boost::shared_ptr<LineElement> > m_freeLineElements;
+    
 };
 
 #endif /* defined(__GitDive_Cinder__LineElementFactory__) */
