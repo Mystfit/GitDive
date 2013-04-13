@@ -55,9 +55,7 @@ public:
     //Animate lines into position
     void animLinesIn(vector<boost::shared_ptr<Line> > lines);
         
-private:    
-    vector< boost::shared_ptr<LineElement> > m_freeLineElements;
-    
+private:        
     boost::shared_ptr<GitFile> m_targetFile;
     
     cinder::gl::TextureFontRef m_textureFont;
