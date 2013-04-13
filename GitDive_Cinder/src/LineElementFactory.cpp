@@ -22,7 +22,6 @@ boost::shared_ptr<LineElement> LineElementFactory::getFreeLineElement(string ele
             
             lineElem = (boost::shared_ptr<LineElement>)elem->get();
             
-            return lineElem;
         }
     }
     
