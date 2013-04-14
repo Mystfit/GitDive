@@ -79,7 +79,7 @@ public:
     void setTargetLine(boost::shared_ptr<Line> line){m_targetLine = line; };
     void format(const std::string &s, const srchilite::FormatterParams *params = 0);
     static string getFileLangType(string filename);
-    static void syntaxParseLines(vector< boost::shared_ptr<Line> > lines, string lang, LineFormatterManager manager);
+    static void syntaxParseLines(vector< boost::shared_ptr<Line> > lines, string lang, LineFormatterManager & formatterManager);
 
 private:
     boost::shared_ptr<Line> m_targetLine;
