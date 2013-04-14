@@ -11,7 +11,7 @@
 
 #include "GitDataTypes.h"
 
-#include "boost/algorithm/r
+#include "boost/range/algorithm/remove_if.hpp"
 #include <iostream>
 
 class LineElementManager {
