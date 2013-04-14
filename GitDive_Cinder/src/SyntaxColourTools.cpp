@@ -107,7 +107,7 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, lang));
     
     //Set up formatters to modify our lines
-    highlighter.setFormatterManager(formatterManager.get());
+    highlighter.setFormatterManager(formatterManager);
     
 //    TextStylesPtr textStyles = srchilite::parse_outlang_def(DATADIR, lang.c_str());
 //    PreFormatterPtr preFormatter(new PreFormatter(textStyles->charTranslator));
