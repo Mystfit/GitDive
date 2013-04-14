@@ -9,7 +9,7 @@
 #ifndef __GitDive_Cinder__TextAnimateable__
 #define __GitDive_Cinder__TextAnimateable__
 
-#define MAX_LIFE 10
+#define MAX_LIFE 500
 
 #include <iostream>
 #include "cinder/Timeline.h"
