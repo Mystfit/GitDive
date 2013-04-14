@@ -14,6 +14,7 @@ TextAnimateable::TextAnimateable(){
 }
 
 void TextAnimateable::update(){
+    m_life++;
 }
 
 void TextAnimateable::applyCss(boost::shared_ptr<CssParser> cssParser){
