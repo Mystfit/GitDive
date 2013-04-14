@@ -36,7 +36,7 @@ void GitDive_CinderApp::setup()
     tRender->setTimeline(cinder::app::timeline().thisRef());
     tRender->setLineManager(lineElementManager);
     
-    boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(new LineFormatter("", boost::shared_ptr<Line>()), m_tRender->getLineManager() ));
+    boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(new LineFormatter("", boost::shared_ptr<Line>()), lineElementManager ));
     
     fManager.setFormatterManager(formatterManager);
     fManager.setTextRenderer(tRender);
