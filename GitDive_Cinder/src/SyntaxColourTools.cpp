@@ -71,7 +71,7 @@ void LineFormatterManager::setTargetLine(boost::shared_ptr<Line> target){
 
 FormatterPtr LineFormatterManager::getFormatter(const std::string &elem) const{
     if (!formatterMap[elem].get()) {
-        formatterMap[elem] = boost::shared_ptr<LineFormatter>(new LineFormatter(elem, m_targetLine, m_lineElementManger));
+        formatterMap[elem] = boost::shared_ptr<LineFormatter>(new LineFormatter(elem, m_targetLine));
     }
     
     return formatterMap[elem];
