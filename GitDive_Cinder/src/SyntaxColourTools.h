@@ -57,6 +57,7 @@ private:
 class LineFormatterManager : public srchilite::FormatterManager
 {
 public:
+    //Constructor references the overall line element manager for getting free elements
     LineFormatterManager(FormatterPtr _defaultFormatter, boost::shared_ptr<LineElementManager> elemManager);
     
     //Overriden accessor for getting a formatter creates a generic line formatter
