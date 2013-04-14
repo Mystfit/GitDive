@@ -53,10 +53,9 @@ void LineElementManager::update(){
     //Remove old line elements hanging around
     for(vector< boost::shared_ptr<LineElement> >::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it ){
         it->get()->update();
-        if(it->get()->getLife() > MAX_LIFE) {
-            cout << "!!!!!REMOVING ELEMENT" << endl;
-            m_freeLineElements.erase(it);
-        }
+        m_freeLineElements.erase(
+                     std::remove_if(m_freeLineElements.begin(), m_freeLineElements.end(), IsMarkedToDelete),
+                     myList.end());
     }
     
     boost::remove_if( m_freeLineElements, bind(&TextAnimateable::getLife(), _1) >= MAX_LIFE);
