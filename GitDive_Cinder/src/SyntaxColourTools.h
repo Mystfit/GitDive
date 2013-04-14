@@ -33,6 +33,7 @@
 #include "srchilite/regexrulefactory.h"
 #include "srchilite/stylefileparser.h"
 #include "GitDataTypes.h"
+#include "LineElementManager.h"
 
 using namespace srchilite;
 
