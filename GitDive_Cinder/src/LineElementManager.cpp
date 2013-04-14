@@ -59,7 +59,7 @@ void LineElementManager::update(){
         }
     }
     
-    boost::remove_if( m_freeLineElements, bind(&TextAnimateable::m_life, _1)>=MAX_LIFE);
+    boost::remove_if( m_freeLineElements, bind(&TextAnimateable::m_life, _1) >= MAX_LIFE);
 
 }
 
