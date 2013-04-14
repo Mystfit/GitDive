@@ -95,6 +95,7 @@ public:
 
 private:
     boost::shared_ptr<Line> m_targetLine;
+    boost::shared_ptr<LineElementManager m_lineElemManager;
     std::string elem;
     
 };
