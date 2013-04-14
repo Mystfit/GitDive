@@ -29,7 +29,7 @@ class GitFileManager {
 public:
     GitFileManager();
     void setTextRenderer( boost::shared_ptr<TextRenderer> tRender ){ m_tRender = tRender; };
-    void setFormatterManager(boost::shared_ptr<LineElementManager> lineManager){ m_lineManager = lineManager; };
+    void setFormatterManager(boost::shared_ptr<LineFormatterManager> formatterManager){ m_formatterManager = formatterManager; };
     
     //File addition/retrieval
     //-----------------------
