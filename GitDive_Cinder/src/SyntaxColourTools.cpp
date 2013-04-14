@@ -53,8 +53,9 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
 }
 
 
-LineFormatterManager::LineFormatterManager(FormatterPtr _defaultFormatter) : FormatterManager(_defaultFormatter)
+LineFormatterManager::LineFormatterManager(FormatterPtr _defaultFormatter, LineElementManager elemManager) : FormatterManager(_defaultFormatter)
 {
+    m_lineElementManger = elemManager;
 }
 
 
@@ -75,8 +76,6 @@ FormatterPtr LineFormatterManager::getFormatter(const std::string &elem) const{
     
     return formatterMap[elem];
 }
-
-
 
 
 void LineFormatter::format(const std::string &s, const srchilite::FormatterParams *params) {
