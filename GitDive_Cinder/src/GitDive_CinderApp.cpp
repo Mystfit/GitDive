@@ -150,6 +150,7 @@ void GitDive_CinderApp::update()
             bFframeReady = false;
         }
         
+        lineElementManager->update();
         tRender->update();
     }
 
