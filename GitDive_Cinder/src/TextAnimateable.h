@@ -30,6 +30,7 @@ public:
     virtual void animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour, float duration = 1.0f);
     int getLife(){ return m_life; };
     float getLifePercent(){ return m_life / MAX_LIFE; };
+    bool getMarkedForDeletion();
     void setPosition(cinder::Vec2f position);
     void setColour(cinder::Color colour){m_colour = colour; };
     cinder::Vec2f getPosition(){ return m_position;};
