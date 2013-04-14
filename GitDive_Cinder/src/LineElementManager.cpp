@@ -58,6 +58,9 @@ void LineElementManager::update(){
             m_freeLineElements.erase(it);
         }
     }
+    
+    boost::remove_if( m_freeLineElements, bind(&TextAnimateable::m_life, _1)<=0 );
+
 }
 
 
