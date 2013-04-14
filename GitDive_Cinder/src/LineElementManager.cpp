@@ -55,10 +55,10 @@ void LineElementManager::update(){
         it->get()->update();
     }
     
-    myList.erase(
-                 std::remove_if(myList.begin(), myList.end(),
-                                [](const myobj & o) { return o.m_bMarkedDelete; }),
-                 myList.end());
+    m_freeLineElements.erase(
+                 std::remove_if(m_freeLineElements.begin(), m_freeLineElements.end(),
+                                [](const boost::shared_ptr<LineElement> o) { return o->markedForDeleteion(); }),
+                 m_freeLineElements.end());
     
 }
 
