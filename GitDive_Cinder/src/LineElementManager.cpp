@@ -47,7 +47,9 @@ boost::shared_ptr<LineElement> LineElementManager::getFreeLineElement(string ele
 
 
 void LineElementManager::update(){
-        
+    
+    cout << m_freeLineElements.size() << " elements lying around" << endl;
+    
     //Remove old line elements hanging around
     for(vector< boost::shared_ptr<LineElement> >::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it ){
         it->get()->update();
