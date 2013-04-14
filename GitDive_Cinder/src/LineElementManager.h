@@ -10,6 +10,8 @@
 #define __GitDive_Cinder__LineElementFactory__
 
 #include "GitDataTypes.h"
+
+#include "boost/algorithm/r
 #include <iostream>
 
 class LineElementManager {
