@@ -53,7 +53,9 @@ void LineElementManager::update(){
     //Remove old line elements hanging around
     for(vector< boost::shared_ptr<LineElement> >::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it ){
         it->get()->update();
-        if(it->get()->getLifePercent() > 1.0f && it->get()->isFloating) it->reset();
+        if(it->get()->getLifePercent() > 1.0f) {
+            m_freeLineElements.erase(it);
+        }
     }
 }
 
