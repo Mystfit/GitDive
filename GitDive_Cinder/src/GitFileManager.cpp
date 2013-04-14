@@ -75,13 +75,13 @@ void GitFileManager::reset(){
 void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff, bool useSyntaxHighlighting){
     
     //Make a copy of the original lines
-    vector< boost::shared_ptr <Line> > originalLines = file.getLines();
+    //vector< boost::shared_ptr <Line> > originalLines = file.getLines();
     vector< boost::shared_ptr <Line> > newLines;
     vector<Line> deltaAddLines = diff->getDeltaAddLines();
     vector<Line> deltaRemoveLines = diff->getDeltaRemoveLines();
     
     //If the file is blank/new, only dump in all the new lines
-    if(originalLines.size() < 1){
+    if(file.getLines().size() < 1){
         cout << endl << "===Creating new file " << diff->getFileName() << endl << endl;
         for(int i = 0; i < deltaAddLines.size(); i++) {
             
@@ -105,12 +105,12 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
         for(int i = 0; i < deltaRemoveLines.size(); i++){
             
             int pos = deltaRemoveLines[i].getLinePos()- deltaIndex - 1;
-            if(pos < originalLines.size()){
+            if(pos < file.getLines().size()){
                 //Erase the line from the file
                 
-                originalLines[i]->markForRemoval();
-                m_tRender->breakLine(originalLines[i]);
-                originalLines.erase(originalLines.begin() + pos); // TODO: Needs to be handled in a better way that updates the visuals
+                file.getLines()[i]->markForRemoval();
+                m_tRender->breakLine(file.getLines()[i]);
+                file.getLines().erase(file.getLines().begin() + pos);
                 
                 //Store the removed lines as a block of lines so we can keep the original structure of the file
                 if(!blockOpen){
@@ -147,9 +147,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     
     //Add lines
     if(deltaAddLines.size() == 0){
-        newLines = originalLines;
+        newLines = file.getLines();
     } else {
-        for(int lineNum = 1; lineNum <= originalLines.size() + deltaAddLines.size(); lineNum++ ){
+        for(int lineNum = 1; lineNum <= file.getLines().size() + deltaAddLines.size(); lineNum++ ){
             
             if(deltaIndex < deltaAddLines.size() && deltaAddLines[deltaIndex].getLinePos() == lineNum){
                 
@@ -179,7 +179,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 deltaIndex++;
             
             } else {
-                boost::shared_ptr<Line> oldLine = originalLines[lineCounter];
+                boost::shared_ptr<Line> oldLine = file.getLines()[lineCounter];
                 oldLine->setLinePos(lineNum);
                 oldLine->setLineState(Line::LINE_NORMAL);
                 newLines.push_back(oldLine);
