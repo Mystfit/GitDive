@@ -26,7 +26,7 @@ using namespace std;
 
 class LineElement : public TextAnimateable {
 public:
-    LineElement(string element, string elemStr, int pos);
+    LineElement(string element = "normal", string elemStr = "", int pos = 0);
     void applyCss(boost::shared_ptr<CssParser> cssParser);
     string getStr(){return str;};
     string elem;
