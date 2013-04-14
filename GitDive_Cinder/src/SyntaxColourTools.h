@@ -56,7 +56,9 @@ private:
 
 
 
-
+/*
+ * Custom FormatterManager that hooks into all the other managers as required
+ */
 class LineFormatterManager : public srchilite::FormatterManager
 {
 public:
@@ -79,7 +81,9 @@ private:
 
 
 
-
+/*
+ * Custom formatter to actually handle line parsing. Basically just a passthrough
+ */
 class LineFormatter: public srchilite::Formatter
 {    
 public:
