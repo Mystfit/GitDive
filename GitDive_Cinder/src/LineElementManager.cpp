@@ -53,8 +53,8 @@ void LineElementManager::update(){
     //Remove old line elements hanging around
     for(vector< boost::shared_ptr<LineElement> >::iterator it = m_freeLineElements.begin(); it != m_freeLineElements.end(); ++it ){
         it->get()->update();
-        m_freeLineElements.erase(
-                     std::remove_if(m_freeLineElements.begin(), m_freeLineElements.end(), IsMarkedToDelete),
+        m_freeLineElements.erase( std::remove_if(m_freeLineElements.begin(), m_freeLineElements.end(), [](const myobj & o)
+        { return o.m_bMarkedDelete),
                      myList.end());
     }
     
