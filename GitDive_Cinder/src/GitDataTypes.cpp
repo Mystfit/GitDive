@@ -78,6 +78,7 @@ void Line::update(){
         it->get()->update();
         if(!it->get()->isFloating) it->get()->setPosition( cinder::Vec2f((float)it->get()->position * 8.5f, getPosition().y) );
     }
+    
     m_life++;
 }
 
