@@ -64,7 +64,9 @@ string Line::getStr(){
         //for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
             //cout << it->str << "|";
             //if(it->str != "\n")
-            if(m_lineElements[i]) lineStr << m_lineElements[i]->str;
+            if(m_lineElements[i]) {
+                lineStr << m_lineElements[i]->str;   
+            }
         }
     }
         
