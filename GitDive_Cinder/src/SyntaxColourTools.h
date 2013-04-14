@@ -53,11 +53,6 @@ private:
 };
 
 
-class  {
-    public LineFormatterParser
-}
-
-
 // SyntaxListener that triggers each time the syntax highlighter fires off an event
 class LineFormatterManager : public srchilite::FormatterManager
 {
