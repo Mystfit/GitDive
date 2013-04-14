@@ -59,7 +59,7 @@ private:
 class LineFormatterManager : public srchilite::FormatterManager
 {
 public:
-    LineFormatterManager(FormatterPtr _defaultFormatter);
+    LineFormatterManager(FormatterPtr _defaultFormatter, boost::shared_ptr<LineElementManager> elemManager);
     //Overriden accessor for getting a formatter creates a generic line formatter
     FormatterPtr getFormatter(const std::string &elem) const;
     void setTargetLine(boost::shared_ptr<Line> target);
@@ -67,6 +67,7 @@ public:
 private:
     mutable FormatterMap formatterMap;
     FormatterPtr defaultFormatter;
+    boost::shared_ptr<LineElementManager> m_lineElementManger;
     boost::shared_ptr<Line> m_targetLine;
 };
 
