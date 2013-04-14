@@ -32,7 +32,7 @@ void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
     texFont->drawString( str, m_position);
 }
 
-bool TextAnimateable::getMarkedForDeletion(){
+bool TextAnimateable::markedForDeletion(){
     if(m_life > MAX_LIFE) return true;
     return false;
 }
