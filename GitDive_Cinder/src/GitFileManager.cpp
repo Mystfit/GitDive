@@ -229,8 +229,6 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     }
     
     //Reset the file with the new lines
-    boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(new LineFormatter("", boost::shared_ptr<Line>()), m_tRender->getLineManager() ));
-
     if(useSyntaxHighlighting) LineFormatter::syntaxParseLines(newLines, LineFormatter::getFileLangType(file.getFilename()), *(m_lineManager));
     file.setLines(newLines);
     file.resetLineOrder();
