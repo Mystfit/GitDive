@@ -38,8 +38,9 @@
 using namespace srchilite;
 
 
-
-// SyntaxListener that triggers each time the syntax highlighter fires off an event
+/*
+ * SyntaxListener that triggers each time the syntax highlighter fires off an event
+ */
 class SyntaxColourListener : public srchilite::HighlightEventListener
 {
 public:
@@ -53,7 +54,9 @@ private:
 };
 
 
-// SyntaxListener that triggers each time the syntax highlighter fires off an event
+
+
+
 class LineFormatterManager : public srchilite::FormatterManager
 {
 public:
@@ -75,7 +78,8 @@ private:
 
 
 
-//Passthrough infoformatter that dumps the seperated elements into the current line
+
+
 class LineFormatter: public srchilite::Formatter
 {    
 public:
