@@ -99,7 +99,7 @@ string LineFormatter::getFileLangType(string filename){
 }
 
 
-void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, string lang, LineFormatterManager & formatterManager){
+void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, string lang, boost::shared_ptr<LineFormatterManager> formatterManager){
     
     //Set up highlighter based on language
     srchilite::RegexRuleFactory ruleFactory;
