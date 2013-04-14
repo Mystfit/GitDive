@@ -85,7 +85,7 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     string str = s;
     //std::cout << "Adding " << elem << " to line " << m_targetLine->getLinePos() << " at pos " << params->start << "|" << str << "|" << endl;
     
-    //Get a free element from the elemManager and let it handle creating new elements
+    //Get a free element from the elemManager and let it handle creating new elements for us
     boost::shared_ptr<LineElement> newElem = m_lineElemManager->getFreeLineElement(elem, str, params->start);
     
     m_targetLine->addLineElement(newElem);
