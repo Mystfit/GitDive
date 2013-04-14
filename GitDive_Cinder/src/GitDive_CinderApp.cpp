@@ -37,7 +37,6 @@ void GitDive_CinderApp::setup()
     tRender->setLineManager(lineElementManager);
     
     boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(boost::shared_ptr<LineFormatter>(new LineFormatter()), lineElementManager ));
-    
     fManager.setFormatterManager(formatterManager);
     fManager.setTextRenderer(tRender);
     fManager.setSyntaxHighlightStatus(false);
