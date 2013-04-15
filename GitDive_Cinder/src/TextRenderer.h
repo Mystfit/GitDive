@@ -64,7 +64,7 @@ public:
     boost::shared_ptr<GitFile> getTargetFile(){ return m_targetFile; };
     
     //Background colour from css theme
-    cinder::Color getBackgroundColour(){ return cinder::Color::hex(m_backgroundColour); };
+    cinder::Color getBackgroundColour(){ return m_backgroundColor; };
     
 private:        
     boost::shared_ptr<GitFile> m_targetFile;
@@ -77,7 +77,7 @@ private:
     cinder::Vec2f m_textOffset;
     cinder::Vec2f m_scrollVelocity;
     boost::shared_ptr<CssParser> m_cssColours;
-    int m_backgroundColour;
+    cinder::Color m_backgroundColour;
 };
 
 #endif /* defined(__GitDive_Cinder__TextRenderer__) */
