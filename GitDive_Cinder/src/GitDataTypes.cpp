@@ -16,7 +16,7 @@ LineElement::LineElement(string element, string elemStr, int pos){
     elem = element;
     str = elemStr;
     position = pos;
-    setPosition(cinder::Vec2f((float)position * 10.0f, 0.0f));
+    //setPosition(cinder::Vec2f((float)position * 8.5f, 0.0f));
 }
 
 void LineElement::applyCss(boost::shared_ptr<CssParser> cssParser){
