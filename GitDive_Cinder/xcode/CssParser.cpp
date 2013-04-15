@@ -63,7 +63,7 @@ void CssParser::parseCss(vector<string> cssData){
         
         if(insideBlock){
             if(find_first(line, "color")){
-                
+                parseColour(line);
                 cout << "LOADED ELEM:" << key << " COLOUR:" << colourStr.str() << endl;
             }
             
