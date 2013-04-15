@@ -26,6 +26,7 @@ void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 
 }
 
+
 void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
     for(vector<boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         if(it->get()->getLineState() == Line::LINE_ADDED){
@@ -64,6 +65,10 @@ void TextRenderer::update(){
 
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
+            
+            if(line->get()->getLineState() == Line::LINE_ADDED){
+                line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
+            }
             
             float lineY = line->get()->getLinePos() * LINE_HEIGHT;
             
