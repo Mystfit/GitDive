@@ -45,9 +45,10 @@ public:
     
     //Attribute getters/setters
     virtual void setPosition(cinder::Vec2f position);
-    void setElemColour(cinder::Color colour){m_colour = colour; };
+    void setElemColour(cinder::Color colour){m_elemColour = colour; };
     void setColour(cinder::Color colour){m_colour = colour; };
     cinder::Vec2f getPosition(){ return m_position;};
+    cinder::Color getElemColour(){ return m_elemColour;};
     cinder::Color getColour(){ return m_colour;};
         
     //Gets line character positions based on index position
@@ -76,6 +77,7 @@ protected:
 private:
     cinder::Anim<cinder::Vec2f> m_position;
     cinder::Anim<cinder::Color> m_colour;
+    cinder::Anim<cinder::Color> m_elemColour;
     cinder::TweenRef<cinder::Vec2f> m_posTween;
     cinder::TweenRef<cinder::Color> m_colourTween;
 };
