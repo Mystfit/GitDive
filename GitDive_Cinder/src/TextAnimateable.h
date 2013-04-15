@@ -45,7 +45,7 @@ public:
     
     //Attribute getters/setters
     virtual void setPosition(cinder::Vec2f position);
-    float getLinePositionFromIndex(int positionIndex){ return (float)positionIndex * FONT_WIDTH; };
+    float getLinePositionFromIndex(int positionIndex){ return (float)positionIndex * 8.5f; };
     void setColour(cinder::Color colour){m_colour = colour; };
     cinder::Vec2f getPosition(){ return m_position;};
     cinder::Color getColour(){ return m_colour;};
