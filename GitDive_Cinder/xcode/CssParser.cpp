@@ -88,6 +88,6 @@ int CssParser::parseColour(string line){
         }
     }
     colourStr >> std::hex >> colour;
-    
+    cout << colour << endl;
     return colour;
 }
