@@ -46,6 +46,17 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
 
 void TextRenderer::update(){
     if(m_targetFile) m_targetFile->update();
+    
+    vector< boost::shared_ptr<LineElement> > freeElems = m_lineManager->getFloatingElements();
+    vector< boost::shared_ptr<LineElement> >::iterator elem;
+    for(elem = freeElems.begin(); elem != freeElems.end(); ++it){
+        if(elem->isJustFreed()){
+            
+        }
+    }
+    
+    
+    m_freeLineElements.back()->animOut(m_timeline, m_freeLineElements.back()->getPosition(), cinder::Color(0,0,0), 10.0f);
 }
 
 
