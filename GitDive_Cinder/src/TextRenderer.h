@@ -41,7 +41,6 @@ public:
     void setTextOffset(cinder::Vec2f position){m_textOffset = position;};
     void setScrollVelocity(cinder::Vec2f velocity){m_scrollVelocity = velocity; };
     void setTextZoom(float zoom){m_textZoom = zoom; };
-
     
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
@@ -57,7 +56,10 @@ public:
     
     //Animate lines into position
     void animLinesIn(vector<boost::shared_ptr<Line> > lines);
-        
+    
+    //Gets line character positions based on index position
+    float getLinePositionFromIndex(int positionIndex){ return (float)positionIndex * 8.5f; };
+    
 private:        
     boost::shared_ptr<GitFile> m_targetFile;
     boost::shared_ptr<LineElementManager> m_lineManager;
