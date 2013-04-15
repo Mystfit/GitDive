@@ -150,7 +150,7 @@ void GitDive_CinderApp::keyDown(KeyEvent event){
 
 void GitDive_CinderApp::keyUp(KeyEvent event){
     if(event.getChar() == KeyEvent::KEY_SPACE){
-        tRender->setFollowCamera();
+        tRender->setManualCamera();
     }
 }
 
