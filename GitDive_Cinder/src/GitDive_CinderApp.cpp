@@ -96,7 +96,7 @@ void GitDive_CinderApp::jumpToEnd(){
         loadGitOutput(m_repoPath, m_gitCmd);
     }
     
-    fManager.setSyntaxHighlightStatus(false);
+    //fManager.setSyntaxHighlightStatus(false);
     while(fManager.applyNextCommit());
     
     if(bOutputSyntax){
