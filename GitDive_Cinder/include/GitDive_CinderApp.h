@@ -43,6 +43,7 @@ public:
     void pauseVisualization(){ bVizActive = !bVizActive; };
     void jumpToEnd();
     void setTrackedFile();
+    void setViewedFile();
     
     //Managers
     GitFileManager fManager;
