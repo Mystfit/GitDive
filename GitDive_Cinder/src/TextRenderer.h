@@ -46,7 +46,7 @@ public:
     //Sets the position of the file on the screen
     void setTextOffset(float increment);
     void setTextZoom(float zoom);
-    void resetView(){m_textZoom = 1.0f; m_textOffset = cinder::Vec2f(); };
+    void resetView();
     
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
