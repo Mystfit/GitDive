@@ -93,7 +93,7 @@ void GitDive_CinderApp::loadGitOutput(string repo, string gitCmd){
 }
 
 void GitDive_CinderApp::resetView(){
-    tRender.resetView();
+    tRender->resetView();
 }
 
 
