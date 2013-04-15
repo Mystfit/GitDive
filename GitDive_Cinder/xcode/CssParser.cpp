@@ -63,20 +63,7 @@ void CssParser::parseCss(vector<string> cssData){
         
         if(insideBlock){
             if(find_first(line, "color")){
-                stringstream colourStr;
-                bool foundHash = false;
-                int numChars = 0;
-                for(int i = 0; i < line.size(); i++){
-                    int offset = line.find("#");
-                    if(offset != std::string::npos){
-                        foundHash = true;
-                    }
-                    if(foundHash && numChars<6){
-                        colourStr << line[i + offset + 1];
-                        numChars++;
-                    }
-                }
-                colourStr >> std::hex >> colour;
+                
                 cout << "LOADED ELEM:" << key << " COLOUR:" << colourStr.str() << endl;
             }
             
@@ -85,4 +72,24 @@ void CssParser::parseCss(vector<string> cssData){
             }
         }
     }
+}
+
+
+string CssParser::parseColour(){
+    stringstream colourStr;
+    bool foundHash = false;
+    int numChars = 0;
+    for(int i = 0; i < line.size(); i++){
+        int offset = line.find("#");
+        if(offset != std::string::npos){
+            foundHash = true;
+        }
+        if(foundHash && numChars<6){
+            colourStr << line[i + offset + 1];
+            numChars++;
+        }
+    }
+    colourStr >> std::hex >> colour;
+    
+    return colourStr.str();
 }
