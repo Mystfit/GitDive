@@ -94,7 +94,7 @@ void Line::update(){
 }
 
 
-void Line::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f yOffset()){
+void Line::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f yOffset = cinder::Vec2f()){
     if(m_lineElements.size())
     {
         for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
