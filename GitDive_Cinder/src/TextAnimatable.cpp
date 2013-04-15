@@ -22,6 +22,7 @@ void TextAnimatable::setPosition(cinder::Vec2f position){
     m_position = position;
 }
 
+
 void TextAnimatable::applyCss(boost::shared_ptr<CssParser> cssParser){
 }
 
