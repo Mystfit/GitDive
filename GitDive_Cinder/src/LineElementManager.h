@@ -25,11 +25,15 @@ public:
     void salvageLine( vector< boost::shared_ptr<LineElement> > lineElements );
     
     vector< boost::shared_ptr<LineElement> > getFloatingElements(){ return m_freeLineElements; };
+    
+    boost::shared_ptr<Line> setTargetLine(boost::shared_ptr<Line> target){ m_targetLine = target; };
+    boost::shared_ptr<Line> getTargetLine(){ return m_targetLine; };
 
-        
+
     void update();
 
 private:
+    boost::shared_ptr<Line> m_targetLine;
     vector<boost::shared_ptr<LineElement> > m_freeLineElements;
     
 };
