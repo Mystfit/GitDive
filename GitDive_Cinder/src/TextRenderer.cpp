@@ -29,11 +29,11 @@ void TextRenderer::setLinesAnimateable(){
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
             
-            line->get()->markAsAnimating();
+            line->get()->markAsAnimateable();
             vector< boost::shared_ptr<LineElement> > lineElems = line->get()->getLineElements();
 
             for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
-                elem->get()->markAsAnimating();
+                elem->get()->markAsAnimateable();
             }
         }
     }
@@ -73,7 +73,6 @@ void TextRenderer::update(){
     //Start animation for freed line elements
     for(elem = freeElems.begin(); elem != freeElems.end(); ++elem){
         if(elem->get()->isJustFreed()){
-            elem->get()->markAsAnimating();
             elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(255,255,0), 1.0f);
         }
     }
@@ -89,13 +88,11 @@ void TextRenderer::update(){
             
             if(line->get()->getLineState() == Line::LINE_ADDED){
                 line->get()->isJustCreated();
-                line->get()->markAsAnimating();
                 line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
                 line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
             }
             
             else if(line->get()->getLineState() == Line::LINE_NORMAL){
-                line->get()->markAsAnimating();
                 line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
             }
 
