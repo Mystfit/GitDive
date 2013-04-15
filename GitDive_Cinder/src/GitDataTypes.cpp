@@ -41,8 +41,6 @@ Line::Line(string lineStr, bool justUpdated){
         m_lineState = LINE_NORMAL;
     }
     
-    setColour(cinder::Color(0,0,0));
-    
     if(!justUpdated) m_lineStr.erase(0,1);
 }
 
