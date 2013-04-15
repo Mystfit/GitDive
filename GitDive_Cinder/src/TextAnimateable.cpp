@@ -60,7 +60,7 @@ bool TextAnimateable::isJustCreated(){
     return false;
 }
 
-void TextAnimateable::setPosition(cinder::Vec2f position);
+void TextAnimateable::setPosition(cinder::Vec2f position){
     m_position = position;
 }
 
