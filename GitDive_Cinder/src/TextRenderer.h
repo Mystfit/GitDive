@@ -41,6 +41,7 @@ public:
     void setTextOffset(cinder::Vec2f position){m_textOffset = position;};
     void setScrollVelocity(cinder::Vec2f velocity){m_scrollVelocity = velocity; };
     void setTextZoom(float zoom){m_textZoom = zoom; };
+
     
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
