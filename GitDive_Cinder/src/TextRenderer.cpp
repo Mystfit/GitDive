@@ -71,7 +71,7 @@ void TextRenderer::update(){
             
             for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
                 
-                float elemX = (float)it->get()->position * 8.5f;
+                float elemX = (float)elem->get()->position * 8.5f;
 
                 if(elem->get()->isJustCreated()){
                     elem->get()->animIn(m_timeline, cinder::Vec2f(0.0f, 0.0f), cinder::Color(255,255,255));//Replace with something better
