@@ -77,7 +77,7 @@ void CssParser::parseCss(vector<string> cssData){
                     m_cssMap[CSS_BACKGROUND] = bgcolour;
                 } else if(find_first(line, "color")){
                     colour = parseColour(line);
-                    m_cssMap["normal"] = bgcolour;
+                    m_cssMap["normal"] = colour;
 
                 }
             }
