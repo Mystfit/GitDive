@@ -17,17 +17,16 @@ void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
 
     boost::shared_ptr<GitFile> file;
     
-    if(targetFile != ""){
-        file = getFileByName(targetFile);
-    }
+    bool filterFile;
     
-    if(file){
-        if(targetFile != ""){
-            if(diff->getFileName() == targetFile){
-                
-            }
+    if( targetFile != ""){
+        if(diff->getFileName() == targetFile){
+            filterFile = true;
+        } else {
+            return;
         }
     }
+
 
     if(diff->fileMode == Diff::FILEMODE_ADDED){
         file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
