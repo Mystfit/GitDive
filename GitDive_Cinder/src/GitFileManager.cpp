@@ -41,15 +41,7 @@ void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
 
 void GitFileManager::updateFilesFromCommit(Commit &commit){
     
-    for(int i = 0; i < commit.getNumDiffs(); i++){
-                
-        boost::shared_ptr<Diff> diff = commit.getDiff(i);
-        updateSingleFile(diff);
-        
-        //ITS NO USE
-        //m_tRender->animLinesIn(file->getLines());
-        //m_tRender->setLinesAnimatable();
-    }
+    
 }
 
 boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
@@ -105,7 +97,15 @@ bool GitFileManager::applyNextDiff(){
 
 bool GitFileManager::applyNextCommit(){
     if(m_commitIndex < m_commitList.size()) {
-        updateFilesFromCommit(m_commitList[m_commitIndex]);
+        for(int i = 0; i < m_commitList[m_commitIndex].getNumDiffs(); i++){
+            
+            boost::shared_ptr<Diff> diff = m_commitList[m_commitIndex].getDiff(i);
+            updateSingleFile(diff);
+            
+            //ITS NO USE
+            //m_tRender->animLinesIn(file->getLines());
+            //m_tRender->setLinesAnimatable();
+        }
         m_commitIndex++;
         return true;
     }
