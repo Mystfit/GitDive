@@ -80,9 +80,12 @@ bool GitFileManager::applyNextDiff(){
                         
                         if(diff->getFileName() == m_trackedFile){
                             updateSingleFile(diff, m_trackedFile);
+                            m_diffIndex++;
                             foundFile = true;
                             return true;
                         }
+                        
+                        m_diffIndex++;
                         
                     } else {
                         m_diffIndex = 0;
