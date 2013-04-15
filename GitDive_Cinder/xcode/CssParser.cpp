@@ -44,6 +44,7 @@ void CssParser::parseCss(vector<string> cssData){
     string line;
     int colour;
     int bgcolour;
+    
     for(vector<string>::iterator it = cssData.begin(); it != cssData.end(); ++it){
         line = *it;
         
