@@ -23,7 +23,7 @@
 class TextAnimatable {
 public:
     TextAnimatable();
-    virtual void draw(cinder::gl::TextureFontRef & texFont);
+    virtual void draw(cinder::gl::TextureFontRef & texFont, float yOffset = 0.0f);
     virtual void update();
     
     //Sets the base colour of an element from the current css theme
