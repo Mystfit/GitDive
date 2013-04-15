@@ -79,6 +79,8 @@ void CssParser::parseCss(vector<string> cssData){
                 colourStr >> std::hex >> colour;
                 cout << "LOADED ELEM:" << key << " COLOUR:" << colourStr.str() << endl;
             }
+            
+            if(key == CSS_BACKGROUND && find_first(line, "color"))
         }
     }
 }
