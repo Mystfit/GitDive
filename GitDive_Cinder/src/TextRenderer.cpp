@@ -128,7 +128,7 @@ void TextRenderer::update(){
                         //elem->get()->setColour(cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)));
                         //elem->get()->setPosition(cinder::Vec2f(elemX, lineY));
                         float randOffset = ((float)rand()/(float)RAND_MAX) * 0.4f;
-                        elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 0.2f + randOffset );
+                        //elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 0.2f + randOffset );
                     }
                 }
             //}
