@@ -35,6 +35,8 @@ void TextAnimatable::applyCss(boost::shared_ptr<CssParser> cssParser, string key
 void TextAnimatable::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f offset){
     cinder::gl::color( m_colour );
     string str = getStr();
+    
+    if(bDrawSquares) cinder::
 
     texFont->drawString( str, cinder::Vec2f(m_position.ptr()->x, m_position.ptr()->y + offset.y));
 }
