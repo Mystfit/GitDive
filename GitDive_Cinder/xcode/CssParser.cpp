@@ -66,7 +66,6 @@ void CssParser::parseCss(vector<string> cssData){
         if(insideBlock){
             if(find_first(line, "color")){
                 colour = parseColour(line);
-                cout << "LOADED ELEM:" << key << " COLOUR:" << colour << endl;
             }
             
             if(key == CSS_BACKGROUND){
