@@ -41,6 +41,7 @@ public:
     int getLife(){ return m_life; };
     float getLifePercent(){ return m_life / MAX_LIFE; };
     bool markedForDeletion();
+    bool markedForCreation();
     
     //Attribute getters/setters
     void setPosition(cinder::Vec2f position);
@@ -58,6 +59,7 @@ public:
 protected:
     int m_life;
     bool bIsFree;
+    bool isCreated;
     
 private:
     cinder::Anim<cinder::Vec2f> m_position;
