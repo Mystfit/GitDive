@@ -35,6 +35,7 @@ boost::shared_ptr<LineElement> LineElementManager::getFreeLineElement(string ele
         
                 lineElem->isFloating = false;
                 lineElem->markAsCreated();
+                lineElem->markAsAnimatable();
                 m_freeLineElements.erase(m_freeLineElements.begin() + i);
 
                 break;
