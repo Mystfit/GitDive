@@ -46,9 +46,10 @@ void CssParser::parseCss(vector<string> cssData){
     for(vector<string>::iterator it = cssData.begin(); it != cssData.end(); ++it){
         line = *it;
         
-        if(starts_with(line, ".")){
+        if(starts_with(line, ".") || starts_with(line, "body")){
             insideBlock = true;
             key = line;
+            if(starts_with(line, "body")) key = "normal";
             erase_all(key, ".");
             erase_all(key, " ");
             erase_all(key, "{");
