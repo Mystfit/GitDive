@@ -37,6 +37,8 @@ public:
     //Sets line flags to allow for animation
     void setLinesAnimatable();
     
+    void setFollowCamera();
+    
     //Timeline reference for animation
     void setTimeline(cinder::TimelineRef timelineRef){ m_timeline = timelineRef; };
     
@@ -77,6 +79,7 @@ private:
     cinder::Vec2f m_textOffset;
     boost::shared_ptr<CssParser> m_cssColours;
     cinder::Color m_backgroundColour;
+    bool bCameraFollowing;
 };
 
 #endif /* defined(__GitDive_Cinder__TextRenderer__) */
