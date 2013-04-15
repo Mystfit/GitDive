@@ -160,12 +160,13 @@ void TextRenderer::update(){
         
         //Update camera
         if(bCameraFollowing){
-            cout << lineYtotal / lineYcount << endl;
             if(lineYtotal / lineYcount == NAN){
                 cout << "IT'S NO USE" << endl;
             }
-            cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineYtotal / lineYcount - 512);
-            m_timeline->apply(&m_textOffset, camOffset, 1.0f);
+            if(lineYcount){
+                cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineYtotal / lineYcount - 512);
+                m_timeline->apply(&m_textOffset, camOffset, 1.0f);
+            }   
         }
 
     }
