@@ -169,12 +169,12 @@ void GitDive_CinderApp::update()
         
         if(bFframeReady){
             bool success = fManager.applyNextDiff();
-            if(success){
-                //if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
-            } else {
-                bVizActive = false;
-                cout << "--- FINISHED ---" << endl;
-            }
+//            if(success){
+//                //if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
+//            } else {
+//                bVizActive = false;
+//                cout << "--- FINISHED ---" << endl;
+//            }
             bFframeReady = false;
         }
         

@@ -96,7 +96,6 @@ bool GitFileManager::applyNextDiff(){
                     }
                 } else {
                     break;
-                    return false;
                 }
             }
         } else {
