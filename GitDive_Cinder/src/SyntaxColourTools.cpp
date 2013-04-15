@@ -86,7 +86,7 @@ FormatterPtr LineFormatterManager::getFormatter(const std::string &elem) const{
 }
 
 
-void LineFormatterManager::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, string lang, boost::shared_ptr<LineFormatterManager> formatterManager){
+void LineFormatterManager::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, string lang){
     
     //Set up highlighter based on language
     srchilite::RegexRuleFactory ruleFactory;
