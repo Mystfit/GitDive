@@ -26,6 +26,7 @@ public:
     
     vector< boost::shared_ptr<LineElement> > getFloatingElements(){ return m_freeLineElements; };
     
+    //Reference to the active line. Used for the syntax parser
     boost::shared_ptr<Line> setTargetLine(boost::shared_ptr<Line> target){ m_targetLine = target; };
     boost::shared_ptr<Line> getTargetLine(){ return m_targetLine; };
 
