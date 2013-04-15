@@ -18,7 +18,7 @@
 #include "cinder/gl/TextureFont.h"
 #include "cinder/Easing.h"
 #include "CssParser.h"
-#include "TextRenderer.h"
+//#include "TextRenderer.h"
 
 class TextAnimateable {
 public:
