@@ -127,8 +127,8 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     if(elem == "") elem = "normal";
 
     string str = s;
-    Utils::strip(s, "\n");
-    Utils::strip(s, "\r");
+    Utils::strip(str, "\n");
+    Utils::strip(str, "\r");
 
     
     //Get a free element from the elemManager and let it handle creating elements for us (I swear this is such a bloody hack)
