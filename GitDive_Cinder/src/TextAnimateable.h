@@ -47,6 +47,7 @@ public:
     void setColour(cinder::Color colour){m_colour = colour; };
     cinder::Vec2f getPosition(){ return m_position;};
     cinder::Color getColour(){ return m_colour;};
+    void markAsFree(){ bIsFree = true; };
     
     //String accessor. Returns recursive strings from line elements if present
     virtual std::string getStr();
