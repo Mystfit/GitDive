@@ -110,7 +110,7 @@ void GitDive_CinderApp::jumpToEnd(){
 
 
 void GitDive_CinderApp::mouseWheel(MouseEvent event){
-    if(bIsMouseDown) tRender->setZoomLevel(event.getWheelIncrement() * 5);
+    if(bIsMouseDown) tRender->setTextZoom(event.getWheelIncrement() * 5);
     else tRender->setTextOffset(event.getWheelIncrement() * 5);
 }
 
