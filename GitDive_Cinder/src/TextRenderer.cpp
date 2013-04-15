@@ -11,7 +11,9 @@
 TextRenderer::TextRenderer(){
     cinder::Font customFont( cinder::Font( "GohuFont", FONT_SIZE ) );
 	cinder::gl::TextureFont::Format f;
-	f.enableMipmapping( true );
+	//f.enableMipmapping( true );
+    f.textureHeight(2048);
+    f.textureWidth(2048);
     string supportedChars = cinder::gl::TextureFont::defaultChars() + "{}";
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f, supportedChars );
     
