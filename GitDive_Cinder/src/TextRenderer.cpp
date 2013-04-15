@@ -145,6 +145,10 @@ void TextRenderer::update(){
                     }
                 }
             //}
+            
+            //Update camera
+            if(bUse)
+            
         }
     }
     
