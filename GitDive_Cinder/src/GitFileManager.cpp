@@ -69,22 +69,27 @@ bool GitFileManager::applyNextDiff(){
         
         boost::shared_ptr<Diff> diff = currentCommit.getDiff(m_diffIndex);
         
-        if(diff->fileMode == Diff::FILEMODE_ADDED){
-            file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
-            applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
-            m_fileList.push_back(file);
-        }
-        
-        else if(diff->fileMode == Diff::FILEMODE_DELETED){
-            file = getFileByName(diff->getFileName());
-            file->setInactive();
-        }
-        
-        else if(diff->fileMode == Diff::FILEMODE_UPDATED){
-            file = getFileByName(diff->getFileName());
-            if(file){
-                if(file->active()){
+        if(m_trackedFile != ""){
+            if(diff->getFileName() == m_trackedFile){
+            
+                if(diff->fileMode == Diff::FILEMODE_ADDED){
+                    file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
                     applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
+                    m_fileList.push_back(file);
+                }
+                
+                else if(diff->fileMode == Diff::FILEMODE_DELETED){
+                    file = getFileByName(diff->getFileName());
+                    file->setInactive();
+                }
+                
+                else if(diff->fileMode == Diff::FILEMODE_UPDATED){
+                    file = getFileByName(diff->getFileName());
+                    if(file){
+                        if(file->active()){
+                            applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
+                        }
+                    }
                 }
             }
         }
