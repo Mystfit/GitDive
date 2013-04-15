@@ -23,6 +23,9 @@ TextRenderer::TextRenderer(){
 
 
 void TextRenderer::setLinesAnimateable(){
+    vector< boost::shared_ptr<Line> > lines;
+    if(m_targetFile) lines = m_targetFile->getLines();
+    
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
              for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
