@@ -68,7 +68,7 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     
     m_lineManager->salvageLine(line->getLineElements());
     
-    //line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0,0,0), 8.0f);
+    if(line->getLineElements().size() == 0) line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0,0,0), 8.0f);
 }
 
 void TextRenderer::update(){
