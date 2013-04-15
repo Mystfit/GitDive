@@ -158,7 +158,7 @@ void GitDive_CinderApp::update()
         
         
         if(bFframeReady){
-            bool success = fManager.applyNextCommit();
+            bool success = fManager.applyNextDiff();
             if(success){
                 if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
             } else {
