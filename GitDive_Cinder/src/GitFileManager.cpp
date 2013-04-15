@@ -60,18 +60,12 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 
 bool GitFileManager::applyNextDiff()(){
     
-    if(m_commitIndex < m_commitList.size()) {
-        m_commitIndex++;
-    }
+    boost::shared_ptr<GitFile> file;
     
     Commit currentCommit = m_commitList[m_commitIndex];
     
-    
-    boost::shared_ptr<GitFile> file;
-    
     //Get the next diff in the commit
     if(m_diffIndex < currentCommit.getNumDiffs()){
-        
         
         boost::shared_ptr<Diff> diff = commit.getDiff(m_diffIndex);
         
@@ -95,7 +89,16 @@ bool GitFileManager::applyNextDiff()(){
             }
         }
         
+        m_diffIndex++;
+    } else {
+        if(m_commitIndex < m_commitList.size()) {
+            m_commitIndex++;
+        } else {
+            return true;
+        }
     }
+    
+    
     
     
     //ITS NO USE
