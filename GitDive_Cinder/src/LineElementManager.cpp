@@ -24,6 +24,7 @@ boost::shared_ptr<LineElement> LineElementManager::getFreeLineElement(string ele
                 lineElem = (boost::shared_ptr<LineElement>)elem->get();
                 lineElem->isFloating = false;
                 m_freeLineElements.erase(elem);
+                break;
             }
         }
         
@@ -40,6 +41,7 @@ boost::shared_ptr<LineElement> LineElementManager::getFreeLineElement(string ele
 //        }
     }
     
+    //If we didn't find a free element, return a new one
     if(!lineElem){
         lineElem = boost::shared_ptr<LineElement>(new LineElement(elemType, search, index));
     }
