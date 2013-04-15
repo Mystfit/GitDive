@@ -94,14 +94,14 @@ void Line::update(){
 }
 
 
-void Line::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f yOffset){
+void Line::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f offset){
     if(m_lineElements.size())
     {
         for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
-            it->get()->draw(texFont, yOffset);
+            it->get()->draw(texFont, offset);
         }
     } else {
-        TextAnimatable::draw(texFont, yOffset);
+        TextAnimatable::draw(texFont, offset);
         //texFont->drawString( getStr(), m_position);
     }
 }
