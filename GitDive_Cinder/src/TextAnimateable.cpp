@@ -60,6 +60,10 @@ bool TextAnimateable::isJustCreated(){
     return false;
 }
 
+void TextAnimateable::setPosition(cinder::Vec2f position){
+    m_position = position;
+}
+
 
 void TextAnimateable::animIn( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour, float duration)
 {
