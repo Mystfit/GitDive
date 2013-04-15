@@ -71,6 +71,9 @@ void TextRenderer::draw(){
     
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
+            if(it->get()->isJustCreated){
+                it->get()->
+            }
             it->get()->draw(m_textureFont);
         }
     }
