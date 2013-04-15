@@ -35,7 +35,7 @@ void TextAnimatable::draw(cinder::gl::TextureFontRef & texFont, float yOffset){
     cinder::gl::color( m_colour );
     string str = getStr();
 
-    texFont->drawString( str, cinder::Vec2f(m_position.ptr()->x, m_position.ptr()->y + yOffset);
+    texFont->drawString( str, cinder::Vec2f(m_position.ptr()->x, m_position.ptr()->y + yOffset));
 }
 
 bool TextAnimatable::markedForDeletion(){
