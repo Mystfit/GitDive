@@ -75,7 +75,7 @@
 		4AB896D817129B8900533992 /* TextRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextRenderer.h; path = ../src/TextRenderer.h; sourceTree = "<group>"; };
 		4AB896DA1712B04700533992 /* Resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		4AB896DB1712B84900533992 /* TextAnimateable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextAnimateable.cpp; path = ../src/TextAnimateable.cpp; sourceTree = "<group>"; };
-		4AB896DC1712B84900533992 /* TextAnimateable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextAnimateable.h; path = ../src/TextAnimateable.h; sourceTree = "<group>"; };
+		4AB896DC1712B84900533992 /* TextAnimatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextAnimatable.h; path = ../src/TextAnimatable.h; sourceTree = "<group>"; };
 		4ABFC141171412B600791CC0 /* CssParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CssParser.cpp; sourceTree = "<group>"; };
 		4ABFC142171412B600791CC0 /* CssParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CssParser.h; sourceTree = "<group>"; };
 		4AD7491F17097505006ACBC6 /* GitFileManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitFileManager.cpp; path = ../src/GitFileManager.cpp; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 				4ABFC142171412B600791CC0 /* CssParser.h */,
 				4A1253FB170FF90000DE28C9 /* SyntaxColourTools.h */,
 				4A1A6B7B17042CCA0046BE09 /* Utils.h */,
-				4AB896DC1712B84900533992 /* TextAnimateable.h */,
+				4AB896DC1712B84900533992 /* TextAnimatable.h */,
 				4AB896D817129B8900533992 /* TextRenderer.h */,
 				32CA4F630368D1EE00C91783 /* GitDive_Cinder_Prefix.pch */,
 				4AB896DA1712B04700533992 /* Resources.h */,
