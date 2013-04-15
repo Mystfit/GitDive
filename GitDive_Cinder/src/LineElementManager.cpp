@@ -34,6 +34,7 @@ boost::shared_ptr<LineElement> LineElementManager::getFreeLineElement(string ele
             if(lineElem->elem == elemType && lineElem->getStr() == search){
         
                 lineElem->isFloating = false;
+                lineElem->markAsCreated();
                 m_freeLineElements.erase(m_freeLineElements.begin() + i);
 
                 break;
