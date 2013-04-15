@@ -50,6 +50,7 @@ public:
     
     //Moves forward through the commit list and applies diffs to all files
     bool applyNextCommit();
+    bool applyNextDiff();
     
     
     
