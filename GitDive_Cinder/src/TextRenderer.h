@@ -11,7 +11,7 @@
 
 #define LINE_HEIGHT 15
 #define FONT_SIZE 14
-#define FONT_WIDTH 8.0f
+#define FONT_WIDTH 8.5f
 
 #include <iostream>
 #include "GitDataTypes.h"

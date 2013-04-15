@@ -76,7 +76,7 @@ void TextRenderer::update(){
             
             for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
                 
-                float elemX = (float)elem->get()->position * 8.5f;
+                float elemX = (float)elem->get()->position * FONT_WIDTH;
                 
                 if(elem->get()->isJustCreated()){
                     //Replace with something better
