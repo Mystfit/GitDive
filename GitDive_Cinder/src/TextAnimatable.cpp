@@ -77,8 +77,8 @@ void TextAnimatable::animIn( cinder::TimelineRef timeline, cinder::Vec2<float> d
     
     if(isJustAnimating())
     {
-        m_colourTween = timeline->apply( &m_colour, destColour, duration,  easer);
-        m_posTween = timeline->apply( &m_position, destVec, duration,  easer);
+        m_colourTween = timeline->apply( &m_colour, destColour, duration); //easer);
+        m_posTween = timeline->apply( &m_position, destVec, duration); // easer);
     //    timeline.apply( &m_colour, destColour, 1.0f, easer);
     //    timeline.apply( &m_position, destVec, 0.5f);
     //    timeline.apply( &m_position, destVec, 0.5f).finishFn( std::bind( &TextAnimatable::onAnimIn, this ) );
