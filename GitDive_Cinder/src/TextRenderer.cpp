@@ -105,7 +105,7 @@ void TextRenderer::update(){
                 
                 float elemX = (float)elem->get()->position * FONT_WIDTH;
                 
-                if(elem->get()->isJustCreated()){
+                if(elem->get()->isJustAnimating()){
                     //Replace with something better
                     elem->get()->setColour(cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)));
                     elem->get()->setPosition(cinder::Vec2f(elemX, lineY));
