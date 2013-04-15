@@ -110,29 +110,15 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     //Set up formatters to modify our lines
     highlighter.setFormatterManager(formatterManager.get());
     
-//    TextStylesPtr textStyles = srchilite::parse_outlang_def(DATADIR, lang.c_str());
-//    PreFormatterPtr preFormatter(new PreFormatter(textStyles->charTranslator));
-//    boost::shared_ptr<CTagsFormatter> ctags;
-//    srchilite::TextStyleFormatterFactory formatterFactory(textStyles, preFormatter.get(), ctags.get(), formatterManager.get());
-//    string bgcolour = "";
-//    srchilite::parseCssStyles(DATADIR, "sh_golden.css", &formatterFactory, bgcolour);
-    
     //Set up params to hold the element position from the start of the line
     srchilite::FormatterParams params;
     highlighter.setFormatterParams(&params);
     
-    //    //Set up listener to modify the output - handled in the formatter now
-    //    boost::shared_ptr< SyntaxColourListener > colourListener(new SyntaxColourListener());
-    //    highlighter.addListener(colourListener.get());
-    
-    //Iterate over the lines and highlight as we go
-    //The formatter needs to follow along with the current line target at the same time
+    //Iterate over the lines and highlight as we go. The formatter needs to follow along with the current line target at the same time
     for(int i = 0; i < lines.size(); i++){
-        //cout << "Line state:" << lines[i]->getLineState() << endl;
         if(lines[i]->getLineState() == Line::LINE_ADDED){
             params.start = 0;
             formatterManager->setTargetLine(lines[i]);
-            //colourListener->setTargetLine(lines[i]);
             highlighter.highlightParagraph(lines[i]->getStr());
         }
     }
