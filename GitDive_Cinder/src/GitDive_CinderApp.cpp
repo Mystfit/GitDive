@@ -173,7 +173,7 @@ void GitDive_CinderApp::update()
                 //if(bDumpFiles) fManager.dumpAllFiles(m_fileDir);
             } else {
                 bVizActive = false;
-                cout << "--- FINISHED ---";
+                cout << "--- FINISHED ---" << endl;
             }
             bFframeReady = false;
         }
