@@ -63,9 +63,9 @@ void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 //        if(it->get()->getLineState() == Line::LINE_ADDED){
 //            it->get()->applyCss(m_cssColours);
 //            it->get()->setPosition(cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT));
-//            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
+//            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f));
 //        } else if(it->get()->getLineState() == Line::LINE_NORMAL){
-//            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
+//            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f));
 //        }
 //    }
 //}
@@ -77,7 +77,7 @@ void TextRenderer::breakLine(boost::shared_ptr<Line> line){
     line->markAsAnimatable();
     
     if(line->getLineElements().size() == 0){
-        if(line->isJustAnimating()) line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0,0,0), 8.0f);
+        if(line->isJustAnimating()) line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0.0f,0.0f,0.0f), 8.0f);
     }
 }
 
@@ -90,7 +90,7 @@ void TextRenderer::update(){
     //Start animation for freed line elements
     for(elem = freeElems.begin(); elem != freeElems.end(); ++elem){
         if(elem->get()->isJustFreed()){
-            //elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(0,255,255), 2.0f);
+            //elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(0.0f, 1.0f, 1.0f), 2.0f);
         }
     }
     
@@ -106,10 +106,10 @@ void TextRenderer::update(){
                 if(line->get()->getLineState() == Line::LINE_ADDED){
                     line->get()->setColour(cinder::Color::hex(m_cssColours->getColour("normal")));
                     line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
-                    //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255), 1.0f);
+                    //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 1.0f);
                 } else if(line->get()->getLineState() == Line::LINE_NORMAL){
                     line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
-                    //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255), 1.0f);
+                    //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 1.0f);
                 }
             
             
