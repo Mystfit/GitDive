@@ -1,13 +1,13 @@
 //
-//  Textanimatable.h
+//  TextAnimatable.h
 //  GitDive_Cinder
 //
 //  Created by Byron Mallett on 8/04/13.
 //
 //
 
-#ifndef __GitDive_Cinder__Textanimatable__
-#define __GitDive_Cinder__Textanimatable__
+#ifndef __GitDive_Cinder__TextAnimatable__
+#define __GitDive_Cinder__TextAnimatable__
 
 #define MAX_LIFE 500
 
@@ -20,9 +20,9 @@
 #include "CssParser.h"
 //#include "TextRenderer.h"
 
-class Textanimatable {
+class TextAnimatable {
 public:
-    Textanimatable();
+    TextAnimatable();
     virtual void draw(cinder::gl::TextureFontRef & texFont);
     virtual void update();
     
@@ -79,4 +79,4 @@ private:
     cinder::TweenRef<cinder::Color> m_colourTween;
 };
 
-#endif /* defined(__GitDive_Cinder__Textanimatable__) */
+#endif /* defined(__GitDive_Cinder__TextAnimatable__) */
