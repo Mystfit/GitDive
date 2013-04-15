@@ -143,10 +143,15 @@ void GitDive_CinderApp::mouseUp(MouseEvent event){
 
 
 void GitDive_CinderApp::keyDown(KeyEvent event){    
-//    if(event.getChar() == KeyEvent::KEY_SPACE){
-//        bool success = fManager.applyNextCommit();
-//        if(success && bDumpFiles) fManager.dumpAllFiles(m_fileDir);
-//    }
+    if(event.getChar() == KeyEvent::KEY_SPACE){
+        tRender->setFollowCamera();
+    }
+}
+
+void GitDive_CinderApp::keyUp(KeyEvent event){
+    if(event.getChar() == KeyEvent::KEY_SPACE){
+        tRender->setManual();
+    }
 }
 
 
