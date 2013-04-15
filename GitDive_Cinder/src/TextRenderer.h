@@ -77,7 +77,7 @@ private:
     cinder::Vec2f m_textOffset;
     cinder::Vec2f m_scrollVelocity;
     boost::shared_ptr<CssParser> m_cssColours;
-    cinder::Color m_backgroundColour;
+    int m_backgroundColour;
 };
 
 #endif /* defined(__GitDive_Cinder__TextRenderer__) */
