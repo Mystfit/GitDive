@@ -23,10 +23,12 @@ public:
     CssParser();
     vector<string> loadFile(string path);
     int getColour(string elem);
+    int getBackgroundColour(){ return m_bgColour; };
     void parseCss(vector<string> cssData);
         
 private:
     map<string, int> m_cssMap;
+    int m_bgColour;
     bool bIsLoaded;
 };
 
