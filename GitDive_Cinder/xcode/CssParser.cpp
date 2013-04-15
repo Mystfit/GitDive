@@ -87,6 +87,5 @@ int CssParser::parseColour(string line){
         }
     }
     colourStr >> std::hex >> colour;
-    cout << line << ":" << cinder::Color::hex(colour) << endl;
     return colour;
 }
