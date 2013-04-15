@@ -107,6 +107,7 @@ void GitDive_CinderApp::resetView(){
 }
 
 void GitDive_CinderApp::resetAll(){
+    fManager.reset();
     tRender->resetView();
 }
 
