@@ -77,7 +77,7 @@ private:
     cinder::TimelineRef m_timeline;
     
     float m_textZoom;
-    cinder::Vec2f m_textOffset;
+    cinder::Anim<cinder::Vec2f> m_textOffset;
     boost::shared_ptr<CssParser> m_cssColours;
     cinder::Color m_backgroundColour;
     bool bCameraFollowing;
