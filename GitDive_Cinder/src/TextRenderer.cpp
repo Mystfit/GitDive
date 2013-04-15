@@ -106,12 +106,17 @@ void TextRenderer::update(){
 
             //if(line->get()->isJustAnimating()){
                 if(line->get()->getLineState() == Line::LINE_ADDED){
-                    //line->get()->setColour(cinder::Color::hex(m_cssColours->getColour("normal")));
-                    //line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
-                    line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 1.0f);
+                    if(line->get()->isJustAnimating()){
+                        //line->get()->setColour(cinder::Color::hex(m_cssColours->getColour("normal")));
+                        //line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
+                        line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 0.2f);
+                    }
                 } else if(line->get()->getLineState() == Line::LINE_NORMAL){
-                    //line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
-                    line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 1.0f);
+                    if(line->get()->isJustAnimating()){
+
+                        //line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
+                        line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 0.2f);
+                    }
                 }
             
             
@@ -128,7 +133,7 @@ void TextRenderer::update(){
                         //elem->get()->setColour(cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)));
                         //elem->get()->setPosition(cinder::Vec2f(elemX, lineY));
                         float randOffset = ((float)rand()/(float)RAND_MAX) * 0.4f;
-                        //elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 0.2f + randOffset );
+                        elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 0.2f + randOffset );
                     }
                 }
             //}
