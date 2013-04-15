@@ -78,8 +78,6 @@ void LineElementManager::salvageLine( vector< boost::shared_ptr<LineElement> > l
         //m_freeLineElements.back()->setColour(cinder::Color(128,128,128));
         
         m_freeLineElements.back()->markAsFree();
-
-        m_freeLineElements.back()->animOut(m_timeline, m_freeLineElements.back()->getPosition(), cinder::Color(0,0,0), 10.0f);
     }
     
     lineElements.clear();
