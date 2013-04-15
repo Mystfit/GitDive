@@ -109,6 +109,11 @@ void GitDive_CinderApp::jumpToEnd(){
 }
 
 
+void mouseWheel(MouseEvent event){
+    
+}
+
+
 
 void GitDive_CinderApp::mouseDown( MouseEvent event )
 {

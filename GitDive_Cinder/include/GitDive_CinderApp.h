@@ -31,7 +31,7 @@ public:
 	void setup();
     void initUI();
 	void mouseDown( MouseEvent event );
-    void mouseWh
+    void mouseWheel(MouseEvent event);
     void keyDown( KeyEvent event );
 	void update();
 	void draw();
