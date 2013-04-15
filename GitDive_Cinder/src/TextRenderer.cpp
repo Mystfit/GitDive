@@ -20,6 +20,7 @@ TextRenderer::TextRenderer(){
     m_cssColours = boost::shared_ptr<CssParser>(new CssParser());
     m_cssColours->loadFile( cssPath + "/" + cssFile );
     m_backgroundColour = cinder::Color::hex(m_cssColours->getColour(CSS_BACKGROUND));
+    cout << "BG:" << m_backgroundColour << endl;
 }
 
 
