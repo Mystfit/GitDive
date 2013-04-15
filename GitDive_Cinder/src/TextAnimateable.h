@@ -25,22 +25,33 @@ public:
     virtual void draw(cinder::gl::TextureFontRef & texFont);
     virtual void update();
     
-    //
+    //Sets the base colour of an element from the current css theme
     virtual void applyCss(boost::shared_ptr<CssParser> cssParser);
     void applyCss(boost::shared_ptr<CssParser> cssParser, string key);
+    
+    //Base tweening functions
     virtual void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour , float duration = 0.5f);
     virtual void animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour, float duration = 1.0f);
+    
+    //
+    void onAnimIn();
+    void onAnimOut();
+    
+    //Life accessors
     int getLife(){ return m_life; };
     float getLifePercent(){ return m_life / MAX_LIFE; };
     bool markedForDeletion();
+    
+    //Attribute getters/setters
     void setPosition(cinder::Vec2f position);
     void setColour(cinder::Color colour){m_colour = colour; };
     cinder::Vec2f getPosition(){ return m_position;};
     cinder::Color getColour(){ return m_colour;};
+    
+    //String accessor. Returns recursive strings from line elements if present
     virtual std::string getStr();
     
-    void onAnimIn();
-    void onAnimOut();
+    
 
 protected:
     int m_life;
