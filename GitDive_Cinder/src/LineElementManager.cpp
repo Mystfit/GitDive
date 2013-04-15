@@ -19,11 +19,12 @@ boost::shared_ptr<LineElement> LineElementManager::getFreeLineElement(string ele
     vector< boost::shared_ptr<LineElement> >::iterator elem;
     
     if(m_freeLineElements.size() > 0){
-        //for(elem = m_freeLineElements.begin(); elem != m_freeLineElements.end(); ++elem){
-        //if(elem->get()->elem == elemType && elem->get()->getStr() == search){
-        //lineElem = (boost::shared_ptr<LineElement>)elem->get();
-        //m_freeLineElements.erase(elem);
-        //}
+//        for(elem = m_freeLineElements.begin(); elem != m_freeLineElements.end(); ++elem){
+//            if(elem->get()->elem == elemType && elem->get()->getStr() == search){
+//                lineElem = (boost::shared_ptr<LineElement>)elem->get();
+//                m_freeLineElements.erase(elem);
+//            }
+//        }
         
         for(int i = 0; i < m_freeLineElements.size(); i++){
             lineElem = m_freeLineElements[i];
