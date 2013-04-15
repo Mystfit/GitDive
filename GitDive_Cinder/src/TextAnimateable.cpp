@@ -48,8 +48,8 @@ bool TextAnimateable::isJustFreed(){
 }
 
 bool TextAnimateable::isJustCreated(){
-    if(bIsJustCreated){
-        bIsJustCreated = false;
+    if(bIsCreated){
+        bIsCreated = false;
         return true;
     }
     
