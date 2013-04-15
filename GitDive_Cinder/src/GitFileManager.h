@@ -57,7 +57,7 @@ public:
     
     //Applies a diff to the current state of a file object
     void applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff, bool useSyntaxHighlighting);
-    void updateSingleFile( boost::shared_ptr<Diff> diff, string targetFile = "");
+    bool updateSingleFile( boost::shared_ptr<Diff> diff, string targetFile = "");
 
     bool & getSyntaxHighlightStatus(){ return bUseSyntaxHighlighting; };
     void setSyntaxHighlightStatus(bool state){ bUseSyntaxHighlighting = state; };
