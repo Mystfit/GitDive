@@ -9,6 +9,8 @@
 #ifndef __GitDive_Cinder__CssParser__
 #define __GitDive_Cinder__CssParser__
 
+#define CSS_BACKGROUND "CSS_BACKGROUND"
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -23,12 +25,10 @@ public:
     CssParser();
     vector<string> loadFile(string path);
     int getColour(string elem);
-    int getBackgroundColour(){ return m_bgColour; };
     void parseCss(vector<string> cssData);
         
 private:
     map<string, int> m_cssMap;
-    int m_bgColour;
     bool bIsLoaded;
 };
 
