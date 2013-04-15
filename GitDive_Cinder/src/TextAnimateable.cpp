@@ -6,7 +6,7 @@
 //
 //
 
-#include "Textanimatable.h"
+#include "TextAnimatable.h"
 
 Textanimatable::Textanimatable(){
     m_colour = cinder::Color(255,255,255);
