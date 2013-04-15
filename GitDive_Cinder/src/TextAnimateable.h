@@ -61,7 +61,7 @@ public:
 protected:
     int m_life;
     bool bIsFree;
-    bool bisCreated;
+    bool bIsCreated;
     
 private:
     cinder::Anim<cinder::Vec2f> m_position;
