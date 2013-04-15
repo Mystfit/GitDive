@@ -42,13 +42,13 @@ void TextRenderer::setLinesAnimatable(){
 
 void TextRenderer::setTextOffset(float increment){
     m_textOffset += increment;
-    if(m_targetFile){
-        if(m_textOffset.y < floor(m_targetFile->getLines().size() * LINE_HEIGHT )){
-            m_textOffset.y = floor(m_targetFile->getLines().size() * LINE_HEIGHT);
-        } else if(m_textOffset.y > 0){
-            m_textOffset.y = 0;
-        }
-    }
+//    if(m_targetFile){
+//        if(m_textOffset.y < floor(m_targetFile->getLines().size() * LINE_HEIGHT )){
+//            m_textOffset.y = floor(m_targetFile->getLines().size() * LINE_HEIGHT);
+//        } else if(m_textOffset.y > 0){
+//            m_textOffset.y = 0;
+//        }
+//    }
 }
 
 
