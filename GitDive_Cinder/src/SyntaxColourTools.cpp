@@ -87,6 +87,11 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     //Get a free element from the elemManager and let it handle creating elements for us (I swear this is such a bloody hack)
     boost::shared_ptr<LineElement> newElem = m_lineElemManager->getFreeLineElement(elem, str, params->start);
     
+    if(s == "Diff"){
+        cout << "Where is this going? " << s << endl;
+    }
+
+    
     m_targetLine->addLineElement(newElem);
 }
 
