@@ -58,7 +58,7 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 
 
 
-bool GitFileManager::applyNextDiff()(){
+bool GitFileManager::applyNextDiff(){
     
     boost::shared_ptr<GitFile> file;
     
