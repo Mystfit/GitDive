@@ -109,8 +109,8 @@ void TextRenderer::update(){
                     line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
                     //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 1.0f);
                 } else if(line->get()->getLineState() == Line::LINE_NORMAL){
-                    //line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
-                    line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 1.0f);
+                    line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
+                    //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 1.0f);
                 }
             
             
