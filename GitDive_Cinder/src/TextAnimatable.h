@@ -73,6 +73,7 @@ protected:
     bool bIsFree;
     bool bIsCreated;
     bool bIsAnimating;
+    bool bDrawSquares;
     
 private:
     cinder::Anim<cinder::Vec2f> m_position;
