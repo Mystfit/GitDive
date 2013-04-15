@@ -38,6 +38,7 @@ public:
 	void update();
 	void draw();
     void resetView();
+    void resetAll();
     
     void loadGitOutput(string repo, string gitCmd);
     void startVisualization();
