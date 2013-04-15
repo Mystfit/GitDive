@@ -163,10 +163,6 @@ void TextRenderer::update(){
         }
 
     }
-    
-    
-    
-    
 }
 
 
