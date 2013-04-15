@@ -113,7 +113,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
                 file.getLines()[i]->markForRemoval();
                 
                 if(file.getFilename().size()){
-                    if(file.getFilename() == m_tRender->getTargetFile()->getFilename() ) m_tRender->breakLine(file.getLines()[i]);
+                    if(m_tRender->getTargetFile()){
+                        if(file.getFilename() == m_tRender->getTargetFile()->getFilename() ) m_tRender->breakLine(file.getLines()[i]);
+                    }
                 }
                 file.getLines().erase(file.getLines().begin() + pos);
                 
