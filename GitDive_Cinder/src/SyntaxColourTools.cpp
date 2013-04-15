@@ -104,6 +104,7 @@ void LineFormatterManager::syntaxParseLines(vector<boost::shared_ptr<Line> > lin
     for(int i = 0; i < lines.size(); i++){
         if(lines[i]->getLineState() == Line::LINE_ADDED){
             params.start = 0;
+            m_lineElementManger->setTargetLine(lines[i]);
             setTargetLine(lines[i]);
             highlighter.highlightParagraph(lines[i]->getStr());
         }
