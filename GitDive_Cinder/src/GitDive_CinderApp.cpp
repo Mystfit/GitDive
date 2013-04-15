@@ -169,10 +169,12 @@ void GitDive_CinderApp::draw()
 	// clear out the window with black
 	gl::clear( tRender->getBackgroundColour() );
     
-    //Draw params window
-    params::InterfaceGl::draw();
+    
     
     if(tRender) tRender->draw();
+    
+    //Draw params window
+    params::InterfaceGl::draw();
 }
 
 
