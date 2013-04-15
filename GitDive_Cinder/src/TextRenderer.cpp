@@ -66,7 +66,17 @@ void TextRenderer::update(){
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
             
-            line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
+            
+            if(line->get()->getLineState() == Line::LINE_ADDED){
+                line->get()->isJustCreated();
+                line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
+                line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
+            }
+            
+            else if(line->get()->getLineState() == Line::LINE_NORMAL){
+                line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
+            }
+
             
             float lineY = line->get()->getLinePos() * LINE_HEIGHT;
             
