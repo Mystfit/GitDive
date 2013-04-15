@@ -77,7 +77,6 @@ bool GitFileManager::applyNextDiff(){
         
         if(m_trackedFile != ""){
             if(diff->getFileName() == m_trackedFile){
-            
                 updateSingleFile(diff, m_trackedFile);
             }
         }
