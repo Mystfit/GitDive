@@ -163,7 +163,7 @@ void TextRenderer::update(){
             
             if(lineYcount){
                 cout << lineYtotal / lineYcount << endl;
-                cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineYtotal / lineYcount - 512);
+                cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineYtotal / lineYcount - (lines.size() * LINE_HEIGHT * 0.5));
                 m_timeline->apply(&m_textOffset, camOffset, 1.0f);
             }   
         }
