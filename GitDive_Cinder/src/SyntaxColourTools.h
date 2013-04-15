@@ -14,7 +14,7 @@
 #endif
 
 #include <iostream>
-#include "srchilite/sourcehighlighter.h";
+#include "srchilite/sourcehighlighter.h"
 #include "srchilite/textstyleformatterfactory.h"
 #include "srchilite/textstyles.h"
 #include "srchilite/outlangdefparserfun.h"
