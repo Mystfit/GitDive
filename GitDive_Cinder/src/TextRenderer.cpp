@@ -161,7 +161,7 @@ void TextRenderer::update(){
         //Update camera
         if(bCameraFollowing){
             //cinder::EaseInOutSine easer;
-            cinder::EaseOutElastic easer;
+            cinder::EaseInOutElastic easer;
 
             if(lineYcount){
                 cout << "Total:" << lineYtotal << " Count:" << lineYcount << endl;
