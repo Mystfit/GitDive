@@ -49,6 +49,9 @@ public:
     cinder::Vec2f getPosition(){ return m_position;};
     cinder::Color getColour(){ return m_colour;};
     
+    //Gets line character positions based on index position
+    static float getLinePositionFromIndex(int positionIndex){ return (float)positionIndex * 8.5f; };
+    
     void markAsFreed(){ bIsFree = true; };
     bool isJustFreed();
     
