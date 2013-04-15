@@ -103,15 +103,15 @@ void TextRenderer::update(){
             //if(line->get()->isJustAnimating()){
                 if(line->get()->getLineState() == Line::LINE_ADDED){
                     line->get()->setColour(cinder::Color::hex(m_cssColours->getColour("normal")));
-                    line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT + m_textOffset.y));
+                    line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
                     //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255), 1.0f);
                 } else if(line->get()->getLineState() == Line::LINE_NORMAL){
-                    line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT + m_textOffset.y));
+                    line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
                     //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255), 1.0f);
                 }
             
             
-                float lineY = line->get()->getLinePos() * LINE_HEIGHT + m_textOffset.y;
+                float lineY = line->get()->getLinePos() * LINE_HEIGHT;
                 
                 vector< boost::shared_ptr<LineElement> > lineElems = line->get()->getLineElements();
                 
@@ -146,7 +146,7 @@ void TextRenderer::draw(){
     
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
-            it->get()->draw(m_textureFont);
+            it->get()->draw(m_textureFont, m_textOffset);
         }
     }
     
@@ -155,7 +155,7 @@ void TextRenderer::draw(){
     if(freeLineElems.size()){
         //Draws the free-floating line elements
         for(int i = 0; i < freeLineElems.size(); i++){
-            freeLineElems[i]->draw(m_textureFont);
+            freeLineElems[i]->draw(m_textureFont, m_textOffset);
         }
     }
 }
