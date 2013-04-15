@@ -48,7 +48,7 @@ Line::Line(string lineStr, bool justUpdated){
 void Line::setPosition(cinder::Vec2f position){
     TextAnimateable::setPosition(position);
     for(vector< boost::shared_ptr<LineElement> >::iterator elem = m_lineElements.begin(); elem != m_lineElements.end(); ++elem){
-        elem->get()->setPosition(cinder::Vec2f(position.x + TextRenderer::getLinePositionFromIndex(elem->get()->position) , position.y));
+        elem->get()->setPosition(cinder::Vec2f(position.x + getLinePositionFromIndex(elem->get()->position) , position.y));
     }
 }
 
