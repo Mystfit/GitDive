@@ -43,7 +43,7 @@ public:
     bool markedForDeletion();
     
     //Attribute getters/setters
-    void setPosition(cinder::Vec2f position);
+    virtual void setPosition(cinder::Vec2f position);
     void setColour(cinder::Color colour){m_colour = colour; };
     cinder::Vec2f getPosition(){ return m_position;};
     cinder::Color getColour(){ return m_colour;};
