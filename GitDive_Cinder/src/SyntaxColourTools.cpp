@@ -62,10 +62,10 @@ LineFormatterManager::LineFormatterManager(boost::shared_ptr<LineElementManager>
 void LineFormatterManager::setTargetLine(boost::shared_ptr<Line> target){
     m_targetLine = target;
     
-//    for(FormatterMap::iterator it = formatterMap.begin(); it != formatterMap.end(); ++it){
-//        boost::shared_ptr<LineFormatter> formatter = boost::dynamic_pointer_cast<LineFormatter>(it->second);
-//        formatter->setTargetLine(m_targetLine);
-//    }
+    for(FormatterMap::iterator it = formatterMap.begin(); it != formatterMap.end(); ++it){
+        boost::shared_ptr<LineFormatter> formatter = boost::dynamic_pointer_cast<LineFormatter>(it->second);
+        formatter->setTargetLine(m_targetLine);
+    }
 }
 
 
@@ -86,10 +86,10 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     
     //Get a free element from the elemManager and let it handle creating elements for us (I swear this is such a bloody hack)
     boost::shared_ptr<LineElement> newElem = m_lineElemManager->getFreeLineElement(elem, str, params->start);
-    if(!m_lineElemManager->getTargetLine()){
+    if(!m_targetLine){
         cout << "WHY IS THERE NO LINE" << endl;
     }
-    m_lineElemManager->getTargetLine()->addLineElement(newElem);
+    m_targetLine->addLineElement(newElem);
 }
 
 
