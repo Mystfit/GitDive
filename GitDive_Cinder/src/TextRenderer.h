@@ -39,7 +39,6 @@ public:
     
     void setFollowCamera(){ bCameraFollowing = true };
     void setManualCamera(){ bCameraFollowing = false };
-
     
     //Timeline reference for animation
     void setTimeline(cinder::TimelineRef timelineRef){ m_timeline = timelineRef; };
