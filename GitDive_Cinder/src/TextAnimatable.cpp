@@ -75,11 +75,11 @@ bool TextAnimatable::isJustAnimating(){
 
 void TextAnimatable::animIn( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour, float duration)
 {
-    cinder::EaseOutSine easer;
+    cinder::EaseInOutSine easer;
     
 
-    m_colourTween = timeline->apply( &m_colour, destColour, duration); //easer);
-    m_posTween = timeline->apply( &m_position, destVec, duration); // easer);
+    m_colourTween = timeline->apply( &m_colour, destColour, duration, easer);
+    m_posTween = timeline->apply( &m_position, destVec, duration, easer);
     //    timeline.apply( &m_colour, destColour, 1.0f, easer);
     //    timeline.apply( &m_position, destVec, 0.5f);
     //    timeline.apply( &m_position, destVec, 0.5f).finishFn( std::bind( &TextAnimatable::onAnimIn, this ) );
@@ -88,10 +88,10 @@ void TextAnimatable::animIn( cinder::TimelineRef timeline, cinder::Vec2<float> d
 
 void TextAnimatable::animOut( cinder::TimelineRef timeline, cinder::Vec2<float> destVec, cinder::Color destColour, float duration)
 {
-    cinder::EaseInSine easer;
+    cinder::EaseInOutSine easer;
 
-    m_colourTween = timeline->apply( &m_colour, destColour, duration); //easer);
-    m_posTween = timeline->apply( &m_position, destVec, duration); // easer);
+    m_colourTween = timeline->apply( &m_colour, destColour, duration, easer);
+    m_posTween = timeline->apply( &m_position, destVec, duration, easer);
 
     //timeline.apply( &m_colour, destColour, 1.0f,  easer);
     //timeline.apply( &m_position, destVec, 0.5f, cinder::easeOutAtan( 10 ) ).finishFn( std::bind( &TextAnimatable::onAnimIn, this ) );
