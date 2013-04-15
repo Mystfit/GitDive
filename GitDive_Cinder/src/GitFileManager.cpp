@@ -75,6 +75,8 @@ bool GitFileManager::applyNextDiff(){
             
             while(!foundFile){
                 if(m_diffIndex < currentCommit.getNumDiffs()){
+                } else {
+                    foundFile = true;
                 }
                 
                 diff = currentCommit.getDiff(m_diffIndex);
