@@ -121,7 +121,8 @@ void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, str
     for(int i = 0; i < lines.size(); i++){
         if(lines[i]->getLineState() == Line::LINE_ADDED){
             params.start = 0;
-            formatterManager->setTargetLine(lines[i]);
+            
+            m_lineElemManager->setTargetLine(lines[i]);
             highlighter.highlightParagraph(lines[i]->getStr());
         }
     }
