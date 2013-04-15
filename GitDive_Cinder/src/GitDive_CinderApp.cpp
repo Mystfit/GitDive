@@ -136,7 +136,7 @@ void GitDive_CinderApp::update()
         int frameNum = floor(ci::app::getElapsedFrames() % int(ci::app::getFrameRate() / m_timeSpeed));
         if(frameNum == 0 && frameNum != m_lastFrame){
             bFframeReady = true;
-            tRender->setLinesAnimatable();
+            //tRender->setLinesAnimatable();
         }
         m_lastFrame = frameNum;
         
