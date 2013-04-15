@@ -159,6 +159,7 @@ void TextRenderer::draw(){
     
     cinder::gl::pushMatrices();
     cinder::gl::scale(cinder::Vec2f(m_textZoom, m_textZoom));
+    cinder::gl::translate(m_textOffset);
     vector< boost::shared_ptr<Line> > lines;
     
     if(m_targetFile) lines = m_targetFile->getLines();
@@ -166,7 +167,7 @@ void TextRenderer::draw(){
     
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
-            it->get()->draw(m_textureFont, m_textOffset);
+            it->get()->draw(m_textureFont);
         }
     }
     
@@ -175,7 +176,7 @@ void TextRenderer::draw(){
     if(freeLineElems.size()){
         //Draws the free-floating line elements
         for(int i = 0; i < freeLineElems.size(); i++){
-            freeLineElems[i]->draw(m_textureFont, m_textOffset);
+            freeLineElems[i]->draw(m_textureFont);
         }
     }
     
