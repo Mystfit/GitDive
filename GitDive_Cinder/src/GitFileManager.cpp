@@ -67,7 +67,7 @@ bool GitFileManager::applyNextDiff(){
     //Get the next diff in the commit
     if(m_diffIndex < currentCommit.getNumDiffs()){
         
-        boost::shared_ptr<Diff> diff = commit.getDiff(m_diffIndex);
+        boost::shared_ptr<Diff> diff = currentCommit.getDiff(m_diffIndex);
         
         if(diff->fileMode == Diff::FILEMODE_ADDED){
             file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
