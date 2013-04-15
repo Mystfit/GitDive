@@ -53,6 +53,8 @@ void GitDive_CinderApp::initUI(){
     mParams.addParam("Output Git diff log to file", &bOutputDifflog);
     mParams.addParam("Dump files", &bDumpFiles);
     mParams.addParam("Reload commits", &bLoadCommits);
+    mParams.addButton("Reset view", std::bind(&GitDive_CinderApp::resetView, this));
+
     
     stringstream maxSpeed; 
     maxSpeed << "min=1, max=" << ci::app::getFrameRate()/2;
@@ -88,6 +90,10 @@ void GitDive_CinderApp::loadGitOutput(string repo, string gitCmd){
     
     //Parse the diff log text into commit objects for the file manager
     fManager.setCommitSource(GitLogParser::parseLog(m_cmdOutput));
+}
+
+void GitDive_CinderApp::resetView(){
+    tRender.resetView();
 }
 
 
