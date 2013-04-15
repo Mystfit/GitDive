@@ -40,6 +40,16 @@ void TextRenderer::setLinesAnimatable(){
 }
 
 
+void TextRenderer::setTextOffset(float increment){
+    m_textOffset += increment;
+    if(m_textOffset < floor(m_targetFile->getLines().size() * LINE_HEIGHT )){
+        m_textOffset = floor(m_targetFile->getLines().size() * LINE_HEIGHT);
+    } else if(){
+        
+    }
+}
+
+
 
 void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 
