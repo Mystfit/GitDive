@@ -60,10 +60,7 @@ void TextRenderer::setTextOffset(float increment){
 void TextRenderer::setTextZoom(float zoom){
     m_textZoom += zoom;
     if(m_textZoom < 1.0f){
-        for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
-            for(vector< boost::shared_ptr<LineElement> >::iterator line = lines.begin(); line != lines.end(); ++line){
-
-
+        bDrawSquares = true;
     }
 }
 
