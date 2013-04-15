@@ -100,6 +100,7 @@ private:
     boost::shared_ptr<LineFormatterManager> m_formatterManager;
     
     int m_commitIndex, m_diffIndex;
+    string m_trackedFile;
     bool bUseSyntaxHighlighting;
 };
 
