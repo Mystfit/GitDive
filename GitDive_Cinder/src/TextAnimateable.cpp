@@ -47,6 +47,15 @@ bool TextAnimateable::isJustFreed(){
     return false;
 }
 
+bool TextAnimateable::isJustCreated(){
+    if(bIsJustCreated){
+        bIsJustCreated = false;
+        return true;
+    }
+    
+    return false;
+}
+
 void TextAnimateable::setPosition(cinder::Vec2f position){
     m_position = position;
 }
