@@ -107,7 +107,7 @@ void TextRenderer::update(){
                 
                 if(elem->get()->isJustCreated()){
                     //Replace with something better
-                    elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)));
+                    elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 5.0f);
                 }
             }
         }
