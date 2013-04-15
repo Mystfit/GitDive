@@ -51,6 +51,8 @@ public:
     void addLineElement(boost::shared_ptr<LineElement> element);
     vector< boost::shared_ptr<LineElement> > getLineElements(){ return m_lineElements; };
     
+    void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec = cinder::Vec2(0.0f,0.0f), cinder::Color destColour = cinder::Color(255,255,255) , float duration = 0.5f);
+    
     enum lineState{LINE_NORMAL = 0, LINE_ADDED, LINE_DELETED};
     int getLineState(){ return m_lineState; };
     void setLineState(int state){ m_lineState = state; };
