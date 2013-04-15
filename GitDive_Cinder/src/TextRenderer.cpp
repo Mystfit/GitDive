@@ -57,9 +57,15 @@ void TextRenderer::update(){
         }
     }
     
-    if(it->get()->isJustCreated()){
-        it->get()->animIn(<#cinder::TimelineRef#>, <#cinder::Vec2<float> destVec#>, <#cinder::Color destColour#>)
+    if(lines.size()){
+        for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
+            if(it->get()->isJustCreated()){
+                it->get()->animIn(m_timeline, <#cinder::Vec2<float> destVec#>, <#cinder::Color destColour#>)
+            }
+        }
     }
+    
+    
     
     
 }
