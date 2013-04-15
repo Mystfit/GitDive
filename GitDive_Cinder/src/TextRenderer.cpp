@@ -57,6 +57,10 @@ void TextRenderer::update(){
         }
     }
     
+    if(it->get()->isJustCreated()){
+        it->get()->animIn(<#cinder::TimelineRef#>, <#cinder::Vec2<float> destVec#>, <#cinder::Color destColour#>)
+    }
+    
     
 }
 
@@ -71,9 +75,6 @@ void TextRenderer::draw(){
     
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
-            if(it->get()->isJustCreated()){
-                it->get()->
-            }
             it->get()->draw(m_textureFont);
         }
     }
