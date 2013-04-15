@@ -17,14 +17,9 @@ void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
 
     boost::shared_ptr<GitFile> file;
     
-    bool filterFile;
-    
+    //If the target file doesn't match the file in the diff, exit
     if( targetFile.size() ){
-        if(diff->getFileName() == targetFile){
-            filterFile = true;
-        } else {
-            return;
-        }
+        if(diff->getFileName() != targetFile) return;
     }
 
 
