@@ -111,6 +111,7 @@ void TextRenderer::update(){
     if(m_targetFile) lines = m_targetFile->getLines();
 
     if(lines.size()){
+        float lineYtotal = 0;
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
 
             //if(line->get()->isJustAnimating()){
@@ -129,7 +130,8 @@ void TextRenderer::update(){
             
             
                 float lineY = line->get()->getLinePos() * LINE_HEIGHT;
-                
+                lineYtotal += lineY;
+            
                 vector< boost::shared_ptr<LineElement> > lineElems = line->get()->getLineElements();
                 
                 for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
