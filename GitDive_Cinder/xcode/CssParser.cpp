@@ -68,7 +68,7 @@ void CssParser::parseCss(vector<string> cssData){
             }
             
             if(key == CSS_BACKGROUND && find_first(line, "background-color")){
-                
+                parseColour(line, &colour);
             }
         }
     }
