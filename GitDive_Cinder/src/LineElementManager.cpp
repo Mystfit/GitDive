@@ -46,6 +46,7 @@ boost::shared_ptr<LineElement> LineElementManager::getFreeLineElement(string ele
     //If we didn't find a free element, return a new one
     if(!lineElem){
         lineElem = boost::shared_ptr<LineElement>(new LineElement(elemType, search, index));
+        lineElem->setPosition(m_targetLine->getPosition());
     }
     
     return lineElem;
