@@ -11,6 +11,7 @@
 TextAnimatable::TextAnimatable(){
     m_colour = cinder::Color(0.0f,0.0f,1.0f);
     m_life = 0;
+    markDrawText();
     markAsCreated();
     markAsAnimatable();
 }
@@ -36,15 +37,15 @@ void TextAnimatable::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f of
     cinder::gl::color( m_colour );
     string str = getStr();
     
-//    if(bDrawSquares) {        
-//        cinder::Vec2f rectSize = texFont->measureString(str);
-//        cinder::Rectf rect( *(m_position.ptr()) + offset, *(m_position.ptr()) + offset + rectSize );
-//        cinder::gl::drawSolidRect(rect);
-//    } else {
-//        texFont->drawString( str, *(m_position.ptr()) + offset);
-//    }
+    if(bDrawSquares) {        
+        cinder::Vec2f rectSize = texFont->measureString(str);
+        cinder::Rectf rect( *(m_position.ptr()) + offset, *(m_position.ptr()) + offset + rectSize );
+        cinder::gl::drawSolidRect(rect);
+    } else {
+        texFont->drawString( str, *(m_position.ptr()) + offset);
+    }
     
-    texFont->drawString( str, *(m_position.ptr()) + offset);
+    //texFont->drawString( str, *(m_position.ptr()) + offset);
 
 }
 
