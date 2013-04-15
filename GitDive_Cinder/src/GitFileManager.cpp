@@ -290,7 +290,7 @@ string GitFileManager::serializeFile(boost::shared_ptr<GitFile> file){
 void GitFileManager::syntaxParseAllFiles(){
     
     for(vector< boost::shared_ptr<GitFile> >::iterator it = m_fileList.begin(); it != m_fileList.end(); ++it){
-        LineFormatter::syntaxParseLines(it->get()->getLines(), LineFormatter::getFileLangType(it->get()->getFilename()) , m_formatterManager);
+        m_formatterManager->syntaxParseLines(it->get()->getLines(), LineFormatter::getFileLangType(it->get()->getFilename()));
     }
 }
 
