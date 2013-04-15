@@ -75,7 +75,7 @@ void CssParser::parseCss(vector<string> cssData){
 }
 
 
-string CssParser::parseColour(){
+string CssParser::parseColour(string line, int & colour){
     stringstream colourStr;
     bool foundHash = false;
     int numChars = 0;
