@@ -18,6 +18,10 @@ void TextAnimateable::update(){
     m_life++;
 }
 
+void TextAnimateable::setPosition(cinder::Vec2f position){
+    m_position = position;
+}
+
 void TextAnimateable::applyCss(boost::shared_ptr<CssParser> cssParser){
 }
 
