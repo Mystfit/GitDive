@@ -154,7 +154,7 @@ void TextRenderer::update(){
 void TextRenderer::draw(){
     
     cinder::gl::pushMatrices();
-    loadIde
+    
     vector< boost::shared_ptr<Line> > lines;
     
     if(m_targetFile) lines = m_targetFile->getLines();
@@ -174,4 +174,7 @@ void TextRenderer::draw(){
             freeLineElems[i]->draw(m_textureFont, m_textOffset);
         }
     }
+    
+    cinder::gl::popMatrices();
+
 }
