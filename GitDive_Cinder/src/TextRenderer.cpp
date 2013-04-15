@@ -93,24 +93,22 @@ void TextRenderer::update(){
                     //line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
                     line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255), 1.0f);
                 }
-            }
             
             
-
-            
-            float lineY = line->get()->getLinePos() * LINE_HEIGHT;
-            
-            vector< boost::shared_ptr<LineElement> > lineElems = line->get()->getLineElements();
-            
-            for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
+                float lineY = line->get()->getLinePos() * LINE_HEIGHT;
                 
-                float elemX = (float)elem->get()->position * FONT_WIDTH;
+                vector< boost::shared_ptr<LineElement> > lineElems = line->get()->getLineElements();
                 
-                if(elem->get()->isJustAnimating()){
-                    //Replace with something better
-                    //elem->get()->setColour(cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)));
-                    //elem->get()->setPosition(cinder::Vec2f(elemX, lineY));
-                    elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 2.0f + ((float)rand()/(float)RAND_MAX) * 0.5f );
+                for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
+                    
+                    float elemX = (float)elem->get()->position * FONT_WIDTH;
+                    
+                    if(elem->get()->isJustAnimating()){
+                        //Replace with something better
+                        //elem->get()->setColour(cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)));
+                        //elem->get()->setPosition(cinder::Vec2f(elemX, lineY));
+                        elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 2.0f + ((float)rand()/(float)RAND_MAX) * 0.5f );
+                    }
                 }
             }
         }
