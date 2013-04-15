@@ -16,38 +16,41 @@ LineElementManager::LineElementManager(){
 
 boost::shared_ptr<LineElement> LineElementManager::getFreeLineElement(string elemType, string search, int index){
     boost::shared_ptr<LineElement> lineElem;
-    vector< boost::shared_ptr<LineElement> >::iterator elem;
-    
-    if(m_freeLineElements.size() > 0){
-//        for(elem = m_freeLineElements.begin(); elem != m_freeLineElements.end(); ++elem){
-//            if(elem->get()->elem == elemType && elem->get()->getStr() == search){
-//                lineElem = (boost::shared_ptr<LineElement>)elem->get();
+//    vector< boost::shared_ptr<LineElement> >::iterator elem;
+//    
+//    if(m_freeLineElements.size() > 0){
+////        for(elem = m_freeLineElements.begin(); elem != m_freeLineElements.end(); ++elem){
+////            if(elem->get()->elem == elemType && elem->get()->getStr() == search){
+////                lineElem = (boost::shared_ptr<LineElement>)elem->get();
+////                lineElem->isFloating = false;
+////                m_freeLineElements.erase(elem);
+////                break;
+////            }
+////        }
+//        
+//        for(int i = 0; i < m_freeLineElements.size(); i++){
+//            lineElem = m_freeLineElements[i];
+//            
+//            if(lineElem->elem == elemType && lineElem->getStr() == search){
+//        
 //                lineElem->isFloating = false;
-//                m_freeLineElements.erase(elem);
+//                lineElem->markAsCreated();
+//                lineElem->markAsAnimatable();
+//                m_freeLineElements.erase(m_freeLineElements.begin() + i);
+//
 //                break;
 //            }
 //        }
-        
-        for(int i = 0; i < m_freeLineElements.size(); i++){
-            lineElem = m_freeLineElements[i];
-            
-            if(lineElem->elem == elemType && lineElem->getStr() == search){
-        
-                lineElem->isFloating = false;
-                lineElem->markAsCreated();
-                lineElem->markAsAnimatable();
-                m_freeLineElements.erase(m_freeLineElements.begin() + i);
-
-                break;
-            }
-        }
-    }
-    
-    //If we didn't find a free element, return a new one
-    if(!lineElem){
-        lineElem = boost::shared_ptr<LineElement>(new LineElement(elemType, search, index));
-        lineElem->setPosition(m_targetLine->getPosition());
-    }
+//    }
+//    
+//    //If we didn't find a free element, return a new one
+//    if(!lineElem){
+//        lineElem = boost::shared_ptr<LineElement>(new LineElement(elemType, search, index));
+//        lineElem->setPosition(m_targetLine->getPosition());
+//    }
+//    
+    lineElem = boost::shared_ptr<LineElement>(new LineElement(elemType, search, index));
+    lineElem->setPosition(m_targetLine->getPosition());
     
     return lineElem;
 }
