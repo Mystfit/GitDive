@@ -81,7 +81,7 @@ bool GitFileManager::applyNextDiff(){
                 m_diffIndex++;
             }
         } else {
-            updateSingleFile(diff, m_trackedFile);
+            updateSingleFile(diff);
             m_diffIndex++;
         }
         
