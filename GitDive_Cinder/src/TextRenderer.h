@@ -82,7 +82,6 @@ private:
     boost::shared_ptr<CssParser> m_cssColours;
     cinder::Color m_backgroundColour;
     bool bCameraFollowing, bDrawSquares;
-;
 };
 
 #endif /* defined(__GitDive_Cinder__TextRenderer__) */
