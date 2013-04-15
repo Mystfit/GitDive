@@ -45,8 +45,8 @@ public:
     void draw(cinder::gl::TextureFontRef & texFont);
     void update();
     
-    int getLinePos(){ return m_linePos; };
     void setPosition(cinder::Vec2f position);
+    int getLinePos(){ return m_linePos; };
     void setLinePos(int linePos){ m_linePos = linePos; };
     
     void addLineElement(boost::shared_ptr<LineElement> element);
