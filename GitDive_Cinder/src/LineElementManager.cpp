@@ -57,7 +57,10 @@ void LineElementManager::update(){
     
     m_freeLineElements.erase(
                  std::remove_if(m_freeLineElements.begin(), m_freeLineElements.end(),
-                                [](const boost::shared_ptr<LineElement> o) { return o->markedForDeletion(); }),
+                                [](const boost::shared_ptr<LineElement> o) {
+                                    bool state = false;
+                                    return o->markedForDeletion();
+                                }),
                  m_freeLineElements.end());
     
 }
