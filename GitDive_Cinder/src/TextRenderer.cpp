@@ -125,6 +125,9 @@ void TextRenderer::update(){
         float lineYtotal = 0;
         int lineYcount = 0;
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
+            
+            if(bDrawSquares) line->get()->markDrawSquares();
+            else line->get()->markDrawText();
 
             //if(line->get()->isJustAnimating()){
             if(line->get()->getLineState() == Line::LINE_ADDED){
