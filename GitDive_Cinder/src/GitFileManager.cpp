@@ -43,6 +43,7 @@ void GitFileManager::updateFilesFromCommit(Commit &commit){
         
         //ITS NO USE
         //m_tRender->animLinesIn(file->getLines());
+        m_tRender->setLinesAnimatable();
     }
 }
 
