@@ -101,7 +101,7 @@ void TextRenderer::update(){
     //Start animation for freed line elements
     for(elem = freeElems.begin(); elem != freeElems.end(); ++elem){
         if(elem->get()->isJustFreed()){
-            //elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(0.0f, 1.0f, 1.0f), 2.0f);
+            elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(0.0f, 0.0f, 0.0f), 2.0f);
         }
     }
     
@@ -159,7 +159,7 @@ void TextRenderer::draw(){
     
     cinder::gl::pushMatrices();
     cinder::gl::scale(cinder::Vec2f(m_textZoom, m_textZoom));
-    cinder::gl::translate(m_textOffset);
+    
     vector< boost::shared_ptr<Line> > lines;
     
     if(m_targetFile) lines = m_targetFile->getLines();
@@ -167,7 +167,7 @@ void TextRenderer::draw(){
     
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
-            it->get()->draw(m_textureFont);
+            it->get()->draw(m_textureFont, m_textOffset);
         }
     }
     
@@ -176,7 +176,7 @@ void TextRenderer::draw(){
     if(freeLineElems.size()){
         //Draws the free-floating line elements
         for(int i = 0; i < freeLineElems.size(); i++){
-            freeLineElems[i]->draw(m_textureFont);
+            freeLineElems[i]->draw(m_textureFont, m_textOffset);
         }
     }
     
