@@ -62,6 +62,7 @@ void LineElementManager::update(){
     m_freeLineElements.erase(
                  std::remove_if(m_freeLineElements.begin(), m_freeLineElements.end(),
                                 [](const boost::shared_ptr<LineElement> elem) {
+                                    cout << (elem->markedForDeletion() && elem->isFloating) << endl;
                                     return (elem->markedForDeletion() && elem->isFloating);
                                 }),
                  m_freeLineElements.end());
