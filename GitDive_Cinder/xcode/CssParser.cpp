@@ -69,14 +69,8 @@ void CssParser::parseCss(vector<string> cssData){
             }
             
             if(key == CSS_BACKGROUND){
-                
-                if(find_first(line, "background-color")){
-                    bgcolour = parseColour(line);
-                    m_cssMap[CSS_BACKGROUND] = bgcolour;
-                } else if(find_first(line, "color")){
-                    colour = parseColour(line);
-                    m_cssMap["normal"] = colour;
-                }
+                if(find_first(line, "background-color")) m_cssMap[CSS_BACKGROUND] = parseColour(line);
+                else if(find_first(line, "color")) m_cssMap["normal"] = parseColour(line);
             }
         }
     }
