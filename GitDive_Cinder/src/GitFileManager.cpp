@@ -19,7 +19,7 @@ void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
     
     bool filterFile;
     
-    if( targetFile != ""){
+    if( targetFile.size() ){
         if(diff->getFileName() == targetFile){
             filterFile = true;
         } else {
