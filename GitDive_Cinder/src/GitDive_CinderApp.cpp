@@ -23,7 +23,7 @@ void GitDive_CinderApp::setup()
     
     m_timeSpeed = 20;
     bVizActive = false;
-    bDumpFiles = true;
+    bDumpFiles = false;
     bOutputSyntax = true;
     bOutputDifflog = false;
     bLoadCommits = true;
