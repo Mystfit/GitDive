@@ -62,6 +62,10 @@ public:
     
     void markAsAnimatable() { bIsAnimating = true; };
     bool isJustAnimating();
+    
+    void markDrawSquares(){ bDrawSquares = true; };
+    void markDrawText(){ bDrawSquares = false; };
+
 
     //String accessor. Returns recursive strings from line elements if present
     virtual std::string getStr();
