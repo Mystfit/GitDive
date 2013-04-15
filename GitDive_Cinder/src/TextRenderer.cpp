@@ -118,25 +118,28 @@ void TextRenderer::update(){
 
     if(lines.size()){
         float lineYtotal = 0;
+        int lineYcount = 0;
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
 
             //if(line->get()->isJustAnimating()){
             if(line->get()->getLineState() == Line::LINE_ADDED){
-                //if(line->get()->isJustAnimating()){
-                    //line->get()->setColour(cinder::Color::hex(m_cssColours->getColour("normal")));
-                    line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
-                    //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 0.2f);
-                //}
+            //if(line->get()->isJustAnimating()){
+                //line->get()->setColour(cinder::Color::hex(m_cssColours->getColour("normal")));
+                line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
+                lineYtotal += line->get()->getLinePos() * LINE_HEIGHT;
+                lineYcount++;
+
+                //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 0.2f);
+            //}
             } else if(line->get()->getLineState() == Line::LINE_NORMAL){
-                //if(line->get()->isJustAnimating()){
-                    //line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
-                    line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 0.2f);
-                //}
+            //if(line->get()->isJustAnimating()){
+                //line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
+                line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(1.0f, 1.0f, 1.0f), 0.2f);
+            //}
             }
         
         
             float lineY = line->get()->getLinePos() * LINE_HEIGHT;
-            lineYtotal += lineY;
         
             vector< boost::shared_ptr<LineElement> > lineElems = line->get()->getLineElements();
             
@@ -158,7 +161,7 @@ void TextRenderer::update(){
         //Update camera
         if(bCameraFollowing){
             cout << lineYtotal / lines.size() << endl;
-            cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineYtotal / lines.size() - 512);
+            cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineYtotal / lineYcount - 512);
             m_timeline->apply(&m_textOffset, camOffset, 1.0f);
         }
 
