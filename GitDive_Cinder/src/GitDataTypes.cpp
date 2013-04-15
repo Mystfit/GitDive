@@ -90,7 +90,7 @@ void Line::draw(cinder::gl::TextureFontRef & texFont){
             it->get()->draw(texFont);
         }
     } else {
-        TextAnimateable::draw(texFont);
+        draw(texFont);
         //texFont->drawString( getStr(), m_position);
     }
 }
