@@ -63,6 +63,7 @@ public:
     bool & getSyntaxHighlightStatus(){ return bUseSyntaxHighlighting; };
     void setSyntaxHighlightStatus(bool state){ bUseSyntaxHighlighting = state; };
     
+    
     //File display
     //------------
     
