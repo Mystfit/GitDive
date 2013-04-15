@@ -78,7 +78,6 @@ void LineElementManager::salvageLine( vector< boost::shared_ptr<LineElement> > l
         m_freeLineElements.back()->isFloating = true;        
         m_freeLineElements.back()->markAsFreed();
         m_freeLineElements.back()->markAsAnimatable();
-
     }
     
     lineElements.clear();
