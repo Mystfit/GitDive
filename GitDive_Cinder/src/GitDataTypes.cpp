@@ -45,7 +45,6 @@ Line::Line(string lineStr, bool justUpdated){
 }
 
 void Line::setPosition(cinder::Vec2f position){
-    //m_linePos = position;
     for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
         elem->get()->setPosition(cinder::Vec2f(position.x + (float)elem->get()->position * FONT_WIDTH, position.y));
     }
