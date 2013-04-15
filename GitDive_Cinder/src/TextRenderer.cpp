@@ -69,7 +69,7 @@ void TextRenderer::update(){
             
             for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
 
-                if(elem->get()->isJustCreated(){
+                if(elem->get()->isJustCreated()){
                     elem->get()->animIn(m_timeline, <#cinder::Vec2<float> destVec#>, <#cinder::Color destColour#>)
 
                 }
