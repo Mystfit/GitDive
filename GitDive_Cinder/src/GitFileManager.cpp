@@ -63,6 +63,8 @@ bool GitFileManager::applyNextDiff(){
     
     boost::shared_ptr<GitFile> file;
     
+    if m_commitIndex >= m_commitList.size()) return false;
+    
     Commit & currentCommit = m_commitList[m_commitIndex];
     
     //Get the next diff in the commit
