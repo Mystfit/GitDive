@@ -147,7 +147,11 @@ void TextRenderer::update(){
             //}
             
             //Update camera
-            if(bUse)
+            if(bCameraFollowing){
+                cinder::Vec2f camOffset(0.0f, line->get()->getLinePos() * LINE_HEIGHT)
+                m_timeline->apply(m_textOffset, <#T endValue#>, <#float duration#>)
+                m_textOffset
+            }
             
         }
     }
