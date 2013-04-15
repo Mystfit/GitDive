@@ -34,7 +34,7 @@ public:
     void mouseUp(MouseEvent event);
     void mouseWheel(MouseEvent event);
     void keyDown( KeyEvent event );
-    void keyUp(KeyEvent event){
+    void keyUp(KeyEvent event);
 	void update();
 	void draw();
     void resetView();
