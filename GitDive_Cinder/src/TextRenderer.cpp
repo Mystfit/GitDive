@@ -60,15 +60,13 @@ void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 
 
 void TextRenderer::breakLine(boost::shared_ptr<Line> line){
-    vector<boost::shared_ptr<LineElement> > lineElems = line->getLineElements();
-
-    for(vector<boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
-        elem->get()->markAsAnimatable();
-    }
-    
     m_lineManager->salvageLine(line->getLineElements());
     
-    if(line->getLineElements().size() == 0) line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0,0,0), 8.0f);
+    line->markAsAnimatable();
+    
+    if(line->getLineElements().size() == 0){
+        if(line->isJustAnimating()) line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0,0,0), 8.0f);
+    }
 }
 
 void TextRenderer::update(){
