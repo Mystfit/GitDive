@@ -160,7 +160,7 @@ void TextRenderer::update(){
         
         //Update camera
         if(bCameraFollowing){
-            cout << lineYtotal / lines.size() << endl;
+            cout << lineYtotal / lineYcount << endl;
             cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineYtotal / lineYcount - 512);
             m_timeline->apply(&m_textOffset, camOffset, 1.0f);
         }
