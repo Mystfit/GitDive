@@ -38,6 +38,8 @@ void TextAnimatable::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f of
     
     if(bDrawSquares) {
         texFont->getGlyphPlacements(str, cinder::gl::TextureFont::DrawOptions() );
+        
+        cinder::Vec2f rectSize = TextureFont::measureString(str);
 
         cinder::Rectf rect( cinder::Vec2f(m_position.ptr()->x,m_position.ptr()->y), cinder::Vec2f(0.0f,0.0f) );
         cinder::gl::drawSolidRect(rect);
