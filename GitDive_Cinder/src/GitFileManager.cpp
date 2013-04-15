@@ -124,6 +124,9 @@ void GitFileManager::reset(){
 }
 
 
+
+
+
 void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff, bool useSyntaxHighlighting){
     
     //Make a copy of the original lines
