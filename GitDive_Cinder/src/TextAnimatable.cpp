@@ -37,7 +37,6 @@ void TextAnimatable::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f of
     string str = getStr();
     
     if(bDrawSquares) {
-        cinder::Shape2d rect = cinder::Shape2d::quadTo(cinder::Vec2f(), cinder::Vec2f());
         gl::drawSolid(const class Shape2d &shape2d)
     }
 
