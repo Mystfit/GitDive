@@ -98,7 +98,7 @@ private:
     boost::shared_ptr<TextRenderer> m_tRender;
     boost::shared_ptr<LineFormatterManager> m_formatterManager;
     
-    int m_commitIndex;
+    int m_commitIndex, int m_diffIndex;
     bool bUseSyntaxHighlighting;
 };
 
