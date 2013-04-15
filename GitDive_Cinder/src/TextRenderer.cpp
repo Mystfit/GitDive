@@ -42,7 +42,7 @@ void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
 
 void TextRenderer::breakLine(boost::shared_ptr<Line> line){    
     m_lineManager->salvageLine(line->getLineElements());
-    line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0,0,0), 10.0f);
+    line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0,0,0), 8.0f);
 }
 
 void TextRenderer::update(){
