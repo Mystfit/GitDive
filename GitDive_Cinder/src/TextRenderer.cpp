@@ -61,7 +61,7 @@ void TextRenderer::setTextZoom(float zoom){
     m_textZoom += zoom;
 }
 
-void resetView(){
+void TextRenderer::resetView(){
     m_textZoom = 1.0f;
     
     m_timeline->apply(&m_textOffset, cinder::Vec2f(), 1.0f);
