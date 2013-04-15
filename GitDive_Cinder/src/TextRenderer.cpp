@@ -74,7 +74,7 @@ void TextRenderer::update(){
                 float elemX = (float)elem->get()->position * 8.5f;
 
                 if(elem->get()->isJustCreated()){
-                    elem->get()->animIn(m_timeline, cinder::Vec2f(0.0f, 0.0f), cinder::Color(255,255,255));//Replace with something better
+                    elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color(255,255,255));//Replace with something better
                 }
             }
         }
