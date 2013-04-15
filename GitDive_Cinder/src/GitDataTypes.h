@@ -41,7 +41,7 @@ public:
     
     string getStr();
     void applyCss(boost::shared_ptr<CssParser> cssParser);
-    void draw(cinder::gl::TextureFontRef & texFont);
+    void draw(cinder::gl::TextureFontRef & texFont, float yOffset);
     void update();
     
     //Sets the graphical position
