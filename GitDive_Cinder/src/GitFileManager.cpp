@@ -13,15 +13,14 @@ GitFileManager::GitFileManager(){
 }
 
 
-void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targetFile ){
+bool GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targetFile ){
 
     boost::shared_ptr<GitFile> file;
     
     //If the target file doesn't match the file in the diff, exit
     if( targetFile.size() ){
-        if(diff->getFileName() != targetFile) return;
+        if(diff->getFileName() != targetFile) return false;
     }
-
 
     if(diff->fileMode == Diff::FILEMODE_ADDED){
         file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
@@ -42,6 +41,8 @@ void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
             }
         }
     }
+    
+    return true;
 }
 
 
