@@ -59,10 +59,8 @@ void CssParser::parseCss(vector<string> cssData){
             erase_all(key, "\n");
 
         } else if(starts_with(line, "}")){
-            if(key != CSS_BACKGROUND){
-                insideBlock = false;
-                m_cssMap[key] = colour;
-            }
+            if(key != CSS_BACKGROUND) m_cssMap[key] = colour;
+            insideBlock = false;
         }
         
         if(insideBlock){
@@ -78,7 +76,6 @@ void CssParser::parseCss(vector<string> cssData){
                 } else if(find_first(line, "color")){
                     colour = parseColour(line);
                     m_cssMap["normal"] = colour;
-
                 }
             }
         }
