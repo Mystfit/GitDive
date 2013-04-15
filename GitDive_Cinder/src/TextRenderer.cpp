@@ -109,8 +109,8 @@ void TextRenderer::update(){
                 if(elem->get()->isJustAnimating()){
                     //Replace with something better
                     elem->get()->setColour(cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)));
-                    elem->get()->setPosition(cinder::Vec2f(elemX, lineY));
-                    //elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 5.0f);
+                    //elem->get()->setPosition(cinder::Vec2f(elemX, lineY));
+                    elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 2.0f + (rand() * ));
                 }
             }
         }
