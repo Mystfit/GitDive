@@ -160,7 +160,7 @@ void TextRenderer::update(){
         
         //Update camera
         if(bCameraFollowing){
-            ;;cinder::EaseInOutSine easer;
+            //cinder::EaseInOutSine easer;
             cinder::EaseOutElastic easer;
 
             if(lineYcount){
