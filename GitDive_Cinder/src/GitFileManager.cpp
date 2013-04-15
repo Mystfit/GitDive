@@ -78,10 +78,13 @@ bool GitFileManager::applyNextDiff(){
                     updateSingleFile(diff, m_trackedFile);
                     foundFile = true;
                 }
+                m_diffIndex++;
             }
+        } else {
+            updateSingleFile(diff, m_trackedFile);
+            m_diffIndex++;
         }
         
-        m_diffIndex++;
     } else {
         if(m_commitIndex < m_commitList.size()) {
             cout << "-->Out of diffs for this commit. Moving to next." << endl;
