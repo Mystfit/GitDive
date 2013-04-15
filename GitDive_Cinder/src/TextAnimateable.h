@@ -24,6 +24,8 @@ public:
     TextAnimateable();
     virtual void draw(cinder::gl::TextureFontRef & texFont);
     virtual void update();
+    
+    //
     virtual void applyCss(boost::shared_ptr<CssParser> cssParser);
     void applyCss(boost::shared_ptr<CssParser> cssParser, string key);
     virtual void animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour , float duration = 0.5f);
