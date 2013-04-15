@@ -53,6 +53,11 @@ void TextRenderer::setTextOffset(float increment){
 //    }
 }
 
+void TextRenderer::setTextZoom(float zoom){
+    m_textZoom += zoom;
+}
+
+
 
 
 void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
