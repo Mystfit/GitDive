@@ -153,6 +153,9 @@ void TextRenderer::update(){
             
             for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
                 
+                if(bDrawSquares) elem->get()->markDrawSquares();
+                else elem->get()->markDrawText();
+                
                 float elemX = (float)elem->get()->position * FONT_WIDTH;
                 
                 if(elem->get()->isJustAnimating()){
