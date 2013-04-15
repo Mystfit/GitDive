@@ -73,6 +73,12 @@ string Line::getStr(){
 }
 
 
+void Line::animIn( cinder::TimelineRef, cinder::Vec2<float> destVec, cinder::Color destColour , float duration){
+    
+}
+
+
+
 void Line::update(){
     for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
         it->get()->update();
