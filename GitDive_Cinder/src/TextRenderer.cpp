@@ -61,7 +61,7 @@ void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
 
 void TextRenderer::breakLine(boost::shared_ptr<Line> line){    
     m_lineManager->salvageLine(line->getLineElements());
-    line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0,0,0), 8.0f);
+    //line->animOut(m_timeline, cinder::Vec2f(0, line->getLinePos() * LINE_HEIGHT), cinder::Color(0,0,0), 8.0f);
 }
 
 void TextRenderer::update(){
@@ -73,7 +73,7 @@ void TextRenderer::update(){
     //Start animation for freed line elements
     for(elem = freeElems.begin(); elem != freeElems.end(); ++elem){
         if(elem->get()->isJustFreed()){
-            elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(255,255,0), 1.0f);
+            //elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(255,255,0), 1.0f);
         }
     }
     
