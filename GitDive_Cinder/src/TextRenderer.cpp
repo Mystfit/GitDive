@@ -150,6 +150,7 @@ void TextRenderer::update(){
             if(bCameraFollowing){
                 cinder::Anim<cinder::Vec2f> camOffset = cinder::Vec2f(0.0f, line->get()->getLinePos() * LINE_HEIGHT);
                 m_timeline->apply(&m_textOffset, camOffset, 1.0f);
+                m_timeline->apply(<#Anim<T> *target#>, <#T endValue#>, <#float duration#>)
                 
             }
             
