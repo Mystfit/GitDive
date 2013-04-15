@@ -28,8 +28,13 @@ void TextRenderer::setLinesAnimateable(){
     
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
-             for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
-             }
+            
+            line->get()->markAsAnimating();
+            vector< boost::shared_ptr<LineElement> > lineElems = line->get()->getLineElements();
+
+            for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
+                elem->get()->markAsAnimating();
+            }
         }
     }
 }

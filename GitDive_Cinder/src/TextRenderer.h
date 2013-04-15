@@ -34,6 +34,9 @@ public:
     //Texturefont reference for drawing text
     cinder::gl::TextureFontRef & getTexFont(){return m_textureFont; };
     
+    //Sets line flags to allow for animation
+    void setLinesAnimateable();
+    
     //Timeline reference for animation
     void setTimeline(cinder::TimelineRef timelineRef){ m_timeline = timelineRef; };
     
