@@ -73,7 +73,7 @@ void TextRenderer::update(){
     //Start animation for freed line elements
     for(elem = freeElems.begin(); elem != freeElems.end(); ++elem){
         if(elem->get()->isJustFreed()){
-            elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(70,70,70), 8.0f);
+            elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(70,70,70), 1.0f);
         }
     }
     
