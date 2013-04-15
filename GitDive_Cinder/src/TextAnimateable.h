@@ -48,7 +48,7 @@ public:
     void setColour(cinder::Color colour){m_colour = colour; };
     cinder::Vec2f getPosition(){ return m_position;};
     cinder::Color getColour(){ return m_colour;};
-    
+        
     //Gets line character positions based on index position
     static float getLinePositionFromIndex(int positionIndex){ return (float)positionIndex * 8.5f; };
     
@@ -57,6 +57,10 @@ public:
     
     void markAsCreated(){ bIsCreated = true; };
     bool isJustCreated();
+    
+    void markAsAnimating();
+    bool isJustAnimating();
+
     //String accessor. Returns recursive strings from line elements if present
     virtual std::string getStr();
     
@@ -66,6 +70,7 @@ protected:
     int m_life;
     bool bIsFree;
     bool bIsCreated;
+    bool bIsAnimating;
     
 private:
     cinder::Anim<cinder::Vec2f> m_position;
