@@ -74,9 +74,16 @@ bool GitFileManager::applyNextDiff(){
             bool foundFile;
             
             while(!foundFile){
+                if(m_diffIndex < currentCommit.getNumDiffs()){
+                }
+                
+                diff = currentCommit.getDiff(m_diffIndex);
+                
                 if(diff->getFileName() == m_trackedFile){
                     updateSingleFile(diff, m_trackedFile);
                     foundFile = true;
+                } else {
+                    diff = currentCommit.getDiff(m_diffIndex);
                 }
                 m_diffIndex++;
             }
