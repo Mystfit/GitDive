@@ -26,8 +26,6 @@ void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 
 }
 
-
-
 void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
     for(vector<boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
         if(it->get()->getLineState() == Line::LINE_ADDED){
