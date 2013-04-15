@@ -21,6 +21,8 @@ TextRenderer::TextRenderer(){
     m_cssColours->loadFile( cssPath + "/" + cssFile );
     m_backgroundColour = cinder::Color::hex(m_cssColours->getColour(CSS_BACKGROUND));
     cout << "BG:" << m_backgroundColour << endl;
+    
+    m_textZoom = 1.0f;
 }
 
 
