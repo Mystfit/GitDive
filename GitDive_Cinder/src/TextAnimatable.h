@@ -58,7 +58,7 @@ public:
     void markAsCreated(){ bIsCreated = true; };
     bool isJustCreated();
     
-    void markAsAnimatable() { bIsAnimatable = true;
+    void markAsAnimatable() { bIsAnimatable = true; };
     bool isJustAnimating();
 
     //String accessor. Returns recursive strings from line elements if present
