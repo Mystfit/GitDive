@@ -13,38 +13,39 @@ GitFileManager::GitFileManager(){
 }
 
 
-void GitFileManager::updateSingleFile(){
+void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targetFile ){
+
+    boost::shared_ptr<GitFile> file;
+
+    if(diff->fileMode == Diff::FILEMODE_ADDED){
+        file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
+        applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
+        m_fileList.push_back(file);
+    }
     
+    else if(diff->fileMode == Diff::FILEMODE_DELETED){
+        file = getFileByName(diff->getFileName());
+        file->setInactive();
+    }
+    
+    else if(diff->fileMode == Diff::FILEMODE_UPDATED){
+        file = getFileByName(diff->getFileName());
+        if(file){
+            if(file->active()){
+                applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
+            }
+        }
+    }
 }
 
 
 void GitFileManager::updateFilesFromCommit(Commit &commit){
     
-    boost::shared_ptr<GitFile> file;
     
     for(int i = 0; i < commit.getNumDiffs(); i++){
                 
         boost::shared_ptr<Diff> diff = commit.getDiff(i);
-                
-        if(diff->fileMode == Diff::FILEMODE_ADDED){
-            file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
-            applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
-            m_fileList.push_back(file);
-        }
-        
-        else if(diff->fileMode == Diff::FILEMODE_DELETED){
-            file = getFileByName(diff->getFileName());
-            file->setInactive();
-        }
-        
-        else if(diff->fileMode == Diff::FILEMODE_UPDATED){
-            file = getFileByName(diff->getFileName());
-            if(file){
-                if(file->active()){
-                    applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
-                }
-            }
-        }
+        updateSingleFile(diff);
         
         //ITS NO USE
         //m_tRender->animLinesIn(file->getLines());
@@ -77,25 +78,7 @@ bool GitFileManager::applyNextDiff(){
         if(m_trackedFile != ""){
             if(diff->getFileName() == m_trackedFile){
             
-                if(diff->fileMode == Diff::FILEMODE_ADDED){
-                    file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
-                    applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
-                    m_fileList.push_back(file);
-                }
-                
-                else if(diff->fileMode == Diff::FILEMODE_DELETED){
-                    file = getFileByName(diff->getFileName());
-                    file->setInactive();
-                }
-                
-                else if(diff->fileMode == Diff::FILEMODE_UPDATED){
-                    file = getFileByName(diff->getFileName());
-                    if(file){
-                        if(file->active()){
-                            applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
-                        }
-                    }
-                }
+                updateSingleFile(diff, m_trackedFile);
             }
         }
         
