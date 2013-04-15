@@ -46,17 +46,17 @@ void TextRenderer::makeLineFromFreeElements(boost::shared_ptr<Line> line){
 }
 
 
-void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
-    for(vector<boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
-        if(it->get()->getLineState() == Line::LINE_ADDED){
-            it->get()->applyCss(m_cssColours);
-            it->get()->setPosition(cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT));
-            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
-        } else if(it->get()->getLineState() == Line::LINE_NORMAL){
-            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
-        }
-    }
-}
+//void TextRenderer::animLinesIn(vector<boost::shared_ptr<Line> > lines){
+//    for(vector<boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
+//        if(it->get()->getLineState() == Line::LINE_ADDED){
+//            it->get()->applyCss(m_cssColours);
+//            it->get()->setPosition(cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT));
+//            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
+//        } else if(it->get()->getLineState() == Line::LINE_NORMAL){
+//            it->get()->animIn(m_timeline, cinder::Vec2f(0, it->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255));
+//        }
+//    }
+//}
 
 
 void TextRenderer::breakLine(boost::shared_ptr<Line> line){
@@ -73,7 +73,7 @@ void TextRenderer::update(){
     //Start animation for freed line elements
     for(elem = freeElems.begin(); elem != freeElems.end(); ++elem){
         if(elem->get()->isJustFreed()){
-            elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(70,70,70), 1.0f);
+            elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(0,255,255), 2.0f);
         }
     }
     
