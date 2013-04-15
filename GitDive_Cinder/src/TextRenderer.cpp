@@ -72,9 +72,10 @@ void TextRenderer::update(){
             for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
                 
                 float elemX = (float)elem->get()->position * 8.5f;
-
+                
                 if(elem->get()->isJustCreated()){
-                    elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)));//Replace with something better
+                    //Replace with something better
+                    elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)));
                 }
             }
         }
