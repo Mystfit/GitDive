@@ -37,7 +37,8 @@ void TextAnimatable::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f of
     string str = getStr();
     
     if(bDrawSquares) {
-        cinder::gl::drawr
+        cinder::Rectf rect(cinder::Vec2f(), cinder::Vec2f());
+        cinder::gl::drawSolidRect(rect);
     }
 
     texFont->drawString( str, cinder::Vec2f(m_position.ptr()->x, m_position.ptr()->y + offset.y));
