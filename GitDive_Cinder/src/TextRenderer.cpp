@@ -22,18 +22,18 @@ TextRenderer::TextRenderer(){
 }
 
 
-void TextRenderer::setLinesAnimateable(){
+void TextRenderer::setLinesanimatable(){
     vector< boost::shared_ptr<Line> > lines;
     if(m_targetFile) lines = m_targetFile->getLines();
     
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
             
-            line->get()->markAsAnimateable();
+            line->get()->markAsanimatable();
             vector< boost::shared_ptr<LineElement> > lineElems = line->get()->getLineElements();
 
             for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
-                elem->get()->markAsAnimateable();
+                elem->get()->markAsanimatable();
             }
         }
     }

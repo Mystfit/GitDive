@@ -14,7 +14,7 @@
 #include <sstream>
 #include <boost/shared_ptr.hpp>
 #include "Utils.h"
-#include "TextAnimateable.h"
+#include "Textanimatable.h"
 
 using namespace std;
 
@@ -23,7 +23,7 @@ using namespace std;
  * A single line
  */
 
-class LineElement : public TextAnimateable {
+class LineElement : public Textanimatable {
 public:
     LineElement(string element = "normal", string elemStr = "", int pos = 0);
     void applyCss(boost::shared_ptr<CssParser> cssParser);
@@ -34,7 +34,7 @@ public:
     bool isFloating;
 };
 
-class Line : public TextAnimateable {
+class Line : public Textanimatable {
 public:
     
     Line(string lineStr, bool justUpdated = false);

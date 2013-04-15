@@ -1,13 +1,13 @@
 //
-//  TextAnimateable.h
+//  Textanimatable.h
 //  GitDive_Cinder
 //
 //  Created by Byron Mallett on 8/04/13.
 //
 //
 
-#ifndef __GitDive_Cinder__TextAnimateable__
-#define __GitDive_Cinder__TextAnimateable__
+#ifndef __GitDive_Cinder__Textanimatable__
+#define __GitDive_Cinder__Textanimatable__
 
 #define MAX_LIFE 500
 
@@ -20,9 +20,9 @@
 #include "CssParser.h"
 //#include "TextRenderer.h"
 
-class TextAnimateable {
+class Textanimatable {
 public:
-    TextAnimateable();
+    Textanimatable();
     virtual void draw(cinder::gl::TextureFontRef & texFont);
     virtual void update();
     
@@ -58,7 +58,7 @@ public:
     void markAsCreated(){ bIsCreated = true; };
     bool isJustCreated();
     
-    void markAsAnimateable();
+    void markAsanimatable();
     bool isJustAnimating();
 
     //String accessor. Returns recursive strings from line elements if present
@@ -79,4 +79,4 @@ private:
     cinder::TweenRef<cinder::Color> m_colourTween;
 };
 
-#endif /* defined(__GitDive_Cinder__TextAnimateable__) */
+#endif /* defined(__GitDive_Cinder__Textanimatable__) */
