@@ -70,7 +70,7 @@ public:
     
     //The formatter manager needs to be targetting a line before doing syntax parsing
     void setTargetLine(boost::shared_ptr<Line> target);
-    void syntaxParseLines(vector< boost::shared_ptr<Line> > lines, string lang, boost::shared_ptr<LineFormatterManager> formatterManager);
+    void syntaxParseLines(vector< boost::shared_ptr<Line> > lines, string lang);
 
 
 private:
