@@ -10,6 +10,7 @@
 
 GitFileManager::GitFileManager(){
     m_commitIndex = 0;
+    m_diffIndex = 0;
 }
 
 
@@ -105,11 +106,15 @@ bool GitFileManager::applyNextCommit(){
             boost::shared_ptr<Diff> diff = m_commitList[m_commitIndex].getDiff(i);
             updateSingleFile(diff);
             
+            m_diffIndex++;
+            
             //ITS NO USE
             //m_tRender->animLinesIn(file->getLines());
             //m_tRender->setLinesAnimatable();
         }
+        m_diffIndex = 0;
         m_commitIndex++;
+        
         return true;
     }
     
