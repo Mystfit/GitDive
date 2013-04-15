@@ -31,7 +31,7 @@ void TextAnimatable::applyCss(boost::shared_ptr<CssParser> cssParser, string key
 }
 
 
-void TextAnimatable::draw(cinder::gl::TextureFontRef & texFont){
+void TextAnimatable::draw(cinder::gl::TextureFontRef & texFont, float yOffset){
     cinder::gl::color( m_colour );
     string str = getStr();
 
