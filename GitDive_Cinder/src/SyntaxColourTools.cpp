@@ -8,7 +8,9 @@
 
 #include "SyntaxColourTools.h"
 
-
+/*
+ * DEPRECEATED - Syntax listenener functions 
+ */
 SyntaxColourListener::SyntaxColourListener(){
 }
 
@@ -53,6 +55,12 @@ void SyntaxColourListener::notify(const srchilite::HighlightEvent &event){
 }
 
 
+
+
+
+/*
+ * Line Manager functions
+ */
 LineFormatterManager::LineFormatterManager(boost::shared_ptr<LineElementManager> elemManager) : FormatterManager(boost::shared_ptr<LineFormatter>() )
 {
     m_lineElementManger = elemManager;
@@ -78,6 +86,37 @@ FormatterPtr LineFormatterManager::getFormatter(const std::string &elem) const{
 }
 
 
+void LineFormatterManager::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, string lang, boost::shared_ptr<LineFormatterManager> formatterManager){
+    
+    //Set up highlighter based on language
+    srchilite::RegexRuleFactory ruleFactory;
+    srchilite::LangDefManager langDefManager(&ruleFactory);
+    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, lang));
+    
+    //Set up formatters to modify our lines
+    highlighter.setFormatterManager(formatterManager.get());
+    
+    //Set up params to hold the element position from the start of the line
+    srchilite::FormatterParams params;
+    highlighter.setFormatterParams(&params);
+    
+    //Iterate over the lines and highlight as we go. The formatter needs to follow along with the current line target at the same time
+    for(int i = 0; i < lines.size(); i++){
+        if(lines[i]->getLineState() == Line::LINE_ADDED){
+            params.start = 0;
+            formatterManager->setTargetLine(lines[i]);
+            highlighter.highlightParagraph(lines[i]->getStr());
+        }
+    }
+}
+
+
+
+
+
+/*
+ * Line formatter functions
+ */
 void LineFormatter::format(const std::string &s, const srchilite::FormatterParams *params) {
     
     if(elem == "") elem = "normal";
@@ -100,29 +139,4 @@ string LineFormatter::getFileLangType(string filename){
     if (lang == "") lang = inputLang;
     
     return lang;
-}
-
-
-void LineFormatter::syntaxParseLines(vector<boost::shared_ptr<Line> > lines, string lang, boost::shared_ptr<LineFormatterManager> formatterManager){
-    
-    //Set up highlighter based on language
-    srchilite::RegexRuleFactory ruleFactory;
-    srchilite::LangDefManager langDefManager(&ruleFactory);
-    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, lang));
-    
-    //Set up formatters to modify our lines
-    highlighter.setFormatterManager(formatterManager.get());
-    
-    //Set up params to hold the element position from the start of the line
-    srchilite::FormatterParams params;
-    highlighter.setFormatterParams(&params);
-    
-    //Iterate over the lines and highlight as we go. The formatter needs to follow along with the current line target at the same time
-    for(int i = 0; i < lines.size(); i++){
-        if(lines[i]->getLineState() == Line::LINE_ADDED){
-            params.start = 0;
-            formatterManager->setTargetLine(lines[i]);
-            highlighter.highlightParagraph(lines[i]->getStr());
-        }
-    }
 }
