@@ -71,7 +71,6 @@ void TextRenderer::update(){
 
                 if(elem->get()->isJustCreated()){
                     elem->get()->animIn(m_timeline, cinder::Vec2<float> destVec(0.0f, 0.0f), cinder::Color destColour(255,255,255));//Replace with something better
-
                 }
             }
         }
