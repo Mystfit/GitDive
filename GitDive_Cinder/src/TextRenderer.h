@@ -81,7 +81,8 @@ private:
     cinder::Anim<cinder::Vec2f> m_textOffset;
     boost::shared_ptr<CssParser> m_cssColours;
     cinder::Color m_backgroundColour;
-    bool bCameraFollowing;
+    bool bCameraFollowing, bDrawSquares;
+;
 };
 
 #endif /* defined(__GitDive_Cinder__TextRenderer__) */
