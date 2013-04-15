@@ -24,7 +24,7 @@ void GitDive_CinderApp::setup()
     m_timeSpeed = 20;
     bVizActive = false;
     bDumpFiles = false;
-    bOutputSyntax = true;
+    bOutputSyntax = false;
     bOutputDifflog = false;
     bLoadCommits = true;
     
@@ -39,7 +39,7 @@ void GitDive_CinderApp::setup()
     boost::shared_ptr<LineFormatterManager> formatterManager(new LineFormatterManager(lineElementManager ));
     fManager.setFormatterManager(formatterManager);
     fManager.setTextRenderer(tRender);
-    fManager.setSyntaxHighlightStatus(false);
+    fManager.setSyntaxHighlightStatus(true);
 }
 
 
