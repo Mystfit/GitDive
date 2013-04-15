@@ -41,7 +41,7 @@ public:
     void setTimeline(cinder::TimelineRef timelineRef){ m_timeline = timelineRef; };
     
     //Sets the position of the file on the screen
-    void setTextOffset(float ){m_textOffset = position;};
+    void setTextOffset(float increment);
     void setScrollVelocity(cinder::Vec2f velocity){m_scrollVelocity = velocity; };
     void setTextZoom(float zoom){m_textZoom = zoom; };
     
