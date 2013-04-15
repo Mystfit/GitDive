@@ -33,7 +33,6 @@ public:
     
     //File addition/retrieval
     //-----------------------
-    void updateFilesFromCommit(Commit &commit);
     void addFile(boost::shared_ptr<GitFile> file){ m_fileList.push_back(file); };
 
     boost::shared_ptr<GitFile> getFileByIndex(int index){ return m_fileList[index]; };
