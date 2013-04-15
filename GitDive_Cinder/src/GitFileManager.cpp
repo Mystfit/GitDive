@@ -16,6 +16,10 @@ GitFileManager::GitFileManager(){
 void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targetFile ){
 
     boost::shared_ptr<GitFile> file;
+    
+    if(targetFile != ""){
+        file = getFileByName(targetFile);
+    }
 
     if(diff->fileMode == Diff::FILEMODE_ADDED){
         file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
@@ -29,11 +33,6 @@ void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
     }
     
     else if(diff->fileMode == Diff::FILEMODE_UPDATED){
-        
-        if(targetFile != ""){
-            file = getFileByName(targetFile);
-        }
-        
         file = getFileByName(diff->getFileName());
         if(file){
             if(file->active()){
