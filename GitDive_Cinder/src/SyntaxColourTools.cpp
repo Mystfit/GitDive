@@ -129,7 +129,7 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
     if(!m_targetLine){
         cout << "IT'S NO USE" << endl;
     }
-    m_targetLine->addLineElement(newElem);
+    m_lineElemManager->addLineElement(newElem);
 }
 
 
