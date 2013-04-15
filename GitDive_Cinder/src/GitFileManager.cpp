@@ -92,22 +92,18 @@ bool GitFileManager::applyNextDiff(){
         m_diffIndex++;
     } else {
         if(m_commitIndex < m_commitList.size()) {
+            m_diffIndex = 0;
             m_commitIndex++;
         } else {
-            return true;
+            return false;
         }
     }
     
-    
-    
+    return true;
     
     //ITS NO USE
     //m_tRender->animLinesIn(file->getLines());
     //m_tRender->setLinesAnimatable();
-    
-
-    
-    
 }
 
 
