@@ -64,6 +64,7 @@ bool GitFileManager::applyNextDiff(){
     boost::shared_ptr<GitFile> file;
         
     if(m_commitIndex >= m_commitList.size()) return false;
+    cout << m_commitIndex << endl
     
     Commit & currentCommit = m_commitList[m_commitIndex];
     
