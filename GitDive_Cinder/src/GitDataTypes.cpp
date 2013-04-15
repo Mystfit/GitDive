@@ -20,7 +20,7 @@ LineElement::LineElement(string element, string elemStr, int pos){
 }
 
 void LineElement::applyCss(boost::shared_ptr<CssParser> cssParser){
-    Textanimatable::applyCss(cssParser, elem);
+    TextAnimatable::applyCss(cssParser, elem);
 }
 
 
@@ -46,9 +46,9 @@ Line::Line(string lineStr, bool justUpdated){
 
 
 void Line::setPosition(cinder::Vec2f position){
-    Textanimatable::setPosition(position);
+    TextAnimatable::setPosition(position);
     for(vector< boost::shared_ptr<LineElement> >::iterator elem = m_lineElements.begin(); elem != m_lineElements.end(); ++elem){
-        elem->get()->setPosition(cinder::Vec2f(position.x + Textanimatable::getLinePositionFromIndex(elem->get()->position) , position.y));
+        elem->get()->setPosition(cinder::Vec2f(position.x + TextAnimatable::getLinePositionFromIndex(elem->get()->position) , position.y));
     }
 }
 
@@ -57,7 +57,7 @@ void Line::setPosition(cinder::Vec2f position){
 
 void Line::applyCss(boost::shared_ptr<CssParser> cssParser){
     for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
-        it->get()->Textanimatable::applyCss(cssParser, it->get()->elem);
+        it->get()->TextAnimatable::applyCss(cssParser, it->get()->elem);
     }
 }
 
@@ -101,7 +101,7 @@ void Line::draw(cinder::gl::TextureFontRef & texFont){
             it->get()->draw(texFont);
         }
     } else {
-        Textanimatable::draw(texFont);
+        TextAnimatable::draw(texFont);
         //texFont->drawString( getStr(), m_position);
     }
 }

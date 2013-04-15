@@ -22,7 +22,7 @@ TextRenderer::TextRenderer(){
 }
 
 
-void TextRenderer::setLinesanimatable(){
+void TextRenderer::setLinesAnimatable(){
     vector< boost::shared_ptr<Line> > lines;
     if(m_targetFile) lines = m_targetFile->getLines();
     
