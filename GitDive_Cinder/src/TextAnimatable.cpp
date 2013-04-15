@@ -37,11 +37,12 @@ void TextAnimatable::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f of
     string str = getStr();
     
     if(bDrawSquares) {
+        texFont->getGlyphPlacements(str, cinder::gl::TextureFont::DrawOptions()
+
         cinder::Rectf rect( cinder::Vec2f(0.0f,0.0f), cinder::Vec2f(0.0f,0.0f) );
         cinder::gl::drawSolidRect(rect);
     }
     
-    texFont->getGlyphPlacements(<#const std::string &str#>, cinder::gl::TextureFont::DrawOptions()
 
     texFont->drawString( str, cinder::Vec2f(m_position.ptr()->x, m_position.ptr()->y + offset.y));
 }
