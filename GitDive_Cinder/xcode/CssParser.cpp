@@ -63,12 +63,12 @@ void CssParser::parseCss(vector<string> cssData){
         
         if(insideBlock){
             if(find_first(line, "color")){
-                colour = parseColour(line, colour);
+                colour = parseColour(line);
                 cout << "LOADED ELEM:" << key << " COLOUR:" << colourStr.str() << endl;
             }
             
             if(key == CSS_BACKGROUND && find_first(line, "background-color")){
-                colour = parseColour(line, colour);
+                colour = parseColour(line);
             }
         }
     }
