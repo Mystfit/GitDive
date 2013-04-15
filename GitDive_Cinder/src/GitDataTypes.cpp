@@ -44,6 +44,14 @@ Line::Line(string lineStr, bool justUpdated){
     if(!justUpdated) m_lineStr.erase(0,1);
 }
 
+void Line::setPosition(cinder::Vec2f position){
+    m_linePos = linePos;
+    for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
+    }
+    
+        
+}
+
 
 void Line::applyCss(boost::shared_ptr<CssParser> cssParser){
     for(std::vector< boost::shared_ptr<LineElement> >::iterator it = m_lineElements.begin(); it != m_lineElements.end(); ++it){
