@@ -41,7 +41,7 @@ void TextAnimatable::draw(cinder::gl::TextureFontRef & texFont, cinder::Vec2f of
         
         cinder::Vec2f rectSize = texFont->measureString(str);
 
-        cinder::Rectf rect( cinder::Vec2f(m_position.ptr()->x,m_position.ptr()->y), cinder::Vec2f(0.0f,0.0f) );
+        cinder::Rectf rect( cinder::Vec2f(m_position.ptr()->x,m_position.ptr()->y), rectSize );
         cinder::gl::drawSolidRect(rect);
     } else {
         texFont->drawString( str, cinder::Vec2f(m_position.ptr()->x, m_position.ptr()->y + offset.y));
