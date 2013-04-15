@@ -26,9 +26,7 @@ void TextAnimateable::applyCss(boost::shared_ptr<CssParser> cssParser, string ke
 
 
 void TextAnimateable::draw(cinder::gl::TextureFontRef & texFont){
-    //cinder::gl::color( m_colour );
-    cinder::gl::color( 255,255,255 );
-
+    cinder::gl::color( m_colour );
     string str = getStr();
 
     texFont->drawString( str, m_position);
