@@ -45,6 +45,10 @@ public:
     void draw(cinder::gl::TextureFontRef & texFont);
     void update();
     
+    //Sets the graphical position
+    void setPosition(cinder::Vec2f position);
+    
+    //Sets the line index position (character spacing for elements)
     int getLinePos(){ return m_linePos; };
     void setLinePos(int linePos){ m_linePos = linePos; };
     
