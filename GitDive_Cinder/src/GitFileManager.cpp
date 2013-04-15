@@ -71,8 +71,13 @@ bool GitFileManager::applyNextDiff(){
         boost::shared_ptr<Diff> diff = currentCommit.getDiff(m_diffIndex);
         
         if(m_trackedFile != ""){
-            if(diff->getFileName() == m_trackedFile){
-                updateSingleFile(diff, m_trackedFile);
+            bool foundFile;
+            
+            while(!foundFile){
+                if(diff->getFileName() == m_trackedFile){
+                    updateSingleFile(diff, m_trackedFile);
+                    foundFile = true;
+                }
             }
         }
         
