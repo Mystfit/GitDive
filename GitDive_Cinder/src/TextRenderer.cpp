@@ -19,7 +19,7 @@ TextRenderer::TextRenderer(){
     string cssFile = "sh_golden.css";
     m_cssColours = boost::shared_ptr<CssParser>(new CssParser());
     m_cssColours->loadFile( cssPath + "/" + cssFile );
-    m_backgroundColour = m_cssColours->getColour(CSS_BACKGROUND);
+    m_backgroundColour = cinder::color::hex(m_cssColours->getColour(CSS_BACKGROUND));
 }
 
 
