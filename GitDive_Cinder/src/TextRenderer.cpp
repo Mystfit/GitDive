@@ -110,7 +110,7 @@ void TextRenderer::update(){
                     //Replace with something better
                     //elem->get()->setColour(cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)));
                     //elem->get()->setPosition(cinder::Vec2f(elemX, lineY));
-                    cout << m_cssColours->getColour(elem->get()->elem) << endl;
+                    cout << cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)) << endl;
                     elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 2.0f + ((float)rand()/(float)RAND_MAX) * 0.5f );
                 }
             }
