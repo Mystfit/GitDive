@@ -23,7 +23,7 @@
 		4A363C18170F1C6700F6371D /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A363C17170F1C6600F6371D /* libboost_iostreams.a */; };
 		4A9504E0171968CB000A67E1 /* LineElementManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A9504DE171968CB000A67E1 /* LineElementManager.cpp */; };
 		4AB896D917129B8900533992 /* TextRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AB896D717129B8900533992 /* TextRenderer.cpp */; };
-		4AB896DD1712B84900533992 /* TextAnimateable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AB896DB1712B84900533992 /* TextAnimateable.cpp */; };
+		4AB896DD1712B84900533992 /* TextAnimatable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AB896DB1712B84900533992 /* TextAnimatable.cpp */; };
 		4ABFC143171412B600791CC0 /* CssParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ABFC141171412B600791CC0 /* CssParser.cpp */; };
 		4AD7492117097505006ACBC6 /* GitFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7491F17097505006ACBC6 /* GitFileManager.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
@@ -74,7 +74,7 @@
 		4AB896D717129B8900533992 /* TextRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextRenderer.cpp; path = ../src/TextRenderer.cpp; sourceTree = "<group>"; };
 		4AB896D817129B8900533992 /* TextRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextRenderer.h; path = ../src/TextRenderer.h; sourceTree = "<group>"; };
 		4AB896DA1712B04700533992 /* Resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
-		4AB896DB1712B84900533992 /* TextAnimateable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextAnimateable.cpp; path = ../src/TextAnimateable.cpp; sourceTree = "<group>"; };
+		4AB896DB1712B84900533992 /* TextAnimatable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextAnimatable.cpp; path = ../src/TextAnimatable.cpp; sourceTree = "<group>"; };
 		4AB896DC1712B84900533992 /* TextAnimatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextAnimatable.h; path = ../src/TextAnimatable.h; sourceTree = "<group>"; };
 		4ABFC141171412B600791CC0 /* CssParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CssParser.cpp; sourceTree = "<group>"; };
 		4ABFC142171412B600791CC0 /* CssParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CssParser.h; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				4A1253FA170FF90000DE28C9 /* SyntaxColourTools.cpp */,
 				4ABFC141171412B600791CC0 /* CssParser.cpp */,
 				4A1A6B7F17054D940046BE09 /* Utils.cpp */,
-				4AB896DB1712B84900533992 /* TextAnimateable.cpp */,
+				4AB896DB1712B84900533992 /* TextAnimatable.cpp */,
 				4AB896D717129B8900533992 /* TextRenderer.cpp */,
 			);
 			name = Source;
@@ -274,7 +274,7 @@
 			files = (
 				00BAE65A0E7ED9C10018A608 /* GitDive_CinderApp.cpp in Sources */,
 				4A1A6B8117054D940046BE09 /* Utils.cpp in Sources */,
-				4AB896DD1712B84900533992 /* TextAnimateable.cpp in Sources */,
+				4AB896DD1712B84900533992 /* TextAnimatable.cpp in Sources */,
 				4A1A6BC91705A5880046BE09 /* GitDataTypes.cpp in Sources */,
 				4A1A6BCC1705AAE60046BE09 /* GitLogParser.cpp in Sources */,
 				4AD7492117097505006ACBC6 /* GitFileManager.cpp in Sources */,
