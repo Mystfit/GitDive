@@ -109,8 +109,8 @@ void GitDive_CinderApp::jumpToEnd(){
 }
 
 
-void mouseWheel(MouseEvent event){
-    
+void GitDive_CinderApp::mouseWheel(MouseEvent event){
+    tRender->setTextOffset(event.getWheelIncrement());
 }
 
 
