@@ -9,7 +9,7 @@
 #include "TextAnimatable.h"
 
 TextAnimatable::TextAnimatable(){
-    m_colour = cinder::Color(255,255,255);
+    m_colour = cinder::Color(0,0,0);
     m_life = 0;
     markAsCreated();
 }
