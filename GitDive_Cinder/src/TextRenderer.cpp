@@ -57,10 +57,22 @@ void TextRenderer::update(){
         }
     }
     
+    
+    //Start animation for all line elements
+    vector< boost::shared_ptr<Line> > lines;
+    if(m_targetFile) lines = m_targetFile->getLines();
+
     if(lines.size()){
-        for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
-            if(it->get()->isJustCreated()){
-                it->get()->animIn(m_timeline, <#cinder::Vec2<float> destVec#>, <#cinder::Color destColour#>)
+        for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
+            
+            vector< boost::shared_ptr<LineElement> > lineElems = line->get()->getLineElements();
+            
+            for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
+
+                if(elem->get()->isJustCreated(){
+                    elem->get()->animIn(m_timeline, <#cinder::Vec2<float> destVec#>, <#cinder::Color destColour#>)
+
+                }
             }
         }
     }
