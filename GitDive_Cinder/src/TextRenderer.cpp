@@ -160,14 +160,14 @@ void TextRenderer::update(){
         
         //Update camera
         if(bCameraFollowing){
-            cinder::EaseInOutSine easer;
-            //cinder::EaseInOutElastic easer(1.0f, 2.0f);
+            //cinder::EaseInOutSine easer;
+            cinder::EaseInOutElastic easer(1.0f, 2.0f);
 
             if(lineYcount){
                 cout << "Total:" << lineYtotal << " Count:" << lineYcount << endl;
                 cout << lineYtotal / lineYcount - (lines.size() * LINE_HEIGHT * 0.5) << endl;
                 cinder::Vec2f camOffset = cinder::Vec2f(0.0f, (lineYtotal / lineYcount - (lines.size() * LINE_HEIGHT * 0.5)) * -1.0f);
-                m_timeline->apply(&m_textOffset, camOffset, 1.0f);
+                m_timeline->apply(&m_textOffset, camOffset, 1.0f, easer);
             }   
         }
 
