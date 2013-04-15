@@ -51,7 +51,7 @@ void TextRenderer::update(){
     vector< boost::shared_ptr<LineElement> >::iterator elem;
     
     for(elem = freeElems.begin(); elem != freeElems.end(); ++elem){
-        if(elem->isJustFreed()){
+        if(elem->get()->isJustFreed()){
             elem->get()->animOut(m_timeline, elem->get()->getPosition(), cinder::Color(0,0,0), 10.0f);
         }
     }
