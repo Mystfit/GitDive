@@ -42,7 +42,6 @@ public:
     
     //Sets the position of the file on the screen
     void setTextOffset(float increment);
-    void setScrollVelocity(cinder::Vec2f velocity){m_scrollVelocity = velocity; };
     void setTextZoom(float zoom){m_textZoom = zoom; };
     
     //Starts tracking a line for rendering
