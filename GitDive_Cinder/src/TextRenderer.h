@@ -58,7 +58,7 @@ public:
     void animLinesIn(vector<boost::shared_ptr<Line> > lines);
     
     //Gets line character positions based on index position
-    float getLinePositionFromIndex(int positionIndex){ return (float)positionIndex * 8.5f; };
+    static float getLinePositionFromIndex(int positionIndex){ return (float)positionIndex * 8.5f; };
     
 private:        
     boost::shared_ptr<GitFile> m_targetFile;
