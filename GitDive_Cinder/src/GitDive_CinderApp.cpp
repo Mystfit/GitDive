@@ -77,7 +77,7 @@ void GitDive_CinderApp::setViewedFile(){
 void GitDive_CinderApp::setTrackedFile(){
     boost::shared_ptr<GitFile> file = fManager.getFileByName(m_targetTrackedFile);
     if(file) tRender->setTargetFile(file);
-    fManager->setTrackedFile(m_targetTrackedFile);
+    fManager.setTrackedFile(m_targetTrackedFile);
 }
 
 
