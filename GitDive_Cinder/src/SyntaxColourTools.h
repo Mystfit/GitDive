@@ -70,6 +70,8 @@ public:
     
     //The formatter manager needs to be targetting a line before doing syntax parsing
     void setTargetLine(boost::shared_ptr<Line> target);
+    void syntaxParseLines(vector< boost::shared_ptr<Line> > lines, string lang, boost::shared_ptr<LineFormatterManager> formatterManager);
+
 
 private:
     mutable FormatterMap formatterMap;
@@ -91,7 +93,6 @@ public:
     void setTargetLine(boost::shared_ptr<Line> line){m_targetLine = line; };
     void format(const std::string &s, const srchilite::FormatterParams *params = 0);
     static string getFileLangType(string filename);
-    static void syntaxParseLines(vector< boost::shared_ptr<Line> > lines, string lang, boost::shared_ptr<LineFormatterManager> formatterManager);
 
 private:
     boost::shared_ptr<Line> m_targetLine;
