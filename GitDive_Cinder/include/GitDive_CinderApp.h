@@ -54,6 +54,10 @@ public:
     string m_diffLogPath, m_fileDir, m_fileOutput;
 
     bool bVizActive, bOutputSyntax, bDumpFiles, bOutputDifflog, bFframeReady, bLoadCommits, bFileActive;
+    
+    //Input variables
+    bool bIsMouseDown, bIsSpaceDown;
+    
     int m_timeSpeed, m_lastFrame;
 };
 
