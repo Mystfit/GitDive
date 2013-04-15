@@ -53,7 +53,6 @@ public:
     bool applyNextDiff();
     
     
-    
     //File modification
     //-----------------
     
