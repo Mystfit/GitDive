@@ -60,6 +60,8 @@ public:
     //Animate lines into position
     void animLinesIn(vector<boost::shared_ptr<Line> > lines);
     
+    boost::shared_ptr<GitFile> getTargetFile(){ return m_targetFile; };
+    
 private:        
     boost::shared_ptr<GitFile> m_targetFile;
     boost::shared_ptr<LineElementManager> m_lineManager;
