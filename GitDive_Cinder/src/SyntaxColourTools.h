@@ -87,7 +87,7 @@ private:
 class LineFormatter: public srchilite::Formatter
 {    
 public:
-    LineFormatter(boost::shared_ptr<LineElementManager> elemManager, const std::string &elem_ = "", boost::shared_ptr<Line> line = boost::shared_ptr<Line>() ) : m_lineElemManager(elemManager), elem(elem_) {};
+    LineFormatter(boost::shared_ptr<LineElementManager> elemManager, const std::string &elem_ = "" ) : m_lineElemManager(elemManager), elem(elem_) {};
     void setTargetLine(boost::shared_ptr<Line> line){m_targetLine = line; };
     void format(const std::string &s, const srchilite::FormatterParams *params = 0);
     static string getFileLangType(string filename);
