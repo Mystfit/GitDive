@@ -45,7 +45,10 @@ public:
     void draw(cinder::gl::TextureFontRef & texFont);
     void update();
     
+    //Coordinates of line
     void setPosition(cinder::Vec2f position);
+    
+    //Line character positions
     int getLinePos(){ return m_linePos; };
     void setLinePos(int linePos){ m_linePos = linePos; };
     
