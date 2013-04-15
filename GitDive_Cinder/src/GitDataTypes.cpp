@@ -48,10 +48,12 @@ Line::Line(string lineStr, bool justUpdated){
 void Line::setPosition(cinder::Vec2f position){
     TextAnimatable::setPosition(position);
     for(vector< boost::shared_ptr<LineElement> >::iterator elem = m_lineElements.begin(); elem != m_lineElements.end(); ++elem){
-        float randOffsetX = ((float)rand()/(float)RAND_MAX) * 20.0f - 10.0f ;
-        float randOffsetY = ((float)rand()/(float)RAND_MAX) * 20.0f - 10.0f ;
+        if(elem->get()->isJustCreated()){
+            float randOffsetX = ((float)rand()/(float)RAND_MAX) * 20.0f - 10.0f ;
+            float randOffsetY = ((float)rand()/(float)RAND_MAX) * 20.0f - 10.0f ;
 
-        elem->get()->setPosition(cinder::Vec2f(randOffsetX + position.x + TextAnimatable::getLinePositionFromIndex(elem->get()->position) , randOffsetY + position.y));
+            elem->get()->setPosition(cinder::Vec2f(randOffsetX + position.x + TextAnimatable::getLinePositionFromIndex(elem->get()->position) , randOffsetY + position.y));
+        }
     }
 }
 
