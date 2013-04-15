@@ -75,8 +75,9 @@ void LineElementManager::salvageLine( vector< boost::shared_ptr<LineElement> > l
     for(int i = 0; i < lineElements.size(); i++){
         m_freeLineElements.push_back(lineElements[i]);
         m_freeLineElements.back()->isFloating = true;
-        m_freeLineElements.back()->setColour(cinder::Color(128,128,128));
-        //m_freeLineElements.back()->animOut(m_timeline, m_freeLineElements.back()->getPosition(), cinder::Color(0,0,0), 10.0f);
+        //m_freeLineElements.back()->setColour(cinder::Color(128,128,128));
+        
+        m_freeLineElements.back()->markAsFree();
     }
     
     lineElements.clear();
