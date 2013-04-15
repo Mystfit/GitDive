@@ -19,7 +19,8 @@ void GitDive_CinderApp::setup()
     m_diffLogPath = "/Users/mystfit/desktop/cinderDiffOut.log";
     m_fileDir = "/Users/mystfit/desktop/dumpFiles";
     m_fileOutput = "/Users/mystfit/desktop/colourOut.html";
-    m_targetFile = "GitDive_Cinder/src/GitDataTypes.h";
+    m_targetViewFile = "GitDive_Cinder/src/GitDataTypes.h";
+    m_targetTrackedFile = m_targetViewFile;
     
     m_timeSpeed = 20;
     bVizActive = false;
