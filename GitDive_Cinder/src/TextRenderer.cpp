@@ -33,7 +33,7 @@ void TextRenderer::setLinesAnimatable(){
             vector< boost::shared_ptr<LineElement> > lineElems = line->get()->getLineElements();
 
             for(vector< boost::shared_ptr<LineElement> >::iterator elem = lineElems.begin(); elem != lineElems.end(); ++elem){
-                //elem->get()->markAsAnimatable();
+                elem->get()->markAsAnimatable();
             }
         }
     }
