@@ -49,7 +49,7 @@ void CssParser::parseCss(vector<string> cssData){
         if(starts_with(line, ".") || starts_with(line, "body")){
             insideBlock = true;
             key = line;
-            if(starts_with(line, "body")) key = "normal";
+            if(starts_with(line, "body")) key = CSS_BACKGROUND;
             erase_all(key, ".");
             erase_all(key, " ");
             erase_all(key, "{");
