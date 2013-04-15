@@ -41,7 +41,6 @@ void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
 
 void GitFileManager::updateFilesFromCommit(Commit &commit){
     
-    
     for(int i = 0; i < commit.getNumDiffs(); i++){
                 
         boost::shared_ptr<Diff> diff = commit.getDiff(i);
@@ -84,9 +83,12 @@ bool GitFileManager::applyNextDiff(){
         m_diffIndex++;
     } else {
         if(m_commitIndex < m_commitList.size()) {
+            cout << "-->Out of diffs for this commit. Moving to next." << endl;
+
             m_diffIndex = 0;
             m_commitIndex++;
         } else {
+            cout << "-->Out of commits!" << endl;
             return false;
         }
     }
