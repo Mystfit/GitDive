@@ -64,7 +64,7 @@ public:
     boost::shared_ptr<GitFile> getTargetFile(){ return m_targetFile; };
     
     //Background colour from css theme
-    cinder::Color getBackgroundColour(){ return m_backgroundColor; };
+    cinder::Color getBackgroundColour(){ return m_backgroundColour; };
     
 private:        
     boost::shared_ptr<GitFile> m_targetFile;
