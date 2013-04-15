@@ -60,7 +60,11 @@ public:
     //Animate lines into position
     void animLinesIn(vector<boost::shared_ptr<Line> > lines);
     
+    //Target git file we're drawing
     boost::shared_ptr<GitFile> getTargetFile(){ return m_targetFile; };
+    
+    //Background colour from css theme
+    int getBackgroundColour(){ return m_bgColour; };
     
 private:        
     boost::shared_ptr<GitFile> m_targetFile;
