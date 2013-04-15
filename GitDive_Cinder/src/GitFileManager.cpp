@@ -56,9 +56,52 @@ boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
 }
 
 
+
+
 bool GitFileManager::applyNextDiff()(){
     
+    if(m_commitIndex < m_commitList.size()) {
+        updateFilesFromCommit(m_commitList[m_commitIndex]);
+        m_commitIndex++;
+        return true;
+    }
+    
+    
+    boost::shared_ptr<GitFile> file;
+    
+    //Get the next diff in the commit
+    boost::shared_ptr<Diff> diff = commit.getDiff(i);
+    
+    if(diff->fileMode == Diff::FILEMODE_ADDED){
+        file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
+        applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
+        m_fileList.push_back(file);
+    }
+    
+    else if(diff->fileMode == Diff::FILEMODE_DELETED){
+        file = getFileByName(diff->getFileName());
+        file->setInactive();
+    }
+    
+    else if(diff->fileMode == Diff::FILEMODE_UPDATED){
+        file = getFileByName(diff->getFileName());
+        if(file){
+            if(file->active()){
+                applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
+            }
+        }
+    }
+    
+    //ITS NO USE
+    //m_tRender->animLinesIn(file->getLines());
+    //m_tRender->setLinesAnimatable();
+    
+
+    
+    
 }
+
+
 
 
 bool GitFileManager::applyNextCommit(){
