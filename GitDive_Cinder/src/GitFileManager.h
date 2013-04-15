@@ -66,7 +66,7 @@ public:
     //File display
     //------------
     
-    void setTrackedFile(String target){ m_trackedFile = target; };
+    void setTrackedFile(string target){ m_trackedFile = target; };
     
     //Dumps the final file output to a text file
     void dumpFileOutput(string path);
