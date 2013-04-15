@@ -77,6 +77,7 @@ void CssParser::parseCss(vector<string> cssData){
 
 string CssParser::parseColour(string line, int & colour){
     stringstream colourStr;
+    int colour;
     bool foundHash = false;
     int numChars = 0;
     for(int i = 0; i < line.size(); i++){
@@ -91,5 +92,5 @@ string CssParser::parseColour(string line, int & colour){
     }
     colourStr >> std::hex >> colour;
     
-    return colourStr.str();
+    return colour;
 }
