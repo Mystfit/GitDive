@@ -37,6 +37,16 @@ bool TextAnimateable::markedForDeletion(){
     return false;
 }
 
+bool TextAnimateable::isJustFreed(){
+    if(bIsFree){
+        bIsFree = false;
+        return true;
+    }
+    
+    return false;
+}
+
+
 
 void TextAnimateable::setPosition(cinder::Vec2f position){
     m_position = position;
