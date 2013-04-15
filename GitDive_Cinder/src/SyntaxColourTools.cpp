@@ -94,7 +94,7 @@ void LineFormatterManager::syntaxParseLines(vector<boost::shared_ptr<Line> > lin
     srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, lang));
     
     //Set up formatters to modify our lines
-    highlighter.setFormatterManager(formatterManager.get());
+    highlighter.setFormatterManager(this);
     
     //Set up params to hold the element position from the start of the line
     srchilite::FormatterParams params;
