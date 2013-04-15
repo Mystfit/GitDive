@@ -62,7 +62,7 @@ void TextRenderer::setTextZoom(float zoom){
     if(m_textZoom < 1.0f){
         bDrawSquares = true;
     } else {
-        bDrawSquares = true;
+        bDrawSquares = false;
     }
 }
 
