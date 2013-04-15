@@ -97,8 +97,6 @@ bool GitFileManager::applyNextDiff(){
 }
 
 
-
-
 bool GitFileManager::applyNextCommit(){
     if(m_commitIndex < m_commitList.size()) {
         for(int i = 0; i < m_commitList[m_commitIndex].getNumDiffs(); i++){
@@ -119,17 +117,14 @@ bool GitFileManager::applyNextCommit(){
     }
     
     cout << "-->Out of commits!" << endl;
-    
     return false;
 }
+
 
 void GitFileManager::reset(){
     m_commitIndex = 0;
     m_fileList.clear();
 }
-
-
-
 
 
 void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff, bool useSyntaxHighlighting){
