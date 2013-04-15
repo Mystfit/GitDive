@@ -45,7 +45,7 @@ public:
     
     //Attribute getters/setters
     virtual void setPosition(cinder::Vec2f position);
-    v
+    void setElemColour(cinder::Color colour){m_colour = colour; };
     void setColour(cinder::Color colour){m_colour = colour; };
     cinder::Vec2f getPosition(){ return m_position;};
     cinder::Color getColour(){ return m_colour;};
