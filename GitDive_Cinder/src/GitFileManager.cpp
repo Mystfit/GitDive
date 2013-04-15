@@ -13,6 +13,11 @@ GitFileManager::GitFileManager(){
 }
 
 
+void GitFileManager::updateSingleFile(){
+    
+}
+
+
 void GitFileManager::updateFilesFromCommit(Commit &commit){
     
     boost::shared_ptr<GitFile> file;
