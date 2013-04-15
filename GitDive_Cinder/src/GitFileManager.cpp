@@ -95,8 +95,8 @@ bool GitFileManager::applyNextDiff(){
                         if(m_commitIndex < m_commitList.size()) currentCommit = m_commitList[m_commitIndex];
                     }
                 } else {
-                    return false;
                     break;
+                    return false;
                 }
             }
         } else {
