@@ -41,7 +41,6 @@ public:
     int getLife(){ return m_life; };
     float getLifePercent(){ return m_life / MAX_LIFE; };
     bool markedForDeletion();
-    bool markedForCreation();
     
     //Attribute getters/setters
     void setPosition(cinder::Vec2f position);
@@ -51,6 +50,9 @@ public:
     
     void markAsFreed(){ bIsFree = true; };
     bool isJustFreed();
+    
+    void markAsCreated(){ bIsCreated = true; };
+    bool isJustCreated();
     //String accessor. Returns recursive strings from line elements if present
     virtual std::string getStr();
     
