@@ -83,7 +83,7 @@ bool GitFileManager::applyNextDiff(){
                         diff = currentCommit.getDiff(m_diffIndex);
                         
                         if(diff->getFileName() == m_trackedFile){
-                            cout << "A:" << diff->getFileName() << " B:" << m_trackedFile << endl;
+                            cout << "A:" << m_trackedFile << " B:" << diff->getFileName() << endl;
                             updateSingleFile(diff, m_trackedFile);
                             m_diffIndex++;
                             foundFile = true;
