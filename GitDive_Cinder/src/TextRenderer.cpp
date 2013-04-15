@@ -154,7 +154,7 @@ void TextRenderer::update(){
 void TextRenderer::draw(){
     
     cinder::gl::pushMatrices();
-    
+    cinder::gl::scale(cinder::Vec2f(m_textZoom, m_textZoom));
     vector< boost::shared_ptr<Line> > lines;
     
     if(m_targetFile) lines = m_targetFile->getLines();
