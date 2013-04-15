@@ -64,7 +64,7 @@ bool GitFileManager::applyNextDiff()(){
         m_commitIndex++;
     }
     
-    Commit & currentCommit = m_commitList[m_commitIndex];
+    Commit currentCommit = &m_commitList[m_commitIndex];
     
     
     boost::shared_ptr<GitFile> file;
