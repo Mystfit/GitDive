@@ -167,7 +167,7 @@ void GitDive_CinderApp::update()
 void GitDive_CinderApp::draw()
 {
 	// clear out the window with black
-	gl::clear( Color( 0.2, 0.2, 0.2 ) );
+	gl::clear( tRender->getBackgroundColour() );
     
     //Draw params window
     params::InterfaceGl::draw();
