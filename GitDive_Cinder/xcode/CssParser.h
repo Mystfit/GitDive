@@ -26,7 +26,7 @@ public:
     vector<string> loadFile(string path);
     int getColour(string elem);
     void parseCss(vector<string> cssData);
-    string parseColour(string line);
+    string parseColour(string line, int & colour);
 
         
 private:
