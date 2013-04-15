@@ -29,6 +29,11 @@ void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
     }
     
     else if(diff->fileMode == Diff::FILEMODE_UPDATED){
+        
+        if(targetFile != ""){
+            file = getFileByName(targetFile);
+        }
+        
         file = getFileByName(diff->getFileName());
         if(file){
             if(file->active()){
@@ -39,10 +44,6 @@ void GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
 }
 
 
-void GitFileManager::updateFilesFromCommit(Commit &commit){
-    
-    
-}
 
 boost::shared_ptr<GitFile> GitFileManager::getFileByName(string fileName){
     for(int i = 0; i < m_fileList.size(); i++){
