@@ -11,6 +11,7 @@
 TextAnimateable::TextAnimateable(){
     m_colour = cinder::Color(255,255,255);
     m_life = 0;
+    markAsCreated();
 }
 
 void TextAnimateable::update(){
