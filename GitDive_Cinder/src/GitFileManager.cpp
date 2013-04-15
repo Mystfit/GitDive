@@ -81,6 +81,7 @@ bool GitFileManager::applyNextDiff(){
                         if(diff->getFileName() == m_trackedFile){
                             updateSingleFile(diff, m_trackedFile);
                             foundFile = true;
+                            return true;
                         }
                         
                     } else {
@@ -90,18 +91,11 @@ bool GitFileManager::applyNextDiff(){
                 } else {
                     break;
                 }
-                
-                
-                
-                
-                } else {
-                    diff = currentCommit.getDiff(m_diffIndex);
-                }
-                m_diffIndex++;
             }
         } else {
             updateSingleFile(diff);
             m_diffIndex++;
+            return true;
         }
         
     } else {
@@ -112,11 +106,10 @@ bool GitFileManager::applyNextDiff(){
             m_commitIndex++;
         } else {
             cout << "-->Out of commits!" << endl;
-            return false;
         }
     }
     
-    return true;
+    return false;
     
     //ITS NO USE
     //m_tRender->animLinesIn(file->getLines());
