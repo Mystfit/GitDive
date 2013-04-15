@@ -42,7 +42,7 @@ public:
     
     //Sets the position of the file on the screen
     void setTextOffset(float increment);
-    void setTextZoom(float zoom){m_textZoom = zoom; };
+    void setTextZoom(float zoom);
     
     //Starts tracking a line for rendering
     void makeLineFromFreeElements(boost::shared_ptr<Line> line);
@@ -74,7 +74,6 @@ private:
     
     float m_textZoom;
     cinder::Vec2f m_textOffset;
-    cinder::Vec2f m_scrollVelocity;
     boost::shared_ptr<CssParser> m_cssColours;
     cinder::Color m_backgroundColour;
 };
