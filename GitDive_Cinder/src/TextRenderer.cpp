@@ -90,7 +90,7 @@ void TextRenderer::update(){
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
 
-            if(line->get()->isJustAnimating()){
+            //if(line->get()->isJustAnimating()){
                 if(line->get()->getLineState() == Line::LINE_ADDED){
                     line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
                     //line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255), 1.0f);
@@ -115,7 +115,7 @@ void TextRenderer::update(){
                         elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 2.0f + ((float)rand()/(float)RAND_MAX) * 0.5f );
                     }
                 }
-            }
+            //}
         }
     }
     
