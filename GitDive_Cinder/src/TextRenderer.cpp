@@ -84,18 +84,18 @@ void TextRenderer::update(){
 
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator line = lines.begin(); line != lines.end(); ++line){
-            
-            
-            if(line->get()->getLineState() == Line::LINE_ADDED){
-                line->get()->isJustCreated();
-                line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
-                line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255), 1.0f);
+
+            if(line->get()->isJustAnimating()){
+                if(line->get()->getLineState() == Line::LINE_ADDED){
+                    line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
+                    line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255), 1.0f);
+                } else if(line->get()->getLineState() == Line::LINE_NORMAL){
+                    //line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
+                    line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255), 1.0f);
+                }
             }
             
-            else if(line->get()->getLineState() == Line::LINE_NORMAL){
-                //line->get()->setPosition(cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT));
-                line->get()->animIn(m_timeline, cinder::Vec2f(0, line->get()->getLinePos() * LINE_HEIGHT), cinder::Color(255,255,255), 1.0f);
-            }
+            
 
             
             float lineY = line->get()->getLinePos() * LINE_HEIGHT;
