@@ -171,6 +171,7 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
             newLines.push_back(newLine);            
         }
         
+        if(useSyntaxHighlighting) m_formatterManager->syntaxParseLines(newLines, LineFormatter::getFileLangType(file.getFilename()));
         file.setLines(newLines);
         return;
     }
