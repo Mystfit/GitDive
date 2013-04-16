@@ -25,6 +25,8 @@ bool GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
 
     if(diff->fileMode == Diff::FILEMODE_ADDED){
         file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
+        if(bPresentationHack)file = boost::shared_ptr<GitFile>(new GitFile("presentation.txt"));
+
         applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
         m_fileList.push_back(file);
     }
