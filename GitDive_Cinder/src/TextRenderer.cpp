@@ -166,18 +166,20 @@ void TextRenderer::update(){
                     elem->get()->animIn(m_timeline, cinder::Vec2f(elemX, lineY), cinder::Color::hex(m_cssColours->getColour(elem->get()->elem)), 0.2f + randTimeOffset );
                 }
             }
+            
+            //Update camera
+            if(bCameraFollowing){
+                cinder::EaseInOutSine easer;
+                
+                if(lineYcount){
+                    cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineY * 0.5) * -1.0f);
+                    m_timeline->apply(&m_textOffset, camOffset, 0.6f, easer);
+                }   
+            }
             //}
         }
         
-        //Update camera
-        if(bCameraFollowing){
-            cinder::EaseInOutSine easer;
-
-            if(lineYcount){
-                cinder::Vec2f camOffset = cinder::Vec2f(0.0f, (lineYtotal / lineYcount - (lines.size() * LINE_HEIGHT * 0.5)) * -1.0f);
-                m_timeline->apply(&m_textOffset, camOffset, 0.6f, easer);
-            }   
-        }
+        
 
     }
 }
