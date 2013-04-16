@@ -1,67 +1,67 @@
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #000044;
+  color: #dd00ff;
   font-weight: normal;
   font-style: normal;
 }
 
 .keyword {
-  color: #ffff00;
+  color: #ffffff;
   font-weight: bold;
   font-style: normal;
 }
 
 .type {
-  color: #00ff00;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.string {
-  color: #abab00;
+  color: #f1157c;
   font-weight: bold;
   font-style: normal;
 }
 
+.string {
+  color: #ffffff;
+  font-weight: normal;
+  font-style: normal;
+}
+
 .specialchar {
-  color: #bfbfbf;
+  color: #82d66d;
   font-weight: normal;
   font-style: normal;
 }
 
 .comment {
-  color: #888888;
+  color: #bfbfbf;
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
 }
 
 .number {
-  color: #619de7;
+  color: #8ee119;
   font-weight: normal;
   font-style: normal;
 }
 
 .preproc {
-  color: #1da3cf;
+  color: #00bb00;
   font-weight: normal;
   font-style: normal;
 }
 
 .symbol {
-  color: #ff00ff;
-  font-weight: normal;
+  color: #e7ee5c;
+  font-weight: bold;
   font-style: normal;
 }
 
 .function {
-  color: #f34627;
-  font-weight: normal;
+  color: #ff06cd;
+  font-weight: bold;
   font-style: normal;
 }
 
 .cbracket {
-  color: #ff00ff;
-  font-weight: normal;
+  color: #e7ee5c;
+  font-weight: bold;
   font-style: normal;
 }
 

@@ -1,66 +1,66 @@
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #000035;
+  color: #008bff;
   font-weight: normal;
   font-style: normal;
 }
 
 .keyword {
-  color: #ffff00;
+  color: #f8c50b;
   font-weight: bold;
   font-style: normal;
 }
 
 .type {
-  color: #00ff00;
+  color: #e1e72f;
   font-weight: normal;
   font-style: normal;
 }
 
 .string {
-  color: #abab00;
-  font-weight: bold;
+  color: #ffffff;
+  font-weight: normal;
   font-style: normal;
 }
 
 .specialchar {
-  color: #bfbfbf;
+  color: #ffffff;
   font-weight: normal;
   font-style: normal;
 }
 
 .comment {
-  color: #888888;
+  color: #ffbb00;
   font-weight: normal;
   font-style: italic;
 }
 
 .number {
-  color: #619de7;
+  color: #f87ff4;
   font-weight: normal;
   font-style: normal;
 }
 
 .preproc {
-  color: #1da3cf;
+  color: #bb00ff;
   font-weight: normal;
   font-style: normal;
 }
 
 .symbol {
-  color: #ff00ff;
+  color: #ffffff;
   font-weight: normal;
   font-style: normal;
 }
 
 .function {
-  color: #f34627;
+  color: #ffffff;
   font-weight: normal;
   font-style: normal;
 }
 
 .cbracket {
-  color: #ff00ff;
+  color: #ffffff;
   font-weight: normal;
   font-style: normal;
 }
