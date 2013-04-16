@@ -103,7 +103,7 @@ private:
     
     int m_commitIndex, m_diffIndex;
     string m_trackedFile;
-    bool bUseSyntaxHighlighting;
+    bool bUseSyntaxHighlighting, bPresentationHack;
 };
 
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
