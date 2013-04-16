@@ -14,6 +14,6 @@
 
 class GitDiveInterface : public InterfaceGl {
     
-}
+};
 
 #endif /* defined(__GitDive_Cinder__GitDiveInterface__) */
