@@ -117,11 +117,11 @@ void GitDive_CinderApp::resetAll(){
 }
 
 void GitDive_CinderApp::repoPathDialog(){
-    cinder::app::getO
+    m_repoPath = cinder::app::getOpenFilePath();
 }
 
 void GitDive_CinderApp::trackedFileDialog(){
-    
+    m_targetTrackedFile = cinder::app::getOpenFilePath();
 }
 
 
