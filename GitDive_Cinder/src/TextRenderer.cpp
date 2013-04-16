@@ -199,7 +199,7 @@ void TextRenderer::draw(){
     
     if(lines.size()){
         for(vector< boost::shared_ptr<Line> >::iterator it = lines.begin(); it != lines.end(); ++it){
-            it->get()->draw(m_textureFont, m_textOffset);
+            it->get()->draw(m_textureFont, m_textOffset * m_textZoom);
         }
     }
     
