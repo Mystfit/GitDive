@@ -12,7 +12,7 @@
 #include <iostream>
 #include "cinder/params/Params.h"
 
-class GitDiveInterface : public InterfaceGl {
+class GitDiveInterface : public cinder::params::InterfaceGl {
     
 };
 
