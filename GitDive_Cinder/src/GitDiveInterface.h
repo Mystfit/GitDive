@@ -14,7 +14,7 @@
 
 class GitDiveInterface : public cinder::params::InterfaceGl {
     void minimize(){
-        InterfaceGl::mBar->
+        c
     }
     
     void maximize(){
