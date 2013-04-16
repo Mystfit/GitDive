@@ -117,7 +117,7 @@ void GitDive_CinderApp::resetAll(){
 }
 
 void GitDive_CinderApp::repoPathDialog(){
-    m_repoPath = cinder::app::getOpenFilePath(m_repoPath).string();
+    m_repoPath = cinder::app::getFolderPath(m_repoPath).string();
 }
 
 void GitDive_CinderApp::trackedFileDialog(){
