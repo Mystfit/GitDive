@@ -10,5 +10,10 @@
 #define __GitDive_Cinder__GitDiveInterface__
 
 #include <iostream>
+#include "cinder/params/Params.h"
+
+class GitDiveInterface : public InterfaceGl {
+    
+}
 
 #endif /* defined(__GitDive_Cinder__GitDiveInterface__) */
