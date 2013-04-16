@@ -169,7 +169,7 @@ void TextRenderer::update(){
             
             //Update camera
             if(bCameraFollowing){
-                cinder::EaseInOutSine easer;
+                cinder::EaseOutQuart easer;
                 
                 if(lineYcount){
                     cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineY * 0.5 * -1.0f);
