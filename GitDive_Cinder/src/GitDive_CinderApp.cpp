@@ -124,10 +124,11 @@ void GitDive_CinderApp::repoPathDialog(){
 
 void GitDive_CinderApp::trackedFileDialog(){
     m_targetTrackedFile = cinder::app::getOpenFilePath().string();
-    m_targetViewFile = m_targetTrackedFile;
     
     //Remove repo path from front of file path
     m_targetTrackedFile.erase(0, m_repoPath.size()+1);
+    m_targetViewFile = m_targetTrackedFile;
+
     setTrackedFile();
     setViewedFile();
     
