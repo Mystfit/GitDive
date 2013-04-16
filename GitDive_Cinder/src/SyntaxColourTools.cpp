@@ -147,7 +147,7 @@ string LineFormatter::getFileLangType(string filename){
     stringstream comb;
     comb << DATADIR_LANGUAGES << fileP.c_str();
     
-    std::ifstream ifs(comb);
+    std::ifstream ifs(comb.str());
         
 
     
