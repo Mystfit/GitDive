@@ -26,6 +26,45 @@
 		4AB896DD1712B84900533992 /* TextAnimatable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AB896DB1712B84900533992 /* TextAnimatable.cpp */; };
 		4ABFC143171412B600791CC0 /* CssParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ABFC141171412B600791CC0 /* CssParser.cpp */; };
 		4AD560DA171CDF8900DAE29D /* GitDiveInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD560D8171CDF8900DAE29D /* GitDiveInterface.cpp */; };
+		4AD56103171CE55200DAE29D /* sh_acid.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560DC171CE55200DAE29D /* sh_acid.css */; };
+		4AD56104171CE55200DAE29D /* sh_berries-dark.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560DD171CE55200DAE29D /* sh_berries-dark.css */; };
+		4AD56105171CE55200DAE29D /* sh_berries-light.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560DE171CE55200DAE29D /* sh_berries-light.css */; };
+		4AD56106171CE55200DAE29D /* sh_bipolar.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560DF171CE55200DAE29D /* sh_bipolar.css */; };
+		4AD56107171CE55200DAE29D /* sh_blacknblue.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560E0171CE55200DAE29D /* sh_blacknblue.css */; };
+		4AD56108171CE55200DAE29D /* sh_bright.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560E1171CE55200DAE29D /* sh_bright.css */; };
+		4AD56109171CE55200DAE29D /* sh_contrast.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560E2171CE55200DAE29D /* sh_contrast.css */; };
+		4AD5610A171CE55200DAE29D /* sh_darkblue.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560E3171CE55200DAE29D /* sh_darkblue.css */; };
+		4AD5610B171CE55200DAE29D /* sh_darkness.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560E4171CE55200DAE29D /* sh_darkness.css */; };
+		4AD5610C171CE55200DAE29D /* sh_desert.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560E5171CE55200DAE29D /* sh_desert.css */; };
+		4AD5610D171CE55200DAE29D /* sh_dull.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560E6171CE55200DAE29D /* sh_dull.css */; };
+		4AD5610E171CE55200DAE29D /* sh_easter.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560E7171CE55200DAE29D /* sh_easter.css */; };
+		4AD5610F171CE55300DAE29D /* sh_emacs.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560E8171CE55200DAE29D /* sh_emacs.css */; };
+		4AD56110171CE55300DAE29D /* sh_golden.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560E9171CE55200DAE29D /* sh_golden.css */; };
+		4AD56111171CE55300DAE29D /* sh_greenlcd.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560EA171CE55200DAE29D /* sh_greenlcd.css */; };
+		4AD56112171CE55300DAE29D /* sh_ide-anjuta.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560EB171CE55200DAE29D /* sh_ide-anjuta.css */; };
+		4AD56113171CE55300DAE29D /* sh_ide-codewarrior.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560EC171CE55200DAE29D /* sh_ide-codewarrior.css */; };
+		4AD56114171CE55300DAE29D /* sh_ide-devcpp.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560ED171CE55200DAE29D /* sh_ide-devcpp.css */; };
+		4AD56115171CE55300DAE29D /* sh_ide-eclipse.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560EE171CE55200DAE29D /* sh_ide-eclipse.css */; };
+		4AD56116171CE55300DAE29D /* sh_ide-kdev.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560EF171CE55200DAE29D /* sh_ide-kdev.css */; };
+		4AD56117171CE55300DAE29D /* sh_ide-msvcpp.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560F0171CE55200DAE29D /* sh_ide-msvcpp.css */; };
+		4AD56118171CE55300DAE29D /* sh_kwrite.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560F1171CE55200DAE29D /* sh_kwrite.css */; };
+		4AD56119171CE55300DAE29D /* sh_matlab.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560F2171CE55200DAE29D /* sh_matlab.css */; };
+		4AD5611A171CE55300DAE29D /* sh_navy.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560F3171CE55200DAE29D /* sh_navy.css */; };
+		4AD5611B171CE55300DAE29D /* sh_nedit.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560F4171CE55200DAE29D /* sh_nedit.css */; };
+		4AD5611C171CE55300DAE29D /* sh_neon.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560F5171CE55200DAE29D /* sh_neon.css */; };
+		4AD5611D171CE55300DAE29D /* sh_night.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560F6171CE55200DAE29D /* sh_night.css */; };
+		4AD5611E171CE55300DAE29D /* sh_pablo.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560F7171CE55200DAE29D /* sh_pablo.css */; };
+		4AD5611F171CE55300DAE29D /* sh_peachpuff.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560F8171CE55200DAE29D /* sh_peachpuff.css */; };
+		4AD56120171CE55300DAE29D /* sh_print.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560F9171CE55200DAE29D /* sh_print.css */; };
+		4AD56121171CE55300DAE29D /* sh_rand01.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560FA171CE55200DAE29D /* sh_rand01.css */; };
+		4AD56122171CE55300DAE29D /* sh_the.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560FB171CE55200DAE29D /* sh_the.css */; };
+		4AD56123171CE55300DAE29D /* sh_typical.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560FC171CE55200DAE29D /* sh_typical.css */; };
+		4AD56124171CE55300DAE29D /* sh_vampire.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560FD171CE55200DAE29D /* sh_vampire.css */; };
+		4AD56125171CE55300DAE29D /* sh_vim-dark.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560FE171CE55200DAE29D /* sh_vim-dark.css */; };
+		4AD56126171CE55300DAE29D /* sh_vim.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD560FF171CE55200DAE29D /* sh_vim.css */; };
+		4AD56127171CE55300DAE29D /* sh_whatis.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD56100171CE55200DAE29D /* sh_whatis.css */; };
+		4AD56128171CE55300DAE29D /* sh_whitengrey.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD56101171CE55200DAE29D /* sh_whitengrey.css */; };
+		4AD56129171CE55300DAE29D /* sh_zellner.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AD56102171CE55200DAE29D /* sh_zellner.css */; };
 		4AD7492117097505006ACBC6 /* GitFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7491F17097505006ACBC6 /* GitFileManager.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
@@ -81,6 +120,45 @@
 		4ABFC142171412B600791CC0 /* CssParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CssParser.h; sourceTree = "<group>"; };
 		4AD560D8171CDF8900DAE29D /* GitDiveInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitDiveInterface.cpp; path = ../src/GitDiveInterface.cpp; sourceTree = "<group>"; };
 		4AD560D9171CDF8900DAE29D /* GitDiveInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitDiveInterface.h; path = ../src/GitDiveInterface.h; sourceTree = "<group>"; };
+		4AD560DC171CE55200DAE29D /* sh_acid.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_acid.css; sourceTree = "<group>"; };
+		4AD560DD171CE55200DAE29D /* sh_berries-dark.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sh_berries-dark.css"; sourceTree = "<group>"; };
+		4AD560DE171CE55200DAE29D /* sh_berries-light.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sh_berries-light.css"; sourceTree = "<group>"; };
+		4AD560DF171CE55200DAE29D /* sh_bipolar.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_bipolar.css; sourceTree = "<group>"; };
+		4AD560E0171CE55200DAE29D /* sh_blacknblue.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_blacknblue.css; sourceTree = "<group>"; };
+		4AD560E1171CE55200DAE29D /* sh_bright.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_bright.css; sourceTree = "<group>"; };
+		4AD560E2171CE55200DAE29D /* sh_contrast.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_contrast.css; sourceTree = "<group>"; };
+		4AD560E3171CE55200DAE29D /* sh_darkblue.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_darkblue.css; sourceTree = "<group>"; };
+		4AD560E4171CE55200DAE29D /* sh_darkness.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_darkness.css; sourceTree = "<group>"; };
+		4AD560E5171CE55200DAE29D /* sh_desert.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_desert.css; sourceTree = "<group>"; };
+		4AD560E6171CE55200DAE29D /* sh_dull.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_dull.css; sourceTree = "<group>"; };
+		4AD560E7171CE55200DAE29D /* sh_easter.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_easter.css; sourceTree = "<group>"; };
+		4AD560E8171CE55200DAE29D /* sh_emacs.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_emacs.css; sourceTree = "<group>"; };
+		4AD560E9171CE55200DAE29D /* sh_golden.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_golden.css; sourceTree = "<group>"; };
+		4AD560EA171CE55200DAE29D /* sh_greenlcd.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_greenlcd.css; sourceTree = "<group>"; };
+		4AD560EB171CE55200DAE29D /* sh_ide-anjuta.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sh_ide-anjuta.css"; sourceTree = "<group>"; };
+		4AD560EC171CE55200DAE29D /* sh_ide-codewarrior.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sh_ide-codewarrior.css"; sourceTree = "<group>"; };
+		4AD560ED171CE55200DAE29D /* sh_ide-devcpp.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sh_ide-devcpp.css"; sourceTree = "<group>"; };
+		4AD560EE171CE55200DAE29D /* sh_ide-eclipse.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sh_ide-eclipse.css"; sourceTree = "<group>"; };
+		4AD560EF171CE55200DAE29D /* sh_ide-kdev.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sh_ide-kdev.css"; sourceTree = "<group>"; };
+		4AD560F0171CE55200DAE29D /* sh_ide-msvcpp.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sh_ide-msvcpp.css"; sourceTree = "<group>"; };
+		4AD560F1171CE55200DAE29D /* sh_kwrite.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_kwrite.css; sourceTree = "<group>"; };
+		4AD560F2171CE55200DAE29D /* sh_matlab.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_matlab.css; sourceTree = "<group>"; };
+		4AD560F3171CE55200DAE29D /* sh_navy.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_navy.css; sourceTree = "<group>"; };
+		4AD560F4171CE55200DAE29D /* sh_nedit.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_nedit.css; sourceTree = "<group>"; };
+		4AD560F5171CE55200DAE29D /* sh_neon.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_neon.css; sourceTree = "<group>"; };
+		4AD560F6171CE55200DAE29D /* sh_night.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_night.css; sourceTree = "<group>"; };
+		4AD560F7171CE55200DAE29D /* sh_pablo.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_pablo.css; sourceTree = "<group>"; };
+		4AD560F8171CE55200DAE29D /* sh_peachpuff.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_peachpuff.css; sourceTree = "<group>"; };
+		4AD560F9171CE55200DAE29D /* sh_print.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_print.css; sourceTree = "<group>"; };
+		4AD560FA171CE55200DAE29D /* sh_rand01.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_rand01.css; sourceTree = "<group>"; };
+		4AD560FB171CE55200DAE29D /* sh_the.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_the.css; sourceTree = "<group>"; };
+		4AD560FC171CE55200DAE29D /* sh_typical.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_typical.css; sourceTree = "<group>"; };
+		4AD560FD171CE55200DAE29D /* sh_vampire.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_vampire.css; sourceTree = "<group>"; };
+		4AD560FE171CE55200DAE29D /* sh_vim-dark.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sh_vim-dark.css"; sourceTree = "<group>"; };
+		4AD560FF171CE55200DAE29D /* sh_vim.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_vim.css; sourceTree = "<group>"; };
+		4AD56100171CE55200DAE29D /* sh_whatis.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_whatis.css; sourceTree = "<group>"; };
+		4AD56101171CE55200DAE29D /* sh_whitengrey.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_whitengrey.css; sourceTree = "<group>"; };
+		4AD56102171CE55200DAE29D /* sh_zellner.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sh_zellner.css; sourceTree = "<group>"; };
 		4AD7491F17097505006ACBC6 /* GitFileManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GitFileManager.cpp; path = ../src/GitFileManager.cpp; sourceTree = "<group>"; };
 		4AD7492017097505006ACBC6 /* GitFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitFileManager.h; path = ../src/GitFileManager.h; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
@@ -203,6 +281,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4AD560DB171CE55200DAE29D /* themes */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				00CCAF14116A9FEE008396D5 /* CinderApp.icns */,
 			);
@@ -216,6 +295,53 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4AD560DB171CE55200DAE29D /* themes */ = {
+			isa = PBXGroup;
+			children = (
+				4AD560DC171CE55200DAE29D /* sh_acid.css */,
+				4AD560DD171CE55200DAE29D /* sh_berries-dark.css */,
+				4AD560DE171CE55200DAE29D /* sh_berries-light.css */,
+				4AD560DF171CE55200DAE29D /* sh_bipolar.css */,
+				4AD560E0171CE55200DAE29D /* sh_blacknblue.css */,
+				4AD560E1171CE55200DAE29D /* sh_bright.css */,
+				4AD560E2171CE55200DAE29D /* sh_contrast.css */,
+				4AD560E3171CE55200DAE29D /* sh_darkblue.css */,
+				4AD560E4171CE55200DAE29D /* sh_darkness.css */,
+				4AD560E5171CE55200DAE29D /* sh_desert.css */,
+				4AD560E6171CE55200DAE29D /* sh_dull.css */,
+				4AD560E7171CE55200DAE29D /* sh_easter.css */,
+				4AD560E8171CE55200DAE29D /* sh_emacs.css */,
+				4AD560E9171CE55200DAE29D /* sh_golden.css */,
+				4AD560EA171CE55200DAE29D /* sh_greenlcd.css */,
+				4AD560EB171CE55200DAE29D /* sh_ide-anjuta.css */,
+				4AD560EC171CE55200DAE29D /* sh_ide-codewarrior.css */,
+				4AD560ED171CE55200DAE29D /* sh_ide-devcpp.css */,
+				4AD560EE171CE55200DAE29D /* sh_ide-eclipse.css */,
+				4AD560EF171CE55200DAE29D /* sh_ide-kdev.css */,
+				4AD560F0171CE55200DAE29D /* sh_ide-msvcpp.css */,
+				4AD560F1171CE55200DAE29D /* sh_kwrite.css */,
+				4AD560F2171CE55200DAE29D /* sh_matlab.css */,
+				4AD560F3171CE55200DAE29D /* sh_navy.css */,
+				4AD560F4171CE55200DAE29D /* sh_nedit.css */,
+				4AD560F5171CE55200DAE29D /* sh_neon.css */,
+				4AD560F6171CE55200DAE29D /* sh_night.css */,
+				4AD560F7171CE55200DAE29D /* sh_pablo.css */,
+				4AD560F8171CE55200DAE29D /* sh_peachpuff.css */,
+				4AD560F9171CE55200DAE29D /* sh_print.css */,
+				4AD560FA171CE55200DAE29D /* sh_rand01.css */,
+				4AD560FB171CE55200DAE29D /* sh_the.css */,
+				4AD560FC171CE55200DAE29D /* sh_typical.css */,
+				4AD560FD171CE55200DAE29D /* sh_vampire.css */,
+				4AD560FE171CE55200DAE29D /* sh_vim-dark.css */,
+				4AD560FF171CE55200DAE29D /* sh_vim.css */,
+				4AD56100171CE55200DAE29D /* sh_whatis.css */,
+				4AD56101171CE55200DAE29D /* sh_whitengrey.css */,
+				4AD56102171CE55200DAE29D /* sh_zellner.css */,
+			);
+			name = themes;
+			path = ../resources/themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +393,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */,
+				4AD56103171CE55200DAE29D /* sh_acid.css in Resources */,
+				4AD56104171CE55200DAE29D /* sh_berries-dark.css in Resources */,
+				4AD56105171CE55200DAE29D /* sh_berries-light.css in Resources */,
+				4AD56106171CE55200DAE29D /* sh_bipolar.css in Resources */,
+				4AD56107171CE55200DAE29D /* sh_blacknblue.css in Resources */,
+				4AD56108171CE55200DAE29D /* sh_bright.css in Resources */,
+				4AD56109171CE55200DAE29D /* sh_contrast.css in Resources */,
+				4AD5610A171CE55200DAE29D /* sh_darkblue.css in Resources */,
+				4AD5610B171CE55200DAE29D /* sh_darkness.css in Resources */,
+				4AD5610C171CE55200DAE29D /* sh_desert.css in Resources */,
+				4AD5610D171CE55200DAE29D /* sh_dull.css in Resources */,
+				4AD5610E171CE55200DAE29D /* sh_easter.css in Resources */,
+				4AD5610F171CE55300DAE29D /* sh_emacs.css in Resources */,
+				4AD56110171CE55300DAE29D /* sh_golden.css in Resources */,
+				4AD56111171CE55300DAE29D /* sh_greenlcd.css in Resources */,
+				4AD56112171CE55300DAE29D /* sh_ide-anjuta.css in Resources */,
+				4AD56113171CE55300DAE29D /* sh_ide-codewarrior.css in Resources */,
+				4AD56114171CE55300DAE29D /* sh_ide-devcpp.css in Resources */,
+				4AD56115171CE55300DAE29D /* sh_ide-eclipse.css in Resources */,
+				4AD56116171CE55300DAE29D /* sh_ide-kdev.css in Resources */,
+				4AD56117171CE55300DAE29D /* sh_ide-msvcpp.css in Resources */,
+				4AD56118171CE55300DAE29D /* sh_kwrite.css in Resources */,
+				4AD56119171CE55300DAE29D /* sh_matlab.css in Resources */,
+				4AD5611A171CE55300DAE29D /* sh_navy.css in Resources */,
+				4AD5611B171CE55300DAE29D /* sh_nedit.css in Resources */,
+				4AD5611C171CE55300DAE29D /* sh_neon.css in Resources */,
+				4AD5611D171CE55300DAE29D /* sh_night.css in Resources */,
+				4AD5611E171CE55300DAE29D /* sh_pablo.css in Resources */,
+				4AD5611F171CE55300DAE29D /* sh_peachpuff.css in Resources */,
+				4AD56120171CE55300DAE29D /* sh_print.css in Resources */,
+				4AD56121171CE55300DAE29D /* sh_rand01.css in Resources */,
+				4AD56122171CE55300DAE29D /* sh_the.css in Resources */,
+				4AD56123171CE55300DAE29D /* sh_typical.css in Resources */,
+				4AD56124171CE55300DAE29D /* sh_vampire.css in Resources */,
+				4AD56125171CE55300DAE29D /* sh_vim-dark.css in Resources */,
+				4AD56126171CE55300DAE29D /* sh_vim.css in Resources */,
+				4AD56127171CE55300DAE29D /* sh_whatis.css in Resources */,
+				4AD56128171CE55300DAE29D /* sh_whitengrey.css in Resources */,
+				4AD56129171CE55300DAE29D /* sh_zellner.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
