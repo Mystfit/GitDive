@@ -48,7 +48,7 @@ void TextRenderer::setLinesAnimatable(){
 
 void TextRenderer::setTextOffset(float increment){
     m_textOffset.ptr()->y += increment;
-    m_textOffset.ptr()->x = 1024 * (1.0f / m_textZoom);
+    //m_textOffset.ptr()->x = 1024 * (1.0f / m_textZoom);
 //    if(m_targetFile){
 //        if(m_textOffset.y < floor(m_targetFile->getLines().size() * LINE_HEIGHT )){
 //            m_textOffset.y = floor(m_targetFile->getLines().size() * LINE_HEIGHT);
