@@ -50,7 +50,7 @@ void GitDive_CinderApp::setup()
 void GitDive_CinderApp::initUI(){
     //Setup UI
     mParams = params::InterfaceGl( "GitDive Options", Vec2i( 400, 350 ) );
-    mParams.setOptions("", "" );
+    mParams.setOptions("", "position=" );
     
     mParams.addButton("Open repository", std::bind(&GitDive_CinderApp::repoPathDialog, this));
     mParams.addParam("Repository path", &m_repoPath);
