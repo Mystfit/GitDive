@@ -13,7 +13,7 @@
 #include "cinder/params/Params.h"
 
 class GitDiveInterface : public cinder::params::InterfaceGl {
-	GitDiveInterface( const std::string &title, const cinder::Vec2i &size, const cinder::ColorA = ColorA( 0.3f, 0.3f, 0.3f, 0.4f ) ) : title(title), size(size), ColorA(ColorA);
+	GitDiveInterface( const std::string &title, const cinder::Vec2i &size, const cinder::ColorA color = ColorA( 0.3f, 0.3f, 0.3f, 0.4f ) ) : title(title), size(size), ColorA(color);
 };
 
 #endif /* defined(__GitDive_Cinder__GitDiveInterface__) */
