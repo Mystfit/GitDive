@@ -17,7 +17,7 @@ TextRenderer::TextRenderer(){
     string supportedChars = cinder::gl::TextureFont::defaultChars() + "{}";
 	m_textureFont = cinder::gl::TextureFont::create( customFont, f, supportedChars );
     
-    string cssPath = DATADIR;
+    string cssPath = DATADIR_THEMES;
     string cssFile = "sh_blacknblue.css";
     m_cssColours = boost::shared_ptr<CssParser>(new CssParser());
     m_cssColours->loadFile( cssPath + "/" + cssFile );
