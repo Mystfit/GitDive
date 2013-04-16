@@ -48,7 +48,7 @@ void TextRenderer::setLinesAnimatable(){
 
 void TextRenderer::setTextOffset(float increment){
     m_textOffset.ptr()->y += increment;
-    m_textOffset.ptr()->x = 1024 - ( 1024 * m_textZoom);
+    m_textOffset.ptr()->x *= (1.0f / m_textZoom);
 //    if(m_targetFile){
 //        if(m_textOffset.y < floor(m_targetFile->getLines().size() * LINE_HEIGHT )){
 //            m_textOffset.y = floor(m_targetFile->getLines().size() * LINE_HEIGHT);
@@ -60,7 +60,6 @@ void TextRenderer::setTextOffset(float increment){
 
 void TextRenderer::setTextZoom(float zoom){
     m_textZoom += zoom;
-    m_textOffset.ptr()->x *= (1.0f / zoom);
     if(m_textZoom < 1.0f){
         bDrawSquares = true;
     } else {
