@@ -66,8 +66,8 @@ void GitDive_CinderApp::initUI(){
     mParams.addButton("Reset all", std::bind(&GitDive_CinderApp::resetAll, this));
     mParams.addButton("Jump to end", std::bind(&GitDive_CinderApp::jumpToEnd, this));
     mParams.addSeparator();
-    //mParams.addParam("File to view", &m_targetViewFile);
-    //mParams.addButton("Refresh", std::bind(&GitDive_CinderApp::setViewedFile, this));
+    mParams.addParam("File to view", &m_targetViewFile);
+    mParams.addButton("Refresh", std::bind(&GitDive_CinderApp::setViewedFile, this));
     mParams.addButton("Open repository", std::bind(&GitDive_CinderApp::repoPathDialog, this));
     mParams.addParam("Repository path", &m_repoPath);
 
