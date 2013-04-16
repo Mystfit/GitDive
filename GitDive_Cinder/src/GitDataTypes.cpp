@@ -202,7 +202,6 @@ void Diff::updateDeltaLists(){
 }
 
 
-
 /*
  * DiffHunk
  */
