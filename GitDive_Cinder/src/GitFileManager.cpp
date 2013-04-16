@@ -318,6 +318,9 @@ void GitFileManager::applyDiffToFile(GitFile &file, boost::shared_ptr<Diff> diff
     if(useSyntaxHighlighting) m_formatterManager->syntaxParseLines(newLines, LineFormatter::getFileLangType(file.getFilename()));
     file.setLines(newLines);
     file.resetLineOrder();
+    file.setStats_incAddedLines(deltaAddLines.size());
+    file.setStats_incRemovedLines(deltaRemoveLines.size());
+
 }
 
 
