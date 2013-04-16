@@ -9,10 +9,12 @@
 #ifndef __GitDive_Cinder__SyntaxColourListener__
 #define __GitDive_Cinder__SyntaxColourListener__
 
-#define DATADIR_THEMES "../Resources/srchilite/themes"
-#define DATADIR_LANGUAGES "../Resources/srchilite/languages"
+//#define DATADIR_THEMES "../Resources/srchilite/themes"
+//#define DATADIR_LANGUAGES "../Resources/srchilite/languages"
 
-//#define DATADIR "/usr/local/share/source-highlight"
+#define DATADIR_THEMES "/usr/local/share/source-highlight"
+#define DATADIR_LANGUAGES "/usr/local/share/source-highlight"
+
 
 #include <iostream>
 #include "srchilite/sourcehighlighter.h"
