@@ -48,7 +48,10 @@ void GitDive_CinderApp::setup()
 void GitDive_CinderApp::initUI(){
     //Setup UI
     mParams = params::InterfaceGl( "GitDive Options", Vec2i( 400, 350 ) );
-    mParams.addParam("Repo path", &m_repoPath);
+    
+    mParams.addParam("Open repository", std::bind(&GitDive_CinderApp::repoPathDialog, this));
+    mParams.addParam("Repository path", &m_repoPath);
+
     mParams.addParam("Split lines by syntax", &fManager.getSyntaxHighlightStatus());
     mParams.addParam("Output syntax to file", &bOutputSyntax);
     mParams.addParam("Output Git diff log to file", &bOutputDifflog);
@@ -62,10 +65,11 @@ void GitDive_CinderApp::initUI(){
     mParams.addButton("Reset all", std::bind(&GitDive_CinderApp::resetAll, this));
     mParams.addButton("Jump to end", std::bind(&GitDive_CinderApp::jumpToEnd, this));
     mParams.addSeparator();
-    mParams.addParam("File to view", &m_targetViewFile);
-    mParams.addButton("View", std::bind(&GitDive_CinderApp::setViewedFile, this));
-    mParams.addParam("File to track", &m_targetTrackedFile);
-    mParams.addButton("Track", std::bind(&GitDive_CinderApp::setTrackedFile, this));
+    //mParams.addParam("File to view", &m_targetViewFile);
+    //mParams.addButton("View", std::bind(&GitDive_CinderApp::setViewedFile, this));
+    mParams.addParam("Open file", std::bind(&GitDive_CinderApp::trackFileDialog, this));
+    mParams.addParam("Tracked file", &m_targetTrackedFile);
+    //mParams.addButton("Track", std::bind(&GitDive_CinderApp::setTrackedFile, this));
     mParams.addSeparator();
     mParams.addButton("Pause", std::bind(&GitDive_CinderApp::pauseVisualization, this));
     mParams.addButton("Start", std::bind(&GitDive_CinderApp::startVisualization, this));
