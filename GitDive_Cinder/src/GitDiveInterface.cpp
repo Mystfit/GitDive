@@ -7,7 +7,3 @@
 //
 
 #include "GitDiveInterface.h"
-
-GitDiveInterface::GitDiveInterface(	const std::string &titleStr, const cinder::Vec2i &size) : title(titleStr), size(size){
-    
-}
