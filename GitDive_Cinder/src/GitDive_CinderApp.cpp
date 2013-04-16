@@ -117,7 +117,7 @@ void GitDive_CinderApp::resetAll(){
 }
 
 void GitDive_CinderApp::repoPathDialog(){
-   
+    cinder::app::getO
 }
 
 void GitDive_CinderApp::trackedFileDialog(){
