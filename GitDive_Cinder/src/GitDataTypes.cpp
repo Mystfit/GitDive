@@ -218,6 +218,8 @@ DiffHunk::DiffHunk(){
 GitFile::GitFile(string filename){
     m_filename = filename;
     bIsActive = true;
+    stats_addedLines = 0;
+    stats_RemovedLines = 0;
 }
 
 void GitFile::update(){
