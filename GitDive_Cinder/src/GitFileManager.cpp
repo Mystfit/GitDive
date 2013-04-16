@@ -42,7 +42,7 @@ bool GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
             file = getFileByName("presentation.txt");
             if(!file) {
                 file = boost::shared_ptr<GitFile>(new GitFile("presentation.txt"));
-                addFile(file);
+                m_fileList.push_back(file);
             }
         }
         
