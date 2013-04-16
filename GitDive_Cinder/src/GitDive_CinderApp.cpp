@@ -129,7 +129,7 @@ void GitDive_CinderApp::trackedFileDialog(){
     m_targetTrackedFile.erase(0, m_repoPath.size()+1);
     setTrackedFile();
     
-    cout << "!!!!! " << m_targetTrackedFile;
+    cout << "!!!!! " << m_targetTrackedFile << endl;
 }
 
 
