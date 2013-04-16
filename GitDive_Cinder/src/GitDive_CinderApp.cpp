@@ -66,7 +66,7 @@ void GitDive_CinderApp::initUI(){
     mParams.addButton("Jump to end", std::bind(&GitDive_CinderApp::jumpToEnd, this));
     mParams.addSeparator();
     //mParams.addParam("File to view", &m_targetViewFile);
-    //mParams.addButton("View", std::bind(&GitDive_CinderApp::setViewedFile, this));
+    mParams.addButton("Refresh", std::bind(&GitDive_CinderApp::setViewedFile, this));
     mParams.addButton("Open file", std::bind(&GitDive_CinderApp::trackedFileDialog, this));
     mParams.addParam("Tracked file", &m_targetTrackedFile);
     //mParams.addButton("Track", std::bind(&GitDive_CinderApp::setTrackedFile, this));
