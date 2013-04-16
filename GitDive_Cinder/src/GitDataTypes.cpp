@@ -224,7 +224,8 @@ GitFile::GitFile(string filename){
 
 void GitFile::update(){
     for(vector< boost::shared_ptr<Line> >::iterator it = m_activeLines.begin(); it != m_activeLines.end(); ++it){
-        it->get()->update();
+        boost::shared_ptr<Line> line = (boost::shared_ptr<Line>)it->get();
+        if(line) it->get()->update();
     }
 }
 
