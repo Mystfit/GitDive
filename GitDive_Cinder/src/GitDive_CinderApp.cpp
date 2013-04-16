@@ -59,6 +59,9 @@ void GitDive_CinderApp::initUI(){
     mParams.addParam("Dump files", &bDumpFiles);
     mParams.addParam("Reload commits", &bLoadCommits);
     
+    mParams.addParam("Presentation hack", &fManager.bPresentationHack);
+
+    
     stringstream maxSpeed; 
     maxSpeed << "min=1, max=" << ci::app::getFrameRate()/2;
     mParams.addParam("Commits per second", &m_timeSpeed, maxSpeed.str());
