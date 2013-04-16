@@ -13,7 +13,6 @@
 #define DATADIR_LANGUAGES "resources/srchilite/languages"
 
 //#define DATADIR "/usr/local/share/source-highlight"
-#endif
 
 #include <iostream>
 #include "srchilite/sourcehighlighter.h"
