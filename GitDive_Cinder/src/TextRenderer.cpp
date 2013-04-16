@@ -172,7 +172,7 @@ void TextRenderer::update(){
                 cinder::EaseInOutSine easer;
                 
                 if(lineYcount){
-                    cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineY * 0.5) * -1.0f));
+                    cinder::Vec2f camOffset = cinder::Vec2f(0.0f, lineY * 0.5 * -1.0f);
                     m_timeline->apply(&m_textOffset, camOffset, 0.6f, easer);
                 }   
             }
