@@ -91,7 +91,7 @@ void LineFormatterManager::syntaxParseLines(vector<boost::shared_ptr<Line> > lin
     //Set up highlighter based on language
     srchilite::RegexRuleFactory ruleFactory;
     srchilite::LangDefManager langDefManager(&ruleFactory);
-    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR, lang));
+    srchilite::SourceHighlighter highlighter(langDefManager.getHighlightState(DATADIR_LANGUAGES, lang));
     
     //Set up formatters to modify our lines
     highlighter.setFormatterManager(this);
