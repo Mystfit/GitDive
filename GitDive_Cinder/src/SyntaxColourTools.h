@@ -10,7 +10,8 @@
 #define __GitDive_Cinder__SyntaxColourListener__
 
 #ifndef DATADIR
-#define DATADIR "/usr/local/share/source-highlight"
+#define DATADIR "resources/themes"
+//#define DATADIR "/usr/local/share/source-highlight"
 #endif
 
 #include <iostream>
