@@ -47,7 +47,7 @@ void GitDive_CinderApp::setup()
 
 void GitDive_CinderApp::initUI(){
     //Setup UI
-    mParams = params::InterfaceGl( "App parameters", Vec2i( 400, 350 ) );
+    mParams = params::InterfaceGl( "GitDive Options", Vec2i( 400, 350 ) );
     mParams.addParam("Repo path", &m_repoPath);
     mParams.addParam("Split lines by syntax", &fManager.getSyntaxHighlightStatus());
     mParams.addParam("Output syntax to file", &bOutputSyntax);
