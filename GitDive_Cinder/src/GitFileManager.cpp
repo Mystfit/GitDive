@@ -36,7 +36,10 @@ bool GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
     
     else if(diff->fileMode == Diff::FILEMODE_UPDATED){
         file = getFileByName(diff->getFileName());
-        if(!file) file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
+        if(!file) {
+            file = boost::shared_ptr<GitFile>(new GitFile(diff->getFileName()));
+            file->fileMode = Diff::FILEMODE_ADDED
+        }
         if(file){
             if(file->active()){
                 applyDiffToFile(*(file), diff, bUseSyntaxHighlighting);
