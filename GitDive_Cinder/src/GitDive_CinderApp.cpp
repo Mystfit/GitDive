@@ -41,6 +41,8 @@ void GitDive_CinderApp::setup()
     fManager.setFormatterManager(formatterManager);
     fManager.setTextRenderer(tRender);
     fManager.setSyntaxHighlightStatus(true);
+    setTrackedFile();
+
 }
 
 
