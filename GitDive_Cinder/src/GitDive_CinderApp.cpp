@@ -129,6 +129,7 @@ void GitDive_CinderApp::trackedFileDialog(){
     //Remove repo path from front of file path
     m_targetTrackedFile.erase(0, m_repoPath.size()+1);
     setTrackedFile();
+    setViewedFile();
     
     cout << "!!!!! " << m_targetTrackedFile << endl;
 }
