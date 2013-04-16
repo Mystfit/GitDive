@@ -37,13 +37,15 @@ bool GitFileManager::updateSingleFile( boost::shared_ptr<Diff> diff, string targ
     }
     
     else if(diff->fileMode == Diff::FILEMODE_UPDATED){
-        file = getFileByName(diff->getFileName());
+        
         if(bPresentationHack) {
             file = getFileByName("presentation.txt");
             if(!file) {
                 file = boost::shared_ptr<GitFile>(new GitFile("presentation.txt"));
                 m_fileList.push_back(file);
             }
+        } else {
+            file = getFileByName(diff->getFileName());
         }
         
         if(file){
