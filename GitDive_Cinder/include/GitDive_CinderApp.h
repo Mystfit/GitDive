@@ -39,6 +39,8 @@ public:
 	void draw();
     void resetView();
     void resetAll();
+    void repoPathDialog();
+    void trackedFileDialog();
     
     void loadGitOutput(string repo, string gitCmd);
     void startVisualization();
