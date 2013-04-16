@@ -116,6 +116,14 @@ void GitDive_CinderApp::resetAll(){
     tRender->resetView();
 }
 
+void GitDive_CinderApp::repoPathDialog(){
+   
+}
+
+void GitDive_CinderApp::trackedFileDialog(){
+    
+}
+
 
 void GitDive_CinderApp::jumpToEnd(){
     if(!m_cmdOutput.size()){
