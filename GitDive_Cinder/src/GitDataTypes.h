@@ -205,7 +205,6 @@ public:
     bool active(){ return bIsActive; };
     void setInactive(){ bIsActive = false; };
     void setActive(){ bIsActive = true; };
-    
     void setLines(vector< boost::shared_ptr<Line> > lines);
     vector< boost::shared_ptr<Line> > & getLines(){ return m_activeLines; };
     
@@ -215,6 +214,13 @@ public:
     string getStr();
     void setColourfulString(string colourfulString){ m_colourfulString = colourfulString; };
     string getColourfulString(string colourfulString){ return m_colourfulString; };
+    
+    //File stats
+    void setStats_incAddedLines(int numLines){ stats_addedLines += numLines; };
+    void setStats_incRemovedLines(int numLines){ stats_removedLines += numLines; };
+    
+    int stats_addedLines, stats_removedLines;
+
     
 private:
     bool bIsActive;
