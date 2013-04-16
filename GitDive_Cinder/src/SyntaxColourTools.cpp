@@ -143,9 +143,11 @@ void LineFormatter::format(const std::string &s, const srchilite::FormatterParam
 string LineFormatter::getFileLangType(string filename){
     string inputLang = "cpp.lang";
     
-    std::ifstream ifs("../myfile.txt"){
+    string fileP = "/lang.map";
+    string path = DATADIR_LANGUAGES + fileP.c_str();
+    
+    std::ifstream ifs(path);
         
-    }
 
     
     srchilite::LangMap langMap(DATADIR_LANGUAGES, "lang.map");
