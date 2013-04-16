@@ -144,9 +144,10 @@ string LineFormatter::getFileLangType(string filename){
     string inputLang = "cpp.lang";
     
     string fileP = "/lang.map";
-    string path = DATADIR_LANGUAGES + fileP.c_str();
+    stringstream comb;
+    comb << DATADIR_LANGUAGES << fileP.c_str();
     
-    std::ifstream ifs(path);
+    std::ifstream ifs(comb.str());
         
 
     
