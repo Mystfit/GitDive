@@ -49,7 +49,7 @@ void GitDive_CinderApp::initUI(){
     //Setup UI
     mParams = params::InterfaceGl( "GitDive Options", Vec2i( 400, 350 ) );
     
-    mParams.addParam("Open repository", std::bind(&GitDive_CinderApp::repoPathDialog, this));
+    mParams.addButton("Open repository", std::bind(&GitDive_CinderApp::repoPathDialog, this));
     mParams.addParam("Repository path", &m_repoPath);
 
     mParams.addParam("Split lines by syntax", &fManager.getSyntaxHighlightStatus());
@@ -67,7 +67,7 @@ void GitDive_CinderApp::initUI(){
     mParams.addSeparator();
     //mParams.addParam("File to view", &m_targetViewFile);
     //mParams.addButton("View", std::bind(&GitDive_CinderApp::setViewedFile, this));
-    mParams.addParam("Open file", std::bind(&GitDive_CinderApp::trackedFileDialog, this));
+    mParams.addButton("Open file", std::bind(&GitDive_CinderApp::trackedFileDialog, this));
     mParams.addParam("Tracked file", &m_targetTrackedFile);
     //mParams.addButton("Track", std::bind(&GitDive_CinderApp::setTrackedFile, this));
     mParams.addSeparator();
