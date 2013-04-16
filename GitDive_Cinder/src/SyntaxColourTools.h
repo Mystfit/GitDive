@@ -9,7 +9,6 @@
 #ifndef __GitDive_Cinder__SyntaxColourListener__
 #define __GitDive_Cinder__SyntaxColourListener__
 
-#ifndef DATADIR
 #define DATADIR_THEMES "resources/srchilite/themes"
 #define DATADIR_LANGUAGES "resources/srchilite/languages"
 
