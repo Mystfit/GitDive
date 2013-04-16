@@ -60,6 +60,7 @@ void TextRenderer::setTextOffset(float increment){
 
 void TextRenderer::setTextZoom(float zoom){
     m_textZoom += zoom;
+    m_textOffset.ptr() *= (1.0f / zoom);
     if(m_textZoom < 1.0f){
         bDrawSquares = true;
     } else {
