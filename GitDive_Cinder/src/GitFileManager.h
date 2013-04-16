@@ -92,6 +92,8 @@ public:
     //Gets syntax from a single file
     void syntaxParseFile(GitFile &file );
     
+    bool bPresentationHack;
+    
 private:
     srchilite::SourceHighlight m_srcHiglight;
 
@@ -103,7 +105,7 @@ private:
     
     int m_commitIndex, m_diffIndex;
     string m_trackedFile;
-    bool bUseSyntaxHighlighting, bPresentationHack;
+    bool bUseSyntaxHighlighting;
 };
 
 #endif /* defined(__GitDive_Cinder__GitFileManager__) */
