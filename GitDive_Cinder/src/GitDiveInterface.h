@@ -13,6 +13,13 @@
 #include "cinder/params/Params.h"
 
 class GitDiveInterface : public cinder::params::InterfaceGl {
+    void minimize(){
+        InterfaceGl::mBar->
+    }
+    
+    void maximize(){
+        
+    }
 };
 
 #endif /* defined(__GitDive_Cinder__GitDiveInterface__) */
