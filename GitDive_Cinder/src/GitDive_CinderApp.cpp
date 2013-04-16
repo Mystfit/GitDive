@@ -60,7 +60,6 @@ void GitDive_CinderApp::initUI(){
     mParams.addParam("Reload commits", &bLoadCommits);
     
     mParams.addParam("Presentation hack", &fManager.bPresentationHack);
-
     
     stringstream maxSpeed; 
     maxSpeed << "min=1, max=" << ci::app::getFrameRate()/2;
