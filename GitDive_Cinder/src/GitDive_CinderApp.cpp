@@ -122,6 +122,8 @@ void GitDive_CinderApp::repoPathDialog(){
 
 void GitDive_CinderApp::trackedFileDialog(){
     m_targetTrackedFile = cinder::app::getOpenFilePath().string();
+    cout << "!!!!! " << m_targetTrackedFile;
+
 }
 
 
