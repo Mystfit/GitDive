@@ -122,7 +122,7 @@ void GitDive_CinderApp::repoPathDialog(){
 
 void GitDive_CinderApp::trackedFileDialog(){
     m_targetTrackedFile = cinder::app::getOpenFilePath().string();
-    m_targetTrackedFile.erase(0, m_repoPath.size());
+    m_targetTrackedFile.erase(0, m_repoPath.size()+1);
     setTrackedFile();
     
     cout << "!!!!! " << m_targetTrackedFile;
