@@ -92,6 +92,10 @@ void GitDive_CinderApp::setTrackedFile(){
 void GitDive_CinderApp::startVisualization(){
     mParams.hide();
     fManager.reset();
+    
+    setTrackedFile();
+    setViewedFile();
+    
     if(bLoadCommits) loadGitOutput(m_repoPath, m_gitCmd);
     
     bVizActive = true;
